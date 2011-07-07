@@ -15,7 +15,20 @@ repositories = {
       :source => 'src/standalone/target/site/apidocs'
     }]
   },
-  "navigator" => {},
+  "navigator" => { :commands => [
+      "cd pn-dispatcher && mvn javadoc:javadoc && cd ../..",
+      "cd pn-sync && mvn javadoc:javadoc && cd ../.."],
+    :directories => [{
+      :description => 'pn-dispatcher documentation',
+      :target => 'pn-dispatcher',
+      :source => 'pn-dispatcher/target/site/apidocs'
+    },
+    {
+      :description => 'pn-sync documentation',
+      :target => 'pn-sync',
+      :source => 'pn-sync/target/site/apidocs'
+    }]
+  },
   "mapping" => {}
 }
 
