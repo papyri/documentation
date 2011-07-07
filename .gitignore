@@ -1,1 +1,3 @@
 repositories
+_site
+.DS_Store
