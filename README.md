@@ -19,5 +19,5 @@ This repository will contain:
 
 ## Usage
 
-Running `rake` will run the default task to fetch component repositores and build
+Running `rake` will run the default task to fetch component repositories and build
 their documentation.
