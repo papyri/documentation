@@ -1,49 +1,50 @@
 require 'fileutils'
 
 repositories = {
-  "sosol" => { :commands => ["rake doc:app"],
-    :directories => [{
+  "sosol" => [{
       :description => 'SoSOL Rails app documentation',
+      :command => 'rake doc:app',
+      :working_directory => '.',
       :target => 'app',
       :source => 'doc/app'
-    }]
-  },
-  "xsugar" => { :commands => ["cd src/standalone && mvn javadoc:javadoc && cd ../.."],
-    :directories => [{
+    }
+  ],
+  "xsugar" => [{
       :description => 'Standalone XSugar server documentation',
+      :command => 'mvn javadoc:javadoc',
+      :working_directory => 'src/standalone',
       :target => 'standalone',
       :source => 'src/standalone/target/site/apidocs'
-    }]
-  },
-  "navigator" => { :commands => [
-      "cd pn-dispatcher && mvn javadoc:javadoc && cd ../..",
-      "cd pn-sync && mvn javadoc:javadoc && cd ../.."],
-    :directories => [{
+    }
+  ],
+  "navigator" => [{
       :description => 'pn-dispatcher documentation',
+      :command => 'mvn javadoc:javadoc',
+      :working_directory => 'pn-dispatcher',
       :target => 'pn-dispatcher',
       :source => 'pn-dispatcher/target/site/apidocs'
     },
     {
       :description => 'pn-sync documentation',
+      :command => 'mvn javadoc:javadoc',
+      :working_directory => 'pn-sync',
       :target => 'pn-sync',
       :source => 'pn-sync/target/site/apidocs'
-    }]
-  },
-  "mapping" => {}
+    }
+  ],
+  "mapping" => []
 }
 
 namespace "docs" do
   desc "Build documentation"
   task :generate => [:repositories] do
     puts "Generating documentation..."
-    repositories.each do |repository, options|
-      target = File.join('repositories',repository)
-      if options.has_key?(:commands)
+    repositories.each do |repository, directories|
+      directories.each do |directory|
         cwd = FileUtils.pwd
+        target = File.join('repositories',repository,directory[:working_directory])
         FileUtils.cd(target, :verbose => true)
-        options[:commands].each do |command|
-          system(command)
-        end
+        system(directory[:command])
         FileUtils.cd(cwd)
       end
     end
@@ -52,14 +53,12 @@ namespace "docs" do
   desc "Copy documentation into static-servable directory"
   task :update => [:generate] do
     puts "Updating documentation..."
-    repositories.each do |repository, options|
-      if options.has_key?(:directories)
-        options[:directories].each do |directory|
-          target = File.join('generated',repository,directory[:target])
-          source = File.join('repositories',repository,directory[:source],'.')
-          FileUtils.mkdir_p target
-          FileUtils.cp_r source, target
-        end
+    repositories.each do |repository, directories|
+      directories.each do |directory|
+        target = File.join('generated',repository,directory[:target])
+        source = File.join('repositories',repository,directory[:source],'.')
+        FileUtils.mkdir_p target
+        FileUtils.cp_r source, target
       end
     end
   end
