@@ -1,3 +1,5 @@
 repositories
 _site
 .DS_Store
+_includes
+generated
