@@ -68,6 +68,17 @@ namespace "docs" do
       end
     end
   end
+
+  desc "Clean/remove generated documentation directories"
+  task :clean do
+    puts "Cleaning documentation directories..."
+    repositories.each do |repository, directories|
+      directories.each do |directory|
+        source_directory = File.join('repositories',repository,directory[:source])
+        FileUtils.rm_rf(source_directory, :verbose => true)
+      end
+    end
+  end
 end
 
 desc "Fetch/update external repositories"
