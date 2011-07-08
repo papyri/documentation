@@ -11,7 +11,7 @@ repositories = {
   ],
   "xsugar" => [{
       :description => 'Standalone XSugar server documentation',
-      :command => 'mvn javadoc:javadoc',
+      :command => 'mvn -Dadditionalparam="-notimestamp" javadoc:javadoc',
       :working_directory => 'src/standalone',
       :target => 'standalone',
       :source => 'src/standalone/target/site/apidocs'
@@ -19,14 +19,14 @@ repositories = {
   ],
   "navigator" => [{
       :description => 'pn-dispatcher documentation',
-      :command => 'mvn javadoc:javadoc',
+      :command => 'mvn -Dadditionalparam="-notimestamp" javadoc:javadoc',
       :working_directory => 'pn-dispatcher',
       :target => 'pn-dispatcher',
       :source => 'pn-dispatcher/target/site/apidocs'
     },
     {
       :description => 'pn-sync documentation',
-      :command => 'mvn javadoc:javadoc',
+      :command => 'mvn -Dadditionalparam="-notimestamp" javadoc:javadoc',
       :working_directory => 'pn-sync',
       :target => 'pn-sync',
       :source => 'pn-sync/target/site/apidocs'
