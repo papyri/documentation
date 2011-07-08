@@ -21,3 +21,7 @@ This repository will contain:
 
 Running `rake` will run the default task to fetch component repositories and build
 their documentation.
+
+## Generated Documentation
+
+{% include generated_index.md %}
