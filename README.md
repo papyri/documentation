@@ -1,8 +1,3 @@
----
-layout: default
-title: README
----
-
 Project-wide Documentation for Integrating Digital Papyrology
 =============================================================
 
