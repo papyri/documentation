@@ -42,10 +42,16 @@ namespace "docs" do
     repositories.each do |repository, directories|
       directories.each do |directory|
         cwd = FileUtils.pwd
-        target = File.join('repositories',repository,directory[:working_directory])
-        FileUtils.cd(target, :verbose => true)
-        system(directory[:command])
-        FileUtils.cd(cwd)
+        working_directory = File.join('repositories',repository,directory[:working_directory])
+        source_directory = File.join('repositories',repository,directory[:source])
+        source_files = Dir.glob(File.join(working_directory,'**','*')).reject{|f| f =~ /^#{source_directory}/}
+        file source_directory => source_files do
+          puts "Generating #{directory[:description]}..."
+          FileUtils.cd(working_directory, :verbose => true)
+          system(directory[:command])
+          FileUtils.cd(cwd)
+        end
+        Rake::Task[source_directory].invoke
       end
     end
   end
