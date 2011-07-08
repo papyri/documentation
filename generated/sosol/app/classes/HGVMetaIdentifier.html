@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: HGVMetaIdentifier</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">HGVMetaIdentifier</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/app/models/hgv_meta_identifier_rb.html">
+                app/models/hgv_meta_identifier.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                <a href="HGVIdentifier.html">
+                HGVIdentifier
+               </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000309">after_initialize</a>&nbsp;&nbsp;
+      <a href="#M000314">get_date_item</a>&nbsp;&nbsp;
+      <a href="#M000315">get_epidoc_attributes</a>&nbsp;&nbsp;
+      <a href="#M000316">get_epidoc_attributes_list</a>&nbsp;&nbsp;
+      <a href="#M000317">get_epidoc_attributes_tree</a>&nbsp;&nbsp;
+      <a href="#M000318">get_epidoc_attributes_value</a>&nbsp;&nbsp;
+      <a href="#M000311">id_attribute</a>&nbsp;&nbsp;
+      <a href="#M000312">n_attribute</a>&nbsp;&nbsp;
+      <a href="#M000323">populate_epidoc_attribute</a>&nbsp;&nbsp;
+      <a href="#M000324">populate_epidoc_attributes_from_attributes_hash</a>&nbsp;&nbsp;
+      <a href="#M000325">populate_tree_from_attributes_hash</a>&nbsp;&nbsp;
+      <a href="#M000308">preview</a>&nbsp;&nbsp;
+      <a href="#M000319">set_epidoc</a>&nbsp;&nbsp;
+      <a href="#M000321">set_epidoc_attributes</a>&nbsp;&nbsp;
+      <a href="#M000320">set_epidoc_attributes_tree</a>&nbsp;&nbsp;
+      <a href="#M000322">sort</a>&nbsp;&nbsp;
+      <a href="#M000310">to_path</a>&nbsp;&nbsp;
+      <a href="#M000313">xml_title_text</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Class <a href="HGVMetaIdentifier/HgvMetaConfiguration.html" class="link">HGVMetaIdentifier::HgvMetaConfiguration</a><br />
+
+    </div>
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">PATH_PREFIX</td>
+          <td>=</td>
+          <td class="context-item-value">'HGV_meta_EpiDoc'</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">XML_VALIDATOR</td>
+          <td>=</td>
+          <td class="context-item-value">JRubyXML::EpiDocP5Validator</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">FRIENDLY_NAME</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;HGV&quot;</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">configuration</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">valid_epidoc_attributes</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000309" class="method-detail">
+        <a name="M000309"></a>
+
+        <div class="method-heading">
+          <a href="#M000309" class="method-signature">
+          <span class="method-name">after_initialize</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000309-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000309-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 18</span>
+18:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">after_initialize</span>
+19:     <span class="ruby-ivar">@configuration</span> = <span class="ruby-constant">HgvMetaConfiguration</span>.<span class="ruby-identifier">new</span> <span class="ruby-comment cmt">#YAML::load_file(File.join(RAILS_ROOT, %w{config hgv.yml}))[:hgv][:metadata]</span>
+20:     <span class="ruby-ivar">@valid_epidoc_attributes</span> = <span class="ruby-ivar">@configuration</span>.<span class="ruby-identifier">keys</span>
+21:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000314" class="method-detail">
+        <a name="M000314"></a>
+
+        <div class="method-heading">
+          <a href="#M000314" class="method-signature">
+          <span class="method-name">get_date_item</span><span class="method-args">(date_id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000314-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000314-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 56</span>
+56:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_date_item</span> <span class="ruby-identifier">date_id</span>    
+57:     <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">:textDate</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">dateItem</span><span class="ruby-operator">|</span>
+58:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">dateItem</span>[<span class="ruby-identifier">:attributes</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">dateItem</span>[<span class="ruby-identifier">:attributes</span>][<span class="ruby-identifier">:id</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">dateItem</span>[<span class="ruby-identifier">:attributes</span>][<span class="ruby-identifier">:id</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">date_id</span>)
+59:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">dateItem</span>
+60:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">date_id</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value str">'X'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">:textDate</span>].<span class="ruby-identifier">first</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">dateItem</span>
+61:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">dateItem</span>
+62:       <span class="ruby-keyword kw">end</span>
+63:     }
+64:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>    
+65:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000315" class="method-detail">
+        <a name="M000315"></a>
+
+        <div class="method-heading">
+          <a href="#M000315" class="method-signature">
+          <span class="method-name">get_epidoc_attributes</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+retrieve matadata from xml and store as object attributes
+</p>
+<pre>
+  e.g. title: &lt;title&gt;Instruction to track down murderers&lt;/title&gt; will become
+  self[:title] = 'Instruction to track down murderers'
+  e.g. content text: &lt;keywords&gt;&lt;term&gt;a&lt;/term&gt;&lt;term&gt;b&lt;/term&gt;&lt;/keywords&gt; will become
+  self[:contentText] = ['a', 'b']
+  e.g. date will become complicated
+</pre>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000315-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000315-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 75</span>
+75:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_epidoc_attributes</span>
+76:     <span class="ruby-identifier">doc</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">content</span>
+77: 
+78:     <span class="ruby-ivar">@configuration</span>.<span class="ruby-identifier">scheme</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">config</span><span class="ruby-operator">|</span>
+79:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:children</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:attributes</span>]
+80:         <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">get_epidoc_attributes_tree</span> <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">config</span>
+81:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:multiple</span>]
+82:         <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">get_epidoc_attributes_list</span> <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">config</span>
+83:       <span class="ruby-keyword kw">else</span> 
+84:         <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">get_epidoc_attributes_value</span> <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">config</span>
+85:       <span class="ruby-keyword kw">end</span>
+86:     <span class="ruby-keyword kw">end</span>
+87:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000316" class="method-detail">
+        <a name="M000316"></a>
+
+        <div class="method-heading">
+          <a href="#M000316" class="method-signature">
+          <span class="method-name">get_epidoc_attributes_list</span><span class="method-args">(doc, config)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000316-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000316-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 89</span>
+89:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_epidoc_attributes_list</span> <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">config</span>
+90:     <span class="ruby-identifier">list</span> = []
+91:     <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:xpath</span>]){<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span>
+92:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+93:         <span class="ruby-identifier">list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>
+94:       <span class="ruby-keyword kw">end</span>
+95:     }
+96:     <span class="ruby-identifier">list</span>
+97:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000317" class="method-detail">
+        <a name="M000317"></a>
+
+        <div class="method-heading">
+          <a href="#M000317" class="method-signature">
+          <span class="method-name">get_epidoc_attributes_tree</span><span class="method-args">(doc, config)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000317-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000317-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 99</span>
+ 99:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_epidoc_attributes_tree</span> <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">config</span>
+100:     <span class="ruby-identifier">tree</span> = []
+101:     
+102:     <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:xpath</span>]){<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span>
+103:       <span class="ruby-identifier">node</span> = {<span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">''</span>, <span class="ruby-identifier">:attributes</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">:children</span> =<span class="ruby-operator">&gt;</span> {}}
+104: 
+105:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'origDate'</span> <span class="ruby-comment cmt"># CL: CROMULATE DATE HACK</span>
+106:         <span class="ruby-identifier">node</span>[<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/[\s]+/</span>, <span class="ruby-value str">' '</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/&lt;\/?[^&gt;]*&gt;/</span>, <span class="ruby-value str">&quot;&quot;</span>).<span class="ruby-identifier">strip</span>
+107:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+108:         <span class="ruby-identifier">node</span>[<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>
+109:       <span class="ruby-keyword kw">else</span>
+110:         <span class="ruby-identifier">node</span>[<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:default</span>]
+111:       <span class="ruby-keyword kw">end</span>
+112: 
+113:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:attributes</span>]
+114:         <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:attributes</span>].<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">attribute_key</span>, <span class="ruby-identifier">attribute_config</span><span class="ruby-operator">|</span>
+115:           <span class="ruby-identifier">node</span>[<span class="ruby-identifier">:attributes</span>][<span class="ruby-identifier">attribute_key</span>] = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">attribute_config</span>[<span class="ruby-identifier">:name</span>]] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">element</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">attribute_config</span>[<span class="ruby-identifier">:name</span>]].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-value">? </span><span class="ruby-identifier">element</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">attribute_config</span>[<span class="ruby-identifier">:name</span>]].<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">attribute_config</span>[<span class="ruby-identifier">:default</span>]
+116:         }
+117:       <span class="ruby-keyword kw">end</span>
+118:       
+119:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:children</span>]
+120:         <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:children</span>].<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">child_key</span>, <span class="ruby-identifier">child_config</span><span class="ruby-operator">|</span>
+121:           <span class="ruby-identifier">node</span>[<span class="ruby-identifier">:children</span>][<span class="ruby-identifier">child_key</span>] = <span class="ruby-identifier">get_epidoc_attributes_tree</span> <span class="ruby-identifier">element</span>, <span class="ruby-identifier">child_config</span>
+122:         }
+123:       <span class="ruby-keyword kw">end</span>
+124:       
+125:       <span class="ruby-identifier">tree</span>[<span class="ruby-identifier">tree</span>.<span class="ruby-identifier">length</span>] = <span class="ruby-identifier">node</span>
+126:     }
+127: 
+128:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:multiple</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">tree</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">first</span>
+129:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000318" class="method-detail">
+        <a name="M000318"></a>
+
+        <div class="method-heading">
+          <a href="#M000318" class="method-signature">
+          <span class="method-name">get_epidoc_attributes_value</span><span class="method-args">(doc, config)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000318-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000318-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 131</span>
+131:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_epidoc_attributes_value</span> <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">config</span>
+132:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">element</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:xpath</span>]]
+133:       <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-value">? </span><span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:default</span>]
+134:     <span class="ruby-keyword kw">else</span>
+135:       <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:default</span>]
+136:     <span class="ruby-keyword kw">end</span>
+137:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000311" class="method-detail">
+        <a name="M000311"></a>
+
+        <div class="method-heading">
+          <a href="#M000311" class="method-signature">
+          <span class="method-name">id_attribute</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000311-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000311-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 43</span>
+43:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">id_attribute</span>
+44:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;hgvTEMP&quot;</span>
+45:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000312" class="method-detail">
+        <a name="M000312"></a>
+
+        <div class="method-heading">
+          <a href="#M000312" class="method-signature">
+          <span class="method-name">n_attribute</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000312-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000312-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 47</span>
+47:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">n_attribute</span>
+48:     <span class="ruby-identifier">ddb</span> = <span class="ruby-constant">DDBIdentifier</span>.<span class="ruby-identifier">find_by_publication_id</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">:limit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>)
+49:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">ddb</span>.<span class="ruby-identifier">n_attribute</span>
+50:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000308" class="method-detail">
+        <a name="M000308"></a>
+
+        <div class="method-heading">
+          <a href="#M000308" class="method-signature">
+          <span class="method-name">preview</span><span class="method-args">(parameters = {})</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000308-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000308-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 10</span>
+10:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">preview</span> <span class="ruby-identifier">parameters</span> = {}, <span class="ruby-identifier">xsl</span> = <span class="ruby-keyword kw">nil</span>
+11:     <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
+12:       <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">xml_content</span>),
+13:       <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RAILS_ROOT</span>,
+14:         <span class="ruby-identifier">xsl</span> <span class="ruby-value">? </span><span class="ruby-identifier">xsl</span> <span class="ruby-operator">:</span> <span class="ruby-node">%w{data xslt epidoc start-edition.xsl}</span>)),
+15:         <span class="ruby-identifier">parameters</span>)
+16:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000319" class="method-detail">
+        <a name="M000319"></a>
+
+        <div class="method-heading">
+          <a href="#M000319" class="method-signature">
+          <span class="method-name">set_epidoc</span><span class="method-args">(attributes_hash, comment)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a String of the SHA1 of the commit
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000319-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000319-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 140</span>
+140:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_epidoc</span>(<span class="ruby-identifier">attributes_hash</span>, <span class="ruby-identifier">comment</span>)
+141:     <span class="ruby-identifier">populate_epidoc_attributes_from_attributes_hash</span>(<span class="ruby-identifier">attributes_hash</span>)
+142:     
+143:     <span class="ruby-identifier">epidoc</span> = <span class="ruby-identifier">set_epidoc_attributes</span>
+144:       
+145:     <span class="ruby-comment cmt">#File.open('/Users/InstPap/Desktop/sosoltest.xml', 'w') {|f| f.write(epidoc) }</span>
+146: 
+147:     <span class="ruby-comment cmt">#set_content does not validate xml (which is what epidoc is)</span>
+148:     <span class="ruby-comment cmt">#self.set_content(epidoc, :comment =&gt; comment)</span>
+149:     <span class="ruby-comment cmt">#set_xml_content validates xml</span>
+150:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">epidoc</span>, <span class="ruby-identifier">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">comment</span>)
+151:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000310" class="method-detail">
+        <a name="M000310"></a>
+
+        <div class="method-heading">
+          <a href="#M000310" class="method-signature">
+          <span class="method-name">to_path</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000310-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000310-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 23</span>
+23:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_path</span>
+24:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/#{self.class::TEMPORARY_COLLECTION}/</span>
+25:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">temporary_path</span>
+26:     <span class="ruby-keyword kw">else</span>
+27:       <span class="ruby-identifier">path_components</span> = [ <span class="ruby-constant">PATH_PREFIX</span> ]
+28:       <span class="ruby-comment cmt"># assume the name is e.g. hgv2302zzr</span>
+29:       <span class="ruby-identifier">trimmed_name</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_components</span>.<span class="ruby-identifier">last</span> <span class="ruby-comment cmt"># 2302zzr</span>
+30:       <span class="ruby-identifier">number</span> = <span class="ruby-identifier">trimmed_name</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp re">/\D/</span>, <span class="ruby-value str">''</span>).<span class="ruby-identifier">to_i</span> <span class="ruby-comment cmt"># 2302</span>
+31: 
+32:       <span class="ruby-identifier">hgv_dir_number</span> = ((<span class="ruby-identifier">number</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">/</span> <span class="ruby-value">1000</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+33:       <span class="ruby-identifier">hgv_dir_name</span> = <span class="ruby-node">&quot;HGV#{hgv_dir_number}&quot;</span>
+34:       <span class="ruby-identifier">hgv_xml_path</span> = <span class="ruby-identifier">trimmed_name</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'.xml'</span>
+35: 
+36:       <span class="ruby-identifier">path_components</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">hgv_dir_name</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">hgv_xml_path</span>
+37: 
+38:       <span class="ruby-comment cmt"># e.g. HGV_meta_EpiDoc/HGV3/2302zzr.xml</span>
+39:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">path_components</span>)
+40:     <span class="ruby-keyword kw">end</span>
+41:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000313" class="method-detail">
+        <a name="M000313"></a>
+
+        <div class="method-heading">
+          <a href="#M000313" class="method-signature">
+          <span class="method-name">xml_title_text</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000313-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000313-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 52</span>
+52:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xml_title_text</span>
+53:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;Description of document&quot;</span>
+54:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Protected Instance methods</h3>
+
+      <div id="method-M000323" class="method-detail">
+        <a name="M000323"></a>
+
+        <div class="method-heading">
+          <a href="#M000323" class="method-signature">
+          <span class="method-name">populate_epidoc_attribute</span><span class="method-args">(key, value, default = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000323-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000323-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 362</span>
+362:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">populate_epidoc_attribute</span> <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">default</span> = <span class="ruby-keyword kw">nil</span>
+363:     <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">value</span>
+364:       <span class="ruby-identifier">value</span> = <span class="ruby-identifier">default</span>
+365:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">instance_of?</span> <span class="ruby-constant">String</span>
+366:       <span class="ruby-identifier">value</span> = <span class="ruby-operator">!</span><span class="ruby-identifier">value</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-value">? </span><span class="ruby-identifier">value</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">default</span>
+367:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Array</span>
+368:       <span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> }.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">strip</span> }
+369:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Hash</span>
+370:       <span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> }.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">strip</span> }
+371:     <span class="ruby-keyword kw">end</span>
+372:     <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">value</span>    
+373:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000324" class="method-detail">
+        <a name="M000324"></a>
+
+        <div class="method-heading">
+          <a href="#M000324" class="method-signature">
+          <span class="method-name">populate_epidoc_attributes_from_attributes_hash</span><span class="method-args">(attributes_hash)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+saves the values stored within a hash object (usually generated via a
+webbrowser form)
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000324-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000324-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 376</span>
+376:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">populate_epidoc_attributes_from_attributes_hash</span> <span class="ruby-identifier">attributes_hash</span>
+377: 
+378:     <span class="ruby-ivar">@configuration</span>.<span class="ruby-identifier">scheme</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">config</span><span class="ruby-operator">|</span>
+379:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:children</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:attributes</span>]
+380:         <span class="ruby-identifier">result</span> = <span class="ruby-keyword kw">nil</span>
+381:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:multiple</span>]
+382:           <span class="ruby-identifier">result</span> = []
+383:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>]
+384:             <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">each_pair</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">index</span>, <span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+385:               <span class="ruby-identifier">result</span>[<span class="ruby-identifier">result</span>.<span class="ruby-identifier">length</span>] = <span class="ruby-identifier">populate_tree_from_attributes_hash</span> <span class="ruby-identifier">item</span>, <span class="ruby-identifier">config</span>
+386:             }
+387:           <span class="ruby-keyword kw">end</span>
+388:         <span class="ruby-keyword kw">else</span>
+389:           <span class="ruby-identifier">result</span> = <span class="ruby-identifier">populate_tree_from_attributes_hash</span> <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>], <span class="ruby-identifier">config</span>      
+390:         <span class="ruby-keyword kw">end</span>
+391:         <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">result</span>  
+392:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:multiple</span>]
+393:         <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">values</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> }.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">strip</span> } <span class="ruby-operator">:</span> []
+394:       <span class="ruby-keyword kw">else</span> 
+395:         <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>
+396:       <span class="ruby-keyword kw">end</span>
+397:     <span class="ruby-keyword kw">end</span>
+398:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000325" class="method-detail">
+        <a name="M000325"></a>
+
+        <div class="method-heading">
+          <a href="#M000325" class="method-signature">
+          <span class="method-name">populate_tree_from_attributes_hash</span><span class="method-args">(data, config)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000325-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000325-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 400</span>
+400:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">populate_tree_from_attributes_hash</span> <span class="ruby-identifier">data</span>, <span class="ruby-identifier">config</span>
+401: 
+402:     <span class="ruby-identifier">result_item</span> = {
+403:       <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">nil</span>,
+404:       <span class="ruby-identifier">:attributes</span> =<span class="ruby-operator">&gt;</span> {},
+405:       <span class="ruby-identifier">:children</span> =<span class="ruby-operator">&gt;</span> {}
+406:     }
+407: 
+408:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">data</span>
+409: 
+410:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">data</span>[<span class="ruby-value str">'value'</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">data</span>[<span class="ruby-value str">'value'</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+411:         <span class="ruby-identifier">result_item</span>[<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">data</span>[<span class="ruby-value str">'value'</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>
+412:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:default</span>]
+413:         <span class="ruby-identifier">result_item</span>[<span class="ruby-identifier">:value</span>] = <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:default</span>]
+414:       <span class="ruby-keyword kw">end</span>
+415: 
+416:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:attributes</span>]
+417:         <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:attributes</span>].<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">attribute_key</span>, <span class="ruby-identifier">attribute_config</span><span class="ruby-operator">|</span>
+418:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">data</span>[<span class="ruby-value str">'attributes'</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">data</span>[<span class="ruby-value str">'attributes'</span>][<span class="ruby-identifier">attribute_key</span>.<span class="ruby-identifier">to_s</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">data</span>[<span class="ruby-value str">'attributes'</span>][<span class="ruby-identifier">attribute_key</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+419:             <span class="ruby-identifier">result_item</span>[<span class="ruby-identifier">:attributes</span>][<span class="ruby-identifier">attribute_key</span>] = <span class="ruby-identifier">data</span>[<span class="ruby-value str">'attributes'</span>][<span class="ruby-identifier">attribute_key</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>
+420:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">attribute_config</span>[<span class="ruby-identifier">:default</span>]
+421:             <span class="ruby-identifier">result_item</span>[<span class="ruby-identifier">:attributes</span>][<span class="ruby-identifier">attribute_key</span>] = <span class="ruby-identifier">attribute_config</span>[<span class="ruby-identifier">:default</span>]
+422:           <span class="ruby-keyword kw">end</span>
+423:         }
+424:       <span class="ruby-keyword kw">end</span>
+425: 
+426:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:children</span>]
+427:         <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:children</span>].<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">child_key</span>, <span class="ruby-identifier">child_config</span><span class="ruby-operator">|</span>
+428:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">child_config</span>[<span class="ruby-identifier">:multiple</span>]
+429:             <span class="ruby-identifier">children</span> = []
+430:             
+431:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">data</span>[<span class="ruby-identifier">:children</span>]
+432:               <span class="ruby-identifier">x</span> = <span class="ruby-identifier">data</span>[<span class="ruby-identifier">:children</span>][<span class="ruby-identifier">child_key</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">data</span>[<span class="ruby-identifier">:children</span>][<span class="ruby-identifier">child_key</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">values</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">data</span>[<span class="ruby-identifier">:children</span>][<span class="ruby-identifier">child_key</span>.<span class="ruby-identifier">to_s</span>]
+433:               
+434:               <span class="ruby-identifier">x</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span>
+435:                 <span class="ruby-identifier">children</span>[<span class="ruby-identifier">children</span>.<span class="ruby-identifier">length</span>] = <span class="ruby-identifier">populate_tree_from_attributes_hash</span> <span class="ruby-identifier">child</span>, <span class="ruby-identifier">child_config</span> <span class="ruby-comment cmt"># recursion óla</span>
+436:               }
+437:             <span class="ruby-keyword kw">end</span>
+438:             <span class="ruby-identifier">result_item</span>[<span class="ruby-identifier">:children</span>][<span class="ruby-identifier">child_key</span>] = <span class="ruby-identifier">children</span>
+439:           <span class="ruby-keyword kw">else</span>
+440:             <span class="ruby-identifier">result_item</span>[<span class="ruby-identifier">:children</span>][<span class="ruby-identifier">child_key</span>] = <span class="ruby-identifier">populate_tree_from_attributes_hash</span>  <span class="ruby-identifier">data</span>[<span class="ruby-value str">'children'</span>][<span class="ruby-identifier">child_key</span>.<span class="ruby-identifier">to_s</span>], <span class="ruby-identifier">child_config</span> <span class="ruby-comment cmt"># recursion óla</span>
+441:           <span class="ruby-keyword kw">end</span>
+442:         }
+443:       <span class="ruby-keyword kw">end</span>
+444: 
+445:    <span class="ruby-keyword kw">end</span>
+446: 
+447:    <span class="ruby-identifier">result_item</span>
+448:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000321" class="method-detail">
+        <a name="M000321"></a>
+
+        <div class="method-heading">
+          <a href="#M000321" class="method-signature">
+          <span class="method-name">set_epidoc_attributes</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000321-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000321-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 226</span>
+226:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_epidoc_attributes</span>
+227:     <span class="ruby-comment cmt"># load xml document</span>
+228:     <span class="ruby-identifier">doc</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">content</span>
+229: 
+230:     <span class="ruby-ivar">@configuration</span>.<span class="ruby-identifier">scheme</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">config</span><span class="ruby-operator">|</span>
+231:       <span class="ruby-identifier">xpath_parent</span> = <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:xpath</span>][<span class="ruby-regexp re">/\A([\w\/\[\]@:=']+)\/([\w\/\[\]@:=']+)\Z/</span>, <span class="ruby-value">1</span>]
+232:       <span class="ruby-identifier">xpath_child</span> = <span class="ruby-identifier">$2</span> 
+233:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:multiple</span>]
+234: 
+235:         <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">empty?</span>
+236:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-identifier">xpath_parent</span>]
+237:             <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">delete_all</span> <span class="ruby-identifier">xpath_child</span>
+238:             <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">parent</span>.<span class="ruby-identifier">has_elements?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">texts</span>.<span class="ruby-identifier">join</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+239:               <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">'..'</span>].<span class="ruby-identifier">delete</span> <span class="ruby-identifier">parent</span>
+240:             <span class="ruby-keyword kw">end</span>
+241:           <span class="ruby-keyword kw">end</span>
+242:         <span class="ruby-keyword kw">else</span>
+243:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-identifier">xpath_parent</span>]
+244:             <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">delete_all</span> <span class="ruby-identifier">xpath_child</span>
+245:           <span class="ruby-keyword kw">else</span>
+246:             <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">bulldozePath</span> <span class="ruby-identifier">xpath_parent</span>
+247:           <span class="ruby-keyword kw">end</span>
+248: 
+249:           <span class="ruby-identifier">set_epidoc_attributes_tree</span> <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">xpath_child</span>, <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>], <span class="ruby-identifier">config</span>
+250:         <span class="ruby-keyword kw">end</span>
+251: 
+252:       <span class="ruby-keyword kw">else</span>
+253:         <span class="ruby-identifier">value</span> = <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">empty?</span> <span class="ruby-value">? </span>(<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:children</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:attributes</span>] <span class="ruby-operator">?</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>][<span class="ruby-identifier">:value</span>] <span class="ruby-operator">:</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>]) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>
+254:         
+255:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">value</span>.<span class="ruby-identifier">empty?</span> 
+256:           <span class="ruby-identifier">element</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">bulldozePath</span>(<span class="ruby-identifier">config</span>[<span class="ruby-identifier">:xpath</span>])
+257:           <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">value</span>
+258:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:attributes</span>]
+259:             <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:attributes</span>].<span class="ruby-identifier">each_pair</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">attribute_key</span>, <span class="ruby-identifier">attribute_config</span><span class="ruby-operator">|</span>
+260:               <span class="ruby-identifier">element</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">attribute_config</span>[<span class="ruby-identifier">:name</span>]] = <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>][<span class="ruby-identifier">:attributes</span>][<span class="ruby-identifier">attribute_key</span>] <span class="ruby-comment cmt">#self[attribute_key]</span>
+261:             }
+262:           <span class="ruby-keyword kw">end</span>
+263:           
+264:         <span class="ruby-keyword kw">else</span>
+265:           
+266:           <span class="ruby-identifier">puts</span> <span class="ruby-value str">'............................'</span>
+267:           <span class="ruby-identifier">puts</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:xpath</span>]
+268:           <span class="ruby-identifier">puts</span> <span class="ruby-value str">'............................'</span>
+269:           
+270:           
+271:           <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">delete_all</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:xpath</span>]
+272:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-identifier">xpath_parent</span>]
+273:             <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">parent</span>.<span class="ruby-identifier">has_elements?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">texts</span>.<span class="ruby-identifier">join</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+274:               <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">'..'</span>].<span class="ruby-identifier">delete</span> <span class="ruby-identifier">parent</span>
+275:             <span class="ruby-keyword kw">end</span>
+276:           <span class="ruby-keyword kw">end</span>
+277:         <span class="ruby-keyword kw">end</span>
+278: 
+279:       <span class="ruby-keyword kw">end</span>
+280: 
+281:     <span class="ruby-keyword kw">end</span>
+282: 
+283:     <span class="ruby-comment cmt"># sort</span>
+284:     <span class="ruby-identifier">doc</span> = <span class="ruby-identifier">sort</span> <span class="ruby-identifier">doc</span>
+285: 
+286:     <span class="ruby-comment cmt"># write back to a string</span>
+287:     <span class="ruby-identifier">formatter</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Formatters</span><span class="ruby-operator">::</span><span class="ruby-constant">Pretty</span>.<span class="ruby-identifier">new</span>
+288:     <span class="ruby-identifier">formatter</span>.<span class="ruby-identifier">compact</span> = <span class="ruby-keyword kw">true</span>
+289:     <span class="ruby-identifier">formatter</span>.<span class="ruby-identifier">width</span> = <span class="ruby-value">512</span>
+290:     <span class="ruby-identifier">modified_xml_content</span> = <span class="ruby-value str">''</span>
+291:     <span class="ruby-identifier">formatter</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">modified_xml_content</span>
+292: 
+293:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">modified_xml_content</span>
+294:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000320" class="method-detail">
+        <a name="M000320"></a>
+
+        <div class="method-heading">
+          <a href="#M000320" class="method-signature">
+          <span class="method-name">set_epidoc_attributes_tree</span><span class="method-args">(parent, xpath, data, config)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000320-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000320-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 173</span>
+173:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_epidoc_attributes_tree</span> <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">xpath</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">config</span>
+174:     <span class="ruby-identifier">child_name</span> = <span class="ruby-identifier">xpath</span>[<span class="ruby-regexp re">/\A([\w]+)[\w\/\[\]@:=']*\Z/</span>, <span class="ruby-value">1</span>]
+175:     <span class="ruby-identifier">child_attributes</span> = <span class="ruby-identifier">xpath</span>.<span class="ruby-identifier">scan</span> <span class="ruby-regexp re">/@([\w:]+)='([\w]+)'/</span>
+176: 
+177:     <span class="ruby-identifier">index</span> = <span class="ruby-value">1</span>
+178:     <span class="ruby-identifier">data</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+179: 
+180:       <span class="ruby-identifier">hasContent</span> = (<span class="ruby-identifier">item</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">String</span>) <span class="ruby-operator">?</span> (<span class="ruby-identifier">item</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-value">? </span><span class="ruby-keyword kw">false</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">true</span>) <span class="ruby-operator">:</span> (<span class="ruby-identifier">item</span>[<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">item</span>[<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-value">? </span><span class="ruby-keyword kw">true</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">item</span>[<span class="ruby-identifier">:attributes</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">item</span>[<span class="ruby-identifier">:attributes</span>].<span class="ruby-identifier">values</span>.<span class="ruby-identifier">join</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-value">? </span><span class="ruby-keyword kw">true</span> <span class="ruby-operator">:</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">item</span>[<span class="ruby-identifier">:children</span>].<span class="ruby-identifier">empty?</span> <span class="ruby-value">? </span><span class="ruby-keyword kw">true</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">false</span>)))
+181: 
+182:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">hasContent</span>
+183: 
+184:         <span class="ruby-identifier">child</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">child_name</span>
+185:         <span class="ruby-identifier">child_attributes</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+186:           <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">value</span>
+187:         }
+188:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+189:           <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-value str">'n'</span>] = <span class="ruby-identifier">index</span>.<span class="ruby-identifier">to_s</span>
+190:           <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+191:         <span class="ruby-keyword kw">end</span>
+192:   
+193:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">String</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">item</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+194:           <span class="ruby-identifier">child</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">item</span>.<span class="ruby-identifier">strip</span>
+195:         <span class="ruby-keyword kw">else</span>
+196:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">item</span>[<span class="ruby-identifier">:value</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">item</span>[<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+197:             <span class="ruby-identifier">child</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">item</span>[<span class="ruby-identifier">:value</span>].<span class="ruby-identifier">strip</span>
+198:           <span class="ruby-keyword kw">end</span>
+199:   
+200:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:attributes</span>]
+201:             <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:attributes</span>].<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">attribute_key</span>, <span class="ruby-identifier">attribute_config</span><span class="ruby-operator">|</span>
+202:                <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">item</span>[<span class="ruby-identifier">:attributes</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">item</span>[<span class="ruby-identifier">:attributes</span>][<span class="ruby-identifier">attribute_key</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">item</span>[<span class="ruby-identifier">:attributes</span>][<span class="ruby-identifier">attribute_key</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+203:                  <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">attribute_config</span>[<span class="ruby-identifier">:name</span>]] = <span class="ruby-identifier">item</span>[<span class="ruby-identifier">:attributes</span>][<span class="ruby-identifier">attribute_key</span>].<span class="ruby-identifier">strip</span>
+204:                <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">attribute_config</span>[<span class="ruby-identifier">:default</span>]
+205:                  <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">attribute_config</span>[<span class="ruby-identifier">:name</span>]] = <span class="ruby-identifier">attribute_config</span>[<span class="ruby-identifier">:default</span>]
+206:                <span class="ruby-keyword kw">end</span>
+207:             }
+208:           <span class="ruby-keyword kw">end</span>
+209:   
+210:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:children</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">item</span>[<span class="ruby-identifier">:children</span>]
+211:             <span class="ruby-identifier">config</span>[<span class="ruby-identifier">:children</span>].<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">grandchild_name</span>, <span class="ruby-identifier">grandchild_config</span><span class="ruby-operator">|</span>
+212:               <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">item</span>[<span class="ruby-identifier">:children</span>][<span class="ruby-identifier">grandchild_name</span>]
+213:                 <span class="ruby-identifier">grandchild_data</span> = <span class="ruby-identifier">item</span>[<span class="ruby-identifier">:children</span>][<span class="ruby-identifier">grandchild_name</span>].<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Array</span> <span class="ruby-value">? </span><span class="ruby-identifier">item</span>[<span class="ruby-identifier">:children</span>][<span class="ruby-identifier">grandchild_name</span>] <span class="ruby-operator">:</span> [<span class="ruby-identifier">item</span>[<span class="ruby-identifier">:children</span>][<span class="ruby-identifier">grandchild_name</span>]]
+214:                 <span class="ruby-identifier">grandchild_xpath</span> = <span class="ruby-identifier">grandchild_config</span>[<span class="ruby-identifier">:xpath</span>]
+215:                 <span class="ruby-identifier">set_epidoc_attributes_tree</span> <span class="ruby-identifier">child</span>, <span class="ruby-identifier">grandchild_xpath</span>, <span class="ruby-identifier">grandchild_data</span>, <span class="ruby-identifier">grandchild_config</span> <span class="ruby-comment cmt"># recursion</span>
+216:               <span class="ruby-keyword kw">end</span>
+217:             }
+218:           <span class="ruby-keyword kw">end</span>
+219:         <span class="ruby-keyword kw">end</span>
+220:   
+221:         <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">add</span> <span class="ruby-identifier">child</span>
+222:       <span class="ruby-keyword kw">end</span>
+223:     }
+224:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000322" class="method-detail">
+        <a name="M000322"></a>
+
+        <div class="method-heading">
+          <a href="#M000322" class="method-signature">
+          <span class="method-name">sort</span><span class="method-args">(doc)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000322-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000322-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/hgv_meta_identifier.rb, line 296</span>
+296:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sort</span> <span class="ruby-identifier">doc</span>
+297:     <span class="ruby-comment cmt"># general</span>
+298:     <span class="ruby-identifier">sort_paths</span> = {
+299:       <span class="ruby-identifier">:msIdentifier</span> =<span class="ruby-operator">&gt;</span> {
+300:         <span class="ruby-identifier">:parent</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier'</span>,
+301:         <span class="ruby-identifier">:children</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value str">'placename'</span>, <span class="ruby-value str">'collection'</span>, <span class="ruby-value str">'idno'</span>, <span class="ruby-value str">'altIdentifier'</span>]
+302:       },
+303:       <span class="ruby-identifier">:altIdentifier</span> =<span class="ruby-operator">&gt;</span> {
+304:         <span class="ruby-identifier">:parent</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/altIdentifier[@type='temporary']&quot;</span>,
+305:         <span class="ruby-identifier">:children</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value str">'placename'</span>, <span class="ruby-value str">'collection'</span>, <span class="ruby-value str">'idno'</span>, <span class="ruby-value str">'note'</span>]
+306:       }
+307:     }
+308: 
+309:     <span class="ruby-identifier">sort_paths</span>.<span class="ruby-identifier">each_value</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">sort_path</span><span class="ruby-operator">|</span>
+310:     
+311:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-identifier">sort_path</span>[<span class="ruby-identifier">:parent</span>]]
+312:         <span class="ruby-identifier">sort_path</span>[<span class="ruby-identifier">:children</span>].<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">child_path</span><span class="ruby-operator">|</span>
+313:           <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-identifier">child_path</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span>
+314:             <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">child</span>
+315:             <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">add</span> <span class="ruby-identifier">child</span>
+316:           }
+317:         }
+318:       <span class="ruby-keyword kw">end</span>
+319:     }
+320:     
+321:     <span class="ruby-comment cmt"># date</span>
+322: 
+323:     <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-ivar">@configuration</span>.<span class="ruby-identifier">scheme</span>[<span class="ruby-identifier">:textDate</span>][<span class="ruby-identifier">:xpath</span>]){<span class="ruby-operator">|</span><span class="ruby-identifier">date</span><span class="ruby-operator">|</span>
+324:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">date</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">'offset'</span>]
+325: 
+326:         <span class="ruby-identifier">hgvFormat</span> = <span class="ruby-value str">''</span>
+327:         <span class="ruby-identifier">date</span>.<span class="ruby-identifier">texts</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">text</span><span class="ruby-operator">|</span>
+328:           <span class="ruby-identifier">hgvFormat</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">text</span>.<span class="ruby-identifier">value</span>
+329:           <span class="ruby-identifier">date</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">text</span>  
+330:         }
+331:         <span class="ruby-identifier">hgvFormat</span> = <span class="ruby-identifier">hgvFormat</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/(vor|nach)( \(\?\))?/</span>, <span class="ruby-value str">''</span>).<span class="ruby-identifier">strip</span>
+332:         
+333:         <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">date</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">'offset[position()=1]'</span>]
+334:         <span class="ruby-identifier">offset2</span> = <span class="ruby-identifier">date</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">'offset[position()=2]'</span>]
+335:         
+336:         <span class="ruby-identifier">date</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">offset</span>
+337:         <span class="ruby-identifier">date</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">offset2</span>        
+338:         
+339:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">offset</span>
+340:           <span class="ruby-identifier">date</span>.<span class="ruby-identifier">add_element</span> <span class="ruby-identifier">offset</span>
+341:           <span class="ruby-identifier">date</span>.<span class="ruby-identifier">add_text</span> <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Text</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">' '</span>)
+342:         <span class="ruby-keyword kw">end</span>
+343:         
+344:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">hgvFormat</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value str">' - '</span>
+345:           <span class="ruby-identifier">hgvFormat</span> = <span class="ruby-identifier">hgvFormat</span>.<span class="ruby-identifier">split</span> <span class="ruby-value str">' - '</span>
+346:           <span class="ruby-identifier">date</span>.<span class="ruby-identifier">add_text</span> <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Text</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">hgvFormat</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">+</span> <span class="ruby-value str">' - '</span>)
+347:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">offset2</span>
+348:             <span class="ruby-identifier">date</span>.<span class="ruby-identifier">add_element</span> <span class="ruby-identifier">offset2</span>
+349:             <span class="ruby-identifier">date</span>.<span class="ruby-identifier">add_text</span> <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Text</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">' '</span>)
+350:           <span class="ruby-keyword kw">end</span>
+351:           <span class="ruby-identifier">date</span>.<span class="ruby-identifier">add_text</span> <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Text</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">hgvFormat</span>[<span class="ruby-value">1</span>])
+352:         <span class="ruby-keyword kw">else</span>
+353:           <span class="ruby-identifier">date</span>.<span class="ruby-identifier">add_text</span> <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Text</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">hgvFormat</span>)
+354:         <span class="ruby-keyword kw">end</span>
+355: 
+356:       <span class="ruby-keyword kw">end</span>
+357:     }
+358: 
+359:    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">doc</span> 
+360:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

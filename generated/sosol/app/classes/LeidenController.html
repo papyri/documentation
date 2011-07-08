@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: LeidenController</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">LeidenController</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/app/controllers/leiden_controller_rb.html">
+                app/controllers/leiden_controller.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                <a href="ApplicationController.html">
+                ApplicationController
+               </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000273">leiden2xml</a>&nbsp;&nbsp;
+      <a href="#M000272">xmlAjax</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000273" class="method-detail">
+        <a name="M000273"></a>
+
+        <div class="method-heading">
+          <a href="#M000273" class="method-signature">
+          <span class="method-name">leiden2xml</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000273-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000273-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/leiden_controller.rb, line 19</span>
+19:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">leiden2xml</span>
+20:     
+21:     <span class="ruby-identifier">leiden2conv</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:leiden</span>])
+22:     <span class="ruby-keyword kw">begin</span>
+23:       <span class="ruby-identifier">xmlback</span> = <span class="ruby-constant">Leiden</span>.<span class="ruby-identifier">leiden_plus_xml</span>(<span class="ruby-identifier">leiden2conv</span>)
+24:       <span class="ruby-identifier">render</span> <span class="ruby-identifier">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#{xmlback}&quot;</span>
+25:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">RXSugar</span><span class="ruby-operator">::</span><span class="ruby-constant">NonXMLParseError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">parse_error</span>
+26:       <span class="ruby-comment cmt">#insert **ERROR** into content to help user find it - subtract 1 for offset from 0</span>
+27:       <span class="ruby-identifier">parse_error</span>.<span class="ruby-identifier">content</span>.<span class="ruby-identifier">insert</span>((<span class="ruby-identifier">parse_error</span>.<span class="ruby-identifier">column</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>), <span class="ruby-value str">&quot;**ERROR**&quot;</span>)
+28:       <span class="ruby-identifier">render</span> <span class="ruby-identifier">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;Error at column #{parse_error.column} #{parse_error.content}&quot;</span>
+29:     <span class="ruby-keyword kw">end</span>
+30:     
+31:     
+32:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000272" class="method-detail">
+        <a name="M000272"></a>
+
+        <div class="method-heading">
+          <a href="#M000272" class="method-signature">
+          <span class="method-name">xmlAjax</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000272-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000272-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/leiden_controller.rb, line 3</span>
+ 3:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xmlAjax</span>
+ 4:     
+ 5:     <span class="ruby-identifier">xml2conv</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:xml</span>])
+ 6:     <span class="ruby-keyword kw">begin</span>
+ 7:       <span class="ruby-identifier">leidenback</span> = <span class="ruby-constant">Leiden</span>.<span class="ruby-identifier">xml_leiden_plus</span>(<span class="ruby-identifier">xml2conv</span>)
+ 8:       <span class="ruby-identifier">render</span> <span class="ruby-identifier">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#{leidenback}&quot;</span>
+ 9:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">RXSugar</span><span class="ruby-operator">::</span><span class="ruby-constant">XMLParseError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">parse_error</span>
+10:       <span class="ruby-comment cmt">#insert **ERROR** into content to help user find it - subtract 1 for offset from 0</span>
+11:       <span class="ruby-comment cmt">#added 68 to above because of &quot;xml:&quot; in 'div edition being replaced twice during the</span>
+12:       <span class="ruby-comment cmt">#normalize xml process in xsugar processing in rxsugar.xml_to_non_xml with {http://www.w3.org/XML/1998/namespace}</span>
+13:       <span class="ruby-comment cmt"># this is (38 chars - 4) * 2 = 68. removed 68 in error message also not offset.</span>
+14:       <span class="ruby-identifier">parse_error</span>.<span class="ruby-identifier">content</span>.<span class="ruby-identifier">insert</span>((<span class="ruby-identifier">parse_error</span>.<span class="ruby-identifier">column</span><span class="ruby-operator">-</span><span class="ruby-value">69</span>), <span class="ruby-value str">&quot;**ERROR**&quot;</span>)
+15:       <span class="ruby-identifier">render</span> <span class="ruby-identifier">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;Error at column #{parse_error.column-68} #{parse_error.content}&quot;</span>
+16:     <span class="ruby-keyword kw">end</span>
+17:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

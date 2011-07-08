@@ -1,0 +1,2152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Publication</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Publication</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/app/models/publication_rb.html">
+                app/models/publication.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                ActiveRecord::Base
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000079">after_create</a>&nbsp;&nbsp;
+      <a href="#M000072">after_destroy</a>&nbsp;&nbsp;
+      <a href="#M000085">archive</a>&nbsp;&nbsp;
+      <a href="#M000071">before_create</a>&nbsp;&nbsp;
+      <a href="#M000070">before_validation</a>&nbsp;&nbsp;
+      <a href="#M000096">branch_from_master</a>&nbsp;&nbsp;
+      <a href="#M000099">canon_controlled_identifiers</a>&nbsp;&nbsp;
+      <a href="#M000100">canon_controlled_paths</a>&nbsp;&nbsp;
+      <a href="#M000084">change_status</a>&nbsp;&nbsp;
+      <a href="#M000106">children_votes</a>&nbsp;&nbsp;
+      <a href="#M000107">clone_to_owner</a>&nbsp;&nbsp;
+      <a href="#M000095">commit_to_canon</a>&nbsp;&nbsp;
+      <a href="#M000097">controlled_identifiers</a>&nbsp;&nbsp;
+      <a href="#M000098">controlled_paths</a>&nbsp;&nbsp;
+      <a href="#M000110">copy_repo_to_parent_repo</a>&nbsp;&nbsp;
+      <a href="#M000109">copy_to_owner</a>&nbsp;&nbsp;
+      <a href="#M000101">diff_from_canon</a>&nbsp;&nbsp;
+      <a href="#M000111">entry_identifier</a>&nbsp;&nbsp;
+      <a href="#M000092">find_finalizer_publication</a>&nbsp;&nbsp;
+      <a href="#M000091">find_finalizer_user</a>&nbsp;&nbsp;
+      <a href="#M000104">find_first_board</a>&nbsp;&nbsp;
+      <a href="#M000105">find_first_board_parent</a>&nbsp;&nbsp;
+      <a href="#M000088">flatten_commits</a>&nbsp;&nbsp;
+      <a href="#M000112">get_all_comments</a>&nbsp;&nbsp;
+      <a href="#M000093">head</a>&nbsp;&nbsp;
+      <a href="#M000114">identifier_to_ref</a>&nbsp;&nbsp;
+      <a href="#M000094">merge_base</a>&nbsp;&nbsp;
+      <a href="#M000077">modified?</a>&nbsp;&nbsp;
+      <a href="#M000078">mutable?</a>&nbsp;&nbsp;
+      <a href="#M000076">new_from_templates</a>&nbsp;&nbsp;
+      <a href="#M000103">origin</a>&nbsp;&nbsp;
+      <a href="#M000069">populate_identifiers_from_identifiers</a>&nbsp;&nbsp;
+      <a href="#M000068">print</a>&nbsp;&nbsp;
+      <a href="#M000090">remove_finalizer</a>&nbsp;&nbsp;
+      <a href="#M000108">repository</a>&nbsp;&nbsp;
+      <a href="#M000089">send_to_finalizer</a>&nbsp;&nbsp;
+      <a href="#M000083">set_board_identifier_status</a>&nbsp;&nbsp;
+      <a href="#M000081">set_local_identifier_status</a>&nbsp;&nbsp;
+      <a href="#M000082">set_origin_and_local_identifier_status</a>&nbsp;&nbsp;
+      <a href="#M000080">set_origin_identifier_status</a>&nbsp;&nbsp;
+      <a href="#M000102">submission_reason</a>&nbsp;&nbsp;
+      <a href="#M000075">submit</a>&nbsp;&nbsp;
+      <a href="#M000074">submit_identifier</a>&nbsp;&nbsp;
+      <a href="#M000073">submit_to_next_board</a>&nbsp;&nbsp;
+      <a href="#M000087">tally_votes</a>&nbsp;&nbsp;
+      <a href="#M000113">title_to_ref</a>&nbsp;&nbsp;
+      <a href="#M000086">user_has_voted?</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">PUBLICATION_STATUS</td>
+          <td>=</td>
+          <td class="context-item-value">%w{ new editing submitted approved finalizing committed archived }</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">recent_submit_sha</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+inelegant way to pass this info, but it works
+
+</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000076" class="method-detail">
+        <a name="M000076"></a>
+
+        <div class="method-heading">
+          <a href="#M000076" class="method-signature">
+          <span class="method-name">new_from_templates</span><span class="method-args">(creator)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000076-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000076-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 324</span>
+324:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new_from_templates</span>(<span class="ruby-identifier">creator</span>)
+325:     <span class="ruby-identifier">new_publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">:owner</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">creator</span>, <span class="ruby-identifier">:creator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">creator</span>)
+326:     
+327:     <span class="ruby-comment cmt"># fetch a title without creating from template</span>
+328:     <span class="ruby-identifier">new_publication</span>.<span class="ruby-identifier">title</span> = <span class="ruby-constant">DDBIdentifier</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">DDBIdentifier</span>.<span class="ruby-identifier">next_temporary_identifier</span>).<span class="ruby-identifier">titleize</span>
+329:     
+330:     <span class="ruby-identifier">new_publication</span>.<span class="ruby-identifier">status</span> = <span class="ruby-value str">&quot;new&quot;</span> <span class="ruby-comment cmt">#TODO add new flag else where or flesh out new status#&quot;new&quot;</span>
+331:     
+332:     <span class="ruby-identifier">new_publication</span>.<span class="ruby-identifier">save!</span>
+333:     
+334:     <span class="ruby-comment cmt"># branch from master so we aren't just creating an empty branch</span>
+335:     <span class="ruby-identifier">new_publication</span>.<span class="ruby-identifier">branch_from_master</span>
+336:             
+337:     <span class="ruby-comment cmt">#create the required meta data and transcriptions</span>
+338:     <span class="ruby-identifier">new_ddb</span> = <span class="ruby-constant">DDBIdentifier</span>.<span class="ruby-identifier">new_from_template</span>(<span class="ruby-identifier">new_publication</span>)      
+339:     <span class="ruby-identifier">new_hgv_meta</span> = <span class="ruby-constant">HGVMetaIdentifier</span>.<span class="ruby-identifier">new_from_template</span>(<span class="ruby-identifier">new_publication</span>)
+340:             
+341:     <span class="ruby-comment cmt"># go ahead and create the third so we can get rid of the create button</span>
+342:     <span class="ruby-comment cmt">#new_hgv_trans = HGVTransIdentifier.new_from_template(new_publication)    </span>
+343:     
+344:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">new_publication</span>
+345:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000079" class="method-detail">
+        <a name="M000079"></a>
+
+        <div class="method-heading">
+          <a href="#M000079" class="method-signature">
+          <span class="method-name">after_create</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+TODO: rename actual branch after branch attribute rename
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000079-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000079-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 367</span>
+367:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">after_create</span>
+368:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000072" class="method-detail">
+        <a name="M000072"></a>
+
+        <div class="method-heading">
+          <a href="#M000072" class="method-signature">
+          <span class="method-name">after_destroy</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000072-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000072-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 165</span>
+165:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">after_destroy</span>
+166:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">delete_branch</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">branch</span>)
+167:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000085" class="method-detail">
+        <a name="M000085"></a>
+
+        <div class="method-heading">
+          <a href="#M000085" class="method-signature">
+          <span class="method-name">archive</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000085-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000085-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 454</span>
+454:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">archive</span>
+455:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">change_status</span>(<span class="ruby-value str">&quot;archived&quot;</span>)
+456:     
+457:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">title</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">title</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-value str">&quot; (%Y/%m/%d-%H.%M.%S)&quot;</span>)
+458:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">save!</span>
+459:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000071" class="method-detail">
+        <a name="M000071"></a>
+
+        <div class="method-heading">
+          <a href="#M000071" class="method-signature">
+          <span class="method-name">before_create</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Should check the owner&#8216;s repo to make sure the branch doesn&#8216;t
+exist and halt if so
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000071-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000071-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 159</span>
+159:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">before_create</span>
+160:     <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">branches</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">branch</span>)
+161:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+162:     <span class="ruby-keyword kw">end</span>
+163:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000070" class="method-detail">
+        <a name="M000070"></a>
+
+        <div class="method-heading">
+          <a href="#M000070" class="method-signature">
+          <span class="method-name">before_validation</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+If branch hasn&#8216;t been specified, create it from the title before
+validation, replacing spaces with underscore. TODO: do a branch rename
+inside before_validation_on_update?
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000070-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000070-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 154</span>
+154:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">before_validation</span>
+155:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">branch</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">title_to_ref</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">title</span>)
+156:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000096" class="method-detail">
+        <a name="M000096"></a>
+
+        <div class="method-heading">
+          <a href="#M000096" class="method-signature">
+          <span class="method-name">branch_from_master</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000096-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000096-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 850</span>
+850:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">branch_from_master</span>
+851:     <span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">create_branch</span>(<span class="ruby-identifier">branch</span>)
+852:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000099" class="method-detail">
+        <a name="M000099"></a>
+
+        <div class="method-heading">
+          <a href="#M000099" class="method-signature">
+          <span class="method-name">canon_controlled_identifiers</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000099-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000099-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 872</span>
+872:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">canon_controlled_identifiers</span>
+873:     <span class="ruby-comment cmt"># TODO: implement a class-level var e.g. CANON_CONTROL for this</span>
+874:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">controlled_identifiers</span>.<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span>([<span class="ruby-constant">HGVBiblioIdentifier</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span>))}
+875:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000100" class="method-detail">
+        <a name="M000100"></a>
+
+        <div class="method-heading">
+          <a href="#M000100" class="method-signature">
+          <span class="method-name">canon_controlled_paths</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000100-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000100-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 877</span>
+877:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">canon_controlled_paths</span>
+878:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">canon_controlled_identifiers</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+879:       <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_path</span>
+880:     <span class="ruby-keyword kw">end</span>
+881:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000084" class="method-detail">
+        <a name="M000084"></a>
+
+        <div class="method-heading">
+          <a href="#M000084" class="method-signature">
+          <span class="method-name">change_status</span><span class="method-args">(new_status)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000084-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000084-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 421</span>
+421:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">change_status</span>(<span class="ruby-identifier">new_status</span>)
+422:     <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">new_status</span>
+423:       <span class="ruby-identifier">old_branch_leaf</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">branch</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">'/'</span>).<span class="ruby-identifier">last</span>
+424:       <span class="ruby-identifier">new_branch_components</span> = [<span class="ruby-identifier">old_branch_leaf</span>]
+425:       
+426:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">new_status</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'editing'</span>
+427:         <span class="ruby-identifier">new_branch_components</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">new_status</span>, <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-value str">&quot;%Y/%m/%d&quot;</span>))
+428:       <span class="ruby-keyword kw">end</span>
+429:       
+430:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">parent</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Board</span>)
+431:         <span class="ruby-identifier">new_branch_components</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">title_to_ref</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">title</span>))
+432:       <span class="ruby-keyword kw">end</span>
+433:       
+434:       <span class="ruby-identifier">new_branch_name</span> = <span class="ruby-identifier">new_branch_components</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">'/'</span>)
+435: 
+436:       <span class="ruby-comment cmt"># prevent collisions</span>
+437:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">branches</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">new_branch_name</span>)
+438:         <span class="ruby-identifier">new_branch_name</span> <span class="ruby-operator">+=</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-value str">&quot;-%H.%M.%S&quot;</span>)
+439:       <span class="ruby-keyword kw">end</span>
+440:     
+441:       <span class="ruby-comment cmt"># branch from the original branch</span>
+442:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">create_branch</span>(<span class="ruby-identifier">new_branch_name</span>,
+443:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">get_head</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">branch</span>).<span class="ruby-identifier">commit</span>.<span class="ruby-identifier">sha</span>)
+444:       <span class="ruby-comment cmt"># delete the original branch</span>
+445:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">delete_branch</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">branch</span>)
+446:       <span class="ruby-comment cmt"># set to new branch</span>
+447:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">branch</span> = <span class="ruby-identifier">new_branch_name</span>
+448:       <span class="ruby-comment cmt"># set status to new status</span>
+449:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">status</span> = <span class="ruby-identifier">new_status</span>
+450:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">save!</span>
+451:     <span class="ruby-keyword kw">end</span>
+452:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000106" class="method-detail">
+        <a name="M000106"></a>
+
+        <div class="method-heading">
+          <a href="#M000106" class="method-signature">
+          <span class="method-name">children_votes</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+total votes for the publication children in voting status
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000106-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000106-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 928</span>
+928:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">children_votes</span>
+929:     <span class="ruby-identifier">vote_total</span> = <span class="ruby-value">0</span>
+930:     <span class="ruby-identifier">vote_ddb</span> = <span class="ruby-value">0</span>
+931:     <span class="ruby-identifier">vote_meta</span> = <span class="ruby-value">0</span>
+932:     <span class="ruby-identifier">vote_trans</span> = <span class="ruby-value">0</span>
+933:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span><span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+934:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'voting'</span>
+935:         <span class="ruby-identifier">x</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+936:           <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">y</span>
+937:             <span class="ruby-keyword kw">when</span> <span class="ruby-constant">DDBIdentifier</span>
+938:               <span class="ruby-identifier">vote_ddb</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">y</span>.<span class="ruby-identifier">votes</span>.<span class="ruby-identifier">length</span>
+939:               <span class="ruby-identifier">vote_total</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">vote_ddb</span>
+940:             <span class="ruby-keyword kw">when</span> <span class="ruby-constant">HGVMetaIdentifier</span>
+941:               <span class="ruby-identifier">vote_meta</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">y</span>.<span class="ruby-identifier">votes</span>.<span class="ruby-identifier">length</span>
+942:               <span class="ruby-identifier">vote_total</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">vote_meta</span>
+943:             <span class="ruby-keyword kw">when</span> <span class="ruby-constant">HGVTransIdentifier</span>
+944:               <span class="ruby-identifier">vote_trans</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">y</span>.<span class="ruby-identifier">votes</span>.<span class="ruby-identifier">length</span>
+945:               <span class="ruby-identifier">vote_total</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">vote_trans</span>
+946:           <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#case</span>
+947:         <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt"># identifiers do</span>
+948:       <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#if</span>
+949:     <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#children do</span>
+950:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">vote_total</span>, <span class="ruby-identifier">vote_ddb</span>, <span class="ruby-identifier">vote_meta</span>, <span class="ruby-identifier">vote_trans</span>
+951:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000107" class="method-detail">
+        <a name="M000107"></a>
+
+        <div class="method-heading">
+          <a href="#M000107" class="method-signature">
+          <span class="method-name">clone_to_owner</span><span class="method-args">(new_owner)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000107-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000107-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 953</span>
+953:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">clone_to_owner</span>(<span class="ruby-identifier">new_owner</span>)
+954:     <span class="ruby-identifier">duplicate</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">clone</span>
+955:     <span class="ruby-identifier">duplicate</span>.<span class="ruby-identifier">owner</span> = <span class="ruby-identifier">new_owner</span>
+956:     <span class="ruby-identifier">duplicate</span>.<span class="ruby-identifier">creator</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">creator</span>
+957:     <span class="ruby-identifier">duplicate</span>.<span class="ruby-identifier">title</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">title</span>
+958:     <span class="ruby-identifier">duplicate</span>.<span class="ruby-identifier">branch</span> = <span class="ruby-identifier">title_to_ref</span>(<span class="ruby-identifier">duplicate</span>.<span class="ruby-identifier">title</span>)
+959:     <span class="ruby-identifier">duplicate</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-keyword kw">self</span>
+960:     <span class="ruby-identifier">duplicate</span>.<span class="ruby-identifier">save!</span>
+961:     
+962:     <span class="ruby-comment cmt"># copy identifiers over to new pub</span>
+963:     <span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">identifier</span><span class="ruby-operator">|</span>
+964:       <span class="ruby-identifier">duplicate_identifier</span> = <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>
+965:       <span class="ruby-identifier">duplicate</span>.<span class="ruby-identifier">identifiers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">duplicate_identifier</span>
+966:     <span class="ruby-keyword kw">end</span>
+967:     
+968:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">duplicate</span>
+969:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000095" class="method-detail">
+        <a name="M000095"></a>
+
+        <div class="method-heading">
+          <a href="#M000095" class="method-signature">
+          <span class="method-name">commit_to_canon</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000095-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000095-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 739</span>
+739:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">commit_to_canon</span>
+740:   
+741:     <span class="ruby-comment cmt">#commit_sha is just used to return git sha reference point for comment</span>
+742:     <span class="ruby-identifier">commit_sha</span> = <span class="ruby-keyword kw">nil</span>
+743:   
+744:   
+745:     <span class="ruby-identifier">canon</span> = <span class="ruby-constant">Repository</span>.<span class="ruby-identifier">new</span>
+746:     <span class="ruby-identifier">publication_sha</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">head</span>
+747:     <span class="ruby-identifier">canonical_sha</span> = <span class="ruby-identifier">canon</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">get_head</span>(<span class="ruby-value str">'master'</span>).<span class="ruby-identifier">commit</span>.<span class="ruby-identifier">sha</span>
+748:     
+749:     <span class="ruby-comment cmt"># FIXME: This walks the whole rev list, should maybe use git merge-base</span>
+750:     <span class="ruby-comment cmt"># to find the branch point? Though that may do the same internally...</span>
+751:     <span class="ruby-comment cmt"># commits = canon.repo.commit_deltas_from(self.owner.repository.repo, 'master', self.branch)</span>
+752:     
+753:     <span class="ruby-comment cmt"># Commits that are in canonical master but not this branch</span>
+754:     <span class="ruby-comment cmt"># Forcing method_missing here to directly call rev-list is much faster</span>
+755:     <span class="ruby-identifier">commits</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">git</span>.<span class="ruby-identifier">method_missing</span>(<span class="ruby-value str">'rev-list'</span>,{}, <span class="ruby-identifier">canonical_sha</span>, <span class="ruby-node">&quot;^#{publication_sha}&quot;</span>).<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;\n&quot;</span>)
+756:     
+757:     <span class="ruby-comment cmt"># canon.repo.git.merge({:no_commit =&gt; true, :stat =&gt; true},</span>
+758:       <span class="ruby-comment cmt"># self.owner.repository.repo.get_head(self.branch).commit.sha)</span>
+759:     
+760:     <span class="ruby-comment cmt"># get the result of merging canon master into this branch</span>
+761:     <span class="ruby-comment cmt"># merge = Grit::Merge.new(</span>
+762:     <span class="ruby-comment cmt">#   self.owner.repository.repo.git.merge_tree({},</span>
+763:     <span class="ruby-comment cmt">#     publication_sha, canonical_sha, publication_sha))</span>
+764:     
+765:     
+766:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">canon_controlled_identifiers</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+767:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">commits</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+768:         <span class="ruby-comment cmt"># nothing new from canon, trivial merge by updating HEAD </span>
+769:         <span class="ruby-comment cmt"># e.g. &quot;Fast-forward&quot; merge, HEAD is already contained in the commit</span>
+770:         <span class="ruby-comment cmt"># canon.fetch_objects(self.owner.repository)</span>
+771:         <span class="ruby-identifier">canon</span>.<span class="ruby-identifier">add_alternates</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>)
+772:         <span class="ruby-identifier">commit_sha</span> = <span class="ruby-identifier">canon</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">update_ref</span>(<span class="ruby-value str">'master'</span>, <span class="ruby-identifier">publication_sha</span>)
+773:         
+774:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">change_status</span>(<span class="ruby-value str">'committed'</span>)
+775:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">save!</span>
+776:       <span class="ruby-keyword kw">else</span>
+777:         <span class="ruby-comment cmt"># Both the merged commit and HEAD are independent and must be tied </span>
+778:         <span class="ruby-comment cmt"># together by a merge commit that has both of them as its parents.</span>
+779:       
+780:         <span class="ruby-comment cmt"># TODO: DRY from flatten_commits</span>
+781:         <span class="ruby-identifier">controlled_blobs</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">canon_controlled_paths</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">controlled_path</span><span class="ruby-operator">|</span>
+782:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">get_blob_from_branch</span>(<span class="ruby-identifier">controlled_path</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">branch</span>)
+783:         <span class="ruby-keyword kw">end</span>
+784: 
+785:         <span class="ruby-identifier">controlled_paths_blobs</span> = 
+786:           <span class="ruby-constant">Hash</span>[<span class="ruby-operator">*</span>((<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">canon_controlled_paths</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">controlled_blobs</span>)).<span class="ruby-identifier">flatten</span>)]
+787: 
+788:         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Controlled Blobs: #{controlled_blobs.inspect}&quot;</span>)
+789:         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Controlled Paths =&gt; Blobs: #{controlled_paths_blobs.inspect}&quot;</span>)
+790:       
+791:         <span class="ruby-comment cmt"># roll a tree SHA1 by reading the canonical master tree,</span>
+792:         <span class="ruby-comment cmt"># adding controlled path blobs, then writing the modified tree</span>
+793:         <span class="ruby-comment cmt"># (happens on the finalizer's repo)</span>
+794:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">update_master_from_canonical</span>
+795:         <span class="ruby-identifier">index</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">index</span>
+796:         <span class="ruby-identifier">index</span>.<span class="ruby-identifier">read_tree</span>(<span class="ruby-value str">'master'</span>)
+797:         <span class="ruby-identifier">controlled_paths_blobs</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span>, <span class="ruby-identifier">blob</span><span class="ruby-operator">|</span>
+798:           <span class="ruby-identifier">index</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">blob</span>.<span class="ruby-identifier">data</span>)
+799:         <span class="ruby-keyword kw">end</span>
+800: 
+801:         <span class="ruby-identifier">tree_sha1</span> = <span class="ruby-identifier">index</span>.<span class="ruby-identifier">write_tree</span>(<span class="ruby-identifier">index</span>.<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">index</span>.<span class="ruby-identifier">current_tree</span>)
+802:         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Wrote tree as SHA1: #{tree_sha1}&quot;</span>)
+803: 
+804:         <span class="ruby-identifier">commit_message</span> = <span class="ruby-node">&quot;Finalization merge of branch '#{self.branch}' into canonical master&quot;</span>
+805:       
+806:         <span class="ruby-identifier">contents</span> = []
+807:         <span class="ruby-identifier">contents</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-value str">'tree'</span>, <span class="ruby-identifier">tree_sha1</span>].<span class="ruby-identifier">join</span>(<span class="ruby-value str">' '</span>)
+808:         <span class="ruby-identifier">contents</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-value str">'parent'</span>, <span class="ruby-identifier">canonical_sha</span>].<span class="ruby-identifier">join</span>(<span class="ruby-value str">' '</span>)
+809:         <span class="ruby-identifier">contents</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-value str">'parent'</span>, <span class="ruby-identifier">publication_sha</span>].<span class="ruby-identifier">join</span>(<span class="ruby-value str">' '</span>)
+810: 
+811:         <span class="ruby-identifier">contents</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-value str">'author'</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">git_author_string</span>].<span class="ruby-identifier">join</span>(<span class="ruby-value str">' '</span>)
+812:         <span class="ruby-identifier">contents</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-value str">'committer'</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">git_author_string</span>].<span class="ruby-identifier">join</span>(<span class="ruby-value str">' '</span>)
+813:         <span class="ruby-identifier">contents</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">''</span>
+814:         <span class="ruby-identifier">contents</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">commit_message</span>
+815:       
+816:         <span class="ruby-identifier">finalized_commit_sha1</span> = 
+817:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">git</span>.<span class="ruby-identifier">put_raw_object</span>(
+818:             <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n&quot;</span>), <span class="ruby-value str">'commit'</span>)
+819:       
+820:         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Finalized commit contents:\n#{contents.join(&quot;\n&quot;)}&quot;</span>)
+821:         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Wrote finalized commit merge as SHA1: #{finalized_commit_sha1}&quot;</span>)
+822:       
+823:         <span class="ruby-comment cmt"># Update our own head first</span>
+824:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">update_ref</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">branch</span>, <span class="ruby-identifier">finalized_commit_sha1</span>)
+825:       
+826:         <span class="ruby-comment cmt"># canon.fetch_objects(self.owner.repository)</span>
+827:         <span class="ruby-identifier">canon</span>.<span class="ruby-identifier">add_alternates</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>)
+828:         <span class="ruby-identifier">commit_sha</span> = <span class="ruby-identifier">canon</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">update_ref</span>(<span class="ruby-value str">'master'</span>, <span class="ruby-identifier">finalized_commit_sha1</span>)
+829:         
+830:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">change_status</span>(<span class="ruby-value str">'committed'</span>)
+831:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">save!</span>
+832:       <span class="ruby-keyword kw">end</span>
+833:       
+834:       <span class="ruby-comment cmt"># finalized, try to repack</span>
+835:       <span class="ruby-keyword kw">begin</span>
+836:         <span class="ruby-identifier">canon</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">git</span>.<span class="ruby-identifier">repack</span>({})
+837:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Grit</span><span class="ruby-operator">::</span><span class="ruby-constant">Git</span><span class="ruby-operator">::</span><span class="ruby-constant">GitTimeout</span>
+838:         <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">warn</span>(<span class="ruby-value str">&quot;Canonical repository not repacked after finalization!&quot;</span>)
+839:       <span class="ruby-keyword kw">end</span>
+840:     <span class="ruby-keyword kw">else</span>
+841:       <span class="ruby-comment cmt"># nothing under canon control, just say it's committed</span>
+842:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">change_status</span>(<span class="ruby-value str">'committed'</span>)
+843:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">save!</span>
+844:       
+845:     <span class="ruby-keyword kw">end</span>
+846:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">commit_sha</span>
+847:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000097" class="method-detail">
+        <a name="M000097"></a>
+
+        <div class="method-heading">
+          <a href="#M000097" class="method-signature">
+          <span class="method-name">controlled_identifiers</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000097-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000097-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 854</span>
+854:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">controlled_identifiers</span>
+855:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">select</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+856:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Board</span>
+857:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">identifier_classes</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>)
+858:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'finalizing'</span>
+859:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">identifier_classes</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>)
+860:       <span class="ruby-keyword kw">else</span>
+861:         <span class="ruby-keyword kw">false</span>
+862:       <span class="ruby-keyword kw">end</span>
+863:     <span class="ruby-keyword kw">end</span>
+864:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000098" class="method-detail">
+        <a name="M000098"></a>
+
+        <div class="method-heading">
+          <a href="#M000098" class="method-signature">
+          <span class="method-name">controlled_paths</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000098-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000098-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 866</span>
+866:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">controlled_paths</span>
+867:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">controlled_identifiers</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+868:       <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_path</span>
+869:     <span class="ruby-keyword kw">end</span>
+870:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000110" class="method-detail">
+        <a name="M000110"></a>
+
+        <div class="method-heading">
+          <a href="#M000110" class="method-signature">
+          <span class="method-name">copy_repo_to_parent_repo</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+copy a child publication repo back to the parent repo
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000110-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000110-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 988</span>
+988:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">copy_repo_to_parent_repo</span>
+989:      <span class="ruby-comment cmt">#all we need to do is copy the repo back the parents repo</span>
+990:      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">copy_branch_from_repo</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">branch</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">branch</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">repository</span>)
+991:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000109" class="method-detail">
+        <a name="M000109"></a>
+
+        <div class="method-heading">
+          <a href="#M000109" class="method-signature">
+          <span class="method-name">copy_to_owner</span><span class="method-args">(new_owner)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+copies this publication&#8216;s branch to the new_owner&#8216;s branch
+returns duplicate publication with new_owner
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000109-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000109-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 977</span>
+977:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">copy_to_owner</span>(<span class="ruby-identifier">new_owner</span>)
+978:     <span class="ruby-identifier">duplicate</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">clone_to_owner</span>(<span class="ruby-identifier">new_owner</span>)
+979:     
+980:     <span class="ruby-identifier">duplicate</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">copy_branch_from_repo</span>(
+981:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">branch</span>, <span class="ruby-identifier">duplicate</span>.<span class="ruby-identifier">branch</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>
+982:     )
+983:     
+984:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">duplicate</span>
+985:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000101" class="method-detail">
+        <a name="M000101"></a>
+
+        <div class="method-heading">
+          <a href="#M000101" class="method-signature">
+          <span class="method-name">diff_from_canon</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000101-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000101-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 883</span>
+883:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">diff_from_canon</span>
+884:     <span class="ruby-identifier">canon</span> = <span class="ruby-constant">Repository</span>.<span class="ruby-identifier">new</span>
+885:     <span class="ruby-identifier">canonical_sha</span> = <span class="ruby-identifier">canon</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">get_head</span>(<span class="ruby-value str">'master'</span>).<span class="ruby-identifier">commit</span>.<span class="ruby-identifier">sha</span>
+886:     <span class="ruby-identifier">diff</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">git</span>.<span class="ruby-identifier">diff</span>(
+887:       {<span class="ruby-identifier">:unified</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">5000</span>}, <span class="ruby-identifier">canonical_sha</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">head</span>,
+888:       <span class="ruby-value str">'--'</span>, <span class="ruby-operator">*</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">controlled_paths</span>))
+889:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">diff</span> <span class="ruby-operator">||</span> <span class="ruby-value str">&quot;&quot;</span>
+890:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000111" class="method-detail">
+        <a name="M000111"></a>
+
+        <div class="method-heading">
+          <a href="#M000111" class="method-signature">
+          <span class="method-name">entry_identifier</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+entry point identifier to use when we&#8216;re just coming in from a
+publication
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000111-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000111-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 996</span>
+996:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">entry_identifier</span>
+997:     <span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">first</span>
+998:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000092" class="method-detail">
+        <a name="M000092"></a>
+
+        <div class="method-heading">
+          <a href="#M000092" class="method-signature">
+          <span class="method-name">find_finalizer_publication</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000092-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000092-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 726</span>
+726:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_finalizer_publication</span>
+727:   <span class="ruby-comment cmt">#returns the finalizer user or nil if finalizer does not exist</span>
+728:     <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_by_parent_id</span>( <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">:conditions</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;finalizing&quot;</span> })
+729:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000091" class="method-detail">
+        <a name="M000091"></a>
+
+        <div class="method-heading">
+          <a href="#M000091" class="method-signature">
+          <span class="method-name">find_finalizer_user</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000091-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000091-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 719</span>
+719:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_finalizer_user</span>
+720:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">find_finalizer_publication</span>
+721:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">find_finalizer_publication</span>.<span class="ruby-identifier">owner</span>    
+722:     <span class="ruby-keyword kw">end</span>
+723:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+724:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000104" class="method-detail">
+        <a name="M000104"></a>
+
+        <div class="method-heading">
+          <a href="#M000104" class="method-signature">
+          <span class="method-name">find_first_board</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+finds the closest parent publication whose owner is a board and returns
+that board
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000104-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000104-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 907</span>
+907:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_first_board</span>
+908:     <span class="ruby-identifier">board_publication</span> = <span class="ruby-keyword kw">self</span>
+909:     <span class="ruby-keyword kw">while</span> (<span class="ruby-identifier">board_publication</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;Board&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">board_publication</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword kw">nil</span>) <span class="ruby-keyword kw">do</span>
+910:       <span class="ruby-identifier">board_publication</span> = <span class="ruby-identifier">board_publication</span>.<span class="ruby-identifier">parent</span>
+911:     <span class="ruby-keyword kw">end</span>
+912:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">board_publication</span>
+913:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">board_publication</span>.<span class="ruby-identifier">owner</span>
+914:     <span class="ruby-keyword kw">end</span>
+915:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+916:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000105" class="method-detail">
+        <a name="M000105"></a>
+
+        <div class="method-heading">
+          <a href="#M000105" class="method-signature">
+          <span class="method-name">find_first_board_parent</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+finds the closest parent publication whose owner is a board and returns
+that publication
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000105-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000105-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 919</span>
+919:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_first_board_parent</span>
+920:     <span class="ruby-identifier">board_publication</span> = <span class="ruby-keyword kw">self</span>
+921:     <span class="ruby-keyword kw">while</span> (<span class="ruby-identifier">board_publication</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;Board&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">board_publication</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword kw">nil</span>) <span class="ruby-keyword kw">do</span>
+922:       <span class="ruby-identifier">board_publication</span> = <span class="ruby-identifier">board_publication</span>.<span class="ruby-identifier">parent</span>
+923:     <span class="ruby-keyword kw">end</span>
+924:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">board_publication</span>      
+925:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000088" class="method-detail">
+        <a name="M000088"></a>
+
+        <div class="method-heading">
+          <a href="#M000088" class="method-signature">
+          <span class="method-name">flatten_commits</span><span class="method-args">(finalizing_publication, finalizer, board_members)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000088-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000088-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 573</span>
+573:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">flatten_commits</span>(<span class="ruby-identifier">finalizing_publication</span>, <span class="ruby-identifier">finalizer</span>, <span class="ruby-identifier">board_members</span>)
+574:     <span class="ruby-identifier">finalizing_publication</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">fetch_objects</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">repository</span>)
+575:     
+576:     <span class="ruby-comment cmt"># flatten commits by original publication creator</span>
+577:     <span class="ruby-comment cmt"># - use the submission reason as the main comment</span>
+578:     <span class="ruby-comment cmt"># - concatenate all non-empty commit messages into a list</span>
+579:     <span class="ruby-comment cmt"># - write a 'Signed-off-by:' line for each Ed. Board member</span>
+580:     <span class="ruby-comment cmt"># - rewrite the committer to the finalizer</span>
+581:     <span class="ruby-comment cmt"># - parent will be the branch point from canon (merge-base)</span>
+582:     <span class="ruby-comment cmt"># - tree will be from creator's last commit</span>
+583:     <span class="ruby-comment cmt"># - see http://idp.atlantides.org/trac/idp/wiki/SoSOL/Attribution</span>
+584:     <span class="ruby-comment cmt"># X insert a change in the XML revisionDesc header</span>
+585:     <span class="ruby-comment cmt">#   should instead happen at submit so EB sees it?</span>
+586:     
+587:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">update_master_from_canonical</span>
+588:     <span class="ruby-identifier">canon_branch_point</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">merge_base</span>
+589:     
+590:     <span class="ruby-comment cmt"># this relies on the parent being a remote, e.g. fetch_objects being used</span>
+591:     <span class="ruby-comment cmt"># during branch copy</span>
+592:     <span class="ruby-comment cmt"># board_branch_point = self.merge_base(</span>
+593:     <span class="ruby-comment cmt">#   [self.parent.repository.name, self.parent.branch].join('/'))</span>
+594:     <span class="ruby-comment cmt"># this works regardless</span>
+595:     <span class="ruby-identifier">board_branch_point</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">head</span>
+596:     
+597:     <span class="ruby-identifier">creator_commits</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">commits_between</span>(<span class="ruby-identifier">canon_branch_point</span>,
+598:                                                            <span class="ruby-identifier">board_branch_point</span>)
+599:     <span class="ruby-identifier">board_commits</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">commits_between</span>(<span class="ruby-identifier">board_branch_point</span>,
+600:                                                          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">head</span>)
+601:     
+602:     <span class="ruby-identifier">reason_comment</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">submission_reason</span>
+603:     
+604:     
+605:     <span class="ruby-identifier">board_controlled_paths</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">controlled_paths</span>
+606:     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Controlled Paths: #{board_controlled_paths.inspect}&quot;</span>)
+607: 
+608:     <span class="ruby-identifier">controlled_commits</span> = <span class="ruby-identifier">creator_commits</span>.<span class="ruby-identifier">select</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">creator_commit</span><span class="ruby-operator">|</span>
+609:       <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Checking Creator Commit id: #{creator_commit.id}&quot;</span>)
+610:       <span class="ruby-identifier">controlled_commit_diffs</span> = <span class="ruby-constant">Grit</span><span class="ruby-operator">::</span><span class="ruby-constant">Commit</span>.<span class="ruby-identifier">diff</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>, <span class="ruby-identifier">creator_commit</span>.<span class="ruby-identifier">parents</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">creator_commit</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">board_controlled_paths</span>.<span class="ruby-identifier">clone</span>)
+611:       <span class="ruby-identifier">controlled_commit_diffs</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+612:     <span class="ruby-keyword kw">end</span>
+613:     
+614:     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Controlled Commits: #{controlled_commits.inspect}&quot;</span>)
+615:     
+616:     <span class="ruby-identifier">creator_commit_messages</span> = [<span class="ruby-identifier">reason_comment</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-value">? </span><span class="ruby-value str">''</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">reason_comment</span>.<span class="ruby-identifier">comment</span>, <span class="ruby-value str">''</span>]
+617:     <span class="ruby-identifier">controlled_commits</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">controlled_commit</span><span class="ruby-operator">|</span>
+618:       <span class="ruby-identifier">message</span> = <span class="ruby-identifier">controlled_commit</span>.<span class="ruby-identifier">message</span>.<span class="ruby-identifier">strip</span>
+619:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">message</span>.<span class="ruby-identifier">empty?</span>
+620:         <span class="ruby-identifier">creator_commit_messages</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot; - #{message}&quot;</span>
+621:       <span class="ruby-keyword kw">end</span>
+622:     <span class="ruby-keyword kw">end</span>
+623:     
+624:     <span class="ruby-identifier">controlled_blobs</span> = <span class="ruby-identifier">board_controlled_paths</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">controlled_path</span><span class="ruby-operator">|</span>
+625:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">get_blob_from_branch</span>(<span class="ruby-identifier">controlled_path</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">branch</span>)
+626:     <span class="ruby-keyword kw">end</span>
+627:     
+628:     <span class="ruby-identifier">controlled_paths_blobs</span> = 
+629:       <span class="ruby-constant">Hash</span>[<span class="ruby-operator">*</span>((<span class="ruby-identifier">board_controlled_paths</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">controlled_blobs</span>)).<span class="ruby-identifier">flatten</span>)]
+630:     
+631:     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Controlled Blobs: #{controlled_blobs.inspect}&quot;</span>)
+632:     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Controlled Paths =&gt; Blobs: #{controlled_paths_blobs.inspect}&quot;</span>)
+633:     
+634:     <span class="ruby-identifier">signed_off_messages</span> = []
+635:     <span class="ruby-identifier">board_members</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">board_member</span><span class="ruby-operator">|</span>
+636:       <span class="ruby-identifier">signed_off_messages</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Signed-off-by: #{board_member.author_string}&quot;</span>
+637:     <span class="ruby-keyword kw">end</span>
+638:     
+639:     <span class="ruby-identifier">commit_message</span> =
+640:       (<span class="ruby-identifier">creator_commit_messages</span> <span class="ruby-operator">+</span> [<span class="ruby-value str">''</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">signed_off_messages</span>).<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n&quot;</span>).<span class="ruby-identifier">chomp</span>
+641:     
+642:     <span class="ruby-comment cmt"># parent commit should ALWAYS be canonical master head</span>
+643:     <span class="ruby-comment cmt"># FIXME: handle racing during finalization</span>
+644:     <span class="ruby-identifier">parent_commit</span> = <span class="ruby-constant">Repository</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">get_head</span>(<span class="ruby-value str">'master'</span>).<span class="ruby-identifier">commit</span>.<span class="ruby-identifier">sha</span>
+645:     <span class="ruby-comment cmt"># parent_commit = canon_branch_point</span>
+646:     
+647:     <span class="ruby-comment cmt"># roll a tree SHA1 by reading the canonical master tree,</span>
+648:     <span class="ruby-comment cmt"># adding controlled path blobs, then writing the modified tree</span>
+649:     <span class="ruby-comment cmt"># (happens on the finalizer's repo)</span>
+650:     <span class="ruby-identifier">finalizer</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">update_master_from_canonical</span>
+651:     <span class="ruby-identifier">index</span> = <span class="ruby-identifier">finalizer</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">index</span>
+652:     <span class="ruby-identifier">index</span>.<span class="ruby-identifier">read_tree</span>(<span class="ruby-value str">'master'</span>)
+653:     <span class="ruby-identifier">controlled_paths_blobs</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span>, <span class="ruby-identifier">blob</span><span class="ruby-operator">|</span>
+654:       <span class="ruby-identifier">index</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">blob</span>.<span class="ruby-identifier">data</span>)
+655:     <span class="ruby-keyword kw">end</span>
+656:     
+657:     <span class="ruby-identifier">tree_sha1</span> = <span class="ruby-identifier">index</span>.<span class="ruby-identifier">write_tree</span>(<span class="ruby-identifier">index</span>.<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">index</span>.<span class="ruby-identifier">current_tree</span>)
+658:     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Wrote tree as SHA1: #{tree_sha1}&quot;</span>)
+659:     <span class="ruby-comment cmt"># tree_sha1 = self.repository.repo.commit(board_branch_point).tree.id</span>
+660:     
+661:     <span class="ruby-comment cmt"># most of this is dup'd from Grit::Index#commit</span>
+662:     <span class="ruby-comment cmt"># with modifications to allow for correct timestamping</span>
+663:     <span class="ruby-comment cmt"># and author/committer split</span>
+664:     <span class="ruby-identifier">contents</span> = []
+665:     <span class="ruby-identifier">contents</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-value str">'tree'</span>, <span class="ruby-identifier">tree_sha1</span>].<span class="ruby-identifier">join</span>(<span class="ruby-value str">' '</span>)
+666:     <span class="ruby-identifier">contents</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-value str">'parent'</span>, <span class="ruby-identifier">parent_commit</span>].<span class="ruby-identifier">join</span>(<span class="ruby-value str">' '</span>)
+667:     
+668:     <span class="ruby-identifier">contents</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-value str">'author'</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">creator</span>.<span class="ruby-identifier">git_author_string</span>].<span class="ruby-identifier">join</span>(<span class="ruby-value str">' '</span>)
+669:     <span class="ruby-identifier">contents</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-value str">'committer'</span>, <span class="ruby-identifier">finalizer</span>.<span class="ruby-identifier">git_author_string</span>].<span class="ruby-identifier">join</span>(<span class="ruby-value str">' '</span>)
+670:     <span class="ruby-identifier">contents</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">''</span>
+671:     <span class="ruby-identifier">contents</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">commit_message</span>
+672:     
+673:     <span class="ruby-identifier">flattened_commit_sha1</span> = 
+674:       <span class="ruby-identifier">finalizing_publication</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">git</span>.<span class="ruby-identifier">put_raw_object</span>(
+675:         <span class="ruby-identifier">contents</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n&quot;</span>), <span class="ruby-value str">'commit'</span>)
+676:     
+677:     <span class="ruby-identifier">finalizing_publication</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">create_branch</span>(
+678:       <span class="ruby-identifier">finalizing_publication</span>.<span class="ruby-identifier">branch</span>, <span class="ruby-identifier">flattened_commit_sha1</span>)
+679:     
+680:     <span class="ruby-comment cmt"># rewrite commits by EB</span>
+681:     <span class="ruby-comment cmt"># - write a 'Signed-off-by:' line for each Ed. Board member</span>
+682:     <span class="ruby-comment cmt"># - rewrite the committer to the finalizer</span>
+683:     <span class="ruby-comment cmt"># - change parent lineage to flattened commits</span>
+684:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000112" class="method-detail">
+        <a name="M000112"></a>
+
+        <div class="method-heading">
+          <a href="#M000112" class="method-signature">
+          <span class="method-name">get_all_comments</span><span class="method-args">(title)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000112-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000112-source">
+<pre>
+      <span class="ruby-comment cmt"># File app/models/publication.rb, line 1000</span>
+1000:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_all_comments</span>(<span class="ruby-identifier">title</span>)
+1001:     <span class="ruby-identifier">all_built_comments</span> = []
+1002:     <span class="ruby-identifier">xml_only_built_comments</span> = []
+1003:     <span class="ruby-comment cmt"># select all comments associated with a publication title - will include from all users</span>
+1004:     <span class="ruby-ivar">@arcomments</span> = <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">find_by_sql</span>(<span class="ruby-node">&quot;SELECT a.comment, a.user_id, a.identifier_id, a.reason, a.created_at 
+1005:                                          FROM comments a, publications b 
+1006:                                         WHERE b.title = '#{title}'
+1007:                                           AND a.publication_id = b.id
+1008:                                      ORDER BY a.created_at DESC&quot;</span>)
+1009:     <span class="ruby-comment cmt"># add comments hash to array</span>
+1010:     <span class="ruby-ivar">@arcomments</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+1011:       <span class="ruby-identifier">built_comment</span> = <span class="ruby-constant">Comment</span><span class="ruby-operator">::</span><span class="ruby-constant">CombineComment</span>.<span class="ruby-identifier">new</span>
+1012:       
+1013:       <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">xmltype</span> = <span class="ruby-value str">&quot;model&quot;</span>
+1014:       
+1015:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">name</span>
+1016:         <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">who</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">human_name</span>
+1017:       <span class="ruby-keyword kw">else</span>
+1018:         <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">who</span> = <span class="ruby-value str">&quot;user not filled in&quot;</span>
+1019:       <span class="ruby-keyword kw">end</span>
+1020:       <span class="ruby-comment cmt"># convert date to local for consistency so work in sort below</span>
+1021:       <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">when</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">created_at</span>.<span class="ruby-identifier">getlocal</span>
+1022:       
+1023:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">reason</span>
+1024:         <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">why</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">reason</span>
+1025:       <span class="ruby-keyword kw">else</span>
+1026:         <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">why</span> = <span class="ruby-value str">&quot;reason not filled in&quot;</span>
+1027:       <span class="ruby-keyword kw">end</span>
+1028:       <span class="ruby-comment cmt">#add identifier name if available</span>
+1029:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">identifier</span>
+1030:         <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">why</span> = <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">why</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">class</span><span class="ruby-operator">::</span><span class="ruby-constant">FRIENDLY_NAME</span>
+1031:       <span class="ruby-keyword kw">end</span>
+1032:       
+1033:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">comment</span>
+1034:         <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">comment</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">comment</span>
+1035:       <span class="ruby-keyword kw">else</span>
+1036:         <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">comment</span> = <span class="ruby-value str">&quot;comment not filled in&quot;</span>
+1037:       <span class="ruby-keyword kw">end</span>
+1038: 
+1039:       <span class="ruby-identifier">all_built_comments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">built_comment</span>
+1040:     <span class="ruby-keyword kw">end</span>
+1041: 
+1042:     <span class="ruby-comment cmt"># add comments hash from each of the publication's identifiers XML file to array</span>
+1043:     <span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+1044:       <span class="ruby-identifier">where_from</span> = <span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span><span class="ruby-operator">::</span><span class="ruby-constant">FRIENDLY_NAME</span>
+1045:       <span class="ruby-identifier">ident_title</span> = <span class="ruby-identifier">i</span>.<span class="ruby-identifier">title</span>
+1046:       
+1047:       <span class="ruby-identifier">ident_xml</span> = <span class="ruby-identifier">i</span>.<span class="ruby-identifier">xml_content</span>
+1048:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ident_xml</span>
+1049:         <span class="ruby-identifier">ident_xml_xpath</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ident_xml</span>)
+1050:         <span class="ruby-identifier">comment_path</span> = <span class="ruby-value str">'/TEI/teiHeader/revisionDesc'</span>
+1051:         <span class="ruby-identifier">comment_here</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">XPath</span>.<span class="ruby-identifier">first</span>(<span class="ruby-identifier">ident_xml_xpath</span>, <span class="ruby-identifier">comment_path</span>)
+1052:         
+1053:         <span class="ruby-identifier">comment_here</span>.<span class="ruby-identifier">each_element</span>(<span class="ruby-value str">'//change'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">change</span><span class="ruby-operator">|</span>
+1054:           <span class="ruby-identifier">built_comment</span> = <span class="ruby-constant">Comment</span><span class="ruby-operator">::</span><span class="ruby-constant">CombineComment</span>.<span class="ruby-identifier">new</span>
+1055:           
+1056:           <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">xmltype</span> = <span class="ruby-identifier">where_from</span>
+1057:           
+1058:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">change</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-value str">&quot;who&quot;</span>]
+1059:             <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">who</span> = <span class="ruby-identifier">change</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-value str">&quot;who&quot;</span>]
+1060:           <span class="ruby-keyword kw">else</span>
+1061:             <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">who</span> = <span class="ruby-value str">&quot;no who attribute&quot;</span>
+1062:           <span class="ruby-keyword kw">end</span>
+1063:           
+1064:           <span class="ruby-comment cmt"># parse will convert date to local for consistency so work in sort below</span>
+1065:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">change</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-value str">&quot;when&quot;</span>]
+1066:             <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">when</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">change</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-value str">&quot;when&quot;</span>])
+1067:           <span class="ruby-keyword kw">else</span>
+1068:             <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">when</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-value str">&quot;1988-8-8&quot;</span>)
+1069:           <span class="ruby-keyword kw">end</span>
+1070:           
+1071:           <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">why</span> = <span class="ruby-value str">&quot;From &quot;</span>  <span class="ruby-operator">+</span> <span class="ruby-identifier">ident_title</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">where_from</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; XML&quot;</span>
+1072:           
+1073:           <span class="ruby-identifier">built_comment</span>.<span class="ruby-identifier">comment</span> = <span class="ruby-identifier">change</span>.<span class="ruby-identifier">text</span>
+1074:           
+1075:           <span class="ruby-identifier">all_built_comments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">built_comment</span>
+1076:           <span class="ruby-identifier">xml_only_built_comments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">built_comment</span>
+1077:         <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#comment_here</span>
+1078:       <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt"># if ident_xml</span>
+1079:     <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#identifiers each</span>
+1080:     <span class="ruby-comment cmt"># sort in descending date order for display</span>
+1081:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">all_built_comments</span>.<span class="ruby-identifier">sort_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">:when</span>).<span class="ruby-identifier">reverse</span>, <span class="ruby-identifier">xml_only_built_comments</span>.<span class="ruby-identifier">sort_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">:when</span>).<span class="ruby-identifier">reverse</span>
+1082:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000093" class="method-detail">
+        <a name="M000093"></a>
+
+        <div class="method-heading">
+          <a href="#M000093" class="method-signature">
+          <span class="method-name">head</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000093-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000093-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 731</span>
+731:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">head</span>
+732:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">get_head</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">branch</span>).<span class="ruby-identifier">commit</span>.<span class="ruby-identifier">sha</span>
+733:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000094" class="method-detail">
+        <a name="M000094"></a>
+
+        <div class="method-heading">
+          <a href="#M000094" class="method-signature">
+          <span class="method-name">merge_base</span><span class="method-args">(branch = 'master')</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000094-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000094-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 735</span>
+735:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">merge_base</span>(<span class="ruby-identifier">branch</span> = <span class="ruby-value str">'master'</span>)
+736:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">git</span>.<span class="ruby-identifier">merge_base</span>({},<span class="ruby-identifier">branch</span>,<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">head</span>).<span class="ruby-identifier">chomp</span>
+737:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000077" class="method-detail">
+        <a name="M000077"></a>
+
+        <div class="method-heading">
+          <a href="#M000077" class="method-signature">
+          <span class="method-name">modified?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000077-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000077-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 347</span>
+347:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">modified?</span>
+348:     
+349:     <span class="ruby-identifier">retval</span> = <span class="ruby-keyword kw">false</span>
+350:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+351:       <span class="ruby-identifier">retval</span> = <span class="ruby-identifier">retval</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">modified?</span>
+352:     <span class="ruby-keyword kw">end</span>
+353:     
+354:     <span class="ruby-identifier">retval</span>
+355:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000078" class="method-detail">
+        <a name="M000078"></a>
+
+        <div class="method-heading">
+          <a href="#M000078" class="method-signature">
+          <span class="method-name">mutable?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000078-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000078-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 357</span>
+357:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mutable?</span>
+358:     <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;editing&quot;</span> <span class="ruby-comment cmt"># &amp;&amp; self.status != &quot;new&quot;</span>
+359:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+360:     <span class="ruby-keyword kw">else</span>
+361:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+362:     <span class="ruby-keyword kw">end</span>
+363:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000103" class="method-detail">
+        <a name="M000103"></a>
+
+        <div class="method-heading">
+          <a href="#M000103" class="method-signature">
+          <span class="method-name">origin</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000103-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000103-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 897</span>
+897:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">origin</span>
+898:     <span class="ruby-comment cmt"># walk the parent list until we encounter one with no parent</span>
+899:     <span class="ruby-identifier">origin_publication</span> = <span class="ruby-keyword kw">self</span>
+900:     <span class="ruby-keyword kw">while</span> (<span class="ruby-identifier">origin_publication</span>.<span class="ruby-identifier">parent</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword kw">nil</span>) <span class="ruby-keyword kw">do</span>
+901:       <span class="ruby-identifier">origin_publication</span> = <span class="ruby-identifier">origin_publication</span>.<span class="ruby-identifier">parent</span>
+902:     <span class="ruby-keyword kw">end</span>
+903:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">origin_publication</span>
+904:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000069" class="method-detail">
+        <a name="M000069"></a>
+
+        <div class="method-heading">
+          <a href="#M000069" class="method-signature">
+          <span class="method-name">populate_identifiers_from_identifiers</span><span class="method-args">(identifiers, original_title = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Populates the publication&#8216;s list of identifiers. Input identifiers
+can be in the form of
+</p>
+<pre>
+ * an array of strings such as: papyri.info/ddbdp/bgu;7;1504
+ * a single string such as: papyri.info/ddbdp/bgu;7;1504
+</pre>
+<p>
+publication title is named using first identifier
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000069-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000069-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 89</span>
+ 89:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">populate_identifiers_from_identifiers</span>(<span class="ruby-identifier">identifiers</span>, <span class="ruby-identifier">original_title</span> = <span class="ruby-keyword kw">nil</span>)
+ 90: 
+ 91:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">update_master_from_canonical</span>
+ 92:     <span class="ruby-comment cmt"># Coming in from an identifier, build up a publication</span>
+ 93:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">String</span>
+ 94:       <span class="ruby-comment cmt"># have a string, need to build relation</span>
+ 95:       <span class="ruby-identifier">identifiers</span> = <span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NumbersHelper</span>.<span class="ruby-identifier">identifier_to_identifiers</span>(<span class="ruby-identifier">identifiers</span>)
+ 96:     <span class="ruby-keyword kw">end</span>
+ 97: 
+ 98:     <span class="ruby-comment cmt">#identifiers is now an array ofstrings like:  papyri.info/ddbdp/bgu;7;1504</span>
+ 99:     <span class="ruby-identifier">identifiers</span> = <span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NumbersHelper</span>.<span class="ruby-identifier">identifiers_to_hash</span>(<span class="ruby-identifier">identifiers</span>)
+100:     <span class="ruby-comment cmt">#identifiers is now a hash with IDENTIFIER_NAMESPACE (hgv, tm, ddbdp etc)  as the keys and the string papyri.info/ddbdp/bgu;7;1504 as the value</span>
+101: 
+102: 
+103:     <span class="ruby-comment cmt">#title is first identifier in list</span>
+104:     <span class="ruby-comment cmt">#but added the option to set the title to whatever the caller wants</span>
+105:     <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">original_title</span>
+106:       <span class="ruby-identifier">original_title</span> = <span class="ruby-identifier">identifier_to_ref</span>(<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">first</span>)
+107:     <span class="ruby-keyword kw">else</span>
+108:       <span class="ruby-identifier">original_was_nil</span> = <span class="ruby-keyword kw">true</span>;
+109:     <span class="ruby-keyword kw">end</span>
+110:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">title</span> = <span class="ruby-identifier">original_title</span>
+111: 
+112:     [<span class="ruby-constant">DDBIdentifier</span>, <span class="ruby-constant">HGVMetaIdentifier</span>, <span class="ruby-constant">HGVTransIdentifier</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">identifier_class</span><span class="ruby-operator">|</span>
+113:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">identifier_class</span><span class="ruby-operator">::</span><span class="ruby-constant">IDENTIFIER_NAMESPACE</span>)
+114:         <span class="ruby-identifier">identifiers</span>[<span class="ruby-identifier">identifier_class</span><span class="ruby-operator">::</span><span class="ruby-constant">IDENTIFIER_NAMESPACE</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">identifier_string</span><span class="ruby-operator">|</span>
+115:           <span class="ruby-identifier">temp_id</span> = <span class="ruby-identifier">identifier_class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">identifier_string</span>)
+116:           <span class="ruby-comment cmt"># make sure we have a path on master before forking it for this publication</span>
+117:           <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">get_file_from_branch</span>(<span class="ruby-identifier">temp_id</span>.<span class="ruby-identifier">to_path</span>, <span class="ruby-value str">'master'</span>).<span class="ruby-identifier">blank?</span>
+118:             <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">identifiers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">temp_id</span>
+119:             <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">title</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">original_title</span>
+120:               <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">title</span> = <span class="ruby-identifier">temp_id</span>.<span class="ruby-identifier">titleize</span>
+121:             <span class="ruby-keyword kw">end</span>
+122:           <span class="ruby-keyword kw">end</span>
+123:         <span class="ruby-keyword kw">end</span>
+124:       <span class="ruby-keyword kw">end</span>
+125:     <span class="ruby-keyword kw">end</span>
+126: 
+127:     <span class="ruby-comment cmt">#reset the title to what the caller wants</span>
+128:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">original_was_nil</span>
+129:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">title</span> = <span class="ruby-identifier">original_title</span>
+130:     <span class="ruby-keyword kw">end</span>
+131:     <span class="ruby-comment cmt"># Use HGV hack for now</span>
+132:     <span class="ruby-comment cmt"># if identifiers.has_key?('hgv') &amp;&amp; identifiers.has_key?('trismegistos')</span>
+133:     <span class="ruby-comment cmt">#   identifiers['trismegistos'].each do |tm|</span>
+134:     <span class="ruby-comment cmt">#     tm_nr = NumbersRDF::NumbersHelper.identifier_to_components(tm).last</span>
+135:     <span class="ruby-comment cmt">#     self.identifiers &lt;&lt; HGVMetaIdentifier.new(</span>
+136:     <span class="ruby-comment cmt">#       :name =&gt; &quot;#{identifiers['hgv'].first}&quot;,</span>
+137:     <span class="ruby-comment cmt">#       :alternate_name =&gt; &quot;hgv#{tm_nr}&quot;)</span>
+138:     <span class="ruby-comment cmt">#     </span>
+139:     <span class="ruby-comment cmt">#     # Check if there's a trans, if so, add it</span>
+140:     <span class="ruby-comment cmt">#     translation = HGVTransIdentifier.new(</span>
+141:     <span class="ruby-comment cmt">#       :name =&gt; &quot;#{identifiers['hgv'].first}&quot;,</span>
+142:     <span class="ruby-comment cmt">#       :alternate_name =&gt; &quot;hgv#{tm_nr}&quot;</span>
+143:     <span class="ruby-comment cmt">#     )</span>
+144:     <span class="ruby-comment cmt">#     if !(Repository.new.get_file_from_branch(translation.to_path).nil?)</span>
+145:     <span class="ruby-comment cmt">#       self.identifiers &lt;&lt; translation</span>
+146:     <span class="ruby-comment cmt">#     end</span>
+147:     <span class="ruby-comment cmt">#   end</span>
+148:     <span class="ruby-comment cmt"># end</span>
+149:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000068" class="method-detail">
+        <a name="M000068"></a>
+
+        <div class="method-heading">
+          <a href="#M000068" class="method-signature">
+          <span class="method-name">print</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000068-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000068-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/publication.rb, line 41</span>
+41:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">print</span>
+42:     <span class="ruby-comment cmt"># get preview of each identifier</span>
+43:     <span class="ruby-identifier">tmp</span> = {}
+44:     <span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">identifier</span><span class="ruby-operator">|</span>
+45:       <span class="ruby-identifier">tmp</span>[<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">preview</span>({<span class="ruby-value str">'meta-style'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'sammelbuch'</span>, <span class="ruby-value str">'leiden-style'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'ddbdp'</span>}, <span class="ruby-node">%w{data xslt epidoc start-odf.xsl}</span>)
+46:     }
+47: 
+48:     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-value str">'---------------DDB xml ---------------------'</span>)
+49: 
+50:     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-identifier">tmp</span>[<span class="ruby-identifier">:DDBIdentifier</span>].<span class="ruby-identifier">to_s</span>
+51: 
+52:     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-value str">'------------------------------------'</span>)
+53: 
+54:     <span class="ruby-comment cmt">#merge xml</span>
+55:     <span class="ruby-identifier">meta</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">tmp</span>[<span class="ruby-identifier">:HGVMetaIdentifier</span>]
+56:     <span class="ruby-identifier">text</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">tmp</span>[<span class="ruby-identifier">:DDBIdentifier</span>]
+57: 
+58:     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-value str">'---------------DDB xml document---------------------'</span>)
+59: 
+60:     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-identifier">text</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">&quot;//office:document-content/office:body/office:text&quot;</span>].<span class="ruby-identifier">to_s</span>
+61:     
+62:     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-value str">'------------------------------------'</span>)
+63: 
+64:     <span class="ruby-identifier">elder</span> = <span class="ruby-identifier">meta</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">&quot;//office:document-content/office:body/office:text/text:p[@text:style-name='Sammelbuch-Kopf']&quot;</span>]
+65:     <span class="ruby-identifier">text</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">&quot;//office:document-content/office:body/office:text&quot;</span>].<span class="ruby-identifier">each_element</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">text_element</span><span class="ruby-operator">|</span>
+66: 
+67:     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-value str">'**** found['</span><span class="ruby-operator">+</span><span class="ruby-identifier">text_element</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">inspect</span><span class="ruby-operator">+</span><span class="ruby-value str">']'</span>)
+68: 
+69:       <span class="ruby-identifier">meta</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">&quot;//office:document-content/office:body/office:text&quot;</span>].<span class="ruby-identifier">insert_after</span>(<span class="ruby-identifier">elder</span>, <span class="ruby-identifier">text_element</span>)
+70:       <span class="ruby-identifier">elder</span> = <span class="ruby-identifier">text_element</span>
+71: 
+72:     }
+73:     
+74:     <span class="ruby-comment cmt"># output string</span>
+75:     <span class="ruby-identifier">formatter</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Formatters</span><span class="ruby-operator">::</span><span class="ruby-constant">Default</span>.<span class="ruby-identifier">new</span>
+76:     <span class="ruby-comment cmt">#formatter.compact = true</span>
+77:     <span class="ruby-comment cmt">#formatter.width = 512</span>
+78:     <span class="ruby-identifier">xml</span> = <span class="ruby-value str">''</span>
+79:     <span class="ruby-identifier">formatter</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">meta</span>, <span class="ruby-identifier">xml</span>
+80: 
+81:     <span class="ruby-identifier">xml</span>
+82:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000090" class="method-detail">
+        <a name="M000090"></a>
+
+        <div class="method-heading">
+          <a href="#M000090" class="method-signature">
+          <span class="method-name">remove_finalizer</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000090-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000090-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 706</span>
+706:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_finalizer</span>
+707:     <span class="ruby-comment cmt"># need to find out if there is a finalizer, and take the publication from them</span>
+708:     <span class="ruby-comment cmt"># finalizer will point back to this board's publication</span>
+709:     <span class="ruby-identifier">current_finalizer_publication</span> = <span class="ruby-identifier">find_finalizer_publication</span>
+710: 
+711:     <span class="ruby-comment cmt"># TODO cascading comment deletes?</span>
+712:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">current_finalizer_publication</span>
+713:       <span class="ruby-identifier">current_finalizer_publication</span>.<span class="ruby-identifier">destroy</span>
+714:     <span class="ruby-keyword kw">end</span>
+715:   
+716:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000108" class="method-detail">
+        <a name="M000108"></a>
+
+        <div class="method-heading">
+          <a href="#M000108" class="method-signature">
+          <span class="method-name">repository</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000108-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000108-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 971</span>
+971:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">repository</span>
+972:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>
+973:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000089" class="method-detail">
+        <a name="M000089"></a>
+
+        <div class="method-heading">
+          <a href="#M000089" class="method-signature">
+          <span class="method-name">send_to_finalizer</span><span class="method-args">(finalizer = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+finalizer is a user
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000089-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000089-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 687</span>
+687:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_to_finalizer</span>(<span class="ruby-identifier">finalizer</span> = <span class="ruby-keyword kw">nil</span>)
+688:     <span class="ruby-identifier">board_members</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">users</span>   
+689:     <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">finalizer</span>
+690:       <span class="ruby-comment cmt">#get someone from the board    </span>
+691: <span class="ruby-comment cmt">#      board_members = self.owner.users    </span>
+692:       <span class="ruby-comment cmt"># just select a random board member to be the finalizer</span>
+693:       <span class="ruby-identifier">finalizer</span> = <span class="ruby-identifier">board_members</span>[<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">board_members</span>.<span class="ruby-identifier">length</span>)]  
+694:     <span class="ruby-keyword kw">end</span>
+695:       
+696:     <span class="ruby-comment cmt"># finalizing_publication = copy_to_owner(finalizer)</span>
+697:     <span class="ruby-identifier">finalizing_publication</span> = <span class="ruby-identifier">clone_to_owner</span>(<span class="ruby-identifier">finalizer</span>)
+698:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">flatten_commits</span>(<span class="ruby-identifier">finalizing_publication</span>, <span class="ruby-identifier">finalizer</span>, <span class="ruby-identifier">board_members</span>)
+699:     
+700:     <span class="ruby-comment cmt">#should we clear the modified flag so we can tell if the finalizer has done anything</span>
+701:     <span class="ruby-comment cmt"># that way we will know in the future if we can change finalizersedidd</span>
+702:     <span class="ruby-identifier">finalizing_publication</span>.<span class="ruby-identifier">change_status</span>(<span class="ruby-value str">'finalizing'</span>)
+703:     <span class="ruby-identifier">finalizing_publication</span>.<span class="ruby-identifier">save!</span>
+704:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000083" class="method-detail">
+        <a name="M000083"></a>
+
+        <div class="method-heading">
+          <a href="#M000083" class="method-signature">
+          <span class="method-name">set_board_identifier_status</span><span class="method-args">(status_in)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+needed to set the finalizer&#8216;s board identifier status
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000083-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000083-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 408</span>
+408:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_board_identifier_status</span>(<span class="ruby-identifier">status_in</span>)
+409:       <span class="ruby-identifier">pub</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">find_first_board_parent</span>
+410:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">pub</span>            
+411:         <span class="ruby-identifier">pub</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+412:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">pub</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">identifier_classes</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">pub</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">identifier_classes</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>)
+413:             <span class="ruby-identifier">i</span>.<span class="ruby-identifier">status</span> = <span class="ruby-identifier">status_in</span>
+414:             <span class="ruby-identifier">i</span>.<span class="ruby-identifier">save</span>
+415:           <span class="ruby-keyword kw">end</span>
+416:         <span class="ruby-keyword kw">end</span>
+417:         
+418:       <span class="ruby-keyword kw">end</span>
+419:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000081" class="method-detail">
+        <a name="M000081"></a>
+
+        <div class="method-heading">
+          <a href="#M000081" class="method-signature">
+          <span class="method-name">set_local_identifier_status</span><span class="method-args">(status_in)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000081-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000081-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 387</span>
+387:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_local_identifier_status</span>(<span class="ruby-identifier">status_in</span>)   
+388: 
+389:       <span class="ruby-identifier">board</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">find_first_board</span>
+390:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">board</span>
+391:             
+392:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+393:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">board</span>.<span class="ruby-identifier">identifier_classes</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">board</span>.<span class="ruby-identifier">identifier_classes</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>)
+394:             <span class="ruby-identifier">i</span>.<span class="ruby-identifier">status</span> = <span class="ruby-identifier">status_in</span>
+395:             <span class="ruby-identifier">i</span>.<span class="ruby-identifier">save</span>
+396:           <span class="ruby-keyword kw">end</span>
+397:         <span class="ruby-keyword kw">end</span>
+398:         
+399:       <span class="ruby-keyword kw">end</span>
+400:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000082" class="method-detail">
+        <a name="M000082"></a>
+
+        <div class="method-heading">
+          <a href="#M000082" class="method-signature">
+          <span class="method-name">set_origin_and_local_identifier_status</span><span class="method-args">(status_in)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000082-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000082-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 402</span>
+402:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_origin_and_local_identifier_status</span>(<span class="ruby-identifier">status_in</span>)
+403:     <span class="ruby-identifier">set_origin_identifier_status</span>(<span class="ruby-identifier">status_in</span>)          
+404:     <span class="ruby-identifier">set_local_identifier_status</span>(<span class="ruby-identifier">status_in</span>)          
+405:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000080" class="method-detail">
+        <a name="M000080"></a>
+
+        <div class="method-heading">
+          <a href="#M000080" class="method-signature">
+          <span class="method-name">set_origin_identifier_status</span><span class="method-args">(status_in)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+sets the <a href="Publication.html#M000103">origin</a> status for
+publication identifiers that the publication&#8216;s board controls
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000080-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000080-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 371</span>
+371:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_origin_identifier_status</span>(<span class="ruby-identifier">status_in</span>)
+372:       <span class="ruby-comment cmt">#finalizer is a user so they dont have a board, must go up until we find a board</span>
+373:       
+374:       <span class="ruby-identifier">board</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">find_first_board</span>
+375:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">board</span>
+376:               
+377:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+378:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">board</span>.<span class="ruby-identifier">identifier_classes</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">board</span>.<span class="ruby-identifier">identifier_classes</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>)
+379:             <span class="ruby-identifier">i</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">status</span> = <span class="ruby-identifier">status_in</span>
+380:             <span class="ruby-identifier">i</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">save</span>
+381:           <span class="ruby-keyword kw">end</span>
+382:         <span class="ruby-keyword kw">end</span>
+383:         
+384:       <span class="ruby-keyword kw">end</span>
+385:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000102" class="method-detail">
+        <a name="M000102"></a>
+
+        <div class="method-heading">
+          <a href="#M000102" class="method-signature">
+          <span class="method-name">submission_reason</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000102-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000102-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 892</span>
+892:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">submission_reason</span>
+893:     <span class="ruby-identifier">reason</span> = <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">find_by_publication_id</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">id</span>,
+894:       <span class="ruby-identifier">:conditions</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;reason = 'submit'&quot;</span>)
+895:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000075" class="method-detail">
+        <a name="M000075"></a>
+
+        <div class="method-heading">
+          <a href="#M000075" class="method-signature">
+          <span class="method-name">submit</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000075-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000075-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 320</span>
+320:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">submit</span>
+321:     <span class="ruby-identifier">submit_to_next_board</span>
+322:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000074" class="method-detail">
+        <a name="M000074"></a>
+
+        <div class="method-heading">
+          <a href="#M000074" class="method-signature">
+          <span class="method-name">submit_identifier</span><span class="method-args">(identifier)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+nolonger in use 2-22-2010
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000074-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000074-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 273</span>
+273:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">submit_identifier</span>(<span class="ruby-identifier">identifier</span>)
+274:     
+275:     <span class="ruby-ivar">@recent_submit_sha</span> = <span class="ruby-value str">&quot;&quot;</span>;
+276:     
+277:     <span class="ruby-comment cmt">#find correct board    </span>
+278:     
+279:     <span class="ruby-identifier">boards</span> = <span class="ruby-constant">Board</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:all</span>)
+280:     <span class="ruby-identifier">boards</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">board</span><span class="ruby-operator">|</span>
+281:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">board</span>.<span class="ruby-identifier">identifier_classes</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">board</span>.<span class="ruby-identifier">identifier_classes</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>)
+282:         <span class="ruby-keyword kw">begin</span>
+283:           <span class="ruby-identifier">submit_comment</span> = <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:last</span>, <span class="ruby-identifier">:conditions</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">:publication_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">:reason</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;submit&quot;</span> } )
+284:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">submit_comment</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">submit_comment</span>.<span class="ruby-identifier">comment</span>
+285:             <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">set_xml_content</span>(
+286:               <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">add_change_desc</span>(<span class="ruby-identifier">submit_comment</span>.<span class="ruby-identifier">comment</span>),
+287:               <span class="ruby-identifier">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">''</span>)
+288:           <span class="ruby-keyword kw">else</span>
+289:             <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">add_change_desc</span>(), <span class="ruby-identifier">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">''</span>)
+290:           <span class="ruby-keyword kw">end</span>
+291:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">RecordNotFound</span>
+292:           <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">add_change_desc</span>(), <span class="ruby-identifier">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">''</span>)
+293:         <span class="ruby-keyword kw">end</span>
+294:         
+295:         <span class="ruby-identifier">boards_copy</span> = <span class="ruby-identifier">copy_to_owner</span>(<span class="ruby-identifier">board</span>)
+296:         <span class="ruby-identifier">boards_copy</span>.<span class="ruby-identifier">status</span> = <span class="ruby-value str">&quot;voting&quot;</span>
+297:         <span class="ruby-identifier">boards_copy</span>.<span class="ruby-identifier">save!</span>
+298:         
+299:         <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">status</span> = <span class="ruby-value str">&quot;submitted&quot;</span>
+300:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">change_status</span>(<span class="ruby-value str">&quot;submitted&quot;</span>)
+301:         
+302:         <span class="ruby-identifier">board</span>.<span class="ruby-identifier">send_status_emails</span>(<span class="ruby-value str">&quot;submitted&quot;</span>, <span class="ruby-keyword kw">self</span>)
+303:        
+304:         <span class="ruby-comment cmt"># self.title = self.creator.name + &quot;/&quot; + self.title</span>
+305:         <span class="ruby-comment cmt"># self.branch = title_to_ref(self.title)</span>
+306:         <span class="ruby-comment cmt"># </span>
+307:         <span class="ruby-comment cmt"># self.owner.repository.copy_branch_from_repo( duplicate.branch, self.branch, duplicate.owner.repository )</span>
+308:         <span class="ruby-comment cmt">#(from_branch, to_branch, from_repo)</span>
+309:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">save!</span>
+310:         <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">save!</span>
+311:         
+312:         <span class="ruby-comment cmt">#make the most recent sha for the identifier available...is this the one we want?</span>
+313:         <span class="ruby-ivar">@recent_submit_sha</span> = <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">get_recent_commit_sha</span>
+314:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+315:       <span class="ruby-keyword kw">end</span>
+316:     <span class="ruby-keyword kw">end</span>
+317:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-comment cmt">#no board exists for this identifier class</span>
+318:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000073" class="method-detail">
+        <a name="M000073"></a>
+
+        <div class="method-heading">
+          <a href="#M000073" class="method-signature">
+          <span class="method-name">submit_to_next_board</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000073-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000073-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 169</span>
+169:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">submit_to_next_board</span>
+170: 
+171:     <span class="ruby-comment cmt">#note: all @recent_submit_sha conde here added because it was here before, not sure if this is still needed</span>
+172:     <span class="ruby-ivar">@recent_submit_sha</span> = <span class="ruby-value str">''</span>
+173: 
+174:     <span class="ruby-comment cmt">#determine which ids are ready to be submitted (modified, editing...)</span>
+175:     <span class="ruby-identifier">submittable_identifiers</span> = <span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span> <span class="ruby-identifier">id</span>.<span class="ruby-identifier">modified?</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">id</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'editing'</span>)}
+176: 
+177:     <span class="ruby-comment cmt">#check each board in order by priority rank</span>
+178:     <span class="ruby-identifier">boards</span> = <span class="ruby-constant">Board</span>.<span class="ruby-identifier">ranked</span>
+179:     <span class="ruby-identifier">boards</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">board</span><span class="ruby-operator">|</span>
+180: 
+181:       <span class="ruby-comment cmt">#if board.community == publication.community</span>
+182:         <span class="ruby-identifier">boards_identifiers</span> = <span class="ruby-identifier">submittable_identifiers</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span> <span class="ruby-identifier">board</span>.<span class="ruby-identifier">controls_identifier?</span>(<span class="ruby-identifier">id</span>) }
+183:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">boards_identifiers</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+184:           <span class="ruby-comment cmt">#submit to that board</span>
+185: 
+186: 
+187: 
+188:           <span class="ruby-comment cmt">#find the comment text made on submission</span>
+189:           <span class="ruby-identifier">comment_text</span> = <span class="ruby-value str">''</span> <span class="ruby-comment cmt">#if no comment found, default to nothing. This should never happen.</span>
+190:           <span class="ruby-keyword kw">begin</span>
+191:             <span class="ruby-identifier">submit_comment</span> = <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:last</span>, <span class="ruby-identifier">:conditions</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">:publication_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">:reason</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;submit&quot;</span> } )
+192:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">submit_comment</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">submit_comment</span>.<span class="ruby-identifier">comment</span>
+193:               <span class="ruby-identifier">comment_text</span> = <span class="ruby-identifier">submit_comment</span>.<span class="ruby-identifier">comment</span>
+194:             <span class="ruby-keyword kw">end</span>
+195:           <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">RecordNotFound</span>
+196:             <span class="ruby-comment cmt">#comment_text already = ''</span>
+197:             <span class="ruby-comment cmt">#TODO raise warning? add error logging</span>
+198:           <span class="ruby-keyword kw">end</span>
+199: 
+200:           <span class="ruby-comment cmt">#update the change_desc of each submitted identifier</span>
+201:           <span class="ruby-identifier">boards_identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">submitting_identifier</span><span class="ruby-operator">|</span>
+202:             <span class="ruby-identifier">submitting_identifier</span>.<span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">submitting_identifier</span>.<span class="ruby-identifier">add_change_desc</span>(<span class="ruby-identifier">comment_text</span>), <span class="ruby-identifier">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">comment_text</span>)
+203:             <span class="ruby-identifier">submitting_identifier</span>.<span class="ruby-identifier">status</span> = <span class="ruby-value str">&quot;submitted&quot;</span>
+204:             <span class="ruby-identifier">submitting_identifier</span>.<span class="ruby-identifier">save!</span>
+205: 
+206:             <span class="ruby-comment cmt">#make the most recent sha for the identifier available...is this the one we want?</span>
+207:             <span class="ruby-ivar">@recent_submit_sha</span> = <span class="ruby-identifier">submitting_identifier</span>.<span class="ruby-identifier">get_recent_commit_sha</span>
+208:           <span class="ruby-keyword kw">end</span>
+209: 
+210:           <span class="ruby-comment cmt">#copy the repo, models, etc... to the board</span>
+211:           <span class="ruby-identifier">boards_copy</span> = <span class="ruby-identifier">copy_to_owner</span>(<span class="ruby-identifier">board</span>)
+212:           <span class="ruby-identifier">boards_copy</span>.<span class="ruby-identifier">status</span> = <span class="ruby-value str">&quot;voting&quot;</span>
+213:           <span class="ruby-identifier">boards_copy</span>.<span class="ruby-identifier">save!</span>
+214: 
+215: 
+216: 
+217:           <span class="ruby-comment cmt">#trigger emails</span>
+218:           <span class="ruby-identifier">board</span>.<span class="ruby-identifier">send_status_emails</span>(<span class="ruby-value str">&quot;submitted&quot;</span>, <span class="ruby-keyword kw">self</span>)
+219: 
+220:           <span class="ruby-comment cmt">#update status on user copy</span>
+221:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">change_status</span>(<span class="ruby-value str">&quot;submitted&quot;</span>)
+222:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">save!</span>
+223: 
+224:           <span class="ruby-comment cmt">#problem here in that comment will be added to the returned id, but there may be many ids.....</span>
+225:           <span class="ruby-comment cmt">#todo move where the comment is being placed, need to have discussion about where comments go 2-22-2010</span>
+226:           <span class="ruby-keyword kw">return</span> <span class="ruby-value str">''</span>, <span class="ruby-identifier">boards_identifiers</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">id</span>
+227:         <span class="ruby-keyword kw">end</span>
+228:       <span class="ruby-comment cmt">#end</span>
+229:     <span class="ruby-keyword kw">end</span>
+230: 
+231: 
+232: ??
+233:     <span class="ruby-comment cmt">#if we get to this point, nothing else was submitted therefore we are done with publication</span>
+234:     <span class="ruby-comment cmt">#can this be reached without a commit actually taking place?</span>
+235: ??
+236:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">change_status</span>(<span class="ruby-value str">&quot;committed&quot;</span>)
+237:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">save</span>
+238:     <span class="ruby-comment cmt">#TODO need to return something here to prevent flash error from showing true?</span>
+239:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-keyword kw">nil</span>
+240:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000087" class="method-detail">
+        <a name="M000087"></a>
+
+        <div class="method-heading">
+          <a href="#M000087" class="method-signature">
+          <span class="method-name">tally_votes</span><span class="method-args">(user_votes = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000087-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000087-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 475</span>
+475:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tally_votes</span>(<span class="ruby-identifier">user_votes</span> = <span class="ruby-keyword kw">nil</span>)
+476:     <span class="ruby-identifier">user_votes</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">votes</span> <span class="ruby-comment cmt">#use the publication's votes</span>
+477:     <span class="ruby-comment cmt">#here is where the action is for deciding how votes are organized and what happens for vote results</span>
+478:     <span class="ruby-comment cmt">#as of 3-11-2011 the votes are set on the identifier where the user votes &amp; on the publication</span>
+479:     <span class="ruby-comment cmt">#once a user has voted on any identifier of a publication, then they can no longer vote on the publication</span>
+480:     <span class="ruby-comment cmt">#vote action is determined by votes on the publication</span>
+481:     <span class="ruby-comment cmt">#any modified identifiers that the board controlls will have the change desc added.</span>
+482:     <span class="ruby-comment cmt">#Future changes may be made here if the voting logic is to be separated per identifier</span>
+483:     
+484:     <span class="ruby-comment cmt">#check that we are still taking votes</span>
+485:     <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;voting&quot;</span>
+486:       <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-comment cmt">#return nothing and do nothing since the voting is now over</span>
+487:     <span class="ruby-keyword kw">end</span>
+488:     
+489:     <span class="ruby-comment cmt">#need to tally votes and see if any action will take place</span>
+490:     <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;Board&quot;</span> <span class="ruby-comment cmt"># || !self.owner #make sure board still exist...add error message?</span>
+491:       <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-comment cmt">#another check to make sure only the board is voting on its copy</span>
+492:     <span class="ruby-keyword kw">else</span>
+493:       <span class="ruby-identifier">decree_action</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">tally_votes</span>(<span class="ruby-identifier">user_votes</span>) <span class="ruby-comment cmt">#since board has decrees let them figure out the vote results</span>
+494:     <span class="ruby-keyword kw">end</span>
+495:    
+496: 
+497:     <span class="ruby-comment cmt"># create an event if anything happened</span>
+498:     <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">decree_action</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">decree_action</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">''</span>
+499:       <span class="ruby-identifier">e</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">new</span>
+500:       <span class="ruby-identifier">e</span>.<span class="ruby-identifier">owner</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>
+501:       <span class="ruby-identifier">e</span>.<span class="ruby-identifier">target</span> = <span class="ruby-keyword kw">self</span>
+502:       <span class="ruby-identifier">e</span>.<span class="ruby-identifier">category</span> = <span class="ruby-node">&quot;marked as \&quot;#{decree_action}\&quot;&quot;</span>
+503:       <span class="ruby-identifier">e</span>.<span class="ruby-identifier">save!</span>
+504:     <span class="ruby-keyword kw">end</span>
+505:   
+506:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">decree_action</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;approve&quot;</span>
+507:       
+508:       <span class="ruby-comment cmt">#set local publication status to approved</span>
+509:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">change_status</span>(<span class="ruby-value str">&quot;approved&quot;</span>)
+510:       
+511:       <span class="ruby-comment cmt">#on approval, set the identifier(s) to approved (local and origin)</span>
+512:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">set_origin_and_local_identifier_status</span>(<span class="ruby-value str">&quot;approved&quot;</span>)
+513:       
+514:       <span class="ruby-comment cmt">#send emails</span>
+515:        <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">send_status_emails</span>(<span class="ruby-value str">&quot;approved&quot;</span>, <span class="ruby-keyword kw">self</span>)
+516:       <span class="ruby-comment cmt"># @publication.send_status_emails(decree_action)          </span>
+517:       
+518:       <span class="ruby-comment cmt">#set up for finalizing</span>
+519:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">send_to_finalizer</span>
+520:       
+521:       
+522:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">decree_action</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;reject&quot;</span>
+523:       <span class="ruby-comment cmt">#@publication.get_category_obj().reject       </span>
+524:      
+525:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">change_status</span>(<span class="ruby-value str">&quot;editing&quot;</span>)
+526:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">set_origin_and_local_identifier_status</span>(<span class="ruby-value str">&quot;editing&quot;</span>)
+527:       
+528:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">send_status_emails</span>(<span class="ruby-value str">&quot;rejected&quot;</span>, <span class="ruby-keyword kw">self</span>)
+529:       
+530:       <span class="ruby-comment cmt">#do we want to copy ours back to the user? yes</span>
+531:       <span class="ruby-comment cmt">#TODO test copy to user</span>
+532:       <span class="ruby-comment cmt">#WARNING since they decided not to let editors edit we don't need to copy back to user 1-28-2010</span>
+533:       <span class="ruby-comment cmt">#self.copy_repo_to_parent_repo</span>
+534:       
+535:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">save!</span>
+536:       
+537:       <span class="ruby-comment cmt">#what to do with our copy?</span>
+538:      <span class="ruby-comment cmt"># self.status = &quot;rejected&quot; #reset to unsubmitted       </span>
+539:      <span class="ruby-comment cmt"># self.save</span>
+540:       
+541:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">destroy</span>
+542:       <span class="ruby-comment cmt">#redirect to dashboard</span>
+543:      <span class="ruby-comment cmt"># redirect_to ( dashboard_url )</span>
+544:      <span class="ruby-comment cmt"># redirect_to :controller =&gt; &quot;user&quot;, :action =&gt; &quot;dashboard&quot;</span>
+545:       <span class="ruby-comment cmt">#TODO send status emails</span>
+546:       <span class="ruby-comment cmt"># @publication.send_status_emails(decree_action)</span>
+547:       
+548:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">decree_action</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;graffiti&quot;</span>               
+549:       <span class="ruby-comment cmt"># @publication.send_status_emails(decree_action)</span>
+550:       <span class="ruby-comment cmt">#do destroy after email since the email may need info in the artice</span>
+551:       <span class="ruby-comment cmt">#@publication.get_category_obj().graffiti</span>
+552:       
+553:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">send_status_emails</span>(<span class="ruby-value str">&quot;graffiti&quot;</span>, <span class="ruby-keyword kw">self</span>)
+554:       <span class="ruby-comment cmt">#todo do we let one board destroy the entire document?</span>
+555:       <span class="ruby-comment cmt">#will this destroy all board copies....</span>
+556:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">destroy</span> <span class="ruby-comment cmt">#need to destroy related? </span>
+557:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">destroy</span>
+558:      <span class="ruby-comment cmt"># redirect_to ( dashboard_url )</span>
+559:       <span class="ruby-comment cmt">#TODO we need to walk the tree and delete everything everywhere??</span>
+560:       <span class="ruby-comment cmt">#or</span>
+561:       <span class="ruby-comment cmt">#self.submit_to_next_board</span>
+562:       
+563:     <span class="ruby-keyword kw">else</span>
+564:       <span class="ruby-comment cmt">#unknown action or no action</span>
+565:       <span class="ruby-comment cmt">#TODO allow board to return any action, and then call that action on the identifier, board or wherever it makes sense to allow the user to add to the class</span>
+566:       <span class="ruby-comment cmt">#if publication has comunity name, then it may make sense for that name to be linked to a mixin or such that contains custom methods</span>
+567:       <span class="ruby-comment cmt">#parse action name</span>
+568:     <span class="ruby-keyword kw">end</span>
+569:     
+570:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">decree_action</span>
+571:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000086" class="method-detail">
+        <a name="M000086"></a>
+
+        <div class="method-heading">
+          <a href="#M000086" class="method-signature">
+          <span class="method-name">user_has_voted?</span><span class="method-args">(user_id)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000086-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000086-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/publication.rb, line 462</span>
+462:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">user_has_voted?</span>(<span class="ruby-identifier">user_id</span>)
+463:     <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">votes</span>
+464:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">votes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">vote</span><span class="ruby-operator">|</span>
+465:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">vote</span>.<span class="ruby-identifier">user_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">user_id</span>
+466:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-comment cmt">#user has a vote on record for this publication</span>
+467:         <span class="ruby-keyword kw">end</span>
+468:       <span class="ruby-keyword kw">end</span>
+469:     <span class="ruby-keyword kw">end</span>
+470:     <span class="ruby-comment cmt">#no vote found</span>
+471:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+472:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Protected Instance methods</h3>
+
+      <div id="method-M000114" class="method-detail">
+        <a name="M000114"></a>
+
+        <div class="method-heading">
+          <a href="#M000114" class="method-signature">
+          <span class="method-name">identifier_to_ref</span><span class="method-args">(str)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns identifier string in form acceptable to &quot;.git/refs/&quot;
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000114-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000114-source">
+<pre>
+      <span class="ruby-comment cmt"># File app/models/publication.rb, line 1091</span>
+1091:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">identifier_to_ref</span>(<span class="ruby-identifier">str</span>)
+1092:       <span class="ruby-identifier">str</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-value str">':;'</span>,<span class="ruby-value str">'_'</span>)
+1093:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000113" class="method-detail">
+        <a name="M000113"></a>
+
+        <div class="method-heading">
+          <a href="#M000113" class="method-signature">
+          <span class="method-name">title_to_ref</span><span class="method-args">(str)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns title string in form acceptable to &quot;.git/refs/&quot;
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000113-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000113-source">
+<pre>
+      <span class="ruby-comment cmt"># File app/models/publication.rb, line 1086</span>
+1086:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">title_to_ref</span>(<span class="ruby-identifier">str</span>)
+1087:       <span class="ruby-identifier">str</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-value str">' '</span>,<span class="ruby-value str">'_'</span>)
+1088:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

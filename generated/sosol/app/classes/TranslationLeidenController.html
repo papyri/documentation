@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: TranslationLeidenController</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">TranslationLeidenController</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/app/controllers/translation_leiden_controller_rb.html">
+                app/controllers/translation_leiden_controller.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                <a href="ApplicationController.html">
+                ApplicationController
+               </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000270">get_language_translation_leiden</a>&nbsp;&nbsp;
+      <a href="#M000271">translation_leiden_to_xml</a>&nbsp;&nbsp;
+      <a href="#M000269">xml_to_translation_leiden</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000270" class="method-detail">
+        <a name="M000270"></a>
+
+        <div class="method-heading">
+          <a href="#M000270" class="method-signature">
+          <span class="method-name">get_language_translation_leiden</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+used by ajax
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000270-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000270-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/translation_leiden_controller.rb, line 23</span>
+23:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_language_translation_leiden</span>
+24:         
+25:     <span class="ruby-identifier">lang</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:lang</span>])
+26:     <span class="ruby-keyword kw">begin</span>
+27:       <span class="ruby-identifier">leidenback</span> = <span class="ruby-constant">TranslationLeiden</span>.<span class="ruby-identifier">get_language_translation_leiden</span>(<span class="ruby-identifier">lang</span>)
+28:       <span class="ruby-identifier">render</span> <span class="ruby-identifier">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#{leidenback}&quot;</span>
+29:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">RXSugar</span><span class="ruby-operator">::</span><span class="ruby-constant">XMLParseError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">parse_error</span>
+30:       <span class="ruby-comment cmt">#insert **ERROR** into content to help user find it - subtract 1 for offset from 0</span>
+31:       <span class="ruby-identifier">parse_error</span>.<span class="ruby-identifier">content</span>.<span class="ruby-identifier">insert</span>((<span class="ruby-identifier">parse_error</span>.<span class="ruby-identifier">column</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>), <span class="ruby-value str">&quot;**ERROR**&quot;</span>)
+32:       <span class="ruby-identifier">render</span> <span class="ruby-identifier">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">xml2conv</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;Error at column #{parse_error.column} #{parse_error.content}&quot;</span>
+33:     <span class="ruby-keyword kw">end</span>
+34:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000271" class="method-detail">
+        <a name="M000271"></a>
+
+        <div class="method-heading">
+          <a href="#M000271" class="method-signature">
+          <span class="method-name">translation_leiden_to_xml</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+used by ajax
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000271-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000271-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/translation_leiden_controller.rb, line 37</span>
+37:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">translation_leiden_to_xml</span>
+38:     
+39:     <span class="ruby-identifier">leiden2conv</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:leiden</span>])
+40:     <span class="ruby-keyword kw">begin</span>
+41:       <span class="ruby-comment cmt">#xmlback = TranslationLeiden.leiden_plus_xml(leiden2conv)</span>
+42:       <span class="ruby-identifier">xmlback</span> = <span class="ruby-constant">TranslationLeiden</span>.<span class="ruby-identifier">translation_leiden_to_xml</span>(<span class="ruby-identifier">leiden2conv</span>)
+43:       
+44:       
+45:       <span class="ruby-identifier">render</span> <span class="ruby-identifier">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#{xmlback}&quot;</span>
+46:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">RXSugar</span><span class="ruby-operator">::</span><span class="ruby-constant">NonXMLParseError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">parse_error</span>
+47:       <span class="ruby-comment cmt">#insert **ERROR** into content to help user find it - subtract 1 for offset from 0</span>
+48:       <span class="ruby-identifier">parse_error</span>.<span class="ruby-identifier">content</span>.<span class="ruby-identifier">insert</span>((<span class="ruby-identifier">parse_error</span>.<span class="ruby-identifier">column</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>), <span class="ruby-value str">&quot;**ERROR**&quot;</span>)
+49:       <span class="ruby-identifier">render</span> <span class="ruby-identifier">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;Error at column #{parse_error.column} #{parse_error.content}&quot;</span>
+50:     <span class="ruby-keyword kw">end</span>
+51:     
+52:     
+53:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000269" class="method-detail">
+        <a name="M000269"></a>
+
+        <div class="method-heading">
+          <a href="#M000269" class="method-signature">
+          <span class="method-name">xml_to_translation_leiden</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+used by ajax
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000269-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000269-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/translation_leiden_controller.rb, line 5</span>
+ 5:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xml_to_translation_leiden</span>
+ 6:     
+ 7:     <span class="ruby-identifier">xml2conv</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:xml</span>])
+ 8:     <span class="ruby-keyword kw">begin</span>
+ 9:       <span class="ruby-comment cmt">#leidenback = TranslationLeiden.xml_leiden_plus(xml2conv)</span>
+10:       <span class="ruby-identifier">leidenback</span> = <span class="ruby-constant">TranslationLeiden</span>.<span class="ruby-identifier">xml_to_translation_leiden</span>(<span class="ruby-identifier">xml2conv</span>)
+11:       
+12:       <span class="ruby-identifier">render</span> <span class="ruby-identifier">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;#{leidenback}&quot;</span>
+13:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">RXSugar</span><span class="ruby-operator">::</span><span class="ruby-constant">XMLParseError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">parse_error</span>
+14:       <span class="ruby-comment cmt">#insert **ERROR** into content to help user find it - subtract 1 for offset from 0</span>
+15:       <span class="ruby-identifier">parse_error</span>.<span class="ruby-identifier">content</span>.<span class="ruby-identifier">insert</span>((<span class="ruby-identifier">parse_error</span>.<span class="ruby-identifier">column</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>), <span class="ruby-value str">&quot;**ERROR**&quot;</span>)
+16:       <span class="ruby-identifier">render</span> <span class="ruby-identifier">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">xml2conv</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;Error at column #{parse_error.column} #{parse_error.content}&quot;</span>
+17:     <span class="ruby-keyword kw">end</span>
+18:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

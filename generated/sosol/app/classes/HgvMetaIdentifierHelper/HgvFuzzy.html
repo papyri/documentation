@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: HgvMetaIdentifierHelper::HgvFuzzy</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">HgvMetaIdentifierHelper::HgvFuzzy</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/app/helpers/hgv_meta_identifier_helper_rb.html">
+                app/helpers/hgv_meta_identifier_helper.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000582">getChron</a>&nbsp;&nbsp;
+      <a href="#M000584">getChronMax</a>&nbsp;&nbsp;
+      <a href="#M000583">getChronMin</a>&nbsp;&nbsp;
+      <a href="#M000581">getChronSimple</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000582" class="method-detail">
+        <a name="M000582"></a>
+
+        <div class="method-heading">
+          <a href="#M000582" class="method-signature">
+          <span class="method-name">getChron</span><span class="method-args">(c, y, m, d, cq, yq, mq, chron = :chron)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000582-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000582-source">
+<pre>
+      <span class="ruby-comment cmt"># File app/helpers/hgv_meta_identifier_helper.rb, line 1160</span>
+1160:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">HgvFuzzy</span>.<span class="ruby-identifier">getChron</span> <span class="ruby-identifier">c</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>, <span class="ruby-identifier">d</span>, <span class="ruby-identifier">cq</span>, <span class="ruby-identifier">yq</span>, <span class="ruby-identifier">mq</span>, <span class="ruby-identifier">chron</span> = <span class="ruby-identifier">:chron</span>
+1161:       <span class="ruby-identifier">c</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>
+1162:       <span class="ruby-identifier">y</span> = <span class="ruby-identifier">y</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">y</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>
+1163:       <span class="ruby-identifier">m</span> = <span class="ruby-identifier">m</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>
+1164:       <span class="ruby-identifier">d</span> = <span class="ruby-identifier">d</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>
+1165: 
+1166:       <span class="ruby-identifier">epoch</span> = <span class="ruby-identifier">year</span> = <span class="ruby-identifier">month</span> = <span class="ruby-identifier">day</span> = <span class="ruby-keyword kw">nil</span>;      
+1167: 
+1168:       <span class="ruby-identifier">year_modifier</span> = {
+1169:         <span class="ruby-identifier">:chron</span> =<span class="ruby-operator">&gt;</span> {
+1170:           <span class="ruby-value str">''</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">13</span>,
+1171:           <span class="ruby-value str">'beginning'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">13</span>,
+1172:           <span class="ruby-value str">'first_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">13</span>,
+1173:           <span class="ruby-value str">'first_half_to_middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">38</span>,
+1174:           <span class="ruby-value str">'middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">38</span>,
+1175:           <span class="ruby-value str">'middle_to_second_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">63</span>,
+1176:           <span class="ruby-value str">'second_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">63</span>,
+1177:           <span class="ruby-value str">'end'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">87</span>
+1178:         },
+1179:         <span class="ruby-identifier">:chronMin</span> =<span class="ruby-operator">&gt;</span> {
+1180:           <span class="ruby-value str">''</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+1181:           <span class="ruby-value str">'beginning'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+1182:           <span class="ruby-value str">'first_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+1183:           <span class="ruby-value str">'first_half_to_middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">25</span>,
+1184:           <span class="ruby-value str">'middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">25</span>,
+1185:           <span class="ruby-value str">'middle_to_second_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">50</span>,
+1186:           <span class="ruby-value str">'second_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">50</span>,
+1187:           <span class="ruby-value str">'end'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">75</span>
+1188:         },
+1189:         <span class="ruby-identifier">:chronMax</span> =<span class="ruby-operator">&gt;</span> {
+1190:           <span class="ruby-value str">''</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+1191:           <span class="ruby-value str">'beginning'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">-75</span>,
+1192:           <span class="ruby-value str">'first_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">-50</span>,
+1193:           <span class="ruby-value str">'first_half_to_middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">-50</span>,
+1194:           <span class="ruby-value str">'middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">-25</span>,
+1195:           <span class="ruby-value str">'middle_to_second_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">-25</span>,
+1196:           <span class="ruby-value str">'second_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+1197:           <span class="ruby-value str">'end'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+1198:         }
+1199:       }[<span class="ruby-identifier">chron</span>][<span class="ruby-identifier">cq</span>]
+1200: 
+1201:       <span class="ruby-identifier">month_modifier</span> = {
+1202:         <span class="ruby-identifier">:chron</span> =<span class="ruby-operator">&gt;</span> {
+1203:           <span class="ruby-value str">''</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'02'</span>,
+1204:           <span class="ruby-value str">'beginning'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'02'</span>,
+1205:           <span class="ruby-value str">'first_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'03'</span>,
+1206:           <span class="ruby-value str">'first_half_to_middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'05'</span>,
+1207:           <span class="ruby-value str">'middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'06'</span>,
+1208:           <span class="ruby-value str">'middle_to_second_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'08'</span>,
+1209:           <span class="ruby-value str">'second_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'09'</span>,
+1210:           <span class="ruby-value str">'end'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'11'</span>
+1211:         },
+1212:         <span class="ruby-identifier">:chronMin</span> =<span class="ruby-operator">&gt;</span> {
+1213:           <span class="ruby-value str">''</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'01'</span>,
+1214:           <span class="ruby-value str">'beginning'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'01'</span>,
+1215:           <span class="ruby-value str">'first_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'01'</span>,
+1216:           <span class="ruby-value str">'first_half_to_middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'04'</span>,
+1217:           <span class="ruby-value str">'middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'04'</span>,
+1218:           <span class="ruby-value str">'middle_to_second_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'07'</span>,
+1219:           <span class="ruby-value str">'second_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'07'</span>,
+1220:           <span class="ruby-value str">'end'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'10'</span>
+1221:         },
+1222:         <span class="ruby-identifier">:chronMax</span> =<span class="ruby-operator">&gt;</span> {
+1223:           <span class="ruby-value str">''</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'12'</span>,
+1224:           <span class="ruby-value str">'beginning'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'03'</span>,
+1225:           <span class="ruby-value str">'first_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'06'</span>,
+1226:           <span class="ruby-value str">'first_half_to_middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'06'</span>,
+1227:           <span class="ruby-value str">'middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'09'</span>,
+1228:           <span class="ruby-value str">'middle_to_second_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'09'</span>,
+1229:           <span class="ruby-value str">'second_half'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'12'</span>,
+1230:           <span class="ruby-value str">'end'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'12'</span>
+1231:         }
+1232:       }[<span class="ruby-identifier">chron</span>][<span class="ruby-identifier">yq</span>]
+1233:       
+1234:       <span class="ruby-identifier">m</span> = <span class="ruby-identifier">m</span> <span class="ruby-value">? </span><span class="ruby-identifier">m</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">month_modifier</span>.<span class="ruby-identifier">to_i</span>
+1235:       <span class="ruby-identifier">day_max</span> = <span class="ruby-identifier">m</span> <span class="ruby-value">? </span>(<span class="ruby-identifier">m</span> <span class="ruby-operator">!=</span> <span class="ruby-value">2</span> <span class="ruby-operator">?</span> (<span class="ruby-identifier">m</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">8</span> <span class="ruby-operator">?</span> ((<span class="ruby-identifier">m</span> <span class="ruby-operator">%</span> <span class="ruby-value">2</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value">30</span> <span class="ruby-operator">:</span> <span class="ruby-value">31</span>) <span class="ruby-operator">:</span> ((<span class="ruby-identifier">m</span> <span class="ruby-operator">%</span> <span class="ruby-value">2</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value">31</span> <span class="ruby-operator">:</span> <span class="ruby-value">30</span>) ) <span class="ruby-operator">:</span> (<span class="ruby-identifier">y</span> <span class="ruby-operator">&amp;&amp;</span> ((<span class="ruby-identifier">y</span> <span class="ruby-operator">%</span> <span class="ruby-value">4</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>) <span class="ruby-operator">&amp;&amp;</span> (((<span class="ruby-identifier">y</span> <span class="ruby-operator">%</span> <span class="ruby-value">100</span>) <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>) <span class="ruby-operator">||</span> ((<span class="ruby-identifier">y</span> <span class="ruby-operator">%</span> <span class="ruby-value">400</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)) <span class="ruby-operator">?</span> <span class="ruby-value">29</span> <span class="ruby-operator">:</span> <span class="ruby-value">28</span>)) <span class="ruby-operator">:</span> <span class="ruby-value">31</span>
+1236:       <span class="ruby-identifier">day_modifier</span> = {
+1237:         <span class="ruby-identifier">:chron</span> =<span class="ruby-operator">&gt;</span> {
+1238:           <span class="ruby-value str">''</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'04'</span>,
+1239:           <span class="ruby-value str">'beginning'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'04'</span>,
+1240:           <span class="ruby-value str">'middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'15'</span>,
+1241:           <span class="ruby-value str">'end'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'26'</span>
+1242:         },
+1243:         <span class="ruby-identifier">:chronMin</span> =<span class="ruby-operator">&gt;</span> {
+1244:           <span class="ruby-value str">''</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'01'</span>,
+1245:           <span class="ruby-value str">'beginning'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'01'</span>,
+1246:           <span class="ruby-value str">'middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'11'</span>,
+1247:           <span class="ruby-value str">'end'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'21'</span>
+1248:         },
+1249:         <span class="ruby-identifier">:chronMax</span> =<span class="ruby-operator">&gt;</span> {
+1250:           <span class="ruby-value str">''</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">day_max</span>.<span class="ruby-identifier">to_s</span>,
+1251:           <span class="ruby-value str">'beginning'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'10'</span>,
+1252:           <span class="ruby-value str">'middle'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'20'</span>,
+1253:           <span class="ruby-value str">'end'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">day_max</span>.<span class="ruby-identifier">to_s</span>
+1254:         }
+1255:       }[<span class="ruby-identifier">chron</span>][<span class="ruby-identifier">mq</span>]
+1256: 
+1257:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">y</span>
+1258:         <span class="ruby-identifier">epoch</span> = <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value str">'-'</span> <span class="ruby-operator">:</span> <span class="ruby-value str">''</span>
+1259:         <span class="ruby-identifier">year</span> = <span class="ruby-identifier">y</span>.<span class="ruby-identifier">abs</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">4</span>, <span class="ruby-value str">'0'</span>)
+1260:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">c</span>
+1261:         <span class="ruby-identifier">epoch</span> = <span class="ruby-identifier">c</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value str">'-'</span> <span class="ruby-operator">:</span> <span class="ruby-value str">''</span>
+1262:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">chron</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">:chronMax</span>
+1263:           <span class="ruby-identifier">year</span> = <span class="ruby-identifier">c</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> (<span class="ruby-identifier">c</span> <span class="ruby-operator">*</span> <span class="ruby-value">100</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">year_modifier</span>).<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">4</span>, <span class="ruby-value str">'0'</span>) <span class="ruby-operator">:</span> ((<span class="ruby-identifier">c</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) <span class="ruby-operator">*</span> <span class="ruby-value">100</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">year_modifier</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">abs</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">4</span>, <span class="ruby-value str">'0'</span>)
+1264:         <span class="ruby-keyword kw">else</span>
+1265:           <span class="ruby-identifier">year</span> = <span class="ruby-identifier">c</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> (<span class="ruby-identifier">c</span> <span class="ruby-operator">*</span> <span class="ruby-value">100</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">year_modifier</span>).<span class="ruby-identifier">abs</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">4</span>, <span class="ruby-value str">'0'</span>) <span class="ruby-operator">:</span> ((<span class="ruby-identifier">c</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">*</span> <span class="ruby-value">100</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">year_modifier</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">4</span>, <span class="ruby-value str">'0'</span>)
+1266:         <span class="ruby-keyword kw">end</span>
+1267:       <span class="ruby-keyword kw">else</span>
+1268:         <span class="ruby-keyword kw">return</span> <span class="ruby-value str">''</span> <span class="ruby-comment cmt"># if we have no year there is no go</span>
+1269:       <span class="ruby-keyword kw">end</span>
+1270:       
+1271:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">m</span>
+1272:         <span class="ruby-identifier">month</span> = <span class="ruby-identifier">m</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">2</span>, <span class="ruby-value str">'0'</span>)
+1273:       <span class="ruby-keyword kw">else</span>
+1274:         <span class="ruby-identifier">month</span> = <span class="ruby-identifier">month_modifier</span>
+1275:       <span class="ruby-keyword kw">end</span>
+1276:       
+1277:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">d</span>
+1278:         <span class="ruby-identifier">day</span> = <span class="ruby-identifier">d</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">2</span>, <span class="ruby-value str">'0'</span>)
+1279:       <span class="ruby-keyword kw">else</span>
+1280:         <span class="ruby-identifier">day</span> = <span class="ruby-identifier">day_modifier</span>
+1281:       <span class="ruby-keyword kw">end</span>
+1282: 
+1283:       <span class="ruby-identifier">epoch</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">year</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'-'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">month</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'-'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">day</span>
+1284:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000584" class="method-detail">
+        <a name="M000584"></a>
+
+        <div class="method-heading">
+          <a href="#M000584" class="method-signature">
+          <span class="method-name">getChronMax</span><span class="method-args">(c, y, m, d, cq, yq, mq)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000584-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000584-source">
+<pre>
+      <span class="ruby-comment cmt"># File app/helpers/hgv_meta_identifier_helper.rb, line 1290</span>
+1290:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">HgvFuzzy</span>.<span class="ruby-identifier">getChronMax</span> <span class="ruby-identifier">c</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>, <span class="ruby-identifier">d</span>, <span class="ruby-identifier">cq</span>, <span class="ruby-identifier">yq</span>, <span class="ruby-identifier">mq</span>
+1291:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">HgvFuzzy</span>.<span class="ruby-identifier">getChron</span> <span class="ruby-identifier">c</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>, <span class="ruby-identifier">d</span>, <span class="ruby-identifier">cq</span>, <span class="ruby-identifier">yq</span>, <span class="ruby-identifier">mq</span>, <span class="ruby-identifier">:chronMax</span>
+1292:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000583" class="method-detail">
+        <a name="M000583"></a>
+
+        <div class="method-heading">
+          <a href="#M000583" class="method-signature">
+          <span class="method-name">getChronMin</span><span class="method-args">(c, y, m, d, cq, yq, mq)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000583-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000583-source">
+<pre>
+      <span class="ruby-comment cmt"># File app/helpers/hgv_meta_identifier_helper.rb, line 1286</span>
+1286:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">HgvFuzzy</span>.<span class="ruby-identifier">getChronMin</span> <span class="ruby-identifier">c</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>, <span class="ruby-identifier">d</span>, <span class="ruby-identifier">cq</span>, <span class="ruby-identifier">yq</span>, <span class="ruby-identifier">mq</span>
+1287:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">HgvFuzzy</span>.<span class="ruby-identifier">getChron</span> <span class="ruby-identifier">c</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>, <span class="ruby-identifier">d</span>, <span class="ruby-identifier">cq</span>, <span class="ruby-identifier">yq</span>, <span class="ruby-identifier">mq</span>, <span class="ruby-identifier">:chronMin</span>
+1288:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000581" class="method-detail">
+        <a name="M000581"></a>
+
+        <div class="method-heading">
+          <a href="#M000581" class="method-signature">
+          <span class="method-name">getChronSimple</span><span class="method-args">(c, y, m, d, cq, yq, mq, chron = :chron)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000581-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000581-source">
+<pre>
+      <span class="ruby-comment cmt"># File app/helpers/hgv_meta_identifier_helper.rb, line 1143</span>
+1143:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">HgvFuzzy</span>.<span class="ruby-identifier">getChronSimple</span> <span class="ruby-identifier">c</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>, <span class="ruby-identifier">d</span>, <span class="ruby-identifier">cq</span>, <span class="ruby-identifier">yq</span>, <span class="ruby-identifier">mq</span>, <span class="ruby-identifier">chron</span> = <span class="ruby-identifier">:chron</span>
+1144:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">chron</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">:chron</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+1145:         <span class="ruby-value str">''</span>
+1146:       <span class="ruby-keyword kw">else</span>
+1147:         <span class="ruby-identifier">intelligent_date</span> = <span class="ruby-identifier">getChron</span> <span class="ruby-identifier">c</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">m</span>, <span class="ruby-identifier">d</span>, <span class="ruby-identifier">cq</span>, <span class="ruby-identifier">yq</span>, <span class="ruby-identifier">mq</span>, <span class="ruby-identifier">chron</span>
+1148:   
+1149:         <span class="ruby-comment cmt"># throw away month and day if they were not explicitely set by the user      </span>
+1150:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+1151:           <span class="ruby-identifier">intelligent_date</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-7</span>]
+1152:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+1153:           <span class="ruby-identifier">intelligent_date</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-4</span>]
+1154:         <span class="ruby-keyword kw">else</span>
+1155:           <span class="ruby-identifier">intelligent_date</span>
+1156:         <span class="ruby-keyword kw">end</span>
+1157:       <span class="ruby-keyword kw">end</span>
+1158:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

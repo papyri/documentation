@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: JRubyXML</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">JRubyXML</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/jruby_xml_rb.html">
+                lib/jruby_xml.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000503">apply_xpath</a>&nbsp;&nbsp;
+      <a href="#M000504">apply_xsl_transform</a>&nbsp;&nbsp;
+      <a href="#M000498">document_from_string</a>&nbsp;&nbsp;
+      <a href="#M000506">get_transformer</a>&nbsp;&nbsp;
+      <a href="#M000502">get_xpath_namespace_context</a>&nbsp;&nbsp;
+      <a href="#M000495">input_source_from_string</a>&nbsp;&nbsp;
+      <a href="#M000500">named_node_map_to_hash</a>&nbsp;&nbsp;
+      <a href="#M000505">pretty_print</a>&nbsp;&nbsp;
+      <a href="#M000497">stream_from_file</a>&nbsp;&nbsp;
+      <a href="#M000496">stream_from_string</a>&nbsp;&nbsp;
+      <a href="#M000499">xpath_from_string</a>&nbsp;&nbsp;
+      <a href="#M000501">xpath_result_to_array</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Class <a href="JRubyXML/EpiDocP4Validator.html" class="link">JRubyXML::EpiDocP4Validator</a><br />
+Class <a href="JRubyXML/EpiDocP5Validator.html" class="link">JRubyXML::EpiDocP5Validator</a><br />
+Class <a href="JRubyXML/JARVValidator.html" class="link">JRubyXML::JARVValidator</a><br />
+Class <a href="JRubyXML/NamespaceContext.html" class="link">JRubyXML::NamespaceContext</a><br />
+Class <a href="JRubyXML/ParseError.html" class="link">JRubyXML::ParseError</a><br />
+Class <a href="JRubyXML/ParseErrorHandler.html" class="link">JRubyXML::ParseErrorHandler</a><br />
+Class <a href="JRubyXML/TransformErrorListener.html" class="link">JRubyXML::TransformErrorListener</a><br />
+
+    </div>
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000503" class="method-detail">
+        <a name="M000503"></a>
+
+        <div class="method-heading">
+          <a href="#M000503" class="method-signature">
+          <span class="method-name">apply_xpath</span><span class="method-args">(input_document_string, input_xpath_string, namespace_aware = false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000503-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000503-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jruby_xml.rb, line 177</span>
+177:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">apply_xpath</span>(<span class="ruby-identifier">input_document_string</span>, <span class="ruby-identifier">input_xpath_string</span>, <span class="ruby-identifier">namespace_aware</span> = <span class="ruby-keyword kw">false</span>)
+178:       <span class="ruby-identifier">document</span> = <span class="ruby-identifier">document_from_string</span>(<span class="ruby-identifier">input_document_string</span>, <span class="ruby-identifier">namespace_aware</span>)
+179:       <span class="ruby-identifier">xpath</span> = <span class="ruby-identifier">xpath_from_string</span>(<span class="ruby-identifier">input_xpath_string</span>,
+180:         <span class="ruby-identifier">namespace_aware</span> <span class="ruby-value">? </span><span class="ruby-identifier">get_xpath_namespace_context</span>(<span class="ruby-identifier">document</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>)
+181:       
+182:       <span class="ruby-identifier">xpath_result</span> = <span class="ruby-identifier">xpath</span>.<span class="ruby-identifier">evaluate</span>(<span class="ruby-identifier">document</span>, 
+183:         <span class="ruby-identifier">javax</span>.<span class="ruby-identifier">xml</span>.<span class="ruby-identifier">xpath</span>.<span class="ruby-constant">XPathConstants</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-value str">'NODESET'</span>))
+184:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">xpath_result_to_array</span>(<span class="ruby-identifier">xpath_result</span>)
+185:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000504" class="method-detail">
+        <a name="M000504"></a>
+
+        <div class="method-heading">
+          <a href="#M000504" class="method-signature">
+          <span class="method-name">apply_xsl_transform</span><span class="method-args">(xml_stream, xsl_stream, parameters = {})</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000504-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000504-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jruby_xml.rb, line 187</span>
+187:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">apply_xsl_transform</span>(<span class="ruby-identifier">xml_stream</span>, <span class="ruby-identifier">xsl_stream</span>, <span class="ruby-identifier">parameters</span> = {})
+188:       <span class="ruby-identifier">transformer</span> = <span class="ruby-identifier">get_transformer</span>(<span class="ruby-identifier">xsl_stream</span>)
+189:       <span class="ruby-identifier">transformer</span>.<span class="ruby-identifier">setErrorListener</span>(<span class="ruby-constant">TransformErrorListener</span>.<span class="ruby-identifier">new</span>())
+190:       
+191:       <span class="ruby-identifier">parameters</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">parameter</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+192:         <span class="ruby-identifier">transformer</span>.<span class="ruby-identifier">setParameter</span>(<span class="ruby-identifier">parameter</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">value</span>)
+193:       <span class="ruby-keyword kw">end</span>
+194:       
+195:       <span class="ruby-identifier">string_writer</span> = <span class="ruby-identifier">java</span>.<span class="ruby-identifier">io</span>.<span class="ruby-constant">StringWriter</span>.<span class="ruby-identifier">new</span>()
+196:       <span class="ruby-identifier">result</span> = <span class="ruby-identifier">javax</span>.<span class="ruby-identifier">xml</span>.<span class="ruby-identifier">transform</span>.<span class="ruby-identifier">stream</span>.<span class="ruby-constant">StreamResult</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">string_writer</span>)
+197:       
+198:       <span class="ruby-keyword kw">begin</span>
+199:         <span class="ruby-identifier">transformer</span>.<span class="ruby-identifier">transform</span>(<span class="ruby-identifier">xml_stream</span>, <span class="ruby-identifier">result</span>)
+200:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">string_writer</span>.<span class="ruby-identifier">toString</span>()
+201:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">NativeException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">java_exception</span>
+202:         <span class="ruby-comment cmt"># For some reason Saxon doesn't seem to use the set ErrorListener</span>
+203:         <span class="ruby-comment cmt"># so we have to do all this</span>
+204:         <span class="ruby-identifier">xpath_exception</span> = <span class="ruby-identifier">java_exception</span>.<span class="ruby-identifier">cause</span>()
+205:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">xpath_exception</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Java</span><span class="ruby-operator">::</span><span class="ruby-constant">NetSfSaxonTrans</span><span class="ruby-operator">::</span><span class="ruby-constant">XPathException</span>
+206:           <span class="ruby-identifier">sax_parse_exception</span> = <span class="ruby-identifier">xpath_exception</span>.<span class="ruby-identifier">getCause</span>()
+207:           <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-identifier">sax_parse_exception</span>.<span class="ruby-identifier">class</span>
+208:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">sax_parse_exception</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Java</span><span class="ruby-operator">::</span><span class="ruby-constant">OrgXmlSax</span><span class="ruby-operator">::</span><span class="ruby-constant">SAXParseException</span>
+209:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">ParseError</span>.<span class="ruby-identifier">new</span>(
+210:                 <span class="ruby-identifier">sax_parse_exception</span>.<span class="ruby-identifier">getLineNumber</span>,
+211:                 <span class="ruby-identifier">sax_parse_exception</span>.<span class="ruby-identifier">getColumnNumber</span>),
+212:               <span class="ruby-identifier">sax_parse_exception</span>.<span class="ruby-identifier">getMessage</span>
+213:           <span class="ruby-keyword kw">else</span>
+214:             <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Unknown XPath error during SAXON transform&quot;</span>
+215:           <span class="ruby-keyword kw">end</span>
+216:         <span class="ruby-keyword kw">else</span>
+217:           <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Unknown error during SAXON transform&quot;</span>
+218:         <span class="ruby-keyword kw">end</span>
+219:       <span class="ruby-keyword kw">end</span>
+220:       
+221:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+222:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000498" class="method-detail">
+        <a name="M000498"></a>
+
+        <div class="method-heading">
+          <a href="#M000498" class="method-signature">
+          <span class="method-name">document_from_string</span><span class="method-args">(input_string, namespace_aware = false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000498-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000498-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jruby_xml.rb, line 127</span>
+127:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">document_from_string</span>(<span class="ruby-identifier">input_string</span>, <span class="ruby-identifier">namespace_aware</span> = <span class="ruby-keyword kw">false</span>)
+128:       <span class="ruby-identifier">dom_factory</span> = <span class="ruby-identifier">javax</span>.<span class="ruby-identifier">xml</span>.<span class="ruby-identifier">parsers</span>.<span class="ruby-constant">DocumentBuilderFactory</span>.<span class="ruby-identifier">newInstance</span>()
+129:       <span class="ruby-identifier">dom_factory</span>.<span class="ruby-identifier">setNamespaceAware</span>(<span class="ruby-identifier">namespace_aware</span>)
+130:       <span class="ruby-identifier">builder</span> = <span class="ruby-identifier">dom_factory</span>.<span class="ruby-identifier">newDocumentBuilder</span>()
+131:       <span class="ruby-identifier">document</span> = <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">input_source_from_string</span>(<span class="ruby-identifier">input_string</span>))
+132:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000502" class="method-detail">
+        <a name="M000502"></a>
+
+        <div class="method-heading">
+          <a href="#M000502" class="method-signature">
+          <span class="method-name">get_xpath_namespace_context</span><span class="method-args">(document)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000502-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000502-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jruby_xml.rb, line 170</span>
+170:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_xpath_namespace_context</span>(<span class="ruby-identifier">document</span>)
+171:       <span class="ruby-identifier">root_xpath</span> = <span class="ruby-identifier">xpath_from_string</span>(<span class="ruby-value str">'/*'</span>)
+172:       <span class="ruby-identifier">document_root</span> = <span class="ruby-identifier">xpath_result_to_array</span>(<span class="ruby-identifier">root_xpath</span>.<span class="ruby-identifier">evaluate</span>(<span class="ruby-identifier">document</span>,
+173:         <span class="ruby-identifier">javax</span>.<span class="ruby-identifier">xml</span>.<span class="ruby-identifier">xpath</span>.<span class="ruby-constant">XPathConstants</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-value str">'NODESET'</span>))).<span class="ruby-identifier">first</span>
+174:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">NamespaceContext</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">document_root</span>[<span class="ruby-identifier">:attributes</span>])
+175:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000495" class="method-detail">
+        <a name="M000495"></a>
+
+        <div class="method-heading">
+          <a href="#M000495" class="method-signature">
+          <span class="method-name">input_source_from_string</span><span class="method-args">(input_string)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000495-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000495-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jruby_xml.rb, line 114</span>
+114:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">input_source_from_string</span>(<span class="ruby-identifier">input_string</span>)
+115:       <span class="ruby-identifier">org</span>.<span class="ruby-identifier">xml</span>.<span class="ruby-identifier">sax</span>.<span class="ruby-constant">InputSource</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">java</span>.<span class="ruby-identifier">io</span>.<span class="ruby-constant">StringReader</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">input_string</span>))
+116:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000500" class="method-detail">
+        <a name="M000500"></a>
+
+        <div class="method-heading">
+          <a href="#M000500" class="method-signature">
+          <span class="method-name">named_node_map_to_hash</span><span class="method-args">(named_node_map)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000500-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000500-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jruby_xml.rb, line 143</span>
+143:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">named_node_map_to_hash</span>(<span class="ruby-identifier">named_node_map</span>)
+144:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">named_node_map</span>.<span class="ruby-identifier">nil?</span>
+145:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+146:       <span class="ruby-keyword kw">else</span>
+147:         <span class="ruby-identifier">result_hash</span> = {}
+148:         <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">named_node_map</span>.<span class="ruby-identifier">getLength</span>() <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+149:           <span class="ruby-identifier">item</span> = <span class="ruby-identifier">named_node_map</span>.<span class="ruby-identifier">item</span>(<span class="ruby-identifier">i</span>)
+150:           <span class="ruby-identifier">result_hash</span>[<span class="ruby-identifier">item</span>.<span class="ruby-identifier">getNodeName</span>()] = <span class="ruby-identifier">item</span>.<span class="ruby-identifier">getNodeValue</span>()
+151:         <span class="ruby-keyword kw">end</span>
+152:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result_hash</span>
+153:       <span class="ruby-keyword kw">end</span>
+154:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000505" class="method-detail">
+        <a name="M000505"></a>
+
+        <div class="method-heading">
+          <a href="#M000505" class="method-signature">
+          <span class="method-name">pretty_print</span><span class="method-args">(xml_stream)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000505-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000505-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jruby_xml.rb, line 224</span>
+224:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pretty_print</span>(<span class="ruby-identifier">xml_stream</span>)
+225:       <span class="ruby-identifier">transformer</span> = <span class="ruby-identifier">get_transformer</span>()
+226:       <span class="ruby-identifier">transformer</span>.<span class="ruby-identifier">setOutputProperty</span>(
+227:         <span class="ruby-identifier">javax</span>.<span class="ruby-identifier">xml</span>.<span class="ruby-identifier">transform</span>.<span class="ruby-constant">OutputKeys</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-value str">'INDENT'</span>), <span class="ruby-value str">&quot;yes&quot;</span>)
+228:       <span class="ruby-comment cmt"># transformer.setOutputProperty(</span>
+229:       <span class="ruby-comment cmt">#   &quot;{http://xml.apache.org/xslt}indent-amount&quot;, &quot;2&quot;)</span>
+230:       
+231:       <span class="ruby-identifier">string_writer</span> = <span class="ruby-identifier">java</span>.<span class="ruby-identifier">io</span>.<span class="ruby-constant">StringWriter</span>.<span class="ruby-identifier">new</span>()
+232:       <span class="ruby-identifier">result</span> = <span class="ruby-identifier">javax</span>.<span class="ruby-identifier">xml</span>.<span class="ruby-identifier">transform</span>.<span class="ruby-identifier">stream</span>.<span class="ruby-constant">StreamResult</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">string_writer</span>)
+233: 
+234:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">xml_stream</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Java</span><span class="ruby-operator">::</span><span class="ruby-constant">ComSunOrgApacheXercesInternalDom</span><span class="ruby-operator">::</span><span class="ruby-constant">DeferredDocumentImpl</span>
+235:         <span class="ruby-identifier">transformer</span>.<span class="ruby-identifier">transform</span>(
+236:           <span class="ruby-identifier">javax</span>.<span class="ruby-identifier">xml</span>.<span class="ruby-identifier">transform</span>.<span class="ruby-identifier">dom</span>.<span class="ruby-constant">DOMSource</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">xml_stream</span>), <span class="ruby-identifier">result</span>)
+237:       <span class="ruby-keyword kw">else</span>
+238:         <span class="ruby-identifier">transformer</span>.<span class="ruby-identifier">transform</span>(<span class="ruby-identifier">xml_stream</span>, <span class="ruby-identifier">result</span>)
+239:       <span class="ruby-keyword kw">end</span>
+240: 
+241:       <span class="ruby-identifier">string_writer</span>.<span class="ruby-identifier">toString</span>()
+242:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000497" class="method-detail">
+        <a name="M000497"></a>
+
+        <div class="method-heading">
+          <a href="#M000497" class="method-signature">
+          <span class="method-name">stream_from_file</span><span class="method-args">(input_file)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000497-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000497-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jruby_xml.rb, line 123</span>
+123:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stream_from_file</span>(<span class="ruby-identifier">input_file</span>)
+124:       <span class="ruby-identifier">javax</span>.<span class="ruby-identifier">xml</span>.<span class="ruby-identifier">transform</span>.<span class="ruby-identifier">stream</span>.<span class="ruby-constant">StreamSource</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">input_file</span>)
+125:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000496" class="method-detail">
+        <a name="M000496"></a>
+
+        <div class="method-heading">
+          <a href="#M000496" class="method-signature">
+          <span class="method-name">stream_from_string</span><span class="method-args">(input_string)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000496-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000496-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jruby_xml.rb, line 118</span>
+118:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stream_from_string</span>(<span class="ruby-identifier">input_string</span>)
+119:       <span class="ruby-identifier">javax</span>.<span class="ruby-identifier">xml</span>.<span class="ruby-identifier">transform</span>.<span class="ruby-identifier">stream</span>.<span class="ruby-constant">StreamSource</span>.<span class="ruby-identifier">new</span>(
+120:         <span class="ruby-identifier">java</span>.<span class="ruby-identifier">io</span>.<span class="ruby-constant">StringReader</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">input_string</span>))
+121:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000499" class="method-detail">
+        <a name="M000499"></a>
+
+        <div class="method-heading">
+          <a href="#M000499" class="method-signature">
+          <span class="method-name">xpath_from_string</span><span class="method-args">(input_string, namespace_context = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000499-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000499-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jruby_xml.rb, line 134</span>
+134:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xpath_from_string</span>(<span class="ruby-identifier">input_string</span>, <span class="ruby-identifier">namespace_context</span> = <span class="ruby-keyword kw">nil</span>)
+135:       <span class="ruby-identifier">xpath_factory</span> = <span class="ruby-identifier">javax</span>.<span class="ruby-identifier">xml</span>.<span class="ruby-identifier">xpath</span>.<span class="ruby-constant">XPathFactory</span>.<span class="ruby-identifier">newInstance</span>()
+136:       <span class="ruby-identifier">xpath</span> = <span class="ruby-identifier">xpath_factory</span>.<span class="ruby-identifier">newXPath</span>()
+137:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">namespace_context</span>.<span class="ruby-identifier">nil?</span>
+138:         <span class="ruby-identifier">xpath</span>.<span class="ruby-identifier">setNamespaceContext</span>(<span class="ruby-identifier">namespace_context</span>)
+139:       <span class="ruby-keyword kw">end</span>
+140:       <span class="ruby-identifier">xpath_expression</span> = <span class="ruby-identifier">xpath</span>.<span class="ruby-identifier">compile</span>(<span class="ruby-identifier">input_string</span>)
+141:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000501" class="method-detail">
+        <a name="M000501"></a>
+
+        <div class="method-heading">
+          <a href="#M000501" class="method-signature">
+          <span class="method-name">xpath_result_to_array</span><span class="method-args">(xpath_result)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000501-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000501-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jruby_xml.rb, line 156</span>
+156:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xpath_result_to_array</span>(<span class="ruby-identifier">xpath_result</span>)
+157:       <span class="ruby-comment cmt"># xpath_result is a org.w3c.dom.NodeList</span>
+158:       <span class="ruby-identifier">xpath_results</span> = []
+159:       <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">xpath_result</span>.<span class="ruby-identifier">getLength</span>() <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+160:         <span class="ruby-identifier">item</span> = <span class="ruby-identifier">xpath_result</span>.<span class="ruby-identifier">item</span>(<span class="ruby-identifier">i</span>)
+161:         <span class="ruby-identifier">xpath_results</span> <span class="ruby-operator">&lt;&lt;</span> {
+162:             <span class="ruby-identifier">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">getNodeName</span>(),
+163:             <span class="ruby-identifier">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">getNodeValue</span>(),
+164:             <span class="ruby-identifier">:attributes</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">named_node_map_to_hash</span>(<span class="ruby-identifier">item</span>.<span class="ruby-identifier">getAttributes</span>())
+165:           }
+166:       <span class="ruby-keyword kw">end</span>
+167:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">xpath_results</span>
+168:     <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Protected Class methods</h3>
+
+      <div id="method-M000506" class="method-detail">
+        <a name="M000506"></a>
+
+        <div class="method-heading">
+          <a href="#M000506" class="method-signature">
+          <span class="method-name">get_transformer</span><span class="method-args">(xsl_stream = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000506-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000506-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/jruby_xml.rb, line 245</span>
+245:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_transformer</span>(<span class="ruby-identifier">xsl_stream</span> = <span class="ruby-keyword kw">nil</span>)
+246:         <span class="ruby-identifier">java</span>.<span class="ruby-identifier">lang</span>.<span class="ruby-constant">System</span>.<span class="ruby-identifier">setProperty</span>(<span class="ruby-value str">&quot;javax.xml.transform.TransformerFactory&quot;</span>, <span class="ruby-value str">&quot;net.sf.saxon.TransformerFactoryImpl&quot;</span>)
+247: 
+248:         <span class="ruby-identifier">transformer_factory</span> = <span class="ruby-identifier">javax</span>.<span class="ruby-identifier">xml</span>.<span class="ruby-identifier">transform</span>.<span class="ruby-constant">TransformerFactory</span>.<span class="ruby-identifier">newInstance</span>()
+249:         <span class="ruby-identifier">transformer_factory</span>.<span class="ruby-identifier">setErrorListener</span>(<span class="ruby-constant">TransformErrorListener</span>.<span class="ruby-identifier">new</span>())
+250:         
+251:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">xsl_stream</span>.<span class="ruby-identifier">nil?</span>
+252:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">transformer_factory</span>.<span class="ruby-identifier">newTransformer</span>()
+253:         <span class="ruby-keyword kw">else</span>
+254:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">transformer_factory</span>.<span class="ruby-identifier">newTransformer</span>(<span class="ruby-identifier">xsl_stream</span>)
+255:         <span class="ruby-keyword kw">end</span>
+256:       <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
