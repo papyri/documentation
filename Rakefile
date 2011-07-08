@@ -79,6 +79,23 @@ namespace "docs" do
       end
     end
   end
+
+  desc "Build index of generated documentation"
+  task :index do
+    index_file = File.join('_includes','generated_index.md')
+    file index_file => 'Rakefile' do
+      puts "Building generated documentation index..."
+      index_content = ""
+      repositories.each do |repository, directories|
+        directories.each do |directory|
+          index_content += "* [#{directory[:description]}](#{File.join('generated',repository,directory[:target])})\n"
+        end
+      end
+      FileUtils.mkdir_p('_includes')
+      File.open(index_file,'w') {|f| f.write(index_content)}
+    end
+    Rake::Task[index_file].invoke
+  end
 end
 
 desc "Fetch/update external repositories"
