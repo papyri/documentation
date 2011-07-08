@@ -24,7 +24,7 @@ Running `rake` will run the default task to fetch component repositories and bui
 their documentation.
 
 Running `rake jekyll:static` on the `gh-pages` branch will generate the static site
-which is the same as that served via GitHub Pages. This will generate a `_static`
+which is the same as that served via GitHub Pages. This will generate a `_site`
 directory suitable for copying to other webservers.
 
 ## Generated Documentation
