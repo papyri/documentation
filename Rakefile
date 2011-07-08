@@ -80,4 +80,16 @@ task :repositories do
   end
 end
 
+namespace "jekyll" do
+  desc "Generate/update static site (without local server)"
+  task :static => ['docs:update'] do
+    system("jekyll --pygments --no-auto")
+  end
+
+  desc "Generate site and run local server"
+  task :run => ['docs:update'] do
+    exec("jekyll --pygments --server")
+  end
+end
+
 task :default => ['docs:update']
