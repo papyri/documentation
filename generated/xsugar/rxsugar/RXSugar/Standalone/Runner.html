@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: RXSugar::Standalone::Runner</title>
+<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (R)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../../RXSugar.html" title="RXSugar (module)">RXSugar</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Standalone.html" title="RXSugar::Standalone (module)">Standalone</a></span></span>
+     &raquo; 
+    <span class="title">Runner</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: RXSugar::Standalone::Runner
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">RXSugar::Standalone::Runner</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/standalone/runner.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#preprocess_xml-instance_method" title="#preprocess_xml (instance method)">- (Object) <strong>preprocess_xml</strong>(xml_filename) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run-instance_method" title="#run (instance method)">- (Object) <strong>run</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#saxon_command-instance_method" title="#saxon_command (instance method)">- (Object) <strong>saxon_command</strong>(xsl) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="preprocess_xml-instance_method">
+  
+    - (<tt>Object</tt>) <strong>preprocess_xml</strong>(xml_filename) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/standalone/runner.rb', line 14</span>
+
+<span class='def def kw'>def</span> <span class='preprocess_xml identifier id'>preprocess_xml</span><span class='lparen token'>(</span><span class='xml_filename identifier id'>xml_filename</span><span class='rparen token'>)</span>
+  <span class='command_string identifier id'>command_string</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;cat #{xml_filename}&quot;</span>
+  <span class='saxon_commands identifier id'>saxon_commands</span> <span class='assign token'>=</span> <span class='XSL_CHAIN constant id'>XSL_CHAIN</span><span class='dot token'>.</span><span class='collect identifier id'>collect</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='xsl identifier id'>xsl</span><span class='bitor op'>|</span> <span class='string val'>&quot; | &quot;</span> <span class='plus op'>+</span> <span class='saxon_command identifier id'>saxon_command</span><span class='lparen token'>(</span><span class='xsl identifier id'>xsl</span><span class='rparen token'>)</span><span class='rbrace token'>}</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>''</span><span class='rparen token'>)</span>
+  <span class='command_string identifier id'>command_string</span> <span class='assign token'>=</span> <span class='command_string identifier id'>command_string</span> <span class='plus op'>+</span> <span class='saxon_commands identifier id'>saxon_commands</span>
+  
+  <span class='result identifier id'>result</span> <span class='assign token'>=</span> <span class='dxstring node'>`#{command_string}`</span>
+  
+  <span class='return return kw'>return</span> <span class='result identifier id'>result</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="run-instance_method">
+  
+    - (<tt>Object</tt>) <strong>run</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/standalone/runner.rb', line 24</span>
+
+<span class='def def kw'>def</span> <span class='run identifier id'>run</span>
+  <span class='xml_files identifier id'>xml_files</span> <span class='assign token'>=</span> <span class='Dir constant id'>Dir</span><span class='lbrack token'>[</span><span class='DATA_PATH constant id'>DATA_PATH</span> <span class='plus op'>+</span> <span class='string val'>'/**/*.xml'</span><span class='rbrack token'>]</span>
+  <span class='xml_files_bar identifier id'>xml_files_bar</span> <span class='assign token'>=</span> <span class='ProgressBar constant id'>ProgressBar</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;files&quot;</span><span class='comma token'>,</span> <span class='xml_files identifier id'>xml_files</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='rparen token'>)</span>
+  
+  <span class='xml_files identifier id'>xml_files</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='xml_file identifier id'>xml_file</span><span class='bitor op'>|</span>
+    <span class='comment val'># xml_content = IO.readlines(xml_file).to_s</span>
+    <span class='xml_content identifier id'>xml_content</span> <span class='assign token'>=</span> <span class='preprocess_xml identifier id'>preprocess_xml</span><span class='lparen token'>(</span><span class='xml_file identifier id'>xml_file</span><span class='rparen token'>)</span>
+    
+    <span class='begin begin kw'>begin</span>
+      <span class='nonxml_content identifier id'>nonxml_content</span> <span class='assign token'>=</span> <span class='JRubyHelper constant id'>JRubyHelper</span><span class='colon2 op'>::</span><span class='XSugarStandalone constant id'>XSugarStandalone</span><span class='dot token'>.</span><span class='transform_request identifier id'>transform_request</span><span class='lparen token'>(</span>
+        <span class='STANDALONE_URL constant id'>STANDALONE_URL</span><span class='comma token'>,</span>
+        <span class='lbrace token'>{</span>
+          <span class='symbol val'>:content</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='xml_content identifier id'>xml_content</span><span class='comma token'>,</span>
+          <span class='symbol val'>:type</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='GRAMMAR_STRING constant id'>GRAMMAR_STRING</span><span class='comma token'>,</span>
+          <span class='symbol val'>:direction</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'xml2nonxml'</span>
+        <span class='rbrace token'>}</span>
+      <span class='rparen token'>)</span>
+      <span class='JRubyHelper constant id'>JRubyHelper</span><span class='colon2 op'>::</span><span class='XSugarStandalone constant id'>XSugarStandalone</span><span class='dot token'>.</span><span class='transform_request identifier id'>transform_request</span><span class='lparen token'>(</span>
+        <span class='STANDALONE_URL constant id'>STANDALONE_URL</span><span class='comma token'>,</span>
+        <span class='lbrace token'>{</span>
+          <span class='symbol val'>:content</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nonxml_content identifier id'>nonxml_content</span><span class='comma token'>,</span>
+          <span class='symbol val'>:type</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='GRAMMAR_STRING constant id'>GRAMMAR_STRING</span><span class='comma token'>,</span>
+          <span class='symbol val'>:direction</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'nonxml2xml'</span>
+        <span class='rbrace token'>}</span>
+      <span class='rparen token'>)</span>
+    <span class='rescue rescue kw'>rescue</span> <span class='XMLParseError constant id'>XMLParseError</span><span class='comma token'>,</span> <span class='NonXMLParseError constant id'>NonXMLParseError</span>
+    <span class='end end kw'>end</span>
+      
+    <span class='xml_files_bar identifier id'>xml_files_bar</span><span class='dot token'>.</span><span class='inc identifier id'>inc</span>
+  <span class='end end kw'>end</span>
+  <span class='xml_files_bar identifier id'>xml_files_bar</span><span class='dot token'>.</span><span class='finish identifier id'>finish</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="saxon_command-instance_method">
+  
+    - (<tt>Object</tt>) <strong>saxon_command</strong>(xsl) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/standalone/runner.rb', line 10</span>
+
+<span class='def def kw'>def</span> <span class='saxon_command identifier id'>saxon_command</span><span class='lparen token'>(</span><span class='xsl identifier id'>xsl</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='dstring node'>&quot;java -classpath #{SAXON_JAR} net.sf.saxon.Transform - #{xsl}&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Thu Jul 14 11:54:46 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.1 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
