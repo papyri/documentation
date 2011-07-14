@@ -104,6 +104,15 @@ Class BooleanFacet</H2>
 </PRE>
 
 <P>
+Extends the <code>Facet</code> class to deal specifically with Boolean fields.
+ 
+ This class reworks its superclass only very slightly. Because only two values are
+ possible, some code can be simplified. In addition, however, the 'false' value may
+ correspond to a number of values in relation to Solr - in particular, to null- 
+ and additional checks have been added to cope appropriately with these.
+<P>
+
+<P>
 <DL>
 <DT><B>Author:</B></DT>
   <DD>thill</DD>
@@ -144,7 +153,8 @@ Class BooleanFacet</H2>
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html#buildQueryContribution(org.apache.solr.client.solrj.SolrQuery)">buildQueryContribution</A></B>(org.apache.solr.client.solrj.SolrQuery&nbsp;solrQuery)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modifies the passed <code>SolrQuery</code> to reflect the constraints and 
+ faceting information required by the <code>Facet</code></TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -152,7 +162,7 @@ Class BooleanFacet</H2>
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)">setWidgetValues</A></B>(org.apache.solr.client.solrj.response.QueryResponse&nbsp;queryResponse)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the values to be displayed by the <code>Facet</code>'s HTML form control.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_info.papyri.dispatch.browse.facet.Facet"><!-- --></A>
@@ -210,11 +220,14 @@ setWidgetValues</H3>
 <PRE>
 public void <B>setWidgetValues</B>(org.apache.solr.client.solrj.response.QueryResponse&nbsp;queryResponse)</PRE>
 <DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)">Facet</A></CODE></B></DD>
+<DD>Sets the values to be displayed by the <code>Facet</code>'s HTML form control.
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)">setWidgetValues</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
 </DD>
 <DD><DL>
-</DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html#populateFacets(java.util.EnumMap, org.apache.solr.client.solrj.response.QueryResponse)"><CODE>FacetBrowser.populateFacets(java.util.EnumMap, org.apache.solr.client.solrj.response.QueryResponse)</CODE></A></DL>
 </DD>
 </DL>
 <HR>
@@ -224,11 +237,16 @@ buildQueryContribution</H3>
 <PRE>
 public org.apache.solr.client.solrj.SolrQuery <B>buildQueryContribution</B>(org.apache.solr.client.solrj.SolrQuery&nbsp;solrQuery)</PRE>
 <DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#buildQueryContribution(org.apache.solr.client.solrj.SolrQuery)">Facet</A></CODE></B></DD>
+<DD>Modifies the passed <code>SolrQuery</code> to reflect the constraints and 
+ faceting information required by the <code>Facet</code>
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#buildQueryContribution(org.apache.solr.client.solrj.SolrQuery)">buildQueryContribution</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
 </DD>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD>The passed solrQuery, modified<DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html#buildFacetQuery(int, java.util.EnumMap)"><CODE>FacetBrowser.buildFacetQuery(int, java.util.EnumMap)</CODE></A></DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->

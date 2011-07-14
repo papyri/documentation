@@ -101,7 +101,7 @@ Method in class info.papyri.dispatch.browse.<A HREF="./info/papyri/dispatch/brow
 <A NAME="_B_"><!-- --></A><H2>
 <B>B</B></H2>
 <DL>
-<DT><A HREF="./info/papyri/dispatch/browse/facet/BooleanFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>BooleanFacet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/browse/facet/BooleanFacet.html#BooleanFacet(info.papyri.dispatch.browse.SolrField, java.lang.String, java.lang.String)"><B>BooleanFacet(SolrField, String, String)</B></A> - 
+<DT><A HREF="./info/papyri/dispatch/browse/facet/BooleanFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>BooleanFacet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD>Extends the <code>Facet</code> class to deal specifically with Boolean fields.<DT><A HREF="./info/papyri/dispatch/browse/facet/BooleanFacet.html#BooleanFacet(info.papyri.dispatch.browse.SolrField, java.lang.String, java.lang.String)"><B>BooleanFacet(SolrField, String, String)</B></A> - 
 Constructor for class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/BooleanFacet.html" title="class in info.papyri.dispatch.browse.facet">BooleanFacet</A>
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/browse/BrowseRecord.html" title="class in info.papyri.dispatch.browse"><B>BrowseRecord</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/package-summary.html">info.papyri.dispatch.browse</A><DD><code>BrowseRecord</code>s store the salient characteristics of  documents retrieved from solr.<DT><A HREF="./info/papyri/dispatch/browse/BrowseRecord.html#BrowseRecord()"><B>BrowseRecord()</B></A> - 
@@ -112,6 +112,10 @@ Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatc
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/browse/facet/Facet.html#buildQueryContribution(org.apache.solr.client.solrj.SolrQuery)"><B>buildQueryContribution(SolrQuery)</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A>
+<DD>Modifies the passed <code>SolrQuery</code> to reflect the constraints and 
+ faceting information required by the <code>Facet</code>
+<DT><A HREF="./info/papyri/dispatch/browse/facet/HasTranscriptionFacet.html#buildQueryContribution(org.apache.solr.client.solrj.SolrQuery)"><B>buildQueryContribution(SolrQuery)</B></A> - 
+Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/HasTranscriptionFacet.html" title="class in info.papyri.dispatch.browse.facet">HasTranscriptionFacet</A>
 <DD>&nbsp;
 </DL>
 <HR>
@@ -227,13 +231,15 @@ Method in enum info.papyri.dispatch.<A HREF="./info/papyri/dispatch/LanguageCode
 <A NAME="_F_"><!-- --></A><H2>
 <B>F</B></H2>
 <DL>
-<DT><A HREF="./info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet"><B>Facet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/browse/facet/Facet.html#Facet(info.papyri.dispatch.browse.SolrField, java.lang.String, java.lang.String)"><B>Facet(SolrField, String, String)</B></A> - 
+<DT><A HREF="./info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet"><B>Facet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD>Handles all the necessary backend (Solr) and frontend (HTML) interactions needed
+ for selection of constraint values within a single facet.<DT><A HREF="./info/papyri/dispatch/browse/facet/Facet.html#Facet(info.papyri.dispatch.browse.SolrField, java.lang.String, java.lang.String)"><B>Facet(SolrField, String, String)</B></A> - 
 Constructor for class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A>
-<DD>&nbsp;
+<DD>Constructor
 <DT><A HREF="./info/papyri/dispatch/browse/facet/FacetBrowser.html" title="class in info.papyri.dispatch.browse.facet"><B>FacetBrowser</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/browse/facet/FacetBrowser.html#FacetBrowser()"><B>FacetBrowser()</B></A> - 
 Constructor for class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/FacetBrowser.html" title="class in info.papyri.dispatch.browse.facet">FacetBrowser</A>
 <DD>&nbsp;
-<DT><A HREF="./info/papyri/dispatch/browse/facet/FacetParam.html" title="enum in info.papyri.dispatch.browse.facet"><B>FacetParam</B></A> - Enum in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/browse/facet/FacetValue.html" title="class in info.papyri.dispatch.browse.facet"><B>FacetValue</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/browse/facet/FacetValue.html#FacetValue(java.lang.String, int)"><B>FacetValue(String, int)</B></A> - 
+<DT><A HREF="./info/papyri/dispatch/browse/facet/FacetParam.html" title="enum in info.papyri.dispatch.browse.facet"><B>FacetParam</B></A> - Enum in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD><code>Enum</code> of the <code>name</code>s used in relation to the various <code>
+ Facet</code>s in HTML form elements<DT><A HREF="./info/papyri/dispatch/browse/facet/FacetValue.html" title="class in info.papyri.dispatch.browse.facet"><B>FacetValue</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/browse/facet/FacetValue.html#FacetValue(java.lang.String, int)"><B>FacetValue(String, int)</B></A> - 
 Constructor for class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/FacetValue.html" title="class in info.papyri.dispatch.browse.facet">FacetValue</A>
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/browse/FieldNotFoundException.html" title="class in info.papyri.dispatch.browse"><B>FieldNotFoundException</B></A> - Exception in <A HREF="./info/papyri/dispatch/browse/package-summary.html">info.papyri.dispatch.browse</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/browse/FieldNotFoundException.html#FieldNotFoundException()"><B>FieldNotFoundException()</B></A> - 
@@ -256,9 +262,12 @@ Constructor for class info.papyri.dispatch.<A HREF="./info/papyri/dispatch/FileU
 <DL>
 <DT><A HREF="./info/papyri/dispatch/browse/facet/Facet.html#generateWidget()"><B>generateWidget()</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A>
-<DD>&nbsp;
+<DD>Generates the HTML form element used for input.
 <DT><A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html#generateWidget()"><B>generateWidget()</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html" title="class in info.papyri.dispatch.browse.facet">HasImagesFacet</A>
+<DD>&nbsp;
+<DT><A HREF="./info/papyri/dispatch/browse/facet/HasTranscriptionFacet.html#generateWidget()"><B>generateWidget()</B></A> - 
+Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/HasTranscriptionFacet.html" title="class in info.papyri.dispatch.browse.facet">HasTranscriptionFacet</A>
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/browse/facet/HasTranslationFacet.html#generateWidget()"><B>generateWidget()</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/HasTranslationFacet.html" title="class in info.papyri.dispatch.browse.facet">HasTranslationFacet</A>
@@ -271,10 +280,14 @@ Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatc
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/browse/facet/Facet.html#getAsFilteredQueryString(java.lang.String)"><B>getAsFilteredQueryString(String)</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A>
-<DD>&nbsp;
+<DD>Returns the <code>Facet</code>'s constraints as a query string, minus the 
+ value passed to the method,
+ 
+ Required for the anchor links that (from the user's perspective) 'remove' 
+ constraints from the faceted display.
 <DT><A HREF="./info/papyri/dispatch/browse/facet/Facet.html#getAsQueryString()"><B>getAsQueryString()</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A>
-<DD>&nbsp;
+<DD>Returns the <code>Facet</code>'s constraints as a query string.
 <DT><A HREF="./info/papyri/dispatch/browse/DocumentCollectionBrowseRecord.html#getCollection()"><B>getCollection()</B></A> - 
 Method in class info.papyri.dispatch.browse.<A HREF="./info/papyri/dispatch/browse/DocumentCollectionBrowseRecord.html" title="class in info.papyri.dispatch.browse">DocumentCollectionBrowseRecord</A>
 <DD>&nbsp;
@@ -292,7 +305,8 @@ Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatc
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/browse/facet/LanguageFacet.html#getDisplayValue(java.lang.String)"><B>getDisplayValue(String)</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/LanguageFacet.html" title="class in info.papyri.dispatch.browse.facet">LanguageFacet</A>
-<DD>&nbsp;
+<DD>Transforms the BCP 47 language tagged used for internal representation into 
+ a readily human-readable form
 <DT><A HREF="./info/papyri/dispatch/browse/FieldNotFoundException.html#getError()"><B>getError()</B></A> - 
 Method in exception info.papyri.dispatch.browse.<A HREF="./info/papyri/dispatch/browse/FieldNotFoundException.html" title="class in info.papyri.dispatch.browse">FieldNotFoundException</A>
 <DD>&nbsp;
@@ -379,13 +393,19 @@ Method in class info.papyri.dispatch.<A HREF="./info/papyri/dispatch/FileUtils.h
 <A NAME="_H_"><!-- --></A><H2>
 <B>H</B></H2>
 <DL>
-<DT><A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>HasImagesFacet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html#HasImagesFacet(java.lang.String)"><B>HasImagesFacet(String)</B></A> - 
+<DT><A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>HasImagesFacet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD><code>BooleanFacet</code> regarding whether or not images are associated with a 
+ record.<DT><A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html#HasImagesFacet(java.lang.String)"><B>HasImagesFacet(String)</B></A> - 
 Constructor for class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html" title="class in info.papyri.dispatch.browse.facet">HasImagesFacet</A>
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/DispatcherRequestWrapper.ParameterEnumeration.html#hasMoreElements()"><B>hasMoreElements()</B></A> - 
 Method in class info.papyri.dispatch.<A HREF="./info/papyri/dispatch/DispatcherRequestWrapper.ParameterEnumeration.html" title="class in info.papyri.dispatch">DispatcherRequestWrapper.ParameterEnumeration</A>
 <DD>&nbsp;
-<DT><A HREF="./info/papyri/dispatch/browse/facet/HasTranslationFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>HasTranslationFacet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/browse/facet/HasTranslationFacet.html#HasTranslationFacet(java.lang.String)"><B>HasTranslationFacet(String)</B></A> - 
+<DT><A HREF="./info/papyri/dispatch/browse/facet/HasTranscriptionFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>HasTranscriptionFacet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD><code>Facet</code> regarding whether or not a transcription is associated with a 
+ record.<DT><A HREF="./info/papyri/dispatch/browse/facet/HasTranscriptionFacet.html#HasTranscriptionFacet(java.lang.String)"><B>HasTranscriptionFacet(String)</B></A> - 
+Constructor for class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/HasTranscriptionFacet.html" title="class in info.papyri.dispatch.browse.facet">HasTranscriptionFacet</A>
+<DD>&nbsp;
+<DT><A HREF="./info/papyri/dispatch/browse/facet/HasTranslationFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>HasTranslationFacet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD><code>BooleanFacet</code> regarding whether or not a translation is associated with a 
+ record.<DT><A HREF="./info/papyri/dispatch/browse/facet/HasTranslationFacet.html#HasTranslationFacet(java.lang.String)"><B>HasTranslationFacet(String)</B></A> - 
 Constructor for class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/HasTranslationFacet.html" title="class in info.papyri.dispatch.browse.facet">HasTranslationFacet</A>
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/DispatcherServlet.html#hgv(java.lang.String)"><B>hgv(String)</B></A> - 
@@ -433,7 +453,7 @@ Method in class info.papyri.dispatch.<A HREF="./info/papyri/dispatch/Search.html
 <A NAME="_L_"><!-- --></A><H2>
 <B>L</B></H2>
 <DL>
-<DT><A HREF="./info/papyri/dispatch/LanguageCode.html" title="enum in info.papyri.dispatch"><B>LanguageCode</B></A> - Enum in <A HREF="./info/papyri/dispatch/package-summary.html">info.papyri.dispatch</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/browse/facet/LanguageFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>LanguageFacet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/browse/facet/LanguageFacet.html#LanguageFacet(java.lang.String)"><B>LanguageFacet(String)</B></A> - 
+<DT><A HREF="./info/papyri/dispatch/LanguageCode.html" title="enum in info.papyri.dispatch"><B>LanguageCode</B></A> - Enum in <A HREF="./info/papyri/dispatch/package-summary.html">info.papyri.dispatch</A><DD>Maps BCP 47 language tags to expanded values for display<DT><A HREF="./info/papyri/dispatch/browse/facet/LanguageFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>LanguageFacet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD><code>Facet</code> for selection by language<DT><A HREF="./info/papyri/dispatch/browse/facet/LanguageFacet.html#LanguageFacet(java.lang.String)"><B>LanguageFacet(String)</B></A> - 
 Constructor for class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/LanguageFacet.html" title="class in info.papyri.dispatch.browse.facet">LanguageFacet</A>
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/FileUtils.html#loadFile(java.io.File)"><B>loadFile(File)</B></A> - 
@@ -458,7 +478,7 @@ Method in class info.papyri.dispatch.<A HREF="./info/papyri/dispatch/DispatcherR
 <A NAME="_P_"><!-- --></A><H2>
 <B>P</B></H2>
 <DL>
-<DT><A HREF="./info/papyri/dispatch/browse/facet/PlaceFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>PlaceFacet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/browse/facet/PlaceFacet.html#PlaceFacet(java.lang.String)"><B>PlaceFacet(String)</B></A> - 
+<DT><A HREF="./info/papyri/dispatch/browse/facet/PlaceFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>PlaceFacet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD><code>Facet</code> for selection by provenance.<DT><A HREF="./info/papyri/dispatch/browse/facet/PlaceFacet.html#PlaceFacet(java.lang.String)"><B>PlaceFacet(String)</B></A> - 
 Constructor for class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/PlaceFacet.html" title="class in info.papyri.dispatch.browse.facet">PlaceFacet</A>
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/browse/CollectionBrowser.html#processRequest(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)"><B>processRequest(HttpServletRequest, HttpServletResponse)</B></A> - 
@@ -513,7 +533,11 @@ Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatc
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/browse/facet/Facet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)"><B>setWidgetValues(QueryResponse)</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A>
-<DD>&nbsp;
+<DD>Sets the values to be displayed by the <code>Facet</code>'s HTML form control.
+<DT><A HREF="./info/papyri/dispatch/browse/facet/HasTranscriptionFacet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)"><B>setWidgetValues(QueryResponse)</B></A> - 
+Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/HasTranscriptionFacet.html" title="class in info.papyri.dispatch.browse.facet">HasTranscriptionFacet</A>
+<DD>Maps returned facet values to Boolean values - presence of any value evaluating 
+ to <i>true</i>, and absence to <i>false</i> - and assigns these to <code>valuesAndCounts</code>
 <DT><A HREF="./info/papyri/dispatch/browse/SolrField.html" title="enum in info.papyri.dispatch.browse"><B>SolrField</B></A> - Enum in <A HREF="./info/papyri/dispatch/browse/package-summary.html">info.papyri.dispatch.browse</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/FileUtils.html#stripDiacriticals(java.lang.String)"><B>stripDiacriticals(String)</B></A> - 
 Static method in class info.papyri.dispatch.<A HREF="./info/papyri/dispatch/FileUtils.html" title="class in info.papyri.dispatch">FileUtils</A>
 <DD>Removes combining diacritical marks from the input string and returns

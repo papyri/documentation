@@ -273,7 +273,7 @@ numbers server.
     <span class="ruby-comment cmt"># File lib/numbers_rdf.rb, line 83</span>
 83:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">identifier_to_identifiers</span>(<span class="ruby-identifier">identifier</span>)
 84:         <span class="ruby-identifier">results</span> = <span class="ruby-identifier">apply_xpath_to_identifier</span>(
-85:           <span class="ruby-value str">&quot;/rdf:RDF/rdf:Description/ns1:relation/@rdf:resource&quot;</span>, <span class="ruby-identifier">identifier</span>)
+85:           <span class="ruby-value str">&quot;/rdf:RDF/rdf:Description/dcterms:relation/@rdf:resource&quot;</span>, <span class="ruby-identifier">identifier</span>)
 86:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">nil?</span>
 87:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
 88:         <span class="ruby-keyword kw">else</span>
@@ -350,7 +350,7 @@ numbers server.
      <span class="ruby-comment cmt"># File lib/numbers_rdf.rb, line 93</span>
  93:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">identifier_to_parts</span>(<span class="ruby-identifier">identifier</span>)
  94:         <span class="ruby-identifier">results</span> = <span class="ruby-identifier">apply_xpath_to_identifier</span>(
- 95:           <span class="ruby-value str">&quot;/rdf:RDF/rdf:Description/ns1:hasPart/@rdf:resource&quot;</span>, <span class="ruby-identifier">identifier</span>)
+ 95:           <span class="ruby-value str">&quot;/rdf:RDF/rdf:Description/dcterms:hasPart/@rdf:resource&quot;</span>, <span class="ruby-identifier">identifier</span>)
  96:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">nil?</span>
  97:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
  98:         <span class="ruby-keyword kw">else</span>
@@ -405,7 +405,7 @@ numbers server.
      <span class="ruby-comment cmt"># File lib/numbers_rdf.rb, line 116</span>
 116:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">identifier_to_title</span>(<span class="ruby-identifier">identifier</span>)
 117:         <span class="ruby-identifier">result</span> = <span class="ruby-identifier">apply_xpath_to_identifier</span>(
-118:           <span class="ruby-value str">&quot;/rdf:RDF/rdf:Description/ns1:bibliographicCitation/text()&quot;</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-value str">'frbr:Work/rdf'</span>
+118:           <span class="ruby-value str">&quot;/rdf:RDF/rdf:Description/dcterms:bibliographicCitation/text()&quot;</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-value str">'frbr:Work/rdf'</span>
 119:         )
 120:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-value">? </span><span class="ruby-keyword kw">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">first</span>
 121:       <span class="ruby-keyword kw">end</span>

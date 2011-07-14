@@ -89,11 +89,12 @@ Package info.papyri.dispatch.browse.facet
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html" title="class in info.papyri.dispatch.browse.facet">BooleanFacet</A></B></TD>
-<TD>&nbsp;</TD>
+<TD>Extends the <code>Facet</code> class to deal specifically with Boolean fields.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></B></TD>
-<TD>&nbsp;</TD>
+<TD>Handles all the necessary backend (Solr) and frontend (HTML) interactions needed
+ for selection of constraint values within a single facet.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html" title="class in info.papyri.dispatch.browse.facet">FacetBrowser</A></B></TD>
@@ -105,19 +106,26 @@ Package info.papyri.dispatch.browse.facet
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/HasImagesFacet.html" title="class in info.papyri.dispatch.browse.facet">HasImagesFacet</A></B></TD>
-<TD>&nbsp;</TD>
+<TD><code>BooleanFacet</code> regarding whether or not images are associated with a 
+ record.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/HasTranscriptionFacet.html" title="class in info.papyri.dispatch.browse.facet">HasTranscriptionFacet</A></B></TD>
+<TD><code>Facet</code> regarding whether or not a transcription is associated with a 
+ record.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/HasTranslationFacet.html" title="class in info.papyri.dispatch.browse.facet">HasTranslationFacet</A></B></TD>
-<TD>&nbsp;</TD>
+<TD><code>BooleanFacet</code> regarding whether or not a translation is associated with a 
+ record.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/LanguageFacet.html" title="class in info.papyri.dispatch.browse.facet">LanguageFacet</A></B></TD>
-<TD>&nbsp;</TD>
+<TD><code>Facet</code> for selection by language</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/PlaceFacet.html" title="class in info.papyri.dispatch.browse.facet">PlaceFacet</A></B></TD>
-<TD>&nbsp;</TD>
+<TD><code>Facet</code> for selection by provenance.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -131,7 +139,8 @@ Package info.papyri.dispatch.browse.facet
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetParam.html" title="enum in info.papyri.dispatch.browse.facet">FacetParam</A></B></TD>
-<TD>&nbsp;</TD>
+<TD><code>Enum</code> of the <code>name</code>s used in relation to the various <code>
+ Facet</code>s in HTML form elements</TD>
 </TR>
 </TABLE>
 &nbsp;

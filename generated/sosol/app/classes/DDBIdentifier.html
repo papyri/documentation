@@ -197,7 +197,7 @@
 42:         )
 43:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'200'</span>
 44:         <span class="ruby-ivar">@collection_names</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">collection_name</span><span class="ruby-operator">|</span>
-45:           <span class="ruby-identifier">xpath</span> = <span class="ruby-node">&quot;/rdf:RDF/rdf:Description[@rdf:about=\&quot;http://papyri.info/ddbdp/#{collection_name}\&quot;]/ns1:bibliographicCitation/text()&quot;</span>
+45:           <span class="ruby-identifier">xpath</span> = <span class="ruby-node">&quot;/rdf:RDF/rdf:Description[@rdf:about=\&quot;http://papyri.info/ddbdp/#{collection_name}\&quot;]/dcterms:bibliographicCitation/text()&quot;</span>
 46:           <span class="ruby-identifier">human_name</span> = 
 47:             <span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NumbersHelper</span>.<span class="ruby-identifier">process_numbers_server_response_body</span>(
 48:               <span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>, <span class="ruby-identifier">xpath</span>).<span class="ruby-identifier">first</span>
