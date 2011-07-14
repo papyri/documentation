@@ -15,6 +15,13 @@ repositories = {
       :working_directory => 'src/standalone',
       :target => 'standalone',
       :source => 'src/standalone/target/site/apidocs'
+    },
+    {
+      :description => 'RXSugar library documentation',
+      :command => 'rake doc',
+      :working_directory => '.',
+      :target => 'rxsugar',
+      :source => 'doc'
     }
   ],
   "navigator" => [{
