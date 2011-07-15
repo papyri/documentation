@@ -21,7 +21,7 @@ repositories = {
       :command => 'rake doc',
       :working_directory => '.',
       :target => 'rxsugar',
-      :source => 'doc'
+      :source => 'doc/html'
     }
   ],
   "navigator" => [{
