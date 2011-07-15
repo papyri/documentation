@@ -75,9 +75,9 @@ function windowTitle()
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#methods_inherited_from_class_info.papyri.dispatch.browse.facet.BooleanFacet">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;METHOD</FONT></TD>
 </TR>
 </TABLE>
 <A NAME="skip-navbar_top"></A>
@@ -139,14 +139,6 @@ Class HasTranslationFacet</H2>
 <TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
 <B>Method Summary</B></FONT></TH>
 </TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/HasTranslationFacet.html#generateWidget()">generateWidget</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generates the HTML form element used for input.</TD>
-</TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_info.papyri.dispatch.browse.facet.BooleanFacet"><!-- --></A>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
@@ -154,7 +146,7 @@ Class HasTranslationFacet</H2>
 <TH ALIGN="left"><B>Methods inherited from class info.papyri.dispatch.browse.facet.<A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html" title="class in info.papyri.dispatch.browse.facet">BooleanFacet</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html#buildQueryContribution(org.apache.solr.client.solrj.SolrQuery)">buildQueryContribution</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)">setWidgetValues</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html#buildQueryContribution(org.apache.solr.client.solrj.SolrQuery)">buildQueryContribution</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html#generateWidget()">generateWidget</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)">setWidgetValues</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_info.papyri.dispatch.browse.facet.Facet"><!-- --></A>
@@ -163,7 +155,7 @@ Class HasTranslationFacet</H2>
 <TH ALIGN="left"><B>Methods inherited from class info.papyri.dispatch.browse.facet.<A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#addConstraint(java.lang.String)">addConstraint</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getAsFilteredQueryString(java.lang.String)">getAsFilteredQueryString</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getAsQueryString()">getAsQueryString</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayName()">getDisplayName</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayValue(java.lang.String)">getDisplayValue</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFacetConstraints()">getFacetConstraints</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFacetField()">getFacetField</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#addConstraint(java.lang.String)">addConstraint</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getAsFilteredQueryString(java.lang.String)">getAsFilteredQueryString</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getAsQueryString(java.util.ArrayList)">getAsQueryString</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayName()">getDisplayName</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayValue(java.lang.String)">getDisplayValue</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFacetConstraints()">getFacetConstraints</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFacetField()">getFacetField</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -193,33 +185,6 @@ HasTranslationFacet</H3>
 <PRE>
 public <B>HasTranslationFacet</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;formName)</PRE>
 <DL>
-</DL>
-
-<!-- ============ METHOD DETAIL ========== -->
-
-<A NAME="method_detail"><!-- --></A>
-<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
-<B>Method Detail</B></FONT></TH>
-</TR>
-</TABLE>
-
-<A NAME="generateWidget()"><!-- --></A><H3>
-generateWidget</H3>
-<PRE>
-public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>generateWidget</B>()</PRE>
-<DL>
-<DD><B>Description copied from class: <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#generateWidget()">Facet</A></CODE></B></DD>
-<DD>Generates the HTML form element used for input.
-<P>
-<DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#generateWidget()">generateWidget</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
-</DD>
-<DD><DL>
-
-<DT><B>Returns:</B><DD>A string representation of the requisite HTML<DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html#assembleWidgetHTML(java.util.EnumMap, java.lang.StringBuffer)"><CODE>FacetBrowser.assembleWidgetHTML(java.util.EnumMap, java.lang.StringBuffer)</CODE></A></DL>
-</DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
 <HR>
@@ -273,9 +238,9 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#methods_inherited_from_class_info.papyri.dispatch.browse.facet.BooleanFacet">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;METHOD</FONT></TD>
 </TR>
 </TABLE>
 <A NAME="skip-navbar_bottom"></A>

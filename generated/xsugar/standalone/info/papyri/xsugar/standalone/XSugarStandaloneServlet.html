@@ -142,7 +142,7 @@ Class XSugarStandaloneServlet</H2>
       javax.servlet.http.HttpServletResponse&nbsp;response)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Handle a servlet GET request (serves an HTML form for making a POST request for a transform).</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -151,7 +151,7 @@ Class XSugarStandaloneServlet</H2>
        javax.servlet.http.HttpServletResponse&nbsp;response)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Handle a servlet POST request (serves JSON result of running XSugar transform).</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -159,7 +159,7 @@ Class XSugarStandaloneServlet</H2>
 <TD><CODE><B><A HREF="../../../../info/papyri/xsugar/standalone/XSugarStandaloneServlet.html#init(javax.servlet.ServletConfig)">init</A></B>(javax.servlet.ServletConfig&nbsp;config)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Servlet init, called upon first request.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_javax.servlet.http.HttpServlet"><!-- --></A>
@@ -225,6 +225,10 @@ init</H3>
 public void <B>init</B>(javax.servlet.ServletConfig&nbsp;config)
           throws javax.servlet.ServletException</PRE>
 <DL>
+<DD>Servlet init, called upon first request.
+
+ Initializes all known grammars.
+<P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE>init</CODE> in interface <CODE>javax.servlet.Servlet</CODE><DT><B>Overrides:</B><DD><CODE>init</CODE> in class <CODE>javax.servlet.GenericServlet</CODE></DL>
 </DD>
@@ -244,6 +248,8 @@ protected void <B>doGet</B>(javax.servlet.http.HttpServletRequest&nbsp;request,
               throws javax.servlet.ServletException,
                      <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
 <DL>
+<DD>Handle a servlet GET request (serves an HTML form for making a POST request for a transform).
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE>doGet</CODE> in class <CODE>javax.servlet.http.HttpServlet</CODE></DL>
 </DD>
@@ -264,6 +270,8 @@ protected void <B>doPost</B>(javax.servlet.http.HttpServletRequest&nbsp;request,
                throws javax.servlet.ServletException,
                       <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
 <DL>
+<DD>Handle a servlet POST request (serves JSON result of running XSugar transform).
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE>doPost</CODE> in class <CODE>javax.servlet.http.HttpServlet</CODE></DL>
 </DD>
