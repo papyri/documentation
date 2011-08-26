@@ -27,6 +27,10 @@ Running `rake jekyll:static` on the `gh-pages` branch will generate the static s
 which is the same as that served via GitHub Pages. This will generate a `_site`
 directory suitable for copying to other webservers.
 
+## System-Level Documentation
+
+{% include system_level_index.md %}
+
 ## Generated Documentation
 
 {% include generated_index.md %}
