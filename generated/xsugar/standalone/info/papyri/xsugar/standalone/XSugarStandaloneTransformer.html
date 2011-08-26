@@ -100,6 +100,10 @@ Class XSugarStandaloneTransformer</H2>
 </PRE>
 
 <P>
+Holds an instance of an XSugar transformer, with methods for performing transforms using it.
+<P>
+
+<P>
 <HR>
 
 <P>
@@ -113,16 +117,10 @@ Class XSugarStandaloneTransformer</H2>
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../info/papyri/xsugar/standalone/XSugarStandaloneTransformer.html#XSugarStandaloneTransformer()">XSugarStandaloneTransformer</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><CODE><B><A HREF="../../../../info/papyri/xsugar/standalone/XSugarStandaloneTransformer.html#XSugarStandaloneTransformer(java.lang.String)">XSugarStandaloneTransformer</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;grammar)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialize a transformer for a given XSugar grammar.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -137,20 +135,18 @@ Class XSugarStandaloneTransformer</H2>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../info/papyri/xsugar/standalone/XSugarStandaloneTransformer.html#nonXMLToXML(java.lang.String, java.lang.Integer)">nonXMLToXML</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;text,
-            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</A>&nbsp;counter)</CODE>
+<TD><CODE><B><A HREF="../../../../info/papyri/xsugar/standalone/XSugarStandaloneTransformer.html#nonXMLToXML(java.lang.String)">nonXMLToXML</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;text)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use this transformer to convert a non-XML string to XML.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../info/papyri/xsugar/standalone/XSugarStandaloneTransformer.html#XMLToNonXML(java.lang.String, java.lang.Integer)">XMLToNonXML</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;xml,
-            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</A>&nbsp;counter)</CODE>
+<TD><CODE><B><A HREF="../../../../info/papyri/xsugar/standalone/XSugarStandaloneTransformer.html#XMLToNonXML(java.lang.String)">XMLToNonXML</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;xml)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use this transformer to convert an XML string to its non-XML representation.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -175,14 +171,6 @@ Class XSugarStandaloneTransformer</H2>
 </TR>
 </TABLE>
 
-<A NAME="XSugarStandaloneTransformer()"><!-- --></A><H3>
-XSugarStandaloneTransformer</H3>
-<PRE>
-public <B>XSugarStandaloneTransformer</B>()</PRE>
-<DL>
-</DL>
-<HR>
-
 <A NAME="XSugarStandaloneTransformer(java.lang.String)"><!-- --></A><H3>
 XSugarStandaloneTransformer</H3>
 <PRE>
@@ -195,6 +183,8 @@ public <B>XSugarStandaloneTransformer</B>(<A HREF="http://download.oracle.com/ja
                                    <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalAccessException.html?is-external=true" title="class or interface in java.lang">IllegalAccessException</A>,
                                    <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</A></PRE>
 <DL>
+<DD>Initialize a transformer for a given XSugar grammar.
+<P>
 <DL>
 
 <DT><B>Throws:</B>
@@ -216,13 +206,14 @@ public <B>XSugarStandaloneTransformer</B>(<A HREF="http://download.oracle.com/ja
 </TR>
 </TABLE>
 
-<A NAME="nonXMLToXML(java.lang.String, java.lang.Integer)"><!-- --></A><H3>
+<A NAME="nonXMLToXML(java.lang.String)"><!-- --></A><H3>
 nonXMLToXML</H3>
 <PRE>
-public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>nonXMLToXML</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;text,
-                          <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</A>&nbsp;counter)
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>nonXMLToXML</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;text)
                    throws dk.brics.grammar.parser.ParseException</PRE>
 <DL>
+<DD>Use this transformer to convert a non-XML string to XML.
+<P>
 <DD><DL>
 
 <DT><B>Throws:</B>
@@ -231,15 +222,16 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 </DL>
 <HR>
 
-<A NAME="XMLToNonXML(java.lang.String, java.lang.Integer)"><!-- --></A><H3>
+<A NAME="XMLToNonXML(java.lang.String)"><!-- --></A><H3>
 XMLToNonXML</H3>
 <PRE>
-public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>XMLToNonXML</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;xml,
-                          <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</A>&nbsp;counter)
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>XMLToNonXML</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;xml)
                    throws org.jdom.JDOMException,
                           dk.brics.grammar.parser.ParseException,
                           <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></PRE>
 <DL>
+<DD>Use this transformer to convert an XML string to its non-XML representation.
+<P>
 <DD><DL>
 
 <DT><B>Throws:</B>

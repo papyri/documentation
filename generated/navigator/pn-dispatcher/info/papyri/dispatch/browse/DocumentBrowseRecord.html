@@ -104,7 +104,8 @@ Class DocumentBrowseRecord</H2>
 </PRE>
 
 <P>
-Stores and displays
+The <code>DocumentBrowseRecord</code> class stores summary information regarding
+ documents retrieved during browsing or search.
 <P>
 
 <P>
@@ -125,26 +126,14 @@ Stores and displays
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../info/papyri/dispatch/browse/DocumentBrowseRecord.html#DocumentBrowseRecord(info.papyri.dispatch.browse.DocumentCollectionBrowseRecord, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.Boolean)">DocumentBrowseRecord</A></B>(<A HREF="../../../../info/papyri/dispatch/browse/DocumentCollectionBrowseRecord.html" title="class in info.papyri.dispatch.browse">DocumentCollectionBrowseRecord</A>&nbsp;dgr,
-                     <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;itemId,
+<TD><CODE><B><A HREF="../../../../info/papyri/dispatch/browse/DocumentBrowseRecord.html#DocumentBrowseRecord(java.lang.String, java.util.ArrayList, java.net.URL, java.lang.String, java.lang.String, java.lang.String, java.util.ArrayList, java.lang.String)">DocumentBrowseRecord</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;prefId,
+                     <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;ids,
+                     <A HREF="http://download.oracle.com/javase/6/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</A>&nbsp;url,
                      <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;place,
                      <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;date,
                      <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;lang,
-                     <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</A>&nbsp;hasImg,
-                     <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</A>&nbsp;hasTrans)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../info/papyri/dispatch/browse/DocumentBrowseRecord.html#DocumentBrowseRecord(info.papyri.dispatch.browse.DocumentCollectionBrowseRecord, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.Boolean, java.lang.String)">DocumentBrowseRecord</A></B>(<A HREF="../../../../info/papyri/dispatch/browse/DocumentCollectionBrowseRecord.html" title="class in info.papyri.dispatch.browse">DocumentCollectionBrowseRecord</A>&nbsp;dgr,
-                     <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;itemId,
-                     <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;place,
-                     <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;date,
-                     <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;lang,
-                     <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</A>&nbsp;hasImg,
-                     <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</A>&nbsp;hasTrans,
-                     <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;hgv)</CODE>
+                     <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;imgPaths,
+                     <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;trans)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -161,19 +150,15 @@ Stores and displays
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../info/papyri/dispatch/browse/DocumentBrowseRecord.html#assembleLink()">assembleLink</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the relative path to be associated with the Record</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;int</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../info/papyri/dispatch/browse/DocumentBrowseRecord.html#compareTo(java.lang.Object)">compareTo</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;o)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Allows sorting so that it occurs (in order of priority)
+ 
+ (1) DDbDP before HGV, HGV before APIS
+ (2) Numeric by id
+ (3) Alphabetic by letters occurring after the numeric portion</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -189,7 +174,7 @@ Stores and displays
 <TD><CODE><B><A HREF="../../../../info/papyri/dispatch/browse/DocumentBrowseRecord.html#getHTML()">getHTML</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an html representation of the Record</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an html representation of the Record.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -214,31 +199,17 @@ Stores and displays
 </TR>
 </TABLE>
 
-<A NAME="DocumentBrowseRecord(info.papyri.dispatch.browse.DocumentCollectionBrowseRecord, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.Boolean, java.lang.String)"><!-- --></A><H3>
+<A NAME="DocumentBrowseRecord(java.lang.String, java.util.ArrayList, java.net.URL, java.lang.String, java.lang.String, java.lang.String, java.util.ArrayList, java.lang.String)"><!-- --></A><H3>
 DocumentBrowseRecord</H3>
 <PRE>
-public <B>DocumentBrowseRecord</B>(<A HREF="../../../../info/papyri/dispatch/browse/DocumentCollectionBrowseRecord.html" title="class in info.papyri.dispatch.browse">DocumentCollectionBrowseRecord</A>&nbsp;dgr,
-                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;itemId,
+public <B>DocumentBrowseRecord</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;prefId,
+                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;ids,
+                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</A>&nbsp;url,
                             <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;place,
                             <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;date,
                             <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;lang,
-                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</A>&nbsp;hasImg,
-                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</A>&nbsp;hasTrans,
-                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;hgv)</PRE>
-<DL>
-</DL>
-<HR>
-
-<A NAME="DocumentBrowseRecord(info.papyri.dispatch.browse.DocumentCollectionBrowseRecord, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.Boolean, java.lang.Boolean)"><!-- --></A><H3>
-DocumentBrowseRecord</H3>
-<PRE>
-public <B>DocumentBrowseRecord</B>(<A HREF="../../../../info/papyri/dispatch/browse/DocumentCollectionBrowseRecord.html" title="class in info.papyri.dispatch.browse">DocumentCollectionBrowseRecord</A>&nbsp;dgr,
-                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;itemId,
-                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;place,
-                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;date,
-                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;lang,
-                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</A>&nbsp;hasImg,
-                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</A>&nbsp;hasTrans)</PRE>
+                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;&nbsp;imgPaths,
+                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;trans)</PRE>
 <DL>
 </DL>
 
@@ -258,7 +229,10 @@ getHTML</H3>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getHTML</B>()</PRE>
 <DL>
 <DD><B>Description copied from class: <CODE><A HREF="../../../../info/papyri/dispatch/browse/BrowseRecord.html#getHTML()">BrowseRecord</A></CODE></B></DD>
-<DD>Returns an html representation of the Record
+<DD>Returns an html representation of the Record.
+ 
+ This method is required so that large groups of records can be iterated over 
+ and displayed automatically.
 <P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE><A HREF="../../../../info/papyri/dispatch/browse/BrowseRecord.html#getHTML()">getHTML</A></CODE> in class <CODE><A HREF="../../../../info/papyri/dispatch/browse/BrowseRecord.html" title="class in info.papyri.dispatch.browse">BrowseRecord</A></CODE></DL>
@@ -266,24 +240,6 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 <DD><DL>
 
 <DT><B>Returns:</B><DD>a string of html</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="assembleLink()"><!-- --></A><H3>
-assembleLink</H3>
-<PRE>
-public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>assembleLink</B>()</PRE>
-<DL>
-<DD><B>Description copied from class: <CODE><A HREF="../../../../info/papyri/dispatch/browse/BrowseRecord.html#assembleLink()">BrowseRecord</A></CODE></B></DD>
-<DD>Returns the relative path to be associated with the Record
-<P>
-<DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../info/papyri/dispatch/browse/BrowseRecord.html#assembleLink()">assembleLink</A></CODE> in class <CODE><A HREF="../../../../info/papyri/dispatch/browse/BrowseRecord.html" title="class in info.papyri.dispatch.browse">BrowseRecord</A></CODE></DL>
-</DD>
-<DD><DL>
-
-<DT><B>Returns:</B><DD>the relative path as a String</DL>
 </DD>
 </DL>
 <HR>
@@ -307,11 +263,18 @@ compareTo</H3>
 <PRE>
 public int <B>compareTo</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</A>&nbsp;o)</PRE>
 <DL>
+<DD>Allows sorting so that it occurs (in order of priority)
+ 
+ (1) DDbDP before HGV, HGV before APIS
+ (2) Numeric by id
+ (3) Alphabetic by letters occurring after the numeric portion
+<P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Comparable.html?is-external=true#compareTo(T)" title="class or interface in java.lang">compareTo</A></CODE> in interface <CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Comparable.html?is-external=true" title="class or interface in java.lang">Comparable</A></CODE></DL>
 </DD>
 <DD><DL>
-</DL>
+<DT><B>Parameters:</B><DD><CODE>o</CODE> - 
+<DT><B>Returns:</B><DD></DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->

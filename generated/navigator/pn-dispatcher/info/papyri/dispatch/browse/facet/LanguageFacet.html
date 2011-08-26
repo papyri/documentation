@@ -54,7 +54,7 @@ function windowTitle()
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../../info/papyri/dispatch/browse/facet/HasTranslationFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../info/papyri/dispatch/browse/facet/HasTranscriptionFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>PREV CLASS</B></A>&nbsp;
 &nbsp;<A HREF="../../../../../info/papyri/dispatch/browse/facet/PlaceFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?info/papyri/dispatch/browse/facet/LanguageFacet.html" target="_top"><B>FRAMES</B></A>  &nbsp;
@@ -122,7 +122,7 @@ Class LanguageFacet</H2>
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/LanguageFacet.html#LanguageFacet(java.lang.String)">LanguageFacet</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;formName)</CODE>
+<TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/LanguageFacet.html#LanguageFacet()">LanguageFacet</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -146,6 +146,14 @@ Class LanguageFacet</H2>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transforms the BCP 47 language tagged used for internal representation into 
  a readily human-readable form</TD>
 </TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/LanguageFacet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)">setWidgetValues</A></B>(org.apache.solr.client.solrj.response.QueryResponse&nbsp;queryResponse)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the values to be displayed by the <code>Facet</code>'s HTML form control.</TD>
+</TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_info.papyri.dispatch.browse.facet.Facet"><!-- --></A>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
@@ -153,7 +161,7 @@ Class LanguageFacet</H2>
 <TH ALIGN="left"><B>Methods inherited from class info.papyri.dispatch.browse.facet.<A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#addConstraint(java.lang.String)">addConstraint</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#buildQueryContribution(org.apache.solr.client.solrj.SolrQuery)">buildQueryContribution</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#generateWidget()">generateWidget</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getAsFilteredQueryString(java.lang.String)">getAsFilteredQueryString</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getAsQueryString(java.util.ArrayList)">getAsQueryString</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayName()">getDisplayName</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFacetConstraints()">getFacetConstraints</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFacetField()">getFacetField</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)">setWidgetValues</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#addConstraints(java.util.Map)">addConstraints</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#buildQueryContribution(org.apache.solr.client.solrj.SolrQuery)">buildQueryContribution</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#generateWidget()">generateWidget</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getAsFilteredQueryString(java.lang.String, java.lang.String)">getAsFilteredQueryString</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getAsQueryString()">getAsQueryString</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayName(java.lang.String)">getDisplayName</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFacetConstraints(java.lang.String)">getFacetConstraints</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFacetField()">getFacetField</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFormNames()">getFormNames</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -178,10 +186,10 @@ Class LanguageFacet</H2>
 </TR>
 </TABLE>
 
-<A NAME="LanguageFacet(java.lang.String)"><!-- --></A><H3>
+<A NAME="LanguageFacet()"><!-- --></A><H3>
 LanguageFacet</H3>
 <PRE>
-public <B>LanguageFacet</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;formName)</PRE>
+public <B>LanguageFacet</B>()</PRE>
 <DL>
 </DL>
 
@@ -209,6 +217,23 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>languageCode</CODE> - 
 <DT><B>Returns:</B><DD><DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/LanguageCode.html" title="enum in info.papyri.dispatch"><CODE>LanguageCode</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)"><!-- --></A><H3>
+setWidgetValues</H3>
+<PRE>
+public void <B>setWidgetValues</B>(org.apache.solr.client.solrj.response.QueryResponse&nbsp;queryResponse)</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)">Facet</A></CODE></B></DD>
+<DD>Sets the values to be displayed by the <code>Facet</code>'s HTML form control.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)">setWidgetValues</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html#populateFacets(java.util.ArrayList, org.apache.solr.client.solrj.response.QueryResponse)"><CODE>FacetBrowser.populateFacets(java.util.ArrayList, org.apache.solr.client.solrj.response.QueryResponse)</CODE></A></DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
@@ -242,7 +267,7 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../../info/papyri/dispatch/browse/facet/HasTranslationFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../info/papyri/dispatch/browse/facet/HasTranscriptionFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>PREV CLASS</B></A>&nbsp;
 &nbsp;<A HREF="../../../../../info/papyri/dispatch/browse/facet/PlaceFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?info/papyri/dispatch/browse/facet/LanguageFacet.html" target="_top"><B>FRAMES</B></A>  &nbsp;

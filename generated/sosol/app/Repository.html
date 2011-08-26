@@ -1,0 +1,1349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Class: Repository</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./app/models/repository_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="app/models/repository.rb">app/models/repository.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-increase_timeout">::increase_timeout</a></li>
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-add_alternates">#add_alternates</a></li>
+          
+          <li><a href="#method-i-add_remote">#add_remote</a></li>
+          
+          <li><a href="#method-i-branches">#branches</a></li>
+          
+          <li><a href="#method-i-commit_content">#commit_content</a></li>
+          
+          <li><a href="#method-i-copy_branch_from_repo">#copy_branch_from_repo</a></li>
+          
+          <li><a href="#method-i-create">#create</a></li>
+          
+          <li><a href="#method-i-create_branch">#create_branch</a></li>
+          
+          <li><a href="#method-i-del_alternates">#del_alternates</a></li>
+          
+          <li><a href="#method-i-delete_branch">#delete_branch</a></li>
+          
+          <li><a href="#method-i-destroy">#destroy</a></li>
+          
+          <li><a href="#method-i-exists-3F">#exists?</a></li>
+          
+          <li><a href="#method-i-fetch_objects">#fetch_objects</a></li>
+          
+          <li><a href="#method-i-get_all_files_from_path_on_branch">#get_all_files_from_path_on_branch</a></li>
+          
+          <li><a href="#method-i-get_blob_data">#get_blob_data</a></li>
+          
+          <li><a href="#method-i-get_blob_from_branch">#get_blob_from_branch</a></li>
+          
+          <li><a href="#method-i-get_file_from_branch">#get_file_from_branch</a></li>
+          
+          <li><a href="#method-i-get_log_for_file_from_branch">#get_log_for_file_from_branch</a></li>
+          
+          <li><a href="#method-i-name">#name</a></li>
+          
+          <li><a href="#method-i-owner">#owner</a></li>
+          
+          <li><a href="#method-i-recurse_git_tree">#recurse_git_tree</a></li>
+          
+          <li><a href="#method-i-rename_file">#rename_file</a></li>
+          
+          <li><a href="#method-i-update_master_from_canonical">#update_master_from_canonical</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Papyrillio.html">Papyrillio</a></li>
+        
+          <li><a href="./Papyrillio/Aggregator.html">Papyrillio::Aggregator</a></li>
+        
+          <li><a href="./Papyrillio/Collector.html">Papyrillio::Collector</a></li>
+        
+          <li><a href="./Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a></li>
+        
+          <li><a href="./Papyrillio/Decorator.html">Papyrillio::Decorator</a></li>
+        
+          <li><a href="./Papyrillio/Organiser.html">Papyrillio::Organiser</a></li>
+        
+          <li><a href="./Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a></li>
+        
+          <li><a href="./Papyrillio/Printer.html">Papyrillio::Printer</a></li>
+        
+          <li><a href="./Papyrillio/Publishee.html">Papyrillio::Publishee</a></li>
+        
+          <li><a href="./Papyrillio/Publisher.html">Papyrillio::Publisher</a></li>
+        
+          <li><a href="./Papyrillio/Transformer.html">Papyrillio::Transformer</a></li>
+        
+          <li><a href="./JRubyXML.html">JRubyXML</a></li>
+        
+          <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a></li>
+        
+          <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a></li>
+        
+          <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a></li>
+        
+          <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a></li>
+        
+          <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a></li>
+        
+          <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a></li>
+        
+          <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a></li>
+        
+          <li><a href="./REXML.html">REXML</a></li>
+        
+          <li><a href="./REXML/Document.html">REXML::Document</a></li>
+        
+          <li><a href="./REXML/Element.html">REXML::Element</a></li>
+        
+          <li><a href="./REXML/XPath.html">REXML::XPath</a></li>
+        
+          <li><a href="./Rpx.html">Rpx</a></li>
+        
+          <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a></li>
+        
+          <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a></li>
+        
+          <li><a href="./Comment.html">Comment</a></li>
+        
+          <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a></li>
+        
+          <li><a href="./Doco.html">Doco</a></li>
+        
+          <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a></li>
+        
+          <li><a href="./Grit.html">Grit</a></li>
+        
+          <li><a href="./Grit/Commit.html">Grit::Commit</a></li>
+        
+          <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a></li>
+        
+          <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
+        
+          <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a></li>
+        
+          <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a></li>
+        
+          <li><a href="./NumbersRDF.html">NumbersRDF</a></li>
+        
+          <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a></li>
+        
+          <li><a href="./AjaxProxyController.html">AjaxProxyController</a></li>
+        
+          <li><a href="./ApplicationController.html">ApplicationController</a></li>
+        
+          <li><a href="./ApplicationHelper.html">ApplicationHelper</a></li>
+        
+          <li><a href="./Board.html">Board</a></li>
+        
+          <li><a href="./BoardsController.html">BoardsController</a></li>
+        
+          <li><a href="./CommentsController.html">CommentsController</a></li>
+        
+          <li><a href="./DDBIdentifier.html">DDBIdentifier</a></li>
+        
+          <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a></li>
+        
+          <li><a href="./Decree.html">Decree</a></li>
+        
+          <li><a href="./DecreesController.html">DecreesController</a></li>
+        
+          <li><a href="./DocosController.html">DocosController</a></li>
+        
+          <li><a href="./DocovideosController.html">DocovideosController</a></li>
+        
+          <li><a href="./Emailer.html">Emailer</a></li>
+        
+          <li><a href="./EmailerMailer.html">EmailerMailer</a></li>
+        
+          <li><a href="./EmailersController.html">EmailersController</a></li>
+        
+          <li><a href="./Event.html">Event</a></li>
+        
+          <li><a href="./EventsController.html">EventsController</a></li>
+        
+          <li><a href="./GitConf.html">GitConf</a></li>
+        
+          <li><a href="./HGVBiblioIdentifier.html">HGVBiblioIdentifier</a></li>
+        
+          <li><a href="./HGVIdentifier.html">HGVIdentifier</a></li>
+        
+          <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a></li>
+        
+          <li><a href="./HelperController.html">HelperController</a></li>
+        
+          <li><a href="./HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a></li>
+        
+          <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></li>
+        
+          <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a></li>
+        
+          <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a></li>
+        
+          <li><a href="./Identifier.html">Identifier</a></li>
+        
+          <li><a href="./IdentifiersController.html">IdentifiersController</a></li>
+        
+          <li><a href="./Integer.html">Integer</a></li>
+        
+          <li><a href="./Leiden.html">Leiden</a></li>
+        
+          <li><a href="./LeidenController.html">LeidenController</a></li>
+        
+          <li><a href="./LinkingInfo.html">LinkingInfo</a></li>
+        
+          <li><a href="./MaintenanceMode.html">MaintenanceMode</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./Publication.html">Publication</a></li>
+        
+          <li><a href="./PublicationsController.html">PublicationsController</a></li>
+        
+          <li><a href="./Rails.html">Rails</a></li>
+        
+          <li><a href="./RepositoriesController.html">RepositoriesController</a></li>
+        
+          <li><a href="./Repository.html">Repository</a></li>
+        
+          <li><a href="./RpxController.html">RpxController</a></li>
+        
+          <li><a href="./TranslationHelperController.html">TranslationHelperController</a></li>
+        
+          <li><a href="./TranslationLeiden.html">TranslationLeiden</a></li>
+        
+          <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a></li>
+        
+          <li><a href="./User.html">User</a></li>
+        
+          <li><a href="./UserController.html">UserController</a></li>
+        
+          <li><a href="./UserIdentifier.html">UserIdentifier</a></li>
+        
+          <li><a href="./Vote.html">Vote</a></li>
+        
+          <li><a href="./VotesController.html">VotesController</a></li>
+        
+          <li><a href="./WelcomeController.html">WelcomeController</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Repository</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="master-attribute-method" class="method-detail">
+          <a name="master"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">master</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="path-attribute-method" class="method-detail">
+          <a name="path"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">path</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="repo-attribute-method" class="method-detail">
+          <a name="repo"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">repo</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="increase_timeout-method" class="method-detail ">
+          <a name="method-c-increase_timeout"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">increase_timeout</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="increase_timeout-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">increase_timeout</span>
+  <span class="ruby-constant">Grit</span><span class="ruby-operator">::</span><span class="ruby-constant">Git</span>.<span class="ruby-identifier">git_timeout</span> <span class="ruby-operator">*=</span> <span class="ruby-value">2</span>
+  <span class="ruby-constant">RAILS_DEFAULT_LOGGER</span>.<span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Git timed out, increasing timeout to #{Grit::Git.git_timeout}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- increase_timeout-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- increase_timeout-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(master = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Allow <a href="Repository.html">Repository</a> instances to be created
+outside <a href="User.html">User</a> context. These instances will only
+work with the canonical repo.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">master</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@master</span> = <span class="ruby-identifier">master</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">master</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-ivar">@path</span> = <span class="ruby-constant">CANONICAL_REPOSITORY</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@master_class_path</span> = <span class="ruby-ivar">@master</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">underscore</span>.<span class="ruby-identifier">pluralize</span>
+    <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">REPOSITORY_ROOT</span>, <span class="ruby-ivar">@master_class_path</span>))
+    <span class="ruby-ivar">@path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">REPOSITORY_ROOT</span>,
+                      <span class="ruby-ivar">@master_class_path</span>, <span class="ruby-node">&quot;#{master.name}.git&quot;</span>)
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-ivar">@canonical</span> = <span class="ruby-constant">Grit</span><span class="ruby-operator">::</span><span class="ruby-constant">Repo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">CANONICAL_REPOSITORY</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">master</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">path</span>)
+    <span class="ruby-ivar">@repo</span> = <span class="ruby-constant">Grit</span><span class="ruby-operator">::</span><span class="ruby-constant">Repo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@repo</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="add_alternates-method" class="method-detail ">
+          <a name="method-i-add_alternates"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add_alternates</span><span
+              class="method-args">(other_repo)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="add_alternates-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 176</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_alternates</span>(<span class="ruby-identifier">other_repo</span>)
+  <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">alternates</span> = <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">alternates</span>() <span class="ruby-operator">|</span> [ <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">other_repo</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;objects&quot;</span>) ]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add_alternates-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add_alternates-method -->
+
+      
+        <div id="add_remote-method" class="method-detail ">
+          <a name="method-i-add_remote"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">add_remote</span><span
+              class="method-args">(other_repo)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="add_remote-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 156</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_remote</span>(<span class="ruby-identifier">other_repo</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">remote_list</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">other_repo</span>.<span class="ruby-identifier">name</span>)
+    <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">remote_add</span>(<span class="ruby-identifier">other_repo</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">other_repo</span>.<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- add_remote-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- add_remote-method -->
+
+      
+        <div id="branches-method" class="method-detail ">
+          <a name="method-i-branches"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">branches</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="branches-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 184</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">branches</span>
+  <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">branches</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">name</span>}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- branches-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- branches-method -->
+
+      
+        <div id="commit_content-method" class="method-detail ">
+          <a name="method-i-commit_content"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">commit_content</span><span
+              class="method-args">(file, branch, data, comment, actor = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns a String of the SHA1 of the commit</p>
+            
+
+            
+            <div class="method-source-code" id="commit_content-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">commit_content</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">branch</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">comment</span>, <span class="ruby-identifier">actor</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@path</span> <span class="ruby-operator">==</span> <span class="ruby-constant">CANONICAL_REPOSITORY</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Cannot commit directly to canonical repository&quot;</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">index</span> = <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-identifier">index</span>.<span class="ruby-identifier">read_tree</span>(<span class="ruby-identifier">branch</span>)
+  <span class="ruby-identifier">index</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">data</span>)
+  <span class="ruby-identifier">index</span>.<span class="ruby-identifier">commit</span>(<span class="ruby-identifier">comment</span>,
+               <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">commits</span>(<span class="ruby-identifier">branch</span>,<span class="ruby-value">1</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-comment"># commit parent</span>
+               <span class="ruby-identifier">actor</span>,
+               <span class="ruby-keyword">nil</span>,
+               <span class="ruby-identifier">branch</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- commit_content-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- commit_content-method -->
+
+      
+        <div id="copy_branch_from_repo-method" class="method-detail ">
+          <a name="method-i-copy_branch_from_repo"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">copy_branch_from_repo</span><span
+              class="method-args">(branch, new_branch, other_repo)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>(from_branch, to_branch, from_repo)</p>
+            
+
+            
+            <div class="method-source-code" id="copy_branch_from_repo-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">copy_branch_from_repo</span>(<span class="ruby-identifier">branch</span>, <span class="ruby-identifier">new_branch</span>, <span class="ruby-identifier">other_repo</span>)
+  <span class="ruby-comment"># Lightweight (but have to watch out for side-effects of repo deletion):</span>
+  <span class="ruby-comment"># self.add_alternates(other_repo)</span>
+  <span class="ruby-comment"># Heavyweight (missing objects are actually copied):</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">fetch_objects</span>(<span class="ruby-identifier">other_repo</span>)
+  
+  <span class="ruby-identifier">head_ref</span> = <span class="ruby-identifier">other_repo</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">get_head</span>(<span class="ruby-identifier">branch</span>).<span class="ruby-identifier">commit</span>.<span class="ruby-identifier">sha</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">create_branch</span>(<span class="ruby-identifier">new_branch</span>, <span class="ruby-identifier">head_ref</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- copy_branch_from_repo-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- copy_branch_from_repo-method -->
+
+      
+        <div id="create-method" class="method-detail ">
+          <a name="method-i-create"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="create-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+  <span class="ruby-comment"># master.update_attribute :has_repository, true</span>
+  <span class="ruby-comment"># create a git repository</span>
+  <span class="ruby-ivar">@repo</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@canonical</span>.<span class="ruby-identifier">fork_bare</span>(<span class="ruby-identifier">path</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create-method -->
+
+      
+        <div id="create_branch-method" class="method-detail ">
+          <a name="method-i-create_branch"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create_branch</span><span
+              class="method-args">(name, source_name = 'master')</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="create_branch-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_branch</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">source_name</span> = <span class="ruby-string">'master'</span>)
+  <span class="ruby-comment"># We always assume we want to branch from master by default</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">source_name</span> <span class="ruby-operator">==</span> <span class="ruby-string">'master'</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">update_master_from_canonical</span>
+    <span class="ruby-identifier">source_name</span> = <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">get_head</span>(<span class="ruby-identifier">source_name</span>).<span class="ruby-identifier">commit</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">update_ref</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">source_name</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create_branch-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create_branch-method -->
+
+      
+        <div id="del_alternates-method" class="method-detail ">
+          <a name="method-i-del_alternates"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">del_alternates</span><span
+              class="method-args">(other_repo)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="del_alternates-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">del_alternates</span>(<span class="ruby-identifier">other_repo</span>)
+  <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">alternates</span> = <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">alternates</span>() <span class="ruby-operator">-</span> [ <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">other_repo</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;objects&quot;</span>) ]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- del_alternates-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- del_alternates-method -->
+
+      
+        <div id="delete_branch-method" class="method-detail ">
+          <a name="method-i-delete_branch"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">delete_branch</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="delete_branch-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_branch</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">git</span>.<span class="ruby-identifier">fs_delete</span>(<span class="ruby-node">&quot;refs/heads/#{name}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- delete_branch-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- delete_branch-method -->
+
+      
+        <div id="destroy-method" class="method-detail ">
+          <a name="method-i-destroy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">destroy</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="destroy-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
+  <span class="ruby-comment"># master.update_attribute :has_repository, false</span>
+  <span class="ruby-comment"># destroy a git repository</span>
+  
+  <span class="ruby-comment"># BEFORE DELETION: REPACK CANONICAL</span>
+  <span class="ruby-comment"># This will pull in all objects regardless of alternates/shared status.</span>
+  <span class="ruby-comment"># If you delete an alternates-referenced repository without repacking,</span>
+  <span class="ruby-comment"># referenced objects will disappear, possibly making the repo unusable.</span>
+  <span class="ruby-ivar">@canonical</span>.<span class="ruby-identifier">git</span>.<span class="ruby-identifier">repack</span>({})
+  
+  <span class="ruby-identifier">canon</span> = <span class="ruby-constant">Repository</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">canon</span>.<span class="ruby-identifier">del_alternates</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-constant">FileUtils</span><span class="ruby-operator">::</span><span class="ruby-identifier">rm_r</span> <span class="ruby-identifier">path</span>, <span class="ruby-value">:verbose</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- destroy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- destroy-method -->
+
+      
+        <div id="exists-3F-method" class="method-detail ">
+          <a name="method-i-exists-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">exists?</span><span
+              class="method-args">(path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="exists-3F-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-comment"># master.has_repository?</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">path</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- exists-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- exists-3F-method -->
+
+      
+        <div id="fetch_objects-method" class="method-detail ">
+          <a name="method-i-fetch_objects"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">fetch_objects</span><span
+              class="method-args">(other_repo)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="fetch_objects-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fetch_objects</span>(<span class="ruby-identifier">other_repo</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">add_remote</span>(<span class="ruby-identifier">other_repo</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">remote_fetch</span>(<span class="ruby-identifier">other_repo</span>.<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Grit</span><span class="ruby-operator">::</span><span class="ruby-constant">Git</span><span class="ruby-operator">::</span><span class="ruby-constant">GitTimeout</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">increase_timeout</span>
+    <span class="ruby-identifier">fetch_objects</span>(<span class="ruby-identifier">other_repo</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- fetch_objects-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- fetch_objects-method -->
+
+      
+        <div id="get_all_files_from_path_on_branch-method" class="method-detail ">
+          <a name="method-i-get_all_files_from_path_on_branch"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_all_files_from_path_on_branch</span><span
+              class="method-args">(path = '', branch = 'master')</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_all_files_from_path_on_branch-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_all_files_from_path_on_branch</span>(<span class="ruby-identifier">path</span> = <span class="ruby-string">''</span>, <span class="ruby-identifier">branch</span> = <span class="ruby-string">'master'</span>)
+  <span class="ruby-identifier">root_tree</span> = <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">tree</span>(<span class="ruby-identifier">branch</span>, [<span class="ruby-identifier">path</span>]).<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">recurse_git_tree</span>(<span class="ruby-identifier">root_tree</span>, [<span class="ruby-identifier">path</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_all_files_from_path_on_branch-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_all_files_from_path_on_branch-method -->
+
+      
+        <div id="get_blob_data-method" class="method-detail ">
+          <a name="method-i-get_blob_data"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_blob_data</span><span
+              class="method-args">(blob)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_blob_data-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_blob_data</span>(<span class="ruby-identifier">blob</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-comment"># blob.data gets INSANELY slow for large files in a large repo,</span>
+    <span class="ruby-comment"># this uses @repo.git.show to call a git command instead:</span>
+    <span class="ruby-comment">#   slower than I would like but still an order of magnitude</span>
+    <span class="ruby-comment">#   faster (for an example see e.g.</span>
+    <span class="ruby-comment">#   DDB_EpiDoc_XML/p.mich/p.mich.4.1/p.mich.4.1.224.xml)</span>
+    <span class="ruby-identifier">data</span> = <span class="ruby-identifier">blob</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">git</span>.<span class="ruby-identifier">show</span>({}, <span class="ruby-identifier">blob</span>.<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">data</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Grit</span><span class="ruby-operator">::</span><span class="ruby-constant">Git</span><span class="ruby-operator">::</span><span class="ruby-constant">GitTimeout</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">increase_timeout</span>
+    <span class="ruby-identifier">get_blob_data</span>(<span class="ruby-identifier">blob</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_blob_data-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_blob_data-method -->
+
+      
+        <div id="get_blob_from_branch-method" class="method-detail ">
+          <a name="method-i-get_blob_from_branch"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_blob_from_branch</span><span
+              class="method-args">(file, branch = 'master')</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_blob_from_branch-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_blob_from_branch</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">branch</span> = <span class="ruby-string">'master'</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">tree</span> = <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">tree</span>(<span class="ruby-identifier">branch</span>, [<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">file</span>)])
+    <span class="ruby-identifier">subtree</span> = <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">contents</span>.<span class="ruby-identifier">first</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">subtree</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">blob</span> = <span class="ruby-identifier">subtree</span> <span class="ruby-operator">/</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Grit</span><span class="ruby-operator">::</span><span class="ruby-constant">GitRuby</span><span class="ruby-operator">::</span><span class="ruby-constant">Repository</span><span class="ruby-operator">::</span><span class="ruby-constant">NoSuchPath</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_blob_from_branch-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_blob_from_branch-method -->
+
+      
+        <div id="get_file_from_branch-method" class="method-detail ">
+          <a name="method-i-get_file_from_branch"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_file_from_branch</span><span
+              class="method-args">(file, branch = 'master')</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_file_from_branch-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_file_from_branch</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">branch</span> = <span class="ruby-string">'master'</span>)  
+  <span class="ruby-identifier">blob</span> = <span class="ruby-identifier">get_blob_from_branch</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">branch</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">get_blob_data</span>(<span class="ruby-identifier">blob</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_file_from_branch-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_file_from_branch-method -->
+
+      
+        <div id="get_log_for_file_from_branch-method" class="method-detail ">
+          <a name="method-i-get_log_for_file_from_branch"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_log_for_file_from_branch</span><span
+              class="method-args">(file, branch = 'master')</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_log_for_file_from_branch-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_log_for_file_from_branch</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">branch</span> = <span class="ruby-string">'master'</span>)
+  <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">log</span>(<span class="ruby-identifier">branch</span>, <span class="ruby-identifier">file</span>, <span class="ruby-value">:follow</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">commit</span><span class="ruby-operator">|</span> <span class="ruby-identifier">commit</span>.<span class="ruby-identifier">to_hash</span>}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_log_for_file_from_branch-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_log_for_file_from_branch-method -->
+
+      
+        <div id="name-method" class="method-detail ">
+          <a name="method-i-name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">name</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="name-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">name</span>
+  <span class="ruby-keyword">return</span> [<span class="ruby-ivar">@master_class_path</span>, <span class="ruby-ivar">@master</span>.<span class="ruby-identifier">name</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">'/'</span>).<span class="ruby-identifier">tr</span>(<span class="ruby-string">' '</span>, <span class="ruby-string">'_'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- name-method -->
+
+      
+        <div id="owner-method" class="method-detail ">
+          <a name="method-i-owner"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">owner</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="owner-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">owner</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@master</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- owner-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- owner-method -->
+
+      
+        <div id="recurse_git_tree-method" class="method-detail ">
+          <a name="method-i-recurse_git_tree"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">recurse_git_tree</span><span
+              class="method-args">(tree, path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="recurse_git_tree-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">recurse_git_tree</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">files</span> = []
+  <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">blobs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">blob</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">files</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">blob</span>.<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">trees</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">this_tree</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">path</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">this_tree</span>.<span class="ruby-identifier">name</span>)
+    <span class="ruby-identifier">files</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">recurse_git_tree</span>(<span class="ruby-identifier">this_tree</span>, <span class="ruby-identifier">path</span>)
+    <span class="ruby-identifier">path</span>.<span class="ruby-identifier">pop</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">files</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- recurse_git_tree-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- recurse_git_tree-method -->
+
+      
+        <div id="rename_file-method" class="method-detail ">
+          <a name="method-i-rename_file"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rename_file</span><span
+              class="method-args">(original_path, new_path, branch, comment, actor)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="rename_file-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rename_file</span>(<span class="ruby-identifier">original_path</span>, <span class="ruby-identifier">new_path</span>, <span class="ruby-identifier">branch</span>, <span class="ruby-identifier">comment</span>, <span class="ruby-identifier">actor</span>)
+  <span class="ruby-identifier">content</span> = <span class="ruby-identifier">get_file_from_branch</span>(<span class="ruby-identifier">original_path</span>, <span class="ruby-identifier">branch</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">content</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Rename error: Original file '#{original_path}' does not exist on branch '#{branch}'&quot;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">get_blob_from_branch</span>(<span class="ruby-identifier">new_path</span>, <span class="ruby-identifier">branch</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Rename error: Destination file '#{new_path}' already exists on branch '#{branch}'&quot;</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">index</span> = <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-identifier">index</span>.<span class="ruby-identifier">read_tree</span>(<span class="ruby-identifier">branch</span>)
+  <span class="ruby-comment"># do the rename here, against index.tree</span>
+  <span class="ruby-comment"># rename is just a simultaneous add/delete</span>
+  <span class="ruby-comment"># add the new data</span>
+  <span class="ruby-identifier">index</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">new_path</span>, <span class="ruby-identifier">content</span>)
+  <span class="ruby-comment"># remove the old path from the tree</span>
+  <span class="ruby-identifier">index</span>.<span class="ruby-identifier">rm</span>(<span class="ruby-identifier">original_path</span>)
+
+  <span class="ruby-identifier">index</span>.<span class="ruby-identifier">commit</span>(<span class="ruby-identifier">comment</span>,
+               <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">commits</span>(<span class="ruby-identifier">branch</span>,<span class="ruby-value">1</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-comment"># commit parent,</span>
+               <span class="ruby-identifier">actor</span>,
+               <span class="ruby-keyword">nil</span>,
+               <span class="ruby-identifier">branch</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rename_file-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rename_file-method -->
+
+      
+        <div id="update_master_from_canonical-method" class="method-detail ">
+          <a name="method-i-update_master_from_canonical"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">update_master_from_canonical</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="update_master_from_canonical-source">
+<pre>
+<span class="ruby-comment"># File app/models/repository.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_master_from_canonical</span>
+  <span class="ruby-ivar">@repo</span>.<span class="ruby-identifier">update_ref</span>(<span class="ruby-string">'master'</span>,<span class="ruby-ivar">@canonical</span>.<span class="ruby-identifier">get_head</span>(<span class="ruby-string">'master'</span>).<span class="ruby-identifier">commit</span>.<span class="ruby-identifier">id</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- update_master_from_canonical-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- update_master_from_canonical-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

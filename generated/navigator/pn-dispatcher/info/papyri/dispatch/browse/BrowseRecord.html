@@ -144,18 +144,10 @@ Class BrowseRecord</H2>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>abstract &nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../info/papyri/dispatch/browse/BrowseRecord.html#assembleLink()">assembleLink</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the relative path to be associated with the Record</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>abstract &nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../info/papyri/dispatch/browse/BrowseRecord.html#getHTML()">getHTML</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an html representation of the Record</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an html representation of the Record.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -211,7 +203,10 @@ getHTML</H3>
 <PRE>
 public abstract <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getHTML</B>()</PRE>
 <DL>
-<DD>Returns an html representation of the Record
+<DD>Returns an html representation of the Record.
+ 
+ This method is required so that large groups of records can be iterated over 
+ and displayed automatically.
 <P>
 <DD><DL>
 </DL>
@@ -219,23 +214,6 @@ public abstract <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/
 <DD><DL>
 
 <DT><B>Returns:</B><DD>a string of html</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="assembleLink()"><!-- --></A><H3>
-assembleLink</H3>
-<PRE>
-public abstract <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>assembleLink</B>()</PRE>
-<DL>
-<DD>Returns the relative path to be associated with the Record
-<P>
-<DD><DL>
-</DL>
-</DD>
-<DD><DL>
-
-<DT><B>Returns:</B><DD>the relative path as a String</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->

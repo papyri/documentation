@@ -1,0 +1,1817 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Module: HgvMetaIdentifierHelper::HgvDate</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../app/helpers/hgv_meta_identifier_helper_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="app/helpers/hgv_meta_identifier_helper.rb">app/helpers/hgv_meta_identifier_helper.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-centuryOptions">::centuryOptions</a></li>
+          
+          <li><a href="#method-c-certaintyOptions">::certaintyOptions</a></li>
+          
+          <li><a href="#method-c-dayFromIso">::dayFromIso</a></li>
+          
+          <li><a href="#method-c-epidocToHgv">::epidocToHgv</a></li>
+          
+          <li><a href="#method-c-extractFromIso">::extractFromIso</a></li>
+          
+          <li><a href="#method-c-getCentury">::getCentury</a></li>
+          
+          <li><a href="#method-c-getCenturyQualifier">::getCenturyQualifier</a></li>
+          
+          <li><a href="#method-c-getCertaintyItem">::getCertaintyItem</a></li>
+          
+          <li><a href="#method-c-getDayIso">::getDayIso</a></li>
+          
+          <li><a href="#method-c-getEmptyEpidocItem">::getEmptyEpidocItem</a></li>
+          
+          <li><a href="#method-c-getEmptyHgvItem">::getEmptyHgvItem</a></li>
+          
+          <li><a href="#method-c-getMonthIso">::getMonthIso</a></li>
+          
+          <li><a href="#method-c-getMonthQualifier">::getMonthQualifier</a></li>
+          
+          <li><a href="#method-c-getOffsetItem">::getOffsetItem</a></li>
+          
+          <li><a href="#method-c-getPrecision">::getPrecision</a></li>
+          
+          <li><a href="#method-c-getPrecisionItem">::getPrecisionItem</a></li>
+          
+          <li><a href="#method-c-getYearIso">::getYearIso</a></li>
+          
+          <li><a href="#method-c-getYearQualifier">::getYearQualifier</a></li>
+          
+          <li><a href="#method-c-hgvToEpidoc">::hgvToEpidoc</a></li>
+          
+          <li><a href="#method-c-monthFromIso">::monthFromIso</a></li>
+          
+          <li><a href="#method-c-monthOptions">::monthOptions</a></li>
+          
+          <li><a href="#method-c-offsetOptions">::offsetOptions</a></li>
+          
+          <li><a href="#method-c-precisionOptions">::precisionOptions</a></li>
+          
+          <li><a href="#method-c-yearFromIso">::yearFromIso</a></li>
+          
+          <li><a href="#method-c-yearOptions">::yearOptions</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Papyrillio.html">Papyrillio</a></li>
+        
+          <li><a href="../Papyrillio/Aggregator.html">Papyrillio::Aggregator</a></li>
+        
+          <li><a href="../Papyrillio/Collector.html">Papyrillio::Collector</a></li>
+        
+          <li><a href="../Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a></li>
+        
+          <li><a href="../Papyrillio/Decorator.html">Papyrillio::Decorator</a></li>
+        
+          <li><a href="../Papyrillio/Organiser.html">Papyrillio::Organiser</a></li>
+        
+          <li><a href="../Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a></li>
+        
+          <li><a href="../Papyrillio/Printer.html">Papyrillio::Printer</a></li>
+        
+          <li><a href="../Papyrillio/Publishee.html">Papyrillio::Publishee</a></li>
+        
+          <li><a href="../Papyrillio/Publisher.html">Papyrillio::Publisher</a></li>
+        
+          <li><a href="../Papyrillio/Transformer.html">Papyrillio::Transformer</a></li>
+        
+          <li><a href="../JRubyXML.html">JRubyXML</a></li>
+        
+          <li><a href="../JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a></li>
+        
+          <li><a href="../JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a></li>
+        
+          <li><a href="../JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a></li>
+        
+          <li><a href="../JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a></li>
+        
+          <li><a href="../JRubyXML/ParseError.html">JRubyXML::ParseError</a></li>
+        
+          <li><a href="../JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a></li>
+        
+          <li><a href="../JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a></li>
+        
+          <li><a href="../HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a></li>
+        
+          <li><a href="../HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a></li>
+        
+          <li><a href="../HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a></li>
+        
+          <li><a href="../HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a></li>
+        
+          <li><a href="../HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a></li>
+        
+          <li><a href="../HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a></li>
+        
+          <li><a href="../HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a></li>
+        
+          <li><a href="../REXML.html">REXML</a></li>
+        
+          <li><a href="../REXML/Document.html">REXML::Document</a></li>
+        
+          <li><a href="../REXML/Element.html">REXML::Element</a></li>
+        
+          <li><a href="../REXML/XPath.html">REXML::XPath</a></li>
+        
+          <li><a href="../Rpx.html">Rpx</a></li>
+        
+          <li><a href="../Rpx/RpxException.html">Rpx::RpxException</a></li>
+        
+          <li><a href="../Rpx/RpxHelper.html">Rpx::RpxHelper</a></li>
+        
+          <li><a href="../Comment.html">Comment</a></li>
+        
+          <li><a href="../Comment/CombineComment.html">Comment::CombineComment</a></li>
+        
+          <li><a href="../Doco.html">Doco</a></li>
+        
+          <li><a href="../Doco/DocoNode.html">Doco::DocoNode</a></li>
+        
+          <li><a href="../Grit.html">Grit</a></li>
+        
+          <li><a href="../Grit/Commit.html">Grit::Commit</a></li>
+        
+          <li><a href="../HGVMetaIdentifier.html">HGVMetaIdentifier</a></li>
+        
+          <li><a href="../HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
+        
+          <li><a href="../HGVTransGlossary.html">HGVTransGlossary</a></li>
+        
+          <li><a href="../HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a></li>
+        
+          <li><a href="../NumbersRDF.html">NumbersRDF</a></li>
+        
+          <li><a href="../NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a></li>
+        
+          <li><a href="../AjaxProxyController.html">AjaxProxyController</a></li>
+        
+          <li><a href="../ApplicationController.html">ApplicationController</a></li>
+        
+          <li><a href="../ApplicationHelper.html">ApplicationHelper</a></li>
+        
+          <li><a href="../Board.html">Board</a></li>
+        
+          <li><a href="../BoardsController.html">BoardsController</a></li>
+        
+          <li><a href="../CommentsController.html">CommentsController</a></li>
+        
+          <li><a href="../DDBIdentifier.html">DDBIdentifier</a></li>
+        
+          <li><a href="../DdbIdentifiersController.html">DdbIdentifiersController</a></li>
+        
+          <li><a href="../Decree.html">Decree</a></li>
+        
+          <li><a href="../DecreesController.html">DecreesController</a></li>
+        
+          <li><a href="../DocosController.html">DocosController</a></li>
+        
+          <li><a href="../DocovideosController.html">DocovideosController</a></li>
+        
+          <li><a href="../Emailer.html">Emailer</a></li>
+        
+          <li><a href="../EmailerMailer.html">EmailerMailer</a></li>
+        
+          <li><a href="../EmailersController.html">EmailersController</a></li>
+        
+          <li><a href="../Event.html">Event</a></li>
+        
+          <li><a href="../EventsController.html">EventsController</a></li>
+        
+          <li><a href="../GitConf.html">GitConf</a></li>
+        
+          <li><a href="../HGVBiblioIdentifier.html">HGVBiblioIdentifier</a></li>
+        
+          <li><a href="../HGVIdentifier.html">HGVIdentifier</a></li>
+        
+          <li><a href="../HGVTransIdentifier.html">HGVTransIdentifier</a></li>
+        
+          <li><a href="../HelperController.html">HelperController</a></li>
+        
+          <li><a href="../HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a></li>
+        
+          <li><a href="../HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></li>
+        
+          <li><a href="../HgvTransGlossariesController.html">HgvTransGlossariesController</a></li>
+        
+          <li><a href="../HgvTransIdentifiersController.html">HgvTransIdentifiersController</a></li>
+        
+          <li><a href="../Identifier.html">Identifier</a></li>
+        
+          <li><a href="../IdentifiersController.html">IdentifiersController</a></li>
+        
+          <li><a href="../Integer.html">Integer</a></li>
+        
+          <li><a href="../Leiden.html">Leiden</a></li>
+        
+          <li><a href="../LeidenController.html">LeidenController</a></li>
+        
+          <li><a href="../LinkingInfo.html">LinkingInfo</a></li>
+        
+          <li><a href="../MaintenanceMode.html">MaintenanceMode</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+          <li><a href="../Publication.html">Publication</a></li>
+        
+          <li><a href="../PublicationsController.html">PublicationsController</a></li>
+        
+          <li><a href="../Rails.html">Rails</a></li>
+        
+          <li><a href="../RepositoriesController.html">RepositoriesController</a></li>
+        
+          <li><a href="../Repository.html">Repository</a></li>
+        
+          <li><a href="../RpxController.html">RpxController</a></li>
+        
+          <li><a href="../TranslationHelperController.html">TranslationHelperController</a></li>
+        
+          <li><a href="../TranslationLeiden.html">TranslationLeiden</a></li>
+        
+          <li><a href="../TranslationLeidenController.html">TranslationLeidenController</a></li>
+        
+          <li><a href="../User.html">User</a></li>
+        
+          <li><a href="../UserController.html">UserController</a></li>
+        
+          <li><a href="../UserIdentifier.html">UserIdentifier</a></li>
+        
+          <li><a href="../Vote.html">Vote</a></li>
+        
+          <li><a href="../VotesController.html">VotesController</a></li>
+        
+          <li><a href="../WelcomeController.html">WelcomeController</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">HgvMetaIdentifierHelper::HgvDate</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="centuryOptions-method" class="method-detail ">
+          <a name="method-c-centuryOptions"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">centuryOptions</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="centuryOptions-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">centuryOptions</span>
+  [[<span class="ruby-string">''</span>, <span class="ruby-string">''</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.beginning'</span>), <span class="ruby-value">:beginning</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.beginningCirca'</span>), <span class="ruby-value">:beginningCirca</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.beginningToMiddle'</span>), <span class="ruby-value">:beginningToMiddle</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.beginningToMiddleCirca'</span>), <span class="ruby-value">:beginningToMiddleCirca</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.firstHalf'</span>), <span class="ruby-value">:firstHalf</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.firstHalfCirca'</span>), <span class="ruby-value">:firstHalfCirca</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.firstHalfToMiddle'</span>), <span class="ruby-value">:firstHalfToMiddle</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.firstHalfToMiddleCirca'</span>), <span class="ruby-value">:firstHalfToMiddleCirca</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.middle'</span>), <span class="ruby-value">:middle</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.middleCirca'</span>), <span class="ruby-value">:middleCirca</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.middleToSecondHalf'</span>), <span class="ruby-value">:middleToSecondHalf</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.middleToSecondHalfCirca'</span>), <span class="ruby-value">:middleToSecondHalfCirca</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.secondHalf'</span>), <span class="ruby-value">:secondHalf</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.secondHalfCirca'</span>), <span class="ruby-value">:secondHalfCirca</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.middleToEnd'</span>), <span class="ruby-value">:middleToEnd</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.middleToEndCirca'</span>), <span class="ruby-value">:middleToEndCirca</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.end'</span>), <span class="ruby-value">:end</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.endCirca'</span>), <span class="ruby-value">:endCirca</span>]]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- centuryOptions-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- centuryOptions-method -->
+
+      
+        <div id="certaintyOptions-method" class="method-detail ">
+          <a name="method-c-certaintyOptions"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">certaintyOptions</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="certaintyOptions-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 257</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">certaintyOptions</span>
+  [[<span class="ruby-string">''</span>, <span class="ruby-string">''</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.certaintyLow'</span>), <span class="ruby-value">:low</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.dayUncertain'</span>), <span class="ruby-value">:day</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.monthUncertain'</span>), <span class="ruby-value">:month</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.yearUncertain'</span>), <span class="ruby-value">:year</span>],
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.dayAndMonthUncertain'</span>), <span class="ruby-value">:day_month</span>],
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.monthAndYearUncertain'</span>), <span class="ruby-value">:month_year</span>],
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.dayAndYearUncertain'</span>), <span class="ruby-value">:day_year</span>],
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.dayMonthAndYearUncertain'</span>), <span class="ruby-value">:day_month_year</span>]]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- certaintyOptions-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- certaintyOptions-method -->
+
+      
+        <div id="dayFromIso-method" class="method-detail ">
+          <a name="method-c-dayFromIso"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dayFromIso</span><span
+              class="method-args">(iso)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="dayFromIso-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 512</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">dayFromIso</span> <span class="ruby-identifier">iso</span>
+  <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">extractFromIso</span> <span class="ruby-identifier">iso</span>, <span class="ruby-regexp">/\A-?\d\d\d\d-\d\d-(\d\d)\Z/</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dayFromIso-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dayFromIso-method -->
+
+      
+        <div id="epidocToHgv-method" class="method-detail ">
+          <a name="method-c-epidocToHgv"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">epidocToHgv</span><span
+              class="method-args">(date_item)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="epidocToHgv-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 552</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">epidocToHgv</span> <span class="ruby-identifier">date_item</span>      
+  <span class="ruby-identifier">t</span> = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getEmptyHgvItem</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-comment"># simple case: no date</span>
+    <span class="ruby-identifier">t</span>[<span class="ruby-value">:empty</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">t</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:value</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'unbekannt'</span> <span class="ruby-comment"># simple case: date is specified as unknown</span>
+    <span class="ruby-identifier">t</span>[<span class="ruby-value">:unknown</span>] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">t</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">begin</span> <span class="ruby-comment"># complex case: process date information</span>
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:attributes</span>]
+
+      <span class="ruby-comment"># date1</span>
+      <span class="ruby-identifier">iso</span> = <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:when</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:when</span>] <span class="ruby-operator">:</span> (<span class="ruby-identifier">date_item</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:notBefore</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:notBefore</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:notAfter</span>])
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">iso</span>
+        <span class="ruby-identifier">t</span>[<span class="ruby-value">:y</span>] = <span class="ruby-identifier">yearFromIso</span> <span class="ruby-identifier">iso</span>
+        <span class="ruby-identifier">t</span>[<span class="ruby-value">:m</span>] = <span class="ruby-identifier">monthFromIso</span> <span class="ruby-identifier">iso</span>
+        <span class="ruby-identifier">t</span>[<span class="ruby-value">:d</span>] = <span class="ruby-identifier">dayFromIso</span> <span class="ruby-identifier">iso</span>
+
+        <span class="ruby-comment"># date2</span>
+        <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>] = <span class="ruby-identifier">yearFromIso</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:notAfter</span>]
+        <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>] = <span class="ruby-identifier">monthFromIso</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:notAfter</span>]
+        <span class="ruby-identifier">t</span>[<span class="ruby-value">:d2</span>] = <span class="ruby-identifier">dayFromIso</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:notAfter</span>]
+
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:children</span>]
+          <span class="ruby-comment"># ca.</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:precision</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'medium'</span>
+            <span class="ruby-identifier">t</span>[<span class="ruby-value">:ca</span>] = <span class="ruby-identifier">t</span>[<span class="ruby-value">:ca2</span>] = <span class="ruby-keyword">true</span>
+          <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>]
+            <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>].<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">precision</span><span class="ruby-operator">|</span>
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">precision</span>[<span class="ruby-value">:attributes</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">precision</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:degree</span>] <span class="ruby-operator">&amp;&amp;</span> [<span class="ruby-string">'0.1'</span>, <span class="ruby-string">'0.5'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">precision</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:degree</span>])
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">precision</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:match</span>]
+                  <span class="ruby-keyword">if</span> <span class="ruby-identifier">precision</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:match</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-string">'notBefore'</span>)
+                    <span class="ruby-identifier">t</span>[<span class="ruby-value">:ca</span>] = <span class="ruby-keyword">true</span>
+                  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">precision</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:match</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-string">'notAfter'</span>)
+                    <span class="ruby-identifier">t</span>[<span class="ruby-value">:ca2</span>] = <span class="ruby-keyword">true</span>
+                  <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">else</span>
+                  <span class="ruby-identifier">t</span>[<span class="ruby-value">:ca</span>] = <span class="ruby-identifier">t</span>[<span class="ruby-value">:ca2</span>] = <span class="ruby-keyword">true</span>
+                <span class="ruby-keyword">end</span>
+              <span class="ruby-keyword">end</span>
+            }
+          <span class="ruby-keyword">end</span>
+
+          <span class="ruby-comment"># qualifier</span>
+          <span class="ruby-identifier">isVague</span> = <span class="ruby-identifier">isVague2</span> = <span class="ruby-keyword">false</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:precision</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'low'</span>
+            <span class="ruby-identifier">isVague</span> = <span class="ruby-identifier">isVague2</span> = <span class="ruby-keyword">true</span>
+          <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>]
+            <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>].<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">precision</span><span class="ruby-operator">|</span>
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">precision</span>[<span class="ruby-value">:attributes</span>] <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">precision</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:degree</span>] <span class="ruby-operator">||</span> (<span class="ruby-identifier">precision</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:degree</span>] <span class="ruby-operator">&amp;&amp;</span> [<span class="ruby-string">'0.1'</span>, <span class="ruby-string">'0.3'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">precision</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:degree</span>])))
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">precision</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:match</span>]
+                  <span class="ruby-keyword">if</span> <span class="ruby-identifier">precision</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:match</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-string">'notBefore'</span>)
+                    <span class="ruby-identifier">isVague</span> = <span class="ruby-keyword">true</span>
+                  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">precision</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:match</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-string">'notAfter'</span>)
+                    <span class="ruby-identifier">isVague2</span> = <span class="ruby-keyword">true</span>
+                  <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">else</span>
+                  <span class="ruby-identifier">isVague</span> = <span class="ruby-identifier">isVague2</span> = <span class="ruby-keyword">true</span>
+                <span class="ruby-keyword">end</span>
+              <span class="ruby-keyword">end</span>
+            }
+          <span class="ruby-keyword">end</span>
+
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">isVague</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">isVague2</span>
+            
+            <span class="ruby-comment"># century</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">isVague</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:m</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:t</span>]
+             
+              <span class="ruby-identifier">t</span>[<span class="ruby-value">:c</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getCentury</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y</span>] <span class="ruby-comment"># century no. 1</span>
+
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">isVague2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:t2</span>]
+                <span class="ruby-identifier">t</span>[<span class="ruby-value">:c2</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getCentury</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>] <span class="ruby-comment"># century no. 2</span>
+              <span class="ruby-keyword">end</span>
+
+              <span class="ruby-identifier">cx</span> = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getCenturyQualifier</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y</span>], <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>]  <span class="ruby-comment"># century qualifier (beginning, middle, end)</span>
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">cx</span>.<span class="ruby-identifier">instance_of?</span> <span class="ruby-constant">Array</span>
+                <span class="ruby-identifier">t</span>[<span class="ruby-value">:cx</span>], <span class="ruby-identifier">t</span>[<span class="ruby-value">:cx2</span>] = <span class="ruby-identifier">cx</span>
+              <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">t</span>[<span class="ruby-value">:cx</span>] = <span class="ruby-identifier">cx</span>
+              <span class="ruby-keyword">end</span>
+
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:c</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:c2</span>]
+                <span class="ruby-identifier">t</span>[<span class="ruby-value">:c2</span>] = <span class="ruby-keyword">nil</span> <span class="ruby-comment"># combine century no.1 and no.2</span>
+              <span class="ruby-keyword">end</span>
+
+              <span class="ruby-identifier">t</span>[<span class="ruby-value">:y</span>] = <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>] = <span class="ruby-keyword">nil</span> <span class="ruby-comment"># kill years                  </span>
+            <span class="ruby-keyword">end</span>
+            
+            <span class="ruby-comment"># year</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">isVague</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:m</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:t</span>]
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">isVague2</span> <span class="ruby-operator">&amp;&amp;</span>  <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:t2</span>]
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>]
+                  <span class="ruby-identifier">t</span>[<span class="ruby-value">:yx</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getYearQualifier</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:m</span>], <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>] <span class="ruby-comment"># combine date no. 1 and date no. 2</span>
+                  <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>] = <span class="ruby-identifier">t</span>[<span class="ruby-value">:m</span>] = <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>] = <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">else</span>
+                  <span class="ruby-identifier">t</span>[<span class="ruby-value">:yx</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getYearQualifier</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:m</span>]
+                  <span class="ruby-identifier">t</span>[<span class="ruby-value">:yx2</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getYearQualifier</span> <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>]
+                  <span class="ruby-identifier">t</span>[<span class="ruby-value">:m</span>] = <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>] = <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">end</span>
+              <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">t</span>[<span class="ruby-value">:yx</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getYearQualifier</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:m</span>]
+                <span class="ruby-identifier">t</span>[<span class="ruby-value">:m</span>] = <span class="ruby-keyword">nil</span>
+              <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">isVague2</span> <span class="ruby-operator">&amp;&amp;</span>  <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:d2</span>]
+              <span class="ruby-identifier">t</span>[<span class="ruby-value">:yx2</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getYearQualifier</span> <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>]
+              <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>] = <span class="ruby-keyword">nil</span>
+            <span class="ruby-keyword">end</span>
+            
+            <span class="ruby-comment">#month</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">isVague</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:m</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:t</span>]
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">isVague2</span> <span class="ruby-operator">&amp;&amp;</span>  <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:t2</span>]
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:m</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>]
+                  <span class="ruby-identifier">t</span>[<span class="ruby-value">:mx</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getMonthQualifier</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:d</span>], <span class="ruby-identifier">t</span>[<span class="ruby-value">:d2</span>] <span class="ruby-comment"># combine date no. 1 and date no. 2</span>
+                  <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>] = <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>] = <span class="ruby-identifier">t</span>[<span class="ruby-value">:t</span>] = <span class="ruby-identifier">t</span>[<span class="ruby-value">:t2</span>] = <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">else</span>
+                  <span class="ruby-identifier">t</span>[<span class="ruby-value">:mx</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getMonthQualifier</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:d</span>]
+                  <span class="ruby-identifier">t</span>[<span class="ruby-value">:mx2</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getMonthQualifier</span> <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">t</span>[<span class="ruby-value">:d2</span>]
+                  <span class="ruby-identifier">t</span>[<span class="ruby-value">:d</span>] = <span class="ruby-identifier">t</span>[<span class="ruby-value">:d2</span>] = <span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">end</span>
+              <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">t</span>[<span class="ruby-value">:mx</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getMonthQualifier</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:d</span>]
+                <span class="ruby-identifier">t</span>[<span class="ruby-value">:d</span>] = <span class="ruby-keyword">nil</span>
+              <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">isVague2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:d2</span>]
+              <span class="ruby-identifier">t</span>[<span class="ruby-value">:mx2</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getMonthQualifier</span> <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">t</span>[<span class="ruby-value">:d2</span>]
+              <span class="ruby-identifier">t</span>[<span class="ruby-value">:d2</span>] = <span class="ruby-keyword">nil</span>
+            <span class="ruby-keyword">end</span>
+
+            <span class="ruby-comment"># ...(?)</span>
+            <span class="ruby-identifier">t</span>.<span class="ruby-identifier">each_pair</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'x'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">v</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'2'</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:ca2</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:ca</span>]
+                  <span class="ruby-identifier">t</span>[<span class="ruby-identifier">k</span>] = (<span class="ruby-identifier">v</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">'Circa'</span>).<span class="ruby-identifier">to_sym</span>
+                <span class="ruby-keyword">end</span>
+              <span class="ruby-keyword">end</span>
+            }
+          <span class="ruby-keyword">end</span> <span class="ruby-comment">#isVague</span>
+
+          <span class="ruby-comment"># precision</span>
+          <span class="ruby-identifier">t</span>[<span class="ruby-value">:precision</span>] = <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">reject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'2'</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> }.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">join</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'x'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:ca</span>] <span class="ruby-operator">?</span> <span class="ruby-value">:ca</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+          <span class="ruby-identifier">t</span>[<span class="ruby-value">:precision2</span>] = (<span class="ruby-operator">!</span><span class="ruby-identifier">t</span>.<span class="ruby-identifier">reject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'2'</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> }.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">join</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'x'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:ca2</span>] <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">t</span>[<span class="ruby-value">:c2</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:d2</span>])) <span class="ruby-operator">?</span> <span class="ruby-value">:ca</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+
+          <span class="ruby-comment"># offset</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:offset</span>]
+            <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:offset</span>].<span class="ruby-identifier">each_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+               <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:offset</span>][<span class="ruby-identifier">i</span>][<span class="ruby-value">:attributes</span>][<span class="ruby-value">:type</span>]
+               <span class="ruby-identifier">position</span> = <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:offset</span>][<span class="ruby-identifier">i</span>][<span class="ruby-value">:attributes</span>][<span class="ruby-value">:position</span>]
+               <span class="ruby-identifier">attribute</span> = (<span class="ruby-string">'offset'</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">position</span> <span class="ruby-operator">==</span> <span class="ruby-string">'2'</span> <span class="ruby-operator">?</span> <span class="ruby-string">'2'</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>)).<span class="ruby-identifier">to_sym</span>
+               
+               <span class="ruby-identifier">t</span>[<span class="ruby-identifier">attribute</span>] = <span class="ruby-identifier">offset</span>.<span class="ruby-identifier">to_sym</span>
+               
+               <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:certainty</span>]
+                 <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:certainty</span>].<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">certainty</span><span class="ruby-operator">|</span>
+                   <span class="ruby-keyword">if</span> <span class="ruby-identifier">certainty</span>[<span class="ruby-value">:attributes</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">certainty</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:match</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">certainty</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:match</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;../offset[@type='&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">offset</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;']&quot;</span>
+                     <span class="ruby-identifier">t</span>[<span class="ruby-identifier">attribute</span>] = (<span class="ruby-identifier">t</span>[<span class="ruby-identifier">attribute</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">'Uncertain'</span>).<span class="ruby-identifier">to_sym</span>
+                   <span class="ruby-keyword">end</span>
+                 }
+               <span class="ruby-keyword">end</span>
+            }
+          <span class="ruby-keyword">end</span>
+
+          <span class="ruby-comment"># certainties</span>
+
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:certainty</span>]
+            <span class="ruby-identifier">t</span>[<span class="ruby-value">:certainty</span>] = <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:certainty</span>].<span class="ruby-identifier">to_sym</span>
+          <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:certainty</span>]
+            <span class="ruby-identifier">cert</span> = {<span class="ruby-value">:days</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-value">:months</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-value">:years</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}
+            <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:certainty</span>].<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">certainty</span><span class="ruby-operator">|</span>
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">certainty</span>[<span class="ruby-value">:attributes</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">certainty</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:match</span>]
+                <span class="ruby-identifier">cert</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+                  <span class="ruby-keyword">if</span> <span class="ruby-identifier">certainty</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:match</span>].<span class="ruby-identifier">include?</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-2</span>]
+                    <span class="ruby-identifier">cert</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                  <span class="ruby-keyword">end</span>
+                }
+              <span class="ruby-keyword">end</span>
+            }
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">cert</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">join</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+              <span class="ruby-identifier">t</span>[<span class="ruby-value">:certainty</span>] = <span class="ruby-identifier">cert</span>.<span class="ruby-identifier">delete_if</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>}.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_s</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-2</span>] }.<span class="ruby-identifier">join</span>(<span class="ruby-string">'_'</span>).<span class="ruby-identifier">to_sym</span> <span class="ruby-comment"># CL support for plurals goes here</span>
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+          
+          <span class="ruby-comment"># kill doublets and left overs</span>
+
+          <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>] = (<span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y</span>] <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>])
+          <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>] = (<span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:m</span>] <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>])
+          <span class="ruby-identifier">t</span>[<span class="ruby-value">:d2</span>] = (<span class="ruby-identifier">t</span>[<span class="ruby-value">:d2</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:d</span>] <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:d2</span>])
+          <span class="ruby-identifier">t</span>[<span class="ruby-value">:precision2</span>] = (<span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:d2</span>]  <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:m2</span>]  <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:y2</span>]  <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:c2</span>]  <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:precision2</span>])
+
+        <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">t</span>[<span class="ruby-value">:error</span>] =  <span class="ruby-identifier">e</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">': '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span> <span class="ruby-operator">+</span> <span class="ruby-string">' ('</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">backtrace</span>.<span class="ruby-identifier">inspect</span> <span class="ruby-operator">+</span> <span class="ruby-string">')'</span> <span class="ruby-comment"># $!, $ERROR_INFO</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">t</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- epidocToHgv-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- epidocToHgv-method -->
+
+      
+        <div id="extractFromIso-method" class="method-detail ">
+          <a name="method-c-extractFromIso"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">extractFromIso</span><span
+              class="method-args">(iso, regex)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="extractFromIso-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 496</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">extractFromIso</span> <span class="ruby-identifier">iso</span>, <span class="ruby-identifier">regex</span> 
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">iso</span>
+    <span class="ruby-identifier">iso</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">regex</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">iso</span>[<span class="ruby-identifier">regex</span>, <span class="ruby-value">1</span>].<span class="ruby-identifier">to_i</span>  <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- extractFromIso-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- extractFromIso-method -->
+
+      
+        <div id="getCentury-method" class="method-detail ">
+          <a name="method-c-getCentury"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getCentury</span><span
+              class="method-args">(year)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getCentury-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 361</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getCentury</span> <span class="ruby-identifier">year</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">year</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    (<span class="ruby-identifier">year</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">/</span> <span class="ruby-value">100</span> <span class="ruby-operator">+</span> ((<span class="ruby-identifier">year</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">%</span> <span class="ruby-value">100</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)) * (<span class="ruby-identifier">year</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">-1</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getCentury-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getCentury-method -->
+
+      
+        <div id="getCenturyQualifier-method" class="method-detail ">
+          <a name="method-c-getCenturyQualifier"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getCenturyQualifier</span><span
+              class="method-args">(year, year2)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getCenturyQualifier-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 369</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getCenturyQualifier</span> <span class="ruby-identifier">year</span>, <span class="ruby-identifier">year2</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">year</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">year2</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">century</span> = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getCentury</span> <span class="ruby-identifier">year</span>
+  <span class="ruby-identifier">century2</span> = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getCentury</span> <span class="ruby-identifier">year2</span>
+  <span class="ruby-identifier">tens</span> = <span class="ruby-identifier">year</span>.<span class="ruby-identifier">abs</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">2</span>, <span class="ruby-string">'0'</span>)[<span class="ruby-value">-2</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>].<span class="ruby-identifier">to_i</span> * (<span class="ruby-identifier">year</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">year</span>)
+  <span class="ruby-identifier">tens2</span> = <span class="ruby-identifier">year2</span>.<span class="ruby-identifier">abs</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">2</span>, <span class="ruby-string">'0'</span>)[<span class="ruby-value">-2</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>].<span class="ruby-identifier">to_i</span> * (<span class="ruby-identifier">year2</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">year2</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">century</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">century2</span>
+    <span class="ruby-keyword">return</span> {
+      [<span class="ruby-value">1</span>, <span class="ruby-value">25</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:beginning</span>,
+      [<span class="ruby-value">26</span>, <span class="ruby-value">50</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:firstHalfToMiddle</span>,
+      [<span class="ruby-value">51</span>, <span class="ruby-value">75</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middleToSecondHalf</span>,
+      [<span class="ruby-value">76</span>, <span class="ruby-value">0</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:end</span>,
+      [<span class="ruby-value">1</span>, <span class="ruby-value">50</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:firstHalf</span>,
+      [<span class="ruby-value">26</span>, <span class="ruby-value">75</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middle</span>,
+      [<span class="ruby-value">51</span>, <span class="ruby-value">0</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:secondHalf</span>,
+      [<span class="ruby-value">1</span>, <span class="ruby-value">75</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:beginningToMiddle</span>,
+      [<span class="ruby-value">26</span>, <span class="ruby-value">0</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middleToEnd</span>,
+
+      [<span class="ruby-value">0</span>, <span class="ruby-value">-76</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:beginning</span>,
+      [<span class="ruby-value">-75</span>, <span class="ruby-value">-51</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:firstHalfToMiddle</span>,
+      [<span class="ruby-value">-50</span>, <span class="ruby-value">-26</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middleToSecondHalf</span>,
+      [<span class="ruby-value">-25</span>, <span class="ruby-value">-1</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:end</span>,
+      [<span class="ruby-value">0</span>, <span class="ruby-value">-51</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:firstHalf</span>,
+      [<span class="ruby-value">-75</span>, <span class="ruby-value">-26</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middle</span>,
+      [<span class="ruby-value">-50</span>, <span class="ruby-value">-1</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:secondHalf</span>,
+      [<span class="ruby-value">0</span>, <span class="ruby-value">-26</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:beginningToMiddle</span>,
+      [<span class="ruby-value">-75</span>, <span class="ruby-value">-1</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middleToEnd</span>
+    }[[<span class="ruby-identifier">tens</span>, <span class="ruby-identifier">tens2</span>]]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> [
+      {
+        <span class="ruby-comment">#1 =&gt; :beginning,</span>
+        <span class="ruby-value">26</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middle</span>,
+        <span class="ruby-value">51</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:secondHalf</span>,
+        <span class="ruby-value">76</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:end</span>,
+        
+        <span class="ruby-comment">#0 =&gt; :beginning,</span>
+        <span class="ruby-value">-75</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middle</span>,
+        <span class="ruby-value">-50</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:secondHalf</span>,
+        <span class="ruby-value">-25</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:end</span>
+      }[<span class="ruby-identifier">tens</span>],
+      {
+        <span class="ruby-value">25</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:beginning</span>,
+        <span class="ruby-value">50</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:fisrtHalf</span>,
+        <span class="ruby-value">75</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middle</span>,
+        <span class="ruby-comment">#0 =&gt; :end,</span>
+        
+        <span class="ruby-value">-76</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:beginning</span>,
+        <span class="ruby-value">-51</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:firstHalf</span>,
+        <span class="ruby-value">-26</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middle</span>,
+        <span class="ruby-comment">#-1 =&gt; :end</span>
+      }[<span class="ruby-identifier">tens2</span>]
+    ]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getCenturyQualifier-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getCenturyQualifier-method -->
+
+      
+        <div id="getCertaintyItem-method" class="method-detail ">
+          <a name="method-c-getCertaintyItem"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getCertaintyItem</span><span
+              class="method-args">(match)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getCertaintyItem-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 769</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getCertaintyItem</span> <span class="ruby-identifier">match</span> 
+  {
+    <span class="ruby-value">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+    <span class="ruby-value">:children</span> =<span class="ruby-operator">&gt;</span> {},
+    <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {
+      <span class="ruby-value">:match</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">match</span>
+    }
+  }   
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getCertaintyItem-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getCertaintyItem-method -->
+
+      
+        <div id="getDayIso-method" class="method-detail ">
+          <a name="method-c-getDayIso"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getDayIso</span><span
+              class="method-args">(day, month, monthQualifier, chron)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getDayIso-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 337</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getDayIso</span> <span class="ruby-identifier">day</span>, <span class="ruby-identifier">month</span>, <span class="ruby-identifier">monthQualifier</span>, <span class="ruby-identifier">chron</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">day</span>
+    <span class="ruby-identifier">day</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">2</span>, <span class="ruby-string">'0'</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">m</span> = <span class="ruby-identifier">month</span>.<span class="ruby-identifier">to_i</span>
+    <span class="ruby-identifier">day_max</span> = <span class="ruby-identifier">m</span> <span class="ruby-operator">?</span> (<span class="ruby-identifier">m</span> <span class="ruby-operator">!=</span> <span class="ruby-value">2</span> <span class="ruby-operator">?</span> (<span class="ruby-identifier">m</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">8</span> <span class="ruby-operator">?</span> ((<span class="ruby-identifier">m</span> <span class="ruby-operator">%</span> <span class="ruby-value">2</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value">30</span> <span class="ruby-operator">:</span> <span class="ruby-value">31</span>) <span class="ruby-operator">:</span> ((<span class="ruby-identifier">m</span> <span class="ruby-operator">%</span> <span class="ruby-value">2</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value">31</span> <span class="ruby-operator">:</span> <span class="ruby-value">30</span>) ) <span class="ruby-operator">:</span> (<span class="ruby-identifier">y</span> <span class="ruby-operator">&amp;&amp;</span> ((<span class="ruby-identifier">y</span> <span class="ruby-operator">%</span> <span class="ruby-value">4</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>) <span class="ruby-operator">&amp;&amp;</span> (((<span class="ruby-identifier">y</span> <span class="ruby-operator">%</span> <span class="ruby-value">100</span>) <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>) <span class="ruby-operator">||</span> ((<span class="ruby-identifier">y</span> <span class="ruby-operator">%</span> <span class="ruby-value">400</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)) <span class="ruby-operator">?</span> <span class="ruby-value">29</span> <span class="ruby-operator">:</span> <span class="ruby-value">28</span>)) <span class="ruby-operator">:</span> <span class="ruby-value">31</span>
+
+    {
+      <span class="ruby-value">:chronMin</span> =<span class="ruby-operator">&gt;</span> {
+        <span class="ruby-keyword">nil</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+        <span class="ruby-value">:beginning</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'01'</span>,
+        <span class="ruby-value">:middle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'11'</span>,
+        <span class="ruby-value">:end</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'21'</span>
+      },
+      <span class="ruby-value">:chronMax</span> =<span class="ruby-operator">&gt;</span> {
+        <span class="ruby-keyword">nil</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+        <span class="ruby-value">:beginning</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'10'</span>,
+        <span class="ruby-value">:middle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'20'</span>,
+        <span class="ruby-value">:end</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">day_max</span>.<span class="ruby-identifier">to_s</span>
+      }
+    }[<span class="ruby-identifier">chron</span>][<span class="ruby-identifier">monthQualifier</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">monthQualifier</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-string">'Circa'</span>, <span class="ruby-string">''</span>).<span class="ruby-identifier">to_sym</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getDayIso-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getDayIso-method -->
+
+      
+        <div id="getEmptyEpidocItem-method" class="method-detail ">
+          <a name="method-c-getEmptyEpidocItem"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getEmptyEpidocItem</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getEmptyEpidocItem-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 527</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getEmptyEpidocItem</span>
+  {
+    <span class="ruby-value">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+    <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {
+      <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+      <span class="ruby-value">:when</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+      <span class="ruby-value">:notBefore</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+      <span class="ruby-value">:notAfter</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+      <span class="ruby-value">:certainty</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+      <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
+    },
+    <span class="ruby-value">:children</span> =<span class="ruby-operator">&gt;</span> {
+      <span class="ruby-value">:offset</span> =<span class="ruby-operator">&gt;</span> [],
+      <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> [],
+      <span class="ruby-value">:certainty</span> =<span class="ruby-operator">&gt;</span> []
+    }
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getEmptyEpidocItem-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getEmptyEpidocItem-method -->
+
+      
+        <div id="getEmptyHgvItem-method" class="method-detail ">
+          <a name="method-c-getEmptyHgvItem"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getEmptyHgvItem</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getEmptyHgvItem-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 516</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getEmptyHgvItem</span>
+  {
+    <span class="ruby-value">:c</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:y</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:m</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:d</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:cx</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:yx</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:mx</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:offset</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:ca</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>,
+    <span class="ruby-value">:c2</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:y2</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:m2</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:d2</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:cx2</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:yx2</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:mx2</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:offset2</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:precision2</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:ca2</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>,
+    <span class="ruby-value">:certainty</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+    <span class="ruby-value">:unknown</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+    <span class="ruby-value">:error</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+    <span class="ruby-value">:empty</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getEmptyHgvItem-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getEmptyHgvItem-method -->
+
+      
+        <div id="getMonthIso-method" class="method-detail ">
+          <a name="method-c-getMonthIso"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getMonthIso</span><span
+              class="method-args">(month, yearQualifier, chron)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getMonthIso-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 308</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getMonthIso</span> <span class="ruby-identifier">month</span>, <span class="ruby-identifier">yearQualifier</span>, <span class="ruby-identifier">chron</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">month</span>
+    <span class="ruby-identifier">month</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">2</span>, <span class="ruby-string">'0'</span>)
+  <span class="ruby-keyword">else</span>
+    {
+      <span class="ruby-value">:chronMin</span> =<span class="ruby-operator">&gt;</span> {
+        <span class="ruby-keyword">nil</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+        <span class="ruby-value">:beginning</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'01'</span>,
+        <span class="ruby-value">:firstHalf</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'01'</span>,
+        <span class="ruby-value">:firstHalfToMiddle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'04'</span>,
+        <span class="ruby-value">:middle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'04'</span>,
+        <span class="ruby-value">:middleToSecondHalf</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'07'</span>,
+        <span class="ruby-value">:secondHalf</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'07'</span>,
+        <span class="ruby-value">:end</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'10'</span>
+      },
+      <span class="ruby-value">:chronMax</span> =<span class="ruby-operator">&gt;</span> {
+        <span class="ruby-keyword">nil</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+        <span class="ruby-value">:beginning</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'03'</span>,
+        <span class="ruby-value">:firstHalf</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'06'</span>,
+        <span class="ruby-value">:firstHalfToMiddle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'06'</span>,
+        <span class="ruby-value">:middle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'09'</span>,
+        <span class="ruby-value">:middleToSecondHalf</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'09'</span>,
+        <span class="ruby-value">:secondHalf</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'12'</span>,
+        <span class="ruby-value">:end</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'12'</span>
+      }
+    }[<span class="ruby-identifier">chron</span>][<span class="ruby-identifier">yearQualifier</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">yearQualifier</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-string">'Circa'</span>, <span class="ruby-string">''</span>).<span class="ruby-identifier">to_sym</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getMonthIso-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getMonthIso-method -->
+
+      
+        <div id="getMonthQualifier-method" class="method-detail ">
+          <a name="method-c-getMonthQualifier"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getMonthQualifier</span><span
+              class="method-args">(day = nil, day2 = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getMonthQualifier-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 472</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getMonthQualifier</span> <span class="ruby-identifier">day</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">day2</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">day</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">day2</span>
+    <span class="ruby-keyword">return</span> {
+      [<span class="ruby-value">1</span>, <span class="ruby-value">10</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:beginning</span>,
+      [<span class="ruby-value">11</span>, <span class="ruby-value">20</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middle</span>,
+      [<span class="ruby-value">21</span>, <span class="ruby-value">28</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:end</span> <span class="ruby-comment"># CL</span>
+    }[[<span class="ruby-identifier">day</span>, <span class="ruby-identifier">day2</span>]]
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">day</span>
+    <span class="ruby-keyword">return</span> {
+      <span class="ruby-value">1</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:beginning</span>,
+      <span class="ruby-value">11</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middle</span>,
+      <span class="ruby-value">21</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:end</span>
+    }[<span class="ruby-identifier">day</span>]
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">day2</span>
+    <span class="ruby-keyword">return</span> {
+      <span class="ruby-value">10</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:beginning</span>,
+      <span class="ruby-value">20</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middle</span>,
+      <span class="ruby-value">28</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:end</span> <span class="ruby-comment"># CL</span>
+    }[<span class="ruby-identifier">day2</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getMonthQualifier-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getMonthQualifier-method -->
+
+      
+        <div id="getOffsetItem-method" class="method-detail ">
+          <a name="method-c-getOffsetItem"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getOffsetItem</span><span
+              class="method-args">(offset, position)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getOffsetItem-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 779</span>
+<span class="ruby-keyword">def</span>  <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getOffsetItem</span> <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">position</span>
+  <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">offset</span>.<span class="ruby-identifier">to_sym</span>
+  {
+    <span class="ruby-value">:value</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:before</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'vor'</span>, <span class="ruby-value">:after</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'nach'</span>, <span class="ruby-value">:beforeUncertain</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'vor (?)'</span>, <span class="ruby-value">:afterUncertain</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'nach (?)'</span>}[<span class="ruby-identifier">offset</span>],
+    <span class="ruby-value">:children</span> =<span class="ruby-operator">&gt;</span> {},
+    <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {
+      <span class="ruby-value">:type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">offset</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-string">'Uncertain'</span>, <span class="ruby-string">''</span>),
+      <span class="ruby-value">:position</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">position</span>
+    }
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getOffsetItem-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getOffsetItem-method -->
+
+      
+        <div id="getPrecision-method" class="method-detail ">
+          <a name="method-c-getPrecision"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getPrecision</span><span
+              class="method-args">(precision, cx, yx, mx)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getPrecision-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 546</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getPrecision</span> <span class="ruby-identifier">precision</span>, <span class="ruby-identifier">cx</span>, <span class="ruby-identifier">yx</span>, <span class="ruby-identifier">mx</span>
+  <span class="ruby-identifier">ca</span> = <span class="ruby-identifier">precision</span> <span class="ruby-operator">||</span> (<span class="ruby-identifier">cx</span>  <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">cx</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'Circa'</span>)) <span class="ruby-operator">||</span> (<span class="ruby-identifier">yx</span>  <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">yx</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'Circa'</span>)) <span class="ruby-operator">||</span> (<span class="ruby-identifier">mx</span>  <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">mx</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'Circa'</span>))
+  <span class="ruby-identifier">vague</span> = <span class="ruby-identifier">cx</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">yx</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">mx</span>
+  <span class="ruby-identifier">ca</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">vague</span> <span class="ruby-operator">?</span> <span class="ruby-value">:lowlow</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">ca</span> <span class="ruby-operator">?</span> <span class="ruby-value">:medium</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">vague</span> <span class="ruby-operator">?</span> <span class="ruby-value">:low</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getPrecision-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getPrecision-method -->
+
+      
+        <div id="getPrecisionItem-method" class="method-detail ">
+          <a name="method-c-getPrecisionItem"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getPrecisionItem</span><span
+              class="method-args">(degree, match = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getPrecisionItem-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 758</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getPrecisionItem</span> <span class="ruby-identifier">degree</span>, <span class="ruby-identifier">match</span> = <span class="ruby-keyword">nil</span> 
+  {
+    <span class="ruby-value">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
+    <span class="ruby-value">:children</span> =<span class="ruby-operator">&gt;</span> {},
+    <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {
+      <span class="ruby-value">:match</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">match</span>,
+      <span class="ruby-value">:degree</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">degree</span>
+    }
+  }   
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getPrecisionItem-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getPrecisionItem-method -->
+
+      
+        <div id="getYearIso-method" class="method-detail ">
+          <a name="method-c-getYearIso"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getYearIso</span><span
+              class="method-args">(century, centuryQualifier, chron)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getYearIso-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 269</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getYearIso</span> <span class="ruby-identifier">century</span>, <span class="ruby-identifier">centuryQualifier</span>, <span class="ruby-identifier">chron</span>
+  <span class="ruby-identifier">century</span> = <span class="ruby-identifier">century</span>.<span class="ruby-identifier">to_i</span>
+  
+  <span class="ruby-identifier">yearModifier</span> = {
+    <span class="ruby-value">:chronMin</span> =<span class="ruby-operator">&gt;</span> {
+      <span class="ruby-keyword">nil</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+      <span class="ruby-value">:beginning</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+      <span class="ruby-value">:beginningToMiddle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+      <span class="ruby-value">:firstHalf</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+      <span class="ruby-value">:firstHalfToMiddle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">25</span>,
+      <span class="ruby-value">:middle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">25</span>,
+      <span class="ruby-value">:middleToSecondHalf</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">50</span>,
+      <span class="ruby-value">:secondHalf</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">50</span>,
+      <span class="ruby-value">:middleToEnd</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">25</span>,
+      <span class="ruby-value">:end</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">75</span>
+    },
+    <span class="ruby-value">:chronMax</span> =<span class="ruby-operator">&gt;</span> {
+      <span class="ruby-keyword">nil</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+      <span class="ruby-value">:beginning</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">-75</span>,
+      <span class="ruby-value">:beginningToMiddle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">-50</span>,
+      <span class="ruby-value">:firstHalf</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">-50</span>,
+      <span class="ruby-value">:firstHalfToMiddle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">-50</span>,
+      <span class="ruby-value">:middle</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">-25</span>,
+      <span class="ruby-value">:middleToSecondHalf</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">-25</span>,
+      <span class="ruby-value">:secondHalf</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+      <span class="ruby-value">:middleToEnd</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+      <span class="ruby-value">:end</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+    }
+  }[<span class="ruby-identifier">chron</span>][<span class="ruby-identifier">centuryQualifier</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">centuryQualifier</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-string">'Circa'</span>, <span class="ruby-string">''</span>).<span class="ruby-identifier">to_sym</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>]
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">chron</span> <span class="ruby-operator">==</span> <span class="ruby-value">:chronMax</span>
+    <span class="ruby-identifier">year</span> = <span class="ruby-identifier">century</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> (<span class="ruby-identifier">century</span> * <span class="ruby-value">100</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">yearModifier</span>).<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">4</span>, <span class="ruby-string">'0'</span>) <span class="ruby-operator">:</span> ((<span class="ruby-identifier">century</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) * <span class="ruby-value">100</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">yearModifier</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">abs</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">4</span>, <span class="ruby-string">'0'</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">year</span> = <span class="ruby-identifier">century</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> (<span class="ruby-identifier">century</span> * <span class="ruby-value">100</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">yearModifier</span>).<span class="ruby-identifier">abs</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">4</span>, <span class="ruby-string">'0'</span>) <span class="ruby-operator">:</span> ((<span class="ruby-identifier">century</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) * <span class="ruby-value">100</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">yearModifier</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">4</span>, <span class="ruby-string">'0'</span>)
+  <span class="ruby-keyword">end</span>
+
+  (<span class="ruby-identifier">century</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-string">'-'</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">year</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getYearIso-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getYearIso-method -->
+
+      
+        <div id="getYearQualifier-method" class="method-detail ">
+          <a name="method-c-getYearQualifier"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">getYearQualifier</span><span
+              class="method-args">(month = nil, month2 = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="getYearQualifier-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 429</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getYearQualifier</span> <span class="ruby-identifier">month</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">month2</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">month</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">month2</span>
+    <span class="ruby-keyword">return</span> {
+      [<span class="ruby-value">1</span>, <span class="ruby-value">2</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:lateWinter</span>,
+      [<span class="ruby-value">2</span>, <span class="ruby-value">5</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:spring</span>,
+      [<span class="ruby-value">5</span>, <span class="ruby-value">8</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:summer</span>,
+      [<span class="ruby-value">8</span>, <span class="ruby-value">11</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:autumn</span>,
+      [<span class="ruby-value">11</span>, <span class="ruby-value">12</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:earlyWinter</span>,
+      [<span class="ruby-value">1</span>, <span class="ruby-value">6</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:firstHalf</span>,
+      [<span class="ruby-value">4</span>, <span class="ruby-value">9</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middle</span>,
+      [<span class="ruby-value">7</span>, <span class="ruby-value">12</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:secondHalf</span>,
+      [<span class="ruby-value">1</span>, <span class="ruby-value">3</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:beginning</span>,
+      [<span class="ruby-value">4</span>, <span class="ruby-value">6</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:fistHalfToMiddle</span>,
+      [<span class="ruby-value">7</span>, <span class="ruby-value">9</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middleToFirstHalf</span>,
+      [<span class="ruby-value">10</span>, <span class="ruby-value">12</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:end</span>
+    }[[<span class="ruby-identifier">month</span>, <span class="ruby-identifier">month2</span>]]
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">month</span>
+    <span class="ruby-keyword">return</span> {
+      <span class="ruby-value">1</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:beginning</span>,
+      <span class="ruby-value">2</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:spring</span>,
+      <span class="ruby-value">4</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middle</span>,
+      <span class="ruby-value">5</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:summer</span>,
+      <span class="ruby-value">7</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:secondHalf</span>,
+      <span class="ruby-value">8</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:autumn</span>,
+      <span class="ruby-value">10</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:end</span>,
+      <span class="ruby-value">11</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:earlyWinter</span>
+    }[<span class="ruby-identifier">month</span>]
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">month2</span>
+    <span class="ruby-keyword">return</span> {
+      <span class="ruby-value">2</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:lateWinter</span>,
+      <span class="ruby-value">3</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:beginning</span>,
+      <span class="ruby-value">5</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:spring</span>,
+      <span class="ruby-value">6</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:firstHalf</span>,
+      <span class="ruby-value">8</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:summer</span>,
+      <span class="ruby-value">9</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:middle</span>,
+      <span class="ruby-value">11</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:autumn</span>,
+      <span class="ruby-value">12</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:end</span>,
+    }[<span class="ruby-identifier">month2</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- getYearQualifier-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- getYearQualifier-method -->
+
+      
+        <div id="hgvToEpidoc-method" class="method-detail ">
+          <a name="method-c-hgvToEpidoc"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hgvToEpidoc</span><span
+              class="method-args">(date_item)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="hgvToEpidoc-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 791</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">hgvToEpidoc</span> <span class="ruby-identifier">date_item</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getEmptyEpidocItem</span>
+    
+  <span class="ruby-comment"># date it X, Y, Z</span>
+  <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:id</span>] = <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:id</span>]
+
+  <span class="ruby-comment"># unknown</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:unknown</span>]
+    <span class="ruby-identifier">t</span>[<span class="ruby-value">:value</span>] = <span class="ruby-string">'unbekannt'</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">t</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># centuries</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:c</span>]
+    <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:notBefore</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getYearIso</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:c</span>], <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:cx</span>], <span class="ruby-value">:chronMin</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:c2</span>]
+      <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:notAfter</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getYearIso</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:c2</span>], <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:cx2</span>], <span class="ruby-value">:chronMax</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:notAfter</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getYearIso</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:c</span>], <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:cx</span>], <span class="ruby-value">:chronMax</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">ca</span> = <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:cx</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:cx</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'Circa'</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword">true</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-identifier">ca2</span> = <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:cx2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:cx2</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'Circa'</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword">true</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">ca</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">ca2</span>
+      <span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>][<span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getPrecisionItem</span> <span class="ruby-string">'0.1'</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">ca</span>
+      <span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>][<span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getPrecisionItem</span> <span class="ruby-string">'0.1'</span>, <span class="ruby-string">'../@notBefore'</span>
+      <span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>][<span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getPrecisionItem</span> <span class="ruby-string">'0.3'</span>, <span class="ruby-string">'../@notAfter'</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">ca2</span>
+      <span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>][<span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getPrecisionItem</span> <span class="ruby-string">'0.3'</span>, <span class="ruby-string">'../@notBefore'</span>
+      <span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>][<span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getPrecisionItem</span> <span class="ruby-string">'0.1'</span>, <span class="ruby-string">'../@notAfter'</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:precision</span>] = <span class="ruby-string">'low'</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">y</span> = {<span class="ruby-keyword">nil</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">''</span>, <span class="ruby-value">0</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'-'</span>}[<span class="ruby-identifier">date_item</span>[<span class="ruby-value">:y</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/-/</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:y</span>].<span class="ruby-identifier">sub</span>(<span class="ruby-string">'-'</span>, <span class="ruby-string">''</span>).<span class="ruby-identifier">rjust</span>(<span class="ruby-value">4</span>, <span class="ruby-string">'0'</span>)
+    <span class="ruby-identifier">m</span> = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getMonthIso</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:m</span>], <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:yx</span>], <span class="ruby-value">:chronMin</span>
+    <span class="ruby-identifier">d</span> = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getDayIso</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:d</span>], <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:m</span>], <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:mx</span>], <span class="ruby-value">:chronMin</span>
+    
+    <span class="ruby-identifier">date</span> = <span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">m</span> <span class="ruby-operator">?</span> <span class="ruby-string">'-'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">m</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">d</span> <span class="ruby-operator">?</span> <span class="ruby-string">'-'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">d</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>) <span class="ruby-operator">:</span> <span class="ruby-string">''</span>)
+    
+    <span class="ruby-comment"># only one date</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">date_item</span>[<span class="ruby-value">:y2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">date_item</span>[<span class="ruby-value">:m2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">date_item</span>[<span class="ruby-value">:d2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">date_item</span>[<span class="ruby-value">:yx</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">date_item</span>[<span class="ruby-value">:mx</span>]
+      <span class="ruby-identifier">attribute</span> = <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:offset</span>] <span class="ruby-operator">?</span> (<span class="ruby-identifier">date_item</span>[<span class="ruby-value">:offset</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-string">'before'</span>) <span class="ruby-operator">?</span> <span class="ruby-value">:notAfter</span> <span class="ruby-operator">:</span> <span class="ruby-value">:notBefore</span>) <span class="ruby-operator">:</span> <span class="ruby-value">:when</span>
+      <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-identifier">attribute</span>] = <span class="ruby-identifier">date</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:notBefore</span>] = <span class="ruby-identifier">date</span>
+      
+      <span class="ruby-identifier">y2</span> = <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:y2</span>] <span class="ruby-operator">?</span> {<span class="ruby-keyword">nil</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">''</span>, <span class="ruby-value">0</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'-'</span>}[<span class="ruby-identifier">date_item</span>[<span class="ruby-value">:y2</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp">/-/</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:y2</span>].<span class="ruby-identifier">sub</span>(<span class="ruby-string">'-'</span>, <span class="ruby-string">''</span>).<span class="ruby-identifier">rjust</span>(<span class="ruby-value">4</span>, <span class="ruby-string">'0'</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">y</span>
+      <span class="ruby-identifier">m2</span> = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getMonthIso</span>((<span class="ruby-identifier">date_item</span>[<span class="ruby-value">:m2</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:m2</span>] <span class="ruby-operator">:</span> (<span class="ruby-identifier">date_item</span>[<span class="ruby-value">:d2</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:m</span>] <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>)), (<span class="ruby-identifier">date_item</span>[<span class="ruby-value">:yx2</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:yx2</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:yx</span>]), <span class="ruby-value">:chronMax</span>)
+      <span class="ruby-identifier">d2</span> = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getDayIso</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:d2</span>], (<span class="ruby-identifier">date_item</span>[<span class="ruby-value">:m</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:m</span>] <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>), (<span class="ruby-identifier">date_item</span>[<span class="ruby-value">:mx</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:mx</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:mx2</span>]), <span class="ruby-value">:chronMax</span>
+      
+      <span class="ruby-identifier">date2</span> = <span class="ruby-identifier">y2</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">m2</span> <span class="ruby-operator">?</span> <span class="ruby-string">'-'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">m2</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">d2</span> <span class="ruby-operator">?</span> <span class="ruby-string">'-'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">d2</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>) <span class="ruby-operator">:</span> <span class="ruby-string">''</span>)
+      
+      <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:notAfter</span>] = <span class="ruby-identifier">date2</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># precision</span>
+    <span class="ruby-identifier">precision</span> = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getPrecision</span>(<span class="ruby-identifier">date_item</span>[<span class="ruby-value">:precision</span>], <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:cx</span>], <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:yx</span>], <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:mx</span>])
+    <span class="ruby-identifier">precision2</span> = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getPrecision</span>(<span class="ruby-identifier">date_item</span>[<span class="ruby-value">:precision2</span>], <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:cx2</span>], <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:yx2</span>], <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:mx2</span>])
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">precision</span> <span class="ruby-operator">&amp;&amp;</span> ((<span class="ruby-identifier">precision</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">precision2</span>) <span class="ruby-operator">||</span> ([<span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:when</span>], <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:notBefore</span>], <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:notAfter</span>]].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>))
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">precision</span> <span class="ruby-operator">==</span> <span class="ruby-value">:lowlow</span>
+        <span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>][<span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getPrecisionItem</span> <span class="ruby-string">'0.1'</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:precision</span>] = <span class="ruby-identifier">precision</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">precision</span>
+       <span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>][<span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getPrecisionItem</span>(<span class="ruby-identifier">precision</span> <span class="ruby-operator">==</span> <span class="ruby-value">:low</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">precision</span> <span class="ruby-operator">==</span> <span class="ruby-value">:medium</span> <span class="ruby-operator">?</span> <span class="ruby-string">'0.5'</span> <span class="ruby-operator">:</span> <span class="ruby-string">'0.1'</span>), <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:when</span>] <span class="ruby-operator">?</span> <span class="ruby-string">'../@when'</span> <span class="ruby-operator">:</span> <span class="ruby-string">'../@notBefore'</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">precision2</span>
+      <span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>][<span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:precision</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getPrecisionItem</span>(<span class="ruby-identifier">precision2</span> <span class="ruby-operator">==</span> <span class="ruby-value">:low</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">precision2</span> <span class="ruby-operator">==</span> <span class="ruby-value">:medium</span> <span class="ruby-operator">?</span> <span class="ruby-string">'0.5'</span> <span class="ruby-operator">:</span> <span class="ruby-string">'0.1'</span>), <span class="ruby-string">'../@notAfter'</span>)
+    <span class="ruby-keyword">end</span>
+
+    
+  <span class="ruby-keyword">end</span>
+        
+  <span class="ruby-comment"># offset</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:offset</span>]
+    <span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:offset</span>][<span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:offset</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getOffsetItem</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:offset</span>], <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:offset2</span>]
+    <span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:offset</span>][<span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:offset</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getOffsetItem</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:offset2</span>], <span class="ruby-value">2</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># offset certainty</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:offset</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:offset</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'Uncertain'</span>)
+    <span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:certainty</span>][<span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:certainty</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getCertaintyItem</span> <span class="ruby-string">&quot;../offset[@type='&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">date_item</span>[<span class="ruby-value">:offset</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-string">'Uncertain'</span>, <span class="ruby-string">''</span>)<span class="ruby-operator">+</span><span class="ruby-string">&quot;']&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:offset2</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:offset2</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'Uncertain'</span>)
+    <span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:certainty</span>][<span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:certainty</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getCertaintyItem</span> <span class="ruby-string">&quot;../offset[@type='&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">date_item</span>[<span class="ruby-value">:offset2</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-string">'Uncertain'</span>, <span class="ruby-string">''</span>)<span class="ruby-operator">+</span><span class="ruby-string">&quot;']&quot;</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment"># certainty</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:certainty</span>] <span class="ruby-comment"># global uncertainty</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:certainty</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:low</span>
+      <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:certainty</span>] = <span class="ruby-string">'low'</span>
+    <span class="ruby-keyword">else</span> <span class="ruby-comment"># uncertainty for day, month or year</span>
+      <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:certainty</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'_'</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">dayMonthYear</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">match</span> = <span class="ruby-string">'../'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">dayMonthYear</span> <span class="ruby-operator">+</span> <span class="ruby-string">'-from-date(@'</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:when</span>] <span class="ruby-operator">?</span> <span class="ruby-string">'when'</span> <span class="ruby-operator">:</span> <span class="ruby-string">'notBefore'</span>) <span class="ruby-operator">+</span> <span class="ruby-string">')'</span> <span class="ruby-comment"># cl: support for plurals would go here </span>
+        <span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:certainty</span>][<span class="ruby-identifier">t</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:certainty</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getCertaintyItem</span> <span class="ruby-identifier">match</span>
+      }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment"># hgv format</span>
+  <span class="ruby-identifier">t</span>[<span class="ruby-value">:value</span>] = <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatDate</span> <span class="ruby-identifier">date_item</span>
+
+  <span class="ruby-identifier">t</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hgvToEpidoc-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hgvToEpidoc-method -->
+
+      
+        <div id="monthFromIso-method" class="method-detail ">
+          <a name="method-c-monthFromIso"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">monthFromIso</span><span
+              class="method-args">(iso)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="monthFromIso-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 508</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">monthFromIso</span> <span class="ruby-identifier">iso</span>
+  <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">extractFromIso</span> <span class="ruby-identifier">iso</span>, <span class="ruby-regexp">/\A-?\d\d\d\d-(\d\d)/</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- monthFromIso-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- monthFromIso-method -->
+
+      
+        <div id="monthOptions-method" class="method-detail ">
+          <a name="method-c-monthOptions"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">monthOptions</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="monthOptions-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 199</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">monthOptions</span>
+  [[<span class="ruby-string">''</span>, <span class="ruby-string">''</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.beginning'</span>), <span class="ruby-value">:beginning</span>],
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.beginningCirca'</span>), <span class="ruby-value">:beginningCirca</span>],
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.middle'</span>), <span class="ruby-value">:middle</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.middleCirca'</span>), <span class="ruby-value">:middleCirca</span>],
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.end'</span>), <span class="ruby-value">:end</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.endCirca'</span>), <span class="ruby-value">:endCirca</span>]]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- monthOptions-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- monthOptions-method -->
+
+      
+        <div id="offsetOptions-method" class="method-detail ">
+          <a name="method-c-offsetOptions"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">offsetOptions</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="offsetOptions-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 249</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">offsetOptions</span>
+  [[<span class="ruby-string">''</span>, <span class="ruby-string">''</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.before'</span>), <span class="ruby-value">:before</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.after'</span>), <span class="ruby-value">:after</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.beforeUncertain'</span>), <span class="ruby-value">:beforeUncertain</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.afterUncertain'</span>), <span class="ruby-value">:afterUncertain</span>]]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- offsetOptions-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- offsetOptions-method -->
+
+      
+        <div id="precisionOptions-method" class="method-detail ">
+          <a name="method-c-precisionOptions"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">precisionOptions</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="precisionOptions-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">precisionOptions</span>
+  [[<span class="ruby-string">''</span>, <span class="ruby-string">''</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.ca'</span>), <span class="ruby-value">:ca</span>]]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- precisionOptions-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- precisionOptions-method -->
+
+      
+        <div id="yearFromIso-method" class="method-detail ">
+          <a name="method-c-yearFromIso"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">yearFromIso</span><span
+              class="method-args">(iso)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="yearFromIso-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 504</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">yearFromIso</span> <span class="ruby-identifier">iso</span>
+  <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">extractFromIso</span> <span class="ruby-identifier">iso</span>, <span class="ruby-regexp">/\A(-?\d\d\d\d)/</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- yearFromIso-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- yearFromIso-method -->
+
+      
+        <div id="yearOptions-method" class="method-detail ">
+          <a name="method-c-yearOptions"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">yearOptions</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="yearOptions-source">
+<pre>
+<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 209</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">yearOptions</span>
+  [[<span class="ruby-string">''</span>, <span class="ruby-string">''</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.beginning'</span>), <span class="ruby-value">:beginning</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.beginningCirca'</span>), <span class="ruby-value">:beginningCirca</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.firstHalf'</span>), <span class="ruby-value">:firstHalf</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.firstHalfCirca'</span>), <span class="ruby-value">:firstHalfCirca</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.firstHalfToMiddle'</span>), <span class="ruby-value">:firstHalfToMiddle</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.firstHalfToMiddleCirca'</span>), <span class="ruby-value">:firstHalfToMiddleCirca</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.middle'</span>), <span class="ruby-value">:middle</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.middleCirca'</span>), <span class="ruby-value">:middleCirca</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.middleToSecondHalf'</span>), <span class="ruby-value">:middleToSecondHalf</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.middleToSecondHalfCirca'</span>), <span class="ruby-value">:middleToSecondHalfCirca</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.secondHalf'</span>), <span class="ruby-value">:secondHalf</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.secondHalfCirca'</span>), <span class="ruby-value">:secondHalfCirca</span>], 
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.end'</span>), <span class="ruby-value">:end</span>],
+    [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.endCirca'</span>), <span class="ruby-value">:endCirca</span>]]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- yearOptions-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- yearOptions-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

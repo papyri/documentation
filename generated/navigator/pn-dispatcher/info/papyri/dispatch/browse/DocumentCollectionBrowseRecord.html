@@ -183,7 +183,7 @@ Class DocumentCollectionBrowseRecord</H2>
 <TD><CODE><B><A HREF="../../../../info/papyri/dispatch/browse/DocumentCollectionBrowseRecord.html#getHTML()">getHTML</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an html representation of the Record</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an html representation of the Record.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -271,7 +271,10 @@ getHTML</H3>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getHTML</B>()</PRE>
 <DL>
 <DD><B>Description copied from class: <CODE><A HREF="../../../../info/papyri/dispatch/browse/BrowseRecord.html#getHTML()">BrowseRecord</A></CODE></B></DD>
-<DD>Returns an html representation of the Record
+<DD>Returns an html representation of the Record.
+ 
+ This method is required so that large groups of records can be iterated over 
+ and displayed automatically.
 <P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE><A HREF="../../../../info/papyri/dispatch/browse/BrowseRecord.html#getHTML()">getHTML</A></CODE> in class <CODE><A HREF="../../../../info/papyri/dispatch/browse/BrowseRecord.html" title="class in info.papyri.dispatch.browse">BrowseRecord</A></CODE></DL>
@@ -290,9 +293,6 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 <DL>
 <DD>Assembles the anchor tag to the next level down in the hierarchy
 <P>
-<DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../info/papyri/dispatch/browse/BrowseRecord.html#assembleLink()">assembleLink</A></CODE> in class <CODE><A HREF="../../../../info/papyri/dispatch/browse/BrowseRecord.html" title="class in info.papyri.dispatch.browse">BrowseRecord</A></CODE></DL>
-</DD>
 <DD><DL>
 
 <DT><B>Returns:</B><DD>An anchor tag</DL>

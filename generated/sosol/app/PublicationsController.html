@@ -1,0 +1,2243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Class: PublicationsController</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./app/controllers/publications_controller_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="app/controllers/publications_controller.rb">app/controllers/publications_controller.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="ApplicationController.html">ApplicationController</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-advanced_create">#advanced_create</a></li>
+          
+          <li><a href="#method-i-allow_submit-3F">#allow_submit?</a></li>
+          
+          <li><a href="#method-i-archive">#archive</a></li>
+          
+          <li><a href="#method-i-archive_all">#archive_all</a></li>
+          
+          <li><a href="#method-i-archive_pub">#archive_pub</a></li>
+          
+          <li><a href="#method-i-become_finalizer">#become_finalizer</a></li>
+          
+          <li><a href="#method-i-confirm_archive">#confirm_archive</a></li>
+          
+          <li><a href="#method-i-confirm_archive_all">#confirm_archive_all</a></li>
+          
+          <li><a href="#method-i-confirm_delete">#confirm_delete</a></li>
+          
+          <li><a href="#method-i-confirm_withdraw">#confirm_withdraw</a></li>
+          
+          <li><a href="#method-i-create">#create</a></li>
+          
+          <li><a href="#method-i-create_from_identifier">#create_from_identifier</a></li>
+          
+          <li><a href="#method-i-create_from_list">#create_from_list</a></li>
+          
+          <li><a href="#method-i-create_from_selector">#create_from_selector</a></li>
+          
+          <li><a href="#method-i-create_from_templates">#create_from_templates</a></li>
+          
+          <li><a href="#method-i-destroy">#destroy</a></li>
+          
+          <li><a href="#method-i-determine_creatable_identifiers">#determine_creatable_identifiers</a></li>
+          
+          <li><a href="#method-i-edit">#edit</a></li>
+          
+          <li><a href="#method-i-edit_adjacent">#edit_adjacent</a></li>
+          
+          <li><a href="#method-i-edit_biblio">#edit_biblio</a></li>
+          
+          <li><a href="#method-i-edit_meta">#edit_meta</a></li>
+          
+          <li><a href="#method-i-edit_text">#edit_text</a></li>
+          
+          <li><a href="#method-i-edit_trans">#edit_trans</a></li>
+          
+          <li><a href="#method-i-expire_publication_cache">#expire_publication_cache</a></li>
+          
+          <li><a href="#method-i-finalize">#finalize</a></li>
+          
+          <li><a href="#method-i-finalize_review">#finalize_review</a></li>
+          
+          <li><a href="#method-i-index">#index</a></li>
+          
+          <li><a href="#method-i-is_theirs-3F">#is_theirs?</a></li>
+          
+          <li><a href="#method-i-master_list">#master_list</a></li>
+          
+          <li><a href="#method-i-new">#new</a></li>
+          
+          <li><a href="#method-i-publication_from_identifier">#publication_from_identifier</a></li>
+          
+          <li><a href="#method-i-publication_from_identifiers">#publication_from_identifiers</a></li>
+          
+          <li><a href="#method-i-show">#show</a></li>
+          
+          <li><a href="#method-i-submit">#submit</a></li>
+          
+          <li><a href="#method-i-vote">#vote</a></li>
+          
+          <li><a href="#method-i-withdraw">#withdraw</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Papyrillio.html">Papyrillio</a></li>
+        
+          <li><a href="./Papyrillio/Aggregator.html">Papyrillio::Aggregator</a></li>
+        
+          <li><a href="./Papyrillio/Collector.html">Papyrillio::Collector</a></li>
+        
+          <li><a href="./Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a></li>
+        
+          <li><a href="./Papyrillio/Decorator.html">Papyrillio::Decorator</a></li>
+        
+          <li><a href="./Papyrillio/Organiser.html">Papyrillio::Organiser</a></li>
+        
+          <li><a href="./Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a></li>
+        
+          <li><a href="./Papyrillio/Printer.html">Papyrillio::Printer</a></li>
+        
+          <li><a href="./Papyrillio/Publishee.html">Papyrillio::Publishee</a></li>
+        
+          <li><a href="./Papyrillio/Publisher.html">Papyrillio::Publisher</a></li>
+        
+          <li><a href="./Papyrillio/Transformer.html">Papyrillio::Transformer</a></li>
+        
+          <li><a href="./JRubyXML.html">JRubyXML</a></li>
+        
+          <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a></li>
+        
+          <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a></li>
+        
+          <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a></li>
+        
+          <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a></li>
+        
+          <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a></li>
+        
+          <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a></li>
+        
+          <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a></li>
+        
+          <li><a href="./REXML.html">REXML</a></li>
+        
+          <li><a href="./REXML/Document.html">REXML::Document</a></li>
+        
+          <li><a href="./REXML/Element.html">REXML::Element</a></li>
+        
+          <li><a href="./REXML/XPath.html">REXML::XPath</a></li>
+        
+          <li><a href="./Rpx.html">Rpx</a></li>
+        
+          <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a></li>
+        
+          <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a></li>
+        
+          <li><a href="./Comment.html">Comment</a></li>
+        
+          <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a></li>
+        
+          <li><a href="./Doco.html">Doco</a></li>
+        
+          <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a></li>
+        
+          <li><a href="./Grit.html">Grit</a></li>
+        
+          <li><a href="./Grit/Commit.html">Grit::Commit</a></li>
+        
+          <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a></li>
+        
+          <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
+        
+          <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a></li>
+        
+          <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a></li>
+        
+          <li><a href="./NumbersRDF.html">NumbersRDF</a></li>
+        
+          <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a></li>
+        
+          <li><a href="./AjaxProxyController.html">AjaxProxyController</a></li>
+        
+          <li><a href="./ApplicationController.html">ApplicationController</a></li>
+        
+          <li><a href="./ApplicationHelper.html">ApplicationHelper</a></li>
+        
+          <li><a href="./Board.html">Board</a></li>
+        
+          <li><a href="./BoardsController.html">BoardsController</a></li>
+        
+          <li><a href="./CommentsController.html">CommentsController</a></li>
+        
+          <li><a href="./DDBIdentifier.html">DDBIdentifier</a></li>
+        
+          <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a></li>
+        
+          <li><a href="./Decree.html">Decree</a></li>
+        
+          <li><a href="./DecreesController.html">DecreesController</a></li>
+        
+          <li><a href="./DocosController.html">DocosController</a></li>
+        
+          <li><a href="./DocovideosController.html">DocovideosController</a></li>
+        
+          <li><a href="./Emailer.html">Emailer</a></li>
+        
+          <li><a href="./EmailerMailer.html">EmailerMailer</a></li>
+        
+          <li><a href="./EmailersController.html">EmailersController</a></li>
+        
+          <li><a href="./Event.html">Event</a></li>
+        
+          <li><a href="./EventsController.html">EventsController</a></li>
+        
+          <li><a href="./GitConf.html">GitConf</a></li>
+        
+          <li><a href="./HGVBiblioIdentifier.html">HGVBiblioIdentifier</a></li>
+        
+          <li><a href="./HGVIdentifier.html">HGVIdentifier</a></li>
+        
+          <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a></li>
+        
+          <li><a href="./HelperController.html">HelperController</a></li>
+        
+          <li><a href="./HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a></li>
+        
+          <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></li>
+        
+          <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a></li>
+        
+          <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a></li>
+        
+          <li><a href="./Identifier.html">Identifier</a></li>
+        
+          <li><a href="./IdentifiersController.html">IdentifiersController</a></li>
+        
+          <li><a href="./Integer.html">Integer</a></li>
+        
+          <li><a href="./Leiden.html">Leiden</a></li>
+        
+          <li><a href="./LeidenController.html">LeidenController</a></li>
+        
+          <li><a href="./LinkingInfo.html">LinkingInfo</a></li>
+        
+          <li><a href="./MaintenanceMode.html">MaintenanceMode</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./Publication.html">Publication</a></li>
+        
+          <li><a href="./PublicationsController.html">PublicationsController</a></li>
+        
+          <li><a href="./Rails.html">Rails</a></li>
+        
+          <li><a href="./RepositoriesController.html">RepositoriesController</a></li>
+        
+          <li><a href="./Repository.html">Repository</a></li>
+        
+          <li><a href="./RpxController.html">RpxController</a></li>
+        
+          <li><a href="./TranslationHelperController.html">TranslationHelperController</a></li>
+        
+          <li><a href="./TranslationLeiden.html">TranslationLeiden</a></li>
+        
+          <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a></li>
+        
+          <li><a href="./User.html">User</a></li>
+        
+          <li><a href="./UserController.html">UserController</a></li>
+        
+          <li><a href="./UserIdentifier.html">UserIdentifier</a></li>
+        
+          <li><a href="./Vote.html">Vote</a></li>
+        
+          <li><a href="./VotesController.html">VotesController</a></li>
+        
+          <li><a href="./WelcomeController.html">WelcomeController</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">PublicationsController</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="advanced_create-method" class="method-detail ">
+          <a name="method-i-advanced_create"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">advanced_create</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="advanced_create-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">advanced_create</span>()
+  
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- advanced_create-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- advanced_create-method -->
+
+      
+        <div id="allow_submit-3F-method" class="method-detail ">
+          <a name="method-i-allow_submit-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">allow_submit?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="allow_submit-3F-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">allow_submit?</span>
+  <span class="ruby-comment">#check if publication has been changed by user</span>
+  <span class="ruby-identifier">allow</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">modified?</span>
+  
+  <span class="ruby-comment">#only let creator submit</span>
+  <span class="ruby-identifier">allow</span> = <span class="ruby-identifier">allow</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">creator_id</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span> 
+  
+  <span class="ruby-comment">#only let user submit, don't let a board member submit</span>
+  <span class="ruby-identifier">allow</span> = <span class="ruby-identifier">allow</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;User&quot;</span>
+  
+  <span class="ruby-comment">#dont let user submit if already submitted, or committed etc..</span>
+  <span class="ruby-identifier">allow</span> = <span class="ruby-identifier">allow</span> <span class="ruby-operator">&amp;&amp;</span> ((<span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;editing&quot;</span>) <span class="ruby-operator">||</span> (<span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;new&quot;</span>))
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">allow</span>
+  
+  <span class="ruby-comment">#below bypassed until we have return mechanism in place</span>
+  
+  <span class="ruby-comment">#check if any part of the publication is still being edited (ie not already submitted)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">allow</span> <span class="ruby-comment">#something has been modified so lets see if they can submit it</span>
+    <span class="ruby-identifier">allow</span> = <span class="ruby-keyword">false</span> <span class="ruby-comment">#dont let them submit unless something is in edit status</span>
+    <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span>  <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">identifier</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;editing&quot;</span> 
+        <span class="ruby-identifier">allow</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">end</span>        
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+ <span class="ruby-identifier">allow</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- allow_submit-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- allow_submit-3F-method -->
+
+      
+        <div id="archive-method" class="method-detail ">
+          <a name="method-i-archive"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">archive</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="archive-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 624</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">archive</span>
+  <span class="ruby-identifier">archive_pub</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-identifier">expire_publication_cache</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@publication</span>    
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- archive-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- archive-method -->
+
+      
+        <div id="archive_all-method" class="method-detail ">
+          <a name="method-i-archive_all"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">archive_all</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="archive_all-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 630</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">archive_all</span>
+  <span class="ruby-identifier">id_list</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\//</span>)
+  <span class="ruby-identifier">id_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>
+     <span class="ruby-identifier">archive_pub</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">expire_publication_cache</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span> 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- archive_all-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- archive_all-method -->
+
+      
+        <div id="become_finalizer-method" class="method-detail ">
+          <a name="method-i-become_finalizer"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">become_finalizer</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="become_finalizer-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 261</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">become_finalizer</span>
+  <span class="ruby-comment"># TODO make sure we don't steal it from someone who is working on it</span>
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">remove_finalizer</span>
+  
+  <span class="ruby-comment">#note this can only be called on a board owned publication</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;Board&quot;</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;Can't change finalizer on non-board copy of publication.&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">show</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">send_to_finalizer</span>(<span class="ruby-ivar">@current_user</span>)
+  <span class="ruby-identifier">redirect_to</span> (<span class="ruby-identifier">dashboard_url</span>) <span class="ruby-comment">#:controller =&gt; &quot;publications&quot;, :action =&gt; &quot;finalize_review&quot; , :id =&gt; new_publication_id</span>
+
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- become_finalizer-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- become_finalizer-method -->
+
+      
+        <div id="confirm_archive-method" class="method-detail ">
+          <a name="method-i-confirm_archive"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">confirm_archive</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="confirm_archive-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 616</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">confirm_archive</span>
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- confirm_archive-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- confirm_archive-method -->
+
+      
+        <div id="confirm_archive_all-method" class="method-detail ">
+          <a name="method-i-confirm_archive_all"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">confirm_archive_all</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="confirm_archive_all-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 620</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">confirm_archive_all</span>
+  <span class="ruby-ivar">@publications</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:owner_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'committed'</span>, <span class="ruby-value">:creator_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">:parent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span> }, <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- confirm_archive_all-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- confirm_archive_all-method -->
+
+      
+        <div id="confirm_delete-method" class="method-detail ">
+          <a name="method-i-confirm_delete"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">confirm_delete</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="confirm_delete-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 653</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">confirm_delete</span>
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- confirm_delete-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- confirm_delete-method -->
+
+      
+        <div id="confirm_withdraw-method" class="method-detail ">
+          <a name="method-i-confirm_withdraw"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">confirm_withdraw</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="confirm_withdraw-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 639</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">confirm_withdraw</span>
+ <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- confirm_withdraw-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- confirm_withdraw-method -->
+
+      
+        <div id="create-method" class="method-detail ">
+          <a name="method-i-create"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>POST /publications POST /publications.xml</p>
+            
+
+            
+            <div class="method-source-code" id="create-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">owner</span> = <span class="ruby-ivar">@current_user</span>
+  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">populate_identifiers_from_identifiers</span>(
+    <span class="ruby-identifier">params</span>[<span class="ruby-value">:pn_id</span>])
+  
+  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">creator</span> = <span class="ruby-ivar">@current_user</span>
+  <span class="ruby-comment">#@publication.creator_type = &quot;User&quot;</span>
+  <span class="ruby-comment">#@publication.creator_id = @current_user</span>
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">branch_from_master</span>
+    
+    <span class="ruby-comment"># need to remove repeat against publication model</span>
+    <span class="ruby-identifier">e</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">e</span>.<span class="ruby-identifier">category</span> = <span class="ruby-string">&quot;started editing&quot;</span>
+    <span class="ruby-identifier">e</span>.<span class="ruby-identifier">target</span> = <span class="ruby-ivar">@publication</span>
+    <span class="ruby-identifier">e</span>.<span class="ruby-identifier">owner</span> = <span class="ruby-ivar">@current_user</span>
+    <span class="ruby-identifier">e</span>.<span class="ruby-identifier">save!</span>
+    
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">'Publication was successfully created.'</span>
+    <span class="ruby-identifier">expire_publication_cache</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">edit_polymorphic_path</span>([<span class="ruby-ivar">@publication</span>, <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">entry_identifier</span>])
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">'Error creating publication'</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create-method -->
+
+      
+        <div id="create_from_identifier-method" class="method-detail ">
+          <a name="method-i-create_from_identifier"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create_from_identifier</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="create_from_identifier-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_from_identifier</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">blank?</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">'You must specify an identifier.'</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">identifier</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+  
+  <span class="ruby-identifier">related_identifiers</span> = <span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NumbersHelper</span>.<span class="ruby-identifier">identifier_to_identifiers</span>(<span class="ruby-identifier">identifier</span>)
+  
+  <span class="ruby-identifier">publication_from_identifier</span>(<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">related_identifiers</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create_from_identifier-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create_from_identifier-method -->
+
+      
+        <div id="create_from_list-method" class="method-detail ">
+          <a name="method-i-create_from_list"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create_from_list</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>list is in the form of pn id’s separated by returns</p>
+
+<pre>such as</pre>
+
+<p>papyri.info/ddbdp/bgu;7;1504 papyri.info/ddbdp/bgu;7;1505
+papyri.info/ddbdp/bgu;7;1506</p>
+            
+
+            
+            <div class="method-source-code" id="create_from_list-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_from_list</span>
+  <span class="ruby-identifier">id_list</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:pn_id_list</span>].<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\s+/</span>) <span class="ruby-comment">#(/\r\n?/)</span>
+  <span class="ruby-identifier">list_is_good</span> = <span class="ruby-keyword">true</span>
+  
+  <span class="ruby-comment">#get rid of any blank lines, etc</span>
+  <span class="ruby-identifier">id_list</span> = <span class="ruby-identifier">id_list</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">reject</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> }
+  
+  <span class="ruby-comment">#check that the list is in the correct form</span>
+  <span class="ruby-comment">#clean up the ids</span>
+  <span class="ruby-identifier">id_list</span>.<span class="ruby-identifier">map!</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">id</span>.<span class="ruby-identifier">chomp!</span>(<span class="ruby-string">'/'</span>);
+    <span class="ruby-identifier">pos</span> = <span class="ruby-identifier">id</span>.<span class="ruby-identifier">index</span>(<span class="ruby-string">'papyri.info'</span>);
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">pos</span>
+      <span class="ruby-identifier">id</span> = <span class="ruby-identifier">id</span>[<span class="ruby-identifier">pos</span><span class="ruby-operator">..</span><span class="ruby-identifier">id</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>]
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment">#check if there is a good response from the number server</span>
+    <span class="ruby-identifier">response</span> =  <span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NumbersHelper</span>.<span class="ruby-identifier">identifier_to_numbers_server_response</span>(<span class="ruby-identifier">id</span>)
+    
+    <span class="ruby-comment">#puts id + &quot; returned &quot; + response.code # + response.body</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">!=</span> <span class="ruby-string">'200'</span>
+      
+      <span class="ruby-comment">#bad format most likely</span>
+      <span class="ruby-identifier">id</span> = <span class="ruby-string">&quot;Numbers Server Error, Check format--&gt; &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">id</span>
+      <span class="ruby-identifier">list_is_good</span> = <span class="ruby-keyword">false</span>
+      
+    <span class="ruby-keyword">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">index</span>(<span class="ruby-string">'rdf:Description'</span>)
+      
+      <span class="ruby-comment">#item does not exist most likely</span>
+      <span class="ruby-comment">#puts &quot;text is bad&quot;</span>
+      <span class="ruby-identifier">id</span> = <span class="ruby-string">&quot;Not Found--&gt; &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">id</span>
+      <span class="ruby-identifier">list_is_good</span> = <span class="ruby-keyword">false</span>
+      
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">id</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">list_is_good</span>
+    <span class="ruby-comment">#recreate list</span>
+    <span class="ruby-identifier">error_str</span>  = <span class="ruby-string">&quot;Unable to create Publication.&lt;br /&gt;&quot;</span>
+    <span class="ruby-identifier">id_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>
+     <span class="ruby-identifier">error_str</span> = <span class="ruby-identifier">error_str</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;&lt;br /&gt;&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-identifier">error_str</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'advanced_create'</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">publication_from_identifiers</span>(<span class="ruby-identifier">id_list</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create_from_list-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create_from_list-method -->
+
+      
+        <div id="create_from_selector-method" class="method-detail ">
+          <a name="method-i-create_from_selector"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create_from_selector</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="create_from_selector-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 495</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_from_selector</span>
+  <span class="ruby-identifier">identifier_class</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:IdentifierClass</span>]
+  <span class="ruby-identifier">collection</span> = <span class="ruby-identifier">params</span>[<span class="ruby-node">&quot;#{identifier_class}CollectionSelect&quot;</span>.<span class="ruby-identifier">intern</span>]
+  <span class="ruby-identifier">volume</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:volume_number</span>]
+  <span class="ruby-identifier">document</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:document_number</span>]
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">volume</span> <span class="ruby-operator">==</span> <span class="ruby-string">'Volume Number'</span>
+    <span class="ruby-identifier">volume</span> = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">document</span> <span class="ruby-operator">==</span> <span class="ruby-string">'Document Number'</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">document</span>.<span class="ruby-identifier">blank?</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">'Error creating publication: you must specify a document number'</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">identifier_class</span> <span class="ruby-operator">==</span> <span class="ruby-string">'DDBIdentifier'</span>
+    <span class="ruby-identifier">document_path</span> = [<span class="ruby-identifier">collection</span>, <span class="ruby-identifier">volume</span>, <span class="ruby-identifier">document</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">';'</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">identifier_class</span> <span class="ruby-operator">==</span> <span class="ruby-string">'HGVIdentifier'</span>
+    <span class="ruby-identifier">collection</span> = <span class="ruby-identifier">collection</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-string">' '</span>, <span class="ruby-string">'_'</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">volume</span>.<span class="ruby-identifier">blank?</span>
+      <span class="ruby-identifier">document_path</span> = [<span class="ruby-identifier">collection</span>, <span class="ruby-identifier">document</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">'_'</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">document_path</span> = [<span class="ruby-identifier">collection</span>, <span class="ruby-identifier">volume</span>, <span class="ruby-identifier">document</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">'_'</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">namespace</span> = <span class="ruby-identifier">identifier_class</span>.<span class="ruby-identifier">constantize</span><span class="ruby-operator">::</span><span class="ruby-constant">IDENTIFIER_NAMESPACE</span>
+  
+  <span class="ruby-identifier">identifier</span> = [<span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NAMESPACE_IDENTIFIER</span>, <span class="ruby-identifier">namespace</span>, <span class="ruby-identifier">document_path</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">'/'</span>)
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">identifier_class</span> <span class="ruby-operator">==</span> <span class="ruby-string">'HGVIdentifier'</span>
+    <span class="ruby-identifier">related_identifiers</span> = <span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NumbersHelper</span>.<span class="ruby-identifier">collection_identifier_to_identifiers</span>(<span class="ruby-identifier">identifier</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">related_identifiers</span> = <span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NumbersHelper</span>.<span class="ruby-identifier">identifier_to_identifiers</span>(<span class="ruby-identifier">identifier</span>)
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">publication_from_identifier</span>(<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">related_identifiers</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create_from_selector-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create_from_selector-method -->
+
+      
+        <div id="create_from_templates-method" class="method-detail ">
+          <a name="method-i-create_from_templates"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create_from_templates</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="create_from_templates-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_from_templates</span>
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">new_from_templates</span>(<span class="ruby-ivar">@current_user</span>)
+  
+  <span class="ruby-comment"># need to remove repeat against publication model</span>
+  <span class="ruby-identifier">e</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">e</span>.<span class="ruby-identifier">category</span> = <span class="ruby-string">&quot;created&quot;</span>
+  <span class="ruby-identifier">e</span>.<span class="ruby-identifier">target</span> = <span class="ruby-ivar">@publication</span>
+  <span class="ruby-identifier">e</span>.<span class="ruby-identifier">owner</span> = <span class="ruby-ivar">@current_user</span>
+  <span class="ruby-identifier">e</span>.<span class="ruby-identifier">save!</span>
+  
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">'Publication was successfully created.'</span>
+  <span class="ruby-comment">#redirect_to edit_polymorphic_path([@publication, @publication.entry_identifier])</span>
+  <span class="ruby-identifier">expire_publication_cache</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@publication</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create_from_templates-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create_from_templates-method -->
+
+      
+        <div id="destroy-method" class="method-detail ">
+          <a name="method-i-destroy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">destroy</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>DELETE</p>
+            
+
+            
+            <div class="method-source-code" id="destroy-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 658</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-identifier">pub_name</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">title</span>
+  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">destroy</span>
+  
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">'Publication '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">pub_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">' was successfully deleted.'</span>
+  <span class="ruby-identifier">expire_publication_cache</span>
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span> }
+    
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- destroy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- destroy-method -->
+
+      
+        <div id="determine_creatable_identifiers-method" class="method-detail ">
+          <a name="method-i-determine_creatable_identifiers"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">determine_creatable_identifiers</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="determine_creatable_identifiers-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">determine_creatable_identifiers</span>
+  <span class="ruby-ivar">@creatable_identifiers</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Identifier</span><span class="ruby-operator">::</span><span class="ruby-constant">IDENTIFIER_SUBCLASSES</span>)
+  
+  <span class="ruby-comment">#WARNING hardcoded identifier depenency hack  </span>
+  <span class="ruby-comment">#enforce creation order</span>
+  <span class="ruby-identifier">has_meta</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">has_text</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;HGVMetaIdentifier&quot;</span>
+      <span class="ruby-identifier">has_meta</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;DDBIdentifier&quot;</span>
+     <span class="ruby-identifier">has_text</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">has_text</span>
+    <span class="ruby-comment">#cant create trans</span>
+    <span class="ruby-ivar">@creatable_identifiers</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;HGVTransIdentifier&quot;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">has_meta</span>
+    <span class="ruby-comment">#cant create text</span>
+    <span class="ruby-ivar">@creatable_identifiers</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;DDBIdentifier&quot;</span>)
+    <span class="ruby-comment">#cant create trans</span>
+    <span class="ruby-ivar">@creatable_identifiers</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;HGVTransIdentifier&quot;</span>)     
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment">#TODO - is Biblio needed?</span>
+  <span class="ruby-ivar">@creatable_identifiers</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;HGVBiblioIdentifier&quot;</span>)
+  
+  <span class="ruby-comment">#only let user create new for non-existing        </span>
+  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@creatable_identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ci</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">ci</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>
+        <span class="ruby-ivar">@creatable_identifiers</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">ci</span>)    
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>  
+  
+  
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- determine_creatable_identifiers-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- determine_creatable_identifiers-method -->
+
+      
+        <div id="edit-method" class="method-detail ">
+          <a name="method-i-edit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">edit</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>GET /publications/1/edit</p>
+            
+
+            
+            <div class="method-source-code" id="edit-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 413</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">edit_polymorphic_path</span>([<span class="ruby-ivar">@publication</span>, <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">entry_identifier</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- edit-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- edit-method -->
+
+      
+        <div id="edit_adjacent-method" class="method-detail ">
+          <a name="method-i-edit_adjacent"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">edit_adjacent</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="edit_adjacent-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 444</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_adjacent</span>
+
+  <span class="ruby-comment">#if they are on show, then need to goto first or last identifers</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:current_action_name</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;show&quot;</span>
+    <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:direction</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'prev'</span>
+      <span class="ruby-ivar">@identifier</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">last</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@identifier</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">first</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">edit_polymorphic_path</span>([<span class="ruby-ivar">@publication</span>, <span class="ruby-ivar">@identifier</span>])
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:pub_id</span>])
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:direction</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'prev'</span>
+    <span class="ruby-identifier">direction</span> = <span class="ruby-value">-1</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-comment">#assume next params[:direction] == 'next'</span>
+    <span class="ruby-identifier">direction</span> = <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@identifier</span> = <span class="ruby-constant">Identifier</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id_id</span>])
+  <span class="ruby-identifier">current_identifier_class</span> = <span class="ruby-ivar">@identifier</span>.<span class="ruby-identifier">class</span>
+  <span class="ruby-identifier">current_index</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">index</span>(<span class="ruby-ivar">@identifier</span>)
+
+  <span class="ruby-identifier">return_index</span> = <span class="ruby-identifier">current_index</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">direction</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">return_index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>)
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@publication</span>
+    <span class="ruby-keyword">return</span>
+    <span class="ruby-comment">#or for loop over without overview</span>
+    <span class="ruby-comment">#return_index = @publication.identifiers.length - 1</span>
+  <span class="ruby-keyword">elsif</span> (<span class="ruby-identifier">return_index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">length</span>)
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@publication</span>
+    <span class="ruby-keyword">return</span>
+    <span class="ruby-comment">#or for loop over without overview</span>
+    <span class="ruby-comment">#return_index = 0</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@identifier</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">identifiers</span>[<span class="ruby-identifier">return_index</span>]
+  <span class="ruby-keyword">if</span> (<span class="ruby-ivar">@identifier</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">current_identifier_class</span>)
+    <span class="ruby-comment">#if no longer the same class, we can't assume that the next class as the same edit methods</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">edit_polymorphic_path</span>([<span class="ruby-ivar">@publication</span>, <span class="ruby-ivar">@identifier</span>])
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment">#/publications/1/identifiers/1/action</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:current_controller_name</span>], <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:current_action_name</span>], <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@identifier</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:publication_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:pub_id</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- edit_adjacent-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- edit_adjacent-method -->
+
+      
+        <div id="edit_biblio-method" class="method-detail ">
+          <a name="method-i-edit_biblio"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">edit_biblio</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="edit_biblio-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 437</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_biblio</span>
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@identifier</span> = <span class="ruby-constant">HGVBiblioIdentifier</span>.<span class="ruby-identifier">find_by_publication_id</span>(<span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">edit_polymorphic_path</span>([<span class="ruby-ivar">@publication</span>, <span class="ruby-ivar">@identifier</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- edit_biblio-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- edit_biblio-method -->
+
+      
+        <div id="edit_meta-method" class="method-detail ">
+          <a name="method-i-edit_meta"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">edit_meta</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="edit_meta-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 425</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_meta</span>
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@identifier</span> = <span class="ruby-constant">HGVMetaIdentifier</span>.<span class="ruby-identifier">find_by_publication_id</span>(<span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">edit_polymorphic_path</span>([<span class="ruby-ivar">@publication</span>, <span class="ruby-ivar">@identifier</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- edit_meta-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- edit_meta-method -->
+
+      
+        <div id="edit_text-method" class="method-detail ">
+          <a name="method-i-edit_text"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">edit_text</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="edit_text-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 419</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_text</span>
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@identifier</span> = <span class="ruby-constant">DDBIdentifier</span>.<span class="ruby-identifier">find_by_publication_id</span>(<span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">edit_polymorphic_path</span>([<span class="ruby-ivar">@publication</span>, <span class="ruby-ivar">@identifier</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- edit_text-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- edit_text-method -->
+
+      
+        <div id="edit_trans-method" class="method-detail ">
+          <a name="method-i-edit_trans"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">edit_trans</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="edit_trans-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 431</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_trans</span>  
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])    
+  <span class="ruby-ivar">@identifier</span> = <span class="ruby-constant">HGVTransIdentifier</span>.<span class="ruby-identifier">find_by_publication_id</span>(<span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">edit_polymorphic_path</span>([<span class="ruby-ivar">@publication</span>, <span class="ruby-ivar">@identifier</span>])    
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- edit_trans-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- edit_trans-method -->
+
+      
+        <div id="finalize-method" class="method-detail ">
+          <a name="method-i-finalize"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">finalize</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="finalize-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 296</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">finalize</span>
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  
+  
+  <span class="ruby-comment">#find identifier so we can set the votes into the xml</span>
+  <span class="ruby-comment">#@identifier = Identifier.find(params[:identifier_id])</span>
+  <span class="ruby-comment">#@identifier.update_revision_desc(params[:comment], @current_user)</span>
+  <span class="ruby-comment">#@identifier.save</span>
+  
+  <span class="ruby-comment">#find all modified identiers in the publication so we can set the votes into the xml</span>
+  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>
+    <span class="ruby-comment">#board controls this id and it has been modified</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">id</span>.<span class="ruby-identifier">modified?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">find_first_board</span>.<span class="ruby-identifier">controls_identifier?</span>(<span class="ruby-identifier">id</span>) 
+      <span class="ruby-identifier">id</span>.<span class="ruby-identifier">update_revision_desc</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:comment</span>], <span class="ruby-ivar">@current_user</span>);
+      <span class="ruby-identifier">id</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+  
+  <span class="ruby-comment">#do we need to save publication before continuing with commit??</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">canon_sha</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">commit_to_canon</span>
+    <span class="ruby-identifier">expire_publication_cache</span>(<span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">creator</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-identifier">expire_fragment</span>(<span class="ruby-regexp">/board_publications_\d+/</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EACCES</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">git_permissions_error</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-node">&quot;Error finalizing. Error message was: #{git_permissions_error.message}. This is likely a filesystems permissions error on the canonical Git repository. Please contact your system administrator.&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@publication</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+
+  <span class="ruby-comment">#go ahead and store a comment on finalize even if the user makes no comment...so we have a record of the action  </span>
+  <span class="ruby-ivar">@comment</span> = <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">new</span>()
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:comment</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:comment</span>] <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;&quot;</span>  
+    <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">comment</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:comment</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">comment</span> = <span class="ruby-string">&quot;no comment&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">user</span> = <span class="ruby-ivar">@current_user</span>
+  <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">reason</span> = <span class="ruby-string">&quot;finalizing&quot;</span>
+  <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">git_hash</span> = <span class="ruby-identifier">canon_sha</span>
+  <span class="ruby-comment">#associate comment with original identifier/publication</span>
+  <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">identifier_id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:identifier_id</span>]
+  <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">publication</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">origin</span>
+  
+  <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">save</span>
+  
+  <span class="ruby-comment">#create an event to show up on dashboard</span>
+  <span class="ruby-ivar">@event</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">new</span>()
+  <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">owner</span> = <span class="ruby-ivar">@current_user</span>
+  <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">target</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">parent</span> <span class="ruby-comment">#used parent so would match approve event</span>
+  <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">category</span> = <span class="ruby-string">&quot;committed&quot;</span>
+  <span class="ruby-ivar">@event</span>.<span class="ruby-identifier">save!</span>
+  
+  <span class="ruby-comment">#TODO need to submit to next board</span>
+  <span class="ruby-comment">#need to set status of ids</span>
+  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">set_origin_and_local_identifier_status</span>(<span class="ruby-string">&quot;committed&quot;</span>)
+  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">set_board_identifier_status</span>(<span class="ruby-string">&quot;committed&quot;</span>)
+  
+  <span class="ruby-comment">#as it is set up the finalizer will have a parent that is a board whose status must be set</span>
+  <span class="ruby-comment">#check that parent is board</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">parent</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Board&quot;</span>              
+    <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">archive</span>
+    <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">send_status_emails</span>(<span class="ruby-string">&quot;committed&quot;</span>, <span class="ruby-ivar">@publication</span>)
+  <span class="ruby-comment">#else #the user is a super user</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment">#send publication to the next board</span>
+  <span class="ruby-identifier">error_text</span>, <span class="ruby-identifier">identifier_for_comment</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">submit_to_next_board</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">error_text</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-identifier">error_text</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">change_status</span>(<span class="ruby-string">'finalized'</span>)
+  
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">'Publication finalized.'</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@publication</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- finalize-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- finalize-method -->
+
+      
+        <div id="finalize_review-method" class="method-detail ">
+          <a name="method-i-finalize_review"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">finalize_review</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="finalize_review-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 276</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">finalize_review</span>
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@identifier</span> = <span class="ruby-keyword">nil</span><span class="ruby-comment">#@publication.entry_identifier</span>
+  <span class="ruby-comment">#if we are finalizing then find the board that this pub came from </span>
+  <span class="ruby-comment"># and find the identifers that the board controls</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Board&quot;</span>
+    <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">controls_identifier?</span>(<span class="ruby-identifier">id</span>)
+        <span class="ruby-ivar">@identifier</span> = <span class="ruby-identifier">id</span>
+        <span class="ruby-comment">#TODO change to array if board can control multiple identifiers</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>      
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@diff</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">diff_from_canon</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@diff</span>.<span class="ruby-identifier">blank?</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;WARNING: Diff from canon is empty. Something may be wrong.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- finalize_review-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- finalize_review-method -->
+
+      
+        <div id="index-method" class="method-detail ">
+          <a name="method-i-index"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">index</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>GET /publications GET /publications.xml</p>
+            
+
+            
+            <div class="method-source-code" id="index-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 247</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@branches</span> = <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">branches</span>
+  <span class="ruby-ivar">@branches</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&quot;master&quot;</span>)
+  
+  <span class="ruby-ivar">@publications</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-comment"># just give branches that don't have corresponding publications</span>
+  <span class="ruby-ivar">@branches</span> <span class="ruby-operator">-=</span> <span class="ruby-ivar">@publications</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">branch</span>}
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-comment"># index.html.erb</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@publications</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- index-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- index-method -->
+
+      
+        <div id="is_theirs-3F-method" class="method-detail ">
+          <a name="method-i-is_theirs-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">is_theirs?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="is_theirs-3F-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">is_theirs?</span>
+  <span class="ruby-keyword">return</span>  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;User&quot;</span>  <span class="ruby-operator">&amp;&amp;</span> ( <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">owner</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@current_user</span> )  
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- is_theirs-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- is_theirs-3F-method -->
+
+      
+        <div id="master_list-method" class="method-detail ">
+          <a name="method-i-master_list"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">master_list</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="master_list-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 672</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">master_list</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">developer</span>
+    <span class="ruby-ivar">@publications</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- master_list-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- master_list-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-i-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+        <div id="show-method" class="method-detail ">
+          <a name="method-i-show"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">show</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>GET /publications/1 GET /publications/1.xml</p>
+            
+
+            
+            <div class="method-source-code" id="show-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 378</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
+  
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-keyword">rescue</span>    
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;Publication not found&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> (<span class="ruby-identifier">dashboard_url</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+   
+  <span class="ruby-ivar">@all_comments</span>, <span class="ruby-ivar">@xml_only_comments</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">get_all_comments</span>(<span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">title</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;/&quot;</span>).<span class="ruby-identifier">last</span>)
+
+  <span class="ruby-ivar">@show_submit</span> = <span class="ruby-identifier">allow_submit?</span>
+  
+  <span class="ruby-comment">#only let creator delete</span>
+  <span class="ruby-ivar">@allow_delete</span> = <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">creator</span>.<span class="ruby-identifier">id</span> 
+  <span class="ruby-comment">#only delete new or editing</span>
+  <span class="ruby-ivar">@allow_delete</span> = <span class="ruby-ivar">@allow_delete</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;new&quot;</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;editing&quot;</span>)
+  <span class="ruby-ivar">@identifier</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">entry_identifier</span>
+  
+  <span class="ruby-comment">#todo - if any part has been approved, do we want them to be able to delete the publication or force it to an archve? this would only happen if a board returns their part after another board has approved their part</span>
+  
+  <span class="ruby-comment">#find other users who are editing the same thing</span>
+  <span class="ruby-ivar">@other_user_publications</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">other_users</span>(<span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">title</span>, <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>)
+  
+
+  <span class="ruby-identifier">determine_creatable_identifiers</span>()
+  
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-comment"># show.html.erb</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@publication</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- show-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- show-method -->
+
+      
+        <div id="submit-method" class="method-detail ">
+          <a name="method-i-submit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">submit</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="submit-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">submit</span>
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  
+  <span class="ruby-comment">#check if it is the owner</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">is_theirs?</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">'You do not have permissions to submit this publication.'</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+      
+  <span class="ruby-comment">#prevent resubmitting...most likely by impatient clicking on submit button</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span> <span class="ruby-node">%{editing new}</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">status</span>)
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] =  <span class="ruby-string">'Publication has already been submitted. Did you click &quot;Submit&quot; multiple times?'</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@publication</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment">#@comment = Comment.new( {:git_hash =&gt; @publication.recent_submit_sha, :publication_id =&gt; params[:id], :comment =&gt; params[:submit_comment], :reason =&gt; &quot;submit&quot;, :user_id =&gt; @current_user.id } )</span>
+  <span class="ruby-comment">#git hash is not yet known, but we need the comment for the publication.submit to add to the changeDesc</span>
+  <span class="ruby-ivar">@comment</span> = <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">new</span>( {<span class="ruby-value">:publication_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:submit_comment</span>], <span class="ruby-value">:reason</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;submit&quot;</span>, <span class="ruby-value">:user_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span> } )
+  <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">save</span>
+  
+  <span class="ruby-identifier">error_text</span>, <span class="ruby-identifier">identifier_for_comment</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">submit</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">error_text</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-comment">#update comment with git hash when successfully submitted</span>
+    <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">git_hash</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">recent_submit_sha</span>
+    <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">identifier_id</span> = <span class="ruby-identifier">identifier_for_comment</span>
+    <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">save</span>
+    <span class="ruby-identifier">expire_publication_cache</span>
+    <span class="ruby-identifier">expire_fragment</span>(<span class="ruby-regexp">/board_publications_\d+/</span>)
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">'Publication submitted.'</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment">#cleanup comment that was inserted before submit completed that is no longer valid because of submit error</span>
+    <span class="ruby-identifier">cleanup_id</span> = <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:last</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:publication_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">:reason</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;submit&quot;</span>, <span class="ruby-value">:user_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span> } )
+    <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">destroy</span>(<span class="ruby-identifier">cleanup_id</span>)
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-identifier">error_text</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@publication</span>
+  <span class="ruby-comment"># redirect_to edit_polymorphic_path([@publication, @publication.entry_identifier])</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- submit-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- submit-method -->
+
+      
+        <div id="vote-method" class="method-detail ">
+          <a name="method-i-vote"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">vote</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="vote-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 535</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">vote</span>
+  <span class="ruby-comment">#note that votes will go with the boards copy of the pub and identifiers</span>
+  <span class="ruby-comment">#  vote history will also be recorded in the comment of the origin pub and identifier</span>
+  
+  <span class="ruby-comment">#fails - if not pub found ie race condition of voting on reject or graffiti</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])  
+  <span class="ruby-keyword">rescue</span>    
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:warning</span>] = <span class="ruby-string">&quot;Publication not found - voting is over for this publications.&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> (<span class="ruby-identifier">dashboard_url</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment">#fails - vote choice not given</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:vote</span>].<span class="ruby-identifier">blank?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:vote</span>][<span class="ruby-value">:choice</span>].<span class="ruby-identifier">blank?</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;You must select a vote choice.&quot;</span>
+    
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">edit_polymorphic_path</span>([<span class="ruby-ivar">@publication</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:vote</span>].<span class="ruby-identifier">blank?</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">entry_identifier</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Identifier</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:vote</span>][<span class="ruby-value">:identifier_id</span>])])
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment">#fails - voting is over</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;voting&quot;</span> 
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:warning</span>] = <span class="ruby-string">&quot;Voting is over for this publication.&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@publication</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-constant">Vote</span>.<span class="ruby-identifier">transaction</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-comment">#note that votes go to the publication's identifier</span>
+    <span class="ruby-ivar">@vote</span> = <span class="ruby-constant">Vote</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:vote</span>])
+    <span class="ruby-ivar">@vote</span>.<span class="ruby-identifier">user_id</span> = <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>
+    
+    <span class="ruby-identifier">vote_identifier</span> = <span class="ruby-ivar">@vote</span>.<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">lock!</span>
+    <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">lock!</span>
+
+    <span class="ruby-comment">#fails - publication not in correct ownership</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;Board&quot;</span>
+      <span class="ruby-comment">#we have a problem since no one should be voting on a publication if it is not in theirs</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;You do not have permission to vote on this publication which you do not own!&quot;</span>
+      <span class="ruby-comment">#kind a harsh but send em back to their own dashboard</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@vote</span>.<span class="ruby-identifier">board_id</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">owner_id</span>
+    <span class="ruby-keyword">end</span>
+  
+    <span class="ruby-ivar">@comment</span> = <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">new</span>()
+    <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">comment</span> = <span class="ruby-ivar">@vote</span>.<span class="ruby-identifier">choice</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; - &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:comment</span>][<span class="ruby-value">:comment</span>]
+    <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">user</span> = <span class="ruby-ivar">@current_user</span>
+    <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">reason</span> = <span class="ruby-string">&quot;vote&quot;</span>
+    <span class="ruby-comment">#use most recent sha from identifier</span>
+    <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">git_hash</span> = <span class="ruby-identifier">vote_identifier</span>.<span class="ruby-identifier">get_recent_commit_sha</span>
+    <span class="ruby-comment">#associate comment with original identifier/publication</span>
+    <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">identifier</span> = <span class="ruby-identifier">vote_identifier</span>.<span class="ruby-identifier">origin</span>   
+    <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">publication</span> = <span class="ruby-ivar">@vote</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">origin</span>
+
+    <span class="ruby-comment">#double check that they have not already voted</span>
+    <span class="ruby-comment">#has_voted = vote_identifier.votes.find_by_user_id(@current_user.id)</span>
+    <span class="ruby-identifier">has_voted</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">user_has_voted?</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">has_voted</span> 
+      <span class="ruby-ivar">@vote</span>.<span class="ruby-identifier">save!</span>
+      <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">save!</span>
+      <span class="ruby-comment"># invalidate their cache since an action may have changed its status</span>
+      <span class="ruby-identifier">expire_publication_cache</span>(<span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">creator</span>.<span class="ruby-identifier">id</span>)
+      <span class="ruby-identifier">expire_fragment</span>(<span class="ruby-regexp">/board_publications_\d+/</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-comment">#see if publication still exists</span>
+    <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@publication</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-comment">#voting destroyed publication so go to the dashboard</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- vote-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- vote-method -->
+
+      
+        <div id="withdraw-method" class="method-detail ">
+          <a name="method-i-withdraw"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">withdraw</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="withdraw-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 643</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">withdraw</span>
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-identifier">pub_name</span> = <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">title</span>
+  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">withdraw</span>
+
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">'Publication '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">pub_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">' was successfully withdrawn.'</span>
+  <span class="ruby-identifier">expire_publication_cache</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- withdraw-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- withdraw-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="protected-instance-method-details" class="method-section section">
+        <h3 class="section-header">Protected Instance Methods</h3>
+
+      
+        <div id="archive_pub-method" class="method-detail ">
+          <a name="method-i-archive_pub"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">archive_pub</span><span
+              class="method-args">(pub_id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="archive_pub-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 802</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">archive_pub</span>(<span class="ruby-identifier">pub_id</span>)
+  <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">pub_id</span>)
+  <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">archive</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- archive_pub-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- archive_pub-method -->
+
+      
+        <div id="expire_publication_cache-method" class="method-detail ">
+          <a name="method-i-expire_publication_cache"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">expire_publication_cache</span><span
+              class="method-args">(user_id = @current_user.id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="expire_publication_cache-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 798</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">expire_publication_cache</span>(<span class="ruby-identifier">user_id</span> = <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">expire_fragment</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'user'</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'dashboard'</span>, <span class="ruby-value">:part</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;your_publications_#{user_id}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- expire_publication_cache-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- expire_publication_cache-method -->
+
+      
+        <div id="publication_from_identifier-method" class="method-detail ">
+          <a name="method-i-publication_from_identifier"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">publication_from_identifier</span><span
+              class="method-args">(identifier, related_identifiers = nil, optional_title = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="publication_from_identifier-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 720</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">publication_from_identifier</span>(<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">related_identifiers</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">optional_title</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Identifier: #{identifier}&quot;</span>)
+  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Related identifiers: #{related_identifiers.inspect}&quot;</span>)
+
+  <span class="ruby-identifier">conflicting_identifiers</span> = []
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">related_identifiers</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">'Error creating publication: publication not found'</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">related_identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">relid</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">possible_conflicts</span> = <span class="ruby-constant">Identifier</span>.<span class="ruby-identifier">find_all_by_name</span>(<span class="ruby-identifier">relid</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:publication</span>)
+    <span class="ruby-identifier">actual_conflicts</span> = <span class="ruby-identifier">possible_conflicts</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">pc</span><span class="ruby-operator">|</span> ((<span class="ruby-identifier">pc</span>.<span class="ruby-identifier">publication</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">pc</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">owner</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@current_user</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span>(<span class="ruby-node">%{archived finalized}</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">pc</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">status</span>)))}
+    <span class="ruby-identifier">conflicting_identifiers</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">actual_conflicts</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">related_identifiers</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">'Error creating publication: publication not found'</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">conflicting_identifiers</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-node">&quot;Conflicting identifiers: #{conflicting_identifiers.inspect}&quot;</span>)
+    <span class="ruby-identifier">conflicting_publication</span> = <span class="ruby-identifier">conflicting_identifiers</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">publication</span>
+    <span class="ruby-identifier">conflicting_publications</span> = <span class="ruby-identifier">conflicting_identifiers</span>.<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">ci</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ci</span>.<span class="ruby-identifier">publication</span>}.<span class="ruby-identifier">uniq</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">conflicting_publications</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">'Error creating publication: multiple conflicting publications'</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] <span class="ruby-operator">+=</span> <span class="ruby-string">'&lt;ul&gt;'</span>
+      <span class="ruby-identifier">conflicting_publications</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">conf_pub</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;li&gt;&lt;a href='#{url_for(conf_pub)}'&gt;#{conf_pub.title}&lt;/a&gt;&lt;/li&gt;&quot;</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] <span class="ruby-operator">+=</span> <span class="ruby-string">'&lt;/ul&gt;'</span>
+
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">conflicting_publication</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;committed&quot;</span>)
+      <span class="ruby-comment"># TODO: should set &quot;archived&quot; and take approp action here instead</span>
+      <span class="ruby-comment">#conflicting_publication.destroy</span>
+      <span class="ruby-identifier">expire_publication_cache</span>
+      <span class="ruby-identifier">conflicting_publication</span>.<span class="ruby-identifier">archive</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-node">&quot;Error creating publication: publication already exists. Please delete the &lt;a href='#{url_for(conflicting_publication)}'&gt;conflicting publication&lt;/a&gt; if you have not submitted it and would like to start from scratch.&quot;</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># else</span>
+    <span class="ruby-ivar">@publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">new</span>()
+    <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">owner</span> = <span class="ruby-ivar">@current_user</span>
+    <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">creator</span> = <span class="ruby-ivar">@current_user</span>
+    <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">populate_identifiers_from_identifiers</span>(
+      <span class="ruby-identifier">related_identifiers</span>, <span class="ruby-identifier">optional_title</span>)
+
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">save!</span>
+      <span class="ruby-ivar">@publication</span>.<span class="ruby-identifier">branch_from_master</span>
+
+      <span class="ruby-comment"># need to remove repeat against publication model</span>
+      <span class="ruby-identifier">e</span> = <span class="ruby-constant">Event</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-identifier">e</span>.<span class="ruby-identifier">category</span> = <span class="ruby-string">&quot;started editing&quot;</span>
+      <span class="ruby-identifier">e</span>.<span class="ruby-identifier">target</span> = <span class="ruby-ivar">@publication</span>
+      <span class="ruby-identifier">e</span>.<span class="ruby-identifier">owner</span> = <span class="ruby-ivar">@current_user</span>
+      <span class="ruby-identifier">e</span>.<span class="ruby-identifier">save!</span>
+
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">'Publication was successfully created.'</span>
+      <span class="ruby-identifier">expire_publication_cache</span>
+      <span class="ruby-comment">#redirect_to edit_polymorphic_path([@publication, @publication.entry_identifier])</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@publication</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">'Error creating publication'</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- publication_from_identifier-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- publication_from_identifier-method -->
+
+      
+        <div id="publication_from_identifiers-method" class="method-detail ">
+          <a name="method-i-publication_from_identifiers"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">publication_from_identifiers</span><span
+              class="method-args">(identifiers)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="publication_from_identifiers-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/publications_controller.rb, line 682</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">publication_from_identifiers</span>(<span class="ruby-identifier">identifiers</span>)
+      <span class="ruby-identifier">new_title</span> = <span class="ruby-string">'Batch_'</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%d%b%Y_%H%M&quot;</span>)
+      <span class="ruby-identifier">publication_from_identifier</span>(<span class="ruby-string">&quot;unused_place_holder&quot;</span>, <span class="ruby-identifier">identifiers</span>, <span class="ruby-identifier">new_title</span>)
+
+
+<span class="ruby-comment">      #do we need to check for conflicts with the batches?
+      #might be able to modify publication_from_identifier
+      #where to get title? make them up based on time for now
+      new_title = 'Batch_' + Time.now.strftime(&quot;%d%b%Y_%H%M&quot;) #12Jan2011_2359
+      puts new_title
+        @publication = Publication.new()
+        @publication.owner = @current_user
+        @publication.creator = @current_user
+
+        @publication.populate_identifiers_from_identifiers(
+          identifiers, new_title)
+
+        if @publication.save!
+          @publication.branch_from_master
+
+          # need to remove repeat against publication model
+          e = Event.new
+          e.category = &quot;started editing&quot;
+          e.target = @publication
+          e.owner = @current_user
+          e.save!
+
+          flash[:notice] = 'Publication was successfully created.'
+          expire_publication_cache
+          redirect_to edit_polymorphic_path([@publication, @publication.entry_identifier])
+        else
+          flash[:notice] = 'Error creating publication'
+          redirect_to dashboard_url
+        end
+</span>    <span class="ruby-keyword">end</span></pre>
+            </div><!-- publication_from_identifiers-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- publication_from_identifiers-method -->
+
+      
+      </div><!-- protected-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

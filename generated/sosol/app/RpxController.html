@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Class: RpxController</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./app/controllers/rpx_controller_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="app/controllers/rpx_controller.rb">app/controllers/rpx_controller.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="ApplicationController.html">ApplicationController</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-associate_really">#associate_really</a></li>
+          
+          <li><a href="#method-i-associate_return">#associate_return</a></li>
+          
+          <li><a href="#method-i-create_submit">#create_submit</a></li>
+          
+          <li><a href="#method-i-login_return">#login_return</a></li>
+          
+          <li><a href="#method-i-remove_openid">#remove_openid</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Papyrillio.html">Papyrillio</a></li>
+        
+          <li><a href="./Papyrillio/Aggregator.html">Papyrillio::Aggregator</a></li>
+        
+          <li><a href="./Papyrillio/Collector.html">Papyrillio::Collector</a></li>
+        
+          <li><a href="./Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a></li>
+        
+          <li><a href="./Papyrillio/Decorator.html">Papyrillio::Decorator</a></li>
+        
+          <li><a href="./Papyrillio/Organiser.html">Papyrillio::Organiser</a></li>
+        
+          <li><a href="./Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a></li>
+        
+          <li><a href="./Papyrillio/Printer.html">Papyrillio::Printer</a></li>
+        
+          <li><a href="./Papyrillio/Publishee.html">Papyrillio::Publishee</a></li>
+        
+          <li><a href="./Papyrillio/Publisher.html">Papyrillio::Publisher</a></li>
+        
+          <li><a href="./Papyrillio/Transformer.html">Papyrillio::Transformer</a></li>
+        
+          <li><a href="./JRubyXML.html">JRubyXML</a></li>
+        
+          <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a></li>
+        
+          <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a></li>
+        
+          <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a></li>
+        
+          <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a></li>
+        
+          <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a></li>
+        
+          <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a></li>
+        
+          <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a></li>
+        
+          <li><a href="./REXML.html">REXML</a></li>
+        
+          <li><a href="./REXML/Document.html">REXML::Document</a></li>
+        
+          <li><a href="./REXML/Element.html">REXML::Element</a></li>
+        
+          <li><a href="./REXML/XPath.html">REXML::XPath</a></li>
+        
+          <li><a href="./Rpx.html">Rpx</a></li>
+        
+          <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a></li>
+        
+          <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a></li>
+        
+          <li><a href="./Comment.html">Comment</a></li>
+        
+          <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a></li>
+        
+          <li><a href="./Doco.html">Doco</a></li>
+        
+          <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a></li>
+        
+          <li><a href="./Grit.html">Grit</a></li>
+        
+          <li><a href="./Grit/Commit.html">Grit::Commit</a></li>
+        
+          <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a></li>
+        
+          <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
+        
+          <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a></li>
+        
+          <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a></li>
+        
+          <li><a href="./NumbersRDF.html">NumbersRDF</a></li>
+        
+          <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a></li>
+        
+          <li><a href="./AjaxProxyController.html">AjaxProxyController</a></li>
+        
+          <li><a href="./ApplicationController.html">ApplicationController</a></li>
+        
+          <li><a href="./ApplicationHelper.html">ApplicationHelper</a></li>
+        
+          <li><a href="./Board.html">Board</a></li>
+        
+          <li><a href="./BoardsController.html">BoardsController</a></li>
+        
+          <li><a href="./CommentsController.html">CommentsController</a></li>
+        
+          <li><a href="./DDBIdentifier.html">DDBIdentifier</a></li>
+        
+          <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a></li>
+        
+          <li><a href="./Decree.html">Decree</a></li>
+        
+          <li><a href="./DecreesController.html">DecreesController</a></li>
+        
+          <li><a href="./DocosController.html">DocosController</a></li>
+        
+          <li><a href="./DocovideosController.html">DocovideosController</a></li>
+        
+          <li><a href="./Emailer.html">Emailer</a></li>
+        
+          <li><a href="./EmailerMailer.html">EmailerMailer</a></li>
+        
+          <li><a href="./EmailersController.html">EmailersController</a></li>
+        
+          <li><a href="./Event.html">Event</a></li>
+        
+          <li><a href="./EventsController.html">EventsController</a></li>
+        
+          <li><a href="./GitConf.html">GitConf</a></li>
+        
+          <li><a href="./HGVBiblioIdentifier.html">HGVBiblioIdentifier</a></li>
+        
+          <li><a href="./HGVIdentifier.html">HGVIdentifier</a></li>
+        
+          <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a></li>
+        
+          <li><a href="./HelperController.html">HelperController</a></li>
+        
+          <li><a href="./HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a></li>
+        
+          <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></li>
+        
+          <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a></li>
+        
+          <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a></li>
+        
+          <li><a href="./Identifier.html">Identifier</a></li>
+        
+          <li><a href="./IdentifiersController.html">IdentifiersController</a></li>
+        
+          <li><a href="./Integer.html">Integer</a></li>
+        
+          <li><a href="./Leiden.html">Leiden</a></li>
+        
+          <li><a href="./LeidenController.html">LeidenController</a></li>
+        
+          <li><a href="./LinkingInfo.html">LinkingInfo</a></li>
+        
+          <li><a href="./MaintenanceMode.html">MaintenanceMode</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./Publication.html">Publication</a></li>
+        
+          <li><a href="./PublicationsController.html">PublicationsController</a></li>
+        
+          <li><a href="./Rails.html">Rails</a></li>
+        
+          <li><a href="./RepositoriesController.html">RepositoriesController</a></li>
+        
+          <li><a href="./Repository.html">Repository</a></li>
+        
+          <li><a href="./RpxController.html">RpxController</a></li>
+        
+          <li><a href="./TranslationHelperController.html">TranslationHelperController</a></li>
+        
+          <li><a href="./TranslationLeiden.html">TranslationLeiden</a></li>
+        
+          <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a></li>
+        
+          <li><a href="./User.html">User</a></li>
+        
+          <li><a href="./UserController.html">UserController</a></li>
+        
+          <li><a href="./UserIdentifier.html">UserIdentifier</a></li>
+        
+          <li><a href="./Vote.html">Vote</a></li>
+        
+          <li><a href="./VotesController.html">VotesController</a></li>
+        
+          <li><a href="./WelcomeController.html">WelcomeController</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">RpxController</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="associate_really-method" class="method-detail ">
+          <a name="method-i-associate_really"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">associate_really</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="associate_really-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/rpx_controller.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">associate_really</span>
+  <span class="ruby-comment"># This is from the RPX template code, but we don't use it.</span>
+  <span class="ruby-comment"># identifier = session[:identifier]</span>
+  <span class="ruby-comment"># session[:identifier] = nil</span>
+  <span class="ruby-comment"># </span>
+  <span class="ruby-comment"># if params[:confirm] == &quot;Yes&quot;</span>
+  <span class="ruby-comment">#   @rpx.map identifier, @current_user.id</span>
+  <span class="ruby-comment">#   flash[:notice] = &quot;#{identifier} added to your account&quot;</span>
+  <span class="ruby-comment"># else</span>
+  <span class="ruby-comment">#   flash[:notice] = &quot;No OpenID was added to your account&quot;</span>
+  <span class="ruby-comment"># end</span>
+  <span class="ruby-comment"># </span>
+  <span class="ruby-comment"># redirect_to :controller =&gt; &quot;site&quot;, :action =&gt; &quot;index&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- associate_really-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- associate_really-method -->
+
+      
+        <div id="associate_return-method" class="method-detail ">
+          <a name="method-i-associate_return"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">associate_return</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="associate_return-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/rpx_controller.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">associate_return</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:error</span>]
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-node">&quot;OpenID Authentication Failed: #{params[:error]}&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;welcome&quot;</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;index&quot;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:token</span>]
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;OpenID Authentication Cancelled&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;welcome&quot;</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;index&quot;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># FIXME: Glassfish reqeust object seems to ignore context root?</span>
+  <span class="ruby-comment"># data = @rpx.auth_info(params[:token], request.url)</span>
+  <span class="ruby-identifier">data</span> = <span class="ruby-ivar">@rpx</span>.<span class="ruby-identifier">auth_info</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:token</span>], <span class="ruby-identifier">url_for</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:rpx</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:associate_return</span>, <span class="ruby-value">:only_path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>))
+
+  <span class="ruby-identifier">identifier</span> = <span class="ruby-identifier">data</span>[<span class="ruby-string">&quot;identifier&quot;</span>]
+  <span class="ruby-identifier">user_identifier</span> = <span class="ruby-constant">UserIdentifier</span>.<span class="ruby-identifier">find_by_identifier</span>(<span class="ruby-identifier">identifier</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">user_identifier</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;you are not signed in&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">user_identifiers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">UserIdentifier</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value">:identifier</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">identifier</span>)
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;#{identifier} added to your account&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;user&quot;</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;account&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">user_identifier</span>.<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;That OpenID was already associated with this account&quot;</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;user&quot;</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;account&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># The OpenID was already associated with a different user account.</span>
+      <span class="ruby-comment"># @page_title = &quot;Replace OpenID Account&quot;</span>
+      <span class="ruby-comment"># session[:identifier] = identifier</span>
+      <span class="ruby-comment"># @other_user = User.find_by_id primary_key</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-node">&quot;OpenID #{identifier} is already associated with a different user account.&quot;</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;user&quot;</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;account&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- associate_return-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- associate_return-method -->
+
+      
+        <div id="create_submit-method" class="method-detail ">
+          <a name="method-i-create_submit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">create_submit</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="create_submit-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/rpx_controller.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create_submit</span>
+  <span class="ruby-identifier">identifier</span> = <span class="ruby-identifier">session</span>[<span class="ruby-value">:identifier</span>]
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:new_user</span>][<span class="ruby-value">:name</span>]
+  <span class="ruby-ivar">@email</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:new_user</span>][<span class="ruby-value">:email</span>]
+  <span class="ruby-ivar">@full_name</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:new_user</span>][<span class="ruby-value">:full_name</span>]
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@name</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">flash</span>.<span class="ruby-identifier">now</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;Nickname must not be empty&quot;</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;login_return&quot;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@name</span>, <span class="ruby-value">:email</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@email</span>, <span class="ruby-value">:full_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@full_name</span>)
+    <span class="ruby-comment">#this save to execute validates_uniqueness_of :name so not continue with duplicate</span>
+    <span class="ruby-identifier">user</span>.<span class="ruby-identifier">save!</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">RecordInvalid</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">flash</span>.<span class="ruby-identifier">now</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;Nickname not available&quot;</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;login_return&quot;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-comment"># If for any reason the RPX association step fails, we want to</span>
+    <span class="ruby-comment"># be sure to recover from it and roll back any changes made up</span>
+    <span class="ruby-comment"># to this point.  Otherwise, the user account will have been</span>
+    <span class="ruby-comment"># created with no identifier associated with it.</span>
+    <span class="ruby-identifier">user</span>.<span class="ruby-identifier">user_identifiers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">UserIdentifier</span>.<span class="ruby-identifier">create</span>(<span class="ruby-value">:identifier</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">identifier</span>)
+    <span class="ruby-identifier">user</span>.<span class="ruby-identifier">save!</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">user</span>.<span class="ruby-identifier">destroy</span>
+    <span class="ruby-identifier">flash</span>.<span class="ruby-identifier">now</span>[<span class="ruby-value">:error</span>] = <span class="ruby-node">&quot;An error occurred when attempting to create your account; try again. #{e.inspect}&quot;</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;login_return&quot;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-identifier">session</span>[<span class="ruby-value">:identifier</span>] = <span class="ruby-keyword">nil</span>
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">session</span>[<span class="ruby-value">:entry_url</span>].<span class="ruby-identifier">blank?</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:entry_url</span>]
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:entry_url</span>] = <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;welcome&quot;</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;index&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- create_submit-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- create_submit-method -->
+
+      
+        <div id="login_return-method" class="method-detail ">
+          <a name="method-i-login_return"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">login_return</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="login_return-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/rpx_controller.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">login_return</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:error</span>] <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:token</span>]
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;Sign-in cancelled&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;welcome&quot;</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;index&quot;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># FIXME: Glassfish reqeust object seems to ignore context root?</span>
+  <span class="ruby-comment"># data = @rpx.auth_info(params[:token], request.url)</span>
+  <span class="ruby-identifier">data</span> = <span class="ruby-ivar">@rpx</span>.<span class="ruby-identifier">auth_info</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:token</span>], <span class="ruby-identifier">url_for</span>(<span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:rpx</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:login_return</span>, <span class="ruby-value">:only_path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>))
+
+  <span class="ruby-identifier">identifier</span> = <span class="ruby-identifier">data</span>[<span class="ruby-string">&quot;identifier&quot;</span>]
+  
+  <span class="ruby-identifier">user_identifier</span> = <span class="ruby-constant">UserIdentifier</span>.<span class="ruby-identifier">find_by_identifier</span>(<span class="ruby-identifier">identifier</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">user_identifier</span>
+    <span class="ruby-comment"># User Identifier exists, login and redirect to index</span>
+    <span class="ruby-identifier">user</span> = <span class="ruby-identifier">user_identifier</span>.<span class="ruby-identifier">user</span>
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>
+    <span class="ruby-comment">#redirect_to :controller =&gt; &quot;welcome&quot;, :action =&gt; &quot;index&quot;</span>
+    <span class="ruby-comment">#redirect to dashboard</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">session</span>[<span class="ruby-value">:entry_url</span>].<span class="ruby-identifier">blank?</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:entry_url</span>]
+      <span class="ruby-identifier">session</span>[<span class="ruby-value">:entry_url</span>] = <span class="ruby-keyword">nil</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;user&quot;</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;dashboard&quot;</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:identifier</span>] = <span class="ruby-identifier">identifier</span>
+    <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">guess_name</span> <span class="ruby-identifier">data</span>
+    <span class="ruby-ivar">@email</span> = <span class="ruby-identifier">guess_email</span> <span class="ruby-identifier">data</span>
+    <span class="ruby-ivar">@full_name</span> = <span class="ruby-identifier">guess_full_name</span> <span class="ruby-identifier">data</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- login_return-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- login_return-method -->
+
+      
+        <div id="remove_openid-method" class="method-detail ">
+          <a name="method-i-remove_openid"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">remove_openid</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="remove_openid-source">
+<pre>
+<span class="ruby-comment"># File app/controllers/rpx_controller.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_openid</span>
+  <span class="ruby-identifier">user_identifier</span> = <span class="ruby-constant">UserIdentifier</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:openid</span>])
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">user_identifier</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;OpenID Disassociation Failed: No such OpenID&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;user&quot;</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;account&quot;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-identifier">user</span> = <span class="ruby-identifier">user_identifier</span>.<span class="ruby-identifier">user</span>
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">user_identifiers</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;OpenID #{user_identifier.identifier} removed&quot;</span>
+      <span class="ruby-identifier">user_identifier</span>.<span class="ruby-identifier">destroy</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;user&quot;</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;account&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;OpenID Disassociation Failed: Your account must have at least one OpenID&quot;</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;user&quot;</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;account&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;OpenID Disassociation Failed: ID not owned by user&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;user&quot;</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;account&quot;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- remove_openid-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- remove_openid-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

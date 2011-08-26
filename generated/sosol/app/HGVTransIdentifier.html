@@ -1,0 +1,1114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Class: HGVTransIdentifier</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./app/models/hgv_trans_identifier_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="app/models/hgv_trans_identifier.rb">app/models/hgv_trans_identifier.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="HGVIdentifier.html">HGVIdentifier</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new_from_template">::new_from_template</a></li>
+          
+          <li><a href="#method-i-after_rename">#after_rename</a></li>
+          
+          <li><a href="#method-i-before_commit">#before_commit</a></li>
+          
+          <li><a href="#method-i-get_broken_leiden">#get_broken_leiden</a></li>
+          
+          <li><a href="#method-i-id_attribute">#id_attribute</a></li>
+          
+          <li><a href="#method-i-is_valid-3F">#is_valid?</a></li>
+          
+          <li><a href="#method-i-leiden_trans">#leiden_trans</a></li>
+          
+          <li><a href="#method-i-leiden_translation_to_xml">#leiden_translation_to_xml</a></li>
+          
+          <li><a href="#method-i-n_attribute">#n_attribute</a></li>
+          
+          <li><a href="#method-i-preview">#preview</a></li>
+          
+          <li><a href="#method-i-related_text">#related_text</a></li>
+          
+          <li><a href="#method-i-save_broken_leiden_trans_to_xml">#save_broken_leiden_trans_to_xml</a></li>
+          
+          <li><a href="#method-i-set_leiden_translation_content">#set_leiden_translation_content</a></li>
+          
+          <li><a href="#method-i-stub_text_structure">#stub_text_structure</a></li>
+          
+          <li><a href="#method-i-to_path">#to_path</a></li>
+          
+          <li><a href="#method-i-translation_already_in_language-3F">#translation_already_in_language?</a></li>
+          
+          <li><a href="#method-i-xml_title_text">#xml_title_text</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Papyrillio.html">Papyrillio</a></li>
+        
+          <li><a href="./Papyrillio/Aggregator.html">Papyrillio::Aggregator</a></li>
+        
+          <li><a href="./Papyrillio/Collector.html">Papyrillio::Collector</a></li>
+        
+          <li><a href="./Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a></li>
+        
+          <li><a href="./Papyrillio/Decorator.html">Papyrillio::Decorator</a></li>
+        
+          <li><a href="./Papyrillio/Organiser.html">Papyrillio::Organiser</a></li>
+        
+          <li><a href="./Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a></li>
+        
+          <li><a href="./Papyrillio/Printer.html">Papyrillio::Printer</a></li>
+        
+          <li><a href="./Papyrillio/Publishee.html">Papyrillio::Publishee</a></li>
+        
+          <li><a href="./Papyrillio/Publisher.html">Papyrillio::Publisher</a></li>
+        
+          <li><a href="./Papyrillio/Transformer.html">Papyrillio::Transformer</a></li>
+        
+          <li><a href="./JRubyXML.html">JRubyXML</a></li>
+        
+          <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a></li>
+        
+          <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a></li>
+        
+          <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a></li>
+        
+          <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a></li>
+        
+          <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a></li>
+        
+          <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a></li>
+        
+          <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a></li>
+        
+          <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a></li>
+        
+          <li><a href="./REXML.html">REXML</a></li>
+        
+          <li><a href="./REXML/Document.html">REXML::Document</a></li>
+        
+          <li><a href="./REXML/Element.html">REXML::Element</a></li>
+        
+          <li><a href="./REXML/XPath.html">REXML::XPath</a></li>
+        
+          <li><a href="./Rpx.html">Rpx</a></li>
+        
+          <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a></li>
+        
+          <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a></li>
+        
+          <li><a href="./Comment.html">Comment</a></li>
+        
+          <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a></li>
+        
+          <li><a href="./Doco.html">Doco</a></li>
+        
+          <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a></li>
+        
+          <li><a href="./Grit.html">Grit</a></li>
+        
+          <li><a href="./Grit/Commit.html">Grit::Commit</a></li>
+        
+          <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a></li>
+        
+          <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
+        
+          <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a></li>
+        
+          <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a></li>
+        
+          <li><a href="./NumbersRDF.html">NumbersRDF</a></li>
+        
+          <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a></li>
+        
+          <li><a href="./AjaxProxyController.html">AjaxProxyController</a></li>
+        
+          <li><a href="./ApplicationController.html">ApplicationController</a></li>
+        
+          <li><a href="./ApplicationHelper.html">ApplicationHelper</a></li>
+        
+          <li><a href="./Board.html">Board</a></li>
+        
+          <li><a href="./BoardsController.html">BoardsController</a></li>
+        
+          <li><a href="./CommentsController.html">CommentsController</a></li>
+        
+          <li><a href="./DDBIdentifier.html">DDBIdentifier</a></li>
+        
+          <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a></li>
+        
+          <li><a href="./Decree.html">Decree</a></li>
+        
+          <li><a href="./DecreesController.html">DecreesController</a></li>
+        
+          <li><a href="./DocosController.html">DocosController</a></li>
+        
+          <li><a href="./DocovideosController.html">DocovideosController</a></li>
+        
+          <li><a href="./Emailer.html">Emailer</a></li>
+        
+          <li><a href="./EmailerMailer.html">EmailerMailer</a></li>
+        
+          <li><a href="./EmailersController.html">EmailersController</a></li>
+        
+          <li><a href="./Event.html">Event</a></li>
+        
+          <li><a href="./EventsController.html">EventsController</a></li>
+        
+          <li><a href="./GitConf.html">GitConf</a></li>
+        
+          <li><a href="./HGVBiblioIdentifier.html">HGVBiblioIdentifier</a></li>
+        
+          <li><a href="./HGVIdentifier.html">HGVIdentifier</a></li>
+        
+          <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a></li>
+        
+          <li><a href="./HelperController.html">HelperController</a></li>
+        
+          <li><a href="./HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a></li>
+        
+          <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></li>
+        
+          <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a></li>
+        
+          <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a></li>
+        
+          <li><a href="./Identifier.html">Identifier</a></li>
+        
+          <li><a href="./IdentifiersController.html">IdentifiersController</a></li>
+        
+          <li><a href="./Integer.html">Integer</a></li>
+        
+          <li><a href="./Leiden.html">Leiden</a></li>
+        
+          <li><a href="./LeidenController.html">LeidenController</a></li>
+        
+          <li><a href="./LinkingInfo.html">LinkingInfo</a></li>
+        
+          <li><a href="./MaintenanceMode.html">MaintenanceMode</a></li>
+        
+          <li><a href="./Object.html">Object</a></li>
+        
+          <li><a href="./Publication.html">Publication</a></li>
+        
+          <li><a href="./PublicationsController.html">PublicationsController</a></li>
+        
+          <li><a href="./Rails.html">Rails</a></li>
+        
+          <li><a href="./RepositoriesController.html">RepositoriesController</a></li>
+        
+          <li><a href="./Repository.html">Repository</a></li>
+        
+          <li><a href="./RpxController.html">RpxController</a></li>
+        
+          <li><a href="./TranslationHelperController.html">TranslationHelperController</a></li>
+        
+          <li><a href="./TranslationLeiden.html">TranslationLeiden</a></li>
+        
+          <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a></li>
+        
+          <li><a href="./User.html">User</a></li>
+        
+          <li><a href="./UserController.html">UserController</a></li>
+        
+          <li><a href="./UserIdentifier.html">UserIdentifier</a></li>
+        
+          <li><a href="./Vote.html">Vote</a></li>
+        
+          <li><a href="./VotesController.html">VotesController</a></li>
+        
+          <li><a href="./WelcomeController.html">WelcomeController</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">HGVTransIdentifier</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="BROKE_LEIDEN_MESSAGE">BROKE_LEIDEN_MESSAGE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="FRIENDLY_NAME">FRIENDLY_NAME</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="IDENTIFIER_NAMESPACE">IDENTIFIER_NAMESPACE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="PATH_PREFIX">PATH_PREFIX</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="XML_VALIDATOR">XML_VALIDATOR</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new_from_template-method" class="method-detail ">
+          <a name="method-c-new_from_template"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new_from_template</span><span
+              class="method-args">(publication)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new_from_template-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new_from_template</span>(<span class="ruby-identifier">publication</span>)
+  <span class="ruby-identifier">new_identifier</span> = <span class="ruby-keyword">super</span>(<span class="ruby-identifier">publication</span>)
+  
+  <span class="ruby-identifier">new_identifier</span>.<span class="ruby-identifier">stub_text_structure</span>(<span class="ruby-string">'en'</span>)
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">new_identifier</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new_from_template-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new_from_template-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="after_rename-method" class="method-detail ">
+          <a name="method-i-after_rename"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">after_rename</span><span
+              class="method-args">(options = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="after_rename-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">after_rename</span>(<span class="ruby-identifier">options</span> = {})
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:update_header</span>]
+    <span class="ruby-identifier">related_hgv</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_components</span>.<span class="ruby-identifier">last</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">HGVMetaIdentifier</span>}.<span class="ruby-identifier">compact</span>
+    <span class="ruby-identifier">rewritten_xml</span> =
+      <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
+        <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-identifier">content</span>),
+        <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RAILS_ROOT</span>,
+          <span class="ruby-node">%{data xslt translation update_header.xsl}</span>)),
+        <span class="ruby-value">:filename_text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_components</span>.<span class="ruby-identifier">last</span>,
+        <span class="ruby-value">:HGV_text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">related_hgv</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">' '</span>),
+        <span class="ruby-value">:TM_text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">related_hgv</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\D/</span>,<span class="ruby-string">''</span>)}.<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">' '</span>),
+        <span class="ruby-value">:title_text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NumbersHelper</span><span class="ruby-operator">::</span><span class="ruby-identifier">identifier_to_title</span>([<span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NAMESPACE_IDENTIFIER</span>,<span class="ruby-constant">HGVIdentifier</span><span class="ruby-operator">::</span><span class="ruby-constant">IDENTIFIER_NAMESPACE</span>,<span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_components</span>.<span class="ruby-identifier">last</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">'/'</span>)),
+        <span class="ruby-value">:reprint_from_text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:set_dummy_header</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:original</span>].<span class="ruby-identifier">title</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>,
+        <span class="ruby-value">:reprint_ref_attribute</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:set_dummy_header</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:original</span>].<span class="ruby-identifier">to_components</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>
+      )
+  
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">rewritten_xml</span>, <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;Update header to reflect new identifier '#{self.name}'&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- after_rename-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- after_rename-method -->
+
+      
+        <div id="before_commit-method" class="method-detail ">
+          <a name="method-i-before_commit"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">before_commit</span><span
+              class="method-args">(content)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="before_commit-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">before_commit</span>(<span class="ruby-identifier">content</span>)
+  <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
+    <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-identifier">content</span>),
+    <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RAILS_ROOT</span>,
+      <span class="ruby-node">%{data xslt translation preprocess.xsl}</span>))
+  )
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- before_commit-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- before_commit-method -->
+
+      
+        <div id="get_broken_leiden-method" class="method-detail ">
+          <a name="method-i-get_broken_leiden"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_broken_leiden</span><span
+              class="method-args">(original_xml = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_broken_leiden-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 134</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_broken_leiden</span>(<span class="ruby-identifier">original_xml</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">original_xml_content</span> = <span class="ruby-identifier">original_xml</span> <span class="ruby-operator">||</span> <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>)
+  <span class="ruby-identifier">brokeleiden_path</span> = <span class="ruby-string">'/TEI/text/body/div[@type = &quot;translation&quot;]/div[@subtype = &quot;brokeleiden&quot;]/note'</span>
+  <span class="ruby-identifier">brokeleiden_here</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">XPath</span>.<span class="ruby-identifier">first</span>(<span class="ruby-identifier">original_xml_content</span>, <span class="ruby-identifier">brokeleiden_path</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">brokeleiden_here</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">brokeleiden</span> = <span class="ruby-identifier">brokeleiden_here</span>.<span class="ruby-identifier">get_text</span>.<span class="ruby-identifier">value</span>
+    
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">brokeleiden</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-node">/^#{Regexp.escape(BROKE_LEIDEN_MESSAGE)}/</span>,<span class="ruby-string">''</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_broken_leiden-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_broken_leiden-method -->
+
+      
+        <div id="id_attribute-method" class="method-detail ">
+          <a name="method-i-id_attribute"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">id_attribute</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="id_attribute-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">id_attribute</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;hgv-TEMP&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- id_attribute-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- id_attribute-method -->
+
+      
+        <div id="is_valid-3F-method" class="method-detail ">
+          <a name="method-i-is_valid-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">is_valid?</span><span
+              class="method-args">(content = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="is_valid-3F-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 46</span>
+      <span class="ruby-keyword">def</span> <span class="ruby-identifier">is_valid?</span>(<span class="ruby-identifier">content</span> = <span class="ruby-keyword">nil</span>)
+      <span class="ruby-comment">#FIXME added here since trans is not P5 validable yet</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- is_valid-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- is_valid-3F-method -->
+
+      
+        <div id="leiden_trans-method" class="method-detail ">
+          <a name="method-i-leiden_trans"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">leiden_trans</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="leiden_trans-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">leiden_trans</span>
+  <span class="ruby-identifier">original_xml</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>
+  <span class="ruby-identifier">original_xml_content</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">original_xml</span>)
+
+  <span class="ruby-comment"># if XML does not contain broke Leiden send XML to be converted to Leiden and return that</span>
+  <span class="ruby-comment"># otherwise, return nil (client can then get_broken_leiden)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">get_broken_leiden</span>(<span class="ruby-identifier">original_xml_content</span>).<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">body</span> = <span class="ruby-constant">HGVTransIdentifier</span>.<span class="ruby-identifier">get_body</span>(<span class="ruby-identifier">original_xml</span>)
+    
+    <span class="ruby-comment"># transform XML to Leiden+ </span>
+    <span class="ruby-identifier">transformed</span> = <span class="ruby-constant">HGVTransIdentifier</span>.<span class="ruby-identifier">xml2nonxml</span>(<span class="ruby-identifier">body</span>.<span class="ruby-identifier">to_s</span>) <span class="ruby-comment">#via jrubyHelper</span>
+    
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">transformed</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- leiden_trans-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- leiden_trans-method -->
+
+      
+        <div id="leiden_translation_to_xml-method" class="method-detail ">
+          <a name="method-i-leiden_translation_to_xml"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">leiden_translation_to_xml</span><span
+              class="method-args">(content)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="leiden_translation_to_xml-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 174</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">leiden_translation_to_xml</span>(<span class="ruby-identifier">content</span>)
+  
+  <span class="ruby-comment"># transform the Leiden Translation to XML</span>
+  <span class="ruby-identifier">nonx2x</span> = <span class="ruby-constant">HGVTransIdentifier</span>.<span class="ruby-identifier">nonxml2xml</span>(<span class="ruby-identifier">content</span>)
+      
+  <span class="ruby-identifier">nonx2x</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp">/ xmlns:xml=&quot;http:\/\/www.w3.org\/XML\/1998\/namespace&quot;/</span>,<span class="ruby-string">''</span>)
+  <span class="ruby-identifier">transformed_xml_content</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">nonx2x</span>)
+  
+  <span class="ruby-comment">#puts nonx2x</span>
+  <span class="ruby-comment">#puts transformed_xml_content.to_s</span>
+  <span class="ruby-comment"># fetch the original content</span>
+  <span class="ruby-identifier">original_xml_content</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>)
+  
+  <span class="ruby-comment">#rip out the body so we can replace it with the new data</span>
+  <span class="ruby-identifier">original_xml_content</span>.<span class="ruby-identifier">delete_element</span>(<span class="ruby-string">'/TEI/text/body'</span>)
+  
+  <span class="ruby-comment">#add the new data</span>
+  <span class="ruby-identifier">original_xml_content</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-string">'/TEI/text'</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">text_element</span><span class="ruby-operator">|</span> <span class="ruby-identifier">text_element</span>.<span class="ruby-identifier">add_element</span>(<span class="ruby-identifier">transformed_xml_content</span>) }
+  
+ 
+  <span class="ruby-comment"># write back to a string</span>
+  <span class="ruby-identifier">modified_xml_content</span> = <span class="ruby-string">''</span>
+  <span class="ruby-identifier">original_xml_content</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">modified_xml_content</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">modified_xml_content</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- leiden_translation_to_xml-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- leiden_translation_to_xml-method -->
+
+      
+        <div id="n_attribute-method" class="method-detail ">
+          <a name="method-i-n_attribute"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">n_attribute</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="n_attribute-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">n_attribute</span>
+  <span class="ruby-identifier">ddb</span> = <span class="ruby-constant">DDBIdentifier</span>.<span class="ruby-identifier">find_by_publication_id</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:limit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">ddb</span>.<span class="ruby-identifier">n_attribute</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- n_attribute-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- n_attribute-method -->
+
+      
+        <div id="preview-method" class="method-detail ">
+          <a name="method-i-preview"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">preview</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="preview-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">preview</span>
+    <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
+    <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>),
+    <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RAILS_ROOT</span>,
+      <span class="ruby-node">%{data xslt pn start-divtrans-portlet.xsl}</span>)))
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- preview-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- preview-method -->
+
+      
+        <div id="related_text-method" class="method-detail ">
+          <a name="method-i-related_text"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">related_text</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="related_text-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">related_text</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> (<span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">DDBIdentifier</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">i</span>.<span class="ruby-identifier">is_reprinted?</span>}.<span class="ruby-identifier">last</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- related_text-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- related_text-method -->
+
+      
+        <div id="save_broken_leiden_trans_to_xml-method" class="method-detail ">
+          <a name="method-i-save_broken_leiden_trans_to_xml"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">save_broken_leiden_trans_to_xml</span><span
+              class="method-args">(brokeleiden, commit_comment = '')</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="save_broken_leiden_trans_to_xml-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 203</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_broken_leiden_trans_to_xml</span>(<span class="ruby-identifier">brokeleiden</span>, <span class="ruby-identifier">commit_comment</span> = <span class="ruby-string">''</span>)
+  <span class="ruby-comment"># fetch the original content</span>
+  <span class="ruby-identifier">original_xml_content</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>)
+  <span class="ruby-comment">#deletes XML with broke Leiden+ if it exists already so can add with updated data</span>
+  <span class="ruby-identifier">original_xml_content</span>.<span class="ruby-identifier">delete_element</span>(<span class="ruby-string">'/TEI/text/body/div[@type = &quot;translation&quot;]/div[@subtype = &quot;brokeleiden&quot;]'</span>)
+  <span class="ruby-comment">#set in XML where to add new div tag to contain broken Leiden+ and add it</span>
+  <span class="ruby-identifier">basepath</span> = <span class="ruby-string">'/TEI/text/body/div[@type = &quot;translation&quot;]'</span>
+  <span class="ruby-identifier">add_node_here</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">XPath</span>.<span class="ruby-identifier">first</span>(<span class="ruby-identifier">original_xml_content</span>, <span class="ruby-identifier">basepath</span>)
+  <span class="ruby-identifier">add_node_here</span>.<span class="ruby-identifier">add_element</span> <span class="ruby-string">'div'</span>, {<span class="ruby-string">'type'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'translation'</span>, <span class="ruby-string">'subtype'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'brokeleiden'</span>}
+  <span class="ruby-comment">#set in XML where to add new note tag to contain broken Leiden+ and add it</span>
+  <span class="ruby-identifier">basepath</span> = <span class="ruby-string">'/TEI/text/body/div[@type = &quot;translation&quot;]/div[@subtype = &quot;brokeleiden&quot;]'</span>
+  <span class="ruby-identifier">add_node_here</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">XPath</span>.<span class="ruby-identifier">first</span>(<span class="ruby-identifier">original_xml_content</span>, <span class="ruby-identifier">basepath</span>)
+  <span class="ruby-identifier">add_node_here</span>.<span class="ruby-identifier">add_element</span> <span class="ruby-string">&quot;note&quot;</span>
+  <span class="ruby-comment">#set in XML where to add broken Leiden+ and add it</span>
+  <span class="ruby-identifier">basepath</span> = <span class="ruby-string">'/TEI/text/body/div[@type = &quot;translation&quot;]/div[@subtype = &quot;brokeleiden&quot;]/note'</span>
+  <span class="ruby-identifier">add_node_here</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">XPath</span>.<span class="ruby-identifier">first</span>(<span class="ruby-identifier">original_xml_content</span>, <span class="ruby-identifier">basepath</span>)
+  <span class="ruby-identifier">brokeleiden</span> = <span class="ruby-constant">BROKE_LEIDEN_MESSAGE</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">brokeleiden</span>
+  <span class="ruby-identifier">add_node_here</span>.<span class="ruby-identifier">add_text</span> <span class="ruby-identifier">brokeleiden</span>
+  
+  <span class="ruby-comment"># write back to a string</span>
+  <span class="ruby-identifier">modified_xml_content</span> = <span class="ruby-string">''</span>
+  <span class="ruby-identifier">original_xml_content</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">modified_xml_content</span>)
+  
+  <span class="ruby-comment"># commit xml to repo</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">modified_xml_content</span>, <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">commit_comment</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- save_broken_leiden_trans_to_xml-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- save_broken_leiden_trans_to_xml-method -->
+
+      
+        <div id="set_leiden_translation_content-method" class="method-detail ">
+          <a name="method-i-set_leiden_translation_content"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set_leiden_translation_content</span><span
+              class="method-args">(leiden_translation_content, comment)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns a String of the SHA1 of the commit</p>
+            
+
+            
+            <div class="method-source-code" id="set_leiden_translation_content-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_leiden_translation_content</span>(<span class="ruby-identifier">leiden_translation_content</span>, <span class="ruby-identifier">comment</span>)
+  <span class="ruby-comment"># transform back to XML</span>
+  <span class="ruby-identifier">xml_content</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">leiden_translation_to_xml</span>(<span class="ruby-identifier">leiden_translation_content</span>)
+  <span class="ruby-comment"># commit xml to repo</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">xml_content</span>, <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">comment</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set_leiden_translation_content-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set_leiden_translation_content-method -->
+
+      
+        <div id="stub_text_structure-method" class="method-detail ">
+          <a name="method-i-stub_text_structure"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stub_text_structure</span><span
+              class="method-args">(lang)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="stub_text_structure-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stub_text_structure</span>(<span class="ruby-identifier">lang</span>)
+  <span class="ruby-identifier">translation_stub_xsl</span> =
+    <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
+      <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">related_text</span>.<span class="ruby-identifier">content</span>),
+      <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RAILS_ROOT</span>,
+        <span class="ruby-node">%{data xslt translation ddb_to_translation_xsl.xsl}</span>))
+    )
+  
+  <span class="ruby-identifier">rewritten_xml</span> =
+    <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
+      <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">content</span>),
+      <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-identifier">translation_stub_xsl</span>),
+      <span class="ruby-comment">#:lang =&gt; 'en'</span>
+      <span class="ruby-comment">#assumed that hard coded 'en' is remnant and should be</span>
+      <span class="ruby-value">:lang</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">lang</span>
+    )
+    
+  
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">rewritten_xml</span>, <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;Update translation with stub for @xml:lang='#{lang}'&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stub_text_structure-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stub_text_structure-method -->
+
+      
+        <div id="to_path-method" class="method-detail ">
+          <a name="method-i-to_path"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_path</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="to_path-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_path</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/#{self.class::TEMPORARY_COLLECTION}/</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temporary_path</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">path_components</span> = [ <span class="ruby-constant">PATH_PREFIX</span> ]
+    <span class="ruby-comment"># assume the name is e.g. hgv2302zzr</span>
+    <span class="ruby-identifier">trimmed_name</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_components</span>.<span class="ruby-identifier">last</span> <span class="ruby-comment"># 2302zzr</span>
+
+    <span class="ruby-identifier">hgv_xml_path</span> = <span class="ruby-identifier">trimmed_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">'.xml'</span>
+
+    <span class="ruby-comment"># HGV_trans_EpiDoc uses a flat hierarchy</span>
+    <span class="ruby-identifier">path_components</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">hgv_xml_path</span>
+
+    <span class="ruby-comment"># e.g. HGV_trans_EpiDoc/2302zzr.xml</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">path_components</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_path-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_path-method -->
+
+      
+        <div id="translation_already_in_language-3F-method" class="method-detail ">
+          <a name="method-i-translation_already_in_language-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">translation_already_in_language?</span><span
+              class="method-args">(lang)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="translation_already_in_language-3F-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">translation_already_in_language?</span>(<span class="ruby-identifier">lang</span>)
+  <span class="ruby-identifier">lang_path</span> = <span class="ruby-string">'/TEI/text/body/div[@type = &quot;translation&quot; and @xml:lang = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">lang</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot;]'</span>
+  
+  <span class="ruby-identifier">doc</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>)
+  <span class="ruby-identifier">result</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">XPath</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">doc</span>, <span class="ruby-identifier">lang_path</span>)
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+   
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- translation_already_in_language-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- translation_already_in_language-3F-method -->
+
+      
+        <div id="xml_title_text-method" class="method-detail ">
+          <a name="method-i-xml_title_text"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">xml_title_text</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="xml_title_text-source">
+<pre>
+<span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xml_title_text</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-string">&quot; HGVTITLE (DDBTITLE) &quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- xml_title_text-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- xml_title_text-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
