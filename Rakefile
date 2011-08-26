@@ -88,7 +88,7 @@ namespace "docs" do
   end
 
   desc "Build index of generated documentation"
-  task :index do
+  task :generated_index do
     index_file = File.join('_includes','generated_index.md')
     file index_file => 'Rakefile' do
       puts "Building generated documentation index..."
@@ -97,6 +97,22 @@ namespace "docs" do
         directories.each do |directory|
           index_content += "* [#{directory[:description]}](#{File.join('generated',repository,directory[:target])})\n"
         end
+      end
+      FileUtils.mkdir_p('_includes')
+      File.open(index_file,'w') {|f| f.write(index_content)}
+    end
+    Rake::Task[index_file].invoke
+  end
+  
+  desc "Build index of system-level documentation"
+  task :system_level_index do
+    index_file = File.join('_includes','system_level_index.md')
+    file index_file => 'Rakefile' do
+      puts "Building system-level documentation index..."
+      index_content = ""
+      Dir.glob(File.join('system_level','**','*.md')).each do |md_file|
+        base_name = md_file.sub(/\.md$/,'').sub(/^system_level./,'')
+        index_content += "* [#{base_name}](system_level/#{base_name}.html)"
       end
       FileUtils.mkdir_p('_includes')
       File.open(index_file,'w') {|f| f.write(index_content)}
@@ -123,12 +139,12 @@ end
 
 namespace "jekyll" do
   desc "Generate/update static site (without local server)"
-  task :static => ['docs:update','docs:index'] do
+  task :static => ['docs:update','docs:generated_index','docs:system_level_index'] do
     system("jekyll --pygments --no-auto")
   end
 
   desc "Generate site and run local server"
-  task :run => ['docs:update','docs:index'] do
+  task :run => ['docs:update','docs:generated_index','docs:system_level_index'] do
     exec("jekyll --pygments --server")
   end
 end
