@@ -1,3 +1,8 @@
+---
+layout: default
+title: XSugar Rails Plugin Architecture
+---
+
 XSugar Rails Plugin Architecture
 ================================
 
