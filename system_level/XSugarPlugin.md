@@ -36,7 +36,7 @@ of the base [`RXSugar::JRubyHelper::ClassMethods`](https://github.com/papyri/xsu
 module, which define two additional methods:
 
  * [`transformer_singleton`](https://github.com/papyri/xsugar/blob/v1.0.13/lib/jruby_helper.rb#L251-253) - used to create an actual transformer singleton from the grammar when the standalone transformation server is not being used, i.e. the Rails app does the transformations itself
- * [`transformer_name`](https://github.com/papyri/xsugar/blob/v1.0.13/lib/jruby_helper.rb#L255-257)- used to define the transformer name passed to the standalone transformation server is being used
+ * [`transformer_name`](https://github.com/papyri/xsugar/blob/v1.0.13/lib/jruby_helper.rb#L255-257)- used to define the transformer name passed to the standalone transformation server if it is being used
 
 These are used by the methods defined in the `ClassMethods` module to do the actual transforms.
 As the `ClassMethods` module does not have these methods defined itself, trying to perform a transform
