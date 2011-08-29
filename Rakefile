@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'yaml'
 
 repositories = {
   "sosol" => [{
@@ -111,8 +112,9 @@ namespace "docs" do
       puts "Building system-level documentation index..."
       index_content = ""
       Dir.glob(File.join('system_level','**','*.md')).each do |md_file|
-        base_name = md_file.sub(/\.md$/,'').sub(/^system_level./,'')
-        index_content += "* [#{base_name}](system_level/#{base_name}.html)"
+        title = YAML.load_file(md_file)['title']
+        base_name = md_file.sub(/\.md$/,'')
+        index_content += "* [#{title}](#{base_name}.html)"
       end
       FileUtils.mkdir_p('_includes')
       File.open(index_file,'w') {|f| f.write(index_content)}
