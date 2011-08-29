@@ -93,12 +93,11 @@ Class HasImagesFacet</H2>
 <PRE>
 <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</A>
   <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">info.papyri.dispatch.browse.facet.Facet</A>
-      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html" title="class in info.papyri.dispatch.browse.facet">info.papyri.dispatch.browse.facet.BooleanFacet</A>
-          <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>info.papyri.dispatch.browse.facet.HasImagesFacet</B>
+      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>info.papyri.dispatch.browse.facet.HasImagesFacet</B>
 </PRE>
 <HR>
 <DL>
-<DT><PRE>public class <B>HasImagesFacet</B><DT>extends <A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html" title="class in info.papyri.dispatch.browse.facet">BooleanFacet</A></DL>
+<DT><PRE>public class <B>HasImagesFacet</B><DT>extends <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></DL>
 </PRE>
 
 <P>
@@ -290,7 +289,7 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 <DD>Generates the HTML form element used for input.
 <P>
 <DD><DL>
-<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html#generateWidget()">generateWidget</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html" title="class in info.papyri.dispatch.browse.facet">BooleanFacet</A></CODE></DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#generateWidget()">generateWidget</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
 </DD>
 <DD><DL>
 
@@ -309,7 +308,7 @@ public org.apache.solr.client.solrj.SolrQuery <B>buildQueryContribution</B>(org.
  faceting information required by, the <code>Facet</code>
 <P>
 <DD><DL>
-<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html#buildQueryContribution(org.apache.solr.client.solrj.SolrQuery)">buildQueryContribution</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html" title="class in info.papyri.dispatch.browse.facet">BooleanFacet</A></CODE></DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#buildQueryContribution(org.apache.solr.client.solrj.SolrQuery)">buildQueryContribution</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
 </DD>
 <DD><DL>
 
@@ -355,6 +354,23 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 
 <DT><B>Returns:</B><DD>A querystring representing a <code>Facet</code>s constraints.<DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html#doPagination(java.util.ArrayList, long)"><CODE>FacetBrowser.doPagination(java.util.ArrayList, long)</CODE></A>, 
 <A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html#buildFullQueryString(java.util.ArrayList)"><CODE>FacetBrowser.buildFullQueryString(java.util.ArrayList)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)"><!-- --></A><H3>
+setWidgetValues</H3>
+<PRE>
+public void <B>setWidgetValues</B>(org.apache.solr.client.solrj.response.QueryResponse&nbsp;qr)</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)">Facet</A></CODE></B></DD>
+<DD>Sets the values to be displayed by the <code>Facet</code>'s HTML form control.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)">setWidgetValues</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html#populateFacets(java.util.ArrayList, org.apache.solr.client.solrj.response.QueryResponse)"><CODE>FacetBrowser.populateFacets(java.util.ArrayList, org.apache.solr.client.solrj.response.QueryResponse)</CODE></A></DL>
 </DD>
 </DL>
 <HR>
@@ -407,23 +423,6 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 </DD>
 <DD><DL>
 </DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)"><!-- --></A><H3>
-setWidgetValues</H3>
-<PRE>
-public void <B>setWidgetValues</B>(org.apache.solr.client.solrj.response.QueryResponse&nbsp;qr)</PRE>
-<DL>
-<DD><B>Description copied from class: <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)">Facet</A></CODE></B></DD>
-<DD>Sets the values to be displayed by the <code>Facet</code>'s HTML form control.
-<P>
-<DD><DL>
-<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html#setWidgetValues(org.apache.solr.client.solrj.response.QueryResponse)">setWidgetValues</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/BooleanFacet.html" title="class in info.papyri.dispatch.browse.facet">BooleanFacet</A></CODE></DL>
-</DD>
-<DD><DL>
-<DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html#populateFacets(java.util.ArrayList, org.apache.solr.client.solrj.response.QueryResponse)"><CODE>FacetBrowser.populateFacets(java.util.ArrayList, org.apache.solr.client.solrj.response.QueryResponse)</CODE></A></DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
