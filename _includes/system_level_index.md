@@ -1,1 +1,1 @@
-* [XSugarPlugin](system_level/XSugarPlugin.html)
+* [XSugar Rails Plugin Architecture](system_level/XSugarPlugin.html)
