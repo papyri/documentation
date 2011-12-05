@@ -2,17 +2,27 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=utf-8" />
-<title>Module: RXSugar::JRubyHelper::ClassMethods</title>
-<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: RXSugar::JRubyHelper::ClassMethods
+  
+    &mdash; Documentation by YARD 0.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -67,6 +80,8 @@
   
 </dl>
 <div class="clear"></div>
+
+
 
 
 
@@ -116,9 +131,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
----used for translation---.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>—-used for translation—-.</p>
 </div></span>
   
 </li>
@@ -329,9 +343,8 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>
----used for commentary--.
-</p>
+    <span class="summary_desc"><div class='inline'>
+<p>—-used for commentary—.</p>
 </div></span>
   
 </li>
@@ -408,9 +421,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 146</span>
 
-<span class='def def kw'>def</span> <span class='get_abs_from_edition_div identifier id'>get_abs_from_edition_div</span><span class='lparen token'>(</span><span class='xml identifier id'>xml</span><span class='rparen token'>)</span>
-  <span class='REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='XPath constant id'>XPath</span><span class='dot token'>.</span><span class='match identifier id'>match</span><span class='lparen token'>(</span><span class='REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='Document constant id'>Document</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='xml identifier id'>xml</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='string val'>'/TEI/text/body/div[@type = &quot;edition&quot;]/*'</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_abs_from_edition_div identifier id'>get_abs_from_edition_div</span><span class='lparen token'>(</span><span class='rubyid_xml identifier id'>xml</span><span class='rparen token'>)</span>
+  <span class='rubyid_REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='rubyid_XPath constant id'>XPath</span><span class='dot token'>.</span><span class='rubyid_match identifier id'>match</span><span class='lparen token'>(</span><span class='rubyid_REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='rubyid_Document constant id'>Document</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_xml identifier id'>xml</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='string val'>'/TEI/text/body/div[@type = &quot;edition&quot;]/*'</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -426,15 +439,15 @@
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
----used for translation---
-</p>
+    
+<p>—-used for translation—-</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -448,9 +461,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 106</span>
 
-<span class='def def kw'>def</span> <span class='get_body identifier id'>get_body</span><span class='lparen token'>(</span><span class='xml identifier id'>xml</span><span class='rparen token'>)</span>  
-  <span class='REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='XPath constant id'>XPath</span><span class='dot token'>.</span><span class='match identifier id'>match</span><span class='lparen token'>(</span><span class='REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='Document constant id'>Document</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='xml identifier id'>xml</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='string val'>'/TEI/text/body/'</span><span class='rparen token'>)</span>        
-<span class='end end kw'>end</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_body identifier id'>get_body</span><span class='lparen token'>(</span><span class='rubyid_xml identifier id'>xml</span><span class='rparen token'>)</span>  
+  <span class='rubyid_REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='rubyid_XPath constant id'>XPath</span><span class='dot token'>.</span><span class='rubyid_match identifier id'>match</span><span class='lparen token'>(</span><span class='rubyid_REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='rubyid_Document constant id'>Document</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_xml identifier id'>xml</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='string val'>'/TEI/text/body/'</span><span class='rparen token'>)</span>        
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -478,10 +491,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 150</span>
 
-<span class='def def kw'>def</span> <span class='get_div_edition identifier id'>get_div_edition</span><span class='lparen token'>(</span><span class='xml identifier id'>xml</span><span class='rparen token'>)</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_div_edition identifier id'>get_div_edition</span><span class='lparen token'>(</span><span class='rubyid_xml identifier id'>xml</span><span class='rparen token'>)</span>
   <span class='comment val'># new to pull from div edition on to get the get_non_lb_element_children xpath to work</span>
-  <span class='REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='XPath constant id'>XPath</span><span class='dot token'>.</span><span class='match identifier id'>match</span><span class='lparen token'>(</span><span class='REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='Document constant id'>Document</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='xml identifier id'>xml</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='string val'>'/TEI/text/body/div[@type = &quot;edition&quot;]'</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
+  <span class='rubyid_REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='rubyid_XPath constant id'>XPath</span><span class='dot token'>.</span><span class='rubyid_match identifier id'>match</span><span class='lparen token'>(</span><span class='rubyid_REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='rubyid_Document constant id'>Document</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_xml identifier id'>xml</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='string val'>'/TEI/text/body/div[@type = &quot;edition&quot;]'</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -509,10 +522,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 110</span>
 
-<span class='def def kw'>def</span> <span class='get_div_translation identifier id'>get_div_translation</span><span class='lparen token'>(</span><span class='xml identifier id'>xml</span><span class='rparen token'>)</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_get_div_translation identifier id'>get_div_translation</span><span class='lparen token'>(</span><span class='rubyid_xml identifier id'>xml</span><span class='rparen token'>)</span>
   <span class='comment val'># new to pull from div type=translation for translation processing</span>
-  <span class='REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='XPath constant id'>XPath</span><span class='dot token'>.</span><span class='match identifier id'>match</span><span class='lparen token'>(</span><span class='REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='Document constant id'>Document</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='xml identifier id'>xml</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='string val'>'/TEI/text/body/div[@type = &quot;translation&quot;]'</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
+  <span class='rubyid_REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='rubyid_XPath constant id'>XPath</span><span class='dot token'>.</span><span class='rubyid_match identifier id'>match</span><span class='lparen token'>(</span><span class='rubyid_REXML constant id'>REXML</span><span class='colon2 op'>::</span><span class='rubyid_Document constant id'>Document</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_xml identifier id'>xml</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='string val'>'/TEI/text/body/div[@type = &quot;translation&quot;]'</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -543,13 +556,13 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 220</span>
 
-<span class='def def kw'>def</span> <span class='jruby_pipe identifier id'>jruby_pipe</span><span class='lparen token'>(</span><span class='ruby_file identifier id'>ruby_file</span><span class='comma token'>,</span> <span class='content identifier id'>content</span><span class='rparen token'>)</span>
-  <span class='IO constant id'>IO</span><span class='dot token'>.</span><span class='popen identifier id'>popen</span><span class='lparen token'>(</span><span class='dstring node'>&quot;jruby #{ruby_file}&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;w+&quot;</span><span class='rparen token'>)</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='pipe identifier id'>pipe</span><span class='bitor op'>|</span>
-    <span class='pipe identifier id'>pipe</span><span class='dot token'>.</span><span class='puts identifier id'>puts</span> <span class='content identifier id'>content</span>
-    <span class='pipe identifier id'>pipe</span><span class='dot token'>.</span><span class='close_write identifier id'>close_write</span>
-    <span class='pipe identifier id'>pipe</span><span class='dot token'>.</span><span class='read identifier id'>read</span>
-  <span class='end end kw'>end</span>
-<span class='end end kw'>end</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_jruby_pipe identifier id'>jruby_pipe</span><span class='lparen token'>(</span><span class='rubyid_ruby_file identifier id'>ruby_file</span><span class='comma token'>,</span> <span class='rubyid_content identifier id'>content</span><span class='rparen token'>)</span>
+  <span class='rubyid_IO constant id'>IO</span><span class='dot token'>.</span><span class='rubyid_popen identifier id'>popen</span><span class='lparen token'>(</span><span class='dstring node'>&quot;jruby #{ruby_file}&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;w+&quot;</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_pipe identifier id'>pipe</span><span class='bitor op'>|</span>
+    <span class='rubyid_pipe identifier id'>pipe</span><span class='dot token'>.</span><span class='rubyid_puts identifier id'>puts</span> <span class='rubyid_content identifier id'>content</span>
+    <span class='rubyid_pipe identifier id'>pipe</span><span class='dot token'>.</span><span class='rubyid_close_write identifier id'>close_write</span>
+    <span class='rubyid_pipe identifier id'>pipe</span><span class='dot token'>.</span><span class='rubyid_read identifier id'>read</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -602,35 +615,35 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 190</span>
 
-<span class='def def kw'>def</span> <span class='nonxml2xml identifier id'>nonxml2xml</span><span class='lparen token'>(</span><span class='content identifier id'>content</span><span class='rparen token'>)</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_nonxml2xml identifier id'>nonxml2xml</span><span class='lparen token'>(</span><span class='rubyid_content identifier id'>content</span><span class='rparen token'>)</span>
   <span class='comment val'># ruby_file = File.join(File.dirname(__FILE__), *%w'.. bin nonxml2xml.rb')</span>
   <span class='comment val'># jruby_pipe(ruby_file, content)</span>
-  <span class='if if kw'>if</span><span class='lparen token'>(</span><span class='defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='XSUGAR_STANDALONE_ENABLED constant id'>XSUGAR_STANDALONE_ENABLED</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='XSUGAR_STANDALONE_ENABLED constant id'>XSUGAR_STANDALONE_ENABLED</span><span class='rparen token'>)</span>
-    <span class='xformed identifier id'>xformed</span> <span class='assign token'>=</span> <span class='XSugarStandalone constant id'>XSugarStandalone</span><span class='dot token'>.</span><span class='transform_request identifier id'>transform_request</span><span class='lparen token'>(</span><span class='XSUGAR_STANDALONE_URL constant id'>XSUGAR_STANDALONE_URL</span><span class='comma token'>,</span>
+  <span class='rubyid_if if kw'>if</span><span class='lparen token'>(</span><span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_XSUGAR_STANDALONE_ENABLED constant id'>XSUGAR_STANDALONE_ENABLED</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_XSUGAR_STANDALONE_ENABLED constant id'>XSUGAR_STANDALONE_ENABLED</span><span class='rparen token'>)</span>
+    <span class='rubyid_xformed identifier id'>xformed</span> <span class='assign token'>=</span> <span class='rubyid_XSugarStandalone constant id'>XSugarStandalone</span><span class='dot token'>.</span><span class='rubyid_transform_request identifier id'>transform_request</span><span class='lparen token'>(</span><span class='rubyid_XSUGAR_STANDALONE_URL constant id'>XSUGAR_STANDALONE_URL</span><span class='comma token'>,</span>
       <span class='lbrace token'>{</span>
-        <span class='symbol val'>:content</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='content identifier id'>content</span><span class='comma token'>,</span>
-        <span class='symbol val'>:type</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='transformer_name identifier id'>transformer_name</span><span class='comma token'>,</span>
+        <span class='symbol val'>:content</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_content identifier id'>content</span><span class='comma token'>,</span>
+        <span class='symbol val'>:type</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_transformer_name identifier id'>transformer_name</span><span class='comma token'>,</span>
         <span class='symbol val'>:direction</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'nonxml2xml'</span>
       <span class='rbrace token'>}</span>
     <span class='rparen token'>)</span>
-    <span class='return return kw'>return</span> <span class='xformed identifier id'>xformed</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span>
-  <span class='elsif elsif kw'>elsif</span><span class='lparen token'>(</span><span class='RUBY_PLATFORM constant id'>RUBY_PLATFORM</span> <span class='eq op'>==</span> <span class='string val'>'java'</span><span class='rparen token'>)</span>
-    <span class='begin begin kw'>begin</span>
-      <span class='xformed identifier id'>xformed</span> <span class='assign token'>=</span> <span class='transformer_singleton identifier id'>transformer_singleton</span><span class='dot token'>.</span><span class='instance identifier id'>instance</span><span class='dot token'>.</span><span class='rxsugar identifier id'>rxsugar</span><span class='dot token'>.</span><span class='non_xml_to_xml identifier id'>non_xml_to_xml</span><span class='lparen token'>(</span><span class='content identifier id'>content</span><span class='rparen token'>)</span>
-      <span class='return return kw'>return</span> <span class='xformed identifier id'>xformed</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span>
-    <span class='rescue rescue kw'>rescue</span> <span class='NativeException constant id'>NativeException</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='e identifier id'>e</span>
-      <span class='parse_exception identifier id'>parse_exception</span> <span class='assign token'>=</span> <span class='e identifier id'>e</span><span class='dot token'>.</span><span class='cause identifier id'>cause</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
-      <span class='if if kw'>if</span> <span class='parse_exception identifier id'>parse_exception</span><span class='dot token'>.</span><span class='class identifier id'>class</span> <span class='eq op'>==</span> <span class='Java constant id'>Java</span><span class='colon2 op'>::</span><span class='DkBricsGrammarParser constant id'>DkBricsGrammarParser</span><span class='colon2 op'>::</span><span class='ParseException constant id'>ParseException</span>
-        <span class='location identifier id'>location</span> <span class='assign token'>=</span> <span class='parse_exception identifier id'>parse_exception</span><span class='dot token'>.</span><span class='getLocation identifier id'>getLocation</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
-        <span class='raise identifier id'>raise</span> <span class='NonXMLParseError constant id'>NonXMLParseError</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span>
-          <span class='location identifier id'>location</span><span class='dot token'>.</span><span class='getLine identifier id'>getLine</span><span class='lparen token'>(</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='location identifier id'>location</span><span class='dot token'>.</span><span class='getColumn identifier id'>getColumn</span><span class='lparen token'>(</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='content identifier id'>content</span><span class='rparen token'>)</span><span class='comma token'>,</span>
-          <span class='parse_exception identifier id'>parse_exception</span><span class='dot token'>.</span><span class='getMessage identifier id'>getMessage</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
-      <span class='end end kw'>end</span>
-    <span class='end end kw'>end</span>
-  <span class='else else kw'>else</span>
-    <span class='return return kw'>return</span> <span class='post_to_blackboard identifier id'>post_to_blackboard</span><span class='lparen token'>(</span><span class='string val'>'nonxml'</span><span class='comma token'>,</span> <span class='string val'>'xml'</span><span class='comma token'>,</span> <span class='content identifier id'>content</span><span class='rparen token'>)</span>
-  <span class='end end kw'>end</span>
-<span class='end end kw'>end</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_xformed identifier id'>xformed</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+  <span class='rubyid_elsif elsif kw'>elsif</span><span class='lparen token'>(</span><span class='rubyid_RUBY_PLATFORM constant id'>RUBY_PLATFORM</span> <span class='eq op'>==</span> <span class='string val'>'java'</span><span class='rparen token'>)</span>
+    <span class='rubyid_begin begin kw'>begin</span>
+      <span class='rubyid_xformed identifier id'>xformed</span> <span class='assign token'>=</span> <span class='rubyid_transformer_singleton identifier id'>transformer_singleton</span><span class='dot token'>.</span><span class='rubyid_instance identifier id'>instance</span><span class='dot token'>.</span><span class='rubyid_rxsugar identifier id'>rxsugar</span><span class='dot token'>.</span><span class='rubyid_non_xml_to_xml identifier id'>non_xml_to_xml</span><span class='lparen token'>(</span><span class='rubyid_content identifier id'>content</span><span class='rparen token'>)</span>
+      <span class='rubyid_return return kw'>return</span> <span class='rubyid_xformed identifier id'>xformed</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+    <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_NativeException constant id'>NativeException</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
+      <span class='rubyid_parse_exception identifier id'>parse_exception</span> <span class='assign token'>=</span> <span class='rubyid_e identifier id'>e</span><span class='dot token'>.</span><span class='rubyid_cause identifier id'>cause</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+      <span class='rubyid_if if kw'>if</span> <span class='rubyid_parse_exception identifier id'>parse_exception</span><span class='dot token'>.</span><span class='rubyid_class identifier id'>class</span> <span class='eq op'>==</span> <span class='rubyid_Java constant id'>Java</span><span class='colon2 op'>::</span><span class='rubyid_DkBricsGrammarParser constant id'>DkBricsGrammarParser</span><span class='colon2 op'>::</span><span class='rubyid_ParseException constant id'>ParseException</span>
+        <span class='rubyid_location identifier id'>location</span> <span class='assign token'>=</span> <span class='rubyid_parse_exception identifier id'>parse_exception</span><span class='dot token'>.</span><span class='rubyid_getLocation identifier id'>getLocation</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+        <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_NonXMLParseError constant id'>NonXMLParseError</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span>
+          <span class='rubyid_location identifier id'>location</span><span class='dot token'>.</span><span class='rubyid_getLine identifier id'>getLine</span><span class='lparen token'>(</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_location identifier id'>location</span><span class='dot token'>.</span><span class='rubyid_getColumn identifier id'>getColumn</span><span class='lparen token'>(</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_content identifier id'>content</span><span class='rparen token'>)</span><span class='comma token'>,</span>
+          <span class='rubyid_parse_exception identifier id'>parse_exception</span><span class='dot token'>.</span><span class='rubyid_getMessage identifier id'>getMessage</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_post_to_blackboard identifier id'>post_to_blackboard</span><span class='lparen token'>(</span><span class='string val'>'nonxml'</span><span class='comma token'>,</span> <span class='string val'>'xml'</span><span class='comma token'>,</span> <span class='rubyid_content identifier id'>content</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -658,10 +671,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 155</span>
 
-<span class='def def kw'>def</span> <span class='parse_exception_pretty_print identifier id'>parse_exception_pretty_print</span><span class='lparen token'>(</span><span class='text identifier id'>text</span><span class='comma token'>,</span> <span class='position identifier id'>position</span><span class='rparen token'>)</span>
-  <span class='carat identifier id'>carat</span> <span class='assign token'>=</span> <span class='string val'>'^'</span><span class='dot token'>.</span><span class='rjust identifier id'>rjust</span><span class='lparen token'>(</span><span class='position identifier id'>position</span><span class='rparen token'>)</span>
-  <span class='text identifier id'>text</span> <span class='plus op'>+</span> <span class='string val'>&quot;\n&quot;</span> <span class='plus op'>+</span> <span class='carat identifier id'>carat</span>
-<span class='end end kw'>end</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_parse_exception_pretty_print identifier id'>parse_exception_pretty_print</span><span class='lparen token'>(</span><span class='rubyid_text identifier id'>text</span><span class='comma token'>,</span> <span class='rubyid_position identifier id'>position</span><span class='rparen token'>)</span>
+  <span class='rubyid_carat identifier id'>carat</span> <span class='assign token'>=</span> <span class='string val'>'^'</span><span class='dot token'>.</span><span class='rubyid_rjust identifier id'>rjust</span><span class='lparen token'>(</span><span class='rubyid_position identifier id'>position</span><span class='rparen token'>)</span>
+  <span class='rubyid_text identifier id'>text</span> <span class='plus op'>+</span> <span class='string val'>&quot;\n&quot;</span> <span class='plus op'>+</span> <span class='rubyid_carat identifier id'>carat</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -705,26 +718,26 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 228</span>
 
-<span class='def def kw'>def</span> <span class='post_to_blackboard identifier id'>post_to_blackboard</span><span class='lparen token'>(</span><span class='from identifier id'>from</span><span class='comma token'>,</span> <span class='to identifier id'>to</span><span class='comma token'>,</span> <span class='content identifier id'>content</span><span class='rparen token'>)</span>
-  <span class='DRb constant id'>DRb</span><span class='dot token'>.</span><span class='start_service identifier id'>start_service</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_post_to_blackboard identifier id'>post_to_blackboard</span><span class='lparen token'>(</span><span class='rubyid_from identifier id'>from</span><span class='comma token'>,</span> <span class='rubyid_to identifier id'>to</span><span class='comma token'>,</span> <span class='rubyid_content identifier id'>content</span><span class='rparen token'>)</span>
+  <span class='rubyid_DRb constant id'>DRb</span><span class='dot token'>.</span><span class='rubyid_start_service identifier id'>start_service</span>
   <span class='comment val'># Just use the primary service, change this if we're going to register</span>
   <span class='comment val'># any more services on the Ring Server</span>
-  <span class='ring_server identifier id'>ring_server</span> <span class='assign token'>=</span> <span class='Rinda constant id'>Rinda</span><span class='colon2 op'>::</span><span class='RingFinger constant id'>RingFinger</span><span class='dot token'>.</span><span class='primary identifier id'>primary</span>
+  <span class='rubyid_ring_server identifier id'>ring_server</span> <span class='assign token'>=</span> <span class='rubyid_Rinda constant id'>Rinda</span><span class='colon2 op'>::</span><span class='rubyid_RingFinger constant id'>RingFinger</span><span class='dot token'>.</span><span class='rubyid_primary identifier id'>primary</span>
   
-  <span class='tuplespace identifier id'>tuplespace</span> <span class='assign token'>=</span> <span class='ring_server identifier id'>ring_server</span><span class='dot token'>.</span><span class='read identifier id'>read</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='symbol val'>:name</span><span class='comma token'>,</span> <span class='symbol val'>:TupleSpace</span><span class='comma token'>,</span> <span class='nil nil kw'>nil</span><span class='comma token'>,</span> <span class='nil nil kw'>nil</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='lbrack token'>[</span><span class='integer val'>2</span><span class='rbrack token'>]</span>
-  <span class='tuplespace identifier id'>tuplespace</span> <span class='assign token'>=</span> <span class='Rinda constant id'>Rinda</span><span class='colon2 op'>::</span><span class='TupleSpaceProxy constant id'>TupleSpaceProxy</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='tuplespace identifier id'>tuplespace</span>
+  <span class='rubyid_tuplespace identifier id'>tuplespace</span> <span class='assign token'>=</span> <span class='rubyid_ring_server identifier id'>ring_server</span><span class='dot token'>.</span><span class='rubyid_read identifier id'>read</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='symbol val'>:name</span><span class='comma token'>,</span> <span class='symbol val'>:TupleSpace</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='comma token'>,</span> <span class='rubyid_nil nil kw'>nil</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='lbrack token'>[</span><span class='integer val'>2</span><span class='rbrack token'>]</span>
+  <span class='rubyid_tuplespace identifier id'>tuplespace</span> <span class='assign token'>=</span> <span class='rubyid_Rinda constant id'>Rinda</span><span class='colon2 op'>::</span><span class='rubyid_TupleSpaceProxy constant id'>TupleSpaceProxy</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span> <span class='rubyid_tuplespace identifier id'>tuplespace</span>
   
-  <span class='tuplespace identifier id'>tuplespace</span><span class='dot token'>.</span><span class='write identifier id'>write</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='from identifier id'>from</span><span class='comma token'>,</span> <span class='to identifier id'>to</span><span class='comma token'>,</span> <span class='content identifier id'>content</span><span class='comma token'>,</span> <span class='content identifier id'>content</span><span class='dot token'>.</span><span class='object_id identifier id'>object_id</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
-  <span class='result identifier id'>result</span><span class='comma token'>,</span> <span class='object_id identifier id'>object_id</span><span class='comma token'>,</span> <span class='result_type identifier id'>result_type</span><span class='comma token'>,</span> <span class='transformed identifier id'>transformed</span> <span class='assign token'>=</span> 
-    <span class='tuplespace identifier id'>tuplespace</span><span class='dot token'>.</span><span class='take identifier id'>take</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='symbol val'>:result</span><span class='comma token'>,</span> <span class='content identifier id'>content</span><span class='dot token'>.</span><span class='object_id identifier id'>object_id</span><span class='comma token'>,</span> <span class='Symbol constant id'>Symbol</span><span class='comma token'>,</span> <span class='String constant id'>String</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
-  <span class='DRb constant id'>DRb</span><span class='dot token'>.</span><span class='stop_service identifier id'>stop_service</span>
+  <span class='rubyid_tuplespace identifier id'>tuplespace</span><span class='dot token'>.</span><span class='rubyid_write identifier id'>write</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='rubyid_from identifier id'>from</span><span class='comma token'>,</span> <span class='rubyid_to identifier id'>to</span><span class='comma token'>,</span> <span class='rubyid_content identifier id'>content</span><span class='comma token'>,</span> <span class='rubyid_content identifier id'>content</span><span class='dot token'>.</span><span class='rubyid_object_id identifier id'>object_id</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='rubyid_result identifier id'>result</span><span class='comma token'>,</span> <span class='rubyid_object_id identifier id'>object_id</span><span class='comma token'>,</span> <span class='rubyid_result_type identifier id'>result_type</span><span class='comma token'>,</span> <span class='rubyid_transformed identifier id'>transformed</span> <span class='assign token'>=</span> 
+    <span class='rubyid_tuplespace identifier id'>tuplespace</span><span class='dot token'>.</span><span class='rubyid_take identifier id'>take</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='symbol val'>:result</span><span class='comma token'>,</span> <span class='rubyid_content identifier id'>content</span><span class='dot token'>.</span><span class='rubyid_object_id identifier id'>object_id</span><span class='comma token'>,</span> <span class='rubyid_Symbol constant id'>Symbol</span><span class='comma token'>,</span> <span class='rubyid_String constant id'>String</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='rubyid_DRb constant id'>DRb</span><span class='dot token'>.</span><span class='rubyid_stop_service identifier id'>stop_service</span>
   
-  <span class='if if kw'>if</span> <span class='result_type identifier id'>result_type</span> <span class='eq op'>==</span> <span class='symbol val'>:exception</span>
-    <span class='raise identifier id'>raise</span> <span class='transformed identifier id'>transformed</span>
-  <span class='else else kw'>else</span>
-    <span class='return return kw'>return</span> <span class='transformed identifier id'>transformed</span>
-  <span class='end end kw'>end</span>
-<span class='end end kw'>end</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_result_type identifier id'>result_type</span> <span class='eq op'>==</span> <span class='symbol val'>:exception</span>
+    <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_transformed identifier id'>transformed</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_transformed identifier id'>transformed</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -751,9 +764,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 142</span>
 
-<span class='def def kw'>def</span> <span class='preprocess_abs identifier id'>preprocess_abs</span><span class='lparen token'>(</span><span class='abs identifier id'>abs</span><span class='rparen token'>)</span>
-  <span class='return return kw'>return</span> <span class='string val'>&quot;&lt;div xml:lang=\&quot;grc\&quot; type=\&quot;edition\&quot; xml:space=\&quot;preserve\&quot;&gt;&quot;</span> <span class='plus op'>+</span> <span class='abs identifier id'>abs</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span> <span class='plus op'>+</span> <span class='string val'>&quot;&lt;/div&gt;&quot;</span>
-<span class='end end kw'>end</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_preprocess_abs identifier id'>preprocess_abs</span><span class='lparen token'>(</span><span class='rubyid_abs identifier id'>abs</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='string val'>&quot;&lt;div xml:lang=\&quot;grc\&quot; type=\&quot;edition\&quot; xml:space=\&quot;preserve\&quot;&gt;&quot;</span> <span class='plus op'>+</span> <span class='rubyid_abs identifier id'>abs</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span> <span class='plus op'>+</span> <span class='string val'>&quot;&lt;/div&gt;&quot;</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -781,10 +794,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 122</span>
 
-<span class='def def kw'>def</span> <span class='unwrap_commentary_sugar identifier id'>unwrap_commentary_sugar</span><span class='lparen token'>(</span><span class='commentary_sugar identifier id'>commentary_sugar</span><span class='rparen token'>)</span>
-  <span class='commentary_sugar identifier id'>commentary_sugar</span><span class='dot token'>.</span><span class='sub! fid id'>sub!</span><span class='lparen token'>(</span><span class='string val'>&quot;&lt;W&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;&quot;</span><span class='rparen token'>)</span>
-  <span class='commentary_sugar identifier id'>commentary_sugar</span><span class='dot token'>.</span><span class='sub! fid id'>sub!</span><span class='lparen token'>(</span><span class='string val'>&quot;W&gt;&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;&quot;</span><span class='rparen token'>)</span>
-<span class='end end kw'>end</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_unwrap_commentary_sugar identifier id'>unwrap_commentary_sugar</span><span class='lparen token'>(</span><span class='rubyid_commentary_sugar identifier id'>commentary_sugar</span><span class='rparen token'>)</span>
+  <span class='rubyid_commentary_sugar identifier id'>commentary_sugar</span><span class='dot token'>.</span><span class='rubyid_sub! fid id'>sub!</span><span class='lparen token'>(</span><span class='string val'>&quot;&lt;W&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_commentary_sugar identifier id'>commentary_sugar</span><span class='dot token'>.</span><span class='rubyid_sub! fid id'>sub!</span><span class='lparen token'>(</span><span class='string val'>&quot;W&gt;&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;&quot;</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -815,13 +828,13 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 130</span>
 
-<span class='def def kw'>def</span> <span class='unwrap_commentary_xml identifier id'>unwrap_commentary_xml</span><span class='lparen token'>(</span><span class='commentary_xml identifier id'>commentary_xml</span><span class='rparen token'>)</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_unwrap_commentary_xml identifier id'>unwrap_commentary_xml</span><span class='lparen token'>(</span><span class='rubyid_commentary_xml identifier id'>commentary_xml</span><span class='rparen token'>)</span>
  <span class='comment val'># commentary_xml.sub!( '&lt;wrap&gt;', &quot;&quot;)</span>
-  <span class='commentary_xml identifier id'>commentary_xml</span><span class='dot token'>.</span><span class='sub! fid id'>sub!</span><span class='lparen token'>(</span> <span class='regexp val'>/&lt;wrap(.*?)&gt;/</span><span class='comma token'>,</span> <span class='string val'>&quot;&quot;</span><span class='rparen token'>)</span> <span class='comment val'># to catch any namespace additions</span>
-  <span class='commentary_xml identifier id'>commentary_xml</span><span class='dot token'>.</span><span class='sub! fid id'>sub!</span><span class='lparen token'>(</span> <span class='string val'>'&lt;/wrap&gt;'</span><span class='comma token'>,</span> <span class='string val'>&quot;&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_commentary_xml identifier id'>commentary_xml</span><span class='dot token'>.</span><span class='rubyid_sub! fid id'>sub!</span><span class='lparen token'>(</span> <span class='regexp val'>/&lt;wrap(.*?)&gt;/</span><span class='comma token'>,</span> <span class='string val'>&quot;&quot;</span><span class='rparen token'>)</span> <span class='comment val'># to catch any namespace additions</span>
+  <span class='rubyid_commentary_xml identifier id'>commentary_xml</span><span class='dot token'>.</span><span class='rubyid_sub! fid id'>sub!</span><span class='lparen token'>(</span> <span class='string val'>'&lt;/wrap&gt;'</span><span class='comma token'>,</span> <span class='string val'>&quot;&quot;</span><span class='rparen token'>)</span>
   
   <span class='comment val'>#return REXML::XPath.first(REXML::Document.new(commentary_xml), '/wrap/*').to_s</span>
-<span class='end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -837,15 +850,15 @@
   
 </p><div class="docstring">
   <div class="discussion">
-    <p>
----used for commentary&#8212;
-</p>
+    
+<p>—-used for commentary—</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div><table class="source_code">
   <tr>
     <td>
@@ -859,9 +872,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 119</span>
 
-<span class='def def kw'>def</span> <span class='wrap_commentary_sugar identifier id'>wrap_commentary_sugar</span><span class='lparen token'>(</span><span class='commentary identifier id'>commentary</span><span class='rparen token'>)</span>
-  <span class='return return kw'>return</span> <span class='string val'>&quot;&lt;W &quot;</span> <span class='plus op'>+</span> <span class='commentary identifier id'>commentary</span><span class='dot token'>.</span><span class='strip identifier id'>strip</span> <span class='plus op'>+</span> <span class='string val'>&quot; W&gt;&quot;</span>
-<span class='end end kw'>end</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_wrap_commentary_sugar identifier id'>wrap_commentary_sugar</span><span class='lparen token'>(</span><span class='rubyid_commentary identifier id'>commentary</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='string val'>&quot;&lt;W &quot;</span> <span class='plus op'>+</span> <span class='rubyid_commentary identifier id'>commentary</span><span class='dot token'>.</span><span class='rubyid_strip identifier id'>strip</span> <span class='plus op'>+</span> <span class='string val'>&quot; W&gt;&quot;</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -888,9 +901,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 127</span>
 
-<span class='def def kw'>def</span> <span class='wrap_commentary_xml identifier id'>wrap_commentary_xml</span><span class='lparen token'>(</span><span class='commentary_xml identifier id'>commentary_xml</span><span class='rparen token'>)</span>
-  <span class='return return kw'>return</span> <span class='string val'>'&lt;wrap&gt;'</span> <span class='plus op'>+</span> <span class='commentary_xml identifier id'>commentary_xml</span><span class='dot token'>.</span><span class='strip identifier id'>strip</span> <span class='plus op'>+</span> <span class='string val'>'&lt;/wrap&gt;'</span>
-<span class='end end kw'>end</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_wrap_commentary_xml identifier id'>wrap_commentary_xml</span><span class='lparen token'>(</span><span class='rubyid_commentary_xml identifier id'>commentary_xml</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='string val'>'&lt;wrap&gt;'</span> <span class='plus op'>+</span> <span class='rubyid_commentary_xml identifier id'>commentary_xml</span><span class='dot token'>.</span><span class='rubyid_strip identifier id'>strip</span> <span class='plus op'>+</span> <span class='string val'>'&lt;/wrap&gt;'</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -943,35 +956,35 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 160</span>
 
-<span class='def def kw'>def</span> <span class='xml2nonxml identifier id'>xml2nonxml</span><span class='lparen token'>(</span><span class='content identifier id'>content</span><span class='rparen token'>)</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_xml2nonxml identifier id'>xml2nonxml</span><span class='lparen token'>(</span><span class='rubyid_content identifier id'>content</span><span class='rparen token'>)</span>
   <span class='comment val'># ruby_file = File.join(File.dirname(__FILE__), *%w'.. bin xml2nonxml.rb')</span>
   <span class='comment val'># jruby_pipe(ruby_file, content)</span>
-  <span class='if if kw'>if</span><span class='lparen token'>(</span><span class='defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='XSUGAR_STANDALONE_ENABLED constant id'>XSUGAR_STANDALONE_ENABLED</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='XSUGAR_STANDALONE_ENABLED constant id'>XSUGAR_STANDALONE_ENABLED</span><span class='rparen token'>)</span>
-    <span class='xformed identifier id'>xformed</span> <span class='assign token'>=</span> <span class='XSugarStandalone constant id'>XSugarStandalone</span><span class='dot token'>.</span><span class='transform_request identifier id'>transform_request</span><span class='lparen token'>(</span><span class='XSUGAR_STANDALONE_URL constant id'>XSUGAR_STANDALONE_URL</span><span class='comma token'>,</span>
+  <span class='rubyid_if if kw'>if</span><span class='lparen token'>(</span><span class='rubyid_defined? defined kw'>defined?</span><span class='lparen token'>(</span><span class='rubyid_XSUGAR_STANDALONE_ENABLED constant id'>XSUGAR_STANDALONE_ENABLED</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='rubyid_XSUGAR_STANDALONE_ENABLED constant id'>XSUGAR_STANDALONE_ENABLED</span><span class='rparen token'>)</span>
+    <span class='rubyid_xformed identifier id'>xformed</span> <span class='assign token'>=</span> <span class='rubyid_XSugarStandalone constant id'>XSugarStandalone</span><span class='dot token'>.</span><span class='rubyid_transform_request identifier id'>transform_request</span><span class='lparen token'>(</span><span class='rubyid_XSUGAR_STANDALONE_URL constant id'>XSUGAR_STANDALONE_URL</span><span class='comma token'>,</span>
       <span class='lbrace token'>{</span>
-        <span class='symbol val'>:content</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='content identifier id'>content</span><span class='comma token'>,</span>
-        <span class='symbol val'>:type</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='transformer_name identifier id'>transformer_name</span><span class='comma token'>,</span>
+        <span class='symbol val'>:content</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_content identifier id'>content</span><span class='comma token'>,</span>
+        <span class='symbol val'>:type</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_transformer_name identifier id'>transformer_name</span><span class='comma token'>,</span>
         <span class='symbol val'>:direction</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'xml2nonxml'</span>
       <span class='rbrace token'>}</span>
     <span class='rparen token'>)</span>
-    <span class='return return kw'>return</span> <span class='xformed identifier id'>xformed</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span>
-  <span class='elsif elsif kw'>elsif</span><span class='lparen token'>(</span><span class='RUBY_PLATFORM constant id'>RUBY_PLATFORM</span> <span class='eq op'>==</span> <span class='string val'>'java'</span><span class='rparen token'>)</span>
-    <span class='begin begin kw'>begin</span>
-      <span class='xformed identifier id'>xformed</span> <span class='assign token'>=</span> <span class='transformer_singleton identifier id'>transformer_singleton</span><span class='dot token'>.</span><span class='instance identifier id'>instance</span><span class='dot token'>.</span><span class='rxsugar identifier id'>rxsugar</span><span class='dot token'>.</span><span class='xml_to_non_xml identifier id'>xml_to_non_xml</span><span class='lparen token'>(</span><span class='content identifier id'>content</span><span class='rparen token'>)</span>
-      <span class='return return kw'>return</span> <span class='xformed identifier id'>xformed</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span>
-    <span class='rescue rescue kw'>rescue</span> <span class='NativeException constant id'>NativeException</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='e identifier id'>e</span>
-      <span class='parse_exception identifier id'>parse_exception</span> <span class='assign token'>=</span> <span class='e identifier id'>e</span><span class='dot token'>.</span><span class='cause identifier id'>cause</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
-      <span class='if if kw'>if</span> <span class='parse_exception identifier id'>parse_exception</span><span class='dot token'>.</span><span class='class identifier id'>class</span> <span class='eq op'>==</span> <span class='Java constant id'>Java</span><span class='colon2 op'>::</span><span class='DkBricsGrammarParser constant id'>DkBricsGrammarParser</span><span class='colon2 op'>::</span><span class='ParseException constant id'>ParseException</span>
-        <span class='location identifier id'>location</span> <span class='assign token'>=</span> <span class='parse_exception identifier id'>parse_exception</span><span class='dot token'>.</span><span class='getLocation identifier id'>getLocation</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
-        <span class='raise identifier id'>raise</span> <span class='XMLParseError constant id'>XMLParseError</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span>
-          <span class='location identifier id'>location</span><span class='dot token'>.</span><span class='getLine identifier id'>getLine</span><span class='lparen token'>(</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='location identifier id'>location</span><span class='dot token'>.</span><span class='getColumn identifier id'>getColumn</span><span class='lparen token'>(</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='content identifier id'>content</span><span class='rparen token'>)</span><span class='comma token'>,</span>
-          <span class='parse_exception identifier id'>parse_exception</span><span class='dot token'>.</span><span class='getMessage identifier id'>getMessage</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
-      <span class='end end kw'>end</span>
-    <span class='end end kw'>end</span>
-  <span class='else else kw'>else</span>
-    <span class='return return kw'>return</span> <span class='post_to_blackboard identifier id'>post_to_blackboard</span><span class='lparen token'>(</span><span class='string val'>'xml'</span><span class='comma token'>,</span> <span class='string val'>'nonxml'</span><span class='comma token'>,</span> <span class='content identifier id'>content</span><span class='rparen token'>)</span>
-  <span class='end end kw'>end</span>
-<span class='end end kw'>end</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_xformed identifier id'>xformed</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+  <span class='rubyid_elsif elsif kw'>elsif</span><span class='lparen token'>(</span><span class='rubyid_RUBY_PLATFORM constant id'>RUBY_PLATFORM</span> <span class='eq op'>==</span> <span class='string val'>'java'</span><span class='rparen token'>)</span>
+    <span class='rubyid_begin begin kw'>begin</span>
+      <span class='rubyid_xformed identifier id'>xformed</span> <span class='assign token'>=</span> <span class='rubyid_transformer_singleton identifier id'>transformer_singleton</span><span class='dot token'>.</span><span class='rubyid_instance identifier id'>instance</span><span class='dot token'>.</span><span class='rubyid_rxsugar identifier id'>rxsugar</span><span class='dot token'>.</span><span class='rubyid_xml_to_non_xml identifier id'>xml_to_non_xml</span><span class='lparen token'>(</span><span class='rubyid_content identifier id'>content</span><span class='rparen token'>)</span>
+      <span class='rubyid_return return kw'>return</span> <span class='rubyid_xformed identifier id'>xformed</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+    <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_NativeException constant id'>NativeException</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
+      <span class='rubyid_parse_exception identifier id'>parse_exception</span> <span class='assign token'>=</span> <span class='rubyid_e identifier id'>e</span><span class='dot token'>.</span><span class='rubyid_cause identifier id'>cause</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+      <span class='rubyid_if if kw'>if</span> <span class='rubyid_parse_exception identifier id'>parse_exception</span><span class='dot token'>.</span><span class='rubyid_class identifier id'>class</span> <span class='eq op'>==</span> <span class='rubyid_Java constant id'>Java</span><span class='colon2 op'>::</span><span class='rubyid_DkBricsGrammarParser constant id'>DkBricsGrammarParser</span><span class='colon2 op'>::</span><span class='rubyid_ParseException constant id'>ParseException</span>
+        <span class='rubyid_location identifier id'>location</span> <span class='assign token'>=</span> <span class='rubyid_parse_exception identifier id'>parse_exception</span><span class='dot token'>.</span><span class='rubyid_getLocation identifier id'>getLocation</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+        <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_XMLParseError constant id'>XMLParseError</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span>
+          <span class='rubyid_location identifier id'>location</span><span class='dot token'>.</span><span class='rubyid_getLine identifier id'>getLine</span><span class='lparen token'>(</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_location identifier id'>location</span><span class='dot token'>.</span><span class='rubyid_getColumn identifier id'>getColumn</span><span class='lparen token'>(</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_content identifier id'>content</span><span class='rparen token'>)</span><span class='comma token'>,</span>
+          <span class='rubyid_parse_exception identifier id'>parse_exception</span><span class='dot token'>.</span><span class='rubyid_getMessage identifier id'>getMessage</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_post_to_blackboard identifier id'>post_to_blackboard</span><span class='lparen token'>(</span><span class='string val'>'xml'</span><span class='comma token'>,</span> <span class='string val'>'nonxml'</span><span class='comma token'>,</span> <span class='rubyid_content identifier id'>content</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>

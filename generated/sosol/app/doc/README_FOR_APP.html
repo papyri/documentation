@@ -1,272 +1,279 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-  <title>File: README_FOR_APP [Rails Application Documentation]</title>
+<title>README_FOR_APP</title>
 
-  <link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet" />
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
 
-  <script src="../js/jquery.js" type="text/javascript"
-    charset="utf-8"></script>
-  <script src="../js/thickbox-compressed.js" type="text/javascript"
-    charset="utf-8"></script>
-  <script src="../js/quicksearch.js" type="text/javascript"
-    charset="utf-8"></script>
-  <script src="../js/darkfish.js" type="text/javascript"
-    charset="utf-8"></script>
-</head>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
 
 <body class="file">
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#classes">Classes</a>
-          <a href="../index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a></li>
-        
-        </ul>
-      </div>
-      
 
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class Index
-          <span class="search-toggle"><img src="../images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-        <ul class="link-list">
-        
-          <li><a href="../Papyrillio.html">Papyrillio</a></li>
-        
-          <li><a href="../Papyrillio/Aggregator.html">Papyrillio::Aggregator</a></li>
-        
-          <li><a href="../Papyrillio/Collector.html">Papyrillio::Collector</a></li>
-        
-          <li><a href="../Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a></li>
-        
-          <li><a href="../Papyrillio/Decorator.html">Papyrillio::Decorator</a></li>
-        
-          <li><a href="../Papyrillio/Organiser.html">Papyrillio::Organiser</a></li>
-        
-          <li><a href="../Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a></li>
-        
-          <li><a href="../Papyrillio/Printer.html">Papyrillio::Printer</a></li>
-        
-          <li><a href="../Papyrillio/Publishee.html">Papyrillio::Publishee</a></li>
-        
-          <li><a href="../Papyrillio/Publisher.html">Papyrillio::Publisher</a></li>
-        
-          <li><a href="../Papyrillio/Transformer.html">Papyrillio::Transformer</a></li>
-        
-          <li><a href="../JRubyXML.html">JRubyXML</a></li>
-        
-          <li><a href="../JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a></li>
-        
-          <li><a href="../JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a></li>
-        
-          <li><a href="../JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a></li>
-        
-          <li><a href="../JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a></li>
-        
-          <li><a href="../JRubyXML/ParseError.html">JRubyXML::ParseError</a></li>
-        
-          <li><a href="../JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a></li>
-        
-          <li><a href="../JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a></li>
-        
-          <li><a href="../REXML.html">REXML</a></li>
-        
-          <li><a href="../REXML/Document.html">REXML::Document</a></li>
-        
-          <li><a href="../REXML/Element.html">REXML::Element</a></li>
-        
-          <li><a href="../REXML/XPath.html">REXML::XPath</a></li>
-        
-          <li><a href="../Rpx.html">Rpx</a></li>
-        
-          <li><a href="../Rpx/RpxException.html">Rpx::RpxException</a></li>
-        
-          <li><a href="../Rpx/RpxHelper.html">Rpx::RpxHelper</a></li>
-        
-          <li><a href="../Comment.html">Comment</a></li>
-        
-          <li><a href="../Comment/CombineComment.html">Comment::CombineComment</a></li>
-        
-          <li><a href="../Doco.html">Doco</a></li>
-        
-          <li><a href="../Doco/DocoNode.html">Doco::DocoNode</a></li>
-        
-          <li><a href="../Grit.html">Grit</a></li>
-        
-          <li><a href="../Grit/Commit.html">Grit::Commit</a></li>
-        
-          <li><a href="../HGVMetaIdentifier.html">HGVMetaIdentifier</a></li>
-        
-          <li><a href="../HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
-        
-          <li><a href="../HGVTransGlossary.html">HGVTransGlossary</a></li>
-        
-          <li><a href="../HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a></li>
-        
-          <li><a href="../NumbersRDF.html">NumbersRDF</a></li>
-        
-          <li><a href="../NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a></li>
-        
-          <li><a href="../AjaxProxyController.html">AjaxProxyController</a></li>
-        
-          <li><a href="../ApplicationController.html">ApplicationController</a></li>
-        
-          <li><a href="../ApplicationHelper.html">ApplicationHelper</a></li>
-        
-          <li><a href="../Board.html">Board</a></li>
-        
-          <li><a href="../BoardsController.html">BoardsController</a></li>
-        
-          <li><a href="../CommentsController.html">CommentsController</a></li>
-        
-          <li><a href="../DDBIdentifier.html">DDBIdentifier</a></li>
-        
-          <li><a href="../DdbIdentifiersController.html">DdbIdentifiersController</a></li>
-        
-          <li><a href="../Decree.html">Decree</a></li>
-        
-          <li><a href="../DecreesController.html">DecreesController</a></li>
-        
-          <li><a href="../DocosController.html">DocosController</a></li>
-        
-          <li><a href="../DocovideosController.html">DocovideosController</a></li>
-        
-          <li><a href="../Emailer.html">Emailer</a></li>
-        
-          <li><a href="../EmailerMailer.html">EmailerMailer</a></li>
-        
-          <li><a href="../EmailersController.html">EmailersController</a></li>
-        
-          <li><a href="../Event.html">Event</a></li>
-        
-          <li><a href="../EventsController.html">EventsController</a></li>
-        
-          <li><a href="../GitConf.html">GitConf</a></li>
-        
-          <li><a href="../HGVBiblioIdentifier.html">HGVBiblioIdentifier</a></li>
-        
-          <li><a href="../HGVIdentifier.html">HGVIdentifier</a></li>
-        
-          <li><a href="../HGVTransIdentifier.html">HGVTransIdentifier</a></li>
-        
-          <li><a href="../HelperController.html">HelperController</a></li>
-        
-          <li><a href="../HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a></li>
-        
-          <li><a href="../HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></li>
-        
-          <li><a href="../HgvTransGlossariesController.html">HgvTransGlossariesController</a></li>
-        
-          <li><a href="../HgvTransIdentifiersController.html">HgvTransIdentifiersController</a></li>
-        
-          <li><a href="../Identifier.html">Identifier</a></li>
-        
-          <li><a href="../IdentifiersController.html">IdentifiersController</a></li>
-        
-          <li><a href="../Integer.html">Integer</a></li>
-        
-          <li><a href="../Leiden.html">Leiden</a></li>
-        
-          <li><a href="../LeidenController.html">LeidenController</a></li>
-        
-          <li><a href="../LinkingInfo.html">LinkingInfo</a></li>
-        
-          <li><a href="../MaintenanceMode.html">MaintenanceMode</a></li>
-        
-          <li><a href="../Object.html">Object</a></li>
-        
-          <li><a href="../Publication.html">Publication</a></li>
-        
-          <li><a href="../PublicationsController.html">PublicationsController</a></li>
-        
-          <li><a href="../Rails.html">Rails</a></li>
-        
-          <li><a href="../RepositoriesController.html">RepositoriesController</a></li>
-        
-          <li><a href="../Repository.html">Repository</a></li>
-        
-          <li><a href="../RpxController.html">RpxController</a></li>
-        
-          <li><a href="../TranslationHelperController.html">TranslationHelperController</a></li>
-        
-          <li><a href="../TranslationLeiden.html">TranslationLeiden</a></li>
-        
-          <li><a href="../TranslationLeidenController.html">TranslationLeidenController</a></li>
-        
-          <li><a href="../User.html">User</a></li>
-        
-          <li><a href="../UserController.html">UserController</a></li>
-        
-          <li><a href="../UserIdentifier.html">UserIdentifier</a></li>
-        
-          <li><a href="../Vote.html">Vote</a></li>
-        
-          <li><a href="../VotesController.html">VotesController</a></li>
-        
-          <li><a href="../WelcomeController.html">WelcomeController</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-      
-    </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo.html">HgvMetaIdentifierHelper::HgvGeo</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/GeoSpot.html">HgvMetaIdentifierHelper::HgvGeo::GeoSpot</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/OrigPlace.html">HgvMetaIdentifierHelper::HgvGeo::OrigPlace</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/Place.html">HgvMetaIdentifierHelper::HgvGeo::Place</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/Provenance.html">HgvMetaIdentifierHelper::HgvGeo::Provenance</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a>
+  
+    <li><a href="../Papyrillio.html">Papyrillio</a>
+  
+    <li><a href="../Papyrillio/Aggregator.html">Papyrillio::Aggregator</a>
+  
+    <li><a href="../Papyrillio/Collector.html">Papyrillio::Collector</a>
+  
+    <li><a href="../Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a>
+  
+    <li><a href="../Papyrillio/Decorator.html">Papyrillio::Decorator</a>
+  
+    <li><a href="../Papyrillio/Organiser.html">Papyrillio::Organiser</a>
+  
+    <li><a href="../Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a>
+  
+    <li><a href="../Papyrillio/Printer.html">Papyrillio::Printer</a>
+  
+    <li><a href="../Papyrillio/Publishee.html">Papyrillio::Publishee</a>
+  
+    <li><a href="../Papyrillio/Publisher.html">Papyrillio::Publisher</a>
+  
+    <li><a href="../Papyrillio/Transformer.html">Papyrillio::Transformer</a>
+  
+    <li><a href="../JRubyXML.html">JRubyXML</a>
+  
+    <li><a href="../JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a>
+  
+    <li><a href="../JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a>
+  
+    <li><a href="../JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a>
+  
+    <li><a href="../JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a>
+  
+    <li><a href="../JRubyXML/ParseError.html">JRubyXML::ParseError</a>
+  
+    <li><a href="../JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a>
+  
+    <li><a href="../JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a>
+  
+    <li><a href="../REXML.html">REXML</a>
+  
+    <li><a href="../REXML/Document.html">REXML::Document</a>
+  
+    <li><a href="../REXML/Element.html">REXML::Element</a>
+  
+    <li><a href="../REXML/XPath.html">REXML::XPath</a>
+  
+    <li><a href="../Rpx.html">Rpx</a>
+  
+    <li><a href="../Rpx/RpxException.html">Rpx::RpxException</a>
+  
+    <li><a href="../Rpx/RpxHelper.html">Rpx::RpxHelper</a>
+  
+    <li><a href="../Comment.html">Comment</a>
+  
+    <li><a href="../Comment/CombineComment.html">Comment::CombineComment</a>
+  
+    <li><a href="../Doco.html">Doco</a>
+  
+    <li><a href="../Doco/DocoNode.html">Doco::DocoNode</a>
+  
+    <li><a href="../Grit.html">Grit</a>
+  
+    <li><a href="../Grit/Commit.html">Grit::Commit</a>
+  
+    <li><a href="../HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+    <li><a href="../HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a>
+  
+    <li><a href="../HGVTransGlossary.html">HGVTransGlossary</a>
+  
+    <li><a href="../HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a>
+  
+    <li><a href="../NumbersRDF.html">NumbersRDF</a>
+  
+    <li><a href="../NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a>
+  
+    <li><a href="../AjaxProxyController.html">AjaxProxyController</a>
+  
+    <li><a href="../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../Board.html">Board</a>
+  
+    <li><a href="../BoardsController.html">BoardsController</a>
+  
+    <li><a href="../CommentsController.html">CommentsController</a>
+  
+    <li><a href="../DDBIdentifier.html">DDBIdentifier</a>
+  
+    <li><a href="../DdbIdentifiersController.html">DdbIdentifiersController</a>
+  
+    <li><a href="../Decree.html">Decree</a>
+  
+    <li><a href="../DecreesController.html">DecreesController</a>
+  
+    <li><a href="../DocosController.html">DocosController</a>
+  
+    <li><a href="../DocovideosController.html">DocovideosController</a>
+  
+    <li><a href="../Emailer.html">Emailer</a>
+  
+    <li><a href="../EmailerMailer.html">EmailerMailer</a>
+  
+    <li><a href="../EmailersController.html">EmailersController</a>
+  
+    <li><a href="../Event.html">Event</a>
+  
+    <li><a href="../EventsController.html">EventsController</a>
+  
+    <li><a href="../GitConf.html">GitConf</a>
+  
+    <li><a href="../HGVBiblioIdentifier.html">HGVBiblioIdentifier</a>
+  
+    <li><a href="../HGVIdentifier.html">HGVIdentifier</a>
+  
+    <li><a href="../HGVTransIdentifier.html">HGVTransIdentifier</a>
+  
+    <li><a href="../HelperController.html">HelperController</a>
+  
+    <li><a href="../HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a>
+  
+    <li><a href="../HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a>
+  
+    <li><a href="../HgvTransGlossariesController.html">HgvTransGlossariesController</a>
+  
+    <li><a href="../HgvTransIdentifiersController.html">HgvTransIdentifiersController</a>
+  
+    <li><a href="../Identifier.html">Identifier</a>
+  
+    <li><a href="../IdentifiersController.html">IdentifiersController</a>
+  
+    <li><a href="../Integer.html">Integer</a>
+  
+    <li><a href="../Leiden.html">Leiden</a>
+  
+    <li><a href="../LeidenController.html">LeidenController</a>
+  
+    <li><a href="../LinkingInfo.html">LinkingInfo</a>
+  
+    <li><a href="../MaintenanceMode.html">MaintenanceMode</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../Publication.html">Publication</a>
+  
+    <li><a href="../PublicationsController.html">PublicationsController</a>
+  
+    <li><a href="../Rails.html">Rails</a>
+  
+    <li><a href="../RepositoriesController.html">RepositoriesController</a>
+  
+    <li><a href="../Repository.html">Repository</a>
+  
+    <li><a href="../RpxController.html">RpxController</a>
+  
+    <li><a href="../TranslationHelperController.html">TranslationHelperController</a>
+  
+    <li><a href="../TranslationLeiden.html">TranslationLeiden</a>
+  
+    <li><a href="../TranslationLeidenController.html">TranslationLeidenController</a>
+  
+    <li><a href="../User.html">User</a>
+  
+    <li><a href="../UserController.html">UserController</a>
+  
+    <li><a href="../UserIdentifier.html">UserIdentifier</a>
+  
+    <li><a href="../Vote.html">Vote</a>
+  
+    <li><a href="../VotesController.html">VotesController</a>
+  
+    <li><a href="../WelcomeController.html">WelcomeController</a>
+  
+  </ul>
+</nav>
+
   </div>
+</nav>
 
-  <div id="documentation">
-    
-<h1>JRuby Deployment</h1>
+<div id="documentation" class="description">
+  
+<h1 id="label-JRuby+Deployment">JRuby Deployment</h1>
 
-<h2>Requirements</h2>
+<h2 id="label-Requirements">Requirements</h2>
 
 <pre>* Java SE 6 (1.6+)
 * JRuby (1.3.1+) ''tested on 1.3.1 and 1.4.0''
 * Git (1.6.1.3+)</pre>
 
-<h2>Initial setup steps for development</h2>
+<h2 id="label-Initial+setup+steps+for+development">Initial setup steps for development</h2>
 
 <pre>* get source from [http://sourceforge.net/projects/sosol/develop SourceForge] or [https://github.com/papyri/sosol GitHub]
 * copy in/create config/environments/*_secret.rb (where * is development, test, production - sets RPX_API_KEY and RPX_REALM, can get these by creating an [http://www.rpxnow.com/ RPX] account)
@@ -281,7 +288,7 @@ RPX_REALM = 'SoSOL...'
 * jruby -S rake (run tests, sanity check)
 * jruby script/server</pre>
 
-<h2>WAR-based deployment</h2>
+<h2 id="label-WAR-based+deployment">WAR-based deployment</h2>
 
 <pre>* use warbler to bundle as a standard .war (includes JRuby, gems, etc.) to upload to an app server
  * initialize/migrate your production DB using &quot;RAILS_ENV=production jruby -S rake db:migrate&quot; (change production line in config/database.yml for your setup)
@@ -294,41 +301,42 @@ RPX_REALM = 'SoSOL...'
  * DB migrations seem impossible to run from the deployed war context, so you'll have to run them pre-deploy using the production environment on some checkout of the code (meaning it will also need access to your production DB server credentials)
  * not sure on logs, sessions (may need extra config for new vers of Rails), rollback (probably impossible to get easily in a war context due to also needing to reverse migrations)</pre>
 
-<h2>Directory-based deployment</h2>
+<h2 id="label-Directory-based+deployment">Directory-based deployment</h2>
 
 <pre>* deploy an unpacked directory and run within JRuby using any variety of servers (e.g. jetty-rails, glassfish - N.B. glassfish gem must have all required jars invoked inside JRuby on the classpath e.g. lib/java/saxon9he.jar) which can be accessed directly or proxied</pre>
 
-<h1><a href="../Repository.html">Repository</a> Setup</h1>
+<h1 id="label-Repository+Setup"><a href="../Repository.html">Repository</a> Setup</h1>
 
-<h2>Canonical <a href="../Repository.html">Repository</a> (from Git)</h2>
+<h2 id="label-Canonical+Repository+%28from+Git%29">Canonical <a href="../Repository.html">Repository</a> (from Git)</h2>
 
 <pre>* Initialize with:
  * git clone --bare git://halsted.vis.uky.edu/git/idp.data.git CANONICAL_REPOSITORY
  * where CANONICAL_REPOSITORY is the path defined in config/environment.rb, defaulting to REPOSITORY_ROOT/canonical.git. For WAR-based deploy will want to change REPOSITORY_ROOT to an absolute path as noted.
 * Data now also mirrored [https://github.com/papyri/idp.data on GitHub]</pre>
 
-<h1>Administration</h1>
+<h1 id="label-Administration">Administration</h1>
 
-<pre>* &quot;jruby script/console production&quot; should give you a console for the production environment (keep in mind things like DB/Git access, you'll need to run this from a location that can access those resources, the source, and the correct configs for your production environment)
+<pre class="ruby">* <span class="ruby-string">&quot;jruby script/console production&quot;</span> <span class="ruby-identifier">should</span> <span class="ruby-identifier">give</span> <span class="ruby-identifier">you</span> <span class="ruby-identifier">a</span> <span class="ruby-identifier">console</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">production</span> <span class="ruby-identifier">environment</span> (<span class="ruby-identifier">keep</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">mind</span> <span class="ruby-identifier">things</span> <span class="ruby-identifier">like</span> <span class="ruby-constant">DB</span><span class="ruby-operator">/</span><span class="ruby-constant">Git</span> <span class="ruby-identifier">access</span>, <span class="ruby-identifier">you</span><span class="ruby-string">'ll need to run this from a location that can access those resources, the source, and the correct configs for your production environment)
  * from here you can give users admin privileges by e.g.:
-  * me = User.find_by_name('rfbaumann')
+  * me = User.find_by_name('</span><span class="ruby-identifier">rfbaumann</span><span class="ruby-string">')
   * me.admin = true
   * me.save!
 * can completely reset the database with &quot;jruby -S rake RAILS_ENV=production db:reset&quot;
- * note that this ''won't'' run AR callbacks, so you need to clear user/board git repos:
-  * if you plan on '''keeping''' canonical (aka repo 3) i.e. not deleting it and recloning from the Git SVN copy, you need to first ensure that it has all finalized objects and remove the user repos you'll delete from its alternates file:
+ * note that this '</span><span class="ruby-string">'won'</span><span class="ruby-identifier">t</span><span class="ruby-string">''</span> <span class="ruby-identifier">run</span> <span class="ruby-constant">AR</span> <span class="ruby-identifier">callbacks</span>, <span class="ruby-identifier">so</span> <span class="ruby-identifier">you</span> <span class="ruby-identifier">need</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">clear</span> <span class="ruby-identifier">user</span><span class="ruby-operator">/</span><span class="ruby-identifier">board</span> <span class="ruby-identifier">git</span> <span class="ruby-identifier">repos</span><span class="ruby-operator">:</span>
+  * <span class="ruby-keyword">if</span> <span class="ruby-identifier">you</span> <span class="ruby-identifier">plan</span> <span class="ruby-identifier">on</span> <span class="ruby-string">''</span><span class="ruby-string">'keeping'</span><span class="ruby-string">''</span> <span class="ruby-identifier">canonical</span> (<span class="ruby-identifier">aka</span> <span class="ruby-identifier">repo</span> <span class="ruby-value">3</span>) <span class="ruby-identifier">i</span>.<span class="ruby-identifier">e</span>. <span class="ruby-identifier">not</span> <span class="ruby-identifier">deleting</span> <span class="ruby-identifier">it</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">recloning</span> <span class="ruby-identifier">from</span> <span class="ruby-identifier">the</span> <span class="ruby-constant">Git</span> <span class="ruby-constant">SVN</span> <span class="ruby-identifier">copy</span>, <span class="ruby-identifier">you</span> <span class="ruby-identifier">need</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">first</span> <span class="ruby-keyword">ensure</span> <span class="ruby-identifier">that</span> <span class="ruby-identifier">it</span> <span class="ruby-identifier">has</span> <span class="ruby-identifier">all</span> <span class="ruby-identifier">finalized</span> <span class="ruby-identifier">objects</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">remove</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">user</span> <span class="ruby-identifier">repos</span> <span class="ruby-identifier">you</span><span class="ruby-string">'ll delete from its alternates file:
    * cd REPOSITORY_ROOT/canonical.git &amp;&amp; git repack &amp;&amp; echo &quot;&quot; &gt; objects/info/alternates
    * can check integrity afterwards with &quot;git fsck&quot;
   * rm -rf REPOSITORY_ROOT/boards/*.git REPOSITORY_ROOT/users/*.git
- * can also delete every model instance from the console with e.g. User.find(:all).each{|u| u.destroy} but this can be tedious if there are loose instances of other models that aren't dependent-destroyed</pre>
+ * can also delete every model instance from the console with e.g. User.find(:all).each{|u| u.destroy} but this can be tedious if there are loose instances of other models that aren'</span><span class="ruby-identifier">t</span> <span class="ruby-identifier">dependent</span><span class="ruby-operator">-</span><span class="ruby-identifier">destroyed</span>
+</pre>
 
-  </div>
+</div>
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
-</body>
-</html>
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 

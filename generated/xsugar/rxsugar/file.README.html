@@ -2,17 +2,27 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=utf-8" />
-<title>Documentation by YARD 0.6.1</title>
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
 
   </head>
   <body>
@@ -31,11 +41,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -60,39 +73,39 @@ Leiden-style plaintext markup).</p>
 
 <p>To use them you can simply run:</p>
 
-<pre class="code"><span class='dot token'>.</span><span class='div op'>/</span><span class='bin identifier id'>bin</span><span class='div op'>/</span><span class='xml2nonxml identifier id'>xml2nonxml</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span> <span class='lt op'>&lt;</span> <span class='epidoc identifier id'>epidoc</span><span class='dot token'>.</span><span class='xml identifier id'>xml</span> <span class='gt op'>&gt;</span> <span class='leiden identifier id'>leiden</span><span class='dot token'>.</span><span class='txt identifier id'>txt</span>
+<pre class="code"><span class='dot token'>.</span><span class='div op'>/</span><span class='rubyid_bin identifier id'>bin</span><span class='div op'>/</span><span class='rubyid_xml2nonxml identifier id'>xml2nonxml</span><span class='dot token'>.</span><span class='rubyid_rb identifier id'>rb</span> <span class='lt op'>&lt;</span> <span class='rubyid_epidoc identifier id'>epidoc</span><span class='dot token'>.</span><span class='rubyid_xml identifier id'>xml</span> <span class='gt op'>&gt;</span> <span class='rubyid_leiden identifier id'>leiden</span><span class='dot token'>.</span><span class='rubyid_txt identifier id'>txt</span>
 </pre>
 
 <p>or</p>
 
-<pre class="code"><span class='dot token'>.</span><span class='div op'>/</span><span class='bin identifier id'>bin</span><span class='div op'>/</span><span class='nonxml2xml identifier id'>nonxml2xml</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span> <span class='lt op'>&lt;</span> <span class='leiden identifier id'>leiden</span><span class='dot token'>.</span><span class='txt identifier id'>txt</span> <span class='gt op'>&gt;</span> <span class='epidoc identifier id'>epidoc</span><span class='dot token'>.</span><span class='xml identifier id'>xml</span>
+<pre class="code"><span class='dot token'>.</span><span class='div op'>/</span><span class='rubyid_bin identifier id'>bin</span><span class='div op'>/</span><span class='rubyid_nonxml2xml identifier id'>nonxml2xml</span><span class='dot token'>.</span><span class='rubyid_rb identifier id'>rb</span> <span class='lt op'>&lt;</span> <span class='rubyid_leiden identifier id'>leiden</span><span class='dot token'>.</span><span class='rubyid_txt identifier id'>txt</span> <span class='gt op'>&gt;</span> <span class='rubyid_epidoc identifier id'>epidoc</span><span class='dot token'>.</span><span class='rubyid_xml identifier id'>xml</span>
 </pre>
 
 <h2>File Structure</h2>
 
-<pre class="code"><span class='bin identifier id'>bin</span><span class='div op'>/</span>                     <span class='command identifier id'>command</span><span class='minus op'>-</span><span class='line identifier id'>line</span> <span class='scripts identifier id'>scripts</span>
-    <span class='blackboard_agent identifier id'>blackboard_agent</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span>  <span class='blackboard identifier id'>blackboard</span> <span class='XSugar constant id'>XSugar</span> <span class='transformer identifier id'>transformer</span> <span class='agent identifier id'>agent</span> <span class='lparen token'>(</span><span class='run identifier id'>run</span> <span class='many identifier id'>many</span><span class='rparen token'>)</span>
-    <span class='blackboard_server identifier id'>blackboard_server</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span> <span class='blackboard identifier id'>blackboard</span> <span class='XSugar constant id'>XSugar</span> <span class='transformer identifier id'>transformer</span> <span class='server identifier id'>server</span> <span class='lparen token'>(</span><span class='run identifier id'>run</span> <span class='one identifier id'>one</span><span class='rparen token'>)</span>
-    <span class='coverage identifier id'>coverage</span><span class='dot token'>.</span><span class='sh identifier id'>sh</span>          <span class='IDP2 constant id'>IDP2</span> <span class='grammar identifier id'>grammar</span> <span class='coverage identifier id'>coverage</span> <span class='script identifier id'>script</span>
-    <span class='xml2nonxml identifier id'>xml2nonxml</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span>        <span class='command identifier id'>command</span><span class='minus op'>-</span><span class='line identifier id'>line</span> <span class='xml identifier id'>xml</span><span class='minus op'>-</span><span class='gt op'>&gt;</span><span class='non identifier id'>non</span><span class='minus op'>-</span><span class='xml identifier id'>xml</span> <span class='RXSugar constant id'>RXSugar</span> <span class='utility identifier id'>utility</span>
-    <span class='nonxml2xml identifier id'>nonxml2xml</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span>        <span class='command identifier id'>command</span><span class='minus op'>-</span><span class='line identifier id'>line</span> <span class='non identifier id'>non</span><span class='minus op'>-</span><span class='xml identifier id'>xml</span><span class='minus op'>-</span><span class='gt op'>&gt;</span><span class='xml identifier id'>xml</span> <span class='RXSugar constant id'>RXSugar</span> <span class='utility identifier id'>utility</span>
-<span class='epidoc identifier id'>epidoc</span><span class='dot token'>.</span><span class='xsg identifier id'>xsg</span>               <span class='Leiden constant id'>Leiden</span><span class='plus op'>+</span> <span class='XSugar constant id'>XSugar</span> <span class='grammar identifier id'>grammar</span>
-<span class='init identifier id'>init</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span>                  <span class='Rails constant id'>Rails</span> <span class='plugin identifier id'>plugin</span> <span class='init identifier id'>init</span> <span class='script identifier id'>script</span>
-<span class='lib identifier id'>lib</span><span class='div op'>/</span>                     <span class='source identifier id'>source</span> <span class='code identifier id'>code</span>
-    <span class='coverage identifier id'>coverage</span><span class='div op'>/</span>            <span class='classes identifier id'>classes</span> <span class='for for kw'>for</span> <span class='testing identifier id'>testing</span> <span class='XSugar constant id'>XSugar</span> <span class='coverage identifier id'>coverage</span>
-    <span class='standalone identifier id'>standalone</span><span class='div op'>/</span>          <span class='classes identifier id'>classes</span> <span class='for for kw'>for</span> <span class='warming identifier id'>warming</span> <span class='up identifier id'>up</span> <span class='standalone identifier id'>standalone</span> <span class='server identifier id'>server</span>
-    <span class='jruby_helper identifier id'>jruby_helper</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span>      <span class='helper identifier id'>helper</span> <span class='classes identifier id'>classes</span> <span class='for for kw'>for</span> <span class='invoking identifier id'>invoking</span> <span class='RXSugar constant id'>RXSugar</span> <span class='from identifier id'>from</span> <span class='JRuby constant id'>JRuby</span>
-    <span class='modules_jruby identifier id'>modules_jruby</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span>     <span class='Java constant id'>Java</span><span class='minus op'>-</span><span class='gt op'>&gt;</span><span class='Ruby constant id'>Ruby</span> <span class='module module kw'>module</span> <span class='conversion identifier id'>conversion</span> <span class='for for kw'>for</span> <span class='JRuby constant id'>JRuby</span>
-    <span class='modules_rjb identifier id'>modules_rjb</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span>       <span class='Java constant id'>Java</span><span class='minus op'>-</span><span class='gt op'>&gt;</span><span class='Ruby constant id'>Ruby</span> <span class='module module kw'>module</span> <span class='conversion identifier id'>conversion</span> <span class='for for kw'>for</span> <span class='RJB constant id'>RJB</span>
-    <span class='rxsugar identifier id'>rxsugar</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span>           <span class='main identifier id'>main</span> <span class='Ruby constant id'>Ruby</span> <span class='XSugar constant id'>XSugar</span> <span class='wrapper identifier id'>wrapper</span> <span class='class class kw'>class</span>
-    <span class='rxsugar_helper identifier id'>rxsugar_helper</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span>    <span class='helper identifier id'>helper</span> <span class='classes identifier id'>classes</span> <span class='for for kw'>for</span> <span class='using identifier id'>using</span> <span class='Ruby constant id'>Ruby</span> <span class='XSugar constant id'>XSugar</span> <span class='wrapper identifier id'>wrapper</span>
-    <span class='util_helper identifier id'>util_helper</span><span class='dot token'>.</span><span class='rb identifier id'>rb</span>       <span class='helper identifier id'>helper</span> <span class='classes identifier id'>classes</span> <span class='for for kw'>for</span> <span class='command identifier id'>command</span><span class='minus op'>-</span><span class='line identifier id'>line</span> <span class='scripts identifier id'>scripts</span>
-    <span class='xsugar identifier id'>xsugar</span><span class='minus op'>-</span><span class='all identifier id'>all</span><span class='dot token'>.</span><span class='jar identifier id'>jar</span>       <span class='compiled identifier id'>compiled</span> <span class='upstream identifier id'>upstream</span> <span class='XSugar constant id'>XSugar</span> <span class='JAR constant id'>JAR</span>
-<span class='src identifier id'>src</span><span class='div op'>/</span>                     <span class='Java constant id'>Java</span> <span class='source identifier id'>source</span> <span class='code identifier id'>code</span>
-    <span class='standalone identifier id'>standalone</span><span class='div op'>/</span>          <span class='source identifier id'>source</span> <span class='code identifier id'>code</span> <span class='for for kw'>for</span> <span class='standalone identifier id'>standalone</span> <span class='transformation identifier id'>transformation</span> <span class='server identifier id'>server</span>
-    <span class='xsugar identifier id'>xsugar</span><span class='div op'>/</span>              <span class='upstream identifier id'>upstream</span> <span class='XSugar constant id'>XSugar</span> <span class='source identifier id'>source</span> <span class='code identifier id'>code</span>
-<span class='test identifier id'>test</span><span class='div op'>/</span>                    <span class='source identifier id'>source</span> <span class='code identifier id'>code</span> <span class='for for kw'>for</span> <span class='unit identifier id'>unit</span> <span class='testing identifier id'>testing</span>
-<span class='translation_epidoc identifier id'>translation_epidoc</span><span class='dot token'>.</span><span class='xsg identifier id'>xsg</span>   <span class='XSugar constant id'>XSugar</span> <span class='grammar identifier id'>grammar</span> <span class='for for kw'>for</span> <span class='EpiDoc constant id'>EpiDoc</span> <span class='translations identifier id'>translations</span>
+<pre class="code"><span class='rubyid_bin identifier id'>bin</span><span class='div op'>/</span>                     <span class='rubyid_command identifier id'>command</span><span class='minus op'>-</span><span class='rubyid_line identifier id'>line</span> <span class='rubyid_scripts identifier id'>scripts</span>
+    <span class='rubyid_blackboard_agent identifier id'>blackboard_agent</span><span class='dot token'>.</span><span class='rubyid_rb identifier id'>rb</span>  <span class='rubyid_blackboard identifier id'>blackboard</span> <span class='rubyid_XSugar constant id'>XSugar</span> <span class='rubyid_transformer identifier id'>transformer</span> <span class='rubyid_agent identifier id'>agent</span> <span class='lparen token'>(</span><span class='rubyid_run identifier id'>run</span> <span class='rubyid_many identifier id'>many</span><span class='rparen token'>)</span>
+    <span class='rubyid_blackboard_server identifier id'>blackboard_server</span><span class='dot token'>.</span><span class='rubyid_rb identifier id'>rb</span> <span class='rubyid_blackboard identifier id'>blackboard</span> <span class='rubyid_XSugar constant id'>XSugar</span> <span class='rubyid_transformer identifier id'>transformer</span> <span class='rubyid_server identifier id'>server</span> <span class='lparen token'>(</span><span class='rubyid_run identifier id'>run</span> <span class='rubyid_one identifier id'>one</span><span class='rparen token'>)</span>
+    <span class='rubyid_coverage identifier id'>coverage</span><span class='dot token'>.</span><span class='rubyid_sh identifier id'>sh</span>          <span class='rubyid_IDP2 constant id'>IDP2</span> <span class='rubyid_grammar identifier id'>grammar</span> <span class='rubyid_coverage identifier id'>coverage</span> <span class='rubyid_script identifier id'>script</span>
+    <span class='rubyid_xml2nonxml identifier id'>xml2nonxml</span><span class='dot token'>.</span><span class='rubyid_rb identifier id'>rb</span>        <span class='rubyid_command identifier id'>command</span><span class='minus op'>-</span><span class='rubyid_line identifier id'>line</span> <span class='rubyid_xml identifier id'>xml</span><span class='minus op'>-</span><span class='gt op'>&gt;</span><span class='rubyid_non identifier id'>non</span><span class='minus op'>-</span><span class='rubyid_xml identifier id'>xml</span> <span class='rubyid_RXSugar constant id'>RXSugar</span> <span class='rubyid_utility identifier id'>utility</span>
+    <span class='rubyid_nonxml2xml identifier id'>nonxml2xml</span><span class='dot token'>.</span><span class='rubyid_rb identifier id'>rb</span>        <span class='rubyid_command identifier id'>command</span><span class='minus op'>-</span><span class='rubyid_line identifier id'>line</span> <span class='rubyid_non identifier id'>non</span><span class='minus op'>-</span><span class='rubyid_xml identifier id'>xml</span><span class='minus op'>-</span><span class='gt op'>&gt;</span><span class='rubyid_xml identifier id'>xml</span> <span class='rubyid_RXSugar constant id'>RXSugar</span> <span class='rubyid_utility identifier id'>utility</span>
+<span class='rubyid_epidoc identifier id'>epidoc</span><span class='dot token'>.</span><span class='rubyid_xsg identifier id'>xsg</span>               <span class='rubyid_Leiden constant id'>Leiden</span><span class='plus op'>+</span> <span class='rubyid_XSugar constant id'>XSugar</span> <span class='rubyid_grammar identifier id'>grammar</span>
+<span class='rubyid_init identifier id'>init</span><span class='dot token'>.</span><span class='rubyid_rb identifier id'>rb</span>                  <span class='rubyid_Rails constant id'>Rails</span> <span class='rubyid_plugin identifier id'>plugin</span> <span class='rubyid_init identifier id'>init</span> <span class='rubyid_script identifier id'>script</span>
+<span class='rubyid_lib identifier id'>lib</span><span class='div op'>/</span>                     <span class='rubyid_source identifier id'>source</span> <span class='rubyid_code identifier id'>code</span>
+    <span class='rubyid_coverage identifier id'>coverage</span><span class='div op'>/</span>            <span class='rubyid_classes identifier id'>classes</span> <span class='rubyid_for for kw'>for</span> <span class='rubyid_testing identifier id'>testing</span> <span class='rubyid_XSugar constant id'>XSugar</span> <span class='rubyid_coverage identifier id'>coverage</span>
+    <span class='rubyid_standalone identifier id'>standalone</span><span class='div op'>/</span>          <span class='rubyid_classes identifier id'>classes</span> <span class='rubyid_for for kw'>for</span> <span class='rubyid_warming identifier id'>warming</span> <span class='rubyid_up identifier id'>up</span> <span class='rubyid_standalone identifier id'>standalone</span> <span class='rubyid_server identifier id'>server</span>
+    <span class='rubyid_jruby_helper identifier id'>jruby_helper</span><span class='dot token'>.</span><span class='rubyid_rb identifier id'>rb</span>      <span class='rubyid_helper identifier id'>helper</span> <span class='rubyid_classes identifier id'>classes</span> <span class='rubyid_for for kw'>for</span> <span class='rubyid_invoking identifier id'>invoking</span> <span class='rubyid_RXSugar constant id'>RXSugar</span> <span class='rubyid_from identifier id'>from</span> <span class='rubyid_JRuby constant id'>JRuby</span>
+    <span class='rubyid_modules_jruby identifier id'>modules_jruby</span><span class='dot token'>.</span><span class='rubyid_rb identifier id'>rb</span>     <span class='rubyid_Java constant id'>Java</span><span class='minus op'>-</span><span class='gt op'>&gt;</span><span class='rubyid_Ruby constant id'>Ruby</span> <span class='rubyid_module module kw'>module</span> <span class='rubyid_conversion identifier id'>conversion</span> <span class='rubyid_for for kw'>for</span> <span class='rubyid_JRuby constant id'>JRuby</span>
+    <span class='rubyid_modules_rjb identifier id'>modules_rjb</span><span class='dot token'>.</span><span class='rubyid_rb identifier id'>rb</span>       <span class='rubyid_Java constant id'>Java</span><span class='minus op'>-</span><span class='gt op'>&gt;</span><span class='rubyid_Ruby constant id'>Ruby</span> <span class='rubyid_module module kw'>module</span> <span class='rubyid_conversion identifier id'>conversion</span> <span class='rubyid_for for kw'>for</span> <span class='rubyid_RJB constant id'>RJB</span>
+    <span class='rubyid_rxsugar identifier id'>rxsugar</span><span class='dot token'>.</span><span class='rubyid_rb identifier id'>rb</span>           <span class='rubyid_main identifier id'>main</span> <span class='rubyid_Ruby constant id'>Ruby</span> <span class='rubyid_XSugar constant id'>XSugar</span> <span class='rubyid_wrapper identifier id'>wrapper</span> <span class='rubyid_class class kw'>class</span>
+    <span class='rubyid_rxsugar_helper identifier id'>rxsugar_helper</span><span class='dot token'>.</span><span class='rubyid_rb identifier id'>rb</span>    <span class='rubyid_helper identifier id'>helper</span> <span class='rubyid_classes identifier id'>classes</span> <span class='rubyid_for for kw'>for</span> <span class='rubyid_using identifier id'>using</span> <span class='rubyid_Ruby constant id'>Ruby</span> <span class='rubyid_XSugar constant id'>XSugar</span> <span class='rubyid_wrapper identifier id'>wrapper</span>
+    <span class='rubyid_util_helper identifier id'>util_helper</span><span class='dot token'>.</span><span class='rubyid_rb identifier id'>rb</span>       <span class='rubyid_helper identifier id'>helper</span> <span class='rubyid_classes identifier id'>classes</span> <span class='rubyid_for for kw'>for</span> <span class='rubyid_command identifier id'>command</span><span class='minus op'>-</span><span class='rubyid_line identifier id'>line</span> <span class='rubyid_scripts identifier id'>scripts</span>
+    <span class='rubyid_xsugar identifier id'>xsugar</span><span class='minus op'>-</span><span class='rubyid_all identifier id'>all</span><span class='dot token'>.</span><span class='rubyid_jar identifier id'>jar</span>       <span class='rubyid_compiled identifier id'>compiled</span> <span class='rubyid_upstream identifier id'>upstream</span> <span class='rubyid_XSugar constant id'>XSugar</span> <span class='rubyid_JAR constant id'>JAR</span>
+<span class='rubyid_src identifier id'>src</span><span class='div op'>/</span>                     <span class='rubyid_Java constant id'>Java</span> <span class='rubyid_source identifier id'>source</span> <span class='rubyid_code identifier id'>code</span>
+    <span class='rubyid_standalone identifier id'>standalone</span><span class='div op'>/</span>          <span class='rubyid_source identifier id'>source</span> <span class='rubyid_code identifier id'>code</span> <span class='rubyid_for for kw'>for</span> <span class='rubyid_standalone identifier id'>standalone</span> <span class='rubyid_transformation identifier id'>transformation</span> <span class='rubyid_server identifier id'>server</span>
+    <span class='rubyid_xsugar identifier id'>xsugar</span><span class='div op'>/</span>              <span class='rubyid_upstream identifier id'>upstream</span> <span class='rubyid_XSugar constant id'>XSugar</span> <span class='rubyid_source identifier id'>source</span> <span class='rubyid_code identifier id'>code</span>
+<span class='rubyid_test identifier id'>test</span><span class='div op'>/</span>                    <span class='rubyid_source identifier id'>source</span> <span class='rubyid_code identifier id'>code</span> <span class='rubyid_for for kw'>for</span> <span class='rubyid_unit identifier id'>unit</span> <span class='rubyid_testing identifier id'>testing</span>
+<span class='rubyid_translation_epidoc identifier id'>translation_epidoc</span><span class='dot token'>.</span><span class='rubyid_xsg identifier id'>xsg</span>   <span class='rubyid_XSugar constant id'>XSugar</span> <span class='rubyid_grammar identifier id'>grammar</span> <span class='rubyid_for for kw'>for</span> <span class='rubyid_EpiDoc constant id'>EpiDoc</span> <span class='rubyid_translations identifier id'>translations</span>
 </pre>
 
 <h2>Testing</h2>
@@ -114,7 +127,8 @@ the changes in xsugar-customizations onto the new xsugar-vendor. Then merge
 xsugar-customizations into master and rebuild lib/xsugar-all.jar (using the
 rake task java:xsugar:build) and commit. Do not make changes/customizations to
 the Java XSugar source on master, make them on xsugar-customizations so that
-the merge upstream/rebase/merge workflow is more straightforward.</p></div></div>
+the merge upstream/rebase/merge workflow is more straightforward.</p>
+</div></div>
     
   </body>
 </html>

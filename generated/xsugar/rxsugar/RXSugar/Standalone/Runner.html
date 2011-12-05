@@ -2,17 +2,27 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: RXSugar::Standalone::Runner</title>
-<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: RXSugar::Standalone::Runner
+  
+    &mdash; Documentation by YARD 0.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -78,6 +91,8 @@
   
 </dl>
 <div class="clear"></div>
+
+
 
 
 
@@ -188,15 +203,15 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/standalone/runner.rb', line 14</span>
 
-<span class='def def kw'>def</span> <span class='preprocess_xml identifier id'>preprocess_xml</span><span class='lparen token'>(</span><span class='xml_filename identifier id'>xml_filename</span><span class='rparen token'>)</span>
-  <span class='command_string identifier id'>command_string</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;cat #{xml_filename}&quot;</span>
-  <span class='saxon_commands identifier id'>saxon_commands</span> <span class='assign token'>=</span> <span class='XSL_CHAIN constant id'>XSL_CHAIN</span><span class='dot token'>.</span><span class='collect identifier id'>collect</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='xsl identifier id'>xsl</span><span class='bitor op'>|</span> <span class='string val'>&quot; | &quot;</span> <span class='plus op'>+</span> <span class='saxon_command identifier id'>saxon_command</span><span class='lparen token'>(</span><span class='xsl identifier id'>xsl</span><span class='rparen token'>)</span><span class='rbrace token'>}</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>''</span><span class='rparen token'>)</span>
-  <span class='command_string identifier id'>command_string</span> <span class='assign token'>=</span> <span class='command_string identifier id'>command_string</span> <span class='plus op'>+</span> <span class='saxon_commands identifier id'>saxon_commands</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_preprocess_xml identifier id'>preprocess_xml</span><span class='lparen token'>(</span><span class='rubyid_xml_filename identifier id'>xml_filename</span><span class='rparen token'>)</span>
+  <span class='rubyid_command_string identifier id'>command_string</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;cat #{xml_filename}&quot;</span>
+  <span class='rubyid_saxon_commands identifier id'>saxon_commands</span> <span class='assign token'>=</span> <span class='rubyid_XSL_CHAIN constant id'>XSL_CHAIN</span><span class='dot token'>.</span><span class='rubyid_collect identifier id'>collect</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_xsl identifier id'>xsl</span><span class='bitor op'>|</span> <span class='string val'>&quot; | &quot;</span> <span class='plus op'>+</span> <span class='rubyid_saxon_command identifier id'>saxon_command</span><span class='lparen token'>(</span><span class='rubyid_xsl identifier id'>xsl</span><span class='rparen token'>)</span><span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>''</span><span class='rparen token'>)</span>
+  <span class='rubyid_command_string identifier id'>command_string</span> <span class='assign token'>=</span> <span class='rubyid_command_string identifier id'>command_string</span> <span class='plus op'>+</span> <span class='rubyid_saxon_commands identifier id'>saxon_commands</span>
   
-  <span class='result identifier id'>result</span> <span class='assign token'>=</span> <span class='dxstring node'>`#{command_string}`</span>
+  <span class='rubyid_result identifier id'>result</span> <span class='assign token'>=</span> <span class='dxstring node'>`#{command_string}`</span>
   
-  <span class='return return kw'>return</span> <span class='result identifier id'>result</span>
-<span class='end end kw'>end</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_result identifier id'>result</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -252,38 +267,38 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/standalone/runner.rb', line 24</span>
 
-<span class='def def kw'>def</span> <span class='run identifier id'>run</span>
-  <span class='xml_files identifier id'>xml_files</span> <span class='assign token'>=</span> <span class='Dir constant id'>Dir</span><span class='lbrack token'>[</span><span class='DATA_PATH constant id'>DATA_PATH</span> <span class='plus op'>+</span> <span class='string val'>'/**/*.xml'</span><span class='rbrack token'>]</span>
-  <span class='xml_files_bar identifier id'>xml_files_bar</span> <span class='assign token'>=</span> <span class='ProgressBar constant id'>ProgressBar</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;files&quot;</span><span class='comma token'>,</span> <span class='xml_files identifier id'>xml_files</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='rparen token'>)</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_run identifier id'>run</span>
+  <span class='rubyid_xml_files identifier id'>xml_files</span> <span class='assign token'>=</span> <span class='rubyid_Dir constant id'>Dir</span><span class='lbrack token'>[</span><span class='rubyid_DATA_PATH constant id'>DATA_PATH</span> <span class='plus op'>+</span> <span class='string val'>'/**/*.xml'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_xml_files_bar identifier id'>xml_files_bar</span> <span class='assign token'>=</span> <span class='rubyid_ProgressBar constant id'>ProgressBar</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;files&quot;</span><span class='comma token'>,</span> <span class='rubyid_xml_files identifier id'>xml_files</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span><span class='rparen token'>)</span>
   
-  <span class='xml_files identifier id'>xml_files</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='xml_file identifier id'>xml_file</span><span class='bitor op'>|</span>
+  <span class='rubyid_xml_files identifier id'>xml_files</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_xml_file identifier id'>xml_file</span><span class='bitor op'>|</span>
     <span class='comment val'># xml_content = IO.readlines(xml_file).to_s</span>
-    <span class='xml_content identifier id'>xml_content</span> <span class='assign token'>=</span> <span class='preprocess_xml identifier id'>preprocess_xml</span><span class='lparen token'>(</span><span class='xml_file identifier id'>xml_file</span><span class='rparen token'>)</span>
+    <span class='rubyid_xml_content identifier id'>xml_content</span> <span class='assign token'>=</span> <span class='rubyid_preprocess_xml identifier id'>preprocess_xml</span><span class='lparen token'>(</span><span class='rubyid_xml_file identifier id'>xml_file</span><span class='rparen token'>)</span>
     
-    <span class='begin begin kw'>begin</span>
-      <span class='nonxml_content identifier id'>nonxml_content</span> <span class='assign token'>=</span> <span class='JRubyHelper constant id'>JRubyHelper</span><span class='colon2 op'>::</span><span class='XSugarStandalone constant id'>XSugarStandalone</span><span class='dot token'>.</span><span class='transform_request identifier id'>transform_request</span><span class='lparen token'>(</span>
-        <span class='STANDALONE_URL constant id'>STANDALONE_URL</span><span class='comma token'>,</span>
+    <span class='rubyid_begin begin kw'>begin</span>
+      <span class='rubyid_nonxml_content identifier id'>nonxml_content</span> <span class='assign token'>=</span> <span class='rubyid_JRubyHelper constant id'>JRubyHelper</span><span class='colon2 op'>::</span><span class='rubyid_XSugarStandalone constant id'>XSugarStandalone</span><span class='dot token'>.</span><span class='rubyid_transform_request identifier id'>transform_request</span><span class='lparen token'>(</span>
+        <span class='rubyid_STANDALONE_URL constant id'>STANDALONE_URL</span><span class='comma token'>,</span>
         <span class='lbrace token'>{</span>
-          <span class='symbol val'>:content</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='xml_content identifier id'>xml_content</span><span class='comma token'>,</span>
-          <span class='symbol val'>:type</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='GRAMMAR_STRING constant id'>GRAMMAR_STRING</span><span class='comma token'>,</span>
+          <span class='symbol val'>:content</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_xml_content identifier id'>xml_content</span><span class='comma token'>,</span>
+          <span class='symbol val'>:type</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_GRAMMAR_STRING constant id'>GRAMMAR_STRING</span><span class='comma token'>,</span>
           <span class='symbol val'>:direction</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'xml2nonxml'</span>
         <span class='rbrace token'>}</span>
       <span class='rparen token'>)</span>
-      <span class='JRubyHelper constant id'>JRubyHelper</span><span class='colon2 op'>::</span><span class='XSugarStandalone constant id'>XSugarStandalone</span><span class='dot token'>.</span><span class='transform_request identifier id'>transform_request</span><span class='lparen token'>(</span>
-        <span class='STANDALONE_URL constant id'>STANDALONE_URL</span><span class='comma token'>,</span>
+      <span class='rubyid_JRubyHelper constant id'>JRubyHelper</span><span class='colon2 op'>::</span><span class='rubyid_XSugarStandalone constant id'>XSugarStandalone</span><span class='dot token'>.</span><span class='rubyid_transform_request identifier id'>transform_request</span><span class='lparen token'>(</span>
+        <span class='rubyid_STANDALONE_URL constant id'>STANDALONE_URL</span><span class='comma token'>,</span>
         <span class='lbrace token'>{</span>
-          <span class='symbol val'>:content</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nonxml_content identifier id'>nonxml_content</span><span class='comma token'>,</span>
-          <span class='symbol val'>:type</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='GRAMMAR_STRING constant id'>GRAMMAR_STRING</span><span class='comma token'>,</span>
+          <span class='symbol val'>:content</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_nonxml_content identifier id'>nonxml_content</span><span class='comma token'>,</span>
+          <span class='symbol val'>:type</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_GRAMMAR_STRING constant id'>GRAMMAR_STRING</span><span class='comma token'>,</span>
           <span class='symbol val'>:direction</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'nonxml2xml'</span>
         <span class='rbrace token'>}</span>
       <span class='rparen token'>)</span>
-    <span class='rescue rescue kw'>rescue</span> <span class='XMLParseError constant id'>XMLParseError</span><span class='comma token'>,</span> <span class='NonXMLParseError constant id'>NonXMLParseError</span>
-    <span class='end end kw'>end</span>
+    <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_XMLParseError constant id'>XMLParseError</span><span class='comma token'>,</span> <span class='rubyid_NonXMLParseError constant id'>NonXMLParseError</span>
+    <span class='rubyid_end end kw'>end</span>
       
-    <span class='xml_files_bar identifier id'>xml_files_bar</span><span class='dot token'>.</span><span class='inc identifier id'>inc</span>
-  <span class='end end kw'>end</span>
-  <span class='xml_files_bar identifier id'>xml_files_bar</span><span class='dot token'>.</span><span class='finish identifier id'>finish</span>
-<span class='end end kw'>end</span>
+    <span class='rubyid_xml_files_bar identifier id'>xml_files_bar</span><span class='dot token'>.</span><span class='rubyid_inc identifier id'>inc</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_xml_files_bar identifier id'>xml_files_bar</span><span class='dot token'>.</span><span class='rubyid_finish identifier id'>finish</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>
@@ -310,9 +325,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/standalone/runner.rb', line 10</span>
 
-<span class='def def kw'>def</span> <span class='saxon_command identifier id'>saxon_command</span><span class='lparen token'>(</span><span class='xsl identifier id'>xsl</span><span class='rparen token'>)</span>
-  <span class='return return kw'>return</span> <span class='dstring node'>&quot;java -classpath #{SAXON_JAR} net.sf.saxon.Transform - #{xsl}&quot;</span>
-<span class='end end kw'>end</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_saxon_command identifier id'>saxon_command</span><span class='lparen token'>(</span><span class='rubyid_xsl identifier id'>xsl</span><span class='rparen token'>)</span>
+  <span class='rubyid_return return kw'>return</span> <span class='dstring node'>&quot;java -classpath #{SAXON_JAR} net.sf.saxon.Transform - #{xsl}&quot;</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>

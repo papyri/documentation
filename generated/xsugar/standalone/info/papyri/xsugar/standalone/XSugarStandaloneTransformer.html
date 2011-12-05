@@ -55,7 +55,7 @@ function windowTitle()
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../info/papyri/xsugar/standalone/XSugarStandaloneServlet.html" title="class in info.papyri.xsugar.standalone"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;NEXT CLASS</FONT></TD>
+&nbsp;<A HREF="../../../../info/papyri/xsugar/standalone/XSugarTransformerFactory.html" title="class in info.papyri.xsugar.standalone"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../index.html?info/papyri/xsugar/standalone/XSugarStandaloneTransformer.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="XSugarStandaloneTransformer.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -117,6 +117,12 @@ Holds an instance of an XSugar transformer, with methods for performing transfor
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../info/papyri/xsugar/standalone/XSugarStandaloneTransformer.html#XSugarStandaloneTransformer()">XSugarStandaloneTransformer</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initialize an empty transformer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><CODE><B><A HREF="../../../../info/papyri/xsugar/standalone/XSugarStandaloneTransformer.html#XSugarStandaloneTransformer(java.lang.String)">XSugarStandaloneTransformer</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;grammar)</CODE>
 
 <BR>
@@ -131,6 +137,23 @@ Holds an instance of an XSugar transformer, with methods for performing transfor
 <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
 <TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
 <B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../info/papyri/xsugar/standalone/XSugarStandaloneTransformer.html#cacheKey(java.lang.String, java.lang.String)">cacheKey</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;direction,
+         <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;text)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generate the cache key for this transformer based on the direction and input text.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../info/papyri/xsugar/standalone/XSugarStandaloneTransformer.html#initializeTransformer(java.lang.String)">initializeTransformer</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;grammar)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -171,6 +194,16 @@ Holds an instance of an XSugar transformer, with methods for performing transfor
 </TR>
 </TABLE>
 
+<A NAME="XSugarStandaloneTransformer()"><!-- --></A><H3>
+XSugarStandaloneTransformer</H3>
+<PRE>
+public <B>XSugarStandaloneTransformer</B>()</PRE>
+<DL>
+<DD>Initialize an empty transformer.
+<P>
+</DL>
+<HR>
+
 <A NAME="XSugarStandaloneTransformer(java.lang.String)"><!-- --></A><H3>
 XSugarStandaloneTransformer</H3>
 <PRE>
@@ -205,6 +238,50 @@ public <B>XSugarStandaloneTransformer</B>(<A HREF="http://download.oracle.com/ja
 <B>Method Detail</B></FONT></TH>
 </TR>
 </TABLE>
+
+<A NAME="initializeTransformer(java.lang.String)"><!-- --></A><H3>
+initializeTransformer</H3>
+<PRE>
+public void <B>initializeTransformer</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;grammar)
+                           throws dk.brics.xsugar.XSugarException,
+                                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A>,
+                                  dk.brics.grammar.parser.ParseException,
+                                  dk.brics.relaxng.converter.ParseException,
+                                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/InstantiationException.html?is-external=true" title="class or interface in java.lang">InstantiationException</A>,
+                                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalAccessException.html?is-external=true" title="class or interface in java.lang">IllegalAccessException</A>,
+                                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</A></PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>dk.brics.xsugar.XSugarException</CODE>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</A></CODE>
+<DD><CODE>dk.brics.grammar.parser.ParseException</CODE>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/InstantiationException.html?is-external=true" title="class or interface in java.lang">InstantiationException</A></CODE>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalAccessException.html?is-external=true" title="class or interface in java.lang">IllegalAccessException</A></CODE>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="cacheKey(java.lang.String, java.lang.String)"><!-- --></A><H3>
+cacheKey</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>cacheKey</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;direction,
+                       <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;text)</PRE>
+<DL>
+<DD>Generate the cache key for this transformer based on the direction and input text.
+
+ Uses an MD5 of the input text, and generates keys in the form:
+   grammar_hash:direction:inputmd5
+ So all of the entries for a grammar hash can be invalidated at once. 
+ See: http://jakarta.apache.org/jcs/faq.html#hierarchical-removal
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
 
 <A NAME="nonXMLToXML(java.lang.String)"><!-- --></A><H3>
 nonXMLToXML</H3>
@@ -272,7 +349,7 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../info/papyri/xsugar/standalone/XSugarStandaloneServlet.html" title="class in info.papyri.xsugar.standalone"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;NEXT CLASS</FONT></TD>
+&nbsp;<A HREF="../../../../info/papyri/xsugar/standalone/XSugarTransformerFactory.html" title="class in info.papyri.xsugar.standalone"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../index.html?info/papyri/xsugar/standalone/XSugarStandaloneTransformer.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="XSugarStandaloneTransformer.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;

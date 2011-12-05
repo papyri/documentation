@@ -1,481 +1,475 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-  <title>Class: Publication</title>
+<title>Class: Publication</title>
 
-  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
-  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
 
-</head>
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
 <body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="./index.html">Home</a>
-          <a href="./index.html#classes">Classes</a>
-          <a href="./index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="./app/models/publication_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="app/models/publication.rb">app/models/publication.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-      
-    </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-    <div id="class-metadata">
-      
-      <!-- Parent Class -->
-      <div id="parent-class-section" class="section">
-        <h3 class="section-header">Parent</h3>
-        
-        <p class="link">ActiveRecord::Base</p>
-        
-      </div>
-      
 
-      
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/publication.rb
+  </ul>
+</nav>
 
-      
-
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-c-new_from_templates">::new_from_templates</a></li>
-          
-          <li><a href="#method-i-after_create">#after_create</a></li>
-          
-          <li><a href="#method-i-after_destroy">#after_destroy</a></li>
-          
-          <li><a href="#method-i-all_children">#all_children</a></li>
-          
-          <li><a href="#method-i-archive">#archive</a></li>
-          
-          <li><a href="#method-i-before_create">#before_create</a></li>
-          
-          <li><a href="#method-i-before_validation">#before_validation</a></li>
-          
-          <li><a href="#method-i-branch_from_master">#branch_from_master</a></li>
-          
-          <li><a href="#method-i-canon_controlled_identifiers">#canon_controlled_identifiers</a></li>
-          
-          <li><a href="#method-i-canon_controlled_paths">#canon_controlled_paths</a></li>
-          
-          <li><a href="#method-i-change_status">#change_status</a></li>
-          
-          <li><a href="#method-i-children_votes">#children_votes</a></li>
-          
-          <li><a href="#method-i-clone_to_owner">#clone_to_owner</a></li>
-          
-          <li><a href="#method-i-commit_to_canon">#commit_to_canon</a></li>
-          
-          <li><a href="#method-i-controlled_identifiers">#controlled_identifiers</a></li>
-          
-          <li><a href="#method-i-controlled_paths">#controlled_paths</a></li>
-          
-          <li><a href="#method-i-copy_repo_to_parent_repo">#copy_repo_to_parent_repo</a></li>
-          
-          <li><a href="#method-i-copy_to_owner">#copy_to_owner</a></li>
-          
-          <li><a href="#method-i-diff_from_canon">#diff_from_canon</a></li>
-          
-          <li><a href="#method-i-entry_identifier">#entry_identifier</a></li>
-          
-          <li><a href="#method-i-find_finalizer_publication">#find_finalizer_publication</a></li>
-          
-          <li><a href="#method-i-find_finalizer_user">#find_finalizer_user</a></li>
-          
-          <li><a href="#method-i-find_first_board">#find_first_board</a></li>
-          
-          <li><a href="#method-i-find_first_board_parent">#find_first_board_parent</a></li>
-          
-          <li><a href="#method-i-flatten_commits">#flatten_commits</a></li>
-          
-          <li><a href="#method-i-get_all_comments">#get_all_comments</a></li>
-          
-          <li><a href="#method-i-head">#head</a></li>
-          
-          <li><a href="#method-i-identifier_to_ref">#identifier_to_ref</a></li>
-          
-          <li><a href="#method-i-merge_base">#merge_base</a></li>
-          
-          <li><a href="#method-i-modified-3F">#modified?</a></li>
-          
-          <li><a href="#method-i-mutable-3F">#mutable?</a></li>
-          
-          <li><a href="#method-i-origin">#origin</a></li>
-          
-          <li><a href="#method-i-populate_identifiers_from_identifiers">#populate_identifiers_from_identifiers</a></li>
-          
-          <li><a href="#method-i-print">#print</a></li>
-          
-          <li><a href="#method-i-remove_finalizer">#remove_finalizer</a></li>
-          
-          <li><a href="#method-i-repository">#repository</a></li>
-          
-          <li><a href="#method-i-send_to_finalizer">#send_to_finalizer</a></li>
-          
-          <li><a href="#method-i-set_board_identifier_status">#set_board_identifier_status</a></li>
-          
-          <li><a href="#method-i-set_local_identifier_status">#set_local_identifier_status</a></li>
-          
-          <li><a href="#method-i-set_origin_and_local_identifier_status">#set_origin_and_local_identifier_status</a></li>
-          
-          <li><a href="#method-i-set_origin_identifier_status">#set_origin_identifier_status</a></li>
-          
-          <li><a href="#method-i-submission_reason">#submission_reason</a></li>
-          
-          <li><a href="#method-i-submit">#submit</a></li>
-          
-          <li><a href="#method-i-submit_identifier">#submit_identifier</a></li>
-          
-          <li><a href="#method-i-submit_to_next_board">#submit_to_next_board</a></li>
-          
-          <li><a href="#method-i-tally_votes">#tally_votes</a></li>
-          
-          <li><a href="#method-i-title_to_ref">#title_to_ref</a></li>
-          
-          <li><a href="#method-i-user_has_voted-3F">#user_has_voted?</a></li>
-          
-          <li><a href="#method-i-withdraw">#withdraw</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="./images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="./Papyrillio.html">Papyrillio</a></li>
-        
-          <li><a href="./Papyrillio/Aggregator.html">Papyrillio::Aggregator</a></li>
-        
-          <li><a href="./Papyrillio/Collector.html">Papyrillio::Collector</a></li>
-        
-          <li><a href="./Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a></li>
-        
-          <li><a href="./Papyrillio/Decorator.html">Papyrillio::Decorator</a></li>
-        
-          <li><a href="./Papyrillio/Organiser.html">Papyrillio::Organiser</a></li>
-        
-          <li><a href="./Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a></li>
-        
-          <li><a href="./Papyrillio/Printer.html">Papyrillio::Printer</a></li>
-        
-          <li><a href="./Papyrillio/Publishee.html">Papyrillio::Publishee</a></li>
-        
-          <li><a href="./Papyrillio/Publisher.html">Papyrillio::Publisher</a></li>
-        
-          <li><a href="./Papyrillio/Transformer.html">Papyrillio::Transformer</a></li>
-        
-          <li><a href="./JRubyXML.html">JRubyXML</a></li>
-        
-          <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a></li>
-        
-          <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a></li>
-        
-          <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a></li>
-        
-          <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a></li>
-        
-          <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a></li>
-        
-          <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a></li>
-        
-          <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a></li>
-        
-          <li><a href="./REXML.html">REXML</a></li>
-        
-          <li><a href="./REXML/Document.html">REXML::Document</a></li>
-        
-          <li><a href="./REXML/Element.html">REXML::Element</a></li>
-        
-          <li><a href="./REXML/XPath.html">REXML::XPath</a></li>
-        
-          <li><a href="./Rpx.html">Rpx</a></li>
-        
-          <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a></li>
-        
-          <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a></li>
-        
-          <li><a href="./Comment.html">Comment</a></li>
-        
-          <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a></li>
-        
-          <li><a href="./Doco.html">Doco</a></li>
-        
-          <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a></li>
-        
-          <li><a href="./Grit.html">Grit</a></li>
-        
-          <li><a href="./Grit/Commit.html">Grit::Commit</a></li>
-        
-          <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a></li>
-        
-          <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
-        
-          <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a></li>
-        
-          <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a></li>
-        
-          <li><a href="./NumbersRDF.html">NumbersRDF</a></li>
-        
-          <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a></li>
-        
-          <li><a href="./AjaxProxyController.html">AjaxProxyController</a></li>
-        
-          <li><a href="./ApplicationController.html">ApplicationController</a></li>
-        
-          <li><a href="./ApplicationHelper.html">ApplicationHelper</a></li>
-        
-          <li><a href="./Board.html">Board</a></li>
-        
-          <li><a href="./BoardsController.html">BoardsController</a></li>
-        
-          <li><a href="./CommentsController.html">CommentsController</a></li>
-        
-          <li><a href="./DDBIdentifier.html">DDBIdentifier</a></li>
-        
-          <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a></li>
-        
-          <li><a href="./Decree.html">Decree</a></li>
-        
-          <li><a href="./DecreesController.html">DecreesController</a></li>
-        
-          <li><a href="./DocosController.html">DocosController</a></li>
-        
-          <li><a href="./DocovideosController.html">DocovideosController</a></li>
-        
-          <li><a href="./Emailer.html">Emailer</a></li>
-        
-          <li><a href="./EmailerMailer.html">EmailerMailer</a></li>
-        
-          <li><a href="./EmailersController.html">EmailersController</a></li>
-        
-          <li><a href="./Event.html">Event</a></li>
-        
-          <li><a href="./EventsController.html">EventsController</a></li>
-        
-          <li><a href="./GitConf.html">GitConf</a></li>
-        
-          <li><a href="./HGVBiblioIdentifier.html">HGVBiblioIdentifier</a></li>
-        
-          <li><a href="./HGVIdentifier.html">HGVIdentifier</a></li>
-        
-          <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a></li>
-        
-          <li><a href="./HelperController.html">HelperController</a></li>
-        
-          <li><a href="./HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a></li>
-        
-          <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></li>
-        
-          <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a></li>
-        
-          <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a></li>
-        
-          <li><a href="./Identifier.html">Identifier</a></li>
-        
-          <li><a href="./IdentifiersController.html">IdentifiersController</a></li>
-        
-          <li><a href="./Integer.html">Integer</a></li>
-        
-          <li><a href="./Leiden.html">Leiden</a></li>
-        
-          <li><a href="./LeidenController.html">LeidenController</a></li>
-        
-          <li><a href="./LinkingInfo.html">LinkingInfo</a></li>
-        
-          <li><a href="./MaintenanceMode.html">MaintenanceMode</a></li>
-        
-          <li><a href="./Object.html">Object</a></li>
-        
-          <li><a href="./Publication.html">Publication</a></li>
-        
-          <li><a href="./PublicationsController.html">PublicationsController</a></li>
-        
-          <li><a href="./Rails.html">Rails</a></li>
-        
-          <li><a href="./RepositoriesController.html">RepositoriesController</a></li>
-        
-          <li><a href="./Repository.html">Repository</a></li>
-        
-          <li><a href="./RpxController.html">RpxController</a></li>
-        
-          <li><a href="./TranslationHelperController.html">TranslationHelperController</a></li>
-        
-          <li><a href="./TranslationLeiden.html">TranslationLeiden</a></li>
-        
-          <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a></li>
-        
-          <li><a href="./User.html">User</a></li>
-        
-          <li><a href="./UserController.html">UserController</a></li>
-        
-          <li><a href="./UserIdentifier.html">UserIdentifier</a></li>
-        
-          <li><a href="./Vote.html">Vote</a></li>
-        
-          <li><a href="./VotesController.html">VotesController</a></li>
-        
-          <li><a href="./WelcomeController.html">WelcomeController</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
+    
   </div>
 
-  <div id="documentation">
-    <h1 class="class">Publication</h1>
-
-    <div id="description" class="description">
-      
-    </div><!-- description -->
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActiveRecord::Base
+  
+</nav>
 
     
-    
-    
-    <div id="5Buntitled-5D" class="documentation-section">
-      
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
 
-      
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new_from_templates">::new_from_templates</a>
+    
+    <li><a href="#method-i-after_create">#after_create</a>
+    
+    <li><a href="#method-i-after_destroy">#after_destroy</a>
+    
+    <li><a href="#method-i-all_children">#all_children</a>
+    
+    <li><a href="#method-i-archive">#archive</a>
+    
+    <li><a href="#method-i-before_create">#before_create</a>
+    
+    <li><a href="#method-i-before_validation">#before_validation</a>
+    
+    <li><a href="#method-i-branch_from_master">#branch_from_master</a>
+    
+    <li><a href="#method-i-canon_controlled_identifiers">#canon_controlled_identifiers</a>
+    
+    <li><a href="#method-i-canon_controlled_paths">#canon_controlled_paths</a>
+    
+    <li><a href="#method-i-change_status">#change_status</a>
+    
+    <li><a href="#method-i-children_votes">#children_votes</a>
+    
+    <li><a href="#method-i-clone_to_owner">#clone_to_owner</a>
+    
+    <li><a href="#method-i-commit_to_canon">#commit_to_canon</a>
+    
+    <li><a href="#method-i-controlled_identifiers">#controlled_identifiers</a>
+    
+    <li><a href="#method-i-controlled_paths">#controlled_paths</a>
+    
+    <li><a href="#method-i-copy_repo_to_parent_repo">#copy_repo_to_parent_repo</a>
+    
+    <li><a href="#method-i-copy_to_owner">#copy_to_owner</a>
+    
+    <li><a href="#method-i-diff_from_canon">#diff_from_canon</a>
+    
+    <li><a href="#method-i-entry_identifier">#entry_identifier</a>
+    
+    <li><a href="#method-i-find_finalizer_publication">#find_finalizer_publication</a>
+    
+    <li><a href="#method-i-find_finalizer_user">#find_finalizer_user</a>
+    
+    <li><a href="#method-i-find_first_board">#find_first_board</a>
+    
+    <li><a href="#method-i-find_first_board_parent">#find_first_board_parent</a>
+    
+    <li><a href="#method-i-flatten_commits">#flatten_commits</a>
+    
+    <li><a href="#method-i-get_all_comments">#get_all_comments</a>
+    
+    <li><a href="#method-i-head">#head</a>
+    
+    <li><a href="#method-i-identifier_to_ref">#identifier_to_ref</a>
+    
+    <li><a href="#method-i-merge_base">#merge_base</a>
+    
+    <li><a href="#method-i-modified-3F">#modified?</a>
+    
+    <li><a href="#method-i-mutable-3F">#mutable?</a>
+    
+    <li><a href="#method-i-mutable_by-3F">#mutable_by?</a>
+    
+    <li><a href="#method-i-origin">#origin</a>
+    
+    <li><a href="#method-i-populate_identifiers_from_identifiers">#populate_identifiers_from_identifiers</a>
+    
+    <li><a href="#method-i-print">#print</a>
+    
+    <li><a href="#method-i-remove_finalizer">#remove_finalizer</a>
+    
+    <li><a href="#method-i-repository">#repository</a>
+    
+    <li><a href="#method-i-send_to_finalizer">#send_to_finalizer</a>
+    
+    <li><a href="#method-i-set_board_identifier_status">#set_board_identifier_status</a>
+    
+    <li><a href="#method-i-set_local_identifier_status">#set_local_identifier_status</a>
+    
+    <li><a href="#method-i-set_origin_and_local_identifier_status">#set_origin_and_local_identifier_status</a>
+    
+    <li><a href="#method-i-set_origin_identifier_status">#set_origin_identifier_status</a>
+    
+    <li><a href="#method-i-submission_reason">#submission_reason</a>
+    
+    <li><a href="#method-i-submit">#submit</a>
+    
+    <li><a href="#method-i-submit_identifier">#submit_identifier</a>
+    
+    <li><a href="#method-i-submit_to_next_board">#submit_to_next_board</a>
+    
+    <li><a href="#method-i-tally_votes">#tally_votes</a>
+    
+    <li><a href="#method-i-title_to_ref">#title_to_ref</a>
+    
+    <li><a href="#method-i-user_has_voted-3F">#user_has_voted?</a>
+    
+    <li><a href="#method-i-withdraw">#withdraw</a>
+    
+  </ul>
+</nav>
 
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo.html">HgvMetaIdentifierHelper::HgvGeo</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/GeoSpot.html">HgvMetaIdentifierHelper::HgvGeo::GeoSpot</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/OrigPlace.html">HgvMetaIdentifierHelper::HgvGeo::OrigPlace</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Place.html">HgvMetaIdentifierHelper::HgvGeo::Place</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Provenance.html">HgvMetaIdentifierHelper::HgvGeo::Provenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a>
+  
+    <li><a href="./Papyrillio.html">Papyrillio</a>
+  
+    <li><a href="./Papyrillio/Aggregator.html">Papyrillio::Aggregator</a>
+  
+    <li><a href="./Papyrillio/Collector.html">Papyrillio::Collector</a>
+  
+    <li><a href="./Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a>
+  
+    <li><a href="./Papyrillio/Decorator.html">Papyrillio::Decorator</a>
+  
+    <li><a href="./Papyrillio/Organiser.html">Papyrillio::Organiser</a>
+  
+    <li><a href="./Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a>
+  
+    <li><a href="./Papyrillio/Printer.html">Papyrillio::Printer</a>
+  
+    <li><a href="./Papyrillio/Publishee.html">Papyrillio::Publishee</a>
+  
+    <li><a href="./Papyrillio/Publisher.html">Papyrillio::Publisher</a>
+  
+    <li><a href="./Papyrillio/Transformer.html">Papyrillio::Transformer</a>
+  
+    <li><a href="./JRubyXML.html">JRubyXML</a>
+  
+    <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a>
+  
+    <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a>
+  
+    <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a>
+  
+    <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a>
+  
+    <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a>
+  
+    <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a>
+  
+    <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a>
+  
+    <li><a href="./REXML.html">REXML</a>
+  
+    <li><a href="./REXML/Document.html">REXML::Document</a>
+  
+    <li><a href="./REXML/Element.html">REXML::Element</a>
+  
+    <li><a href="./REXML/XPath.html">REXML::XPath</a>
+  
+    <li><a href="./Rpx.html">Rpx</a>
+  
+    <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a>
+  
+    <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a>
+  
+    <li><a href="./Comment.html">Comment</a>
+  
+    <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a>
+  
+    <li><a href="./Doco.html">Doco</a>
+  
+    <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a>
+  
+    <li><a href="./Grit.html">Grit</a>
+  
+    <li><a href="./Grit/Commit.html">Grit::Commit</a>
+  
+    <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+    <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a>
+  
+    <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a>
+  
+    <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a>
+  
+    <li><a href="./NumbersRDF.html">NumbersRDF</a>
+  
+    <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a>
+  
+    <li><a href="./AjaxProxyController.html">AjaxProxyController</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Board.html">Board</a>
+  
+    <li><a href="./BoardsController.html">BoardsController</a>
+  
+    <li><a href="./CommentsController.html">CommentsController</a>
+  
+    <li><a href="./DDBIdentifier.html">DDBIdentifier</a>
+  
+    <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a>
+  
+    <li><a href="./Decree.html">Decree</a>
+  
+    <li><a href="./DecreesController.html">DecreesController</a>
+  
+    <li><a href="./DocosController.html">DocosController</a>
+  
+    <li><a href="./DocovideosController.html">DocovideosController</a>
+  
+    <li><a href="./Emailer.html">Emailer</a>
+  
+    <li><a href="./EmailerMailer.html">EmailerMailer</a>
+  
+    <li><a href="./EmailersController.html">EmailersController</a>
+  
+    <li><a href="./Event.html">Event</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./GitConf.html">GitConf</a>
+  
+    <li><a href="./HGVBiblioIdentifier.html">HGVBiblioIdentifier</a>
+  
+    <li><a href="./HGVIdentifier.html">HGVIdentifier</a>
+  
+    <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a>
+  
+    <li><a href="./HelperController.html">HelperController</a>
+  
+    <li><a href="./HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a>
+  
+    <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a>
+  
+    <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a>
+  
+    <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a>
+  
+    <li><a href="./Identifier.html">Identifier</a>
+  
+    <li><a href="./IdentifiersController.html">IdentifiersController</a>
+  
+    <li><a href="./Integer.html">Integer</a>
+  
+    <li><a href="./Leiden.html">Leiden</a>
+  
+    <li><a href="./LeidenController.html">LeidenController</a>
+  
+    <li><a href="./LinkingInfo.html">LinkingInfo</a>
+  
+    <li><a href="./MaintenanceMode.html">MaintenanceMode</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Publication.html">Publication</a>
+  
+    <li><a href="./PublicationsController.html">PublicationsController</a>
+  
+    <li><a href="./Rails.html">Rails</a>
+  
+    <li><a href="./RepositoriesController.html">RepositoriesController</a>
+  
+    <li><a href="./Repository.html">Repository</a>
+  
+    <li><a href="./RpxController.html">RpxController</a>
+  
+    <li><a href="./TranslationHelperController.html">TranslationHelperController</a>
+  
+    <li><a href="./TranslationLeiden.html">TranslationLeiden</a>
+  
+    <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserController.html">UserController</a>
+  
+    <li><a href="./UserIdentifier.html">UserIdentifier</a>
+  
+    <li><a href="./Vote.html">Vote</a>
+  
+    <li><a href="./VotesController.html">VotesController</a>
+  
+    <li><a href="./WelcomeController.html">WelcomeController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Publication</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
       
-      <!-- Constants -->
-      <div id="constants-list" class="section">
-        <h3 class="section-header">Constants</h3>
-        <dl>
+        <dt id="PUBLICATION_STATUS">PUBLICATION_STATUS
         
-          <dt><a name="PUBLICATION_STATUS">PUBLICATION_STATUS</a></dt>
-          
-          <dd class="description"></dd>
-          
+        <dd class="description">
         
-        </dl>
+      
+      </dl>
+    </section>
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-recent_submit_sha" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">recent_submit_sha</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>inelegant way to pass this info, but it works</p>
+        
+        </div>
       </div>
       
+    </section><!-- attribute-method-details -->
+    
 
-      
-      <!-- Attributes -->
-      <div id="attribute-method-details" class="method-section section">
-        <h3 class="section-header">Attributes</h3>
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
 
+    
+      <div id="method-c-new_from_templates" class="method-detail ">
         
-        <div id="recent_submit_sha-attribute-method" class="method-detail">
-          <a name="recent_submit_sha"></a>
-          
-          <a name="recent_submit_sha="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">recent_submit_sha</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
-
-          <div class="method-description">
-          
-          <p>inelegant way to pass this info, but it works</p>
-          
-          </div>
+        <div class="method-heading">
+          <span class="method-name">new_from_templates</span><span
+            class="method-args">(creator)</span>
+          <span class="method-click-advice">click to toggle source</span>
         </div>
         
-      </div><!-- attribute-method-details -->
-      
 
-      <!-- Methods -->
-      
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
-
-      
-        <div id="new_from_templates-method" class="method-detail ">
-          <a name="method-c-new_from_templates"></a>
-
+        <div class="method-description">
           
-          <div class="method-heading">
-            <span class="method-name">new_from_templates</span><span
-              class="method-args">(creator)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
+          
           
 
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="new_from_templates-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 324</span>
+          
+          <div class="method-source-code" id="new_from_templates-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 324</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new_from_templates</span>(<span class="ruby-identifier">creator</span>)
   <span class="ruby-identifier">new_publication</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:owner</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">creator</span>, <span class="ruby-value">:creator</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">creator</span>)
   
@@ -498,107 +492,98 @@
   
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">new_publication</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- new_from_templates-source -->
-            
-          </div>
-
+          </div><!-- new_from_templates-source -->
           
+        </div>
 
-          
-        </div><!-- new_from_templates-method -->
+        
 
-      
-      </div><!-- public-class-method-details -->
+        
+      </div><!-- new_from_templates-method -->
+
     
-      <div id="public-instance-method-details" class="method-section section">
-        <h3 class="section-header">Public Instance Methods</h3>
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
 
-      
-        <div id="after_create-method" class="method-detail ">
-          <a name="method-i-after_create"></a>
+    
+      <div id="method-i-after_create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">after_create</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>TODO: rename actual branch after branch attribute rename</p>
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">after_create</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>TODO: rename actual branch after branch attribute rename</p>
-            
-
-            
-            <div class="method-source-code" id="after_create-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 367</span>
+          <div class="method-source-code" id="after_create-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 375</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">after_create</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- after_create-source -->
-            
-          </div>
+          </div><!-- after_create-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- after_create-method -->
+
+    
+      <div id="method-i-after_destroy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">after_destroy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- after_create-method -->
-
-      
-        <div id="after_destroy-method" class="method-detail ">
-          <a name="method-i-after_destroy"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">after_destroy</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="after_destroy-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 165</span>
+          <div class="method-source-code" id="after_destroy-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 165</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">after_destroy</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">delete_branch</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">branch</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- after_destroy-source -->
-            
-          </div>
+          </div><!-- after_destroy-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- after_destroy-method -->
+
+    
+      <div id="method-i-all_children" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">all_children</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- after_destroy-method -->
-
-      
-        <div id="all_children-method" class="method-detail ">
-          <a name="method-i-all_children"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">all_children</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="all_children-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 906</span>
+          <div class="method-source-code" id="all_children-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 914</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">all_children</span>
   <span class="ruby-identifier">all_child_publications</span> = []
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child_publication</span><span class="ruby-operator">|</span>
@@ -607,245 +592,224 @@
   <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">all_child_publications</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- all_children-source -->
-            
-          </div>
+          </div><!-- all_children-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- all_children-method -->
+
+    
+      <div id="method-i-archive" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">archive</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- all_children-method -->
-
-      
-        <div id="archive-method" class="method-detail ">
-          <a name="method-i-archive"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">archive</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="archive-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 454</span>
+          <div class="method-source-code" id="archive-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 462</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">archive</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">change_status</span>(<span class="ruby-string">&quot;archived&quot;</span>)
   
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">title</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">title</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot; (%Y/%m/%d-%H.%M.%S)&quot;</span>)
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">save!</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- archive-source -->
-            
-          </div>
-
+          </div><!-- archive-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- archive-method -->
+
+    
+      <div id="method-i-before_create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">before_create</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- archive-method -->
-
-      
-        <div id="before_create-method" class="method-detail ">
-          <a name="method-i-before_create"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">before_create</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Should check the owner’s repo to make sure the branch doesn’t exist and
+          <p>Should check the owner’s repo to make sure the branch doesn’t exist and
 halt if so</p>
-            
+          
 
-            
-            <div class="method-source-code" id="before_create-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 159</span>
+          
+          <div class="method-source-code" id="before_create-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 159</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">before_create</span>
   <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">branches</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">branch</span>)
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- before_create-source -->
-            
-          </div>
-
+          </div><!-- before_create-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- before_create-method -->
+
+    
+      <div id="method-i-before_validation" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">before_validation</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- before_create-method -->
-
-      
-        <div id="before_validation-method" class="method-detail ">
-          <a name="method-i-before_validation"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">before_validation</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>If branch hasn’t been specified, create it from the title before
+          <p>If branch hasn’t been specified, create it from the title before
 validation, replacing spaces with underscore. TODO: do a branch rename
 inside before_validation_on_update?</p>
-            
+          
 
-            
-            <div class="method-source-code" id="before_validation-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 154</span>
+          
+          <div class="method-source-code" id="before_validation-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 154</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">before_validation</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">branch</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">title_to_ref</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">title</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- before_validation-source -->
-            
-          </div>
+          </div><!-- before_validation-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- before_validation-method -->
+
+    
+      <div id="method-i-branch_from_master" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">branch_from_master</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- before_validation-method -->
-
-      
-        <div id="branch_from_master-method" class="method-detail ">
-          <a name="method-i-branch_from_master"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">branch_from_master</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="branch_from_master-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 850</span>
+          <div class="method-source-code" id="branch_from_master-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 858</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">branch_from_master</span>
   <span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">create_branch</span>(<span class="ruby-identifier">branch</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- branch_from_master-source -->
-            
-          </div>
+          </div><!-- branch_from_master-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- branch_from_master-method -->
+
+    
+      <div id="method-i-canon_controlled_identifiers" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">canon_controlled_identifiers</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- branch_from_master-method -->
-
-      
-        <div id="canon_controlled_identifiers-method" class="method-detail ">
-          <a name="method-i-canon_controlled_identifiers"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">canon_controlled_identifiers</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="canon_controlled_identifiers-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 872</span>
+          <div class="method-source-code" id="canon_controlled_identifiers-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 880</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">canon_controlled_identifiers</span>
   <span class="ruby-comment"># TODO: implement a class-level var e.g. CANON_CONTROL for this</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">controlled_identifiers</span>.<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span>([<span class="ruby-constant">HGVBiblioIdentifier</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span>))}
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- canon_controlled_identifiers-source -->
-            
-          </div>
+          </div><!-- canon_controlled_identifiers-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- canon_controlled_identifiers-method -->
+
+    
+      <div id="method-i-canon_controlled_paths" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">canon_controlled_paths</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- canon_controlled_identifiers-method -->
-
-      
-        <div id="canon_controlled_paths-method" class="method-detail ">
-          <a name="method-i-canon_controlled_paths"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">canon_controlled_paths</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="canon_controlled_paths-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 877</span>
+          <div class="method-source-code" id="canon_controlled_paths-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 885</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">canon_controlled_paths</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">canon_controlled_identifiers</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_path</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- canon_controlled_paths-source -->
-            
-          </div>
+          </div><!-- canon_controlled_paths-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- canon_controlled_paths-method -->
+
+    
+      <div id="method-i-change_status" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">change_status</span><span
+            class="method-args">(new_status)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- canon_controlled_paths-method -->
-
-      
-        <div id="change_status-method" class="method-detail ">
-          <a name="method-i-change_status"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">change_status</span><span
-              class="method-args">(new_status)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="change_status-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 421</span>
+          <div class="method-source-code" id="change_status-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 429</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">change_status</span>(<span class="ruby-identifier">new_status</span>)
   <span class="ruby-keyword">unless</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">new_status</span>
     <span class="ruby-identifier">old_branch_leaf</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">branch</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'/'</span>).<span class="ruby-identifier">last</span>
@@ -878,36 +842,33 @@ inside before_validation_on_update?</p>
     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">save!</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- change_status-source -->
-            
-          </div>
+          </div><!-- change_status-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- change_status-method -->
+
+    
+      <div id="method-i-children_votes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">children_votes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>total votes for the publication children in voting status</p>
           
 
           
-        </div><!-- change_status-method -->
-
-      
-        <div id="children_votes-method" class="method-detail ">
-          <a name="method-i-children_votes"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">children_votes</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>total votes for the publication children in voting status</p>
-            
-
-            
-            <div class="method-source-code" id="children_votes-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 954</span>
+          <div class="method-source-code" id="children_votes-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 962</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">children_votes</span>
   <span class="ruby-identifier">vote_total</span> = <span class="ruby-value">0</span>
   <span class="ruby-identifier">vote_ddb</span> = <span class="ruby-value">0</span>
@@ -932,36 +893,33 @@ inside before_validation_on_update?</p>
   <span class="ruby-keyword">end</span> <span class="ruby-comment">#children do</span>
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">vote_total</span>, <span class="ruby-identifier">vote_ddb</span>, <span class="ruby-identifier">vote_meta</span>, <span class="ruby-identifier">vote_trans</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- children_votes-source -->
-            
-          </div>
+          </div><!-- children_votes-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- children_votes-method -->
+
+    
+      <div id="method-i-clone_to_owner" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">clone_to_owner</span><span
+            class="method-args">(new_owner)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- children_votes-method -->
-
-      
-        <div id="clone_to_owner-method" class="method-detail ">
-          <a name="method-i-clone_to_owner"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">clone_to_owner</span><span
-              class="method-args">(new_owner)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="clone_to_owner-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 979</span>
+          <div class="method-source-code" id="clone_to_owner-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 987</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">clone_to_owner</span>(<span class="ruby-identifier">new_owner</span>)
   <span class="ruby-identifier">duplicate</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clone</span>
   <span class="ruby-identifier">duplicate</span>.<span class="ruby-identifier">owner</span> = <span class="ruby-identifier">new_owner</span>
@@ -979,36 +937,33 @@ inside before_validation_on_update?</p>
   
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">duplicate</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- clone_to_owner-source -->
-            
-          </div>
+          </div><!-- clone_to_owner-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- clone_to_owner-method -->
+
+    
+      <div id="method-i-commit_to_canon" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">commit_to_canon</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- clone_to_owner-method -->
-
-      
-        <div id="commit_to_canon-method" class="method-detail ">
-          <a name="method-i-commit_to_canon"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">commit_to_canon</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="commit_to_canon-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 739</span>
+          <div class="method-source-code" id="commit_to_canon-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 747</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">commit_to_canon</span>
 
   <span class="ruby-comment">#commit_sha is just used to return git sha reference point for comment</span>
@@ -1118,36 +1073,33 @@ inside before_validation_on_update?</p>
   <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">commit_sha</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- commit_to_canon-source -->
-            
-          </div>
+          </div><!-- commit_to_canon-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- commit_to_canon-method -->
+
+    
+      <div id="method-i-controlled_identifiers" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">controlled_identifiers</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- commit_to_canon-method -->
-
-      
-        <div id="controlled_identifiers-method" class="method-detail ">
-          <a name="method-i-controlled_identifiers"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">controlled_identifiers</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="controlled_identifiers-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 854</span>
+          <div class="method-source-code" id="controlled_identifiers-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 862</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">controlled_identifiers</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">select</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Board</span>
@@ -1159,106 +1111,97 @@ inside before_validation_on_update?</p>
     <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- controlled_identifiers-source -->
-            
-          </div>
+          </div><!-- controlled_identifiers-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- controlled_identifiers-method -->
+
+    
+      <div id="method-i-controlled_paths" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">controlled_paths</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- controlled_identifiers-method -->
-
-      
-        <div id="controlled_paths-method" class="method-detail ">
-          <a name="method-i-controlled_paths"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">controlled_paths</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="controlled_paths-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 866</span>
+          <div class="method-source-code" id="controlled_paths-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 874</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">controlled_paths</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">controlled_identifiers</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_path</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- controlled_paths-source -->
-            
-          </div>
+          </div><!-- controlled_paths-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- controlled_paths-method -->
+
+    
+      <div id="method-i-copy_repo_to_parent_repo" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">copy_repo_to_parent_repo</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>copy a child publication repo back to the parent repo</p>
           
 
           
-        </div><!-- controlled_paths-method -->
-
-      
-        <div id="copy_repo_to_parent_repo-method" class="method-detail ">
-          <a name="method-i-copy_repo_to_parent_repo"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">copy_repo_to_parent_repo</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>copy a child publication repo back to the parent repo</p>
-            
-
-            
-            <div class="method-source-code" id="copy_repo_to_parent_repo-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 1014</span>
+          <div class="method-source-code" id="copy_repo_to_parent_repo-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1022</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">copy_repo_to_parent_repo</span>
    <span class="ruby-comment">#all we need to do is copy the repo back the parents repo</span>
    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">copy_branch_from_repo</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">branch</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">branch</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">repository</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- copy_repo_to_parent_repo-source -->
-            
-          </div>
-
+          </div><!-- copy_repo_to_parent_repo-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- copy_repo_to_parent_repo-method -->
+
+    
+      <div id="method-i-copy_to_owner" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">copy_to_owner</span><span
+            class="method-args">(new_owner)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- copy_repo_to_parent_repo-method -->
-
-      
-        <div id="copy_to_owner-method" class="method-detail ">
-          <a name="method-i-copy_to_owner"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">copy_to_owner</span><span
-              class="method-args">(new_owner)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>copies this publication’s branch to the new_owner’s branch returns
+          <p>copies this publication’s branch to the new_owner’s branch returns
 duplicate publication with new_owner</p>
-            
+          
 
-            
-            <div class="method-source-code" id="copy_to_owner-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 1003</span>
+          
+          <div class="method-source-code" id="copy_to_owner-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1011</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">copy_to_owner</span>(<span class="ruby-identifier">new_owner</span>)
   <span class="ruby-identifier">duplicate</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clone_to_owner</span>(<span class="ruby-identifier">new_owner</span>)
   
@@ -1268,36 +1211,33 @@ duplicate publication with new_owner</p>
   
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">duplicate</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- copy_to_owner-source -->
-            
-          </div>
+          </div><!-- copy_to_owner-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- copy_to_owner-method -->
+
+    
+      <div id="method-i-diff_from_canon" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">diff_from_canon</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- copy_to_owner-method -->
-
-      
-        <div id="diff_from_canon-method" class="method-detail ">
-          <a name="method-i-diff_from_canon"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">diff_from_canon</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="diff_from_canon-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 883</span>
+          <div class="method-source-code" id="diff_from_canon-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 891</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">diff_from_canon</span>
   <span class="ruby-identifier">canon</span> = <span class="ruby-constant">Repository</span>.<span class="ruby-identifier">new</span>
   <span class="ruby-identifier">canonical_sha</span> = <span class="ruby-identifier">canon</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">get_head</span>(<span class="ruby-string">'master'</span>).<span class="ruby-identifier">commit</span>.<span class="ruby-identifier">sha</span>
@@ -1306,141 +1246,129 @@ duplicate publication with new_owner</p>
     <span class="ruby-string">'--'</span>, *(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">controlled_paths</span>))
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">diff</span> <span class="ruby-operator">||</span> <span class="ruby-string">&quot;&quot;</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- diff_from_canon-source -->
-            
-          </div>
-
+          </div><!-- diff_from_canon-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- diff_from_canon-method -->
+
+    
+      <div id="method-i-entry_identifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">entry_identifier</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- diff_from_canon-method -->
-
-      
-        <div id="entry_identifier-method" class="method-detail ">
-          <a name="method-i-entry_identifier"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">entry_identifier</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>entry point identifier to use when we’re just coming in from a
+          <p>entry point identifier to use when we’re just coming in from a
 publication</p>
-            
+          
 
-            
-            <div class="method-source-code" id="entry_identifier-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 1022</span>
+          
+          <div class="method-source-code" id="entry_identifier-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1030</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">entry_identifier</span>
   <span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">first</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- entry_identifier-source -->
-            
-          </div>
+          </div><!-- entry_identifier-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- entry_identifier-method -->
+
+    
+      <div id="method-i-find_finalizer_publication" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_finalizer_publication</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- entry_identifier-method -->
-
-      
-        <div id="find_finalizer_publication-method" class="method-detail ">
-          <a name="method-i-find_finalizer_publication"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">find_finalizer_publication</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="find_finalizer_publication-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 726</span>
+          <div class="method-source-code" id="find_finalizer_publication-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 734</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">find_finalizer_publication</span>
 <span class="ruby-comment">#returns the finalizer user or nil if finalizer does not exist</span>
   <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_by_parent_id</span>( <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;finalizing&quot;</span> })
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- find_finalizer_publication-source -->
-            
-          </div>
+          </div><!-- find_finalizer_publication-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- find_finalizer_publication-method -->
+
+    
+      <div id="method-i-find_finalizer_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_finalizer_user</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- find_finalizer_publication-method -->
-
-      
-        <div id="find_finalizer_user-method" class="method-detail ">
-          <a name="method-i-find_finalizer_user"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">find_finalizer_user</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="find_finalizer_user-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 719</span>
+          <div class="method-source-code" id="find_finalizer_user-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 727</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">find_finalizer_user</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">find_finalizer_publication</span>
     <span class="ruby-keyword">return</span> <span class="ruby-identifier">find_finalizer_publication</span>.<span class="ruby-identifier">owner</span>    
   <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- find_finalizer_user-source -->
-            
-          </div>
-
+          </div><!-- find_finalizer_user-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- find_finalizer_user-method -->
+
+    
+      <div id="method-i-find_first_board" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_first_board</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- find_finalizer_user-method -->
-
-      
-        <div id="find_first_board-method" class="method-detail ">
-          <a name="method-i-find_first_board"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">find_first_board</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>finds the closest parent publication whose owner is a board and returns
+          <p>finds the closest parent publication whose owner is a board and returns
 that board</p>
-            
+          
 
-            
-            <div class="method-source-code" id="find_first_board-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 933</span>
+          
+          <div class="method-source-code" id="find_first_board-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 941</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">find_first_board</span>
   <span class="ruby-identifier">board_publication</span> = <span class="ruby-keyword">self</span>
   <span class="ruby-keyword">while</span> (<span class="ruby-identifier">board_publication</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;Board&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">board_publication</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">do</span>
@@ -1451,37 +1379,34 @@ that board</p>
   <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- find_first_board-source -->
-            
-          </div>
-
+          </div><!-- find_first_board-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- find_first_board-method -->
+
+    
+      <div id="method-i-find_first_board_parent" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_first_board_parent</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- find_first_board-method -->
-
-      
-        <div id="find_first_board_parent-method" class="method-detail ">
-          <a name="method-i-find_first_board_parent"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">find_first_board_parent</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>finds the closest parent publication whose owner is a board and returns
+          <p>finds the closest parent publication whose owner is a board and returns
 that publication</p>
-            
+          
 
-            
-            <div class="method-source-code" id="find_first_board_parent-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 945</span>
+          
+          <div class="method-source-code" id="find_first_board_parent-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 953</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">find_first_board_parent</span>
   <span class="ruby-identifier">board_publication</span> = <span class="ruby-keyword">self</span>
   <span class="ruby-keyword">while</span> (<span class="ruby-identifier">board_publication</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;Board&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">board_publication</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">do</span>
@@ -1489,36 +1414,33 @@ that publication</p>
   <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">board_publication</span>      
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- find_first_board_parent-source -->
-            
-          </div>
+          </div><!-- find_first_board_parent-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- find_first_board_parent-method -->
+
+    
+      <div id="method-i-flatten_commits" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">flatten_commits</span><span
+            class="method-args">(finalizing_publication, finalizer, board_members)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- find_first_board_parent-method -->
-
-      
-        <div id="flatten_commits-method" class="method-detail ">
-          <a name="method-i-flatten_commits"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">flatten_commits</span><span
-              class="method-args">(finalizing_publication, finalizer, board_members)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="flatten_commits-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 573</span>
+          <div class="method-source-code" id="flatten_commits-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 581</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">flatten_commits</span>(<span class="ruby-identifier">finalizing_publication</span>, <span class="ruby-identifier">finalizer</span>, <span class="ruby-identifier">board_members</span>)
   <span class="ruby-identifier">finalizing_publication</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">fetch_objects</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">repository</span>)
   
@@ -1631,36 +1553,33 @@ that publication</p>
   <span class="ruby-comment"># - rewrite the committer to the finalizer</span>
   <span class="ruby-comment"># - change parent lineage to flattened commits</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- flatten_commits-source -->
-            
-          </div>
+          </div><!-- flatten_commits-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- flatten_commits-method -->
+
+    
+      <div id="method-i-get_all_comments" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_all_comments</span><span
+            class="method-args">(title)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- flatten_commits-method -->
-
-      
-        <div id="get_all_comments-method" class="method-detail ">
-          <a name="method-i-get_all_comments"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">get_all_comments</span><span
-              class="method-args">(title)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="get_all_comments-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 1026</span>
+          <div class="method-source-code" id="get_all_comments-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1034</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_all_comments</span>(<span class="ruby-identifier">title</span>)
   <span class="ruby-identifier">all_built_comments</span> = []
   <span class="ruby-identifier">xml_only_built_comments</span> = []
@@ -1744,104 +1663,94 @@ that publication</p>
   <span class="ruby-comment"># sort in descending date order for display</span>
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">all_built_comments</span>.<span class="ruby-identifier">sort_by</span>(&amp;<span class="ruby-value">:when</span>).<span class="ruby-identifier">reverse</span>, <span class="ruby-identifier">xml_only_built_comments</span>.<span class="ruby-identifier">sort_by</span>(&amp;<span class="ruby-value">:when</span>).<span class="ruby-identifier">reverse</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- get_all_comments-source -->
-            
-          </div>
+          </div><!-- get_all_comments-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- get_all_comments-method -->
+
+    
+      <div id="method-i-head" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">head</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- get_all_comments-method -->
-
-      
-        <div id="head-method" class="method-detail ">
-          <a name="method-i-head"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">head</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="head-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 731</span>
+          <div class="method-source-code" id="head-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 739</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">head</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">get_head</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">branch</span>).<span class="ruby-identifier">commit</span>.<span class="ruby-identifier">sha</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- head-source -->
-            
-          </div>
+          </div><!-- head-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- head-method -->
+
+    
+      <div id="method-i-merge_base" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">merge_base</span><span
+            class="method-args">(branch = 'master')</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- head-method -->
-
-      
-        <div id="merge_base-method" class="method-detail ">
-          <a name="method-i-merge_base"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">merge_base</span><span
-              class="method-args">(branch = 'master')</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="merge_base-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 735</span>
+          <div class="method-source-code" id="merge_base-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 743</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">merge_base</span>(<span class="ruby-identifier">branch</span> = <span class="ruby-string">'master'</span>)
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">git</span>.<span class="ruby-identifier">merge_base</span>({},<span class="ruby-identifier">branch</span>,<span class="ruby-keyword">self</span>.<span class="ruby-identifier">head</span>).<span class="ruby-identifier">chomp</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- merge_base-source -->
-            
-          </div>
+          </div><!-- merge_base-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- merge_base-method -->
+
+    
+      <div id="method-i-modified-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">modified?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- merge_base-method -->
-
-      
-        <div id="modified-3F-method" class="method-detail ">
-          <a name="method-i-modified-3F"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">modified?</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="modified-3F-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 347</span>
+          <div class="method-source-code" id="modified-3F-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 347</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">modified?</span>
-  
   <span class="ruby-identifier">retval</span> = <span class="ruby-keyword">false</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">retval</span> = <span class="ruby-identifier">retval</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">modified?</span>
@@ -1849,36 +1758,33 @@ that publication</p>
   
   <span class="ruby-identifier">retval</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- modified-3F-source -->
-            
-          </div>
+          </div><!-- modified-3F-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- modified-3F-method -->
+
+    
+      <div id="method-i-mutable-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mutable?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- modified-3F-method -->
-
-      
-        <div id="mutable-3F-method" class="method-detail ">
-          <a name="method-i-mutable-3F"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">mutable?</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="mutable-3F-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 357</span>
+          <div class="method-source-code" id="mutable-3F-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 356</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">mutable?</span>
   <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;editing&quot;</span> <span class="ruby-comment"># &amp;&amp; self.status != &quot;new&quot;</span>
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
@@ -1886,36 +1792,69 @@ that publication</p>
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- mutable-3F-source -->
-            
-          </div>
+          </div><!-- mutable-3F-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- mutable-3F-method -->
+
+    
+      <div id="method-i-mutable_by-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mutable_by?</span><span
+            class="method-args">(check_user)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- mutable-3F-method -->
+          <div class="method-source-code" id="mutable_by-3F-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 364</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mutable_by?</span>(<span class="ruby-identifier">check_user</span>)
+  <span class="ruby-keyword">if</span> (((<span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Board</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">users</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">check_user</span>))) <span class="ruby-operator">||</span>
+      (<span class="ruby-identifier">check_user</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>)) <span class="ruby-operator">&amp;&amp;</span>
+     (<span class="ruby-operator">!</span>(<span class="ruby-identifier">check_user</span>.<span class="ruby-identifier">developer</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">check_user</span>.<span class="ruby-identifier">admin</span>))
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- mutable_by-3F-source -->
+          
+        </div>
 
-      
-        <div id="origin-method" class="method-detail ">
-          <a name="method-i-origin"></a>
+        
+
+        
+      </div><!-- mutable_by-3F-method -->
+
+    
+      <div id="method-i-origin" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">origin</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">origin</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="origin-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 897</span>
+          <div class="method-source-code" id="origin-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 905</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">origin</span>
   <span class="ruby-comment"># walk the parent list until we encounter one with no parent</span>
   <span class="ruby-identifier">origin_publication</span> = <span class="ruby-keyword">self</span>
@@ -1924,42 +1863,39 @@ that publication</p>
   <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">origin_publication</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- origin-source -->
-            
-          </div>
-
+          </div><!-- origin-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- origin-method -->
+
+    
+      <div id="method-i-populate_identifiers_from_identifiers" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populate_identifiers_from_identifiers</span><span
+            class="method-args">(identifiers, original_title = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- origin-method -->
-
-      
-        <div id="populate_identifiers_from_identifiers-method" class="method-detail ">
-          <a name="method-i-populate_identifiers_from_identifiers"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">populate_identifiers_from_identifiers</span><span
-              class="method-args">(identifiers, original_title = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Populates the publication’s list of identifiers. Input identifiers can be
+          <p>Populates the publication’s list of identifiers. Input identifiers can be
 in the form of</p>
 
 <pre>* an array of strings such as: papyri.info/ddbdp/bgu;7;1504
 * a single string such as: papyri.info/ddbdp/bgu;7;1504</pre>
 
 <p>publication title is named using first identifier</p>
-            
+          
 
-            
-            <div class="method-source-code" id="populate_identifiers_from_identifiers-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 89</span>
+          
+          <div class="method-source-code" id="populate_identifiers_from_identifiers-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 89</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">populate_identifiers_from_identifiers</span>(<span class="ruby-identifier">identifiers</span>, <span class="ruby-identifier">original_title</span> = <span class="ruby-keyword">nil</span>)
 
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">update_master_from_canonical</span>
@@ -2021,41 +1957,38 @@ in the form of</p>
   <span class="ruby-comment">#   end</span>
   <span class="ruby-comment"># end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- populate_identifiers_from_identifiers-source -->
-            
-          </div>
+          </div><!-- populate_identifiers_from_identifiers-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- populate_identifiers_from_identifiers-method -->
+
+    
+      <div id="method-i-print" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">print</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- populate_identifiers_from_identifiers-method -->
-
-      
-        <div id="print-method" class="method-detail ">
-          <a name="method-i-print"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">print</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="print-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 41</span>
+          <div class="method-source-code" id="print-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 41</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">print</span>
   <span class="ruby-comment"># get preview of each identifier</span>
   <span class="ruby-identifier">tmp</span> = {}
   <span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">identifier</span><span class="ruby-operator">|</span>
-    <span class="ruby-identifier">tmp</span>[<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">preview</span>({<span class="ruby-string">'meta-style'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'sammelbuch'</span>, <span class="ruby-string">'leiden-style'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'ddbdp'</span>}, <span class="ruby-node">%{data xslt epidoc start-odf.xsl}</span>)
+    <span class="ruby-identifier">tmp</span>[<span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">preview</span>({<span class="ruby-string">'meta-style'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'sammelbuch'</span>, <span class="ruby-string">'leiden-style'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'ddbdp'</span>}, <span class="ruby-node">%w{data xslt epidoc start-odf.xsl}</span>)
   }
 
   <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-string">'---------------DDB xml ---------------------'</span>)
@@ -2093,36 +2026,33 @@ in the form of</p>
 
   <span class="ruby-identifier">xml</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- print-source -->
-            
-          </div>
+          </div><!-- print-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- print-method -->
+
+    
+      <div id="method-i-remove_finalizer" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">remove_finalizer</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- print-method -->
-
-      
-        <div id="remove_finalizer-method" class="method-detail ">
-          <a name="method-i-remove_finalizer"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">remove_finalizer</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="remove_finalizer-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 706</span>
+          <div class="method-source-code" id="remove_finalizer-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 714</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_finalizer</span>
   <span class="ruby-comment"># need to find out if there is a finalizer, and take the publication from them</span>
   <span class="ruby-comment"># finalizer will point back to this board's publication</span>
@@ -2134,69 +2064,63 @@ in the form of</p>
   <span class="ruby-keyword">end</span>
 
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- remove_finalizer-source -->
-            
-          </div>
+          </div><!-- remove_finalizer-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- remove_finalizer-method -->
+
+    
+      <div id="method-i-repository" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">repository</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- remove_finalizer-method -->
-
-      
-        <div id="repository-method" class="method-detail ">
-          <a name="method-i-repository"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">repository</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="repository-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 997</span>
+          <div class="method-source-code" id="repository-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1005</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">repository</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- repository-source -->
-            
-          </div>
+          </div><!-- repository-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- repository-method -->
+
+    
+      <div id="method-i-send_to_finalizer" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">send_to_finalizer</span><span
+            class="method-args">(finalizer = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>finalizer is a user</p>
           
 
           
-        </div><!-- repository-method -->
-
-      
-        <div id="send_to_finalizer-method" class="method-detail ">
-          <a name="method-i-send_to_finalizer"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">send_to_finalizer</span><span
-              class="method-args">(finalizer = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>finalizer is a user</p>
-            
-
-            
-            <div class="method-source-code" id="send_to_finalizer-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 687</span>
+          <div class="method-source-code" id="send_to_finalizer-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 695</span>
   <span class="ruby-keyword">def</span> <span class="ruby-identifier">send_to_finalizer</span>(<span class="ruby-identifier">finalizer</span> = <span class="ruby-keyword">nil</span>)
     <span class="ruby-identifier">board_members</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">users</span>   
     <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">finalizer</span>
@@ -2215,36 +2139,33 @@ in the form of</p>
     <span class="ruby-identifier">finalizing_publication</span>.<span class="ruby-identifier">change_status</span>(<span class="ruby-string">'finalizing'</span>)
     <span class="ruby-identifier">finalizing_publication</span>.<span class="ruby-identifier">save!</span>
   <span class="ruby-keyword">end</span></pre>
-            </div><!-- send_to_finalizer-source -->
-            
-          </div>
+          </div><!-- send_to_finalizer-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- send_to_finalizer-method -->
+
+    
+      <div id="method-i-set_board_identifier_status" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_board_identifier_status</span><span
+            class="method-args">(status_in)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>needed to set the finalizer’s board identifier status</p>
           
 
           
-        </div><!-- send_to_finalizer-method -->
-
-      
-        <div id="set_board_identifier_status-method" class="method-detail ">
-          <a name="method-i-set_board_identifier_status"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">set_board_identifier_status</span><span
-              class="method-args">(status_in)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>needed to set the finalizer’s board identifier status</p>
-            
-
-            
-            <div class="method-source-code" id="set_board_identifier_status-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 408</span>
+          <div class="method-source-code" id="set_board_identifier_status-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 416</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_board_identifier_status</span>(<span class="ruby-identifier">status_in</span>)
     <span class="ruby-identifier">pub</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find_first_board_parent</span>
     <span class="ruby-keyword">if</span> <span class="ruby-identifier">pub</span>            
@@ -2257,36 +2178,33 @@ in the form of</p>
       
     <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- set_board_identifier_status-source -->
-            
-          </div>
+          </div><!-- set_board_identifier_status-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- set_board_identifier_status-method -->
+
+    
+      <div id="method-i-set_local_identifier_status" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_local_identifier_status</span><span
+            class="method-args">(status_in)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- set_board_identifier_status-method -->
-
-      
-        <div id="set_local_identifier_status-method" class="method-detail ">
-          <a name="method-i-set_local_identifier_status"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">set_local_identifier_status</span><span
-              class="method-args">(status_in)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="set_local_identifier_status-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 387</span>
+          <div class="method-source-code" id="set_local_identifier_status-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 395</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_local_identifier_status</span>(<span class="ruby-identifier">status_in</span>)   
 
     <span class="ruby-identifier">board</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find_first_board</span>
@@ -2301,71 +2219,65 @@ in the form of</p>
       
     <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- set_local_identifier_status-source -->
-            
-          </div>
+          </div><!-- set_local_identifier_status-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- set_local_identifier_status-method -->
+
+    
+      <div id="method-i-set_origin_and_local_identifier_status" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_origin_and_local_identifier_status</span><span
+            class="method-args">(status_in)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- set_local_identifier_status-method -->
-
-      
-        <div id="set_origin_and_local_identifier_status-method" class="method-detail ">
-          <a name="method-i-set_origin_and_local_identifier_status"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">set_origin_and_local_identifier_status</span><span
-              class="method-args">(status_in)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="set_origin_and_local_identifier_status-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 402</span>
+          <div class="method-source-code" id="set_origin_and_local_identifier_status-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 410</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_origin_and_local_identifier_status</span>(<span class="ruby-identifier">status_in</span>)
   <span class="ruby-identifier">set_origin_identifier_status</span>(<span class="ruby-identifier">status_in</span>)          
   <span class="ruby-identifier">set_local_identifier_status</span>(<span class="ruby-identifier">status_in</span>)          
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- set_origin_and_local_identifier_status-source -->
-            
-          </div>
-
+          </div><!-- set_origin_and_local_identifier_status-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- set_origin_and_local_identifier_status-method -->
+
+    
+      <div id="method-i-set_origin_identifier_status" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_origin_identifier_status</span><span
+            class="method-args">(status_in)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- set_origin_and_local_identifier_status-method -->
-
-      
-        <div id="set_origin_identifier_status-method" class="method-detail ">
-          <a name="method-i-set_origin_identifier_status"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">set_origin_identifier_status</span><span
-              class="method-args">(status_in)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>sets the origin status for publication identifiers that the publication’s
+          <p>sets the origin status for publication identifiers that the publication’s
 board controls</p>
-            
+          
 
-            
-            <div class="method-source-code" id="set_origin_identifier_status-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 371</span>
+          
+          <div class="method-source-code" id="set_origin_identifier_status-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 379</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_origin_identifier_status</span>(<span class="ruby-identifier">status_in</span>)
     <span class="ruby-comment">#finalizer is a user so they dont have a board, must go up until we find a board</span>
     
@@ -2381,103 +2293,94 @@ board controls</p>
       
     <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- set_origin_identifier_status-source -->
-            
-          </div>
+          </div><!-- set_origin_identifier_status-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- set_origin_identifier_status-method -->
+
+    
+      <div id="method-i-submission_reason" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">submission_reason</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- set_origin_identifier_status-method -->
-
-      
-        <div id="submission_reason-method" class="method-detail ">
-          <a name="method-i-submission_reason"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">submission_reason</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="submission_reason-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 892</span>
+          <div class="method-source-code" id="submission_reason-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 900</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">submission_reason</span>
   <span class="ruby-identifier">reason</span> = <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">find_by_publication_id</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">id</span>,
     <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;reason = 'submit'&quot;</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- submission_reason-source -->
-            
-          </div>
+          </div><!-- submission_reason-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- submission_reason-method -->
+
+    
+      <div id="method-i-submit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">submit</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- submission_reason-method -->
-
-      
-        <div id="submit-method" class="method-detail ">
-          <a name="method-i-submit"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">submit</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="submit-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 320</span>
+          <div class="method-source-code" id="submit-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 320</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">submit</span>
   <span class="ruby-identifier">submit_to_next_board</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- submit-source -->
-            
-          </div>
+          </div><!-- submit-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- submit-method -->
+
+    
+      <div id="method-i-submit_identifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">submit_identifier</span><span
+            class="method-args">(identifier)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>nolonger in use 2-22-2010</p>
           
 
           
-        </div><!-- submit-method -->
-
-      
-        <div id="submit_identifier-method" class="method-detail ">
-          <a name="method-i-submit_identifier"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">submit_identifier</span><span
-              class="method-args">(identifier)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>nolonger in use 2-22-2010</p>
-            
-
-            
-            <div class="method-source-code" id="submit_identifier-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 273</span>
+          <div class="method-source-code" id="submit_identifier-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 273</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">submit_identifier</span>(<span class="ruby-identifier">identifier</span>)
   
   <span class="ruby-ivar">@recent_submit_sha</span> = <span class="ruby-string">&quot;&quot;</span>;
@@ -2524,36 +2427,33 @@ board controls</p>
   <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-comment">#no board exists for this identifier class</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- submit_identifier-source -->
-            
-          </div>
+          </div><!-- submit_identifier-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- submit_identifier-method -->
+
+    
+      <div id="method-i-submit_to_next_board" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">submit_to_next_board</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- submit_identifier-method -->
-
-      
-        <div id="submit_to_next_board-method" class="method-detail ">
-          <a name="method-i-submit_to_next_board"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">submit_to_next_board</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="submit_to_next_board-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 169</span>
+          <div class="method-source-code" id="submit_to_next_board-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 169</span>
   <span class="ruby-keyword">def</span> <span class="ruby-identifier">submit_to_next_board</span>
 
     <span class="ruby-comment">#note: all @recent_submit_sha conde here added because it was here before, not sure if this is still needed</span>
@@ -2651,36 +2551,33 @@ board controls</p>
     <span class="ruby-comment">#TODO need to return something here to prevent flash error from showing true?</span>
     <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">end</span></pre>
-            </div><!-- submit_to_next_board-source -->
-            
-          </div>
+          </div><!-- submit_to_next_board-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- submit_to_next_board-method -->
+
+    
+      <div id="method-i-tally_votes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">tally_votes</span><span
+            class="method-args">(user_votes = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- submit_to_next_board-method -->
-
-      
-        <div id="tally_votes-method" class="method-detail ">
-          <a name="method-i-tally_votes"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">tally_votes</span><span
-              class="method-args">(user_votes = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="tally_votes-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 475</span>
+          <div class="method-source-code" id="tally_votes-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 483</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">tally_votes</span>(<span class="ruby-identifier">user_votes</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">user_votes</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">votes</span> <span class="ruby-comment">#use the publication's votes</span>
   <span class="ruby-comment">#here is where the action is for deciding how votes are organized and what happens for vote results</span>
@@ -2778,36 +2675,33 @@ board controls</p>
   
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">decree_action</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- tally_votes-source -->
-            
-          </div>
+          </div><!-- tally_votes-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- tally_votes-method -->
+
+    
+      <div id="method-i-user_has_voted-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">user_has_voted?</span><span
+            class="method-args">(user_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- tally_votes-method -->
-
-      
-        <div id="user_has_voted-3F-method" class="method-detail ">
-          <a name="method-i-user_has_voted-3F"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">user_has_voted?</span><span
-              class="method-args">(user_id)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="user_has_voted-3F-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 462</span>
+          <div class="method-source-code" id="user_has_voted-3F-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 470</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">user_has_voted?</span>(<span class="ruby-identifier">user_id</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">votes</span>
     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">votes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">vote</span><span class="ruby-operator">|</span>
@@ -2819,36 +2713,33 @@ board controls</p>
   <span class="ruby-comment">#no vote found</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- user_has_voted-3F-source -->
-            
-          </div>
+          </div><!-- user_has_voted-3F-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- user_has_voted-3F-method -->
+
+    
+      <div id="method-i-withdraw" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">withdraw</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- user_has_voted-3F-method -->
-
-      
-        <div id="withdraw-method" class="method-detail ">
-          <a name="method-i-withdraw"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">withdraw</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="withdraw-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 915</span>
+          <div class="method-source-code" id="withdraw-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 923</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">withdraw</span>
   <span class="ruby-identifier">original_origin</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">origin</span>
   <span class="ruby-keyword">if</span>(<span class="ruby-identifier">original_origin</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">self</span>)
@@ -2865,101 +2756,92 @@ board controls</p>
     <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- withdraw-source -->
-            
-          </div>
-
+          </div><!-- withdraw-source -->
           
+        </div>
 
-          
-        </div><!-- withdraw-method -->
+        
 
-      
-      </div><!-- public-instance-method-details -->
+        
+      </div><!-- withdraw-method -->
+
     
-      <div id="protected-instance-method-details" class="method-section section">
-        <h3 class="section-header">Protected Instance Methods</h3>
+    </section><!-- public-instance-method-details -->
+  
+     <section id="protected-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Protected Instance Methods</h3>
 
-      
-        <div id="identifier_to_ref-method" class="method-detail ">
-          <a name="method-i-identifier_to_ref"></a>
+    
+      <div id="method-i-identifier_to_ref" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">identifier_to_ref</span><span
+            class="method-args">(str)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns identifier string in form acceptable to  “.git/refs/”</p>
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">identifier_to_ref</span><span
-              class="method-args">(str)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Returns identifier string in form acceptable to  “.git/refs/”</p>
-            
-
-            
-            <div class="method-source-code" id="identifier_to_ref-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 1117</span>
+          <div class="method-source-code" id="identifier_to_ref-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1125</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">identifier_to_ref</span>(<span class="ruby-identifier">str</span>)
   <span class="ruby-identifier">str</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-string">':;'</span>,<span class="ruby-string">'_'</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- identifier_to_ref-source -->
-            
-          </div>
+          </div><!-- identifier_to_ref-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- identifier_to_ref-method -->
+
+    
+      <div id="method-i-title_to_ref" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">title_to_ref</span><span
+            class="method-args">(str)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns title string in form acceptable to  “.git/refs/”</p>
           
 
           
-        </div><!-- identifier_to_ref-method -->
-
-      
-        <div id="title_to_ref-method" class="method-detail ">
-          <a name="method-i-title_to_ref"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">title_to_ref</span><span
-              class="method-args">(str)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Returns title string in form acceptable to  “.git/refs/”</p>
-            
-
-            
-            <div class="method-source-code" id="title_to_ref-source">
-<pre>
-<span class="ruby-comment"># File app/models/publication.rb, line 1112</span>
+          <div class="method-source-code" id="title_to_ref-source">
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1120</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">title_to_ref</span>(<span class="ruby-identifier">str</span>)
   <span class="ruby-identifier">str</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-string">' '</span>,<span class="ruby-string">'_'</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- title_to_ref-source -->
-            
-          </div>
-
+          </div><!-- title_to_ref-source -->
           
+        </div>
 
-          
-        </div><!-- title_to_ref-method -->
+        
 
-      
-      </div><!-- protected-instance-method-details -->
+        
+      </div><!-- title_to_ref-method -->
+
     
-    </div><!-- 5Buntitled-5D -->
+    </section><!-- protected-instance-method-details -->
   
+  </section><!-- 5Buntitled-5D -->
 
-  </div><!-- documentation -->
+</div><!-- documentation -->
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
 
-</body>
-</html>
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 

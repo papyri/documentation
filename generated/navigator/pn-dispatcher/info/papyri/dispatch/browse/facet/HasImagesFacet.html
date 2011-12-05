@@ -101,15 +101,6 @@ Class HasImagesFacet</H2>
 </PRE>
 
 <P>
-<code>BooleanFacet</code> regarding whether or not images are associated with a 
- record.
-<P>
-
-<P>
-<DL>
-<DT><B>Author:</B></DT>
-  <DD>thill</DD>
-</DL>
 <HR>
 
 <P>
@@ -188,6 +179,15 @@ Class HasImagesFacet</H2>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/HasImagesFacet.html#getDisplayName(java.lang.String, java.lang.String)">getDisplayName</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;facetParam,
+               <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;facetValue)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A></CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/HasImagesFacet.html#getDisplayValue(java.lang.String)">getDisplayValue</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</CODE>
 
 <BR>
@@ -197,6 +197,14 @@ Class HasImagesFacet</H2>
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&gt;</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/HasImagesFacet.html#getFacetConstraints(java.lang.String)">getFacetConstraints</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;facetParam)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/HasImagesFacet.html#getFormNames()">getFormNames</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -224,7 +232,7 @@ Class HasImagesFacet</H2>
 <TH ALIGN="left"><B>Methods inherited from class info.papyri.dispatch.browse.facet.<A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayName(java.lang.String)">getDisplayName</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFacetField()">getFacetField</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFormNames()">getFormNames</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getCSSSelectorID()">getCSSSelectorID</A>, <A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFacetField()">getFacetField</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -293,7 +301,7 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 </DD>
 <DD><DL>
 
-<DT><B>Returns:</B><DD>A string representation of the requisite HTML<DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html#assembleWidgetHTML(java.util.ArrayList, java.lang.StringBuilder, java.util.Map)"><CODE>FacetBrowser.assembleWidgetHTML(java.util.ArrayList, java.lang.StringBuilder, java.util.Map)</CODE></A></DL>
+<DT><B>Returns:</B><DD>A string representation of the requisite HTML<DT><B>See Also:</B><DD><CODE>FacetBrowser#assembleWidgetHTML(java.util.ArrayList, java.lang.StringBuilder, java.util.Map)</CODE></DL>
 </DD>
 </DL>
 <HR>
@@ -312,7 +320,7 @@ public org.apache.solr.client.solrj.SolrQuery <B>buildQueryContribution</B>(org.
 </DD>
 <DD><DL>
 
-<DT><B>Returns:</B><DD>The passed solrQuery, modified<DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html#buildFacetQuery(int, java.util.ArrayList)"><CODE>FacetBrowser.buildFacetQuery(int, java.util.ArrayList)</CODE></A></DL>
+<DT><B>Returns:</B><DD>The passed solrQuery, modified<DT><B>See Also:</B><DD><CODE>FacetBrowser#buildFacetQuery(int, java.util.ArrayList)</CODE></DL>
 </DD>
 </DL>
 <HR>
@@ -352,8 +360,8 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 </DD>
 <DD><DL>
 
-<DT><B>Returns:</B><DD>A querystring representing a <code>Facet</code>s constraints.<DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html#doPagination(java.util.ArrayList, long)"><CODE>FacetBrowser.doPagination(java.util.ArrayList, long)</CODE></A>, 
-<A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html#buildFullQueryString(java.util.ArrayList)"><CODE>FacetBrowser.buildFullQueryString(java.util.ArrayList)</CODE></A></DL>
+<DT><B>Returns:</B><DD>A querystring representing a <code>Facet</code>s constraints.<DT><B>See Also:</B><DD><CODE>FacetBrowser#doPagination(java.util.ArrayList, long)</CODE>, 
+<CODE>FacetBrowser#buildFullQueryString(java.util.ArrayList)</CODE></DL>
 </DD>
 </DL>
 <HR>
@@ -371,6 +379,20 @@ public void <B>setWidgetValues</B>(org.apache.solr.client.solrj.response.QueryRe
 </DD>
 <DD><DL>
 <DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html#populateFacets(java.util.ArrayList, org.apache.solr.client.solrj.response.QueryResponse)"><CODE>FacetBrowser.populateFacets(java.util.ArrayList, org.apache.solr.client.solrj.response.QueryResponse)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFormNames()"><!-- --></A><H3>
+getFormNames</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[] <B>getFormNames</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFormNames()">getFormNames</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
 </DD>
 </DL>
 <HR>
@@ -394,7 +416,7 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.ht
 <DD><DL>
 
 <DT><B>Returns:</B><DD>A querystring representing the <code>Facet</code>'s constraints, excluding the
- value passed as a <code>String</code>.<DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/browse/facet/FacetBrowser.html#assemblePreviousValuesHTML(java.util.ArrayList, java.lang.StringBuilder, java.util.Map)"><CODE>FacetBrowser.assemblePreviousValuesHTML(java.util.ArrayList, java.lang.StringBuilder, java.util.Map)</CODE></A></DL>
+ value passed as a <code>String</code>.<DT><B>See Also:</B><DD><CODE>FacetBrowser#assemblePreviousValuesHTML(java.util.ArrayList, java.lang.StringBuilder, java.util.Map)</CODE></DL>
 </DD>
 </DL>
 <HR>
@@ -406,6 +428,21 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/ArrayList
 <DL>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFacetConstraints(java.lang.String)">getFacetConstraints</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDisplayName(java.lang.String, java.lang.String)"><!-- --></A><H3>
+getDisplayName</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getDisplayName</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;facetParam,
+                             <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;facetValue)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayName(java.lang.String, java.lang.String)">getDisplayName</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
 </DD>
 <DD><DL>
 </DL>

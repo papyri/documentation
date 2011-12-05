@@ -2,17 +2,27 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: RXSugar::JRubyHelper::XSugarStandalone</title>
-<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: RXSugar::JRubyHelper::XSugarStandalone
+  
+    &mdash; Documentation by YARD 0.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -78,6 +91,8 @@
   
 </dl>
 <div class="clear"></div>
+
+
 
 
 
@@ -170,39 +185,39 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/jruby_helper.rb', line 42</span>
 
-<span class='def def kw'>def</span> <span class='transform_request identifier id'>transform_request</span><span class='lparen token'>(</span><span class='url identifier id'>url</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='comma token'>,</span> <span class='retry_time identifier id'>retry_time</span> <span class='assign token'>=</span> <span class='integer val'>0</span><span class='integer val'>.00005</span><span class='rparen token'>)</span>
-  <span class='begin begin kw'>begin</span>
-    <span class='resp identifier id'>resp</span> <span class='assign token'>=</span> <span class='Net constant id'>Net</span><span class='colon2 op'>::</span><span class='HTTP constant id'>HTTP</span><span class='dot token'>.</span><span class='post_form identifier id'>post_form</span><span class='lparen token'>(</span><span class='URI constant id'>URI</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='url identifier id'>url</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
-    <span class='if if kw'>if</span> <span class='resp identifier id'>resp</span><span class='dot token'>.</span><span class='code identifier id'>code</span> <span class='eq op'>==</span> <span class='string val'>'502'</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_transform_request identifier id'>transform_request</span><span class='lparen token'>(</span><span class='rubyid_url identifier id'>url</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='comma token'>,</span> <span class='rubyid_retry_time identifier id'>retry_time</span> <span class='assign token'>=</span> <span class='integer val'>0</span><span class='integer val'>.00005</span><span class='rparen token'>)</span>
+  <span class='rubyid_begin begin kw'>begin</span>
+    <span class='rubyid_resp identifier id'>resp</span> <span class='assign token'>=</span> <span class='rubyid_Net constant id'>Net</span><span class='colon2 op'>::</span><span class='rubyid_HTTP constant id'>HTTP</span><span class='dot token'>.</span><span class='rubyid_post_form identifier id'>post_form</span><span class='lparen token'>(</span><span class='rubyid_URI constant id'>URI</span><span class='dot token'>.</span><span class='rubyid_parse identifier id'>parse</span><span class='lparen token'>(</span><span class='rubyid_url identifier id'>url</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='rparen token'>)</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_resp identifier id'>resp</span><span class='dot token'>.</span><span class='rubyid_code identifier id'>code</span> <span class='eq op'>==</span> <span class='string val'>'502'</span>
       <span class='comment val'># Apache proxy error, retry</span>
-      <span class='sleep identifier id'>sleep</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='retry_time identifier id'>retry_time</span><span class='comma token'>,</span> <span class='float val'>1.0</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='min identifier id'>min</span><span class='rparen token'>)</span>
-      <span class='return return kw'>return</span> <span class='transform_request identifier id'>transform_request</span><span class='lparen token'>(</span><span class='url identifier id'>url</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='comma token'>,</span> <span class='retry_time identifier id'>retry_time</span> <span class='mult op'>*</span> <span class='integer val'>2</span><span class='rparen token'>)</span>
-    <span class='elsif elsif kw'>elsif</span> <span class='resp identifier id'>resp</span><span class='dot token'>.</span><span class='code identifier id'>code</span> <span class='neq op'>!=</span> <span class='string val'>'200'</span>
+      <span class='rubyid_sleep identifier id'>sleep</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='rubyid_retry_time identifier id'>retry_time</span><span class='comma token'>,</span> <span class='float val'>1.0</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_min identifier id'>min</span><span class='rparen token'>)</span>
+      <span class='rubyid_return return kw'>return</span> <span class='rubyid_transform_request identifier id'>transform_request</span><span class='lparen token'>(</span><span class='rubyid_url identifier id'>url</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='comma token'>,</span> <span class='rubyid_retry_time identifier id'>retry_time</span> <span class='mult op'>*</span> <span class='integer val'>2</span><span class='rparen token'>)</span>
+    <span class='rubyid_elsif elsif kw'>elsif</span> <span class='rubyid_resp identifier id'>resp</span><span class='dot token'>.</span><span class='rubyid_code identifier id'>code</span> <span class='neq op'>!=</span> <span class='string val'>'200'</span>
       <span class='comment val'># Unexpected error, report</span>
-      <span class='error_type identifier id'>error_type</span> <span class='assign token'>=</span> <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:direction</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'nonxml2xml'</span> <span class='question op'>?</span> <span class='NonXMLParseError constant id'>NonXMLParseError</span> <span class='colon op'>:</span> <span class='XMLParseError constant id'>XMLParseError</span>
-      <span class='raise identifier id'>raise</span> <span class='error_type identifier id'>error_type</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:content</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='dstring node'>&quot;Error performing transform. Response code from web service: Error #{resp.code}. Response body: #{resp.body}&quot;</span>
-    <span class='end end kw'>end</span>
+      <span class='rubyid_error_type identifier id'>error_type</span> <span class='assign token'>=</span> <span class='rubyid_params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:direction</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'nonxml2xml'</span> <span class='question op'>?</span> <span class='rubyid_NonXMLParseError constant id'>NonXMLParseError</span> <span class='colon op'>:</span> <span class='rubyid_XMLParseError constant id'>XMLParseError</span>
+      <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_error_type identifier id'>error_type</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='rubyid_params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:content</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='dstring node'>&quot;Error performing transform. Response code from web service: Error #{resp.code}. Response body: #{resp.body}&quot;</span>
+    <span class='rubyid_end end kw'>end</span>
    
-    <span class='parsed_resp identifier id'>parsed_resp</span> <span class='assign token'>=</span> <span class='JSON constant id'>JSON</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='resp identifier id'>resp</span><span class='dot token'>.</span><span class='body identifier id'>body</span><span class='rparen token'>)</span>
+    <span class='rubyid_parsed_resp identifier id'>parsed_resp</span> <span class='assign token'>=</span> <span class='rubyid_JSON constant id'>JSON</span><span class='dot token'>.</span><span class='rubyid_parse identifier id'>parse</span><span class='lparen token'>(</span><span class='rubyid_resp identifier id'>resp</span><span class='dot token'>.</span><span class='rubyid_body identifier id'>body</span><span class='rparen token'>)</span>
     
-    <span class='if if kw'>if</span> <span class='parsed_resp identifier id'>parsed_resp</span><span class='dot token'>.</span><span class='has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='string val'>&quot;exception&quot;</span><span class='rparen token'>)</span>
-      <span class='error_type identifier id'>error_type</span> <span class='assign token'>=</span> <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:direction</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'nonxml2xml'</span> <span class='question op'>?</span> <span class='NonXMLParseError constant id'>NonXMLParseError</span> <span class='colon op'>:</span> <span class='XMLParseError constant id'>XMLParseError</span>
-      <span class='raise identifier id'>raise</span> <span class='error_type identifier id'>error_type</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span>
-        <span class='parsed_resp identifier id'>parsed_resp</span><span class='lbrack token'>[</span><span class='string val'>&quot;exception&quot;</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>&quot;line&quot;</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='parsed_resp identifier id'>parsed_resp</span><span class='lbrack token'>[</span><span class='string val'>&quot;exception&quot;</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>&quot;column&quot;</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:content</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='comma token'>,</span>
-        <span class='parsed_resp identifier id'>parsed_resp</span><span class='lbrack token'>[</span><span class='string val'>&quot;exception&quot;</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>&quot;cause&quot;</span><span class='rbrack token'>]</span>
-    <span class='else else kw'>else</span>
-      <span class='return return kw'>return</span> <span class='parsed_resp identifier id'>parsed_resp</span><span class='lbrack token'>[</span><span class='string val'>&quot;content&quot;</span><span class='rbrack token'>]</span>
-    <span class='end end kw'>end</span>
-  <span class='rescue rescue kw'>rescue</span> <span class='Errno constant id'>Errno</span><span class='colon2 op'>::</span><span class='ECONNREFUSED constant id'>ECONNREFUSED</span><span class='comma token'>,</span> <span class='EOFError constant id'>EOFError</span><span class='comma token'>,</span> <span class='Timeout constant id'>Timeout</span><span class='colon2 op'>::</span><span class='Error constant id'>Error</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_parsed_resp identifier id'>parsed_resp</span><span class='dot token'>.</span><span class='rubyid_has_key? fid id'>has_key?</span><span class='lparen token'>(</span><span class='string val'>&quot;exception&quot;</span><span class='rparen token'>)</span>
+      <span class='rubyid_error_type identifier id'>error_type</span> <span class='assign token'>=</span> <span class='rubyid_params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:direction</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'nonxml2xml'</span> <span class='question op'>?</span> <span class='rubyid_NonXMLParseError constant id'>NonXMLParseError</span> <span class='colon op'>:</span> <span class='rubyid_XMLParseError constant id'>XMLParseError</span>
+      <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_error_type identifier id'>error_type</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span>
+        <span class='rubyid_parsed_resp identifier id'>parsed_resp</span><span class='lbrack token'>[</span><span class='string val'>&quot;exception&quot;</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>&quot;line&quot;</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_parsed_resp identifier id'>parsed_resp</span><span class='lbrack token'>[</span><span class='string val'>&quot;exception&quot;</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>&quot;column&quot;</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:content</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='comma token'>,</span>
+        <span class='rubyid_parsed_resp identifier id'>parsed_resp</span><span class='lbrack token'>[</span><span class='string val'>&quot;exception&quot;</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='string val'>&quot;cause&quot;</span><span class='rbrack token'>]</span>
+    <span class='rubyid_else else kw'>else</span>
+      <span class='rubyid_return return kw'>return</span> <span class='rubyid_parsed_resp identifier id'>parsed_resp</span><span class='lbrack token'>[</span><span class='string val'>&quot;content&quot;</span><span class='rbrack token'>]</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_Errno constant id'>Errno</span><span class='colon2 op'>::</span><span class='rubyid_ECONNREFUSED constant id'>ECONNREFUSED</span><span class='comma token'>,</span> <span class='rubyid_EOFError constant id'>EOFError</span><span class='comma token'>,</span> <span class='rubyid_Timeout constant id'>Timeout</span><span class='colon2 op'>::</span><span class='rubyid_Error constant id'>Error</span>
     <span class='comment val'># retry after exponential backoff</span>
-    <span class='sleep identifier id'>sleep</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='retry_time identifier id'>retry_time</span><span class='comma token'>,</span> <span class='float val'>1.0</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='min identifier id'>min</span><span class='rparen token'>)</span>
-    <span class='return return kw'>return</span> <span class='transform_request identifier id'>transform_request</span><span class='lparen token'>(</span><span class='url identifier id'>url</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='comma token'>,</span> <span class='retry_time identifier id'>retry_time</span> <span class='mult op'>*</span> <span class='integer val'>2</span><span class='rparen token'>)</span>
-  <span class='rescue rescue kw'>rescue</span> <span class='JSON constant id'>JSON</span><span class='colon2 op'>::</span><span class='ParserError constant id'>ParserError</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='e identifier id'>e</span>
+    <span class='rubyid_sleep identifier id'>sleep</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='rubyid_retry_time identifier id'>retry_time</span><span class='comma token'>,</span> <span class='float val'>1.0</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_min identifier id'>min</span><span class='rparen token'>)</span>
+    <span class='rubyid_return return kw'>return</span> <span class='rubyid_transform_request identifier id'>transform_request</span><span class='lparen token'>(</span><span class='rubyid_url identifier id'>url</span><span class='comma token'>,</span> <span class='rubyid_params identifier id'>params</span><span class='comma token'>,</span> <span class='rubyid_retry_time identifier id'>retry_time</span> <span class='mult op'>*</span> <span class='integer val'>2</span><span class='rparen token'>)</span>
+  <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_JSON constant id'>JSON</span><span class='colon2 op'>::</span><span class='rubyid_ParserError constant id'>ParserError</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
     <span class='comment val'># JSON parser error, received malformed JSON (e.g. mangled Unicode)</span>
-    <span class='error_type identifier id'>error_type</span> <span class='assign token'>=</span> <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:direction</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'nonxml2xml'</span> <span class='question op'>?</span> <span class='NonXMLParseError constant id'>NonXMLParseError</span> <span class='colon op'>:</span> <span class='XMLParseError constant id'>XMLParseError</span>
-    <span class='raise identifier id'>raise</span> <span class='error_type identifier id'>error_type</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:content</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='dstring node'>&quot;Error performing transform. JSON parser error: #{e.message}&quot;</span>
-  <span class='end end kw'>end</span>
-<span class='end end kw'>end</span>
+    <span class='rubyid_error_type identifier id'>error_type</span> <span class='assign token'>=</span> <span class='rubyid_params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:direction</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='string val'>'nonxml2xml'</span> <span class='question op'>?</span> <span class='rubyid_NonXMLParseError constant id'>NonXMLParseError</span> <span class='colon op'>:</span> <span class='rubyid_XMLParseError constant id'>XMLParseError</span>
+    <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_error_type identifier id'>error_type</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='rubyid_params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:content</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='dstring node'>&quot;Error performing transform. JSON parser error: #{e.message}&quot;</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>

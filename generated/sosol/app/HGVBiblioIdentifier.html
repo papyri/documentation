@@ -1,568 +1,546 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-  <title>Class: HGVBiblioIdentifier</title>
+<title>Class: HGVBiblioIdentifier</title>
 
-  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
-  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
 
-</head>
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
 <body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="./index.html">Home</a>
-          <a href="./index.html#classes">Classes</a>
-          <a href="./index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="./app/models/hgv_biblio_identifier_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="app/models/hgv_biblio_identifier.rb">app/models/hgv_biblio_identifier.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-      
-    </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-    <div id="class-metadata">
-      
-      <!-- Parent Class -->
-      <div id="parent-class-section" class="section">
-        <h3 class="section-header">Parent</h3>
-        
-        <p class="link"><a href="HGVMetaIdentifier.html">HGVMetaIdentifier</a></p>
-        
-      </div>
-      
 
-      
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/hgv_biblio_identifier.rb
+  </ul>
+</nav>
 
-      
-
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-c-find">::find</a></li>
-          
-          <li><a href="#method-c-find_by_publication_id">::find_by_publication_id</a></li>
-          
-          <li><a href="#method-i-after_initialize">#after_initialize</a></li>
-          
-          <li><a href="#method-i-contains_plain_bibl_tags-3F">#contains_plain_bibl_tags?</a></li>
-          
-          <li><a href="#method-i-extract_value">#extract_value</a></li>
-          
-          <li><a href="#method-i-generate_empty_template">#generate_empty_template</a></li>
-          
-          <li><a href="#method-i-generate_empty_template_secondary">#generate_empty_template_secondary</a></li>
-          
-          <li><a href="#method-i-get_epidoc_attributes">#get_epidoc_attributes</a></li>
-          
-          <li><a href="#method-i-prune">#prune</a></li>
-          
-          <li><a href="#method-i-retrieve_bibliographical_data">#retrieve_bibliographical_data</a></li>
-          
-          <li><a href="#method-i-retrieve_plain_bibl_tags">#retrieve_plain_bibl_tags</a></li>
-          
-          <li><a href="#method-i-retrieve_structured_bibliographical_data">#retrieve_structured_bibliographical_data</a></li>
-          
-          <li><a href="#method-i-set_epidoc">#set_epidoc</a></li>
-          
-          <li><a href="#method-i-store_bibliographical_data">#store_bibliographical_data</a></li>
-          
-          <li><a href="#method-i-xpath">#xpath</a></li>
-          
-          <li><a href="#method-i-xpath_base">#xpath_base</a></li>
-          
-          <li><a href="#method-i-xpath_root">#xpath_root</a></li>
-          
-          <li><a href="#method-i-xpath_tip">#xpath_tip</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="./images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="./Papyrillio.html">Papyrillio</a></li>
-        
-          <li><a href="./Papyrillio/Aggregator.html">Papyrillio::Aggregator</a></li>
-        
-          <li><a href="./Papyrillio/Collector.html">Papyrillio::Collector</a></li>
-        
-          <li><a href="./Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a></li>
-        
-          <li><a href="./Papyrillio/Decorator.html">Papyrillio::Decorator</a></li>
-        
-          <li><a href="./Papyrillio/Organiser.html">Papyrillio::Organiser</a></li>
-        
-          <li><a href="./Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a></li>
-        
-          <li><a href="./Papyrillio/Printer.html">Papyrillio::Printer</a></li>
-        
-          <li><a href="./Papyrillio/Publishee.html">Papyrillio::Publishee</a></li>
-        
-          <li><a href="./Papyrillio/Publisher.html">Papyrillio::Publisher</a></li>
-        
-          <li><a href="./Papyrillio/Transformer.html">Papyrillio::Transformer</a></li>
-        
-          <li><a href="./JRubyXML.html">JRubyXML</a></li>
-        
-          <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a></li>
-        
-          <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a></li>
-        
-          <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a></li>
-        
-          <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a></li>
-        
-          <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a></li>
-        
-          <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a></li>
-        
-          <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a></li>
-        
-          <li><a href="./REXML.html">REXML</a></li>
-        
-          <li><a href="./REXML/Document.html">REXML::Document</a></li>
-        
-          <li><a href="./REXML/Element.html">REXML::Element</a></li>
-        
-          <li><a href="./REXML/XPath.html">REXML::XPath</a></li>
-        
-          <li><a href="./Rpx.html">Rpx</a></li>
-        
-          <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a></li>
-        
-          <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a></li>
-        
-          <li><a href="./Comment.html">Comment</a></li>
-        
-          <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a></li>
-        
-          <li><a href="./Doco.html">Doco</a></li>
-        
-          <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a></li>
-        
-          <li><a href="./Grit.html">Grit</a></li>
-        
-          <li><a href="./Grit/Commit.html">Grit::Commit</a></li>
-        
-          <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a></li>
-        
-          <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
-        
-          <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a></li>
-        
-          <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a></li>
-        
-          <li><a href="./NumbersRDF.html">NumbersRDF</a></li>
-        
-          <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a></li>
-        
-          <li><a href="./AjaxProxyController.html">AjaxProxyController</a></li>
-        
-          <li><a href="./ApplicationController.html">ApplicationController</a></li>
-        
-          <li><a href="./ApplicationHelper.html">ApplicationHelper</a></li>
-        
-          <li><a href="./Board.html">Board</a></li>
-        
-          <li><a href="./BoardsController.html">BoardsController</a></li>
-        
-          <li><a href="./CommentsController.html">CommentsController</a></li>
-        
-          <li><a href="./DDBIdentifier.html">DDBIdentifier</a></li>
-        
-          <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a></li>
-        
-          <li><a href="./Decree.html">Decree</a></li>
-        
-          <li><a href="./DecreesController.html">DecreesController</a></li>
-        
-          <li><a href="./DocosController.html">DocosController</a></li>
-        
-          <li><a href="./DocovideosController.html">DocovideosController</a></li>
-        
-          <li><a href="./Emailer.html">Emailer</a></li>
-        
-          <li><a href="./EmailerMailer.html">EmailerMailer</a></li>
-        
-          <li><a href="./EmailersController.html">EmailersController</a></li>
-        
-          <li><a href="./Event.html">Event</a></li>
-        
-          <li><a href="./EventsController.html">EventsController</a></li>
-        
-          <li><a href="./GitConf.html">GitConf</a></li>
-        
-          <li><a href="./HGVBiblioIdentifier.html">HGVBiblioIdentifier</a></li>
-        
-          <li><a href="./HGVIdentifier.html">HGVIdentifier</a></li>
-        
-          <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a></li>
-        
-          <li><a href="./HelperController.html">HelperController</a></li>
-        
-          <li><a href="./HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a></li>
-        
-          <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></li>
-        
-          <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a></li>
-        
-          <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a></li>
-        
-          <li><a href="./Identifier.html">Identifier</a></li>
-        
-          <li><a href="./IdentifiersController.html">IdentifiersController</a></li>
-        
-          <li><a href="./Integer.html">Integer</a></li>
-        
-          <li><a href="./Leiden.html">Leiden</a></li>
-        
-          <li><a href="./LeidenController.html">LeidenController</a></li>
-        
-          <li><a href="./LinkingInfo.html">LinkingInfo</a></li>
-        
-          <li><a href="./MaintenanceMode.html">MaintenanceMode</a></li>
-        
-          <li><a href="./Object.html">Object</a></li>
-        
-          <li><a href="./Publication.html">Publication</a></li>
-        
-          <li><a href="./PublicationsController.html">PublicationsController</a></li>
-        
-          <li><a href="./Rails.html">Rails</a></li>
-        
-          <li><a href="./RepositoriesController.html">RepositoriesController</a></li>
-        
-          <li><a href="./Repository.html">Repository</a></li>
-        
-          <li><a href="./RpxController.html">RpxController</a></li>
-        
-          <li><a href="./TranslationHelperController.html">TranslationHelperController</a></li>
-        
-          <li><a href="./TranslationLeiden.html">TranslationLeiden</a></li>
-        
-          <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a></li>
-        
-          <li><a href="./User.html">User</a></li>
-        
-          <li><a href="./UserController.html">UserController</a></li>
-        
-          <li><a href="./UserIdentifier.html">UserIdentifier</a></li>
-        
-          <li><a href="./Vote.html">Vote</a></li>
-        
-          <li><a href="./VotesController.html">VotesController</a></li>
-        
-          <li><a href="./WelcomeController.html">WelcomeController</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
+    
   </div>
 
-  <div id="documentation">
-    <h1 class="class">HGVBiblioIdentifier</h1>
-
-    <div id="description" class="description">
-      
-    </div><!-- description -->
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+</nav>
 
     
-    
-    
-    <div id="5Buntitled-5D" class="documentation-section">
-      
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
 
-      
+  <ul class="link-list">
+    
+    <li><a href="#method-c-find">::find</a>
+    
+    <li><a href="#method-c-find_by_publication_id">::find_by_publication_id</a>
+    
+    <li><a href="#method-i-after_initialize">#after_initialize</a>
+    
+    <li><a href="#method-i-contains_plain_bibl_tags-3F">#contains_plain_bibl_tags?</a>
+    
+    <li><a href="#method-i-extract_value">#extract_value</a>
+    
+    <li><a href="#method-i-generate_empty_template">#generate_empty_template</a>
+    
+    <li><a href="#method-i-generate_empty_template_secondary">#generate_empty_template_secondary</a>
+    
+    <li><a href="#method-i-get_epidoc_attributes">#get_epidoc_attributes</a>
+    
+    <li><a href="#method-i-prune">#prune</a>
+    
+    <li><a href="#method-i-retrieve_bibliographical_data">#retrieve_bibliographical_data</a>
+    
+    <li><a href="#method-i-retrieve_plain_bibl_tags">#retrieve_plain_bibl_tags</a>
+    
+    <li><a href="#method-i-retrieve_structured_bibliographical_data">#retrieve_structured_bibliographical_data</a>
+    
+    <li><a href="#method-i-set_epidoc">#set_epidoc</a>
+    
+    <li><a href="#method-i-store_bibliographical_data">#store_bibliographical_data</a>
+    
+    <li><a href="#method-i-xpath">#xpath</a>
+    
+    <li><a href="#method-i-xpath_base">#xpath_base</a>
+    
+    <li><a href="#method-i-xpath_root">#xpath_root</a>
+    
+    <li><a href="#method-i-xpath_tip">#xpath_tip</a>
+    
+  </ul>
+</nav>
 
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo.html">HgvMetaIdentifierHelper::HgvGeo</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/GeoSpot.html">HgvMetaIdentifierHelper::HgvGeo::GeoSpot</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/OrigPlace.html">HgvMetaIdentifierHelper::HgvGeo::OrigPlace</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Place.html">HgvMetaIdentifierHelper::HgvGeo::Place</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Provenance.html">HgvMetaIdentifierHelper::HgvGeo::Provenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a>
+  
+    <li><a href="./Papyrillio.html">Papyrillio</a>
+  
+    <li><a href="./Papyrillio/Aggregator.html">Papyrillio::Aggregator</a>
+  
+    <li><a href="./Papyrillio/Collector.html">Papyrillio::Collector</a>
+  
+    <li><a href="./Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a>
+  
+    <li><a href="./Papyrillio/Decorator.html">Papyrillio::Decorator</a>
+  
+    <li><a href="./Papyrillio/Organiser.html">Papyrillio::Organiser</a>
+  
+    <li><a href="./Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a>
+  
+    <li><a href="./Papyrillio/Printer.html">Papyrillio::Printer</a>
+  
+    <li><a href="./Papyrillio/Publishee.html">Papyrillio::Publishee</a>
+  
+    <li><a href="./Papyrillio/Publisher.html">Papyrillio::Publisher</a>
+  
+    <li><a href="./Papyrillio/Transformer.html">Papyrillio::Transformer</a>
+  
+    <li><a href="./JRubyXML.html">JRubyXML</a>
+  
+    <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a>
+  
+    <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a>
+  
+    <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a>
+  
+    <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a>
+  
+    <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a>
+  
+    <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a>
+  
+    <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a>
+  
+    <li><a href="./REXML.html">REXML</a>
+  
+    <li><a href="./REXML/Document.html">REXML::Document</a>
+  
+    <li><a href="./REXML/Element.html">REXML::Element</a>
+  
+    <li><a href="./REXML/XPath.html">REXML::XPath</a>
+  
+    <li><a href="./Rpx.html">Rpx</a>
+  
+    <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a>
+  
+    <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a>
+  
+    <li><a href="./Comment.html">Comment</a>
+  
+    <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a>
+  
+    <li><a href="./Doco.html">Doco</a>
+  
+    <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a>
+  
+    <li><a href="./Grit.html">Grit</a>
+  
+    <li><a href="./Grit/Commit.html">Grit::Commit</a>
+  
+    <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+    <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a>
+  
+    <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a>
+  
+    <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a>
+  
+    <li><a href="./NumbersRDF.html">NumbersRDF</a>
+  
+    <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a>
+  
+    <li><a href="./AjaxProxyController.html">AjaxProxyController</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Board.html">Board</a>
+  
+    <li><a href="./BoardsController.html">BoardsController</a>
+  
+    <li><a href="./CommentsController.html">CommentsController</a>
+  
+    <li><a href="./DDBIdentifier.html">DDBIdentifier</a>
+  
+    <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a>
+  
+    <li><a href="./Decree.html">Decree</a>
+  
+    <li><a href="./DecreesController.html">DecreesController</a>
+  
+    <li><a href="./DocosController.html">DocosController</a>
+  
+    <li><a href="./DocovideosController.html">DocovideosController</a>
+  
+    <li><a href="./Emailer.html">Emailer</a>
+  
+    <li><a href="./EmailerMailer.html">EmailerMailer</a>
+  
+    <li><a href="./EmailersController.html">EmailersController</a>
+  
+    <li><a href="./Event.html">Event</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./GitConf.html">GitConf</a>
+  
+    <li><a href="./HGVBiblioIdentifier.html">HGVBiblioIdentifier</a>
+  
+    <li><a href="./HGVIdentifier.html">HGVIdentifier</a>
+  
+    <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a>
+  
+    <li><a href="./HelperController.html">HelperController</a>
+  
+    <li><a href="./HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a>
+  
+    <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a>
+  
+    <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a>
+  
+    <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a>
+  
+    <li><a href="./Identifier.html">Identifier</a>
+  
+    <li><a href="./IdentifiersController.html">IdentifiersController</a>
+  
+    <li><a href="./Integer.html">Integer</a>
+  
+    <li><a href="./Leiden.html">Leiden</a>
+  
+    <li><a href="./LeidenController.html">LeidenController</a>
+  
+    <li><a href="./LinkingInfo.html">LinkingInfo</a>
+  
+    <li><a href="./MaintenanceMode.html">MaintenanceMode</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Publication.html">Publication</a>
+  
+    <li><a href="./PublicationsController.html">PublicationsController</a>
+  
+    <li><a href="./Rails.html">Rails</a>
+  
+    <li><a href="./RepositoriesController.html">RepositoriesController</a>
+  
+    <li><a href="./Repository.html">Repository</a>
+  
+    <li><a href="./RpxController.html">RpxController</a>
+  
+    <li><a href="./TranslationHelperController.html">TranslationHelperController</a>
+  
+    <li><a href="./TranslationLeiden.html">TranslationLeiden</a>
+  
+    <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserController.html">UserController</a>
+  
+    <li><a href="./UserIdentifier.html">UserIdentifier</a>
+  
+    <li><a href="./Vote.html">Vote</a>
+  
+    <li><a href="./VotesController.html">VotesController</a>
+  
+    <li><a href="./WelcomeController.html">WelcomeController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class HGVBiblioIdentifier</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
       
-      <!-- Constants -->
-      <div id="constants-list" class="section">
-        <h3 class="section-header">Constants</h3>
-        <dl>
+        <dt id="FRIENDLY_NAME">FRIENDLY_NAME
         
-          <dt><a name="FRIENDLY_NAME">FRIENDLY_NAME</a></dt>
-          
-          <dd class="description"></dd>
-          
+        <dd class="description">
         
-        </dl>
+      
+      </dl>
+    </section>
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-bibliography_main" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">bibliography_main</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
       </div>
       
+      <div id="attribute-i-bibliography_secondary" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">bibliography_secondary</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
 
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
       
-      <!-- Attributes -->
-      <div id="attribute-method-details" class="method-section section">
-        <h3 class="section-header">Attributes</h3>
-
-        
-        <div id="bibliography_main-attribute-method" class="method-detail">
-          <a name="bibliography_main"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">bibliography_main</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
+      <div id="attribute-i-plain_bibl_tags" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">plain_bibl_tags</span><span
+            class="attribute-access-type">[R]</span>
         </div>
-        
-        <div id="bibliography_secondary-attribute-method" class="method-detail">
-          <a name="bibliography_secondary"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">bibliography_secondary</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
 
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
+        <div class="method-description">
         
-        <div id="plain_bibl_tags-attribute-method" class="method-detail">
-          <a name="plain_bibl_tags"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">plain_bibl_tags</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
         
-        <div id="type_list-attribute-method" class="method-detail">
-          <a name="type_list"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">type_list</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
         
-        <div id="xpath_main-attribute-method" class="method-detail">
-          <a name="xpath_main"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">xpath_main</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
         </div>
-        
-        <div id="xpath_secondary-attribute-method" class="method-detail">
-          <a name="xpath_secondary"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">xpath_secondary</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
-        
-      </div><!-- attribute-method-details -->
+      </div>
       
+      <div id="attribute-i-type_list" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">type_list</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
 
-      <!-- Methods -->
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
       
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
+      <div id="attribute-i-xpath_main" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">xpath_main</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
 
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
       
-        <div id="find-method" class="method-detail ">
-          <a name="method-c-find"></a>
+      <div id="attribute-i-xpath_secondary" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">xpath_secondary</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-find" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">find</span><span
-              class="method-args">(id)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="find-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 14</span>
+          <div class="method-source-code" id="find-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 14</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find</span> <span class="ruby-identifier">id</span>
   <span class="ruby-keyword">return</span> <span class="ruby-constant">HGVMetaIdentifier</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">id</span>).<span class="ruby-identifier">becomes</span>(<span class="ruby-constant">HGVBiblioIdentifier</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- find-source -->
-            
-          </div>
-
+          </div><!-- find-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- find-method -->
+
+    
+      <div id="method-c-find_by_publication_id" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_by_publication_id</span><span
+            class="method-args">(publication_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- find-method -->
-
-      
-        <div id="find_by_publication_id-method" class="method-detail ">
-          <a name="method-c-find_by_publication_id"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">find_by_publication_id</span><span
-              class="method-args">(publication_id)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>def self.friendly_name</p>
+          <p>def self.friendly_name</p>
 
 <pre>return 'Bibliography'</pre>
 
 <p>end</p>
-            
+          
 
-            
-            <div class="method-source-code" id="find_by_publication_id-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 10</span>
+          
+          <div class="method-source-code" id="find_by_publication_id-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 10</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find_by_publication_id</span> <span class="ruby-identifier">publication_id</span>
   <span class="ruby-keyword">return</span> <span class="ruby-constant">HGVMetaIdentifier</span>.<span class="ruby-identifier">find_by_publication_id</span>(<span class="ruby-identifier">publication_id</span>).<span class="ruby-identifier">becomes</span>(<span class="ruby-constant">HGVBiblioIdentifier</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- find_by_publication_id-source -->
-            
-          </div>
-
+          </div><!-- find_by_publication_id-source -->
           
+        </div>
 
-          
-        </div><!-- find_by_publication_id-method -->
+        
 
-      
-      </div><!-- public-class-method-details -->
+        
+      </div><!-- find_by_publication_id-method -->
+
     
-      <div id="public-instance-method-details" class="method-section section">
-        <h3 class="section-header">Public Instance Methods</h3>
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
 
-      
-        <div id="after_initialize-method" class="method-detail ">
-          <a name="method-i-after_initialize"></a>
+    
+      <div id="method-i-after_initialize" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">after_initialize</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">after_initialize</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="after_initialize-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 18</span>
+          <div class="method-source-code" id="after_initialize-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 18</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">after_initialize</span>
   <span class="ruby-ivar">@type_list</span> = [<span class="ruby-value">:main</span>, <span class="ruby-value">:secondary</span>]
 
@@ -597,36 +575,33 @@
   <span class="ruby-ivar">@bibl_tag_secondary</span> = <span class="ruby-string">&quot;bibl&quot;</span>
   <span class="ruby-ivar">@plain_bibl_tags</span> = {}
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- after_initialize-source -->
-            
-          </div>
+          </div><!-- after_initialize-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- after_initialize-method -->
+
+    
+      <div id="method-i-contains_plain_bibl_tags-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">contains_plain_bibl_tags?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- after_initialize-method -->
-
-      
-        <div id="contains_plain_bibl_tags-3F-method" class="method-detail ">
-          <a name="method-i-contains_plain_bibl_tags-3F"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">contains_plain_bibl_tags?</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="contains_plain_bibl_tags-3F-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 168</span>
+          <div class="method-source-code" id="contains_plain_bibl_tags-3F-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 168</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">contains_plain_bibl_tags?</span>
   <span class="ruby-ivar">@plain_bibl_tags</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">v</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">l</span>, <span class="ruby-identifier">w</span><span class="ruby-operator">|</span>
@@ -635,36 +610,33 @@
   }
   <span class="ruby-keyword">false</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- contains_plain_bibl_tags-3F-source -->
-            
-          </div>
+          </div><!-- contains_plain_bibl_tags-3F-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- contains_plain_bibl_tags-3F-method -->
+
+    
+      <div id="method-i-generate_empty_template" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">generate_empty_template</span><span
+            class="method-args">(item_list)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- contains_plain_bibl_tags-3F-method -->
-
-      
-        <div id="generate_empty_template-method" class="method-detail ">
-          <a name="method-i-generate_empty_template"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">generate_empty_template</span><span
-              class="method-args">(item_list)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="generate_empty_template-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 57</span>
+          <div class="method-source-code" id="generate_empty_template-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 57</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_empty_template</span> <span class="ruby-identifier">item_list</span>
   <span class="ruby-identifier">empty_template</span> = {}
   <span class="ruby-identifier">item_list</span>.<span class="ruby-identifier">each_pair</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
@@ -672,102 +644,93 @@
   }
   <span class="ruby-identifier">empty_template</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- generate_empty_template-source -->
-            
-          </div>
+          </div><!-- generate_empty_template-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- generate_empty_template-method -->
+
+    
+      <div id="method-i-generate_empty_template_secondary" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">generate_empty_template_secondary</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- generate_empty_template-method -->
-
-      
-        <div id="generate_empty_template_secondary-method" class="method-detail ">
-          <a name="method-i-generate_empty_template_secondary"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">generate_empty_template_secondary</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="generate_empty_template_secondary-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 53</span>
+          <div class="method-source-code" id="generate_empty_template_secondary-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 53</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_empty_template_secondary</span>
   <span class="ruby-identifier">generate_empty_template</span> <span class="ruby-ivar">@item_list_secondary</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- generate_empty_template_secondary-source -->
-            
-          </div>
+          </div><!-- generate_empty_template_secondary-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- generate_empty_template_secondary-method -->
+
+    
+      <div id="method-i-get_epidoc_attributes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_epidoc_attributes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- generate_empty_template_secondary-method -->
-
-      
-        <div id="get_epidoc_attributes-method" class="method-detail ">
-          <a name="method-i-get_epidoc_attributes"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">get_epidoc_attributes</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="get_epidoc_attributes-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 121</span>
+          <div class="method-source-code" id="get_epidoc_attributes-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 121</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_epidoc_attributes</span>
   
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- get_epidoc_attributes-source -->
-            
-          </div>
+          </div><!-- get_epidoc_attributes-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- get_epidoc_attributes-method -->
+
+    
+      <div id="method-i-prune" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">prune</span><span
+            class="method-args">(bibliography)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- get_epidoc_attributes-method -->
-
-      
-        <div id="prune-method" class="method-detail ">
-          <a name="method-i-prune"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">prune</span><span
-              class="method-args">(bibliography)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="prune-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 156</span>
+          <div class="method-source-code" id="prune-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 156</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">prune</span> <span class="ruby-identifier">bibliography</span>
   <span class="ruby-identifier">bibliography</span>.<span class="ruby-identifier">delete_if</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">index</span>, <span class="ruby-identifier">data</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">data_is_empty</span> = <span class="ruby-keyword">true</span>
@@ -779,72 +742,66 @@
     <span class="ruby-identifier">data_is_empty</span>
   }
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- prune-source -->
-            
-          </div>
+          </div><!-- prune-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- prune-method -->
+
+    
+      <div id="method-i-retrieve_bibliographical_data" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">retrieve_bibliographical_data</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- prune-method -->
-
-      
-        <div id="retrieve_bibliographical_data-method" class="method-detail ">
-          <a name="method-i-retrieve_bibliographical_data"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">retrieve_bibliographical_data</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="retrieve_bibliographical_data-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 125</span>
+          <div class="method-source-code" id="retrieve_bibliographical_data-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 125</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">retrieve_bibliographical_data</span>
   <span class="ruby-identifier">doc</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">content</span>
   
   <span class="ruby-identifier">retrieve_structured_bibliographical_data</span> <span class="ruby-identifier">doc</span>
   <span class="ruby-identifier">retrieve_plain_bibl_tags</span> <span class="ruby-identifier">doc</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- retrieve_bibliographical_data-source -->
-            
-          </div>
+          </div><!-- retrieve_bibliographical_data-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- retrieve_bibliographical_data-method -->
+
+    
+      <div id="method-i-retrieve_plain_bibl_tags" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">retrieve_plain_bibl_tags</span><span
+            class="method-args">(doc)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- retrieve_bibliographical_data-method -->
-
-      
-        <div id="retrieve_plain_bibl_tags-method" class="method-detail ">
-          <a name="method-i-retrieve_plain_bibl_tags"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">retrieve_plain_bibl_tags</span><span
-              class="method-args">(doc)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="retrieve_plain_bibl_tags-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 177</span>
+          <div class="method-source-code" id="retrieve_plain_bibl_tags-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 177</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">retrieve_plain_bibl_tags</span> <span class="ruby-identifier">doc</span>
   <span class="ruby-ivar">@plain_bibl_tags</span> = {}
 
@@ -865,36 +822,33 @@
     }
   }
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- retrieve_plain_bibl_tags-source -->
-            
-          </div>
+          </div><!-- retrieve_plain_bibl_tags-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- retrieve_plain_bibl_tags-method -->
+
+    
+      <div id="method-i-retrieve_structured_bibliographical_data" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">retrieve_structured_bibliographical_data</span><span
+            class="method-args">(doc)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- retrieve_plain_bibl_tags-method -->
-
-      
-        <div id="retrieve_structured_bibliographical_data-method" class="method-detail ">
-          <a name="method-i-retrieve_structured_bibliographical_data"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">retrieve_structured_bibliographical_data</span><span
-              class="method-args">(doc)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="retrieve_structured_bibliographical_data-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 132</span>
+          <div class="method-source-code" id="retrieve_structured_bibliographical_data-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 132</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">retrieve_structured_bibliographical_data</span> <span class="ruby-identifier">doc</span>
 
   <span class="ruby-ivar">@bibliography_main</span> = {}
@@ -918,36 +872,33 @@
 
   <span class="ruby-identifier">prune</span> <span class="ruby-ivar">@bibliography_secondary</span>;
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- retrieve_structured_bibliographical_data-source -->
-            
-          </div>
+          </div><!-- retrieve_structured_bibliographical_data-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- retrieve_structured_bibliographical_data-method -->
+
+    
+      <div id="method-i-set_epidoc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_epidoc</span><span
+            class="method-args">(main, secondary, comment = 'update bibliographical information')</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- retrieve_structured_bibliographical_data-method -->
-
-      
-        <div id="set_epidoc-method" class="method-detail ">
-          <a name="method-i-set_epidoc"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">set_epidoc</span><span
-              class="method-args">(main, secondary, comment = 'update bibliographical information')</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="set_epidoc-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 65</span>
+          <div class="method-source-code" id="set_epidoc-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 65</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_epidoc</span> <span class="ruby-identifier">main</span>, <span class="ruby-identifier">secondary</span>, <span class="ruby-identifier">comment</span> = <span class="ruby-string">'update bibliographical information'</span>
 
   <span class="ruby-identifier">xml</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">content</span>
@@ -975,36 +926,33 @@
 
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">modified_xml_content</span>, <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">comment</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- set_epidoc-source -->
-            
-          </div>
+          </div><!-- set_epidoc-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- set_epidoc-method -->
+
+    
+      <div id="method-i-store_bibliographical_data" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">store_bibliographical_data</span><span
+            class="method-args">(doc, item_list, data, base_path)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- set_epidoc-method -->
-
-      
-        <div id="store_bibliographical_data-method" class="method-detail ">
-          <a name="method-i-store_bibliographical_data"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">store_bibliographical_data</span><span
-              class="method-args">(doc, item_list, data, base_path)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="store_bibliographical_data-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 93</span>
+          <div class="method-source-code" id="store_bibliographical_data-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 93</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">store_bibliographical_data</span> <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">item_list</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">base_path</span>
   <span class="ruby-identifier">docBibliography</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">bulldozePath</span> <span class="ruby-identifier">base_path</span>
 
@@ -1032,36 +980,33 @@
 
     }
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- store_bibliographical_data-source -->
-            
-          </div>
+          </div><!-- store_bibliographical_data-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- store_bibliographical_data-method -->
+
+    
+      <div id="method-i-xpath" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">xpath</span><span
+            class="method-args">(options = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- store_bibliographical_data-method -->
-
-      
-        <div id="xpath-method" class="method-detail ">
-          <a name="method-i-xpath"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">xpath</span><span
-              class="method-args">(options = {})</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="xpath-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 222</span>
+          <div class="method-source-code" id="xpath-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 222</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">xpath</span> <span class="ruby-identifier">options</span> = {}
   <span class="ruby-identifier">type</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:type</span>] <span class="ruby-operator">||</span> <span class="ruby-value">:main</span>
   <span class="ruby-identifier">id</span>   = <span class="ruby-identifier">options</span>[<span class="ruby-value">:id</span>]   <span class="ruby-operator">||</span> <span class="ruby-keyword">nil</span>
@@ -1073,36 +1018,33 @@
 
   <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">infix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">suffix</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- xpath-source -->
-            
-          </div>
+          </div><!-- xpath-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- xpath-method -->
+
+    
+      <div id="method-i-xpath_base" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">xpath_base</span><span
+            class="method-args">(type, id = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- xpath-method -->
-
-      
-        <div id="xpath_base-method" class="method-detail ">
-          <a name="method-i-xpath_base"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">xpath_base</span><span
-              class="method-args">(type, id = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="xpath_base-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 202</span>
+          <div class="method-source-code" id="xpath_base-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 202</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">xpath_base</span> <span class="ruby-identifier">type</span>, <span class="ruby-identifier">id</span> = <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:main</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">id</span>
     <span class="ruby-string">&quot;bibl[@type='&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;']&quot;</span>
@@ -1112,69 +1054,63 @@
     <span class="ruby-identifier">raise</span> <span class="ruby-constant">Exception</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">'invalid type and id ('</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">', '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">')'</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- xpath_base-source -->
-            
-          </div>
+          </div><!-- xpath_base-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- xpath_base-method -->
+
+    
+      <div id="method-i-xpath_root" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">xpath_root</span><span
+            class="method-args">(type = :main)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- xpath_base-method -->
-
-      
-        <div id="xpath_root-method" class="method-detail ">
-          <a name="method-i-xpath_root"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">xpath_root</span><span
-              class="method-args">(type = :main)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="xpath_root-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 198</span>
+          <div class="method-source-code" id="xpath_root-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 198</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">xpath_root</span> <span class="ruby-identifier">type</span> = <span class="ruby-value">:main</span>
   <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:main</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@xpath_main</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:secondary</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@xpath_secondary</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- xpath_root-source -->
-            
-          </div>
+          </div><!-- xpath_root-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- xpath_root-method -->
+
+    
+      <div id="method-i-xpath_tip" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">xpath_tip</span><span
+            class="method-args">(type, key)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- xpath_root-method -->
-
-      
-        <div id="xpath_tip-method" class="method-detail ">
-          <a name="method-i-xpath_tip"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">xpath_tip</span><span
-              class="method-args">(type, key)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="xpath_tip-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 212</span>
+          <div class="method-source-code" id="xpath_tip-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 212</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">xpath_tip</span> <span class="ruby-identifier">type</span>, <span class="ruby-identifier">key</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:main</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@item_list_main</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@item_list_main</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:xpath</span>)
     <span class="ruby-ivar">@item_list_main</span>[<span class="ruby-identifier">key</span>][<span class="ruby-value">:xpath</span>]
@@ -1184,42 +1120,39 @@
     <span class="ruby-identifier">raise</span> <span class="ruby-constant">Exception</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">'invalid type and key ('</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">type</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">', '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">')'</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- xpath_tip-source -->
-            
-          </div>
-
+          </div><!-- xpath_tip-source -->
           
+        </div>
 
-          
-        </div><!-- xpath_tip-method -->
+        
 
-      
-      </div><!-- public-instance-method-details -->
+        
+      </div><!-- xpath_tip-method -->
+
     
-      <div id="protected-instance-method-details" class="method-section section">
-        <h3 class="section-header">Protected Instance Methods</h3>
+    </section><!-- public-instance-method-details -->
+  
+     <section id="protected-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Protected Instance Methods</h3>
 
-      
-        <div id="extract_value-method" class="method-detail ">
-          <a name="method-i-extract_value"></a>
+    
+      <div id="method-i-extract_value" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">extract_value</span><span
+            class="method-args">(document, element_path)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">extract_value</span><span
-              class="method-args">(document, element_path)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="extract_value-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 236</span>
+          <div class="method-source-code" id="extract_value-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_biblio_identifier.rb, line 236</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">extract_value</span> <span class="ruby-identifier">document</span>, <span class="ruby-identifier">element_path</span>    
   <span class="ruby-identifier">tmp</span> = <span class="ruby-string">''</span>
 
@@ -1237,29 +1170,26 @@
 
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/, \Z/</span>, <span class="ruby-string">''</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- extract_value-source -->
-            
-          </div>
-
+          </div><!-- extract_value-source -->
           
+        </div>
 
-          
-        </div><!-- extract_value-method -->
+        
 
-      
-      </div><!-- protected-instance-method-details -->
+        
+      </div><!-- extract_value-method -->
+
     
-    </div><!-- 5Buntitled-5D -->
+    </section><!-- protected-instance-method-details -->
   
+  </section><!-- 5Buntitled-5D -->
 
-  </div><!-- documentation -->
+</div><!-- documentation -->
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
 
-</body>
-</html>
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 

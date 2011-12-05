@@ -1,410 +1,405 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-  <title>Module: NumbersRDF::NumbersHelper</title>
+<title>Module: NumbersRDF::NumbersHelper</title>
 
-  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
 
-  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
 
-</head>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
 <body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#classes">Classes</a>
-          <a href="../index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="../lib/numbers_rdf_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="lib/numbers_rdf.rb">lib/numbers_rdf.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-      
-    </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-    <div id="class-metadata">
-      
 
-      
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/numbers_rdf.rb
+  </ul>
+</nav>
 
-      
-
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-c-apply_xpath_to_identifier">::apply_xpath_to_identifier</a></li>
-          
-          <li><a href="#method-c-apply_xpath_to_numbers_server_response">::apply_xpath_to_numbers_server_response</a></li>
-          
-          <li><a href="#method-c-apply_xpath_to_sparql_query">::apply_xpath_to_sparql_query</a></li>
-          
-          <li><a href="#method-c-collection_identifier_to_identifiers">::collection_identifier_to_identifiers</a></li>
-          
-          <li><a href="#method-c-identifier_to_components">::identifier_to_components</a></li>
-          
-          <li><a href="#method-c-identifier_to_identifiers">::identifier_to_identifiers</a></li>
-          
-          <li><a href="#method-c-identifier_to_local_identifier">::identifier_to_local_identifier</a></li>
-          
-          <li><a href="#method-c-identifier_to_numbers_server_response">::identifier_to_numbers_server_response</a></li>
-          
-          <li><a href="#method-c-identifier_to_parts">::identifier_to_parts</a></li>
-          
-          <li><a href="#method-c-identifier_to_path">::identifier_to_path</a></li>
-          
-          <li><a href="#method-c-identifier_to_title">::identifier_to_title</a></li>
-          
-          <li><a href="#method-c-identifier_to_url">::identifier_to_url</a></li>
-          
-          <li><a href="#method-c-identifier_url_to_identifier">::identifier_url_to_identifier</a></li>
-          
-          <li><a href="#method-c-identifiers_to_hash">::identifiers_to_hash</a></li>
-          
-          <li><a href="#method-c-process_numbers_server_response_body">::process_numbers_server_response_body</a></li>
-          
-          <li><a href="#method-c-sparql_query_to_numbers_server_response">::sparql_query_to_numbers_server_response</a></li>
-          
-          <li><a href="#method-c-sparql_query_to_path">::sparql_query_to_path</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="../images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="../Papyrillio.html">Papyrillio</a></li>
-        
-          <li><a href="../Papyrillio/Aggregator.html">Papyrillio::Aggregator</a></li>
-        
-          <li><a href="../Papyrillio/Collector.html">Papyrillio::Collector</a></li>
-        
-          <li><a href="../Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a></li>
-        
-          <li><a href="../Papyrillio/Decorator.html">Papyrillio::Decorator</a></li>
-        
-          <li><a href="../Papyrillio/Organiser.html">Papyrillio::Organiser</a></li>
-        
-          <li><a href="../Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a></li>
-        
-          <li><a href="../Papyrillio/Printer.html">Papyrillio::Printer</a></li>
-        
-          <li><a href="../Papyrillio/Publishee.html">Papyrillio::Publishee</a></li>
-        
-          <li><a href="../Papyrillio/Publisher.html">Papyrillio::Publisher</a></li>
-        
-          <li><a href="../Papyrillio/Transformer.html">Papyrillio::Transformer</a></li>
-        
-          <li><a href="../JRubyXML.html">JRubyXML</a></li>
-        
-          <li><a href="../JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a></li>
-        
-          <li><a href="../JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a></li>
-        
-          <li><a href="../JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a></li>
-        
-          <li><a href="../JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a></li>
-        
-          <li><a href="../JRubyXML/ParseError.html">JRubyXML::ParseError</a></li>
-        
-          <li><a href="../JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a></li>
-        
-          <li><a href="../JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a></li>
-        
-          <li><a href="../REXML.html">REXML</a></li>
-        
-          <li><a href="../REXML/Document.html">REXML::Document</a></li>
-        
-          <li><a href="../REXML/Element.html">REXML::Element</a></li>
-        
-          <li><a href="../REXML/XPath.html">REXML::XPath</a></li>
-        
-          <li><a href="../Rpx.html">Rpx</a></li>
-        
-          <li><a href="../Rpx/RpxException.html">Rpx::RpxException</a></li>
-        
-          <li><a href="../Rpx/RpxHelper.html">Rpx::RpxHelper</a></li>
-        
-          <li><a href="../Comment.html">Comment</a></li>
-        
-          <li><a href="../Comment/CombineComment.html">Comment::CombineComment</a></li>
-        
-          <li><a href="../Doco.html">Doco</a></li>
-        
-          <li><a href="../Doco/DocoNode.html">Doco::DocoNode</a></li>
-        
-          <li><a href="../Grit.html">Grit</a></li>
-        
-          <li><a href="../Grit/Commit.html">Grit::Commit</a></li>
-        
-          <li><a href="../HGVMetaIdentifier.html">HGVMetaIdentifier</a></li>
-        
-          <li><a href="../HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
-        
-          <li><a href="../HGVTransGlossary.html">HGVTransGlossary</a></li>
-        
-          <li><a href="../HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a></li>
-        
-          <li><a href="../NumbersRDF.html">NumbersRDF</a></li>
-        
-          <li><a href="../NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a></li>
-        
-          <li><a href="../AjaxProxyController.html">AjaxProxyController</a></li>
-        
-          <li><a href="../ApplicationController.html">ApplicationController</a></li>
-        
-          <li><a href="../ApplicationHelper.html">ApplicationHelper</a></li>
-        
-          <li><a href="../Board.html">Board</a></li>
-        
-          <li><a href="../BoardsController.html">BoardsController</a></li>
-        
-          <li><a href="../CommentsController.html">CommentsController</a></li>
-        
-          <li><a href="../DDBIdentifier.html">DDBIdentifier</a></li>
-        
-          <li><a href="../DdbIdentifiersController.html">DdbIdentifiersController</a></li>
-        
-          <li><a href="../Decree.html">Decree</a></li>
-        
-          <li><a href="../DecreesController.html">DecreesController</a></li>
-        
-          <li><a href="../DocosController.html">DocosController</a></li>
-        
-          <li><a href="../DocovideosController.html">DocovideosController</a></li>
-        
-          <li><a href="../Emailer.html">Emailer</a></li>
-        
-          <li><a href="../EmailerMailer.html">EmailerMailer</a></li>
-        
-          <li><a href="../EmailersController.html">EmailersController</a></li>
-        
-          <li><a href="../Event.html">Event</a></li>
-        
-          <li><a href="../EventsController.html">EventsController</a></li>
-        
-          <li><a href="../GitConf.html">GitConf</a></li>
-        
-          <li><a href="../HGVBiblioIdentifier.html">HGVBiblioIdentifier</a></li>
-        
-          <li><a href="../HGVIdentifier.html">HGVIdentifier</a></li>
-        
-          <li><a href="../HGVTransIdentifier.html">HGVTransIdentifier</a></li>
-        
-          <li><a href="../HelperController.html">HelperController</a></li>
-        
-          <li><a href="../HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a></li>
-        
-          <li><a href="../HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></li>
-        
-          <li><a href="../HgvTransGlossariesController.html">HgvTransGlossariesController</a></li>
-        
-          <li><a href="../HgvTransIdentifiersController.html">HgvTransIdentifiersController</a></li>
-        
-          <li><a href="../Identifier.html">Identifier</a></li>
-        
-          <li><a href="../IdentifiersController.html">IdentifiersController</a></li>
-        
-          <li><a href="../Integer.html">Integer</a></li>
-        
-          <li><a href="../Leiden.html">Leiden</a></li>
-        
-          <li><a href="../LeidenController.html">LeidenController</a></li>
-        
-          <li><a href="../LinkingInfo.html">LinkingInfo</a></li>
-        
-          <li><a href="../MaintenanceMode.html">MaintenanceMode</a></li>
-        
-          <li><a href="../Object.html">Object</a></li>
-        
-          <li><a href="../Publication.html">Publication</a></li>
-        
-          <li><a href="../PublicationsController.html">PublicationsController</a></li>
-        
-          <li><a href="../Rails.html">Rails</a></li>
-        
-          <li><a href="../RepositoriesController.html">RepositoriesController</a></li>
-        
-          <li><a href="../Repository.html">Repository</a></li>
-        
-          <li><a href="../RpxController.html">RpxController</a></li>
-        
-          <li><a href="../TranslationHelperController.html">TranslationHelperController</a></li>
-        
-          <li><a href="../TranslationLeiden.html">TranslationLeiden</a></li>
-        
-          <li><a href="../TranslationLeidenController.html">TranslationLeidenController</a></li>
-        
-          <li><a href="../User.html">User</a></li>
-        
-          <li><a href="../UserController.html">UserController</a></li>
-        
-          <li><a href="../UserIdentifier.html">UserIdentifier</a></li>
-        
-          <li><a href="../Vote.html">Vote</a></li>
-        
-          <li><a href="../VotesController.html">VotesController</a></li>
-        
-          <li><a href="../WelcomeController.html">WelcomeController</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
+    
   </div>
 
-  <div id="documentation">
-    <h1 class="module">NumbersRDF::NumbersHelper</h1>
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
 
-    <div id="description" class="description">
-      
+  <ul class="link-list">
+    
+    <li><a href="#method-c-apply_xpath_to_identifier">::apply_xpath_to_identifier</a>
+    
+    <li><a href="#method-c-apply_xpath_to_numbers_server_response">::apply_xpath_to_numbers_server_response</a>
+    
+    <li><a href="#method-c-apply_xpath_to_sparql_query">::apply_xpath_to_sparql_query</a>
+    
+    <li><a href="#method-c-collection_identifier_to_identifiers">::collection_identifier_to_identifiers</a>
+    
+    <li><a href="#method-c-identifier_to_components">::identifier_to_components</a>
+    
+    <li><a href="#method-c-identifier_to_identifiers">::identifier_to_identifiers</a>
+    
+    <li><a href="#method-c-identifier_to_local_identifier">::identifier_to_local_identifier</a>
+    
+    <li><a href="#method-c-identifier_to_numbers_server_response">::identifier_to_numbers_server_response</a>
+    
+    <li><a href="#method-c-identifier_to_parts">::identifier_to_parts</a>
+    
+    <li><a href="#method-c-identifier_to_path">::identifier_to_path</a>
+    
+    <li><a href="#method-c-identifier_to_title">::identifier_to_title</a>
+    
+    <li><a href="#method-c-identifier_to_url">::identifier_to_url</a>
+    
+    <li><a href="#method-c-identifier_url_to_identifier">::identifier_url_to_identifier</a>
+    
+    <li><a href="#method-c-identifiers_to_hash">::identifiers_to_hash</a>
+    
+    <li><a href="#method-c-process_numbers_server_response_body">::process_numbers_server_response_body</a>
+    
+    <li><a href="#method-c-sparql_query_to_numbers_server_response">::sparql_query_to_numbers_server_response</a>
+    
+    <li><a href="#method-c-sparql_query_to_path">::sparql_query_to_path</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo.html">HgvMetaIdentifierHelper::HgvGeo</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/GeoSpot.html">HgvMetaIdentifierHelper::HgvGeo::GeoSpot</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/OrigPlace.html">HgvMetaIdentifierHelper::HgvGeo::OrigPlace</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/Place.html">HgvMetaIdentifierHelper::HgvGeo::Place</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/Provenance.html">HgvMetaIdentifierHelper::HgvGeo::Provenance</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a>
+  
+    <li><a href="../Papyrillio.html">Papyrillio</a>
+  
+    <li><a href="../Papyrillio/Aggregator.html">Papyrillio::Aggregator</a>
+  
+    <li><a href="../Papyrillio/Collector.html">Papyrillio::Collector</a>
+  
+    <li><a href="../Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a>
+  
+    <li><a href="../Papyrillio/Decorator.html">Papyrillio::Decorator</a>
+  
+    <li><a href="../Papyrillio/Organiser.html">Papyrillio::Organiser</a>
+  
+    <li><a href="../Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a>
+  
+    <li><a href="../Papyrillio/Printer.html">Papyrillio::Printer</a>
+  
+    <li><a href="../Papyrillio/Publishee.html">Papyrillio::Publishee</a>
+  
+    <li><a href="../Papyrillio/Publisher.html">Papyrillio::Publisher</a>
+  
+    <li><a href="../Papyrillio/Transformer.html">Papyrillio::Transformer</a>
+  
+    <li><a href="../JRubyXML.html">JRubyXML</a>
+  
+    <li><a href="../JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a>
+  
+    <li><a href="../JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a>
+  
+    <li><a href="../JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a>
+  
+    <li><a href="../JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a>
+  
+    <li><a href="../JRubyXML/ParseError.html">JRubyXML::ParseError</a>
+  
+    <li><a href="../JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a>
+  
+    <li><a href="../JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a>
+  
+    <li><a href="../REXML.html">REXML</a>
+  
+    <li><a href="../REXML/Document.html">REXML::Document</a>
+  
+    <li><a href="../REXML/Element.html">REXML::Element</a>
+  
+    <li><a href="../REXML/XPath.html">REXML::XPath</a>
+  
+    <li><a href="../Rpx.html">Rpx</a>
+  
+    <li><a href="../Rpx/RpxException.html">Rpx::RpxException</a>
+  
+    <li><a href="../Rpx/RpxHelper.html">Rpx::RpxHelper</a>
+  
+    <li><a href="../Comment.html">Comment</a>
+  
+    <li><a href="../Comment/CombineComment.html">Comment::CombineComment</a>
+  
+    <li><a href="../Doco.html">Doco</a>
+  
+    <li><a href="../Doco/DocoNode.html">Doco::DocoNode</a>
+  
+    <li><a href="../Grit.html">Grit</a>
+  
+    <li><a href="../Grit/Commit.html">Grit::Commit</a>
+  
+    <li><a href="../HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+    <li><a href="../HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a>
+  
+    <li><a href="../HGVTransGlossary.html">HGVTransGlossary</a>
+  
+    <li><a href="../HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a>
+  
+    <li><a href="../NumbersRDF.html">NumbersRDF</a>
+  
+    <li><a href="../NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a>
+  
+    <li><a href="../AjaxProxyController.html">AjaxProxyController</a>
+  
+    <li><a href="../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../Board.html">Board</a>
+  
+    <li><a href="../BoardsController.html">BoardsController</a>
+  
+    <li><a href="../CommentsController.html">CommentsController</a>
+  
+    <li><a href="../DDBIdentifier.html">DDBIdentifier</a>
+  
+    <li><a href="../DdbIdentifiersController.html">DdbIdentifiersController</a>
+  
+    <li><a href="../Decree.html">Decree</a>
+  
+    <li><a href="../DecreesController.html">DecreesController</a>
+  
+    <li><a href="../DocosController.html">DocosController</a>
+  
+    <li><a href="../DocovideosController.html">DocovideosController</a>
+  
+    <li><a href="../Emailer.html">Emailer</a>
+  
+    <li><a href="../EmailerMailer.html">EmailerMailer</a>
+  
+    <li><a href="../EmailersController.html">EmailersController</a>
+  
+    <li><a href="../Event.html">Event</a>
+  
+    <li><a href="../EventsController.html">EventsController</a>
+  
+    <li><a href="../GitConf.html">GitConf</a>
+  
+    <li><a href="../HGVBiblioIdentifier.html">HGVBiblioIdentifier</a>
+  
+    <li><a href="../HGVIdentifier.html">HGVIdentifier</a>
+  
+    <li><a href="../HGVTransIdentifier.html">HGVTransIdentifier</a>
+  
+    <li><a href="../HelperController.html">HelperController</a>
+  
+    <li><a href="../HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a>
+  
+    <li><a href="../HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a>
+  
+    <li><a href="../HgvTransGlossariesController.html">HgvTransGlossariesController</a>
+  
+    <li><a href="../HgvTransIdentifiersController.html">HgvTransIdentifiersController</a>
+  
+    <li><a href="../Identifier.html">Identifier</a>
+  
+    <li><a href="../IdentifiersController.html">IdentifiersController</a>
+  
+    <li><a href="../Integer.html">Integer</a>
+  
+    <li><a href="../Leiden.html">Leiden</a>
+  
+    <li><a href="../LeidenController.html">LeidenController</a>
+  
+    <li><a href="../LinkingInfo.html">LinkingInfo</a>
+  
+    <li><a href="../MaintenanceMode.html">MaintenanceMode</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../Publication.html">Publication</a>
+  
+    <li><a href="../PublicationsController.html">PublicationsController</a>
+  
+    <li><a href="../Rails.html">Rails</a>
+  
+    <li><a href="../RepositoriesController.html">RepositoriesController</a>
+  
+    <li><a href="../Repository.html">Repository</a>
+  
+    <li><a href="../RpxController.html">RpxController</a>
+  
+    <li><a href="../TranslationHelperController.html">TranslationHelperController</a>
+  
+    <li><a href="../TranslationLeiden.html">TranslationLeiden</a>
+  
+    <li><a href="../TranslationLeidenController.html">TranslationLeidenController</a>
+  
+    <li><a href="../User.html">User</a>
+  
+    <li><a href="../UserController.html">UserController</a>
+  
+    <li><a href="../UserIdentifier.html">UserIdentifier</a>
+  
+    <li><a href="../Vote.html">Vote</a>
+  
+    <li><a href="../VotesController.html">VotesController</a>
+  
+    <li><a href="../WelcomeController.html">WelcomeController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module NumbersRDF::NumbersHelper</h1>
+
+  <div id="description" class="description">
+    
 <p>Provides a number of class methods for working with identifiers and the
 Numbers Server</p>
 
-    </div><!-- description -->
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
 
     
+
     
+
     
-    <div id="5Buntitled-5D" class="documentation-section">
-      
 
-      
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
 
-      
+    
+      <div id="method-c-apply_xpath_to_identifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">apply_xpath_to_identifier</span><span
+            class="method-args">(xpath, identifier, decorator = 'rdf')</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
 
-      
-
-      <!-- Methods -->
-      
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
-
-      
-        <div id="apply_xpath_to_identifier-method" class="method-detail ">
-          <a name="method-c-apply_xpath_to_identifier"></a>
-
+        <div class="method-description">
           
-          <div class="method-heading">
-            <span class="method-name">apply_xpath_to_identifier</span><span
-              class="method-args">(xpath, identifier, decorator = 'rdf')</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Performs a Numbers Server request on an identifier and applies XPath to the
+          <p>Performs a Numbers Server request on an identifier and applies XPath to the
 response</p>
-            
+          
 
-            
-            <div class="method-source-code" id="apply_xpath_to_identifier-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 90</span>
+          
+          <div class="method-source-code" id="apply_xpath_to_identifier-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 90</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">apply_xpath_to_identifier</span>(<span class="ruby-identifier">xpath</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">decorator</span> = <span class="ruby-string">'rdf'</span>)
   <span class="ruby-identifier">response</span> = <span class="ruby-identifier">identifier_to_numbers_server_response</span>(<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">decorator</span>)
   <span class="ruby-identifier">apply_xpath_to_numbers_server_response</span>(<span class="ruby-identifier">xpath</span>, <span class="ruby-identifier">response</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- apply_xpath_to_identifier-source -->
-            
-          </div>
+          </div><!-- apply_xpath_to_identifier-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- apply_xpath_to_identifier-method -->
+
+    
+      <div id="method-c-apply_xpath_to_numbers_server_response" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">apply_xpath_to_numbers_server_response</span><span
+            class="method-args">(xpath, response)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Applies XPath to an HTTP response (assumed to be XML).</p>
           
 
           
-        </div><!-- apply_xpath_to_identifier-method -->
-
-      
-        <div id="apply_xpath_to_numbers_server_response-method" class="method-detail ">
-          <a name="method-c-apply_xpath_to_numbers_server_response"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">apply_xpath_to_numbers_server_response</span><span
-              class="method-args">(xpath, response)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Applies XPath to an HTTP response (assumed to be XML).</p>
-            
-
-            
-            <div class="method-source-code" id="apply_xpath_to_numbers_server_response-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 73</span>
+          <div class="method-source-code" id="apply_xpath_to_numbers_server_response-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 73</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">apply_xpath_to_numbers_server_response</span>(<span class="ruby-identifier">xpath</span>, <span class="ruby-identifier">response</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">!=</span> <span class="ruby-string">'200'</span>
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
@@ -414,71 +409,65 @@ response</p>
       <span class="ruby-identifier">xpath</span>)
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- apply_xpath_to_numbers_server_response-source -->
-            
-          </div>
+          </div><!-- apply_xpath_to_numbers_server_response-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- apply_xpath_to_numbers_server_response-method -->
+
+    
+      <div id="method-c-apply_xpath_to_sparql_query" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">apply_xpath_to_sparql_query</span><span
+            class="method-args">(xpath, sparql_query)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Runs a SPARQL query and applies XPath to the response</p>
           
 
           
-        </div><!-- apply_xpath_to_numbers_server_response-method -->
-
-      
-        <div id="apply_xpath_to_sparql_query-method" class="method-detail ">
-          <a name="method-c-apply_xpath_to_sparql_query"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">apply_xpath_to_sparql_query</span><span
-              class="method-args">(xpath, sparql_query)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Runs a SPARQL query and applies XPath to the response</p>
-            
-
-            
-            <div class="method-source-code" id="apply_xpath_to_sparql_query-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 84</span>
+          <div class="method-source-code" id="apply_xpath_to_sparql_query-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 84</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">apply_xpath_to_sparql_query</span>(<span class="ruby-identifier">xpath</span>, <span class="ruby-identifier">sparql_query</span>)
   <span class="ruby-identifier">response</span> = <span class="ruby-identifier">sparql_query_to_numbers_server_response</span>(<span class="ruby-identifier">sparql_query</span>)
   <span class="ruby-identifier">apply_xpath_to_numbers_server_response</span>(<span class="ruby-identifier">xpath</span>, <span class="ruby-identifier">response</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- apply_xpath_to_sparql_query-source -->
-            
-          </div>
-
+          </div><!-- apply_xpath_to_sparql_query-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- apply_xpath_to_sparql_query-method -->
+
+    
+      <div id="method-c-collection_identifier_to_identifiers" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">collection_identifier_to_identifiers</span><span
+            class="method-args">(identifier)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- apply_xpath_to_sparql_query-method -->
-
-      
-        <div id="collection_identifier_to_identifiers-method" class="method-detail ">
-          <a name="method-c-collection_identifier_to_identifiers"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">collection_identifier_to_identifiers</span><span
-              class="method-args">(identifier)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Turns e.g. ‘papyri.info/hgv/P.Amh._2_48’ into
+          <p>Turns e.g. ‘papyri.info/hgv/P.Amh._2_48’ into
 [‘papyri.info/hgv/123’, …]</p>
-            
+          
 
-            
-            <div class="method-source-code" id="collection_identifier_to_identifiers-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 119</span>
+          
+          <div class="method-source-code" id="collection_identifier_to_identifiers-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 119</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">collection_identifier_to_identifiers</span>(<span class="ruby-identifier">identifier</span>)
   <span class="ruby-identifier">results</span> = <span class="ruby-identifier">apply_xpath_to_sparql_query</span>(
     <span class="ruby-string">&quot;//*:uri/text()&quot;</span>,
@@ -490,70 +479,64 @@ response</p>
     <span class="ruby-keyword">return</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">identifier_to_identifiers</span>(<span class="ruby-identifier">identifier_url_to_identifier</span>(<span class="ruby-identifier">r</span>))}.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">uniq</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- collection_identifier_to_identifiers-source -->
-            
-          </div>
+          </div><!-- collection_identifier_to_identifiers-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- collection_identifier_to_identifiers-method -->
+
+    
+      <div id="method-c-identifier_to_components" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">identifier_to_components</span><span
+            class="method-args">(identifier)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Splits identifier into component array by slashes</p>
           
 
           
-        </div><!-- collection_identifier_to_identifiers-method -->
-
-      
-        <div id="identifier_to_components-method" class="method-detail ">
-          <a name="method-c-identifier_to_components"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">identifier_to_components</span><span
-              class="method-args">(identifier)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Splits identifier into component array by slashes</p>
-            
-
-            
-            <div class="method-source-code" id="identifier_to_components-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 27</span>
+          <div class="method-source-code" id="identifier_to_components-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 27</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">identifier_to_components</span>(<span class="ruby-identifier">identifier</span>)
   <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'/'</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- identifier_to_components-source -->
-            
-          </div>
-
+          </div><!-- identifier_to_components-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- identifier_to_components-method -->
+
+    
+      <div id="method-c-identifier_to_identifiers" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">identifier_to_identifiers</span><span
+            class="method-args">(identifier)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- identifier_to_components-method -->
-
-      
-        <div id="identifier_to_identifiers-method" class="method-detail ">
-          <a name="method-c-identifier_to_identifiers"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">identifier_to_identifiers</span><span
-              class="method-args">(identifier)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Takes an identifier and returns an array of related identifiers from the
+          <p>Takes an identifier and returns an array of related identifiers from the
 numbers server.</p>
-            
+          
 
-            
-            <div class="method-source-code" id="identifier_to_identifiers-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 96</span>
+          
+          <div class="method-source-code" id="identifier_to_identifiers-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 96</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">identifier_to_identifiers</span>(<span class="ruby-identifier">identifier</span>)
   <span class="ruby-identifier">results</span> = <span class="ruby-identifier">apply_xpath_to_identifier</span>(
     <span class="ruby-string">&quot;/rdf:RDF/rdf:Description/dcterms:relation/@rdf:resource&quot;</span>, <span class="ruby-identifier">identifier</span>)
@@ -563,106 +546,97 @@ numbers server.</p>
     <span class="ruby-keyword">return</span> [<span class="ruby-identifier">identifier</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">identifier_url_to_identifier</span>(<span class="ruby-identifier">r</span>)}
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- identifier_to_identifiers-source -->
-            
-          </div>
+          </div><!-- identifier_to_identifiers-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- identifier_to_identifiers-method -->
+
+    
+      <div id="method-c-identifier_to_local_identifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">identifier_to_local_identifier</span><span
+            class="method-args">(identifier)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Converts e.g. ‘papyri.info/hgv/1234’ to ‘/hgv/1234’</p>
           
 
           
-        </div><!-- identifier_to_identifiers-method -->
-
-      
-        <div id="identifier_to_local_identifier-method" class="method-detail ">
-          <a name="method-c-identifier_to_local_identifier"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">identifier_to_local_identifier</span><span
-              class="method-args">(identifier)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Converts e.g. ‘papyri.info/hgv/1234’ to ‘/hgv/1234’</p>
-            
-
-            
-            <div class="method-source-code" id="identifier_to_local_identifier-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 16</span>
+          <div class="method-source-code" id="identifier_to_local_identifier-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 16</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">identifier_to_local_identifier</span>(<span class="ruby-identifier">identifier</span>)
   <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-node">/^#{NAMESPACE_IDENTIFIER}/</span>, <span class="ruby-string">''</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- identifier_to_local_identifier-source -->
-            
-          </div>
+          </div><!-- identifier_to_local_identifier-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- identifier_to_local_identifier-method -->
+
+    
+      <div id="method-c-identifier_to_numbers_server_response" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">identifier_to_numbers_server_response</span><span
+            class="method-args">(identifier, decorator = 'rdf')</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Gets the HTTP response for a given identifier.</p>
           
 
           
-        </div><!-- identifier_to_local_identifier-method -->
-
-      
-        <div id="identifier_to_numbers_server_response-method" class="method-detail ">
-          <a name="method-c-identifier_to_numbers_server_response"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">identifier_to_numbers_server_response</span><span
-              class="method-args">(identifier, decorator = 'rdf')</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Gets the HTTP response for a given identifier.</p>
-            
-
-            
-            <div class="method-source-code" id="identifier_to_numbers_server_response-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 59</span>
+          <div class="method-source-code" id="identifier_to_numbers_server_response-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 59</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">identifier_to_numbers_server_response</span>(<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">decorator</span> = <span class="ruby-string">'rdf'</span>)
   <span class="ruby-identifier">path</span> = <span class="ruby-identifier">identifier_to_path</span>(<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">decorator</span>)
   <span class="ruby-identifier">response</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get_response</span>(<span class="ruby-constant">NUMBERS_SERVER_DOMAIN</span>, <span class="ruby-identifier">path</span>,
                                     <span class="ruby-constant">NUMBERS_SERVER_PORT</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- identifier_to_numbers_server_response-source -->
-            
-          </div>
-
+          </div><!-- identifier_to_numbers_server_response-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- identifier_to_numbers_server_response-method -->
+
+    
+      <div id="method-c-identifier_to_parts" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">identifier_to_parts</span><span
+            class="method-args">(identifier)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- identifier_to_numbers_server_response-method -->
-
-      
-        <div id="identifier_to_parts-method" class="method-detail ">
-          <a name="method-c-identifier_to_parts"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">identifier_to_parts</span><span
-              class="method-args">(identifier)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Gets the ‘parts’ for an identifier, useful for figuring out hierarchy
+          <p>Gets the ‘parts’ for an identifier, useful for figuring out hierarchy
 coming in from an identifier class. e.g. ‘papyri.info/ddbdp’ =&gt;
 [“papyri.info/ddbdp/bgu”, “papyri.info/ddbdp/c.ep.lat”, …]</p>
-            
+          
 
-            
-            <div class="method-source-code" id="identifier_to_parts-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 108</span>
+          
+          <div class="method-source-code" id="identifier_to_parts-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 108</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">identifier_to_parts</span>(<span class="ruby-identifier">identifier</span>)
   <span class="ruby-identifier">results</span> = <span class="ruby-identifier">apply_xpath_to_identifier</span>(
     <span class="ruby-string">&quot;/rdf:RDF/rdf:Description/dcterms:hasPart/@rdf:resource&quot;</span>, <span class="ruby-identifier">identifier</span>)
@@ -672,113 +646,104 @@ coming in from an identifier class. e.g. ‘papyri.info/ddbdp’ =&gt;
     <span class="ruby-keyword">return</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">identifier_url_to_identifier</span>(<span class="ruby-identifier">r</span>)}
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- identifier_to_parts-source -->
-            
-          </div>
-
+          </div><!-- identifier_to_parts-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- identifier_to_parts-method -->
+
+    
+      <div id="method-c-identifier_to_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">identifier_to_path</span><span
+            class="method-args">(identifier, decorator)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- identifier_to_parts-method -->
-
-      
-        <div id="identifier_to_path-method" class="method-detail ">
-          <a name="method-c-identifier_to_path"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">identifier_to_path</span><span
-              class="method-args">(identifier, decorator)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Converts e.g. ‘papyri.info/hgv/1234’ to ‘hgv/1234/rdf’, where
+          <p>Converts e.g. ‘papyri.info/hgv/1234’ to ‘hgv/1234/rdf’, where
 ‘rdf’ is the decorator. Used by numbers_server_response methods to
 construct an appropriate HTTP request.</p>
-            
+          
 
-            
-            <div class="method-source-code" id="identifier_to_path-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 33</span>
+          
+          <div class="method-source-code" id="identifier_to_path-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 33</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">identifier_to_path</span>(<span class="ruby-identifier">identifier</span>, <span class="ruby-identifier">decorator</span>)
   <span class="ruby-identifier">local_identifier</span> = <span class="ruby-identifier">identifier_to_local_identifier</span>(<span class="ruby-identifier">identifier</span>)
   <span class="ruby-identifier">url_paths</span> = <span class="ruby-identifier">identifier_to_components</span>(<span class="ruby-identifier">local_identifier</span>)
   <span class="ruby-identifier">url_paths</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">decorator</span>
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">url_paths</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">'/'</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- identifier_to_path-source -->
-            
-          </div>
-
+          </div><!-- identifier_to_path-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- identifier_to_path-method -->
+
+    
+      <div id="method-c-identifier_to_title" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">identifier_to_title</span><span
+            class="method-args">(identifier)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- identifier_to_path-method -->
-
-      
-        <div id="identifier_to_title-method" class="method-detail ">
-          <a name="method-c-identifier_to_title"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">identifier_to_title</span><span
-              class="method-args">(identifier)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Gets the title for an identifier using its frbr:Work/rdf representation.
+          <p>Gets the title for an identifier using its frbr:Work/rdf representation.
 Currently only works for HGV identifiers, e.g. ‘papyri.info/hgv/25883’
 =&gt; ‘P.Köln 3, 160 Einleitung’.</p>
-            
+          
 
-            
-            <div class="method-source-code" id="identifier_to_title-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 133</span>
+          
+          <div class="method-source-code" id="identifier_to_title-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 133</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">identifier_to_title</span>(<span class="ruby-identifier">identifier</span>)
   <span class="ruby-identifier">result</span> = <span class="ruby-identifier">apply_xpath_to_identifier</span>(
     <span class="ruby-string">&quot;/rdf:RDF/rdf:Description/dcterms:bibliographicCitation/text()&quot;</span>, <span class="ruby-identifier">identifier</span>, <span class="ruby-string">'frbr:Work/rdf'</span>
   )
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">first</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- identifier_to_title-source -->
-            
-          </div>
-
+          </div><!-- identifier_to_title-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- identifier_to_title-method -->
+
+    
+      <div id="method-c-identifier_to_url" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">identifier_to_url</span><span
+            class="method-args">(identifier)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- identifier_to_title-method -->
-
-      
-        <div id="identifier_to_url-method" class="method-detail ">
-          <a name="method-c-identifier_to_url"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">identifier_to_url</span><span
-              class="method-args">(identifier)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Converts e.g. ‘papyri.info/hgv/1234’ to ‘<a
+          <p>Converts e.g. ‘papyri.info/hgv/1234’ to ‘<a
 href="http://papyri.info/hgv/1234">papyri.info/hgv/1234</a>’</p>
-            
+          
 
-            
-            <div class="method-source-code" id="identifier_to_url-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 50</span>
+          
+          <div class="method-source-code" id="identifier_to_url-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 50</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">identifier_to_url</span>(<span class="ruby-identifier">identifier</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">identifier</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/^#{NAMESPACE_IDENTIFIER}/</span>
     <span class="ruby-keyword">return</span> <span class="ruby-node">&quot;http://#{identifier}&quot;</span>
@@ -786,73 +751,67 @@ href="http://papyri.info/hgv/1234">papyri.info/hgv/1234</a>’</p>
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- identifier_to_url-source -->
-            
-          </div>
-
+          </div><!-- identifier_to_url-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- identifier_to_url-method -->
+
+    
+      <div id="method-c-identifier_url_to_identifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">identifier_url_to_identifier</span><span
+            class="method-args">(identifier)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- identifier_to_url-method -->
-
-      
-        <div id="identifier_url_to_identifier-method" class="method-detail ">
-          <a name="method-c-identifier_url_to_identifier"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">identifier_url_to_identifier</span><span
-              class="method-args">(identifier)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Converts e.g. ‘<a
+          <p>Converts e.g. ‘<a
 href="http://papyri.info/hgv/1234/rdf">papyri.info/hgv/1234/rdf</a>’ to
 ‘papyri.info/hgv/1234’</p>
-            
+          
 
-            
-            <div class="method-source-code" id="identifier_url_to_identifier-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 21</span>
+          
+          <div class="method-source-code" id="identifier_url_to_identifier-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 21</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">identifier_url_to_identifier</span>(<span class="ruby-identifier">identifier</span>)
   <span class="ruby-identifier">no_scheme</span> = <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/^http:\/\//</span>,<span class="ruby-string">''</span>)
   <span class="ruby-identifier">no_decorator</span> = <span class="ruby-identifier">no_scheme</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/\/(rdf|source)$/</span>,<span class="ruby-string">''</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- identifier_url_to_identifier-source -->
-            
-          </div>
-
+          </div><!-- identifier_url_to_identifier-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- identifier_url_to_identifier-method -->
+
+    
+      <div id="method-c-identifiers_to_hash" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">identifiers_to_hash</span><span
+            class="method-args">(identifiers)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- identifier_url_to_identifier-method -->
-
-      
-        <div id="identifiers_to_hash-method" class="method-detail ">
-          <a name="method-c-identifiers_to_hash"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">identifiers_to_hash</span><span
-              class="method-args">(identifiers)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Takes an array of identifiers and Returns a hash with IDENTIFIER_NAMESPACE
+          <p>Takes an array of identifiers and Returns a hash with IDENTIFIER_NAMESPACE
 (hgv, tm, ddbdp etc)  as the keys and the identifier as the value.</p>
-            
+          
 
-            
-            <div class="method-source-code" id="identifiers_to_hash-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 142</span>
+          
+          <div class="method-source-code" id="identifiers_to_hash-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 142</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">identifiers_to_hash</span>(<span class="ruby-identifier">identifiers</span>)
   <span class="ruby-identifier">identifiers_hash</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
   <span class="ruby-keyword">unless</span> <span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">nil?</span>
@@ -867,36 +826,33 @@ href="http://papyri.info/hgv/1234/rdf">papyri.info/hgv/1234/rdf</a>’ to
   <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">identifiers_hash</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- identifiers_to_hash-source -->
-            
-          </div>
+          </div><!-- identifiers_to_hash-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- identifiers_to_hash-method -->
+
+    
+      <div id="method-c-process_numbers_server_response_body" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">process_numbers_server_response_body</span><span
+            class="method-args">(rdf_xml, xpath)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Applies XPath to an XML response body</p>
           
 
           
-        </div><!-- identifiers_to_hash-method -->
-
-      
-        <div id="process_numbers_server_response_body-method" class="method-detail ">
-          <a name="method-c-process_numbers_server_response_body"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">process_numbers_server_response_body</span><span
-              class="method-args">(rdf_xml, xpath)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Applies XPath to an XML response body</p>
-            
-
-            
-            <div class="method-source-code" id="process_numbers_server_response_body-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 158</span>
+          <div class="method-source-code" id="process_numbers_server_response_body-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 158</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">process_numbers_server_response_body</span>(<span class="ruby-identifier">rdf_xml</span>, <span class="ruby-identifier">xpath</span>)
   <span class="ruby-keyword">begin</span>
     <span class="ruby-keyword">return</span> <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xpath</span>(<span class="ruby-identifier">rdf_xml</span>, <span class="ruby-identifier">xpath</span>, <span class="ruby-keyword">true</span>).<span class="ruby-identifier">collect</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">xpath_result</span><span class="ruby-operator">|</span>
@@ -906,72 +862,66 @@ href="http://papyri.info/hgv/1234/rdf">papyri.info/hgv/1234/rdf</a>’ to
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- process_numbers_server_response_body-source -->
-            
-          </div>
+          </div><!-- process_numbers_server_response_body-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- process_numbers_server_response_body-method -->
+
+    
+      <div id="method-c-sparql_query_to_numbers_server_response" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sparql_query_to_numbers_server_response</span><span
+            class="method-args">(sparql_query, format = '')</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Gets the HTTP response for a given SPARQL query.</p>
           
 
           
-        </div><!-- process_numbers_server_response_body-method -->
-
-      
-        <div id="sparql_query_to_numbers_server_response-method" class="method-detail ">
-          <a name="method-c-sparql_query_to_numbers_server_response"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">sparql_query_to_numbers_server_response</span><span
-              class="method-args">(sparql_query, format = '')</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Gets the HTTP response for a given SPARQL query.</p>
-            
-
-            
-            <div class="method-source-code" id="sparql_query_to_numbers_server_response-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 66</span>
+          <div class="method-source-code" id="sparql_query_to_numbers_server_response-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 66</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">sparql_query_to_numbers_server_response</span>(<span class="ruby-identifier">sparql_query</span>, <span class="ruby-identifier">format</span> = <span class="ruby-string">''</span>)
   <span class="ruby-identifier">path</span> = <span class="ruby-identifier">sparql_query_to_path</span>(<span class="ruby-identifier">sparql_query</span>, <span class="ruby-identifier">format</span>)
   <span class="ruby-identifier">response</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get_response</span>(<span class="ruby-constant">NUMBERS_SERVER_DOMAIN</span>, <span class="ruby-identifier">path</span>,
                                     <span class="ruby-constant">NUMBERS_SERVER_PORT</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- sparql_query_to_numbers_server_response-source -->
-            
-          </div>
-
+          </div><!-- sparql_query_to_numbers_server_response-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- sparql_query_to_numbers_server_response-method -->
+
+    
+      <div id="method-c-sparql_query_to_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sparql_query_to_path</span><span
+            class="method-args">(sparql_query, format = '')</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- sparql_query_to_numbers_server_response-method -->
-
-      
-        <div id="sparql_query_to_path-method" class="method-detail ">
-          <a name="method-c-sparql_query_to_path"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">sparql_query_to_path</span><span
-              class="method-args">(sparql_query, format = '')</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Converts a pure SPARQL query string into the appropriate URL path for our
+          <p>Converts a pure SPARQL query string into the appropriate URL path for our
 use.</p>
-            
+          
 
-            
-            <div class="method-source-code" id="sparql_query_to_path-source">
-<pre>
-<span class="ruby-comment"># File lib/numbers_rdf.rb, line 41</span>
+          
+          <div class="method-source-code" id="sparql_query_to_path-source">
+            <pre><span class="ruby-comment"># File lib/numbers_rdf.rb, line 41</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">sparql_query_to_path</span>(<span class="ruby-identifier">sparql_query</span>, <span class="ruby-identifier">format</span> = <span class="ruby-string">''</span>)
   <span class="ruby-identifier">path</span> = <span class="ruby-string">&quot;/mulgara/sparql/?query=&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">URI</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-identifier">sparql_query</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">format</span> <span class="ruby-operator">!=</span> <span class="ruby-string">''</span>
@@ -979,29 +929,26 @@ use.</p>
   <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">path</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- sparql_query_to_path-source -->
-            
-          </div>
-
+          </div><!-- sparql_query_to_path-source -->
           
+        </div>
 
-          
-        </div><!-- sparql_query_to_path-method -->
+        
 
-      
-      </div><!-- public-class-method-details -->
+        
+      </div><!-- sparql_query_to_path-method -->
+
     
-    </div><!-- 5Buntitled-5D -->
+    </section><!-- public-class-method-details -->
   
+  </section><!-- 5Buntitled-5D -->
 
-  </div><!-- documentation -->
+</div><!-- documentation -->
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
 
-</body>
-</html>
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 

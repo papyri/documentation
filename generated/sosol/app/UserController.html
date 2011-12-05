@@ -1,446 +1,450 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-  <title>Class: UserController</title>
+<title>Class: UserController</title>
 
-  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
-  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
 
-</head>
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
 <body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="./index.html">Home</a>
-          <a href="./index.html#classes">Classes</a>
-          <a href="./index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="./app/controllers/user_controller_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="app/controllers/user_controller.rb">app/controllers/user_controller.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-      
-    </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-    <div id="class-metadata">
-      
-      <!-- Parent Class -->
-      <div id="parent-class-section" class="section">
-        <h3 class="section-header">Parent</h3>
-        
-        <p class="link"><a href="ApplicationController.html">ApplicationController</a></p>
-        
-      </div>
-      
 
-      
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/user_controller.rb
+  </ul>
+</nav>
 
-      
-
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-i-account">#account</a></li>
-          
-          <li><a href="#method-i-all_usage_stats">#all_usage_stats</a></li>
-          
-          <li><a href="#method-i-archives">#archives</a></li>
-          
-          <li><a href="#method-i-create_email_everybody">#create_email_everybody</a></li>
-          
-          <li><a href="#method-i-dashboard">#dashboard</a></li>
-          
-          <li><a href="#method-i-developer">#developer</a></li>
-          
-          <li><a href="#method-i-email_everybody">#email_everybody</a></li>
-          
-          <li><a href="#method-i-info">#info</a></li>
-          
-          <li><a href="#method-i-show">#show</a></li>
-          
-          <li><a href="#method-i-signin">#signin</a></li>
-          
-          <li><a href="#method-i-signout">#signout</a></li>
-          
-          <li><a href="#method-i-update_personal">#update_personal</a></li>
-          
-          <li><a href="#method-i-usage_stats">#usage_stats</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="./images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="./Papyrillio.html">Papyrillio</a></li>
-        
-          <li><a href="./Papyrillio/Aggregator.html">Papyrillio::Aggregator</a></li>
-        
-          <li><a href="./Papyrillio/Collector.html">Papyrillio::Collector</a></li>
-        
-          <li><a href="./Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a></li>
-        
-          <li><a href="./Papyrillio/Decorator.html">Papyrillio::Decorator</a></li>
-        
-          <li><a href="./Papyrillio/Organiser.html">Papyrillio::Organiser</a></li>
-        
-          <li><a href="./Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a></li>
-        
-          <li><a href="./Papyrillio/Printer.html">Papyrillio::Printer</a></li>
-        
-          <li><a href="./Papyrillio/Publishee.html">Papyrillio::Publishee</a></li>
-        
-          <li><a href="./Papyrillio/Publisher.html">Papyrillio::Publisher</a></li>
-        
-          <li><a href="./Papyrillio/Transformer.html">Papyrillio::Transformer</a></li>
-        
-          <li><a href="./JRubyXML.html">JRubyXML</a></li>
-        
-          <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a></li>
-        
-          <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a></li>
-        
-          <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a></li>
-        
-          <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a></li>
-        
-          <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a></li>
-        
-          <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a></li>
-        
-          <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a></li>
-        
-          <li><a href="./REXML.html">REXML</a></li>
-        
-          <li><a href="./REXML/Document.html">REXML::Document</a></li>
-        
-          <li><a href="./REXML/Element.html">REXML::Element</a></li>
-        
-          <li><a href="./REXML/XPath.html">REXML::XPath</a></li>
-        
-          <li><a href="./Rpx.html">Rpx</a></li>
-        
-          <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a></li>
-        
-          <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a></li>
-        
-          <li><a href="./Comment.html">Comment</a></li>
-        
-          <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a></li>
-        
-          <li><a href="./Doco.html">Doco</a></li>
-        
-          <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a></li>
-        
-          <li><a href="./Grit.html">Grit</a></li>
-        
-          <li><a href="./Grit/Commit.html">Grit::Commit</a></li>
-        
-          <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a></li>
-        
-          <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
-        
-          <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a></li>
-        
-          <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a></li>
-        
-          <li><a href="./NumbersRDF.html">NumbersRDF</a></li>
-        
-          <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a></li>
-        
-          <li><a href="./AjaxProxyController.html">AjaxProxyController</a></li>
-        
-          <li><a href="./ApplicationController.html">ApplicationController</a></li>
-        
-          <li><a href="./ApplicationHelper.html">ApplicationHelper</a></li>
-        
-          <li><a href="./Board.html">Board</a></li>
-        
-          <li><a href="./BoardsController.html">BoardsController</a></li>
-        
-          <li><a href="./CommentsController.html">CommentsController</a></li>
-        
-          <li><a href="./DDBIdentifier.html">DDBIdentifier</a></li>
-        
-          <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a></li>
-        
-          <li><a href="./Decree.html">Decree</a></li>
-        
-          <li><a href="./DecreesController.html">DecreesController</a></li>
-        
-          <li><a href="./DocosController.html">DocosController</a></li>
-        
-          <li><a href="./DocovideosController.html">DocovideosController</a></li>
-        
-          <li><a href="./Emailer.html">Emailer</a></li>
-        
-          <li><a href="./EmailerMailer.html">EmailerMailer</a></li>
-        
-          <li><a href="./EmailersController.html">EmailersController</a></li>
-        
-          <li><a href="./Event.html">Event</a></li>
-        
-          <li><a href="./EventsController.html">EventsController</a></li>
-        
-          <li><a href="./GitConf.html">GitConf</a></li>
-        
-          <li><a href="./HGVBiblioIdentifier.html">HGVBiblioIdentifier</a></li>
-        
-          <li><a href="./HGVIdentifier.html">HGVIdentifier</a></li>
-        
-          <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a></li>
-        
-          <li><a href="./HelperController.html">HelperController</a></li>
-        
-          <li><a href="./HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a></li>
-        
-          <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></li>
-        
-          <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a></li>
-        
-          <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a></li>
-        
-          <li><a href="./Identifier.html">Identifier</a></li>
-        
-          <li><a href="./IdentifiersController.html">IdentifiersController</a></li>
-        
-          <li><a href="./Integer.html">Integer</a></li>
-        
-          <li><a href="./Leiden.html">Leiden</a></li>
-        
-          <li><a href="./LeidenController.html">LeidenController</a></li>
-        
-          <li><a href="./LinkingInfo.html">LinkingInfo</a></li>
-        
-          <li><a href="./MaintenanceMode.html">MaintenanceMode</a></li>
-        
-          <li><a href="./Object.html">Object</a></li>
-        
-          <li><a href="./Publication.html">Publication</a></li>
-        
-          <li><a href="./PublicationsController.html">PublicationsController</a></li>
-        
-          <li><a href="./Rails.html">Rails</a></li>
-        
-          <li><a href="./RepositoriesController.html">RepositoriesController</a></li>
-        
-          <li><a href="./Repository.html">Repository</a></li>
-        
-          <li><a href="./RpxController.html">RpxController</a></li>
-        
-          <li><a href="./TranslationHelperController.html">TranslationHelperController</a></li>
-        
-          <li><a href="./TranslationLeiden.html">TranslationLeiden</a></li>
-        
-          <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a></li>
-        
-          <li><a href="./User.html">User</a></li>
-        
-          <li><a href="./UserController.html">UserController</a></li>
-        
-          <li><a href="./UserIdentifier.html">UserIdentifier</a></li>
-        
-          <li><a href="./Vote.html">Vote</a></li>
-        
-          <li><a href="./VotesController.html">VotesController</a></li>
-        
-          <li><a href="./WelcomeController.html">WelcomeController</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
+    
   </div>
 
-  <div id="documentation">
-    <h1 class="class">UserController</h1>
-
-    <div id="description" class="description">
-      
-    </div><!-- description -->
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</nav>
 
     
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
     
+    <li><a href="#method-i-account">#account</a>
     
-    <div id="5Buntitled-5D" class="documentation-section">
-      
+    <li><a href="#method-i-all_users_links">#all_users_links</a>
+    
+    <li><a href="#method-i-archives">#archives</a>
+    
+    <li><a href="#method-i-create_email_everybody">#create_email_everybody</a>
+    
+    <li><a href="#method-i-dashboard">#dashboard</a>
+    
+    <li><a href="#method-i-developer">#developer</a>
+    
+    <li><a href="#method-i-email_everybody">#email_everybody</a>
+    
+    <li><a href="#method-i-info">#info</a>
+    
+    <li><a href="#method-i-refresh_usage">#refresh_usage</a>
+    
+    <li><a href="#method-i-show">#show</a>
+    
+    <li><a href="#method-i-signin">#signin</a>
+    
+    <li><a href="#method-i-signout">#signout</a>
+    
+    <li><a href="#method-i-update_personal">#update_personal</a>
+    
+    <li><a href="#method-i-usage_stats">#usage_stats</a>
+    
+  </ul>
+</nav>
 
-      
+  </div>
 
-      
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
 
-      
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
 
-      <!-- Methods -->
-      
-      <div id="public-instance-method-details" class="method-section section">
-        <h3 class="section-header">Public Instance Methods</h3>
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
 
-      
-        <div id="account-method" class="method-detail ">
-          <a name="method-i-account"></a>
+  <ul class="link-list">
+  
+    <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo.html">HgvMetaIdentifierHelper::HgvGeo</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/GeoSpot.html">HgvMetaIdentifierHelper::HgvGeo::GeoSpot</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/OrigPlace.html">HgvMetaIdentifierHelper::HgvGeo::OrigPlace</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Place.html">HgvMetaIdentifierHelper::HgvGeo::Place</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Provenance.html">HgvMetaIdentifierHelper::HgvGeo::Provenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a>
+  
+    <li><a href="./Papyrillio.html">Papyrillio</a>
+  
+    <li><a href="./Papyrillio/Aggregator.html">Papyrillio::Aggregator</a>
+  
+    <li><a href="./Papyrillio/Collector.html">Papyrillio::Collector</a>
+  
+    <li><a href="./Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a>
+  
+    <li><a href="./Papyrillio/Decorator.html">Papyrillio::Decorator</a>
+  
+    <li><a href="./Papyrillio/Organiser.html">Papyrillio::Organiser</a>
+  
+    <li><a href="./Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a>
+  
+    <li><a href="./Papyrillio/Printer.html">Papyrillio::Printer</a>
+  
+    <li><a href="./Papyrillio/Publishee.html">Papyrillio::Publishee</a>
+  
+    <li><a href="./Papyrillio/Publisher.html">Papyrillio::Publisher</a>
+  
+    <li><a href="./Papyrillio/Transformer.html">Papyrillio::Transformer</a>
+  
+    <li><a href="./JRubyXML.html">JRubyXML</a>
+  
+    <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a>
+  
+    <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a>
+  
+    <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a>
+  
+    <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a>
+  
+    <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a>
+  
+    <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a>
+  
+    <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a>
+  
+    <li><a href="./REXML.html">REXML</a>
+  
+    <li><a href="./REXML/Document.html">REXML::Document</a>
+  
+    <li><a href="./REXML/Element.html">REXML::Element</a>
+  
+    <li><a href="./REXML/XPath.html">REXML::XPath</a>
+  
+    <li><a href="./Rpx.html">Rpx</a>
+  
+    <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a>
+  
+    <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a>
+  
+    <li><a href="./Comment.html">Comment</a>
+  
+    <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a>
+  
+    <li><a href="./Doco.html">Doco</a>
+  
+    <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a>
+  
+    <li><a href="./Grit.html">Grit</a>
+  
+    <li><a href="./Grit/Commit.html">Grit::Commit</a>
+  
+    <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+    <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a>
+  
+    <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a>
+  
+    <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a>
+  
+    <li><a href="./NumbersRDF.html">NumbersRDF</a>
+  
+    <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a>
+  
+    <li><a href="./AjaxProxyController.html">AjaxProxyController</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Board.html">Board</a>
+  
+    <li><a href="./BoardsController.html">BoardsController</a>
+  
+    <li><a href="./CommentsController.html">CommentsController</a>
+  
+    <li><a href="./DDBIdentifier.html">DDBIdentifier</a>
+  
+    <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a>
+  
+    <li><a href="./Decree.html">Decree</a>
+  
+    <li><a href="./DecreesController.html">DecreesController</a>
+  
+    <li><a href="./DocosController.html">DocosController</a>
+  
+    <li><a href="./DocovideosController.html">DocovideosController</a>
+  
+    <li><a href="./Emailer.html">Emailer</a>
+  
+    <li><a href="./EmailerMailer.html">EmailerMailer</a>
+  
+    <li><a href="./EmailersController.html">EmailersController</a>
+  
+    <li><a href="./Event.html">Event</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./GitConf.html">GitConf</a>
+  
+    <li><a href="./HGVBiblioIdentifier.html">HGVBiblioIdentifier</a>
+  
+    <li><a href="./HGVIdentifier.html">HGVIdentifier</a>
+  
+    <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a>
+  
+    <li><a href="./HelperController.html">HelperController</a>
+  
+    <li><a href="./HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a>
+  
+    <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a>
+  
+    <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a>
+  
+    <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a>
+  
+    <li><a href="./Identifier.html">Identifier</a>
+  
+    <li><a href="./IdentifiersController.html">IdentifiersController</a>
+  
+    <li><a href="./Integer.html">Integer</a>
+  
+    <li><a href="./Leiden.html">Leiden</a>
+  
+    <li><a href="./LeidenController.html">LeidenController</a>
+  
+    <li><a href="./LinkingInfo.html">LinkingInfo</a>
+  
+    <li><a href="./MaintenanceMode.html">MaintenanceMode</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Publication.html">Publication</a>
+  
+    <li><a href="./PublicationsController.html">PublicationsController</a>
+  
+    <li><a href="./Rails.html">Rails</a>
+  
+    <li><a href="./RepositoriesController.html">RepositoriesController</a>
+  
+    <li><a href="./Repository.html">Repository</a>
+  
+    <li><a href="./RpxController.html">RpxController</a>
+  
+    <li><a href="./TranslationHelperController.html">TranslationHelperController</a>
+  
+    <li><a href="./TranslationLeiden.html">TranslationLeiden</a>
+  
+    <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserController.html">UserController</a>
+  
+    <li><a href="./UserIdentifier.html">UserIdentifier</a>
+  
+    <li><a href="./Vote.html">Vote</a>
+  
+    <li><a href="./VotesController.html">VotesController</a>
+  
+    <li><a href="./WelcomeController.html">WelcomeController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class UserController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-account" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">account</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">account</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="account-source">
-<pre>
-<span class="ruby-comment"># File app/controllers/user_controller.rb, line 41</span>
+          <div class="method-source-code" id="account-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 86</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">account</span>
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@current_user</span>
     <span class="ruby-ivar">@identifiers</span> = <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">user_identifiers</span>
   <span class="ruby-keyword">end</span>    
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- account-source -->
-            
-          </div>
-
+          </div><!-- account-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- account-method -->
+
+    
+      <div id="method-i-all_users_links" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">all_users_links</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- account-method -->
-
-      
-        <div id="all_usage_stats-method" class="method-detail ">
-          <a name="method-i-all_usage_stats"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">all_usage_stats</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>TODO who has the right to see this?, will this create any dangerous links
+          <p>TODO who has the right to see this?, will this create any dangerous links
 to things that a user should not be able to do</p>
-            
 
-            
-            <div class="method-source-code" id="all_usage_stats-source">
-<pre>
-<span class="ruby-comment"># File app/controllers/user_controller.rb, line 17</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">all_usage_stats</span>
-  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">admin</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">developer</span>
-    <span class="ruby-ivar">@users</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>)
-    <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;usage_stats&quot;</span>
-    <span class="ruby-keyword">return</span>
-  <span class="ruby-keyword">end</span>
-  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+<pre class="ruby"><span class="ruby-identifier">commented</span> <span class="ruby-identifier">out</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">disable</span> <span class="ruby-identifier">per</span> <span class="ruby-identifier">weekly</span> <span class="ruby-identifier">meeting</span> <span class="ruby-value">9</span><span class="ruby-operator">/</span><span class="ruby-value">9</span><span class="ruby-operator">/</span><span class="ruby-value">2011</span>
+ <span class="ruby-keyword">def</span> <span class="ruby-identifier">all_usage_stats</span>
+   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">admin</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">developer</span>
+     <span class="ruby-ivar">@users</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(:<span class="ruby-identifier">all</span>)
+
+     <span class="ruby-comment">#default to show last 2 weeks activity when showing all users</span>
+     <span class="ruby-ivar">@calc_date</span> = <span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span> <span class="ruby-operator">-</span> <span class="ruby-value">14</span>
+
+     <span class="ruby-identifier">flash</span>.<span class="ruby-identifier">now</span>[:<span class="ruby-identifier">notice</span>] = <span class="ruby-node">&quot;Usage since #{@calc_date}&quot;</span>
+     <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;usage_stats&quot;</span>
+     <span class="ruby-keyword">return</span>
+   <span class="ruby-keyword">end</span>
+   <span class="ruby-identifier">flash</span>[:<span class="ruby-identifier">error</span>] = <span class="ruby-string">&quot;Only admins and developers are authorized to use this link.&quot;</span>
+   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+ <span class="ruby-keyword">end</span>
+</pre>
+          
+
+          
+          <div class="method-source-code" id="all_users_links-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">all_users_links</span>
+  <span class="ruby-ivar">@users</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>, <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;full_name ASC&quot;</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- all_usage_stats-source -->
-            
-          </div>
+          </div><!-- all_users_links-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- all_users_links-method -->
+
+    
+      <div id="method-i-archives" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">archives</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- all_usage_stats-method -->
-
-      
-        <div id="archives-method" class="method-detail ">
-          <a name="method-i-archives"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">archives</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="archives-source">
-<pre>
-<span class="ruby-comment"># File app/controllers/user_controller.rb, line 114</span>
+          <div class="method-source-code" id="archives-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 159</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">archives</span>
  <span class="ruby-comment"># @publications = Publication.find_all_by_owner_id(@current_user.id, :conditions =&gt; {:owner_type =&gt; 'User', :creator_id =&gt; @current_user.id, :status =&gt; 'archived', :parent_id =&gt; nil }, :include =&gt; :identifiers, :order =&gt; &quot;updated_at DESC&quot;)</span>
   <span class="ruby-comment">#@board_final_pubs = Array.new()</span>
@@ -454,36 +458,33 @@ to things that a user should not be able to do</p>
   
 
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- archives-source -->
-            
-          </div>
+          </div><!-- archives-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- archives-method -->
+
+    
+      <div id="method-i-create_email_everybody" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_email_everybody</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- archives-method -->
-
-      
-        <div id="create_email_everybody-method" class="method-detail ">
-          <a name="method-i-create_email_everybody"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">create_email_everybody</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="create_email_everybody-source">
-<pre>
-<span class="ruby-comment"># File app/controllers/user_controller.rb, line 149</span>
+          <div class="method-source-code" id="create_email_everybody-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 194</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create_email_everybody</span>
   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">admin</span>
     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;Only Admin Users can send an email to all SoSOL users.&quot;</span>
@@ -492,43 +493,41 @@ to things that a user should not be able to do</p>
   <span class="ruby-keyword">end</span>
   
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- create_email_everybody-source -->
-            
-          </div>
-
+          </div><!-- create_email_everybody-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- create_email_everybody-method -->
+
+    
+      <div id="method-i-dashboard" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dashboard</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- create_email_everybody-method -->
+          <p>def set_language_prefs</p>
 
-      
-        <div id="dashboard-method" class="method-detail ">
-          <a name="method-i-dashboard"></a>
+<pre class="ruby"><span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">language_prefs</span> =  <span class="ruby-identifier">params</span>[:<span class="ruby-identifier">languages</span>]
+<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">save</span>
 
-          
-          <div class="method-heading">
-            <span class="method-name">dashboard</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>def set_language_prefs</p>
-
-<pre>@current_user.language_prefs =  params[:languages]
-@current_user.save
-
-redirect_to :controller =&gt; :user, :action =&gt; &quot;dashboard&quot;</pre>
+<span class="ruby-identifier">redirect_to</span> :<span class="ruby-identifier">controller</span> =<span class="ruby-operator">&gt;</span> :<span class="ruby-identifier">user</span>, :<span class="ruby-identifier">action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;dashboard&quot;</span>
+</pre>
 
 <p>end</p>
-            
+          
 
-            
-            <div class="method-source-code" id="dashboard-source">
-<pre>
-<span class="ruby-comment"># File app/controllers/user_controller.rb, line 78</span>
+          
+          <div class="method-source-code" id="dashboard-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 123</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">dashboard</span>
   <span class="ruby-comment">#don't let someone who isn't signed in go to the dashboard</span>
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@current_user</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
@@ -564,36 +563,33 @@ redirect_to :controller =&gt; :user, :action =&gt; &quot;dashboard&quot;</pre>
                          <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:owner</span>, <span class="ruby-value">:target</span>])[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">24</span>]
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- dashboard-source -->
-            
-          </div>
+          </div><!-- dashboard-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- dashboard-method -->
+
+    
+      <div id="method-i-developer" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">developer</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- dashboard-method -->
-
-      
-        <div id="developer-method" class="method-detail ">
-          <a name="method-i-developer"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">developer</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="developer-source">
-<pre>
-<span class="ruby-comment"># File app/controllers/user_controller.rb, line 51</span>
+          <div class="method-source-code" id="developer-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 96</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">developer</span>
   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">developer</span>
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
@@ -601,36 +597,33 @@ redirect_to :controller =&gt; :user, :action =&gt; &quot;dashboard&quot;</pre>
   <span class="ruby-keyword">end</span>
   <span class="ruby-ivar">@boards</span> = <span class="ruby-constant">Board</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- developer-source -->
-            
-          </div>
+          </div><!-- developer-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- developer-method -->
+
+    
+      <div id="method-i-email_everybody" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">email_everybody</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- developer-method -->
-
-      
-        <div id="email_everybody-method" class="method-detail ">
-          <a name="method-i-email_everybody"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">email_everybody</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="email_everybody-source">
-<pre>
-<span class="ruby-comment"># File app/controllers/user_controller.rb, line 158</span>
+          <div class="method-source-code" id="email_everybody-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 203</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">email_everybody</span>
   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">admin</span>
     <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;Only Admin Users can create an email to all SoSOL users.&quot;</span>
@@ -649,72 +642,124 @@ redirect_to :controller =&gt; :user, :action =&gt; &quot;dashboard&quot;</pre>
   <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">'Email to all users was successfully sent.'</span>
   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- email_everybody-source -->
-            
-          </div>
+          </div><!-- email_everybody-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- email_everybody-method -->
+
+    
+      <div id="method-i-info" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">info</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- email_everybody-method -->
-
-      
-        <div id="info-method" class="method-detail ">
-          <a name="method-i-info"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">info</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="info-source">
-<pre>
-<span class="ruby-comment"># File app/controllers/user_controller.rb, line 26</span>
+          <div class="method-source-code" id="info-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 37</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">info</span>
   <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> {} <span class="ruby-operator">:</span> <span class="ruby-ivar">@current_user</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- info-source -->
-            
-          </div>
+          </div><!-- info-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- info-method -->
+
+    
+      <div id="method-i-refresh_usage" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">refresh_usage</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>view of stats for the user id page shown with optional date limitation</p>
           
 
           
-        </div><!-- info-method -->
+          <div class="method-source-code" id="refresh_usage-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">refresh_usage</span>
+  <span class="ruby-ivar">@users</span> = [<span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:save_user_id</span>])]
 
+  <span class="ruby-comment">#default to 1 year ago if date value not entered</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:date_value</span>].<span class="ruby-identifier">blank?</span>
+    <span class="ruby-identifier">params</span>[<span class="ruby-value">:date_value</span>] = <span class="ruby-string">'365'</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment">#if date value not numeric</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:date_value</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/[^\d]+/</span>).<span class="ruby-identifier">nil?</span>
+      <span class="ruby-ivar">@calc_date</span> = <span class="ruby-constant">Date</span>.<span class="ruby-identifier">tomorrow</span>
+      <span class="ruby-identifier">flash</span>.<span class="ruby-identifier">now</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;Please enter a whole number value for the usage range.&quot;</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;usage_stats&quot;</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:date_range</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;day&quot;</span>
+      <span class="ruby-ivar">@calc_date</span> = <span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:date_value</span>].<span class="ruby-identifier">to_i</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;month&quot;</span>
+      <span class="ruby-ivar">@calc_date</span> = <span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:date_value</span>].<span class="ruby-identifier">to_i</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;year&quot;</span>
+      <span class="ruby-identifier">calc_months</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:date_value</span>].<span class="ruby-identifier">to_i</span> * <span class="ruby-value">12</span>
+      <span class="ruby-ivar">@calc_date</span> = <span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">calc_months</span>
+  <span class="ruby-keyword">end</span>
       
-        <div id="show-method" class="method-detail ">
-          <a name="method-i-show"></a>
+  <span class="ruby-identifier">flash</span>.<span class="ruby-identifier">now</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;Usage since #{@calc_date}&quot;</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;usage_stats&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- refresh_usage-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- refresh_usage-method -->
+
+    
+      <div id="method-i-show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>default view of stats for the user name entered/linked to</p>
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">show</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="show-source">
-<pre>
-<span class="ruby-comment"># File app/controllers/user_controller.rb, line 30</span>
+          <div class="method-source-code" id="show-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 73</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
   <span class="ruby-ivar">@users</span> = [<span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_name</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user_name</span>])]
   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@users</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-ivar">@calc_date</span> = <span class="ruby-string">''</span>
+    
     <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;usage_stats&quot;</span>
     <span class="ruby-keyword">return</span>
   <span class="ruby-keyword">else</span>
@@ -722,103 +767,94 @@ redirect_to :controller =&gt; :user, :action =&gt; &quot;dashboard&quot;</pre>
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- show-source -->
-            
-          </div>
+          </div><!-- show-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- show-method -->
+
+    
+      <div id="method-i-signin" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">signin</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- show-method -->
-
-      
-        <div id="signin-method" class="method-detail ">
-          <a name="method-i-signin"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">signin</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="signin-source">
-<pre>
-<span class="ruby-comment"># File app/controllers/user_controller.rb, line 47</span>
+          <div class="method-source-code" id="signin-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 92</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">signin</span>
   
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- signin-source -->
-            
-          </div>
+          </div><!-- signin-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- signin-method -->
+
+    
+      <div id="method-i-signout" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">signout</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- signin-method -->
-
-      
-        <div id="signout-method" class="method-detail ">
-          <a name="method-i-signout"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">signout</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="signout-source">
-<pre>
-<span class="ruby-comment"># File app/controllers/user_controller.rb, line 5</span>
+          <div class="method-source-code" id="signout-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 5</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">signout</span>
   <span class="ruby-identifier">reset_session</span>
   <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:welcome</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;index&quot;</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- signout-source -->
-            
-          </div>
+          </div><!-- signout-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- signout-method -->
+
+    
+      <div id="method-i-update_personal" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_personal</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- signout-method -->
-
-      
-        <div id="update_personal-method" class="method-detail ">
-          <a name="method-i-update_personal"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">update_personal</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="update_personal-source">
-<pre>
-<span class="ruby-comment"># File app/controllers/user_controller.rb, line 128</span>
+          <div class="method-source-code" id="update_personal-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 173</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update_personal</span>
   <span class="ruby-comment">#only let current user change this data</span>
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_i</span>()
@@ -839,63 +875,57 @@ redirect_to :controller =&gt; :user, :action =&gt; &quot;dashboard&quot;</pre>
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;user&quot;</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;account&quot;</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- update_personal-source -->
-            
-          </div>
+          </div><!-- update_personal-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- update_personal-method -->
+
+    
+      <div id="method-i-usage_stats" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">usage_stats</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>default view of stats is only for the current user, see below for all users</p>
           
 
           
-        </div><!-- update_personal-method -->
-
-      
-        <div id="usage_stats-method" class="method-detail ">
-          <a name="method-i-usage_stats"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">usage_stats</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>default view of stats is only for the current user, see below for all users</p>
-            
-
-            
-            <div class="method-source-code" id="usage_stats-source">
-<pre>
-<span class="ruby-comment"># File app/controllers/user_controller.rb, line 11</span>
+          <div class="method-source-code" id="usage_stats-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 11</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">usage_stats</span>    
   <span class="ruby-ivar">@users</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>()
   <span class="ruby-ivar">@users</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@current_user</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- usage_stats-source -->
-            
-          </div>
-
+          </div><!-- usage_stats-source -->
           
+        </div>
 
-          
-        </div><!-- usage_stats-method -->
+        
 
-      
-      </div><!-- public-instance-method-details -->
+        
+      </div><!-- usage_stats-method -->
+
     
-    </div><!-- 5Buntitled-5D -->
+    </section><!-- public-instance-method-details -->
   
+  </section><!-- 5Buntitled-5D -->
 
-  </div><!-- documentation -->
+</div><!-- documentation -->
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
 
-</body>
-</html>
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 

@@ -2,17 +2,27 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta name="Content-Type" content="text/html; charset=utf-8" />
-<title>Class: RXSugar::Coverage::Runner</title>
-<link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: RXSugar::Coverage::Runner
+  
+    &mdash; Documentation by YARD 0.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '../..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -85,16 +98,23 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <h4>end translation====</h4>
+    
+<h4 id="label-end+translation%3D%3D%3D%3D">end translation====</h4>
 
 
   </div>
 </div>
 <div class="tags">
   
+
 </div>
 
   
+  
+  
+  
+
+
   
   
   
@@ -237,89 +257,95 @@
 210
 211
 212
-213</pre>
+213
+214
+215
+216</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/coverage/coverage.rb', line 136</span>
 
-<span class='def def kw'>def</span> <span class='run identifier id'>run</span><span class='lparen token'>(</span><span class='data_path identifier id'>data_path</span><span class='comma token'>,</span> <span class='run_note identifier id'>run_note</span><span class='rparen token'>)</span>
-  <span class='ddbcov identifier id'>ddbcov</span> <span class='assign token'>=</span> <span class='DDbCoverage constant id'>DDbCoverage</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_run identifier id'>run</span><span class='lparen token'>(</span><span class='rubyid_data_path identifier id'>data_path</span><span class='comma token'>,</span> <span class='rubyid_run_note identifier id'>run_note</span><span class='rparen token'>)</span>
+  <span class='rubyid_ddbcov identifier id'>ddbcov</span> <span class='assign token'>=</span> <span class='rubyid_DDbCoverage constant id'>DDbCoverage</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
 
-  <span class='xml_files identifier id'>xml_files</span> <span class='assign token'>=</span> <span class='Dir constant id'>Dir</span><span class='lbrack token'>[</span><span class='data_path identifier id'>data_path</span> <span class='plus op'>+</span> <span class='string val'>'/**/*.xml'</span><span class='rbrack token'>]</span>
-  <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;#{xml_files.length} XML files being checked in path #{data_path} &quot;</span>
-  <span class='passing_fragments identifier id'>passing_fragments</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
-  <span class='parse_errors identifier id'>parse_errors</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
-  <span class='reversibility_errors identifier id'>reversibility_errors</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='rubyid_xml_files identifier id'>xml_files</span> <span class='assign token'>=</span> <span class='rubyid_Dir constant id'>Dir</span><span class='lbrack token'>[</span><span class='rubyid_data_path identifier id'>data_path</span> <span class='plus op'>+</span> <span class='string val'>'/**/*.xml'</span><span class='rbrack token'>]</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;#{xml_files.length} XML files being checked in path #{data_path} &quot;</span>
+  <span class='rubyid_passing_fragments identifier id'>passing_fragments</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='rubyid_parse_errors identifier id'>parse_errors</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='rubyid_reversibility_errors identifier id'>reversibility_errors</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
 
-  <span class='error_frequencies identifier id'>error_frequencies</span> <span class='assign token'>=</span> <span class='ErrorFrequency constant id'>ErrorFrequency</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='rubyid_error_frequencies identifier id'>error_frequencies</span> <span class='assign token'>=</span> <span class='rubyid_ErrorFrequency constant id'>ErrorFrequency</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
 
-  <span class='xml_files_passing identifier id'>xml_files_passing</span> <span class='assign token'>=</span> <span class='Array constant id'>Array</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
-  <span class='xml_files_failing identifier id'>xml_files_failing</span> <span class='assign token'>=</span> <span class='Array constant id'>Array</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='rubyid_xml_files_passing identifier id'>xml_files_passing</span> <span class='assign token'>=</span> <span class='rubyid_Array constant id'>Array</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='rubyid_xml_files_failing identifier id'>xml_files_failing</span> <span class='assign token'>=</span> <span class='rubyid_Array constant id'>Array</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
 
-  <span class='xml_files_bar identifier id'>xml_files_bar</span> <span class='assign token'>=</span> <span class='ProgressBar constant id'>ProgressBar</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;files&quot;</span><span class='comma token'>,</span> <span class='xml_files identifier id'>xml_files</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='rparen token'>)</span>
+  <span class='rubyid_xml_files_bar identifier id'>xml_files_bar</span> <span class='assign token'>=</span> <span class='rubyid_ProgressBar constant id'>ProgressBar</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='string val'>&quot;files&quot;</span><span class='comma token'>,</span> <span class='rubyid_xml_files identifier id'>xml_files</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span><span class='rparen token'>)</span>
 
-  <span class='xml_files identifier id'>xml_files</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='xml_file identifier id'>xml_file</span><span class='bitor op'>|</span>
-    <span class='xml_content identifier id'>xml_content</span> <span class='assign token'>=</span> <span class='IO constant id'>IO</span><span class='dot token'>.</span><span class='readlines identifier id'>readlines</span><span class='lparen token'>(</span><span class='xml_file identifier id'>xml_file</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span>
-    <span class='xml_file identifier id'>xml_file</span> <span class='assign token'>=</span> <span class='xml_file identifier id'>xml_file</span><span class='dot token'>.</span><span class='sub identifier id'>sub</span><span class='lparen token'>(</span><span class='dregexp node'>/#{data_path}\/?/</span><span class='comma token'>,</span><span class='string val'>''</span><span class='rparen token'>)</span>
+  <span class='rubyid_xml_files identifier id'>xml_files</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_xml_file identifier id'>xml_file</span><span class='bitor op'>|</span>
+    <span class='rubyid_xml_content identifier id'>xml_content</span> <span class='assign token'>=</span> <span class='rubyid_IO constant id'>IO</span><span class='dot token'>.</span><span class='rubyid_readlines identifier id'>readlines</span><span class='lparen token'>(</span><span class='rubyid_xml_file identifier id'>xml_file</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+    <span class='rubyid_xml_file identifier id'>xml_file</span> <span class='assign token'>=</span> <span class='rubyid_xml_file identifier id'>xml_file</span><span class='dot token'>.</span><span class='rubyid_sub identifier id'>sub</span><span class='lparen token'>(</span><span class='dregexp node'>/#{data_path}\/?/</span><span class='comma token'>,</span><span class='string val'>''</span><span class='rparen token'>)</span>
     <span class='comment val'>#get div type=edition from input</span>
-    <span class='divedition identifier id'>divedition</span> <span class='assign token'>=</span> <span class='get_div_edition identifier id'>get_div_edition</span><span class='lparen token'>(</span><span class='xml_content identifier id'>xml_content</span><span class='rparen token'>)</span>
+    <span class='rubyid_divedition identifier id'>divedition</span> <span class='assign token'>=</span> <span class='rubyid_get_div_edition identifier id'>get_div_edition</span><span class='lparen token'>(</span><span class='rubyid_xml_content identifier id'>xml_content</span><span class='rparen token'>)</span>
 
     <span class='comment val'># try to parse the file as a whole</span>
-    <span class='begin begin kw'>begin</span>
+    <span class='rubyid_begin begin kw'>begin</span>
       <span class='comment val'>#xsugar parser is expecting a string not an array but did not want to lose line breaks so did not use special collapse method</span>
-      <span class='collapsed identifier id'>collapsed</span> <span class='assign token'>=</span> <span class='divedition identifier id'>divedition</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span>
+      <span class='rubyid_collapsed identifier id'>collapsed</span> <span class='assign token'>=</span> <span class='rubyid_divedition identifier id'>divedition</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
       <span class='comment val'>#try to transform from XML to Leiden+</span>
-      <span class='ddbcov identifier id'>ddbcov</span><span class='dot token'>.</span><span class='xsugar identifier id'>xsugar</span><span class='dot token'>.</span><span class='xml_to_non_xml identifier id'>xml_to_non_xml</span><span class='lparen token'>(</span><span class='collapsed identifier id'>collapsed</span><span class='rparen token'>)</span>
+      <span class='rubyid_ddbcov identifier id'>ddbcov</span><span class='dot token'>.</span><span class='rubyid_xsugar identifier id'>xsugar</span><span class='dot token'>.</span><span class='rubyid_xml_to_non_xml identifier id'>xml_to_non_xml</span><span class='lparen token'>(</span><span class='rubyid_collapsed identifier id'>collapsed</span><span class='rparen token'>)</span>
       <span class='comment val'># count as passing only  if the file is longer than a file with no text</span>
-      <span class='if if kw'>if</span> <span class='collapsed identifier id'>collapsed</span><span class='dot token'>.</span><span class='length identifier id'>length</span> <span class='gt op'>&gt;</span> <span class='string val'>&quot;&lt;div xml:lang=\&quot;grc\&quot; type=\&quot;edition\&quot; xml:space=\&quot;preserve\&quot;&gt;&lt;ab/&gt;&lt;/div&gt;&quot;</span><span class='dot token'>.</span><span class='length identifier id'>length</span>
-        <span class='xml_files_passing identifier id'>xml_files_passing</span> <span class='lshft op'>&lt;&lt;</span> <span class='xml_file identifier id'>xml_file</span>
-      <span class='end end kw'>end</span>
-    <span class='rescue rescue kw'>rescue</span>
-      <span class='xml_files_failing identifier id'>xml_files_failing</span> <span class='lshft op'>&lt;&lt;</span> <span class='xml_file identifier id'>xml_file</span>
-    <span class='end end kw'>end</span> <span class='comment val'>#end begin</span>
+      <span class='rubyid_if if kw'>if</span> <span class='rubyid_collapsed identifier id'>collapsed</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='gt op'>&gt;</span> <span class='string val'>&quot;&lt;div xml:lang=\&quot;grc\&quot; type=\&quot;edition\&quot; xml:space=\&quot;preserve\&quot;&gt;&lt;ab/&gt;&lt;/div&gt;&quot;</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span>
+        <span class='rubyid_xml_files_passing identifier id'>xml_files_passing</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_xml_file identifier id'>xml_file</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_rescue rescue kw'>rescue</span>
+      <span class='rubyid_xml_files_failing identifier id'>xml_files_failing</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_xml_file identifier id'>xml_file</span>
+    <span class='rubyid_end end kw'>end</span> <span class='comment val'>#end begin</span>
     <span class='comment val'># try to transform each XML fragment individually including &lt;lb&gt; tags</span>
-    <span class='ddbcov identifier id'>ddbcov</span><span class='dot token'>.</span><span class='get_all_element_children identifier id'>get_all_element_children</span><span class='lparen token'>(</span><span class='divedition identifier id'>divedition</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='child identifier id'>child</span><span class='bitor op'>|</span>
-      <span class='xml_fragment_content identifier id'>xml_fragment_content</span> <span class='assign token'>=</span> <span class='child identifier id'>child</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='tr identifier id'>tr</span><span class='lparen token'>(</span><span class='string val'>&quot;'&quot;</span><span class='comma token'>,</span><span class='string val'>'&quot;'</span><span class='rparen token'>)</span>
-      <span class='fragment_reference identifier id'>fragment_reference</span> <span class='assign token'>=</span> <span class='XMLFragmentReference constant id'>XMLFragmentReference</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='xml_file identifier id'>xml_file</span><span class='comma token'>,</span> <span class='child identifier id'>child</span><span class='rparen token'>)</span>
-      <span class='begin begin kw'>begin</span>
-        <span class='fragment_reference identifier id'>fragment_reference</span><span class='dot token'>.</span><span class='text identifier id'>text</span> <span class='assign token'>=</span>
-          <span class='ddbcov identifier id'>ddbcov</span><span class='dot token'>.</span><span class='assert_equal_xml_fragment_to_non_xml_to_xml_fragment identifier id'>assert_equal_xml_fragment_to_non_xml_to_xml_fragment</span><span class='lparen token'>(</span>
-          <span class='xml_fragment_content identifier id'>xml_fragment_content</span><span class='comma token'>,</span> <span class='xml_fragment_content identifier id'>xml_fragment_content</span><span class='rparen token'>)</span>
-        <span class='passing_fragments identifier id'>passing_fragments</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
-        <span class='error_frequencies identifier id'>error_frequencies</span><span class='dot token'>.</span><span class='add_error identifier id'>add_error</span><span class='lparen token'>(</span><span class='symbol val'>:pass</span><span class='comma token'>,</span> <span class='fragment_reference identifier id'>fragment_reference</span><span class='rparen token'>)</span>
-      <span class='rescue rescue kw'>rescue</span> <span class='NonXMLParseError constant id'>NonXMLParseError</span><span class='comma token'>,</span>
-             <span class='Test constant id'>Test</span><span class='colon2 op'>::</span><span class='Unit constant id'>Unit</span><span class='colon2 op'>::</span><span class='AssertionFailedError constant id'>AssertionFailedError</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='e identifier id'>e</span>
-        <span class='reversibility_errors identifier id'>reversibility_errors</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
-        <span class='fragment_reference identifier id'>fragment_reference</span><span class='dot token'>.</span><span class='text identifier id'>text</span> <span class='assign token'>=</span> <span class='ddbcov identifier id'>ddbcov</span><span class='dot token'>.</span><span class='transform_xml_fragment_to_non_xml identifier id'>transform_xml_fragment_to_non_xml</span><span class='lparen token'>(</span><span class='xml_fragment_content identifier id'>xml_fragment_content</span><span class='rparen token'>)</span>
-        <span class='error_frequencies identifier id'>error_frequencies</span><span class='dot token'>.</span><span class='add_error identifier id'>add_error</span><span class='lparen token'>(</span><span class='symbol val'>:reversibility</span><span class='comma token'>,</span> <span class='fragment_reference identifier id'>fragment_reference</span><span class='rparen token'>)</span>
-      <span class='rescue rescue kw'>rescue</span> <span class='XMLParseError constant id'>XMLParseError</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='e identifier id'>e</span>
-        <span class='parse_errors identifier id'>parse_errors</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
-        <span class='error_frequencies identifier id'>error_frequencies</span><span class='dot token'>.</span><span class='add_error identifier id'>add_error</span><span class='lparen token'>(</span><span class='symbol val'>:parse</span><span class='comma token'>,</span> <span class='fragment_reference identifier id'>fragment_reference</span><span class='rparen token'>)</span>
-      <span class='end end kw'>end</span> <span class='comment val'>#end begin</span>
-    <span class='end end kw'>end</span> <span class='comment val'>#end each do</span>
+    <span class='rubyid_ddbcov identifier id'>ddbcov</span><span class='dot token'>.</span><span class='rubyid_get_all_element_children identifier id'>get_all_element_children</span><span class='lparen token'>(</span><span class='rubyid_divedition identifier id'>divedition</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_child identifier id'>child</span><span class='bitor op'>|</span>
+      <span class='comment val'>#xml_fragment_content = child.to_s.tr(&quot;'&quot;,'&quot;') - stopped changing single quote to double on 11/2/2011 and worked fine in testing JF</span>
+      <span class='comment val'># was causing errors that were not errors in the nightly canonical testing</span>
+      <span class='rubyid_child identifier id'>child</span><span class='dot token'>.</span><span class='rubyid_attributes identifier id'>attributes</span><span class='dot token'>.</span><span class='rubyid_delete identifier id'>delete</span> <span class='string val'>'xml:id'</span>
+      <span class='rubyid_xml_fragment_content identifier id'>xml_fragment_content</span> <span class='assign token'>=</span> <span class='rubyid_child identifier id'>child</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+      <span class='rubyid_fragment_reference identifier id'>fragment_reference</span> <span class='assign token'>=</span> <span class='rubyid_XMLFragmentReference constant id'>XMLFragmentReference</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_xml_file identifier id'>xml_file</span><span class='comma token'>,</span> <span class='rubyid_child identifier id'>child</span><span class='rparen token'>)</span>
+      <span class='rubyid_begin begin kw'>begin</span>
+        <span class='rubyid_fragment_reference identifier id'>fragment_reference</span><span class='dot token'>.</span><span class='rubyid_text identifier id'>text</span> <span class='assign token'>=</span>
+          <span class='rubyid_ddbcov identifier id'>ddbcov</span><span class='dot token'>.</span><span class='rubyid_assert_equal_xml_fragment_to_non_xml_to_xml_fragment identifier id'>assert_equal_xml_fragment_to_non_xml_to_xml_fragment</span><span class='lparen token'>(</span>
+          <span class='rubyid_xml_fragment_content identifier id'>xml_fragment_content</span><span class='comma token'>,</span> <span class='rubyid_xml_fragment_content identifier id'>xml_fragment_content</span><span class='rparen token'>)</span>
+        <span class='rubyid_passing_fragments identifier id'>passing_fragments</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
+        <span class='rubyid_error_frequencies identifier id'>error_frequencies</span><span class='dot token'>.</span><span class='rubyid_add_error identifier id'>add_error</span><span class='lparen token'>(</span><span class='symbol val'>:pass</span><span class='comma token'>,</span> <span class='rubyid_fragment_reference identifier id'>fragment_reference</span><span class='rparen token'>)</span>
+      <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_NonXMLParseError constant id'>NonXMLParseError</span><span class='comma token'>,</span>
+             <span class='rubyid_Test constant id'>Test</span><span class='colon2 op'>::</span><span class='rubyid_Unit constant id'>Unit</span><span class='colon2 op'>::</span><span class='rubyid_AssertionFailedError constant id'>AssertionFailedError</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
+        <span class='rubyid_reversibility_errors identifier id'>reversibility_errors</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
+        <span class='rubyid_fragment_reference identifier id'>fragment_reference</span><span class='dot token'>.</span><span class='rubyid_text identifier id'>text</span> <span class='assign token'>=</span> <span class='rubyid_ddbcov identifier id'>ddbcov</span><span class='dot token'>.</span><span class='rubyid_transform_xml_fragment_to_non_xml identifier id'>transform_xml_fragment_to_non_xml</span><span class='lparen token'>(</span><span class='rubyid_xml_fragment_content identifier id'>xml_fragment_content</span><span class='rparen token'>)</span>
+        <span class='rubyid_error_frequencies identifier id'>error_frequencies</span><span class='dot token'>.</span><span class='rubyid_add_error identifier id'>add_error</span><span class='lparen token'>(</span><span class='symbol val'>:reversibility</span><span class='comma token'>,</span> <span class='rubyid_fragment_reference identifier id'>fragment_reference</span><span class='rparen token'>)</span>
+      <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_XMLParseError constant id'>XMLParseError</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_e identifier id'>e</span>
+        <span class='rubyid_parse_errors identifier id'>parse_errors</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
+        <span class='rubyid_error_frequencies identifier id'>error_frequencies</span><span class='dot token'>.</span><span class='rubyid_add_error identifier id'>add_error</span><span class='lparen token'>(</span><span class='symbol val'>:parse</span><span class='comma token'>,</span> <span class='rubyid_fragment_reference identifier id'>fragment_reference</span><span class='rparen token'>)</span>
+      <span class='rubyid_end end kw'>end</span> <span class='comment val'>#end begin</span>
+    <span class='rubyid_end end kw'>end</span> <span class='comment val'>#end each do</span>
     
-    <span class='xml_files_bar identifier id'>xml_files_bar</span><span class='dot token'>.</span><span class='inc identifier id'>inc</span>
-  <span class='end end kw'>end</span>
-  <span class='xml_files_bar identifier id'>xml_files_bar</span><span class='dot token'>.</span><span class='finish identifier id'>finish</span>
+    <span class='rubyid_xml_files_bar identifier id'>xml_files_bar</span><span class='dot token'>.</span><span class='rubyid_inc identifier id'>inc</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_xml_files_bar identifier id'>xml_files_bar</span><span class='dot token'>.</span><span class='rubyid_finish identifier id'>finish</span>
 
-  <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Failing:           #{xml_files_failing.length} / #{xml_files.length}&quot;</span>
-  <span class='puts identifier id'>puts</span> <span class='dstring node'>&quot;Non-empty passing: #{xml_files_passing.length} / #{xml_files.length}&quot;</span>
-  <span class='error_frequencies identifier id'>error_frequencies</span><span class='dot token'>.</span><span class='pretty_print identifier id'>pretty_print</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;Failing:           #{xml_files_failing.length} / #{xml_files.length}&quot;</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;Non-empty passing: #{xml_files_passing.length} / #{xml_files.length}&quot;</span>
+  <span class='rubyid_error_frequencies identifier id'>error_frequencies</span><span class='dot token'>.</span><span class='rubyid_pretty_print identifier id'>pretty_print</span>
 
-  <span class='puts identifier id'>puts</span> <span class='string val'>&quot;\nPassing XML files with content:\n&quot;</span> <span class='plus op'>+</span> 
-    <span class='xml_files_passing identifier id'>xml_files_passing</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot;\n&quot;</span><span class='rparen token'>)</span>
-  <span class='puts identifier id'>puts</span> <span class='string val'>&quot;\nFailing XML files:\n&quot;</span> <span class='plus op'>+</span> <span class='xml_files_failing identifier id'>xml_files_failing</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot;\n&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;\nPassing XML files with content:\n&quot;</span> <span class='plus op'>+</span> 
+    <span class='rubyid_xml_files_passing identifier id'>xml_files_passing</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot;\n&quot;</span><span class='rparen token'>)</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;\nFailing XML files:\n&quot;</span> <span class='plus op'>+</span> <span class='rubyid_xml_files_failing identifier id'>xml_files_failing</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot;\n&quot;</span><span class='rparen token'>)</span>
 
   
-  <span class='if if kw'>if</span> <span class='HTML_OUTPUT constant id'>HTML_OUTPUT</span> <span class='neq op'>!=</span> <span class='string val'>''</span>
-    <span class='ddb_elements identifier id'>ddb_elements</span> <span class='assign token'>=</span> <span class='error_frequencies identifier id'>error_frequencies</span><span class='dot token'>.</span><span class='to_tree identifier id'>to_tree</span>
-    <span class='coverage_template identifier id'>coverage_template</span> <span class='assign token'>=</span> <span class='IO constant id'>IO</span><span class='dot token'>.</span><span class='read identifier id'>read</span><span class='lparen token'>(</span><span class='File constant id'>File</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='File constant id'>File</span><span class='dot token'>.</span><span class='dirname identifier id'>dirname</span><span class='lparen token'>(</span><span class='__FILE__ __file__ kw'>__FILE__</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='string val'>'coverage.haml'</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
-    <span class='haml_engine identifier id'>haml_engine</span> <span class='assign token'>=</span> <span class='Haml constant id'>Haml</span><span class='colon2 op'>::</span><span class='Engine constant id'>Engine</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='coverage_template identifier id'>coverage_template</span><span class='rparen token'>)</span>
-    <span class='open identifier id'>open</span><span class='lparen token'>(</span><span class='HTML_OUTPUT constant id'>HTML_OUTPUT</span><span class='comma token'>,</span><span class='string val'>'w'</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='file identifier id'>file</span><span class='bitor op'>|</span>
-      <span class='file identifier id'>file</span><span class='dot token'>.</span><span class='write identifier id'>write</span><span class='lparen token'>(</span><span class='haml_engine identifier id'>haml_engine</span><span class='dot token'>.</span><span class='render identifier id'>render</span><span class='lparen token'>(</span><span class='Object constant id'>Object</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='comma token'>,</span> <span class='symbol val'>:ddb_elements</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='ddb_elements identifier id'>ddb_elements</span><span class='comma token'>,</span> <span class='symbol val'>:run_note</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='run_note identifier id'>run_note</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
-  <span class='end end kw'>end</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_HTML_OUTPUT constant id'>HTML_OUTPUT</span> <span class='neq op'>!=</span> <span class='string val'>''</span>
+    <span class='rubyid_ddb_elements identifier id'>ddb_elements</span> <span class='assign token'>=</span> <span class='rubyid_error_frequencies identifier id'>error_frequencies</span><span class='dot token'>.</span><span class='rubyid_to_tree identifier id'>to_tree</span>
+    <span class='rubyid_coverage_template identifier id'>coverage_template</span> <span class='assign token'>=</span> <span class='rubyid_IO constant id'>IO</span><span class='dot token'>.</span><span class='rubyid_read identifier id'>read</span><span class='lparen token'>(</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='rubyid_File constant id'>File</span><span class='dot token'>.</span><span class='rubyid_dirname identifier id'>dirname</span><span class='lparen token'>(</span><span class='rubyid___FILE__ __file__ kw'>__FILE__</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='string val'>'coverage.haml'</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+    <span class='rubyid_haml_engine identifier id'>haml_engine</span> <span class='assign token'>=</span> <span class='rubyid_Haml constant id'>Haml</span><span class='colon2 op'>::</span><span class='rubyid_Engine constant id'>Engine</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_coverage_template identifier id'>coverage_template</span><span class='rparen token'>)</span>
+    <span class='rubyid_open identifier id'>open</span><span class='lparen token'>(</span><span class='rubyid_HTML_OUTPUT constant id'>HTML_OUTPUT</span><span class='comma token'>,</span><span class='string val'>'w'</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_file identifier id'>file</span><span class='bitor op'>|</span>
+      <span class='rubyid_file identifier id'>file</span><span class='dot token'>.</span><span class='rubyid_write identifier id'>write</span><span class='lparen token'>(</span><span class='rubyid_haml_engine identifier id'>haml_engine</span><span class='dot token'>.</span><span class='rubyid_render identifier id'>render</span><span class='lparen token'>(</span><span class='rubyid_Object constant id'>Object</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='comma token'>,</span> <span class='symbol val'>:ddb_elements</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_ddb_elements identifier id'>ddb_elements</span><span class='comma token'>,</span> <span class='symbol val'>:run_note</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_run_note identifier id'>run_note</span><span class='rparen token'>)</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+  <span class='rubyid_end end kw'>end</span>
   
-<span class='end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
   </tr>

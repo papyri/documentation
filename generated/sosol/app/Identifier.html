@@ -1,433 +1,429 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-  <title>Class: Identifier</title>
+<title>Class: Identifier</title>
 
-  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
-  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
 
-</head>
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
 <body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="./index.html">Home</a>
-          <a href="./index.html#classes">Classes</a>
-          <a href="./index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="./app/models/identifier_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="app/models/identifier.rb">app/models/identifier.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-      
-    </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-    <div id="class-metadata">
-      
-      <!-- Parent Class -->
-      <div id="parent-class-section" class="section">
-        <h3 class="section-header">Parent</h3>
-        
-        <p class="link">ActiveRecord::Base</p>
-        
-      </div>
-      
 
-      
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/identifier.rb
+  </ul>
+</nav>
 
-      
-
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-c-collection_names">::collection_names</a></li>
-          
-          <li><a href="#method-c-new_from_template">::new_from_template</a></li>
-          
-          <li><a href="#method-c-next_temporary_identifier">::next_temporary_identifier</a></li>
-          
-          <li><a href="#method-i-add_change_desc">#add_change_desc</a></li>
-          
-          <li><a href="#method-i-after_rename">#after_rename</a></li>
-          
-          <li><a href="#method-i-before_commit">#before_commit</a></li>
-          
-          <li><a href="#method-i-branch">#branch</a></li>
-          
-          <li><a href="#method-i-children">#children</a></li>
-          
-          <li><a href="#method-i-content">#content</a></li>
-          
-          <li><a href="#method-i-file_template">#file_template</a></li>
-          
-          <li><a href="#method-i-get_commits">#get_commits</a></li>
-          
-          <li><a href="#method-i-get_recent_commit_sha">#get_recent_commit_sha</a></li>
-          
-          <li><a href="#method-i-is_valid_xml-3F">#is_valid_xml?</a></li>
-          
-          <li><a href="#method-i-mutable-3F">#mutable?</a></li>
-          
-          <li><a href="#method-i-needs_reviewing-3F">#needs_reviewing?</a></li>
-          
-          <li><a href="#method-i-origin">#origin</a></li>
-          
-          <li><a href="#method-i-owner">#owner</a></li>
-          
-          <li><a href="#method-i-parent">#parent</a></li>
-          
-          <li><a href="#method-i-relatives">#relatives</a></li>
-          
-          <li><a href="#method-i-rename">#rename</a></li>
-          
-          <li><a href="#method-i-repository">#repository</a></li>
-          
-          <li><a href="#method-i-result_action_approve">#result_action_approve</a></li>
-          
-          <li><a href="#method-i-result_action_graffiti">#result_action_graffiti</a></li>
-          
-          <li><a href="#method-i-result_action_reject">#result_action_reject</a></li>
-          
-          <li><a href="#method-i-set_content">#set_content</a></li>
-          
-          <li><a href="#method-i-set_xml_content">#set_xml_content</a></li>
-          
-          <li><a href="#method-i-title">#title</a></li>
-          
-          <li><a href="#method-i-titleize">#titleize</a></li>
-          
-          <li><a href="#method-i-to_components">#to_components</a></li>
-          
-          <li><a href="#method-i-update_revision_desc">#update_revision_desc</a></li>
-          
-          <li><a href="#method-i-user_has_voted-3F">#user_has_voted?</a></li>
-          
-          <li><a href="#method-i-xml_content">#xml_content</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="./images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="./Papyrillio.html">Papyrillio</a></li>
-        
-          <li><a href="./Papyrillio/Aggregator.html">Papyrillio::Aggregator</a></li>
-        
-          <li><a href="./Papyrillio/Collector.html">Papyrillio::Collector</a></li>
-        
-          <li><a href="./Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a></li>
-        
-          <li><a href="./Papyrillio/Decorator.html">Papyrillio::Decorator</a></li>
-        
-          <li><a href="./Papyrillio/Organiser.html">Papyrillio::Organiser</a></li>
-        
-          <li><a href="./Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a></li>
-        
-          <li><a href="./Papyrillio/Printer.html">Papyrillio::Printer</a></li>
-        
-          <li><a href="./Papyrillio/Publishee.html">Papyrillio::Publishee</a></li>
-        
-          <li><a href="./Papyrillio/Publisher.html">Papyrillio::Publisher</a></li>
-        
-          <li><a href="./Papyrillio/Transformer.html">Papyrillio::Transformer</a></li>
-        
-          <li><a href="./JRubyXML.html">JRubyXML</a></li>
-        
-          <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a></li>
-        
-          <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a></li>
-        
-          <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a></li>
-        
-          <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a></li>
-        
-          <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a></li>
-        
-          <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a></li>
-        
-          <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a></li>
-        
-          <li><a href="./REXML.html">REXML</a></li>
-        
-          <li><a href="./REXML/Document.html">REXML::Document</a></li>
-        
-          <li><a href="./REXML/Element.html">REXML::Element</a></li>
-        
-          <li><a href="./REXML/XPath.html">REXML::XPath</a></li>
-        
-          <li><a href="./Rpx.html">Rpx</a></li>
-        
-          <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a></li>
-        
-          <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a></li>
-        
-          <li><a href="./Comment.html">Comment</a></li>
-        
-          <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a></li>
-        
-          <li><a href="./Doco.html">Doco</a></li>
-        
-          <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a></li>
-        
-          <li><a href="./Grit.html">Grit</a></li>
-        
-          <li><a href="./Grit/Commit.html">Grit::Commit</a></li>
-        
-          <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a></li>
-        
-          <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
-        
-          <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a></li>
-        
-          <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a></li>
-        
-          <li><a href="./NumbersRDF.html">NumbersRDF</a></li>
-        
-          <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a></li>
-        
-          <li><a href="./AjaxProxyController.html">AjaxProxyController</a></li>
-        
-          <li><a href="./ApplicationController.html">ApplicationController</a></li>
-        
-          <li><a href="./ApplicationHelper.html">ApplicationHelper</a></li>
-        
-          <li><a href="./Board.html">Board</a></li>
-        
-          <li><a href="./BoardsController.html">BoardsController</a></li>
-        
-          <li><a href="./CommentsController.html">CommentsController</a></li>
-        
-          <li><a href="./DDBIdentifier.html">DDBIdentifier</a></li>
-        
-          <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a></li>
-        
-          <li><a href="./Decree.html">Decree</a></li>
-        
-          <li><a href="./DecreesController.html">DecreesController</a></li>
-        
-          <li><a href="./DocosController.html">DocosController</a></li>
-        
-          <li><a href="./DocovideosController.html">DocovideosController</a></li>
-        
-          <li><a href="./Emailer.html">Emailer</a></li>
-        
-          <li><a href="./EmailerMailer.html">EmailerMailer</a></li>
-        
-          <li><a href="./EmailersController.html">EmailersController</a></li>
-        
-          <li><a href="./Event.html">Event</a></li>
-        
-          <li><a href="./EventsController.html">EventsController</a></li>
-        
-          <li><a href="./GitConf.html">GitConf</a></li>
-        
-          <li><a href="./HGVBiblioIdentifier.html">HGVBiblioIdentifier</a></li>
-        
-          <li><a href="./HGVIdentifier.html">HGVIdentifier</a></li>
-        
-          <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a></li>
-        
-          <li><a href="./HelperController.html">HelperController</a></li>
-        
-          <li><a href="./HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a></li>
-        
-          <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></li>
-        
-          <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a></li>
-        
-          <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a></li>
-        
-          <li><a href="./Identifier.html">Identifier</a></li>
-        
-          <li><a href="./IdentifiersController.html">IdentifiersController</a></li>
-        
-          <li><a href="./Integer.html">Integer</a></li>
-        
-          <li><a href="./Leiden.html">Leiden</a></li>
-        
-          <li><a href="./LeidenController.html">LeidenController</a></li>
-        
-          <li><a href="./LinkingInfo.html">LinkingInfo</a></li>
-        
-          <li><a href="./MaintenanceMode.html">MaintenanceMode</a></li>
-        
-          <li><a href="./Object.html">Object</a></li>
-        
-          <li><a href="./Publication.html">Publication</a></li>
-        
-          <li><a href="./PublicationsController.html">PublicationsController</a></li>
-        
-          <li><a href="./Rails.html">Rails</a></li>
-        
-          <li><a href="./RepositoriesController.html">RepositoriesController</a></li>
-        
-          <li><a href="./Repository.html">Repository</a></li>
-        
-          <li><a href="./RpxController.html">RpxController</a></li>
-        
-          <li><a href="./TranslationHelperController.html">TranslationHelperController</a></li>
-        
-          <li><a href="./TranslationLeiden.html">TranslationLeiden</a></li>
-        
-          <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a></li>
-        
-          <li><a href="./User.html">User</a></li>
-        
-          <li><a href="./UserController.html">UserController</a></li>
-        
-          <li><a href="./UserIdentifier.html">UserIdentifier</a></li>
-        
-          <li><a href="./Vote.html">Vote</a></li>
-        
-          <li><a href="./VotesController.html">VotesController</a></li>
-        
-          <li><a href="./WelcomeController.html">WelcomeController</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
+    
   </div>
 
-  <div id="documentation">
-    <h1 class="class">Identifier</h1>
-
-    <div id="description" class="description">
-      
-    </div><!-- description -->
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActiveRecord::Base
+  
+</nav>
 
     
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
     
+    <li><a href="#method-c-collection_names">::collection_names</a>
     
-    <div id="5Buntitled-5D" class="documentation-section">
-      
+    <li><a href="#method-c-new_from_template">::new_from_template</a>
+    
+    <li><a href="#method-c-next_temporary_identifier">::next_temporary_identifier</a>
+    
+    <li><a href="#method-i-add_change_desc">#add_change_desc</a>
+    
+    <li><a href="#method-i-after_rename">#after_rename</a>
+    
+    <li><a href="#method-i-before_commit">#before_commit</a>
+    
+    <li><a href="#method-i-branch">#branch</a>
+    
+    <li><a href="#method-i-children">#children</a>
+    
+    <li><a href="#method-i-content">#content</a>
+    
+    <li><a href="#method-i-file_template">#file_template</a>
+    
+    <li><a href="#method-i-get_commits">#get_commits</a>
+    
+    <li><a href="#method-i-get_recent_commit_sha">#get_recent_commit_sha</a>
+    
+    <li><a href="#method-i-is_valid_xml-3F">#is_valid_xml?</a>
+    
+    <li><a href="#method-i-mutable-3F">#mutable?</a>
+    
+    <li><a href="#method-i-needs_reviewing-3F">#needs_reviewing?</a>
+    
+    <li><a href="#method-i-origin">#origin</a>
+    
+    <li><a href="#method-i-owner">#owner</a>
+    
+    <li><a href="#method-i-parent">#parent</a>
+    
+    <li><a href="#method-i-relatives">#relatives</a>
+    
+    <li><a href="#method-i-rename">#rename</a>
+    
+    <li><a href="#method-i-repository">#repository</a>
+    
+    <li><a href="#method-i-result_action_approve">#result_action_approve</a>
+    
+    <li><a href="#method-i-result_action_graffiti">#result_action_graffiti</a>
+    
+    <li><a href="#method-i-result_action_reject">#result_action_reject</a>
+    
+    <li><a href="#method-i-set_content">#set_content</a>
+    
+    <li><a href="#method-i-set_xml_content">#set_xml_content</a>
+    
+    <li><a href="#method-i-title">#title</a>
+    
+    <li><a href="#method-i-titleize">#titleize</a>
+    
+    <li><a href="#method-i-to_components">#to_components</a>
+    
+    <li><a href="#method-i-update_revision_desc">#update_revision_desc</a>
+    
+    <li><a href="#method-i-user_has_voted-3F">#user_has_voted?</a>
+    
+    <li><a href="#method-i-xml_content">#xml_content</a>
+    
+  </ul>
+</nav>
 
-      
+  </div>
 
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo.html">HgvMetaIdentifierHelper::HgvGeo</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/GeoSpot.html">HgvMetaIdentifierHelper::HgvGeo::GeoSpot</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/OrigPlace.html">HgvMetaIdentifierHelper::HgvGeo::OrigPlace</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Place.html">HgvMetaIdentifierHelper::HgvGeo::Place</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Provenance.html">HgvMetaIdentifierHelper::HgvGeo::Provenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a>
+  
+    <li><a href="./Papyrillio.html">Papyrillio</a>
+  
+    <li><a href="./Papyrillio/Aggregator.html">Papyrillio::Aggregator</a>
+  
+    <li><a href="./Papyrillio/Collector.html">Papyrillio::Collector</a>
+  
+    <li><a href="./Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a>
+  
+    <li><a href="./Papyrillio/Decorator.html">Papyrillio::Decorator</a>
+  
+    <li><a href="./Papyrillio/Organiser.html">Papyrillio::Organiser</a>
+  
+    <li><a href="./Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a>
+  
+    <li><a href="./Papyrillio/Printer.html">Papyrillio::Printer</a>
+  
+    <li><a href="./Papyrillio/Publishee.html">Papyrillio::Publishee</a>
+  
+    <li><a href="./Papyrillio/Publisher.html">Papyrillio::Publisher</a>
+  
+    <li><a href="./Papyrillio/Transformer.html">Papyrillio::Transformer</a>
+  
+    <li><a href="./JRubyXML.html">JRubyXML</a>
+  
+    <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a>
+  
+    <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a>
+  
+    <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a>
+  
+    <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a>
+  
+    <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a>
+  
+    <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a>
+  
+    <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a>
+  
+    <li><a href="./REXML.html">REXML</a>
+  
+    <li><a href="./REXML/Document.html">REXML::Document</a>
+  
+    <li><a href="./REXML/Element.html">REXML::Element</a>
+  
+    <li><a href="./REXML/XPath.html">REXML::XPath</a>
+  
+    <li><a href="./Rpx.html">Rpx</a>
+  
+    <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a>
+  
+    <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a>
+  
+    <li><a href="./Comment.html">Comment</a>
+  
+    <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a>
+  
+    <li><a href="./Doco.html">Doco</a>
+  
+    <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a>
+  
+    <li><a href="./Grit.html">Grit</a>
+  
+    <li><a href="./Grit/Commit.html">Grit::Commit</a>
+  
+    <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+    <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a>
+  
+    <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a>
+  
+    <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a>
+  
+    <li><a href="./NumbersRDF.html">NumbersRDF</a>
+  
+    <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a>
+  
+    <li><a href="./AjaxProxyController.html">AjaxProxyController</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Board.html">Board</a>
+  
+    <li><a href="./BoardsController.html">BoardsController</a>
+  
+    <li><a href="./CommentsController.html">CommentsController</a>
+  
+    <li><a href="./DDBIdentifier.html">DDBIdentifier</a>
+  
+    <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a>
+  
+    <li><a href="./Decree.html">Decree</a>
+  
+    <li><a href="./DecreesController.html">DecreesController</a>
+  
+    <li><a href="./DocosController.html">DocosController</a>
+  
+    <li><a href="./DocovideosController.html">DocovideosController</a>
+  
+    <li><a href="./Emailer.html">Emailer</a>
+  
+    <li><a href="./EmailerMailer.html">EmailerMailer</a>
+  
+    <li><a href="./EmailersController.html">EmailersController</a>
+  
+    <li><a href="./Event.html">Event</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./GitConf.html">GitConf</a>
+  
+    <li><a href="./HGVBiblioIdentifier.html">HGVBiblioIdentifier</a>
+  
+    <li><a href="./HGVIdentifier.html">HGVIdentifier</a>
+  
+    <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a>
+  
+    <li><a href="./HelperController.html">HelperController</a>
+  
+    <li><a href="./HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a>
+  
+    <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a>
+  
+    <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a>
+  
+    <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a>
+  
+    <li><a href="./Identifier.html">Identifier</a>
+  
+    <li><a href="./IdentifiersController.html">IdentifiersController</a>
+  
+    <li><a href="./Integer.html">Integer</a>
+  
+    <li><a href="./Leiden.html">Leiden</a>
+  
+    <li><a href="./LeidenController.html">LeidenController</a>
+  
+    <li><a href="./LinkingInfo.html">LinkingInfo</a>
+  
+    <li><a href="./MaintenanceMode.html">MaintenanceMode</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Publication.html">Publication</a>
+  
+    <li><a href="./PublicationsController.html">PublicationsController</a>
+  
+    <li><a href="./Rails.html">Rails</a>
+  
+    <li><a href="./RepositoriesController.html">RepositoriesController</a>
+  
+    <li><a href="./Repository.html">Repository</a>
+  
+    <li><a href="./RpxController.html">RpxController</a>
+  
+    <li><a href="./TranslationHelperController.html">TranslationHelperController</a>
+  
+    <li><a href="./TranslationLeiden.html">TranslationLeiden</a>
+  
+    <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserController.html">UserController</a>
+  
+    <li><a href="./UserIdentifier.html">UserIdentifier</a>
+  
+    <li><a href="./Vote.html">Vote</a>
+  
+    <li><a href="./VotesController.html">VotesController</a>
+  
+    <li><a href="./WelcomeController.html">WelcomeController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Identifier</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
       
-      <!-- Constants -->
-      <div id="constants-list" class="section">
-        <h3 class="section-header">Constants</h3>
-        <dl>
+        <dt id="FRIENDLY_NAME">FRIENDLY_NAME
         
-          <dt><a name="FRIENDLY_NAME">FRIENDLY_NAME</a></dt>
-          
-          <dd class="description"></dd>
-          
+        <dd class="description">
         
-          <dt><a name="IDENTIFIER_STATUS">IDENTIFIER_STATUS</a></dt>
-          
-          <dd class="description"></dd>
-          
+      
+        <dt id="IDENTIFIER_STATUS">IDENTIFIER_STATUS
         
-          <dt><a name="IDENTIFIER_SUBCLASSES">IDENTIFIER_SUBCLASSES</a></dt>
-          
-          <dd class="description"><p>TODO - is Biblio needed?</p></dd>
-          
+        <dd class="description">
         
-        </dl>
-      </div>
       
+        <dt id="IDENTIFIER_SUBCLASSES">IDENTIFIER_SUBCLASSES
+        
+        <dd class="description"><p>TODO - is Biblio needed?</p>
+        
+      
+      </dl>
+    </section>
+    
 
-      
+    
 
-      <!-- Methods -->
-      
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
 
-      
-        <div id="collection_names-method" class="method-detail ">
-          <a name="method-c-collection_names"></a>
+    
+      <div id="method-c-collection_names" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">collection_names</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">collection_names</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="collection_names-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 154</span>
+          <div class="method-source-code" id="collection_names-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 154</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">collection_names</span>
   <span class="ruby-keyword">unless</span> <span class="ruby-keyword">defined?</span> <span class="ruby-ivar">@collection_names</span>
     <span class="ruby-identifier">parts</span> = <span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NumbersHelper</span><span class="ruby-operator">::</span><span class="ruby-identifier">identifier_to_parts</span>([<span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NAMESPACE_IDENTIFIER</span>, <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-constant">IDENTIFIER_NAMESPACE</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">'/'</span>))
@@ -435,36 +431,33 @@
   <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">return</span> <span class="ruby-ivar">@collection_names</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- collection_names-source -->
-            
-          </div>
+          </div><!-- collection_names-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- collection_names-method -->
+
+    
+      <div id="method-c-new_from_template" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new_from_template</span><span
+            class="method-args">(publication)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- collection_names-method -->
-
-      
-        <div id="new_from_template-method" class="method-detail ">
-          <a name="method-c-new_from_template"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">new_from_template</span><span
-              class="method-args">(publication)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="new_from_template-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 162</span>
+          <div class="method-source-code" id="new_from_template-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 162</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new_from_template</span>(<span class="ruby-identifier">publication</span>)
   <span class="ruby-identifier">new_identifier</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">next_temporary_identifier</span>)
   <span class="ruby-identifier">new_identifier</span>.<span class="ruby-identifier">publication</span> = <span class="ruby-identifier">publication</span>
@@ -476,36 +469,33 @@
   
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">new_identifier</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- new_from_template-source -->
-            
-          </div>
+          </div><!-- new_from_template-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- new_from_template-method -->
+
+    
+      <div id="method-c-next_temporary_identifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">next_temporary_identifier</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- new_from_template-method -->
-
-      
-        <div id="next_temporary_identifier-method" class="method-detail ">
-          <a name="method-c-next_temporary_identifier"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">next_temporary_identifier</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="next_temporary_identifier-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 187</span>
+          <div class="method-source-code" id="next_temporary_identifier-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 187</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">next_temporary_identifier</span>
   <span class="ruby-identifier">year</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">year</span>
   <span class="ruby-identifier">latest</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>,
@@ -522,181 +512,166 @@
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">sprintf</span>(<span class="ruby-node">&quot;papyri.info/#{self::IDENTIFIER_NAMESPACE}/#{self::TEMPORARY_COLLECTION};%04d;%04d&quot;</span>,
                  <span class="ruby-identifier">year</span>, <span class="ruby-identifier">document_number</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- next_temporary_identifier-source -->
-            
-          </div>
-
+          </div><!-- next_temporary_identifier-source -->
           
+        </div>
 
-          
-        </div><!-- next_temporary_identifier-method -->
+        
 
-      
-      </div><!-- public-class-method-details -->
+        
+      </div><!-- next_temporary_identifier-method -->
+
     
-      <div id="public-instance-method-details" class="method-section section">
-        <h3 class="section-header">Public Instance Methods</h3>
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
 
-      
-        <div id="add_change_desc-method" class="method-detail ">
-          <a name="method-i-add_change_desc"></a>
+    
+      <div id="method-i-add_change_desc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_change_desc</span><span
+            class="method-args">(text = "", user_info = self.publication.creator, input_content = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">add_change_desc</span><span
-              class="method-args">(text = "", user_info = self.publication.creator, input_content = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="add_change_desc-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 308</span>
+          <div class="method-source-code" id="add_change_desc-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 308</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">add_change_desc</span>(<span class="ruby-identifier">text</span> = <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">user_info</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">creator</span>, <span class="ruby-identifier">input_content</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">doc</span> = <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
     <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-identifier">input_content</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">input_content</span>),
     <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RAILS_ROOT</span>,
-      <span class="ruby-node">%{data xslt common add_change.xsl}</span>)),
+      <span class="ruby-node">%w{data xslt common add_change.xsl}</span>)),
     <span class="ruby-value">:who</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Integration</span><span class="ruby-operator">::</span><span class="ruby-constant">Session</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">url_for</span>(<span class="ruby-value">:host</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NAMESPACE_IDENTIFIER</span>, <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'user'</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'show'</span>, <span class="ruby-value">:user_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">user_info</span>.<span class="ruby-identifier">name</span>, <span class="ruby-value">:only_path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>),
     <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">text</span>
   )
   
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">to_s</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- add_change_desc-source -->
-            
-          </div>
+          </div><!-- add_change_desc-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- add_change_desc-method -->
+
+    
+      <div id="method-i-after_rename" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">after_rename</span><span
+            class="method-args">(options = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- add_change_desc-method -->
-
-      
-        <div id="after_rename-method" class="method-detail ">
-          <a name="method-i-after_rename"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">after_rename</span><span
-              class="method-args">(options = {})</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="after_rename-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 296</span>
+          <div class="method-source-code" id="after_rename-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 296</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">after_rename</span>(<span class="ruby-identifier">options</span> = {})
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- after_rename-source -->
-            
-          </div>
+          </div><!-- after_rename-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- after_rename-method -->
+
+    
+      <div id="method-i-before_commit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">before_commit</span><span
+            class="method-args">(content)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- after_rename-method -->
-
-      
-        <div id="before_commit-method" class="method-detail ">
-          <a name="method-i-before_commit"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">before_commit</span><span
-              class="method-args">(content)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="before_commit-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 71</span>
+          <div class="method-source-code" id="before_commit-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 71</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">before_commit</span>(<span class="ruby-identifier">content</span>)
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">content</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- before_commit-source -->
-            
-          </div>
+          </div><!-- before_commit-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- before_commit-method -->
+
+    
+      <div id="method-i-branch" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">branch</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- before_commit-method -->
-
-      
-        <div id="branch-method" class="method-detail ">
-          <a name="method-i-branch"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">branch</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="branch-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 54</span>
+          <div class="method-source-code" id="branch-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 54</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">branch</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-string">'master'</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">branch</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- branch-source -->
-            
-          </div>
+          </div><!-- branch-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- branch-method -->
+
+    
+      <div id="method-i-children" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">children</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- branch-method -->
-
-      
-        <div id="children-method" class="method-detail ">
-          <a name="method-i-children"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">children</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="children-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 33</span>
+          <div class="method-source-code" id="children-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 33</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">children</span>
   <span class="ruby-identifier">child_identifiers</span> = []
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child_pub</span><span class="ruby-operator">|</span>
@@ -704,70 +679,64 @@
   <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">child_identifiers</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- children-source -->
-            
-          </div>
+          </div><!-- children-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- children-method -->
+
+    
+      <div id="method-i-content" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">content</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- children-method -->
-
-      
-        <div id="content-method" class="method-detail ">
-          <a name="method-i-content"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">content</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="content-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 58</span>
+          <div class="method-source-code" id="content-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 58</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">content</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">get_file_from_branch</span>(
     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_path</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">branch</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- content-source -->
-            
-          </div>
+          </div><!-- content-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- content-method -->
+
+    
+      <div id="method-i-file_template" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">file_template</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- content-method -->
-
-      
-        <div id="file_template-method" class="method-detail ">
-          <a name="method-i-file_template"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">file_template</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="file_template-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 174</span>
+          <div class="method-source-code" id="file_template-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 174</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">file_template</span>
   <span class="ruby-identifier">template_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RAILS_ROOT</span>, [<span class="ruby-string">'data'</span>,<span class="ruby-string">'templates'</span>],
                             <span class="ruby-node">&quot;#{self.class.to_s.underscore}.xml.erb&quot;</span>)
@@ -780,72 +749,66 @@
   
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">template</span>.<span class="ruby-identifier">result</span>(<span class="ruby-identifier">binding</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- file_template-source -->
-            
-          </div>
+          </div><!-- file_template-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- file_template-method -->
+
+    
+      <div id="method-i-get_commits" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_commits</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- file_template-method -->
-
-      
-        <div id="get_commits-method" class="method-detail ">
-          <a name="method-i-get_commits"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">get_commits</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="get_commits-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 91</span>
+          <div class="method-source-code" id="get_commits-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 91</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_commits</span>
   <span class="ruby-keyword">self</span>[<span class="ruby-value">:commits</span>] = 
     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">get_log_for_file_from_branch</span>(
       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_path</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">branch</span>
   )
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- get_commits-source -->
-            
-          </div>
+          </div><!-- get_commits-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- get_commits-method -->
+
+    
+      <div id="method-i-get_recent_commit_sha" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_recent_commit_sha</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>parse out most recent sha from log</p>
           
 
           
-        </div><!-- get_commits-method -->
-
-      
-        <div id="get_recent_commit_sha-method" class="method-detail ">
-          <a name="method-i-get_recent_commit_sha"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">get_recent_commit_sha</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>parse out most recent sha from log</p>
-            
-
-            
-            <div class="method-source-code" id="get_recent_commit_sha-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 99</span>
+          <div class="method-source-code" id="get_recent_commit_sha-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 99</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_recent_commit_sha</span>
   <span class="ruby-identifier">commits</span> = <span class="ruby-identifier">get_commits</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">commits</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">commits</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
@@ -854,36 +817,33 @@
   <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;&quot;</span>
   
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- get_recent_commit_sha-source -->
-            
-          </div>
+          </div><!-- get_recent_commit_sha-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- get_recent_commit_sha-method -->
+
+    
+      <div id="method-i-is_valid_xml-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">is_valid_xml?</span><span
+            class="method-args">(content = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- get_recent_commit_sha-method -->
-
-      
-        <div id="is_valid_xml-3F-method" class="method-detail ">
-          <a name="method-i-is_valid_xml-3F"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">is_valid_xml?</span><span
-              class="method-args">(content = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="is_valid_xml-3F-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 63</span>
+          <div class="method-source-code" id="is_valid_xml-3F-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 63</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">is_valid_xml?</span>(<span class="ruby-identifier">content</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">content</span>.<span class="ruby-identifier">nil?</span>
     <span class="ruby-identifier">content</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">content</span>
@@ -891,36 +851,33 @@
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span><span class="ruby-operator">::</span><span class="ruby-constant">XML_VALIDATOR</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">validate</span>(
     <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">input_source_from_string</span>(<span class="ruby-identifier">content</span>))
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- is_valid_xml-3F-source -->
-            
-          </div>
+          </div><!-- is_valid_xml-3F-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- is_valid_xml-3F-method -->
+
+    
+      <div id="method-i-mutable-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mutable?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- is_valid_xml-3F-method -->
-
-      
-        <div id="mutable-3F-method" class="method-detail ">
-          <a name="method-i-mutable-3F"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">mutable?</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="mutable-3F-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 208</span>
+          <div class="method-source-code" id="mutable-3F-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 208</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">mutable?</span>
 
   <span class="ruby-comment">#determines who can edit the identifier</span>
@@ -937,7 +894,7 @@
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> 
     
   <span class="ruby-comment">#they can edit any of their stuff if it is not submitted      </span>
-  <span class="ruby-keyword">elsif</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;User&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-node">%{editing new}</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">status</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;User&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-node">%w{editing new}</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">status</span>)
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> 
   <span class="ruby-keyword">end</span>
   
@@ -946,170 +903,155 @@
 
  <span class="ruby-comment"># self.publication.mutable?</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- mutable-3F-source -->
-            
-          </div>
+          </div><!-- mutable-3F-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- mutable-3F-method -->
+
+    
+      <div id="method-i-needs_reviewing-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">needs_reviewing?</span><span
+            class="method-args">(user_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- mutable-3F-method -->
-
-      
-        <div id="needs_reviewing-3F-method" class="method-detail ">
-          <a name="method-i-needs_reviewing-3F"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">needs_reviewing?</span><span
-              class="method-args">(user_id)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="needs_reviewing-3F-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 358</span>
+          <div class="method-source-code" id="needs_reviewing-3F-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 358</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">needs_reviewing?</span>(<span class="ruby-identifier">user_id</span>)
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">modified?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;voting&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Board&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">controls_identifier?</span>(<span class="ruby-keyword">self</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">user_has_voted?</span>(<span class="ruby-identifier">user_id</span>) <span class="ruby-comment">#!self.user_has_voted?(user_id)</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- needs_reviewing-3F-source -->
-            
-          </div>
-
+          </div><!-- needs_reviewing-3F-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- needs_reviewing-3F-method -->
+
+    
+      <div id="method-i-origin" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">origin</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- needs_reviewing-3F-method -->
-
-      
-        <div id="origin-method" class="method-detail ">
-          <a name="method-i-origin"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">origin</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>added ”&amp;&amp; i.type == self.type’ to origin, parent, and children
+          <p>added ”&amp;&amp; i.type == self.type’ to origin, parent, and children
 methods because name for meta and trans are the same and was returning the
 meta instead of trans when processing translations</p>
-            
+          
 
-            
-            <div class="method-source-code" id="origin-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 25</span>
+          
+          <div class="method-source-code" id="origin-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 25</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">origin</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">detect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">type</span>}
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- origin-source -->
-            
-          </div>
+          </div><!-- origin-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- origin-method -->
+
+    
+      <div id="method-i-owner" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">owner</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- origin-method -->
-
-      
-        <div id="owner-method" class="method-detail ">
-          <a name="method-i-owner"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">owner</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="owner-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 204</span>
+          <div class="method-source-code" id="owner-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 204</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">owner</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">owner</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- owner-source -->
-            
-          </div>
+          </div><!-- owner-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- owner-method -->
+
+    
+      <div id="method-i-parent" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">parent</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- owner-method -->
-
-      
-        <div id="parent-method" class="method-detail ">
-          <a name="method-i-parent"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">parent</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="parent-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 29</span>
+          <div class="method-source-code" id="parent-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 29</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">parent</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">detect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">type</span>}
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- parent-source -->
-            
-          </div>
+          </div><!-- parent-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- parent-method -->
+
+    
+      <div id="method-i-relatives" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">relatives</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>gives origin and its children, but not self</p>
           
 
           
-        </div><!-- parent-method -->
-
-      
-        <div id="relatives-method" class="method-detail ">
-          <a name="method-i-relatives"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">relatives</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>gives origin and its children, but not self</p>
-            
-
-            
-            <div class="method-source-code" id="relatives-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 42</span>
+          <div class="method-source-code" id="relatives-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 42</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">relatives</span>
   <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">nil?</span>
     <span class="ruby-keyword">return</span> []
@@ -1117,36 +1059,33 @@ meta instead of trans when processing translations</p>
     <span class="ruby-keyword">return</span> [<span class="ruby-keyword">self</span>.<span class="ruby-identifier">origin</span>] <span class="ruby-operator">+</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">children</span> <span class="ruby-operator">-</span> [<span class="ruby-keyword">self</span>]
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- relatives-source -->
-            
-          </div>
+          </div><!-- relatives-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- relatives-method -->
+
+    
+      <div id="method-i-rename" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rename</span><span
+            class="method-args">(new_name, options = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- relatives-method -->
-
-      
-        <div id="rename-method" class="method-detail ">
-          <a name="method-i-rename"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">rename</span><span
-              class="method-args">(new_name, options = {})</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="rename-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 257</span>
+          <div class="method-source-code" id="rename-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 257</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">rename</span>(<span class="ruby-identifier">new_name</span>, <span class="ruby-identifier">options</span> = {})
   <span class="ruby-identifier">original</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clone</span>
   <span class="ruby-identifier">options</span>[<span class="ruby-value">:original</span>] = <span class="ruby-identifier">original</span>
@@ -1185,173 +1124,158 @@ meta instead of trans when processing translations</p>
     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">after_rename</span>(<span class="ruby-identifier">options</span>)
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- rename-source -->
-            
-          </div>
+          </div><!-- rename-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- rename-method -->
+
+    
+      <div id="method-i-repository" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">repository</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- rename-method -->
-
-      
-        <div id="repository-method" class="method-detail ">
-          <a name="method-i-repository"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">repository</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="repository-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 50</span>
+          <div class="method-source-code" id="repository-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 50</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">repository</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Repository</span>.<span class="ruby-identifier">new</span>() <span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- repository-source -->
-            
-          </div>
-
+          </div><!-- repository-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- repository-method -->
+
+    
+      <div id="method-i-result_action_approve" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">result_action_approve</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- repository-method -->
-
-      
-        <div id="result_action_approve-method" class="method-detail ">
-          <a name="method-i-result_action_approve"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">result_action_approve</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>standard result actions  NOTE none of this is currently used except for
+          <p>standard result actions  NOTE none of this is currently used except for
 creating board</p>
-            
+          
 
-            
-            <div class="method-source-code" id="result_action_approve-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 342</span>
+          
+          <div class="method-source-code" id="result_action_approve-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 342</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">result_action_approve</span>
  
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">status</span> = <span class="ruby-string">&quot;approved&quot;</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">send_to_finalizer</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- result_action_approve-source -->
-            
-          </div>
+          </div><!-- result_action_approve-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- result_action_approve-method -->
+
+    
+      <div id="method-i-result_action_graffiti" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">result_action_graffiti</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- result_action_approve-method -->
-
-      
-        <div id="result_action_graffiti-method" class="method-detail ">
-          <a name="method-i-result_action_graffiti"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">result_action_graffiti</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="result_action_graffiti-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 353</span>
+          <div class="method-source-code" id="result_action_graffiti-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 353</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">result_action_graffiti</span>
   
   <span class="ruby-comment">#delete</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- result_action_graffiti-source -->
-            
-          </div>
+          </div><!-- result_action_graffiti-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- result_action_graffiti-method -->
+
+    
+      <div id="method-i-result_action_reject" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">result_action_reject</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- result_action_graffiti-method -->
-
-      
-        <div id="result_action_reject-method" class="method-detail ">
-          <a name="method-i-result_action_reject"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">result_action_reject</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="result_action_reject-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 348</span>
+          <div class="method-source-code" id="result_action_reject-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 348</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">result_action_reject</span>
  
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">status</span> = <span class="ruby-string">&quot;rejected&quot;</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- result_action_reject-source -->
-            
-          </div>
+          </div><!-- result_action_reject-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- result_action_reject-method -->
+
+    
+      <div id="method-i-set_content" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_content</span><span
+            class="method-args">(content, options = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns a String of the SHA1 of the commit</p>
           
 
           
-        </div><!-- result_action_reject-method -->
-
-      
-        <div id="set_content-method" class="method-detail ">
-          <a name="method-i-set_content"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">set_content</span><span
-              class="method-args">(content, options = {})</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Returns a String of the SHA1 of the commit</p>
-            
-
-            
-            <div class="method-source-code" id="set_content-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 76</span>
+          <div class="method-source-code" id="set_content-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 76</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_content</span>(<span class="ruby-identifier">content</span>, <span class="ruby-identifier">options</span> = {})
   <span class="ruby-identifier">options</span>.<span class="ruby-identifier">reverse_merge!</span> <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">''</span>
   <span class="ruby-identifier">commit_sha</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">commit_content</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_path</span>,
@@ -1366,36 +1290,33 @@ creating board</p>
   
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">commit_sha</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- set_content-source -->
-            
-          </div>
+          </div><!-- set_content-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- set_content-method -->
+
+    
+      <div id="method-i-set_xml_content" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_xml_content</span><span
+            class="method-args">(content, options)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns a String of the SHA1 of the commit</p>
           
 
           
-        </div><!-- set_content-method -->
-
-      
-        <div id="set_xml_content-method" class="method-detail ">
-          <a name="method-i-set_xml_content"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">set_xml_content</span><span
-              class="method-args">(content, options)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Returns a String of the SHA1 of the commit</p>
-            
-
-            
-            <div class="method-source-code" id="set_xml_content-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 242</span>
+          <div class="method-source-code" id="set_xml_content-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 242</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">content</span>, <span class="ruby-identifier">options</span>)
   <span class="ruby-identifier">options</span>.<span class="ruby-identifier">reverse_merge!</span>(
     <span class="ruby-value">:validate</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>,
@@ -1410,36 +1331,33 @@ creating board</p>
   
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">commit_sha</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- set_xml_content-source -->
-            
-          </div>
+          </div><!-- set_xml_content-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- set_xml_content-method -->
+
+    
+      <div id="method-i-title" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">title</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>added to speed up dashboard since titleize can be slow</p>
           
 
           
-        </div><!-- set_xml_content-method -->
-
-      
-        <div id="title-method" class="method-detail ">
-          <a name="method-i-title"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">title</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>added to speed up dashboard since titleize can be slow</p>
-            
-
-            
-            <div class="method-source-code" id="title-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 300</span>
+          <div class="method-source-code" id="title-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 300</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">title</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">read_attribute</span>(<span class="ruby-value">:title</span>) <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
     <span class="ruby-identifier">write_attribute</span>(<span class="ruby-value">:title</span>,<span class="ruby-identifier">titleize</span>)
@@ -1447,36 +1365,33 @@ creating board</p>
   <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">read_attribute</span>(<span class="ruby-value">:title</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- title-source -->
-            
-          </div>
+          </div><!-- title-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- title-method -->
+
+    
+      <div id="method-i-titleize" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">titleize</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- title-method -->
-
-      
-        <div id="titleize-method" class="method-detail ">
-          <a name="method-i-titleize"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">titleize</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="titleize-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 108</span>
+          <div class="method-source-code" id="titleize-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 108</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">titleize</span>
   <span class="ruby-identifier">title</span> = <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">HGVMetaIdentifier</span> <span class="ruby-operator">||</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">HGVBiblioIdentifier</span>
@@ -1513,36 +1428,33 @@ creating board</p>
   <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">title</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- titleize-source -->
-            
-          </div>
+          </div><!-- titleize-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- titleize-method -->
+
+    
+      <div id="method-i-to_components" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_components</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- titleize-method -->
-
-      
-        <div id="to_components-method" class="method-detail ">
-          <a name="method-i-to_components"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">to_components</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="to_components-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 145</span>
+          <div class="method-source-code" id="to_components-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 145</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_components</span>
   <span class="ruby-identifier">trimmed_name</span> = <span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NumbersHelper</span><span class="ruby-operator">::</span><span class="ruby-identifier">identifier_to_local_identifier</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span>)
   <span class="ruby-comment"># trimmed_name.sub!(/^\/#{self.class::IDENTIFIER_NAMESPACE}\//,'')</span>
@@ -1551,36 +1463,33 @@ creating board</p>
 
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">components</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- to_components-source -->
-            
-          </div>
+          </div><!-- to_components-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- to_components-method -->
+
+    
+      <div id="method-i-update_revision_desc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update_revision_desc</span><span
+            class="method-args">(comment_text, user)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- to_components-method -->
-
-      
-        <div id="update_revision_desc-method" class="method-detail ">
-          <a name="method-i-update_revision_desc"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">update_revision_desc</span><span
-              class="method-args">(comment_text, user)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="update_revision_desc-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 320</span>
+          <div class="method-source-code" id="update_revision_desc-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 320</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update_revision_desc</span>(<span class="ruby-identifier">comment_text</span>, <span class="ruby-identifier">user</span>)
   <span class="ruby-identifier">commit_message</span> = <span class="ruby-string">&quot;Update revisionDesc\n\n&quot;</span>
   <span class="ruby-identifier">change_desc_content</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>
@@ -1600,36 +1509,33 @@ creating board</p>
   
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">change_desc_content</span>, <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">commit_message</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- update_revision_desc-source -->
-            
-          </div>
+          </div><!-- update_revision_desc-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- update_revision_desc-method -->
+
+    
+      <div id="method-i-user_has_voted-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">user_has_voted?</span><span
+            class="method-args">(user_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- update_revision_desc-method -->
-
-      
-        <div id="user_has_voted-3F-method" class="method-detail ">
-          <a name="method-i-user_has_voted-3F"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">user_has_voted?</span><span
-              class="method-args">(user_id)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="user_has_voted-3F-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 362</span>
+          <div class="method-source-code" id="user_has_voted-3F-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 362</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">user_has_voted?</span>(<span class="ruby-identifier">user_id</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">votes</span>
     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">votes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">vote</span><span class="ruby-operator">|</span>
@@ -1641,62 +1547,56 @@ creating board</p>
   <span class="ruby-comment">#no vote found</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- user_has_voted-3F-source -->
-            
-          </div>
+          </div><!-- user_has_voted-3F-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- user_has_voted-3F-method -->
+
+    
+      <div id="method-i-xml_content" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">xml_content</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- user_has_voted-3F-method -->
-
-      
-        <div id="xml_content-method" class="method-detail ">
-          <a name="method-i-xml_content"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">xml_content</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="xml_content-source">
-<pre>
-<span class="ruby-comment"># File app/models/identifier.rb, line 237</span>
+          <div class="method-source-code" id="xml_content-source">
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 237</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">xml_content</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">content</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- xml_content-source -->
-            
-          </div>
-
+          </div><!-- xml_content-source -->
           
+        </div>
 
-          
-        </div><!-- xml_content-method -->
+        
 
-      
-      </div><!-- public-instance-method-details -->
+        
+      </div><!-- xml_content-method -->
+
     
-    </div><!-- 5Buntitled-5D -->
+    </section><!-- public-instance-method-details -->
   
+  </section><!-- 5Buntitled-5D -->
 
-  </div><!-- documentation -->
+</div><!-- documentation -->
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
 
-</body>
-</html>
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 

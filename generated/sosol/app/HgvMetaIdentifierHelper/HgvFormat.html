@@ -1,366 +1,364 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-  <title>Module: HgvMetaIdentifierHelper::HgvFormat</title>
+<title>Module: HgvMetaIdentifierHelper::HgvFormat</title>
 
-  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
 
-  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
 
-</head>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
 <body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#classes">Classes</a>
-          <a href="../index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="../app/helpers/hgv_meta_identifier_helper_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="app/helpers/hgv_meta_identifier_helper.rb">app/helpers/hgv_meta_identifier_helper.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-      
-    </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-    <div id="class-metadata">
-      
 
-      
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/helpers/hgv_meta_identifier_helper.rb
+  </ul>
+</nav>
 
-      
-
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-c-format">::format</a></li>
-          
-          <li><a href="#method-c-formatCentury">::formatCentury</a></li>
-          
-          <li><a href="#method-c-formatCenturyQualifier">::formatCenturyQualifier</a></li>
-          
-          <li><a href="#method-c-formatCertainty">::formatCertainty</a></li>
-          
-          <li><a href="#method-c-formatDate">::formatDate</a></li>
-          
-          <li><a href="#method-c-formatDateFromIsoParts">::formatDateFromIsoParts</a></li>
-          
-          <li><a href="#method-c-formatDatePart">::formatDatePart</a></li>
-          
-          <li><a href="#method-c-formatDay">::formatDay</a></li>
-          
-          <li><a href="#method-c-formatMonth">::formatMonth</a></li>
-          
-          <li><a href="#method-c-formatMonthQualifier">::formatMonthQualifier</a></li>
-          
-          <li><a href="#method-c-formatOffset">::formatOffset</a></li>
-          
-          <li><a href="#method-c-formatPrecision">::formatPrecision</a></li>
-          
-          <li><a href="#method-c-formatYear">::formatYear</a></li>
-          
-          <li><a href="#method-c-formatYearQualifier">::formatYearQualifier</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="../images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="../Papyrillio.html">Papyrillio</a></li>
-        
-          <li><a href="../Papyrillio/Aggregator.html">Papyrillio::Aggregator</a></li>
-        
-          <li><a href="../Papyrillio/Collector.html">Papyrillio::Collector</a></li>
-        
-          <li><a href="../Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a></li>
-        
-          <li><a href="../Papyrillio/Decorator.html">Papyrillio::Decorator</a></li>
-        
-          <li><a href="../Papyrillio/Organiser.html">Papyrillio::Organiser</a></li>
-        
-          <li><a href="../Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a></li>
-        
-          <li><a href="../Papyrillio/Printer.html">Papyrillio::Printer</a></li>
-        
-          <li><a href="../Papyrillio/Publishee.html">Papyrillio::Publishee</a></li>
-        
-          <li><a href="../Papyrillio/Publisher.html">Papyrillio::Publisher</a></li>
-        
-          <li><a href="../Papyrillio/Transformer.html">Papyrillio::Transformer</a></li>
-        
-          <li><a href="../JRubyXML.html">JRubyXML</a></li>
-        
-          <li><a href="../JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a></li>
-        
-          <li><a href="../JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a></li>
-        
-          <li><a href="../JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a></li>
-        
-          <li><a href="../JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a></li>
-        
-          <li><a href="../JRubyXML/ParseError.html">JRubyXML::ParseError</a></li>
-        
-          <li><a href="../JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a></li>
-        
-          <li><a href="../JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a></li>
-        
-          <li><a href="../REXML.html">REXML</a></li>
-        
-          <li><a href="../REXML/Document.html">REXML::Document</a></li>
-        
-          <li><a href="../REXML/Element.html">REXML::Element</a></li>
-        
-          <li><a href="../REXML/XPath.html">REXML::XPath</a></li>
-        
-          <li><a href="../Rpx.html">Rpx</a></li>
-        
-          <li><a href="../Rpx/RpxException.html">Rpx::RpxException</a></li>
-        
-          <li><a href="../Rpx/RpxHelper.html">Rpx::RpxHelper</a></li>
-        
-          <li><a href="../Comment.html">Comment</a></li>
-        
-          <li><a href="../Comment/CombineComment.html">Comment::CombineComment</a></li>
-        
-          <li><a href="../Doco.html">Doco</a></li>
-        
-          <li><a href="../Doco/DocoNode.html">Doco::DocoNode</a></li>
-        
-          <li><a href="../Grit.html">Grit</a></li>
-        
-          <li><a href="../Grit/Commit.html">Grit::Commit</a></li>
-        
-          <li><a href="../HGVMetaIdentifier.html">HGVMetaIdentifier</a></li>
-        
-          <li><a href="../HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
-        
-          <li><a href="../HGVTransGlossary.html">HGVTransGlossary</a></li>
-        
-          <li><a href="../HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a></li>
-        
-          <li><a href="../NumbersRDF.html">NumbersRDF</a></li>
-        
-          <li><a href="../NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a></li>
-        
-          <li><a href="../AjaxProxyController.html">AjaxProxyController</a></li>
-        
-          <li><a href="../ApplicationController.html">ApplicationController</a></li>
-        
-          <li><a href="../ApplicationHelper.html">ApplicationHelper</a></li>
-        
-          <li><a href="../Board.html">Board</a></li>
-        
-          <li><a href="../BoardsController.html">BoardsController</a></li>
-        
-          <li><a href="../CommentsController.html">CommentsController</a></li>
-        
-          <li><a href="../DDBIdentifier.html">DDBIdentifier</a></li>
-        
-          <li><a href="../DdbIdentifiersController.html">DdbIdentifiersController</a></li>
-        
-          <li><a href="../Decree.html">Decree</a></li>
-        
-          <li><a href="../DecreesController.html">DecreesController</a></li>
-        
-          <li><a href="../DocosController.html">DocosController</a></li>
-        
-          <li><a href="../DocovideosController.html">DocovideosController</a></li>
-        
-          <li><a href="../Emailer.html">Emailer</a></li>
-        
-          <li><a href="../EmailerMailer.html">EmailerMailer</a></li>
-        
-          <li><a href="../EmailersController.html">EmailersController</a></li>
-        
-          <li><a href="../Event.html">Event</a></li>
-        
-          <li><a href="../EventsController.html">EventsController</a></li>
-        
-          <li><a href="../GitConf.html">GitConf</a></li>
-        
-          <li><a href="../HGVBiblioIdentifier.html">HGVBiblioIdentifier</a></li>
-        
-          <li><a href="../HGVIdentifier.html">HGVIdentifier</a></li>
-        
-          <li><a href="../HGVTransIdentifier.html">HGVTransIdentifier</a></li>
-        
-          <li><a href="../HelperController.html">HelperController</a></li>
-        
-          <li><a href="../HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a></li>
-        
-          <li><a href="../HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></li>
-        
-          <li><a href="../HgvTransGlossariesController.html">HgvTransGlossariesController</a></li>
-        
-          <li><a href="../HgvTransIdentifiersController.html">HgvTransIdentifiersController</a></li>
-        
-          <li><a href="../Identifier.html">Identifier</a></li>
-        
-          <li><a href="../IdentifiersController.html">IdentifiersController</a></li>
-        
-          <li><a href="../Integer.html">Integer</a></li>
-        
-          <li><a href="../Leiden.html">Leiden</a></li>
-        
-          <li><a href="../LeidenController.html">LeidenController</a></li>
-        
-          <li><a href="../LinkingInfo.html">LinkingInfo</a></li>
-        
-          <li><a href="../MaintenanceMode.html">MaintenanceMode</a></li>
-        
-          <li><a href="../Object.html">Object</a></li>
-        
-          <li><a href="../Publication.html">Publication</a></li>
-        
-          <li><a href="../PublicationsController.html">PublicationsController</a></li>
-        
-          <li><a href="../Rails.html">Rails</a></li>
-        
-          <li><a href="../RepositoriesController.html">RepositoriesController</a></li>
-        
-          <li><a href="../Repository.html">Repository</a></li>
-        
-          <li><a href="../RpxController.html">RpxController</a></li>
-        
-          <li><a href="../TranslationHelperController.html">TranslationHelperController</a></li>
-        
-          <li><a href="../TranslationLeiden.html">TranslationLeiden</a></li>
-        
-          <li><a href="../TranslationLeidenController.html">TranslationLeidenController</a></li>
-        
-          <li><a href="../User.html">User</a></li>
-        
-          <li><a href="../UserController.html">UserController</a></li>
-        
-          <li><a href="../UserIdentifier.html">UserIdentifier</a></li>
-        
-          <li><a href="../Vote.html">Vote</a></li>
-        
-          <li><a href="../VotesController.html">VotesController</a></li>
-        
-          <li><a href="../WelcomeController.html">WelcomeController</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
+    
   </div>
 
-  <div id="documentation">
-    <h1 class="module">HgvMetaIdentifierHelper::HgvFormat</h1>
-
-    <div id="description" class="description">
-      
-    </div><!-- description -->
-
+  <div id="class-metadata">
     
     
     
-    <div id="5Buntitled-5D" class="documentation-section">
-      
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
 
-      
+  <ul class="link-list">
+    
+    <li><a href="#method-c-format">::format</a>
+    
+    <li><a href="#method-c-formatCentury">::formatCentury</a>
+    
+    <li><a href="#method-c-formatCenturyQualifier">::formatCenturyQualifier</a>
+    
+    <li><a href="#method-c-formatCertainty">::formatCertainty</a>
+    
+    <li><a href="#method-c-formatDate">::formatDate</a>
+    
+    <li><a href="#method-c-formatDateFromIsoParts">::formatDateFromIsoParts</a>
+    
+    <li><a href="#method-c-formatDatePart">::formatDatePart</a>
+    
+    <li><a href="#method-c-formatDay">::formatDay</a>
+    
+    <li><a href="#method-c-formatMonth">::formatMonth</a>
+    
+    <li><a href="#method-c-formatMonthQualifier">::formatMonthQualifier</a>
+    
+    <li><a href="#method-c-formatOffset">::formatOffset</a>
+    
+    <li><a href="#method-c-formatPrecision">::formatPrecision</a>
+    
+    <li><a href="#method-c-formatYear">::formatYear</a>
+    
+    <li><a href="#method-c-formatYearQualifier">::formatYearQualifier</a>
+    
+  </ul>
+</nav>
 
-      
+  </div>
 
-      
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
 
-      <!-- Methods -->
-      
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
+  <ul>
+  
+    <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
 
-      
-        <div id="format-method" class="method-detail ">
-          <a name="method-c-format"></a>
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo.html">HgvMetaIdentifierHelper::HgvGeo</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/GeoSpot.html">HgvMetaIdentifierHelper::HgvGeo::GeoSpot</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/OrigPlace.html">HgvMetaIdentifierHelper::HgvGeo::OrigPlace</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/Place.html">HgvMetaIdentifierHelper::HgvGeo::Place</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/Provenance.html">HgvMetaIdentifierHelper::HgvGeo::Provenance</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a>
+  
+    <li><a href="../Papyrillio.html">Papyrillio</a>
+  
+    <li><a href="../Papyrillio/Aggregator.html">Papyrillio::Aggregator</a>
+  
+    <li><a href="../Papyrillio/Collector.html">Papyrillio::Collector</a>
+  
+    <li><a href="../Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a>
+  
+    <li><a href="../Papyrillio/Decorator.html">Papyrillio::Decorator</a>
+  
+    <li><a href="../Papyrillio/Organiser.html">Papyrillio::Organiser</a>
+  
+    <li><a href="../Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a>
+  
+    <li><a href="../Papyrillio/Printer.html">Papyrillio::Printer</a>
+  
+    <li><a href="../Papyrillio/Publishee.html">Papyrillio::Publishee</a>
+  
+    <li><a href="../Papyrillio/Publisher.html">Papyrillio::Publisher</a>
+  
+    <li><a href="../Papyrillio/Transformer.html">Papyrillio::Transformer</a>
+  
+    <li><a href="../JRubyXML.html">JRubyXML</a>
+  
+    <li><a href="../JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a>
+  
+    <li><a href="../JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a>
+  
+    <li><a href="../JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a>
+  
+    <li><a href="../JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a>
+  
+    <li><a href="../JRubyXML/ParseError.html">JRubyXML::ParseError</a>
+  
+    <li><a href="../JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a>
+  
+    <li><a href="../JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a>
+  
+    <li><a href="../REXML.html">REXML</a>
+  
+    <li><a href="../REXML/Document.html">REXML::Document</a>
+  
+    <li><a href="../REXML/Element.html">REXML::Element</a>
+  
+    <li><a href="../REXML/XPath.html">REXML::XPath</a>
+  
+    <li><a href="../Rpx.html">Rpx</a>
+  
+    <li><a href="../Rpx/RpxException.html">Rpx::RpxException</a>
+  
+    <li><a href="../Rpx/RpxHelper.html">Rpx::RpxHelper</a>
+  
+    <li><a href="../Comment.html">Comment</a>
+  
+    <li><a href="../Comment/CombineComment.html">Comment::CombineComment</a>
+  
+    <li><a href="../Doco.html">Doco</a>
+  
+    <li><a href="../Doco/DocoNode.html">Doco::DocoNode</a>
+  
+    <li><a href="../Grit.html">Grit</a>
+  
+    <li><a href="../Grit/Commit.html">Grit::Commit</a>
+  
+    <li><a href="../HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+    <li><a href="../HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a>
+  
+    <li><a href="../HGVTransGlossary.html">HGVTransGlossary</a>
+  
+    <li><a href="../HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a>
+  
+    <li><a href="../NumbersRDF.html">NumbersRDF</a>
+  
+    <li><a href="../NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a>
+  
+    <li><a href="../AjaxProxyController.html">AjaxProxyController</a>
+  
+    <li><a href="../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../Board.html">Board</a>
+  
+    <li><a href="../BoardsController.html">BoardsController</a>
+  
+    <li><a href="../CommentsController.html">CommentsController</a>
+  
+    <li><a href="../DDBIdentifier.html">DDBIdentifier</a>
+  
+    <li><a href="../DdbIdentifiersController.html">DdbIdentifiersController</a>
+  
+    <li><a href="../Decree.html">Decree</a>
+  
+    <li><a href="../DecreesController.html">DecreesController</a>
+  
+    <li><a href="../DocosController.html">DocosController</a>
+  
+    <li><a href="../DocovideosController.html">DocovideosController</a>
+  
+    <li><a href="../Emailer.html">Emailer</a>
+  
+    <li><a href="../EmailerMailer.html">EmailerMailer</a>
+  
+    <li><a href="../EmailersController.html">EmailersController</a>
+  
+    <li><a href="../Event.html">Event</a>
+  
+    <li><a href="../EventsController.html">EventsController</a>
+  
+    <li><a href="../GitConf.html">GitConf</a>
+  
+    <li><a href="../HGVBiblioIdentifier.html">HGVBiblioIdentifier</a>
+  
+    <li><a href="../HGVIdentifier.html">HGVIdentifier</a>
+  
+    <li><a href="../HGVTransIdentifier.html">HGVTransIdentifier</a>
+  
+    <li><a href="../HelperController.html">HelperController</a>
+  
+    <li><a href="../HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a>
+  
+    <li><a href="../HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a>
+  
+    <li><a href="../HgvTransGlossariesController.html">HgvTransGlossariesController</a>
+  
+    <li><a href="../HgvTransIdentifiersController.html">HgvTransIdentifiersController</a>
+  
+    <li><a href="../Identifier.html">Identifier</a>
+  
+    <li><a href="../IdentifiersController.html">IdentifiersController</a>
+  
+    <li><a href="../Integer.html">Integer</a>
+  
+    <li><a href="../Leiden.html">Leiden</a>
+  
+    <li><a href="../LeidenController.html">LeidenController</a>
+  
+    <li><a href="../LinkingInfo.html">LinkingInfo</a>
+  
+    <li><a href="../MaintenanceMode.html">MaintenanceMode</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../Publication.html">Publication</a>
+  
+    <li><a href="../PublicationsController.html">PublicationsController</a>
+  
+    <li><a href="../Rails.html">Rails</a>
+  
+    <li><a href="../RepositoriesController.html">RepositoriesController</a>
+  
+    <li><a href="../Repository.html">Repository</a>
+  
+    <li><a href="../RpxController.html">RpxController</a>
+  
+    <li><a href="../TranslationHelperController.html">TranslationHelperController</a>
+  
+    <li><a href="../TranslationLeiden.html">TranslationLeiden</a>
+  
+    <li><a href="../TranslationLeidenController.html">TranslationLeidenController</a>
+  
+    <li><a href="../User.html">User</a>
+  
+    <li><a href="../UserController.html">UserController</a>
+  
+    <li><a href="../UserIdentifier.html">UserIdentifier</a>
+  
+    <li><a href="../Vote.html">Vote</a>
+  
+    <li><a href="../VotesController.html">VotesController</a>
+  
+    <li><a href="../WelcomeController.html">WelcomeController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module HgvMetaIdentifierHelper::HgvFormat</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-format" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">format</span><span
+            class="method-args">(key, list)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">format</span><span
-              class="method-args">(key, list)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="format-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1131</span>
+          <div class="method-source-code" id="format-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1660</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">format</span> <span class="ruby-identifier">key</span>, <span class="ruby-identifier">list</span>
   <span class="ruby-keyword">begin</span>
     <span class="ruby-identifier">key</span> = <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_sym</span>
@@ -370,69 +368,63 @@
 
   <span class="ruby-identifier">list</span>[<span class="ruby-identifier">key</span>]
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- format-source -->
-            
-          </div>
+          </div><!-- format-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- format-method -->
+
+    
+      <div id="method-c-formatCentury" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">formatCentury</span><span
+            class="method-args">(century)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- format-method -->
-
-      
-        <div id="formatCentury-method" class="method-detail ">
-          <a name="method-c-formatCentury"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">formatCentury</span><span
-              class="method-args">(century)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="formatCentury-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1074</span>
+          <div class="method-source-code" id="formatCentury-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1603</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatCentury</span> <span class="ruby-identifier">century</span>
   <span class="ruby-identifier">century</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">century</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">century</span>.<span class="ruby-identifier">to_i</span>.<span class="ruby-identifier">abs</span>.<span class="ruby-identifier">roman</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">century</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-string">' v.Chr.'</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- formatCentury-source -->
-            
-          </div>
+          </div><!-- formatCentury-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- formatCentury-method -->
+
+    
+      <div id="method-c-formatCenturyQualifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">formatCenturyQualifier</span><span
+            class="method-args">(q)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- formatCentury-method -->
-
-      
-        <div id="formatCenturyQualifier-method" class="method-detail ">
-          <a name="method-c-formatCenturyQualifier"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">formatCenturyQualifier</span><span
-              class="method-args">(q)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="formatCenturyQualifier-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1108</span>
+          <div class="method-source-code" id="formatCenturyQualifier-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1637</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatCenturyQualifier</span> <span class="ruby-identifier">q</span>
   <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">format</span> <span class="ruby-identifier">q</span>, {
     <span class="ruby-value">:beginning</span>          =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Anfang'</span>,
@@ -455,36 +447,33 @@
     <span class="ruby-value">:endCirca</span>                =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Ende (?)'</span>
   } 
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- formatCenturyQualifier-source -->
-            
-          </div>
+          </div><!-- formatCenturyQualifier-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- formatCenturyQualifier-method -->
+
+    
+      <div id="method-c-formatCertainty" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">formatCertainty</span><span
+            class="method-args">(certainty)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- formatCenturyQualifier-method -->
-
-      
-        <div id="formatCertainty-method" class="method-detail ">
-          <a name="method-c-formatCertainty"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">formatCertainty</span><span
-              class="method-args">(certainty)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="formatCertainty-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1042</span>
+          <div class="method-source-code" id="formatCertainty-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1571</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatCertainty</span> <span class="ruby-identifier">certainty</span>
   <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">format</span> <span class="ruby-identifier">certainty</span>, {
     <span class="ruby-value">:low</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'(?)'</span>,
@@ -497,36 +486,33 @@
     <span class="ruby-value">:day_month_year</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'(Jahr, Monat und Tag unsicher)'</span>
   }
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- formatCertainty-source -->
-            
-          </div>
+          </div><!-- formatCertainty-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- formatCertainty-method -->
+
+    
+      <div id="method-c-formatDate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">formatDate</span><span
+            class="method-args">(date_item)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- formatCertainty-method -->
-
-      
-        <div id="formatDate-method" class="method-detail ">
-          <a name="method-c-formatDate"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">formatDate</span><span
-              class="method-args">(date_item)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="formatDate-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 980</span>
+          <div class="method-source-code" id="formatDate-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1509</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatDate</span> <span class="ruby-identifier">date_item</span>
   <span class="ruby-identifier">precision</span> = <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatPrecision</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:precision</span>]
   <span class="ruby-identifier">certainty</span> = <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatCertainty</span> <span class="ruby-identifier">date_item</span>[<span class="ruby-value">:certainty</span>]
@@ -558,37 +544,34 @@
     (<span class="ruby-identifier">date2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">date2</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-string">' - '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">date2</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>) <span class="ruby-operator">+</span> 
     (<span class="ruby-identifier">certainty</span> <span class="ruby-operator">?</span> <span class="ruby-string">' '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">certainty</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- formatDate-source -->
-            
-          </div>
+          </div><!-- formatDate-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- formatDate-method -->
+
+    
+      <div id="method-c-formatDateFromIsoParts" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">formatDateFromIsoParts</span><span
+            class="method-args">(isoWhen, isoNotBefore = nil, isoNotAfter = nil, certainty = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- formatDate-method -->
-
-      
-        <div id="formatDateFromIsoParts-method" class="method-detail ">
-          <a name="method-c-formatDateFromIsoParts"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">formatDateFromIsoParts</span><span
-              class="method-args">(isoWhen, isoNotBefore, isoNotAfter, certainty = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="formatDateFromIsoParts-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 953</span>
-<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatDateFromIsoParts</span> <span class="ruby-identifier">isoWhen</span>, <span class="ruby-identifier">isoNotBefore</span>, <span class="ruby-identifier">isoNotAfter</span>, <span class="ruby-identifier">certainty</span> = <span class="ruby-keyword">nil</span>
+          <div class="method-source-code" id="formatDateFromIsoParts-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1482</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatDateFromIsoParts</span> <span class="ruby-identifier">isoWhen</span>, <span class="ruby-identifier">isoNotBefore</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">isoNotAfter</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">certainty</span> = <span class="ruby-keyword">nil</span>
   <span class="ruby-identifier">date_item</span> = {}
   
   <span class="ruby-identifier">date1</span> = <span class="ruby-identifier">isoWhen</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">isoWhen</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">isoWhen</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">isoNotBefore</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">isoNotBefore</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">isoNotBefore</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>)
@@ -614,36 +597,33 @@
   <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatDate</span> <span class="ruby-identifier">date_item</span>
   
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- formatDateFromIsoParts-source -->
-            
-          </div>
+          </div><!-- formatDateFromIsoParts-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- formatDateFromIsoParts-method -->
+
+    
+      <div id="method-c-formatDatePart" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">formatDatePart</span><span
+            class="method-args">(c = nil, y = nil, m = nil, d = nil, cq = nil, yq = nil, mq = nil, offset = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- formatDateFromIsoParts-method -->
-
-      
-        <div id="formatDatePart-method" class="method-detail ">
-          <a name="method-c-formatDatePart"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">formatDatePart</span><span
-              class="method-args">(c = nil, y = nil, m = nil, d = nil, cq = nil, yq = nil, mq = nil, offset = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="formatDatePart-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1012</span>
+          <div class="method-source-code" id="formatDatePart-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1541</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatDatePart</span> <span class="ruby-identifier">c</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">y</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">m</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">d</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">cq</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">yq</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">mq</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">offset</span> = <span class="ruby-keyword">nil</span>
 
   <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">formatOffset</span> <span class="ruby-identifier">offset</span>
@@ -664,103 +644,94 @@
     (<span class="ruby-identifier">cq</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">cq</span> <span class="ruby-operator">+</span> <span class="ruby-string">' '</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>) <span class="ruby-operator">+</span>
     (<span class="ruby-identifier">c</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>)).<span class="ruby-identifier">strip</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- formatDatePart-source -->
-            
-          </div>
+          </div><!-- formatDatePart-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- formatDatePart-method -->
+
+    
+      <div id="method-c-formatDay" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">formatDay</span><span
+            class="method-args">(day)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- formatDatePart-method -->
-
-      
-        <div id="formatDay-method" class="method-detail ">
-          <a name="method-c-formatDay"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">formatDay</span><span
-              class="method-args">(day)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="formatDay-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1061</span>
+          <div class="method-source-code" id="formatDay-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1590</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatDay</span> <span class="ruby-identifier">day</span>
   (<span class="ruby-identifier">day</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">day</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>) <span class="ruby-operator">?</span> (<span class="ruby-identifier">day</span>.<span class="ruby-identifier">to_i</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">'.'</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- formatDay-source -->
-            
-          </div>
+          </div><!-- formatDay-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- formatDay-method -->
+
+    
+      <div id="method-c-formatMonth" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">formatMonth</span><span
+            class="method-args">(month)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- formatDay-method -->
-
-      
-        <div id="formatMonth-method" class="method-detail ">
-          <a name="method-c-formatMonth"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">formatMonth</span><span
-              class="method-args">(month)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="formatMonth-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1065</span>
+          <div class="method-source-code" id="formatMonth-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1594</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatMonth</span> <span class="ruby-identifier">month</span>
   <span class="ruby-identifier">months</span> = [<span class="ruby-string">''</span>, <span class="ruby-string">'Jan.'</span>, <span class="ruby-string">'Feb.'</span>, <span class="ruby-string">'März'</span>, <span class="ruby-string">'Apr.'</span>, <span class="ruby-string">'Mai'</span>, <span class="ruby-string">'Juni'</span>, <span class="ruby-string">'Juli'</span>, <span class="ruby-string">'Aug.'</span>, <span class="ruby-string">'Sept.'</span>, <span class="ruby-string">'Okt.'</span>, <span class="ruby-string">'Nov.'</span>, <span class="ruby-string">'Dez.'</span>]
   <span class="ruby-identifier">month</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">month</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">month</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">13</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">months</span>[<span class="ruby-identifier">month</span>.<span class="ruby-identifier">to_i</span>] <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- formatMonth-source -->
-            
-          </div>
+          </div><!-- formatMonth-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- formatMonth-method -->
+
+    
+      <div id="method-c-formatMonthQualifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">formatMonthQualifier</span><span
+            class="method-args">(q)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- formatMonth-method -->
-
-      
-        <div id="formatMonthQualifier-method" class="method-detail ">
-          <a name="method-c-formatMonthQualifier"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">formatMonthQualifier</span><span
-              class="method-args">(q)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="formatMonthQualifier-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1078</span>
+          <div class="method-source-code" id="formatMonthQualifier-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1607</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatMonthQualifier</span> <span class="ruby-identifier">q</span>
   <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">format</span> <span class="ruby-identifier">q</span>, {
     <span class="ruby-value">:beginning</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Anfang'</span>, 
@@ -771,36 +742,33 @@
     <span class="ruby-value">:endCirca</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Ende (?)'</span>
   }
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- formatMonthQualifier-source -->
-            
-          </div>
+          </div><!-- formatMonthQualifier-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- formatMonthQualifier-method -->
+
+    
+      <div id="method-c-formatOffset" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">formatOffset</span><span
+            class="method-args">(offset)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- formatMonthQualifier-method -->
-
-      
-        <div id="formatOffset-method" class="method-detail ">
-          <a name="method-c-formatOffset"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">formatOffset</span><span
-              class="method-args">(offset)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="formatOffset-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1033</span>
+          <div class="method-source-code" id="formatOffset-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1562</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatOffset</span> <span class="ruby-identifier">offset</span>
   <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">format</span> <span class="ruby-identifier">offset</span>, {
     <span class="ruby-value">:before</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'vor'</span>,
@@ -809,104 +777,95 @@
     <span class="ruby-value">:afterUncertain</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'nach (?)'</span>
   }
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- formatOffset-source -->
-            
-          </div>
+          </div><!-- formatOffset-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- formatOffset-method -->
+
+    
+      <div id="method-c-formatPrecision" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">formatPrecision</span><span
+            class="method-args">(precision)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- formatOffset-method -->
-
-      
-        <div id="formatPrecision-method" class="method-detail ">
-          <a name="method-c-formatPrecision"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">formatPrecision</span><span
-              class="method-args">(precision)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="formatPrecision-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1055</span>
+          <div class="method-source-code" id="formatPrecision-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1584</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatPrecision</span> <span class="ruby-identifier">precision</span>
   <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">format</span> <span class="ruby-identifier">precision</span>, {
     <span class="ruby-value">:ca</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'ca.'</span>
   }
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- formatPrecision-source -->
-            
-          </div>
+          </div><!-- formatPrecision-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- formatPrecision-method -->
+
+    
+      <div id="method-c-formatYear" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">formatYear</span><span
+            class="method-args">(year)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- formatPrecision-method -->
-
-      
-        <div id="formatYear-method" class="method-detail ">
-          <a name="method-c-formatYear"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">formatYear</span><span
-              class="method-args">(year)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="formatYear-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1070</span>
+          <div class="method-source-code" id="formatYear-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1599</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatYear</span> <span class="ruby-identifier">year</span>
   <span class="ruby-identifier">year</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">year</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">year</span>.<span class="ruby-identifier">to_i</span>.<span class="ruby-identifier">abs</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">year</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-string">' v.Chr.'</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- formatYear-source -->
-            
-          </div>
+          </div><!-- formatYear-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- formatYear-method -->
+
+    
+      <div id="method-c-formatYearQualifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">formatYearQualifier</span><span
+            class="method-args">(q)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- formatYear-method -->
-
-      
-        <div id="formatYearQualifier-method" class="method-detail ">
-          <a name="method-c-formatYearQualifier"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">formatYearQualifier</span><span
-              class="method-args">(q)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="formatYearQualifier-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1089</span>
+          <div class="method-source-code" id="formatYearQualifier-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1618</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">formatYearQualifier</span> <span class="ruby-identifier">q</span>
   <span class="ruby-constant">HgvFormat</span>.<span class="ruby-identifier">format</span> <span class="ruby-identifier">q</span>, {
     <span class="ruby-value">:beginning</span>          =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Anfang'</span>, 
@@ -925,29 +884,26 @@
     <span class="ruby-value">:endCirca</span>                =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'Ende (?)'</span>
   }
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- formatYearQualifier-source -->
-            
-          </div>
-
+          </div><!-- formatYearQualifier-source -->
           
+        </div>
 
-          
-        </div><!-- formatYearQualifier-method -->
+        
 
-      
-      </div><!-- public-class-method-details -->
+        
+      </div><!-- formatYearQualifier-method -->
+
     
-    </div><!-- 5Buntitled-5D -->
+    </section><!-- public-class-method-details -->
   
+  </section><!-- 5Buntitled-5D -->
 
-  </div><!-- documentation -->
+</div><!-- documentation -->
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
 
-</body>
-</html>
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 

@@ -1,388 +1,386 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-  <title>Module: HgvMetaIdentifierHelper::HgvDate</title>
+<title>Module: HgvMetaIdentifierHelper::HgvDate</title>
 
-  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
 
-  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
 
-</head>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
 <body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#classes">Classes</a>
-          <a href="../index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="../app/helpers/hgv_meta_identifier_helper_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="app/helpers/hgv_meta_identifier_helper.rb">app/helpers/hgv_meta_identifier_helper.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-      
-    </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-    <div id="class-metadata">
-      
 
-      
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/helpers/hgv_meta_identifier_helper.rb
+  </ul>
+</nav>
 
-      
-
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-c-centuryOptions">::centuryOptions</a></li>
-          
-          <li><a href="#method-c-certaintyOptions">::certaintyOptions</a></li>
-          
-          <li><a href="#method-c-dayFromIso">::dayFromIso</a></li>
-          
-          <li><a href="#method-c-epidocToHgv">::epidocToHgv</a></li>
-          
-          <li><a href="#method-c-extractFromIso">::extractFromIso</a></li>
-          
-          <li><a href="#method-c-getCentury">::getCentury</a></li>
-          
-          <li><a href="#method-c-getCenturyQualifier">::getCenturyQualifier</a></li>
-          
-          <li><a href="#method-c-getCertaintyItem">::getCertaintyItem</a></li>
-          
-          <li><a href="#method-c-getDayIso">::getDayIso</a></li>
-          
-          <li><a href="#method-c-getEmptyEpidocItem">::getEmptyEpidocItem</a></li>
-          
-          <li><a href="#method-c-getEmptyHgvItem">::getEmptyHgvItem</a></li>
-          
-          <li><a href="#method-c-getMonthIso">::getMonthIso</a></li>
-          
-          <li><a href="#method-c-getMonthQualifier">::getMonthQualifier</a></li>
-          
-          <li><a href="#method-c-getOffsetItem">::getOffsetItem</a></li>
-          
-          <li><a href="#method-c-getPrecision">::getPrecision</a></li>
-          
-          <li><a href="#method-c-getPrecisionItem">::getPrecisionItem</a></li>
-          
-          <li><a href="#method-c-getYearIso">::getYearIso</a></li>
-          
-          <li><a href="#method-c-getYearQualifier">::getYearQualifier</a></li>
-          
-          <li><a href="#method-c-hgvToEpidoc">::hgvToEpidoc</a></li>
-          
-          <li><a href="#method-c-monthFromIso">::monthFromIso</a></li>
-          
-          <li><a href="#method-c-monthOptions">::monthOptions</a></li>
-          
-          <li><a href="#method-c-offsetOptions">::offsetOptions</a></li>
-          
-          <li><a href="#method-c-precisionOptions">::precisionOptions</a></li>
-          
-          <li><a href="#method-c-yearFromIso">::yearFromIso</a></li>
-          
-          <li><a href="#method-c-yearOptions">::yearOptions</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="../images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="../Papyrillio.html">Papyrillio</a></li>
-        
-          <li><a href="../Papyrillio/Aggregator.html">Papyrillio::Aggregator</a></li>
-        
-          <li><a href="../Papyrillio/Collector.html">Papyrillio::Collector</a></li>
-        
-          <li><a href="../Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a></li>
-        
-          <li><a href="../Papyrillio/Decorator.html">Papyrillio::Decorator</a></li>
-        
-          <li><a href="../Papyrillio/Organiser.html">Papyrillio::Organiser</a></li>
-        
-          <li><a href="../Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a></li>
-        
-          <li><a href="../Papyrillio/Printer.html">Papyrillio::Printer</a></li>
-        
-          <li><a href="../Papyrillio/Publishee.html">Papyrillio::Publishee</a></li>
-        
-          <li><a href="../Papyrillio/Publisher.html">Papyrillio::Publisher</a></li>
-        
-          <li><a href="../Papyrillio/Transformer.html">Papyrillio::Transformer</a></li>
-        
-          <li><a href="../JRubyXML.html">JRubyXML</a></li>
-        
-          <li><a href="../JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a></li>
-        
-          <li><a href="../JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a></li>
-        
-          <li><a href="../JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a></li>
-        
-          <li><a href="../JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a></li>
-        
-          <li><a href="../JRubyXML/ParseError.html">JRubyXML::ParseError</a></li>
-        
-          <li><a href="../JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a></li>
-        
-          <li><a href="../JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a></li>
-        
-          <li><a href="../HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a></li>
-        
-          <li><a href="../REXML.html">REXML</a></li>
-        
-          <li><a href="../REXML/Document.html">REXML::Document</a></li>
-        
-          <li><a href="../REXML/Element.html">REXML::Element</a></li>
-        
-          <li><a href="../REXML/XPath.html">REXML::XPath</a></li>
-        
-          <li><a href="../Rpx.html">Rpx</a></li>
-        
-          <li><a href="../Rpx/RpxException.html">Rpx::RpxException</a></li>
-        
-          <li><a href="../Rpx/RpxHelper.html">Rpx::RpxHelper</a></li>
-        
-          <li><a href="../Comment.html">Comment</a></li>
-        
-          <li><a href="../Comment/CombineComment.html">Comment::CombineComment</a></li>
-        
-          <li><a href="../Doco.html">Doco</a></li>
-        
-          <li><a href="../Doco/DocoNode.html">Doco::DocoNode</a></li>
-        
-          <li><a href="../Grit.html">Grit</a></li>
-        
-          <li><a href="../Grit/Commit.html">Grit::Commit</a></li>
-        
-          <li><a href="../HGVMetaIdentifier.html">HGVMetaIdentifier</a></li>
-        
-          <li><a href="../HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
-        
-          <li><a href="../HGVTransGlossary.html">HGVTransGlossary</a></li>
-        
-          <li><a href="../HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a></li>
-        
-          <li><a href="../NumbersRDF.html">NumbersRDF</a></li>
-        
-          <li><a href="../NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a></li>
-        
-          <li><a href="../AjaxProxyController.html">AjaxProxyController</a></li>
-        
-          <li><a href="../ApplicationController.html">ApplicationController</a></li>
-        
-          <li><a href="../ApplicationHelper.html">ApplicationHelper</a></li>
-        
-          <li><a href="../Board.html">Board</a></li>
-        
-          <li><a href="../BoardsController.html">BoardsController</a></li>
-        
-          <li><a href="../CommentsController.html">CommentsController</a></li>
-        
-          <li><a href="../DDBIdentifier.html">DDBIdentifier</a></li>
-        
-          <li><a href="../DdbIdentifiersController.html">DdbIdentifiersController</a></li>
-        
-          <li><a href="../Decree.html">Decree</a></li>
-        
-          <li><a href="../DecreesController.html">DecreesController</a></li>
-        
-          <li><a href="../DocosController.html">DocosController</a></li>
-        
-          <li><a href="../DocovideosController.html">DocovideosController</a></li>
-        
-          <li><a href="../Emailer.html">Emailer</a></li>
-        
-          <li><a href="../EmailerMailer.html">EmailerMailer</a></li>
-        
-          <li><a href="../EmailersController.html">EmailersController</a></li>
-        
-          <li><a href="../Event.html">Event</a></li>
-        
-          <li><a href="../EventsController.html">EventsController</a></li>
-        
-          <li><a href="../GitConf.html">GitConf</a></li>
-        
-          <li><a href="../HGVBiblioIdentifier.html">HGVBiblioIdentifier</a></li>
-        
-          <li><a href="../HGVIdentifier.html">HGVIdentifier</a></li>
-        
-          <li><a href="../HGVTransIdentifier.html">HGVTransIdentifier</a></li>
-        
-          <li><a href="../HelperController.html">HelperController</a></li>
-        
-          <li><a href="../HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a></li>
-        
-          <li><a href="../HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></li>
-        
-          <li><a href="../HgvTransGlossariesController.html">HgvTransGlossariesController</a></li>
-        
-          <li><a href="../HgvTransIdentifiersController.html">HgvTransIdentifiersController</a></li>
-        
-          <li><a href="../Identifier.html">Identifier</a></li>
-        
-          <li><a href="../IdentifiersController.html">IdentifiersController</a></li>
-        
-          <li><a href="../Integer.html">Integer</a></li>
-        
-          <li><a href="../Leiden.html">Leiden</a></li>
-        
-          <li><a href="../LeidenController.html">LeidenController</a></li>
-        
-          <li><a href="../LinkingInfo.html">LinkingInfo</a></li>
-        
-          <li><a href="../MaintenanceMode.html">MaintenanceMode</a></li>
-        
-          <li><a href="../Object.html">Object</a></li>
-        
-          <li><a href="../Publication.html">Publication</a></li>
-        
-          <li><a href="../PublicationsController.html">PublicationsController</a></li>
-        
-          <li><a href="../Rails.html">Rails</a></li>
-        
-          <li><a href="../RepositoriesController.html">RepositoriesController</a></li>
-        
-          <li><a href="../Repository.html">Repository</a></li>
-        
-          <li><a href="../RpxController.html">RpxController</a></li>
-        
-          <li><a href="../TranslationHelperController.html">TranslationHelperController</a></li>
-        
-          <li><a href="../TranslationLeiden.html">TranslationLeiden</a></li>
-        
-          <li><a href="../TranslationLeidenController.html">TranslationLeidenController</a></li>
-        
-          <li><a href="../User.html">User</a></li>
-        
-          <li><a href="../UserController.html">UserController</a></li>
-        
-          <li><a href="../UserIdentifier.html">UserIdentifier</a></li>
-        
-          <li><a href="../Vote.html">Vote</a></li>
-        
-          <li><a href="../VotesController.html">VotesController</a></li>
-        
-          <li><a href="../WelcomeController.html">WelcomeController</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
+    
   </div>
 
-  <div id="documentation">
-    <h1 class="module">HgvMetaIdentifierHelper::HgvDate</h1>
-
-    <div id="description" class="description">
-      
-    </div><!-- description -->
-
+  <div id="class-metadata">
     
     
     
-    <div id="5Buntitled-5D" class="documentation-section">
-      
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
 
-      
+  <ul class="link-list">
+    
+    <li><a href="#method-c-centuryOptions">::centuryOptions</a>
+    
+    <li><a href="#method-c-certaintyOptions">::certaintyOptions</a>
+    
+    <li><a href="#method-c-dayFromIso">::dayFromIso</a>
+    
+    <li><a href="#method-c-epidocToHgv">::epidocToHgv</a>
+    
+    <li><a href="#method-c-extractFromIso">::extractFromIso</a>
+    
+    <li><a href="#method-c-getCentury">::getCentury</a>
+    
+    <li><a href="#method-c-getCenturyQualifier">::getCenturyQualifier</a>
+    
+    <li><a href="#method-c-getCertaintyItem">::getCertaintyItem</a>
+    
+    <li><a href="#method-c-getDayIso">::getDayIso</a>
+    
+    <li><a href="#method-c-getEmptyEpidocItem">::getEmptyEpidocItem</a>
+    
+    <li><a href="#method-c-getEmptyHgvItem">::getEmptyHgvItem</a>
+    
+    <li><a href="#method-c-getMonthIso">::getMonthIso</a>
+    
+    <li><a href="#method-c-getMonthQualifier">::getMonthQualifier</a>
+    
+    <li><a href="#method-c-getOffsetItem">::getOffsetItem</a>
+    
+    <li><a href="#method-c-getPrecision">::getPrecision</a>
+    
+    <li><a href="#method-c-getPrecisionItem">::getPrecisionItem</a>
+    
+    <li><a href="#method-c-getYearIso">::getYearIso</a>
+    
+    <li><a href="#method-c-getYearQualifier">::getYearQualifier</a>
+    
+    <li><a href="#method-c-hgvToEpidoc">::hgvToEpidoc</a>
+    
+    <li><a href="#method-c-monthFromIso">::monthFromIso</a>
+    
+    <li><a href="#method-c-monthOptions">::monthOptions</a>
+    
+    <li><a href="#method-c-offsetOptions">::offsetOptions</a>
+    
+    <li><a href="#method-c-precisionOptions">::precisionOptions</a>
+    
+    <li><a href="#method-c-yearFromIso">::yearFromIso</a>
+    
+    <li><a href="#method-c-yearOptions">::yearOptions</a>
+    
+  </ul>
+</nav>
 
-      
+  </div>
 
-      
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
 
-      <!-- Methods -->
-      
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
+  <ul>
+  
+    <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
 
-      
-        <div id="centuryOptions-method" class="method-detail ">
-          <a name="method-c-centuryOptions"></a>
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo.html">HgvMetaIdentifierHelper::HgvGeo</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/GeoSpot.html">HgvMetaIdentifierHelper::HgvGeo::GeoSpot</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/OrigPlace.html">HgvMetaIdentifierHelper::HgvGeo::OrigPlace</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/Place.html">HgvMetaIdentifierHelper::HgvGeo::Place</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/Provenance.html">HgvMetaIdentifierHelper::HgvGeo::Provenance</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a>
+  
+    <li><a href="../Papyrillio.html">Papyrillio</a>
+  
+    <li><a href="../Papyrillio/Aggregator.html">Papyrillio::Aggregator</a>
+  
+    <li><a href="../Papyrillio/Collector.html">Papyrillio::Collector</a>
+  
+    <li><a href="../Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a>
+  
+    <li><a href="../Papyrillio/Decorator.html">Papyrillio::Decorator</a>
+  
+    <li><a href="../Papyrillio/Organiser.html">Papyrillio::Organiser</a>
+  
+    <li><a href="../Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a>
+  
+    <li><a href="../Papyrillio/Printer.html">Papyrillio::Printer</a>
+  
+    <li><a href="../Papyrillio/Publishee.html">Papyrillio::Publishee</a>
+  
+    <li><a href="../Papyrillio/Publisher.html">Papyrillio::Publisher</a>
+  
+    <li><a href="../Papyrillio/Transformer.html">Papyrillio::Transformer</a>
+  
+    <li><a href="../JRubyXML.html">JRubyXML</a>
+  
+    <li><a href="../JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a>
+  
+    <li><a href="../JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a>
+  
+    <li><a href="../JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a>
+  
+    <li><a href="../JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a>
+  
+    <li><a href="../JRubyXML/ParseError.html">JRubyXML::ParseError</a>
+  
+    <li><a href="../JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a>
+  
+    <li><a href="../JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a>
+  
+    <li><a href="../REXML.html">REXML</a>
+  
+    <li><a href="../REXML/Document.html">REXML::Document</a>
+  
+    <li><a href="../REXML/Element.html">REXML::Element</a>
+  
+    <li><a href="../REXML/XPath.html">REXML::XPath</a>
+  
+    <li><a href="../Rpx.html">Rpx</a>
+  
+    <li><a href="../Rpx/RpxException.html">Rpx::RpxException</a>
+  
+    <li><a href="../Rpx/RpxHelper.html">Rpx::RpxHelper</a>
+  
+    <li><a href="../Comment.html">Comment</a>
+  
+    <li><a href="../Comment/CombineComment.html">Comment::CombineComment</a>
+  
+    <li><a href="../Doco.html">Doco</a>
+  
+    <li><a href="../Doco/DocoNode.html">Doco::DocoNode</a>
+  
+    <li><a href="../Grit.html">Grit</a>
+  
+    <li><a href="../Grit/Commit.html">Grit::Commit</a>
+  
+    <li><a href="../HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+    <li><a href="../HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a>
+  
+    <li><a href="../HGVTransGlossary.html">HGVTransGlossary</a>
+  
+    <li><a href="../HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a>
+  
+    <li><a href="../NumbersRDF.html">NumbersRDF</a>
+  
+    <li><a href="../NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a>
+  
+    <li><a href="../AjaxProxyController.html">AjaxProxyController</a>
+  
+    <li><a href="../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../Board.html">Board</a>
+  
+    <li><a href="../BoardsController.html">BoardsController</a>
+  
+    <li><a href="../CommentsController.html">CommentsController</a>
+  
+    <li><a href="../DDBIdentifier.html">DDBIdentifier</a>
+  
+    <li><a href="../DdbIdentifiersController.html">DdbIdentifiersController</a>
+  
+    <li><a href="../Decree.html">Decree</a>
+  
+    <li><a href="../DecreesController.html">DecreesController</a>
+  
+    <li><a href="../DocosController.html">DocosController</a>
+  
+    <li><a href="../DocovideosController.html">DocovideosController</a>
+  
+    <li><a href="../Emailer.html">Emailer</a>
+  
+    <li><a href="../EmailerMailer.html">EmailerMailer</a>
+  
+    <li><a href="../EmailersController.html">EmailersController</a>
+  
+    <li><a href="../Event.html">Event</a>
+  
+    <li><a href="../EventsController.html">EventsController</a>
+  
+    <li><a href="../GitConf.html">GitConf</a>
+  
+    <li><a href="../HGVBiblioIdentifier.html">HGVBiblioIdentifier</a>
+  
+    <li><a href="../HGVIdentifier.html">HGVIdentifier</a>
+  
+    <li><a href="../HGVTransIdentifier.html">HGVTransIdentifier</a>
+  
+    <li><a href="../HelperController.html">HelperController</a>
+  
+    <li><a href="../HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a>
+  
+    <li><a href="../HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a>
+  
+    <li><a href="../HgvTransGlossariesController.html">HgvTransGlossariesController</a>
+  
+    <li><a href="../HgvTransIdentifiersController.html">HgvTransIdentifiersController</a>
+  
+    <li><a href="../Identifier.html">Identifier</a>
+  
+    <li><a href="../IdentifiersController.html">IdentifiersController</a>
+  
+    <li><a href="../Integer.html">Integer</a>
+  
+    <li><a href="../Leiden.html">Leiden</a>
+  
+    <li><a href="../LeidenController.html">LeidenController</a>
+  
+    <li><a href="../LinkingInfo.html">LinkingInfo</a>
+  
+    <li><a href="../MaintenanceMode.html">MaintenanceMode</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../Publication.html">Publication</a>
+  
+    <li><a href="../PublicationsController.html">PublicationsController</a>
+  
+    <li><a href="../Rails.html">Rails</a>
+  
+    <li><a href="../RepositoriesController.html">RepositoriesController</a>
+  
+    <li><a href="../Repository.html">Repository</a>
+  
+    <li><a href="../RpxController.html">RpxController</a>
+  
+    <li><a href="../TranslationHelperController.html">TranslationHelperController</a>
+  
+    <li><a href="../TranslationLeiden.html">TranslationLeiden</a>
+  
+    <li><a href="../TranslationLeidenController.html">TranslationLeidenController</a>
+  
+    <li><a href="../User.html">User</a>
+  
+    <li><a href="../UserController.html">UserController</a>
+  
+    <li><a href="../UserIdentifier.html">UserIdentifier</a>
+  
+    <li><a href="../Vote.html">Vote</a>
+  
+    <li><a href="../VotesController.html">VotesController</a>
+  
+    <li><a href="../WelcomeController.html">WelcomeController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module HgvMetaIdentifierHelper::HgvDate</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-centuryOptions" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">centuryOptions</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">centuryOptions</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="centuryOptions-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 227</span>
+          <div class="method-source-code" id="centuryOptions-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 756</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">centuryOptions</span>
   [[<span class="ruby-string">''</span>, <span class="ruby-string">''</span>], 
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.beginning'</span>), <span class="ruby-value">:beginning</span>], 
@@ -404,36 +402,33 @@
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.end'</span>), <span class="ruby-value">:end</span>], 
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.endCirca'</span>), <span class="ruby-value">:endCirca</span>]]
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- centuryOptions-source -->
-            
-          </div>
+          </div><!-- centuryOptions-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- centuryOptions-method -->
+
+    
+      <div id="method-c-certaintyOptions" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">certaintyOptions</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- centuryOptions-method -->
-
-      
-        <div id="certaintyOptions-method" class="method-detail ">
-          <a name="method-c-certaintyOptions"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">certaintyOptions</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="certaintyOptions-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 257</span>
+          <div class="method-source-code" id="certaintyOptions-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 786</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">certaintyOptions</span>
   [[<span class="ruby-string">''</span>, <span class="ruby-string">''</span>], 
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.certaintyLow'</span>), <span class="ruby-value">:low</span>], 
@@ -445,69 +440,63 @@
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.dayAndYearUncertain'</span>), <span class="ruby-value">:day_year</span>],
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.dayMonthAndYearUncertain'</span>), <span class="ruby-value">:day_month_year</span>]]
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- certaintyOptions-source -->
-            
-          </div>
+          </div><!-- certaintyOptions-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- certaintyOptions-method -->
+
+    
+      <div id="method-c-dayFromIso" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dayFromIso</span><span
+            class="method-args">(iso)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- certaintyOptions-method -->
-
-      
-        <div id="dayFromIso-method" class="method-detail ">
-          <a name="method-c-dayFromIso"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">dayFromIso</span><span
-              class="method-args">(iso)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="dayFromIso-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 512</span>
+          <div class="method-source-code" id="dayFromIso-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1041</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">dayFromIso</span> <span class="ruby-identifier">iso</span>
   <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">extractFromIso</span> <span class="ruby-identifier">iso</span>, <span class="ruby-regexp">/\A-?\d\d\d\d-\d\d-(\d\d)\Z/</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- dayFromIso-source -->
-            
-          </div>
+          </div><!-- dayFromIso-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- dayFromIso-method -->
+
+    
+      <div id="method-c-epidocToHgv" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">epidocToHgv</span><span
+            class="method-args">(date_item)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- dayFromIso-method -->
-
-      
-        <div id="epidocToHgv-method" class="method-detail ">
-          <a name="method-c-epidocToHgv"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">epidocToHgv</span><span
-              class="method-args">(date_item)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="epidocToHgv-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 552</span>
+          <div class="method-source-code" id="epidocToHgv-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1081</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">epidocToHgv</span> <span class="ruby-identifier">date_item</span>      
   <span class="ruby-identifier">t</span> = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getEmptyHgvItem</span>
 
@@ -713,36 +702,33 @@
   
   <span class="ruby-identifier">t</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- epidocToHgv-source -->
-            
-          </div>
+          </div><!-- epidocToHgv-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- epidocToHgv-method -->
+
+    
+      <div id="method-c-extractFromIso" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">extractFromIso</span><span
+            class="method-args">(iso, regex)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- epidocToHgv-method -->
-
-      
-        <div id="extractFromIso-method" class="method-detail ">
-          <a name="method-c-extractFromIso"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">extractFromIso</span><span
-              class="method-args">(iso, regex)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="extractFromIso-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 496</span>
+          <div class="method-source-code" id="extractFromIso-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1025</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">extractFromIso</span> <span class="ruby-identifier">iso</span>, <span class="ruby-identifier">regex</span> 
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">iso</span>
     <span class="ruby-identifier">iso</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">regex</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">iso</span>[<span class="ruby-identifier">regex</span>, <span class="ruby-value">1</span>].<span class="ruby-identifier">to_i</span>  <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
@@ -750,36 +736,33 @@
     <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- extractFromIso-source -->
-            
-          </div>
+          </div><!-- extractFromIso-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- extractFromIso-method -->
+
+    
+      <div id="method-c-getCentury" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCentury</span><span
+            class="method-args">(year)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- extractFromIso-method -->
-
-      
-        <div id="getCentury-method" class="method-detail ">
-          <a name="method-c-getCentury"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getCentury</span><span
-              class="method-args">(year)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="getCentury-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 361</span>
+          <div class="method-source-code" id="getCentury-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 890</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getCentury</span> <span class="ruby-identifier">year</span>
   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">year</span>
     <span class="ruby-keyword">nil</span>
@@ -787,36 +770,33 @@
     (<span class="ruby-identifier">year</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">/</span> <span class="ruby-value">100</span> <span class="ruby-operator">+</span> ((<span class="ruby-identifier">year</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">%</span> <span class="ruby-value">100</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>)) * (<span class="ruby-identifier">year</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">-1</span>)
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- getCentury-source -->
-            
-          </div>
+          </div><!-- getCentury-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- getCentury-method -->
+
+    
+      <div id="method-c-getCenturyQualifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCenturyQualifier</span><span
+            class="method-args">(year, year2)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- getCentury-method -->
-
-      
-        <div id="getCenturyQualifier-method" class="method-detail ">
-          <a name="method-c-getCenturyQualifier"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getCenturyQualifier</span><span
-              class="method-args">(year, year2)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="getCenturyQualifier-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 369</span>
+          <div class="method-source-code" id="getCenturyQualifier-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 898</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getCenturyQualifier</span> <span class="ruby-identifier">year</span>, <span class="ruby-identifier">year2</span>
   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">year</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">year2</span>
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
@@ -876,36 +856,33 @@
     ]
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- getCenturyQualifier-source -->
-            
-          </div>
+          </div><!-- getCenturyQualifier-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- getCenturyQualifier-method -->
+
+    
+      <div id="method-c-getCertaintyItem" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getCertaintyItem</span><span
+            class="method-args">(match)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- getCenturyQualifier-method -->
-
-      
-        <div id="getCertaintyItem-method" class="method-detail ">
-          <a name="method-c-getCertaintyItem"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getCertaintyItem</span><span
-              class="method-args">(match)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="getCertaintyItem-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 769</span>
+          <div class="method-source-code" id="getCertaintyItem-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1298</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getCertaintyItem</span> <span class="ruby-identifier">match</span> 
   {
     <span class="ruby-value">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
@@ -915,36 +892,33 @@
     }
   }   
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- getCertaintyItem-source -->
-            
-          </div>
+          </div><!-- getCertaintyItem-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- getCertaintyItem-method -->
+
+    
+      <div id="method-c-getDayIso" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getDayIso</span><span
+            class="method-args">(day, month, monthQualifier, chron)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- getCertaintyItem-method -->
-
-      
-        <div id="getDayIso-method" class="method-detail ">
-          <a name="method-c-getDayIso"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getDayIso</span><span
-              class="method-args">(day, month, monthQualifier, chron)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="getDayIso-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 337</span>
+          <div class="method-source-code" id="getDayIso-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 866</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getDayIso</span> <span class="ruby-identifier">day</span>, <span class="ruby-identifier">month</span>, <span class="ruby-identifier">monthQualifier</span>, <span class="ruby-identifier">chron</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">day</span>
     <span class="ruby-identifier">day</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">2</span>, <span class="ruby-string">'0'</span>)
@@ -968,36 +942,33 @@
     }[<span class="ruby-identifier">chron</span>][<span class="ruby-identifier">monthQualifier</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">monthQualifier</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-string">'Circa'</span>, <span class="ruby-string">''</span>).<span class="ruby-identifier">to_sym</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>]
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- getDayIso-source -->
-            
-          </div>
+          </div><!-- getDayIso-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- getDayIso-method -->
+
+    
+      <div id="method-c-getEmptyEpidocItem" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getEmptyEpidocItem</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- getDayIso-method -->
-
-      
-        <div id="getEmptyEpidocItem-method" class="method-detail ">
-          <a name="method-c-getEmptyEpidocItem"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getEmptyEpidocItem</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="getEmptyEpidocItem-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 527</span>
+          <div class="method-source-code" id="getEmptyEpidocItem-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1056</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getEmptyEpidocItem</span>
   {
     <span class="ruby-value">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
@@ -1016,36 +987,33 @@
     }
   }
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- getEmptyEpidocItem-source -->
-            
-          </div>
+          </div><!-- getEmptyEpidocItem-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- getEmptyEpidocItem-method -->
+
+    
+      <div id="method-c-getEmptyHgvItem" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getEmptyHgvItem</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- getEmptyEpidocItem-method -->
-
-      
-        <div id="getEmptyHgvItem-method" class="method-detail ">
-          <a name="method-c-getEmptyHgvItem"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getEmptyHgvItem</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="getEmptyHgvItem-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 516</span>
+          <div class="method-source-code" id="getEmptyHgvItem-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1045</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getEmptyHgvItem</span>
   {
     <span class="ruby-value">:c</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:y</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:m</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:d</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:cx</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:yx</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:mx</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:offset</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:precision</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:ca</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>,
@@ -1056,36 +1024,33 @@
     <span class="ruby-value">:empty</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>
   }
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- getEmptyHgvItem-source -->
-            
-          </div>
+          </div><!-- getEmptyHgvItem-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- getEmptyHgvItem-method -->
+
+    
+      <div id="method-c-getMonthIso" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getMonthIso</span><span
+            class="method-args">(month, yearQualifier, chron)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- getEmptyHgvItem-method -->
-
-      
-        <div id="getMonthIso-method" class="method-detail ">
-          <a name="method-c-getMonthIso"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getMonthIso</span><span
-              class="method-args">(month, yearQualifier, chron)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="getMonthIso-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 308</span>
+          <div class="method-source-code" id="getMonthIso-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 837</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getMonthIso</span> <span class="ruby-identifier">month</span>, <span class="ruby-identifier">yearQualifier</span>, <span class="ruby-identifier">chron</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">month</span>
     <span class="ruby-identifier">month</span>.<span class="ruby-identifier">rjust</span>(<span class="ruby-value">2</span>, <span class="ruby-string">'0'</span>)
@@ -1114,36 +1079,33 @@
     }[<span class="ruby-identifier">chron</span>][<span class="ruby-identifier">yearQualifier</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">yearQualifier</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-string">'Circa'</span>, <span class="ruby-string">''</span>).<span class="ruby-identifier">to_sym</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>]
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- getMonthIso-source -->
-            
-          </div>
+          </div><!-- getMonthIso-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- getMonthIso-method -->
+
+    
+      <div id="method-c-getMonthQualifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getMonthQualifier</span><span
+            class="method-args">(day = nil, day2 = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- getMonthIso-method -->
-
-      
-        <div id="getMonthQualifier-method" class="method-detail ">
-          <a name="method-c-getMonthQualifier"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getMonthQualifier</span><span
-              class="method-args">(day = nil, day2 = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="getMonthQualifier-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 472</span>
+          <div class="method-source-code" id="getMonthQualifier-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1001</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getMonthQualifier</span> <span class="ruby-identifier">day</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">day2</span> = <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">day</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">day2</span>
     <span class="ruby-keyword">return</span> {
@@ -1167,36 +1129,33 @@
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- getMonthQualifier-source -->
-            
-          </div>
+          </div><!-- getMonthQualifier-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- getMonthQualifier-method -->
+
+    
+      <div id="method-c-getOffsetItem" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getOffsetItem</span><span
+            class="method-args">(offset, position)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- getMonthQualifier-method -->
-
-      
-        <div id="getOffsetItem-method" class="method-detail ">
-          <a name="method-c-getOffsetItem"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getOffsetItem</span><span
-              class="method-args">(offset, position)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="getOffsetItem-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 779</span>
+          <div class="method-source-code" id="getOffsetItem-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1308</span>
 <span class="ruby-keyword">def</span>  <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getOffsetItem</span> <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">position</span>
   <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">offset</span>.<span class="ruby-identifier">to_sym</span>
   {
@@ -1208,71 +1167,65 @@
     }
   }
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- getOffsetItem-source -->
-            
-          </div>
+          </div><!-- getOffsetItem-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- getOffsetItem-method -->
+
+    
+      <div id="method-c-getPrecision" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getPrecision</span><span
+            class="method-args">(precision, cx, yx, mx)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- getOffsetItem-method -->
-
-      
-        <div id="getPrecision-method" class="method-detail ">
-          <a name="method-c-getPrecision"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getPrecision</span><span
-              class="method-args">(precision, cx, yx, mx)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="getPrecision-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 546</span>
+          <div class="method-source-code" id="getPrecision-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1075</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getPrecision</span> <span class="ruby-identifier">precision</span>, <span class="ruby-identifier">cx</span>, <span class="ruby-identifier">yx</span>, <span class="ruby-identifier">mx</span>
   <span class="ruby-identifier">ca</span> = <span class="ruby-identifier">precision</span> <span class="ruby-operator">||</span> (<span class="ruby-identifier">cx</span>  <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">cx</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'Circa'</span>)) <span class="ruby-operator">||</span> (<span class="ruby-identifier">yx</span>  <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">yx</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'Circa'</span>)) <span class="ruby-operator">||</span> (<span class="ruby-identifier">mx</span>  <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">mx</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'Circa'</span>))
   <span class="ruby-identifier">vague</span> = <span class="ruby-identifier">cx</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">yx</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">mx</span>
   <span class="ruby-identifier">ca</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">vague</span> <span class="ruby-operator">?</span> <span class="ruby-value">:lowlow</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">ca</span> <span class="ruby-operator">?</span> <span class="ruby-value">:medium</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">vague</span> <span class="ruby-operator">?</span> <span class="ruby-value">:low</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>))
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- getPrecision-source -->
-            
-          </div>
+          </div><!-- getPrecision-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- getPrecision-method -->
+
+    
+      <div id="method-c-getPrecisionItem" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getPrecisionItem</span><span
+            class="method-args">(degree, match = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- getPrecision-method -->
-
-      
-        <div id="getPrecisionItem-method" class="method-detail ">
-          <a name="method-c-getPrecisionItem"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getPrecisionItem</span><span
-              class="method-args">(degree, match = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="getPrecisionItem-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 758</span>
+          <div class="method-source-code" id="getPrecisionItem-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1287</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getPrecisionItem</span> <span class="ruby-identifier">degree</span>, <span class="ruby-identifier">match</span> = <span class="ruby-keyword">nil</span> 
   {
     <span class="ruby-value">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
@@ -1283,36 +1236,33 @@
     }
   }   
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- getPrecisionItem-source -->
-            
-          </div>
+          </div><!-- getPrecisionItem-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- getPrecisionItem-method -->
+
+    
+      <div id="method-c-getYearIso" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getYearIso</span><span
+            class="method-args">(century, centuryQualifier, chron)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- getPrecisionItem-method -->
-
-      
-        <div id="getYearIso-method" class="method-detail ">
-          <a name="method-c-getYearIso"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getYearIso</span><span
-              class="method-args">(century, centuryQualifier, chron)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="getYearIso-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 269</span>
+          <div class="method-source-code" id="getYearIso-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 798</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getYearIso</span> <span class="ruby-identifier">century</span>, <span class="ruby-identifier">centuryQualifier</span>, <span class="ruby-identifier">chron</span>
   <span class="ruby-identifier">century</span> = <span class="ruby-identifier">century</span>.<span class="ruby-identifier">to_i</span>
   
@@ -1351,36 +1301,33 @@
 
   (<span class="ruby-identifier">century</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-string">'-'</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">year</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- getYearIso-source -->
-            
-          </div>
+          </div><!-- getYearIso-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- getYearIso-method -->
+
+    
+      <div id="method-c-getYearQualifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getYearQualifier</span><span
+            class="method-args">(month = nil, month2 = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- getYearIso-method -->
-
-      
-        <div id="getYearQualifier-method" class="method-detail ">
-          <a name="method-c-getYearQualifier"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">getYearQualifier</span><span
-              class="method-args">(month = nil, month2 = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="getYearQualifier-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 429</span>
+          <div class="method-source-code" id="getYearQualifier-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 958</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getYearQualifier</span> <span class="ruby-identifier">month</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">month2</span> = <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">month</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">month2</span>
     <span class="ruby-keyword">return</span> {
@@ -1423,36 +1370,33 @@
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- getYearQualifier-source -->
-            
-          </div>
+          </div><!-- getYearQualifier-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- getYearQualifier-method -->
+
+    
+      <div id="method-c-hgvToEpidoc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">hgvToEpidoc</span><span
+            class="method-args">(date_item)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- getYearQualifier-method -->
-
-      
-        <div id="hgvToEpidoc-method" class="method-detail ">
-          <a name="method-c-hgvToEpidoc"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">hgvToEpidoc</span><span
-              class="method-args">(date_item)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="hgvToEpidoc-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 791</span>
+          <div class="method-source-code" id="hgvToEpidoc-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1320</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">hgvToEpidoc</span> <span class="ruby-identifier">date_item</span>
   <span class="ruby-identifier">t</span> = <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">getEmptyEpidocItem</span>
     
@@ -1566,69 +1510,63 @@
 
   <span class="ruby-identifier">t</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- hgvToEpidoc-source -->
-            
-          </div>
+          </div><!-- hgvToEpidoc-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- hgvToEpidoc-method -->
+
+    
+      <div id="method-c-monthFromIso" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">monthFromIso</span><span
+            class="method-args">(iso)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- hgvToEpidoc-method -->
-
-      
-        <div id="monthFromIso-method" class="method-detail ">
-          <a name="method-c-monthFromIso"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">monthFromIso</span><span
-              class="method-args">(iso)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="monthFromIso-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 508</span>
+          <div class="method-source-code" id="monthFromIso-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1037</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">monthFromIso</span> <span class="ruby-identifier">iso</span>
   <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">extractFromIso</span> <span class="ruby-identifier">iso</span>, <span class="ruby-regexp">/\A-?\d\d\d\d-(\d\d)/</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- monthFromIso-source -->
-            
-          </div>
+          </div><!-- monthFromIso-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- monthFromIso-method -->
+
+    
+      <div id="method-c-monthOptions" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">monthOptions</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- monthFromIso-method -->
-
-      
-        <div id="monthOptions-method" class="method-detail ">
-          <a name="method-c-monthOptions"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">monthOptions</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="monthOptions-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 199</span>
+          <div class="method-source-code" id="monthOptions-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 728</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">monthOptions</span>
   [[<span class="ruby-string">''</span>, <span class="ruby-string">''</span>], 
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.beginning'</span>), <span class="ruby-value">:beginning</span>],
@@ -1638,36 +1576,33 @@
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.end'</span>), <span class="ruby-value">:end</span>], 
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.endCirca'</span>), <span class="ruby-value">:endCirca</span>]]
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- monthOptions-source -->
-            
-          </div>
+          </div><!-- monthOptions-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- monthOptions-method -->
+
+    
+      <div id="method-c-offsetOptions" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">offsetOptions</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- monthOptions-method -->
-
-      
-        <div id="offsetOptions-method" class="method-detail ">
-          <a name="method-c-offsetOptions"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">offsetOptions</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="offsetOptions-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 249</span>
+          <div class="method-source-code" id="offsetOptions-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 778</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">offsetOptions</span>
   [[<span class="ruby-string">''</span>, <span class="ruby-string">''</span>], 
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.before'</span>), <span class="ruby-value">:before</span>], 
@@ -1675,103 +1610,94 @@
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.beforeUncertain'</span>), <span class="ruby-value">:beforeUncertain</span>], 
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.afterUncertain'</span>), <span class="ruby-value">:afterUncertain</span>]]
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- offsetOptions-source -->
-            
-          </div>
+          </div><!-- offsetOptions-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- offsetOptions-method -->
+
+    
+      <div id="method-c-precisionOptions" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">precisionOptions</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- offsetOptions-method -->
-
-      
-        <div id="precisionOptions-method" class="method-detail ">
-          <a name="method-c-precisionOptions"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">precisionOptions</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="precisionOptions-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 194</span>
+          <div class="method-source-code" id="precisionOptions-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 723</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">precisionOptions</span>
   [[<span class="ruby-string">''</span>, <span class="ruby-string">''</span>], 
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.ca'</span>), <span class="ruby-value">:ca</span>]]
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- precisionOptions-source -->
-            
-          </div>
+          </div><!-- precisionOptions-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- precisionOptions-method -->
+
+    
+      <div id="method-c-yearFromIso" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">yearFromIso</span><span
+            class="method-args">(iso)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- precisionOptions-method -->
-
-      
-        <div id="yearFromIso-method" class="method-detail ">
-          <a name="method-c-yearFromIso"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">yearFromIso</span><span
-              class="method-args">(iso)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="yearFromIso-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 504</span>
+          <div class="method-source-code" id="yearFromIso-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 1033</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">yearFromIso</span> <span class="ruby-identifier">iso</span>
   <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">extractFromIso</span> <span class="ruby-identifier">iso</span>, <span class="ruby-regexp">/\A(-?\d\d\d\d)/</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- yearFromIso-source -->
-            
-          </div>
+          </div><!-- yearFromIso-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- yearFromIso-method -->
+
+    
+      <div id="method-c-yearOptions" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">yearOptions</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- yearFromIso-method -->
-
-      
-        <div id="yearOptions-method" class="method-detail ">
-          <a name="method-c-yearOptions"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">yearOptions</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="yearOptions-source">
-<pre>
-<span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 209</span>
+          <div class="method-source-code" id="yearOptions-source">
+            <pre><span class="ruby-comment"># File app/helpers/hgv_meta_identifier_helper.rb, line 738</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">HgvDate</span>.<span class="ruby-identifier">yearOptions</span>
   [[<span class="ruby-string">''</span>, <span class="ruby-string">''</span>], 
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.beginning'</span>), <span class="ruby-value">:beginning</span>], 
@@ -1789,29 +1715,26 @@
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.end'</span>), <span class="ruby-value">:end</span>],
     [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'date.endCirca'</span>), <span class="ruby-value">:endCirca</span>]]
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- yearOptions-source -->
-            
-          </div>
-
+          </div><!-- yearOptions-source -->
           
+        </div>
 
-          
-        </div><!-- yearOptions-method -->
+        
 
-      
-      </div><!-- public-class-method-details -->
+        
+      </div><!-- yearOptions-method -->
+
     
-    </div><!-- 5Buntitled-5D -->
+    </section><!-- public-class-method-details -->
   
+  </section><!-- 5Buntitled-5D -->
 
-  </div><!-- documentation -->
+</div><!-- documentation -->
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
 
-</body>
-</html>
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 

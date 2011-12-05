@@ -1,499 +1,474 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-  <title>Class: HGVMetaIdentifier</title>
+<title>Class: HGVMetaIdentifier</title>
 
-  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
-  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
 
-</head>
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
 <body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="./index.html">Home</a>
-          <a href="./index.html#classes">Classes</a>
-          <a href="./index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="./app/models/hgv_meta_identifier_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="app/models/hgv_meta_identifier.rb">app/models/hgv_meta_identifier.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-      
-    </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-    <div id="class-metadata">
-      
-      <!-- Parent Class -->
-      <div id="parent-class-section" class="section">
-        <h3 class="section-header">Parent</h3>
-        
-        <p class="link"><a href="HGVIdentifier.html">HGVIdentifier</a></p>
-        
-      </div>
-      
 
-      
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/hgv_meta_identifier.rb
+  </ul>
+</nav>
 
-      
-      <!-- Namespace Contents -->
-      <div id="namespace-list-section" class="section">
-        <h3 class="section-header">Namespace</h3>
-        <ul class="link-list">
-          
-          <li><span class="type">CLASS</span> <a href="HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-i-after_initialize">#after_initialize</a></li>
-          
-          <li><a href="#method-i-after_rename">#after_rename</a></li>
-          
-          <li><a href="#method-i-get_date_item">#get_date_item</a></li>
-          
-          <li><a href="#method-i-get_epidoc_attributes">#get_epidoc_attributes</a></li>
-          
-          <li><a href="#method-i-get_epidoc_attributes_list">#get_epidoc_attributes_list</a></li>
-          
-          <li><a href="#method-i-get_epidoc_attributes_tree">#get_epidoc_attributes_tree</a></li>
-          
-          <li><a href="#method-i-get_epidoc_attributes_value">#get_epidoc_attributes_value</a></li>
-          
-          <li><a href="#method-i-id_attribute">#id_attribute</a></li>
-          
-          <li><a href="#method-i-n_attribute">#n_attribute</a></li>
-          
-          <li><a href="#method-i-populate_epidoc_attribute">#populate_epidoc_attribute</a></li>
-          
-          <li><a href="#method-i-populate_epidoc_attributes_from_attributes_hash">#populate_epidoc_attributes_from_attributes_hash</a></li>
-          
-          <li><a href="#method-i-populate_tree_from_attributes_hash">#populate_tree_from_attributes_hash</a></li>
-          
-          <li><a href="#method-i-preview">#preview</a></li>
-          
-          <li><a href="#method-i-set_epidoc">#set_epidoc</a></li>
-          
-          <li><a href="#method-i-set_epidoc_attributes">#set_epidoc_attributes</a></li>
-          
-          <li><a href="#method-i-set_epidoc_attributes_tree">#set_epidoc_attributes_tree</a></li>
-          
-          <li><a href="#method-i-sort">#sort</a></li>
-          
-          <li><a href="#method-i-to_path">#to_path</a></li>
-          
-          <li><a href="#method-i-xml_title_text">#xml_title_text</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="./images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="./Papyrillio.html">Papyrillio</a></li>
-        
-          <li><a href="./Papyrillio/Aggregator.html">Papyrillio::Aggregator</a></li>
-        
-          <li><a href="./Papyrillio/Collector.html">Papyrillio::Collector</a></li>
-        
-          <li><a href="./Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a></li>
-        
-          <li><a href="./Papyrillio/Decorator.html">Papyrillio::Decorator</a></li>
-        
-          <li><a href="./Papyrillio/Organiser.html">Papyrillio::Organiser</a></li>
-        
-          <li><a href="./Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a></li>
-        
-          <li><a href="./Papyrillio/Printer.html">Papyrillio::Printer</a></li>
-        
-          <li><a href="./Papyrillio/Publishee.html">Papyrillio::Publishee</a></li>
-        
-          <li><a href="./Papyrillio/Publisher.html">Papyrillio::Publisher</a></li>
-        
-          <li><a href="./Papyrillio/Transformer.html">Papyrillio::Transformer</a></li>
-        
-          <li><a href="./JRubyXML.html">JRubyXML</a></li>
-        
-          <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a></li>
-        
-          <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a></li>
-        
-          <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a></li>
-        
-          <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a></li>
-        
-          <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a></li>
-        
-          <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a></li>
-        
-          <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a></li>
-        
-          <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a></li>
-        
-          <li><a href="./REXML.html">REXML</a></li>
-        
-          <li><a href="./REXML/Document.html">REXML::Document</a></li>
-        
-          <li><a href="./REXML/Element.html">REXML::Element</a></li>
-        
-          <li><a href="./REXML/XPath.html">REXML::XPath</a></li>
-        
-          <li><a href="./Rpx.html">Rpx</a></li>
-        
-          <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a></li>
-        
-          <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a></li>
-        
-          <li><a href="./Comment.html">Comment</a></li>
-        
-          <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a></li>
-        
-          <li><a href="./Doco.html">Doco</a></li>
-        
-          <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a></li>
-        
-          <li><a href="./Grit.html">Grit</a></li>
-        
-          <li><a href="./Grit/Commit.html">Grit::Commit</a></li>
-        
-          <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a></li>
-        
-          <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a></li>
-        
-          <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a></li>
-        
-          <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a></li>
-        
-          <li><a href="./NumbersRDF.html">NumbersRDF</a></li>
-        
-          <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a></li>
-        
-          <li><a href="./AjaxProxyController.html">AjaxProxyController</a></li>
-        
-          <li><a href="./ApplicationController.html">ApplicationController</a></li>
-        
-          <li><a href="./ApplicationHelper.html">ApplicationHelper</a></li>
-        
-          <li><a href="./Board.html">Board</a></li>
-        
-          <li><a href="./BoardsController.html">BoardsController</a></li>
-        
-          <li><a href="./CommentsController.html">CommentsController</a></li>
-        
-          <li><a href="./DDBIdentifier.html">DDBIdentifier</a></li>
-        
-          <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a></li>
-        
-          <li><a href="./Decree.html">Decree</a></li>
-        
-          <li><a href="./DecreesController.html">DecreesController</a></li>
-        
-          <li><a href="./DocosController.html">DocosController</a></li>
-        
-          <li><a href="./DocovideosController.html">DocovideosController</a></li>
-        
-          <li><a href="./Emailer.html">Emailer</a></li>
-        
-          <li><a href="./EmailerMailer.html">EmailerMailer</a></li>
-        
-          <li><a href="./EmailersController.html">EmailersController</a></li>
-        
-          <li><a href="./Event.html">Event</a></li>
-        
-          <li><a href="./EventsController.html">EventsController</a></li>
-        
-          <li><a href="./GitConf.html">GitConf</a></li>
-        
-          <li><a href="./HGVBiblioIdentifier.html">HGVBiblioIdentifier</a></li>
-        
-          <li><a href="./HGVIdentifier.html">HGVIdentifier</a></li>
-        
-          <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a></li>
-        
-          <li><a href="./HelperController.html">HelperController</a></li>
-        
-          <li><a href="./HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a></li>
-        
-          <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></li>
-        
-          <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a></li>
-        
-          <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a></li>
-        
-          <li><a href="./Identifier.html">Identifier</a></li>
-        
-          <li><a href="./IdentifiersController.html">IdentifiersController</a></li>
-        
-          <li><a href="./Integer.html">Integer</a></li>
-        
-          <li><a href="./Leiden.html">Leiden</a></li>
-        
-          <li><a href="./LeidenController.html">LeidenController</a></li>
-        
-          <li><a href="./LinkingInfo.html">LinkingInfo</a></li>
-        
-          <li><a href="./MaintenanceMode.html">MaintenanceMode</a></li>
-        
-          <li><a href="./Object.html">Object</a></li>
-        
-          <li><a href="./Publication.html">Publication</a></li>
-        
-          <li><a href="./PublicationsController.html">PublicationsController</a></li>
-        
-          <li><a href="./Rails.html">Rails</a></li>
-        
-          <li><a href="./RepositoriesController.html">RepositoriesController</a></li>
-        
-          <li><a href="./Repository.html">Repository</a></li>
-        
-          <li><a href="./RpxController.html">RpxController</a></li>
-        
-          <li><a href="./TranslationHelperController.html">TranslationHelperController</a></li>
-        
-          <li><a href="./TranslationLeiden.html">TranslationLeiden</a></li>
-        
-          <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a></li>
-        
-          <li><a href="./User.html">User</a></li>
-        
-          <li><a href="./UserController.html">UserController</a></li>
-        
-          <li><a href="./UserIdentifier.html">UserIdentifier</a></li>
-        
-          <li><a href="./Vote.html">Vote</a></li>
-        
-          <li><a href="./VotesController.html">VotesController</a></li>
-        
-          <li><a href="./WelcomeController.html">WelcomeController</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
+    
   </div>
 
-  <div id="documentation">
-    <h1 class="class">HGVMetaIdentifier</h1>
-
-    <div id="description" class="description">
-      
-    </div><!-- description -->
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="HGVIdentifier.html">HGVIdentifier</a>
+  
+</nav>
 
     
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
     
+    <li><a href="#method-i-after_initialize">#after_initialize</a>
     
-    <div id="5Buntitled-5D" class="documentation-section">
+    <li><a href="#method-i-after_rename">#after_rename</a>
+    
+    <li><a href="#method-i-get_date_item">#get_date_item</a>
+    
+    <li><a href="#method-i-get_epidoc_attributes">#get_epidoc_attributes</a>
+    
+    <li><a href="#method-i-get_epidoc_attributes_list">#get_epidoc_attributes_list</a>
+    
+    <li><a href="#method-i-get_epidoc_attributes_tree">#get_epidoc_attributes_tree</a>
+    
+    <li><a href="#method-i-get_epidoc_attributes_value">#get_epidoc_attributes_value</a>
+    
+    <li><a href="#method-i-id_attribute">#id_attribute</a>
+    
+    <li><a href="#method-i-n_attribute">#n_attribute</a>
+    
+    <li><a href="#method-i-populate_epidoc_attribute">#populate_epidoc_attribute</a>
+    
+    <li><a href="#method-i-populate_epidoc_attributes_from_attributes_hash">#populate_epidoc_attributes_from_attributes_hash</a>
+    
+    <li><a href="#method-i-populate_tree_from_attributes_hash">#populate_tree_from_attributes_hash</a>
+    
+    <li><a href="#method-i-preview">#preview</a>
+    
+    <li><a href="#method-i-set_epidoc">#set_epidoc</a>
+    
+    <li><a href="#method-i-set_epidoc_attributes">#set_epidoc_attributes</a>
+    
+    <li><a href="#method-i-set_epidoc_attributes_tree">#set_epidoc_attributes_tree</a>
+    
+    <li><a href="#method-i-sort">#sort</a>
+    
+    <li><a href="#method-i-to_path">#to_path</a>
+    
+    <li><a href="#method-i-xml_title_text">#xml_title_text</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo.html">HgvMetaIdentifierHelper::HgvGeo</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/GeoSpot.html">HgvMetaIdentifierHelper::HgvGeo::GeoSpot</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/OrigPlace.html">HgvMetaIdentifierHelper::HgvGeo::OrigPlace</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Place.html">HgvMetaIdentifierHelper::HgvGeo::Place</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Provenance.html">HgvMetaIdentifierHelper::HgvGeo::Provenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a>
+  
+    <li><a href="./Papyrillio.html">Papyrillio</a>
+  
+    <li><a href="./Papyrillio/Aggregator.html">Papyrillio::Aggregator</a>
+  
+    <li><a href="./Papyrillio/Collector.html">Papyrillio::Collector</a>
+  
+    <li><a href="./Papyrillio/CollectorXpathPattern.html">Papyrillio::CollectorXpathPattern</a>
+  
+    <li><a href="./Papyrillio/Decorator.html">Papyrillio::Decorator</a>
+  
+    <li><a href="./Papyrillio/Organiser.html">Papyrillio::Organiser</a>
+  
+    <li><a href="./Papyrillio/PapyrillioBase.html">Papyrillio::PapyrillioBase</a>
+  
+    <li><a href="./Papyrillio/Printer.html">Papyrillio::Printer</a>
+  
+    <li><a href="./Papyrillio/Publishee.html">Papyrillio::Publishee</a>
+  
+    <li><a href="./Papyrillio/Publisher.html">Papyrillio::Publisher</a>
+  
+    <li><a href="./Papyrillio/Transformer.html">Papyrillio::Transformer</a>
+  
+    <li><a href="./JRubyXML.html">JRubyXML</a>
+  
+    <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a>
+  
+    <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a>
+  
+    <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a>
+  
+    <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a>
+  
+    <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a>
+  
+    <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a>
+  
+    <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a>
+  
+    <li><a href="./REXML.html">REXML</a>
+  
+    <li><a href="./REXML/Document.html">REXML::Document</a>
+  
+    <li><a href="./REXML/Element.html">REXML::Element</a>
+  
+    <li><a href="./REXML/XPath.html">REXML::XPath</a>
+  
+    <li><a href="./Rpx.html">Rpx</a>
+  
+    <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a>
+  
+    <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a>
+  
+    <li><a href="./Comment.html">Comment</a>
+  
+    <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a>
+  
+    <li><a href="./Doco.html">Doco</a>
+  
+    <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a>
+  
+    <li><a href="./Grit.html">Grit</a>
+  
+    <li><a href="./Grit/Commit.html">Grit::Commit</a>
+  
+    <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+    <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a>
+  
+    <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a>
+  
+    <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a>
+  
+    <li><a href="./NumbersRDF.html">NumbersRDF</a>
+  
+    <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a>
+  
+    <li><a href="./AjaxProxyController.html">AjaxProxyController</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Board.html">Board</a>
+  
+    <li><a href="./BoardsController.html">BoardsController</a>
+  
+    <li><a href="./CommentsController.html">CommentsController</a>
+  
+    <li><a href="./DDBIdentifier.html">DDBIdentifier</a>
+  
+    <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a>
+  
+    <li><a href="./Decree.html">Decree</a>
+  
+    <li><a href="./DecreesController.html">DecreesController</a>
+  
+    <li><a href="./DocosController.html">DocosController</a>
+  
+    <li><a href="./DocovideosController.html">DocovideosController</a>
+  
+    <li><a href="./Emailer.html">Emailer</a>
+  
+    <li><a href="./EmailerMailer.html">EmailerMailer</a>
+  
+    <li><a href="./EmailersController.html">EmailersController</a>
+  
+    <li><a href="./Event.html">Event</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./GitConf.html">GitConf</a>
+  
+    <li><a href="./HGVBiblioIdentifier.html">HGVBiblioIdentifier</a>
+  
+    <li><a href="./HGVIdentifier.html">HGVIdentifier</a>
+  
+    <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a>
+  
+    <li><a href="./HelperController.html">HelperController</a>
+  
+    <li><a href="./HgvBiblioIdentifiersController.html">HgvBiblioIdentifiersController</a>
+  
+    <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a>
+  
+    <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a>
+  
+    <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a>
+  
+    <li><a href="./Identifier.html">Identifier</a>
+  
+    <li><a href="./IdentifiersController.html">IdentifiersController</a>
+  
+    <li><a href="./Integer.html">Integer</a>
+  
+    <li><a href="./Leiden.html">Leiden</a>
+  
+    <li><a href="./LeidenController.html">LeidenController</a>
+  
+    <li><a href="./LinkingInfo.html">LinkingInfo</a>
+  
+    <li><a href="./MaintenanceMode.html">MaintenanceMode</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Publication.html">Publication</a>
+  
+    <li><a href="./PublicationsController.html">PublicationsController</a>
+  
+    <li><a href="./Rails.html">Rails</a>
+  
+    <li><a href="./RepositoriesController.html">RepositoriesController</a>
+  
+    <li><a href="./Repository.html">Repository</a>
+  
+    <li><a href="./RpxController.html">RpxController</a>
+  
+    <li><a href="./TranslationHelperController.html">TranslationHelperController</a>
+  
+    <li><a href="./TranslationLeiden.html">TranslationLeiden</a>
+  
+    <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserController.html">UserController</a>
+  
+    <li><a href="./UserIdentifier.html">UserIdentifier</a>
+  
+    <li><a href="./Vote.html">Vote</a>
+  
+    <li><a href="./VotesController.html">VotesController</a>
+  
+    <li><a href="./WelcomeController.html">WelcomeController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class HGVMetaIdentifier</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
       
+        <dt id="FRIENDLY_NAME">FRIENDLY_NAME
+        
+        <dd class="description">
+        
+      
+        <dt id="PATH_PREFIX">PATH_PREFIX
+        
+        <dd class="description">
+        
+      
+        <dt id="XML_VALIDATOR">XML_VALIDATOR
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
 
       
+      <div id="attribute-i-configuration" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">configuration</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
 
-      
-      <!-- Constants -->
-      <div id="constants-list" class="section">
-        <h3 class="section-header">Constants</h3>
-        <dl>
+        <div class="method-description">
         
-          <dt><a name="FRIENDLY_NAME">FRIENDLY_NAME</a></dt>
-          
-          <dd class="description"></dd>
-          
         
-          <dt><a name="PATH_PREFIX">PATH_PREFIX</a></dt>
-          
-          <dd class="description"></dd>
-          
         
-          <dt><a name="XML_VALIDATOR">XML_VALIDATOR</a></dt>
-          
-          <dd class="description"></dd>
-          
-        
-        </dl>
+        </div>
       </div>
       
+      <div id="attribute-i-valid_epidoc_attributes" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">valid_epidoc_attributes</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
 
-      
-      <!-- Attributes -->
-      <div id="attribute-method-details" class="method-section section">
-        <h3 class="section-header">Attributes</h3>
-
+        <div class="method-description">
         
-        <div id="configuration-attribute-method" class="method-detail">
-          <a name="configuration"></a>
-          
-          <a name="configuration="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">configuration</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
 
-          <div class="method-description">
-          
-          
-          
-          </div>
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-after_initialize" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">after_initialize</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
         </div>
         
-        <div id="valid_epidoc_attributes-attribute-method" class="method-detail">
-          <a name="valid_epidoc_attributes"></a>
-          
-          <a name="valid_epidoc_attributes="></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">valid_epidoc_attributes</span><span
-              class="attribute-access-type">[RW]</span>
-          </div>
 
-          <div class="method-description">
+        <div class="method-description">
           
           
           
-          </div>
-        </div>
-        
-      </div><!-- attribute-method-details -->
-      
-
-      <!-- Methods -->
-      
-      <div id="public-instance-method-details" class="method-section section">
-        <h3 class="section-header">Public Instance Methods</h3>
-
-      
-        <div id="after_initialize-method" class="method-detail ">
-          <a name="method-i-after_initialize"></a>
 
           
-          <div class="method-heading">
-            <span class="method-name">after_initialize</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="after_initialize-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 18</span>
+          <div class="method-source-code" id="after_initialize-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 18</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">after_initialize</span>
   <span class="ruby-ivar">@configuration</span> = <span class="ruby-constant">HgvMetaConfiguration</span>.<span class="ruby-identifier">new</span> <span class="ruby-comment">#YAML::load_file(File.join(RAILS_ROOT, %w{config hgv.yml}))[:hgv][:metadata]</span>
   <span class="ruby-ivar">@valid_epidoc_attributes</span> = <span class="ruby-ivar">@configuration</span>.<span class="ruby-identifier">keys</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- after_initialize-source -->
-            
-          </div>
+          </div><!-- after_initialize-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- after_initialize-method -->
+
+    
+      <div id="method-i-after_rename" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">after_rename</span><span
+            class="method-args">(options = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- after_initialize-method -->
-
-      
-        <div id="after_rename-method" class="method-detail ">
-          <a name="method-i-after_rename"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">after_rename</span><span
-              class="method-args">(options = {})</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="after_rename-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 153</span>
+          <div class="method-source-code" id="after_rename-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 157</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">after_rename</span>(<span class="ruby-identifier">options</span> = {})
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:update_header</span>]
     <span class="ruby-identifier">rewritten_xml</span> =
       <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
         <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-identifier">content</span>),
         <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RAILS_ROOT</span>,
-          <span class="ruby-node">%{data xslt metadata update_header.xsl}</span>)),
+          <span class="ruby-node">%w{data xslt metadata update_header.xsl}</span>)),
         <span class="ruby-value">:filename_text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_components</span>.<span class="ruby-identifier">last</span>,
         <span class="ruby-value">:reprint_from_text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:set_dummy_header</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:original</span>].<span class="ruby-identifier">title</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>,
         <span class="ruby-value">:reprent_ref_attirbute</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:set_dummy_header</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:original</span>].<span class="ruby-identifier">to_components</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>
@@ -501,36 +476,33 @@
     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">rewritten_xml</span>, <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;Update header to reflect new identifier '#{self.name}'&quot;</span>)
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- after_rename-source -->
-            
-          </div>
+          </div><!-- after_rename-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- after_rename-method -->
+
+    
+      <div id="method-i-get_date_item" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_date_item</span><span
+            class="method-args">(date_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- after_rename-method -->
-
-      
-        <div id="get_date_item-method" class="method-detail ">
-          <a name="method-i-get_date_item"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">get_date_item</span><span
-              class="method-args">(date_id)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="get_date_item-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 56</span>
+          <div class="method-source-code" id="get_date_item-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 56</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_date_item</span> <span class="ruby-identifier">date_id</span>    
   <span class="ruby-keyword">self</span>[<span class="ruby-value">:textDate</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">dateItem</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-identifier">dateItem</span>[<span class="ruby-value">:attributes</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">dateItem</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:id</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">dateItem</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:id</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">date_id</span>)
@@ -541,42 +513,39 @@
   }
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>    
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- get_date_item-source -->
-            
-          </div>
-
+          </div><!-- get_date_item-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- get_date_item-method -->
+
+    
+      <div id="method-i-get_epidoc_attributes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_epidoc_attributes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- get_date_item-method -->
-
-      
-        <div id="get_epidoc_attributes-method" class="method-detail ">
-          <a name="method-i-get_epidoc_attributes"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">get_epidoc_attributes</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>retrieve matadata from xml and store as object attributes</p>
+          <p>retrieve matadata from xml and store as object attributes</p>
 
 <pre>e.g. title: &lt;title&gt;Instruction to track down murderers&lt;/title&gt; will become
 self[:title] = 'Instruction to track down murderers'
 e.g. content text: &lt;keywords&gt;&lt;term&gt;a&lt;/term&gt;&lt;term&gt;b&lt;/term&gt;&lt;/keywords&gt; will become
 self[:contentText] = ['a', 'b']
 e.g. date will become complicated</pre>
-            
+          
 
-            
-            <div class="method-source-code" id="get_epidoc_attributes-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 75</span>
+          
+          <div class="method-source-code" id="get_epidoc_attributes-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 75</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_epidoc_attributes</span>
   <span class="ruby-identifier">doc</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">content</span>
 
@@ -590,36 +559,33 @@ e.g. date will become complicated</pre>
     <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- get_epidoc_attributes-source -->
-            
-          </div>
+          </div><!-- get_epidoc_attributes-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- get_epidoc_attributes-method -->
+
+    
+      <div id="method-i-get_epidoc_attributes_list" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_epidoc_attributes_list</span><span
+            class="method-args">(doc, config)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- get_epidoc_attributes-method -->
-
-      
-        <div id="get_epidoc_attributes_list-method" class="method-detail ">
-          <a name="method-i-get_epidoc_attributes_list"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">get_epidoc_attributes_list</span><span
-              class="method-args">(doc, config)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="get_epidoc_attributes_list-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 89</span>
+          <div class="method-source-code" id="get_epidoc_attributes_list-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 89</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_epidoc_attributes_list</span> <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">config</span>
   <span class="ruby-identifier">list</span> = []
   <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-identifier">config</span>[<span class="ruby-value">:xpath</span>]){<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span>
@@ -629,43 +595,44 @@ e.g. date will become complicated</pre>
   }
   <span class="ruby-identifier">list</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- get_epidoc_attributes_list-source -->
-            
-          </div>
+          </div><!-- get_epidoc_attributes_list-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- get_epidoc_attributes_list-method -->
+
+    
+      <div id="method-i-get_epidoc_attributes_tree" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_epidoc_attributes_tree</span><span
+            class="method-args">(doc, config)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- get_epidoc_attributes_list-method -->
-
-      
-        <div id="get_epidoc_attributes_tree-method" class="method-detail ">
-          <a name="method-i-get_epidoc_attributes_tree"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">get_epidoc_attributes_tree</span><span
-              class="method-args">(doc, config)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="get_epidoc_attributes_tree-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 99</span>
+          <div class="method-source-code" id="get_epidoc_attributes_tree-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 99</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_epidoc_attributes_tree</span> <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">config</span>
   <span class="ruby-identifier">tree</span> = []
   
   <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-identifier">config</span>[<span class="ruby-value">:xpath</span>]){<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">node</span> = {<span class="ruby-value">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">''</span>, <span class="ruby-value">:attributes</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-value">:children</span> =<span class="ruby-operator">&gt;</span> {}}
 
-    <span class="ruby-keyword">if</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">'origDate'</span> <span class="ruby-comment"># CL: CROMULATE DATE HACK</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:preFlag</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">previous_element</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:preFlag</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">previous_element</span>.<span class="ruby-identifier">name</span> <span class="ruby-comment"># CL: CROMULENT GEO HACK</span>
+      <span class="ruby-identifier">node</span>[<span class="ruby-value">:preFlag</span>] = <span class="ruby-string">'bei'</span>;
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">'origDate'</span> <span class="ruby-comment"># CL: CROMULENT DATE HACK</span>
       <span class="ruby-identifier">node</span>[<span class="ruby-value">:value</span>] = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/[\s]+/</span>, <span class="ruby-string">' '</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/&lt;\/?[^&gt;]*&gt;/</span>, <span class="ruby-string">&quot;&quot;</span>).<span class="ruby-identifier">strip</span>
     <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
       <span class="ruby-identifier">node</span>[<span class="ruby-value">:value</span>] = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>
@@ -678,7 +645,7 @@ e.g. date will become complicated</pre>
         <span class="ruby-identifier">node</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-identifier">attribute_key</span>] = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">attribute_config</span>[<span class="ruby-value">:name</span>]] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">element</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">attribute_config</span>[<span class="ruby-value">:name</span>]].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">attribute_config</span>[<span class="ruby-value">:name</span>]].<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">attribute_config</span>[<span class="ruby-value">:default</span>]
       }
     <span class="ruby-keyword">end</span>
-    
+
     <span class="ruby-keyword">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:children</span>]
       <span class="ruby-identifier">config</span>[<span class="ruby-value">:children</span>].<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">child_key</span>, <span class="ruby-identifier">child_config</span><span class="ruby-operator">|</span>
         <span class="ruby-identifier">node</span>[<span class="ruby-value">:children</span>][<span class="ruby-identifier">child_key</span>] = <span class="ruby-identifier">get_epidoc_attributes_tree</span> <span class="ruby-identifier">element</span>, <span class="ruby-identifier">child_config</span>
@@ -690,36 +657,33 @@ e.g. date will become complicated</pre>
 
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:multiple</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">tree</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">first</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- get_epidoc_attributes_tree-source -->
-            
-          </div>
+          </div><!-- get_epidoc_attributes_tree-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- get_epidoc_attributes_tree-method -->
+
+    
+      <div id="method-i-get_epidoc_attributes_value" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_epidoc_attributes_value</span><span
+            class="method-args">(doc, config)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- get_epidoc_attributes_tree-method -->
-
-      
-        <div id="get_epidoc_attributes_value-method" class="method-detail ">
-          <a name="method-i-get_epidoc_attributes_value"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">get_epidoc_attributes_value</span><span
-              class="method-args">(doc, config)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="get_epidoc_attributes_value-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 131</span>
+          <div class="method-source-code" id="get_epidoc_attributes_value-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 135</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_epidoc_attributes_value</span> <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">config</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">element</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-identifier">config</span>[<span class="ruby-value">:xpath</span>]]
     <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:default</span>]
@@ -727,145 +691,185 @@ e.g. date will become complicated</pre>
     <span class="ruby-identifier">config</span>[<span class="ruby-value">:default</span>]
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- get_epidoc_attributes_value-source -->
-            
-          </div>
+          </div><!-- get_epidoc_attributes_value-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- get_epidoc_attributes_value-method -->
+
+    
+      <div id="method-i-id_attribute" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">id_attribute</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- get_epidoc_attributes_value-method -->
-
-      
-        <div id="id_attribute-method" class="method-detail ">
-          <a name="method-i-id_attribute"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">id_attribute</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="id_attribute-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 43</span>
+          <div class="method-source-code" id="id_attribute-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 43</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">id_attribute</span>
   <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;hgvTEMP&quot;</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- id_attribute-source -->
-            
-          </div>
+          </div><!-- id_attribute-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- id_attribute-method -->
+
+    
+      <div id="method-i-n_attribute" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">n_attribute</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- id_attribute-method -->
-
-      
-        <div id="n_attribute-method" class="method-detail ">
-          <a name="method-i-n_attribute"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">n_attribute</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="n_attribute-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 47</span>
+          <div class="method-source-code" id="n_attribute-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 47</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">n_attribute</span>
   <span class="ruby-identifier">ddb</span> = <span class="ruby-constant">DDBIdentifier</span>.<span class="ruby-identifier">find_by_publication_id</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:limit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>)
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">ddb</span>.<span class="ruby-identifier">n_attribute</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- n_attribute-source -->
-            
-          </div>
+          </div><!-- n_attribute-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- n_attribute-method -->
+
+    
+      <div id="method-i-populate_epidoc_attributes_from_attributes_hash" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populate_epidoc_attributes_from_attributes_hash</span><span
+            class="method-args">(attributes_hash)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>saves the values stored within a hash object (usually generated via a
+webbrowser form)</p>
           
 
           
-        </div><!-- n_attribute-method -->
+          <div class="method-source-code" id="populate_epidoc_attributes_from_attributes_hash-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">populate_epidoc_attributes_from_attributes_hash</span> <span class="ruby-identifier">attributes_hash</span>
 
-      
-        <div id="preview-method" class="method-detail ">
-          <a name="method-i-preview"></a>
+  <span class="ruby-ivar">@configuration</span>.<span class="ruby-identifier">scheme</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">config</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:children</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:attributes</span>]
+      <span class="ruby-identifier">result</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:multiple</span>]
+        <span class="ruby-identifier">tmp</span> = []
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>]
+          <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">each_pair</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">index</span>, <span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">tmp</span>[<span class="ruby-identifier">tmp</span>.<span class="ruby-identifier">length</span>] = <span class="ruby-identifier">populate_tree_from_attributes_hash</span> <span class="ruby-identifier">item</span>, <span class="ruby-identifier">config</span>
+          }
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">tmp</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">populate_tree_from_attributes_hash</span> <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>], <span class="ruby-identifier">config</span>      
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">result</span>  
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:multiple</span>]
+      <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">values</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> }.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">strip</span> } <span class="ruby-operator">:</span> []
+    <span class="ruby-keyword">else</span> 
+      <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- populate_epidoc_attributes_from_attributes_hash-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- populate_epidoc_attributes_from_attributes_hash-method -->
+
+    
+      <div id="method-i-preview" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">preview</span><span
+            class="method-args">(parameters = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">preview</span><span
-              class="method-args">(parameters = {})</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="preview-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 10</span>
+          <div class="method-source-code" id="preview-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 10</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">preview</span> <span class="ruby-identifier">parameters</span> = {}, <span class="ruby-identifier">xsl</span> = <span class="ruby-keyword">nil</span>
   <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
     <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>),
     <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RAILS_ROOT</span>,
-      <span class="ruby-identifier">xsl</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">xsl</span> <span class="ruby-operator">:</span> <span class="ruby-node">%{data xslt epidoc start-edition.xsl}</span>)),
+      <span class="ruby-identifier">xsl</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">xsl</span> <span class="ruby-operator">:</span> <span class="ruby-node">%w{data xslt epidoc start-edition.xsl}</span>)),
       <span class="ruby-identifier">parameters</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- preview-source -->
-            
-          </div>
+          </div><!-- preview-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- preview-method -->
+
+    
+      <div id="method-i-set_epidoc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_epidoc</span><span
+            class="method-args">(attributes_hash, comment)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns a String of the SHA1 of the commit</p>
           
 
           
-        </div><!-- preview-method -->
-
-      
-        <div id="set_epidoc-method" class="method-detail ">
-          <a name="method-i-set_epidoc"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">set_epidoc</span><span
-              class="method-args">(attributes_hash, comment)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Returns a String of the SHA1 of the commit</p>
-            
-
-            
-            <div class="method-source-code" id="set_epidoc-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 140</span>
+          <div class="method-source-code" id="set_epidoc-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 144</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_epidoc</span>(<span class="ruby-identifier">attributes_hash</span>, <span class="ruby-identifier">comment</span>)
   <span class="ruby-identifier">populate_epidoc_attributes_from_attributes_hash</span>(<span class="ruby-identifier">attributes_hash</span>)
-  
+
   <span class="ruby-identifier">epidoc</span> = <span class="ruby-identifier">set_epidoc_attributes</span>
-    
+
   <span class="ruby-comment">#File.open('/Users/InstPap/Desktop/sosoltest.xml', 'w') {|f| f.write(epidoc) }</span>
 
   <span class="ruby-comment">#set_content does not validate xml (which is what epidoc is)</span>
@@ -873,36 +877,33 @@ e.g. date will become complicated</pre>
   <span class="ruby-comment">#set_xml_content validates xml</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">epidoc</span>, <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">comment</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- set_epidoc-source -->
-            
-          </div>
+          </div><!-- set_epidoc-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- set_epidoc-method -->
+
+    
+      <div id="method-i-to_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_path</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- set_epidoc-method -->
-
-      
-        <div id="to_path-method" class="method-detail ">
-          <a name="method-i-to_path"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">to_path</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="to_path-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 23</span>
+          <div class="method-source-code" id="to_path-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 23</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_path</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/#{self.class::TEMPORARY_COLLECTION}/</span>
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temporary_path</span>
@@ -922,75 +923,69 @@ e.g. date will become complicated</pre>
     <span class="ruby-keyword">return</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">path_components</span>)
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- to_path-source -->
-            
-          </div>
+          </div><!-- to_path-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- to_path-method -->
+
+    
+      <div id="method-i-xml_title_text" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">xml_title_text</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- to_path-method -->
-
-      
-        <div id="xml_title_text-method" class="method-detail ">
-          <a name="method-i-xml_title_text"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">xml_title_text</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="xml_title_text-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 52</span>
+          <div class="method-source-code" id="xml_title_text-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 52</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">xml_title_text</span>
   <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;Description of document&quot;</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- xml_title_text-source -->
-            
-          </div>
-
+          </div><!-- xml_title_text-source -->
           
+        </div>
 
-          
-        </div><!-- xml_title_text-method -->
+        
 
-      
-      </div><!-- public-instance-method-details -->
+        
+      </div><!-- xml_title_text-method -->
+
     
-      <div id="protected-instance-method-details" class="method-section section">
-        <h3 class="section-header">Protected Instance Methods</h3>
+    </section><!-- public-instance-method-details -->
+  
+     <section id="protected-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Protected Instance Methods</h3>
 
-      
-        <div id="populate_epidoc_attribute-method" class="method-detail ">
-          <a name="method-i-populate_epidoc_attribute"></a>
+    
+      <div id="method-i-populate_epidoc_attribute" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populate_epidoc_attribute</span><span
+            class="method-args">(key, value, default = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">populate_epidoc_attribute</span><span
-              class="method-args">(key, value, default = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="populate_epidoc_attribute-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 377</span>
+          <div class="method-source-code" id="populate_epidoc_attribute-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 411</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">populate_epidoc_attribute</span> <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">default</span> = <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">value</span>
     <span class="ruby-identifier">value</span> = <span class="ruby-identifier">default</span>
@@ -1003,90 +998,33 @@ e.g. date will become complicated</pre>
   <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">value</span>    
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- populate_epidoc_attribute-source -->
-            
-          </div>
+          </div><!-- populate_epidoc_attribute-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- populate_epidoc_attribute-method -->
+
+    
+      <div id="method-i-populate_tree_from_attributes_hash" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populate_tree_from_attributes_hash</span><span
+            class="method-args">(data, config)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- populate_epidoc_attribute-method -->
-
-      
-        <div id="populate_epidoc_attributes_from_attributes_hash-method" class="method-detail ">
-          <a name="method-i-populate_epidoc_attributes_from_attributes_hash"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">populate_epidoc_attributes_from_attributes_hash</span><span
-              class="method-args">(attributes_hash)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>saves the values stored within a hash object (usually generated via a
-webbrowser form)</p>
-            
-
-            
-            <div class="method-source-code" id="populate_epidoc_attributes_from_attributes_hash-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 391</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">populate_epidoc_attributes_from_attributes_hash</span> <span class="ruby-identifier">attributes_hash</span>
-
-  <span class="ruby-ivar">@configuration</span>.<span class="ruby-identifier">scheme</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">config</span><span class="ruby-operator">|</span>
-    <span class="ruby-keyword">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:children</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:attributes</span>]
-      <span class="ruby-identifier">result</span> = <span class="ruby-keyword">nil</span>
-      <span class="ruby-keyword">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:multiple</span>]
-        <span class="ruby-identifier">result</span> = []
-        <span class="ruby-keyword">if</span> <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>]
-          <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">each_pair</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">index</span>, <span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
-            <span class="ruby-identifier">result</span>[<span class="ruby-identifier">result</span>.<span class="ruby-identifier">length</span>] = <span class="ruby-identifier">populate_tree_from_attributes_hash</span> <span class="ruby-identifier">item</span>, <span class="ruby-identifier">config</span>
-          }
-        <span class="ruby-keyword">end</span>
-      <span class="ruby-keyword">else</span>
-        <span class="ruby-identifier">result</span> = <span class="ruby-identifier">populate_tree_from_attributes_hash</span> <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>], <span class="ruby-identifier">config</span>      
-      <span class="ruby-keyword">end</span>
-      <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">result</span>  
-    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:multiple</span>]
-      <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">values</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> }.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">strip</span> } <span class="ruby-operator">:</span> []
-    <span class="ruby-keyword">else</span> 
-      <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">attributes_hash</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>].<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
-    <span class="ruby-keyword">end</span>
-  <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-            </div><!-- populate_epidoc_attributes_from_attributes_hash-source -->
-            
-          </div>
-
-          
-
-          
-        </div><!-- populate_epidoc_attributes_from_attributes_hash-method -->
-
-      
-        <div id="populate_tree_from_attributes_hash-method" class="method-detail ">
-          <a name="method-i-populate_tree_from_attributes_hash"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">populate_tree_from_attributes_hash</span><span
-              class="method-args">(data, config)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="populate_tree_from_attributes_hash-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 415</span>
+          <div class="method-source-code" id="populate_tree_from_attributes_hash-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 424</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">populate_tree_from_attributes_hash</span> <span class="ruby-identifier">data</span>, <span class="ruby-identifier">config</span>
 
   <span class="ruby-identifier">result_item</span> = {
@@ -1131,41 +1069,42 @@ webbrowser form)</p>
         <span class="ruby-keyword">end</span>
       }
     <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:preFlag</span>] <span class="ruby-keyword">and</span> <span class="ruby-identifier">data</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:offset</span>][<span class="ruby-value">:value</span>] <span class="ruby-keyword">and</span>  <span class="ruby-identifier">data</span>[<span class="ruby-value">:children</span>][<span class="ruby-value">:offset</span>][<span class="ruby-value">:value</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'bei'</span> <span class="ruby-comment"># CL: CROMULENT GEO HACK</span>
+      <span class="ruby-identifier">result_item</span>[<span class="ruby-value">:preFlag</span>] = <span class="ruby-string">'bei'</span>
+    <span class="ruby-keyword">end</span>
 
  <span class="ruby-keyword">end</span>
 
  <span class="ruby-identifier">result_item</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- populate_tree_from_attributes_hash-source -->
-            
-          </div>
+          </div><!-- populate_tree_from_attributes_hash-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- populate_tree_from_attributes_hash-method -->
+
+    
+      <div id="method-i-set_epidoc_attributes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_epidoc_attributes</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- populate_tree_from_attributes_hash-method -->
-
-      
-        <div id="set_epidoc_attributes-method" class="method-detail ">
-          <a name="method-i-set_epidoc_attributes"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">set_epidoc_attributes</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="set_epidoc_attributes-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 241</span>
+          <div class="method-source-code" id="set_epidoc_attributes-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 280</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_epidoc_attributes</span>
   <span class="ruby-comment"># load xml document</span>
   <span class="ruby-identifier">doc</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">content</span>
@@ -1195,7 +1134,7 @@ webbrowser form)</p>
     <span class="ruby-keyword">else</span>
       <span class="ruby-identifier">value</span> = <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> (<span class="ruby-identifier">config</span>[<span class="ruby-value">:children</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:attributes</span>] <span class="ruby-operator">?</span> <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>][<span class="ruby-value">:value</span>] <span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>]) <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
       
-      <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">value</span>.<span class="ruby-identifier">empty?</span> 
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">value</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-comment"># CL: Biblio here!</span>
         <span class="ruby-identifier">element</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">bulldozePath</span>(<span class="ruby-identifier">config</span>[<span class="ruby-value">:xpath</span>])
         <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">value</span>
         <span class="ruby-keyword">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:attributes</span>]
@@ -1205,12 +1144,7 @@ webbrowser form)</p>
         <span class="ruby-keyword">end</span>
         
       <span class="ruby-keyword">else</span>
-        
-        <span class="ruby-identifier">puts</span> <span class="ruby-string">'............................'</span>
-        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:xpath</span>]
-        <span class="ruby-identifier">puts</span> <span class="ruby-string">'............................'</span>
-        
-        
+
         <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">delete_all</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:xpath</span>]
         <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-identifier">xpath_parent</span>]
           <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">parent</span>.<span class="ruby-identifier">has_elements?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">texts</span>.<span class="ruby-identifier">join</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
@@ -1235,30 +1169,28 @@ webbrowser form)</p>
 
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">modified_xml_content</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- set_epidoc_attributes-source -->
-            
-          </div>
-
+          </div><!-- set_epidoc_attributes-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- set_epidoc_attributes-method -->
+
+    
+      <div id="method-i-set_epidoc_attributes_tree" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_epidoc_attributes_tree</span><span
+            class="method-args">(parent, xpath, data, config)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
           
-        </div><!-- set_epidoc_attributes-method -->
-
-      
-        <div id="set_epidoc_attributes_tree-method" class="method-detail ">
-          <a name="method-i-set_epidoc_attributes_tree"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">set_epidoc_attributes_tree</span><span
-              class="method-args">(parent, xpath, data, config)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>:contentText =&gt; [</p>
+          <p>:contentText =&gt; [</p>
 
 <pre>'x',
 'y',
@@ -1269,18 +1201,18 @@ webbrowser form)</p>
 
 <p>:bl =&gt; [</p>
 
-<pre>{:value =&gt; nil, :children =&gt; {}, :attributes =&gt;{}},
-{:value =&gt; nil, :children =&gt; {}, :attributes =&gt;{}},
-{:value =&gt; nil, :children =&gt; {}, :attributes =&gt;{}},
-...</pre>
+<pre class="ruby">{:<span class="ruby-identifier">value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, :<span class="ruby-identifier">children</span> =<span class="ruby-operator">&gt;</span> {}, :<span class="ruby-identifier">attributes</span> =<span class="ruby-operator">&gt;</span>{}},
+{:<span class="ruby-identifier">value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, :<span class="ruby-identifier">children</span> =<span class="ruby-operator">&gt;</span> {}, :<span class="ruby-identifier">attributes</span> =<span class="ruby-operator">&gt;</span>{}},
+{:<span class="ruby-identifier">value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, :<span class="ruby-identifier">children</span> =<span class="ruby-operator">&gt;</span> {}, :<span class="ruby-identifier">attributes</span> =<span class="ruby-operator">&gt;</span>{}},
+<span class="ruby-operator">...</span>
+</pre>
 
 <p>]</p>
-            
+          
 
-            
-            <div class="method-source-code" id="set_epidoc_attributes_tree-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 188</span>
+          
+          <div class="method-source-code" id="set_epidoc_attributes_tree-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 219</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_epidoc_attributes_tree</span> <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">xpath</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">config</span>
   <span class="ruby-identifier">child_name</span> = <span class="ruby-identifier">xpath</span>[<span class="ruby-regexp">/\A([\w]+)[\w\/\[\]@:=']*\Z/</span>, <span class="ruby-value">1</span>]
   <span class="ruby-identifier">child_attributes</span> = <span class="ruby-identifier">xpath</span>.<span class="ruby-identifier">scan</span> <span class="ruby-regexp">/@([\w:]+)='([\w]+)'/</span>
@@ -1329,40 +1261,45 @@ webbrowser form)</p>
         <span class="ruby-keyword">end</span>
       <span class="ruby-keyword">end</span>
 
+      
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">item</span>[<span class="ruby-value">:preFlag</span>] <span class="ruby-comment"># CL: CROMULENT GEO HACK</span>
+        <span class="ruby-identifier">offset</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">'offset'</span>
+        <span class="ruby-identifier">offset</span>.<span class="ruby-identifier">add_text</span> <span class="ruby-string">'bei'</span>
+        <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">add</span> <span class="ruby-identifier">offset</span>
+      <span class="ruby-keyword">end</span>
+      
       <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">add</span> <span class="ruby-identifier">child</span>
+
     <span class="ruby-keyword">end</span>
   }
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- set_epidoc_attributes_tree-source -->
-            
-          </div>
+          </div><!-- set_epidoc_attributes_tree-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- set_epidoc_attributes_tree-method -->
+
+    
+      <div id="method-i-sort" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sort</span><span
+            class="method-args">(doc)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
           
 
           
-        </div><!-- set_epidoc_attributes_tree-method -->
-
-      
-        <div id="sort-method" class="method-detail ">
-          <a name="method-i-sort"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">sort</span><span
-              class="method-args">(doc)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="sort-source">
-<pre>
-<span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 311</span>
+          <div class="method-source-code" id="sort-source">
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 345</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">sort</span> <span class="ruby-identifier">doc</span>
   <span class="ruby-comment"># general</span>
   <span class="ruby-identifier">sort_paths</span> = {
@@ -1428,29 +1365,26 @@ webbrowser form)</p>
 
  <span class="ruby-keyword">return</span> <span class="ruby-identifier">doc</span> 
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- sort-source -->
-            
-          </div>
-
+          </div><!-- sort-source -->
           
+        </div>
 
-          
-        </div><!-- sort-method -->
+        
 
-      
-      </div><!-- protected-instance-method-details -->
+        
+      </div><!-- sort-method -->
+
     
-    </div><!-- 5Buntitled-5D -->
+    </section><!-- protected-instance-method-details -->
   
+  </section><!-- 5Buntitled-5D -->
 
-  </div><!-- documentation -->
+</div><!-- documentation -->
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
 
-</body>
-</html>
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 
