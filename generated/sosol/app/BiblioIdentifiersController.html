@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>Class: BiblioIdentifiersController</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/biblio_identifiers_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="IdentifiersController.html">IdentifiersController</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-edit">#edit</a>
+    
+    <li><a href="#method-i-find_identifier">#find_identifier</a>
+    
+    <li><a href="#method-i-generate_flash_message">#generate_flash_message</a>
+    
+    <li><a href="#method-i-preview">#preview</a>
+    
+    <li><a href="#method-i-save_comment">#save_comment</a>
+    
+    <li><a href="#method-i-update">#update</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo.html">HgvMetaIdentifierHelper::HgvGeo</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/GeoSpot.html">HgvMetaIdentifierHelper::HgvGeo::GeoSpot</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Place.html">HgvMetaIdentifierHelper::HgvGeo::Place</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Provenance.html">HgvMetaIdentifierHelper::HgvGeo::Provenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a>
+  
+    <li><a href="./BiblioIdentifier.html">BiblioIdentifier</a>
+  
+    <li><a href="./BiblioIdentifier/Container.html">BiblioIdentifier::Container</a>
+  
+    <li><a href="./BiblioIdentifier/Note.html">BiblioIdentifier::Note</a>
+  
+    <li><a href="./BiblioIdentifier/PublicationPerson.html">BiblioIdentifier::PublicationPerson</a>
+  
+    <li><a href="./BiblioIdentifier/Publisher.html">BiblioIdentifier::Publisher</a>
+  
+    <li><a href="./BiblioIdentifier/RelatedArticle.html">BiblioIdentifier::RelatedArticle</a>
+  
+    <li><a href="./BiblioIdentifier/RelatedItem.html">BiblioIdentifier::RelatedItem</a>
+  
+    <li><a href="./BiblioIdentifier/Reviewee.html">BiblioIdentifier::Reviewee</a>
+  
+    <li><a href="./BiblioIdentifier/ShortTitle.html">BiblioIdentifier::ShortTitle</a>
+  
+    <li><a href="./JRubyXML.html">JRubyXML</a>
+  
+    <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a>
+  
+    <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a>
+  
+    <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a>
+  
+    <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a>
+  
+    <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a>
+  
+    <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a>
+  
+    <li><a href="./JRubyXML/RDFValidator.html">JRubyXML::RDFValidator</a>
+  
+    <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a>
+  
+    <li><a href="./REXML.html">REXML</a>
+  
+    <li><a href="./REXML/Document.html">REXML::Document</a>
+  
+    <li><a href="./REXML/Element.html">REXML::Element</a>
+  
+    <li><a href="./REXML/XPath.html">REXML::XPath</a>
+  
+    <li><a href="./NumbersRDF.html">NumbersRDF</a>
+  
+    <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a>
+  
+    <li><a href="./NumbersRDF/Timeout.html">NumbersRDF::Timeout</a>
+  
+    <li><a href="./Rpx.html">Rpx</a>
+  
+    <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a>
+  
+    <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a>
+  
+    <li><a href="./Comment.html">Comment</a>
+  
+    <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a>
+  
+    <li><a href="./Doco.html">Doco</a>
+  
+    <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a>
+  
+    <li><a href="./Grit.html">Grit</a>
+  
+    <li><a href="./Grit/Commit.html">Grit::Commit</a>
+  
+    <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+    <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a>
+  
+    <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a>
+  
+    <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a>
+  
+    <li><a href="./APISIdentifier.html">APISIdentifier</a>
+  
+    <li><a href="./AjaxProxyController.html">AjaxProxyController</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./BiblioFormBuilder.html">BiblioFormBuilder</a>
+  
+    <li><a href="./BiblioIdentifiersController.html">BiblioIdentifiersController</a>
+  
+    <li><a href="./Board.html">Board</a>
+  
+    <li><a href="./BoardsController.html">BoardsController</a>
+  
+    <li><a href="./CollectionIdentifier.html">CollectionIdentifier</a>
+  
+    <li><a href="./CollectionIdentifiersController.html">CollectionIdentifiersController</a>
+  
+    <li><a href="./CommentsController.html">CommentsController</a>
+  
+    <li><a href="./CommunitiesController.html">CommunitiesController</a>
+  
+    <li><a href="./Community.html">Community</a>
+  
+    <li><a href="./CrossSiteController.html">CrossSiteController</a>
+  
+    <li><a href="./DDBIdentifier.html">DDBIdentifier</a>
+  
+    <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a>
+  
+    <li><a href="./Decree.html">Decree</a>
+  
+    <li><a href="./DecreesController.html">DecreesController</a>
+  
+    <li><a href="./DocosController.html">DocosController</a>
+  
+    <li><a href="./DocovideosController.html">DocovideosController</a>
+  
+    <li><a href="./Emailer.html">Emailer</a>
+  
+    <li><a href="./EmailerMailer.html">EmailerMailer</a>
+  
+    <li><a href="./EmailersController.html">EmailersController</a>
+  
+    <li><a href="./Event.html">Event</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./GitConf.html">GitConf</a>
+  
+    <li><a href="./HGVIdentifier.html">HGVIdentifier</a>
+  
+    <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a>
+  
+    <li><a href="./HelperController.html">HelperController</a>
+  
+    <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a>
+  
+    <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a>
+  
+    <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a>
+  
+    <li><a href="./Identifier.html">Identifier</a>
+  
+    <li><a href="./IdentifiersController.html">IdentifiersController</a>
+  
+    <li><a href="./Integer.html">Integer</a>
+  
+    <li><a href="./Leiden.html">Leiden</a>
+  
+    <li><a href="./LeidenController.html">LeidenController</a>
+  
+    <li><a href="./LinkingInfo.html">LinkingInfo</a>
+  
+    <li><a href="./MaintenanceMode.html">MaintenanceMode</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./PrettySsime.html">PrettySsime</a>
+  
+    <li><a href="./Publication.html">Publication</a>
+  
+    <li><a href="./PublicationsController.html">PublicationsController</a>
+  
+    <li><a href="./Rails.html">Rails</a>
+  
+    <li><a href="./RepositoriesController.html">RepositoriesController</a>
+  
+    <li><a href="./Repository.html">Repository</a>
+  
+    <li><a href="./RpxController.html">RpxController</a>
+  
+    <li><a href="./TranslationHelperController.html">TranslationHelperController</a>
+  
+    <li><a href="./TranslationLeiden.html">TranslationLeiden</a>
+  
+    <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserController.html">UserController</a>
+  
+    <li><a href="./UserIdentifier.html">UserIdentifier</a>
+  
+    <li><a href="./Vote.html">Vote</a>
+  
+    <li><a href="./VotesController.html">VotesController</a>
+  
+    <li><a href="./WelcomeController.html">WelcomeController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class BiblioIdentifiersController</h1>
+
+  <div id="description" class="description">
+    
+<p>Controller for all actions concerning the handling of bibliographical data,
+such as edit and update</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-edit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retrieves bibliography object from database and displays all values in a
+entry mask Assumes that incoming post respectively get parameters contain a
+valid biblio identifier id Side effect on +@identifier+ and
++@is_editor_view+</p>
+          
+
+          
+          <div class="method-source-code" id="edit-source">
+            <pre><span class="ruby-comment"># File app/controllers/biblio_identifiers_controller.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
+  <span class="ruby-ivar">@is_editor_view</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">find_identifier</span>    
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit-method -->
+
+    
+      <div id="method-i-preview" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">preview</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retrieves bibliography record by +<a href="http://:id">params</a>+ and puts
+a preview to stage Side effect on +@identifier+ and +@is_editor_view+</p>
+          
+
+          
+          <div class="method-source-code" id="preview-source">
+            <pre><span class="ruby-comment"># File app/controllers/biblio_identifiers_controller.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">preview</span>
+  <span class="ruby-ivar">@is_editor_view</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">find_identifier</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- preview-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- preview-method -->
+
+    
+      <div id="method-i-update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retrieves bibliography object from database and updates its values from
+incoming post data, saves comment Redirects back to the editor (see action
+edit, above) Assumes that incoming post request contains new values for the
+biblio record that should be written back to EpiDoc Side effect on
++@identifier+ and <code>flash</code> Writes to database and git repository,
+clears publication cache</p>
+          
+
+          
+          <div class="method-source-code" id="update-source">
+            <pre><span class="ruby-comment"># File app/controllers/biblio_identifiers_controller.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
+  <span class="ruby-identifier">find_identifier</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">commit_sha</span> = <span class="ruby-ivar">@identifier</span>.<span class="ruby-identifier">set_epidoc</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:biblio_identifier</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:comment</span>])
+
+    <span class="ruby-identifier">expire_publication_cache</span>
+    <span class="ruby-identifier">generate_flash_message</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">JRubyXML</span><span class="ruby-operator">::</span><span class="ruby-constant">ParseError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-node">&quot;Error updating file: #{e.message}. This file was NOT SAVED.&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">polymorphic_path</span>([<span class="ruby-ivar">@identifier</span>.<span class="ruby-identifier">publication</span>, <span class="ruby-ivar">@identifier</span>],
+                                 <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:edit</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">save_comment</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:comment</span>], <span class="ruby-identifier">commit_sha</span>)
+
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:expansionSet</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-value">:expansionSet</span>]
+
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">polymorphic_path</span>([<span class="ruby-ivar">@identifier</span>.<span class="ruby-identifier">publication</span>, <span class="ruby-ivar">@identifier</span>],
+                               <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:edit</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+     <section id="protected-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Protected Instance Methods</h3>
+
+    
+      <div id="method-i-find_identifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_identifier</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retrieves biblio identifier from database by id which it takes from the
+incoming post stream Assumes that post data contains biblio identifier id
+Side effect on +@identifier+</p>
+          
+
+          
+          <div class="method-source-code" id="find_identifier-source">
+            <pre><span class="ruby-comment"># File app/controllers/biblio_identifiers_controller.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_identifier</span>
+  <span class="ruby-ivar">@identifier</span> = <span class="ruby-constant">BiblioIdentifier</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- find_identifier-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- find_identifier-method -->
+
+    
+      <div id="method-i-generate_flash_message" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">generate_flash_message</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Copypasted from <a
+href="HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></p>
+          
+
+          
+          <div class="method-source-code" id="generate_flash_message-source">
+            <pre><span class="ruby-comment"># File app/controllers/biblio_identifiers_controller.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_flash_message</span>
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;File updated.&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-node">%w{new editing}</span>.<span class="ruby-identifier">include?</span> <span class="ruby-ivar">@identifier</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">status</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] <span class="ruby-operator">+=</span> <span class="ruby-node">&quot; Go to the &lt;a href='#{url_for(@identifier.publication)}'&gt;publication overview&lt;/a&gt; if you would like to submit.&quot;</span>
+  <span class="ruby-keyword">end</span>      
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- generate_flash_message-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- generate_flash_message-method -->
+
+    
+      <div id="method-i-save_comment" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save_comment</span><span
+            class="method-args">(comment, commit_sha)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Copypasted from <a
+href="HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a></p>
+          
+
+          
+          <div class="method-source-code" id="save_comment-source">
+            <pre><span class="ruby-comment"># File app/controllers/biblio_identifiers_controller.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">save_comment</span> (<span class="ruby-identifier">comment</span>, <span class="ruby-identifier">commit_sha</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">comment</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">comment</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-ivar">@comment</span> = <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">new</span>( {<span class="ruby-value">:git_hash</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">commit_sha</span>, <span class="ruby-value">:user_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:identifier_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@identifier</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:publication_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@identifier</span>.<span class="ruby-identifier">publication_id</span>, <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">comment</span>, <span class="ruby-value">:reason</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;commit&quot;</span> } )
+    <span class="ruby-ivar">@comment</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- save_comment-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- save_comment-method -->
+
+    
+    </section><!-- protected-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

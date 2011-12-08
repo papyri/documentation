@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>Class: BiblioIdentifier::RelatedArticle</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/biblio_identifier.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="../Object.html">Object</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo.html">HgvMetaIdentifierHelper::HgvGeo</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/GeoSpot.html">HgvMetaIdentifierHelper::HgvGeo::GeoSpot</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/Place.html">HgvMetaIdentifierHelper::HgvGeo::Place</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvGeo/Provenance.html">HgvMetaIdentifierHelper::HgvGeo::Provenance</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a>
+  
+    <li><a href="../HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a>
+  
+    <li><a href="../BiblioIdentifier.html">BiblioIdentifier</a>
+  
+    <li><a href="../BiblioIdentifier/Container.html">BiblioIdentifier::Container</a>
+  
+    <li><a href="../BiblioIdentifier/Note.html">BiblioIdentifier::Note</a>
+  
+    <li><a href="../BiblioIdentifier/PublicationPerson.html">BiblioIdentifier::PublicationPerson</a>
+  
+    <li><a href="../BiblioIdentifier/Publisher.html">BiblioIdentifier::Publisher</a>
+  
+    <li><a href="../BiblioIdentifier/RelatedArticle.html">BiblioIdentifier::RelatedArticle</a>
+  
+    <li><a href="../BiblioIdentifier/RelatedItem.html">BiblioIdentifier::RelatedItem</a>
+  
+    <li><a href="../BiblioIdentifier/Reviewee.html">BiblioIdentifier::Reviewee</a>
+  
+    <li><a href="../BiblioIdentifier/ShortTitle.html">BiblioIdentifier::ShortTitle</a>
+  
+    <li><a href="../JRubyXML.html">JRubyXML</a>
+  
+    <li><a href="../JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a>
+  
+    <li><a href="../JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a>
+  
+    <li><a href="../JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a>
+  
+    <li><a href="../JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a>
+  
+    <li><a href="../JRubyXML/ParseError.html">JRubyXML::ParseError</a>
+  
+    <li><a href="../JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a>
+  
+    <li><a href="../JRubyXML/RDFValidator.html">JRubyXML::RDFValidator</a>
+  
+    <li><a href="../JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a>
+  
+    <li><a href="../REXML.html">REXML</a>
+  
+    <li><a href="../REXML/Document.html">REXML::Document</a>
+  
+    <li><a href="../REXML/Element.html">REXML::Element</a>
+  
+    <li><a href="../REXML/XPath.html">REXML::XPath</a>
+  
+    <li><a href="../NumbersRDF.html">NumbersRDF</a>
+  
+    <li><a href="../NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a>
+  
+    <li><a href="../NumbersRDF/Timeout.html">NumbersRDF::Timeout</a>
+  
+    <li><a href="../Rpx.html">Rpx</a>
+  
+    <li><a href="../Rpx/RpxException.html">Rpx::RpxException</a>
+  
+    <li><a href="../Rpx/RpxHelper.html">Rpx::RpxHelper</a>
+  
+    <li><a href="../Comment.html">Comment</a>
+  
+    <li><a href="../Comment/CombineComment.html">Comment::CombineComment</a>
+  
+    <li><a href="../Doco.html">Doco</a>
+  
+    <li><a href="../Doco/DocoNode.html">Doco::DocoNode</a>
+  
+    <li><a href="../Grit.html">Grit</a>
+  
+    <li><a href="../Grit/Commit.html">Grit::Commit</a>
+  
+    <li><a href="../HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+    <li><a href="../HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a>
+  
+    <li><a href="../HGVTransGlossary.html">HGVTransGlossary</a>
+  
+    <li><a href="../HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a>
+  
+    <li><a href="../APISIdentifier.html">APISIdentifier</a>
+  
+    <li><a href="../AjaxProxyController.html">AjaxProxyController</a>
+  
+    <li><a href="../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../BiblioFormBuilder.html">BiblioFormBuilder</a>
+  
+    <li><a href="../BiblioIdentifiersController.html">BiblioIdentifiersController</a>
+  
+    <li><a href="../Board.html">Board</a>
+  
+    <li><a href="../BoardsController.html">BoardsController</a>
+  
+    <li><a href="../CollectionIdentifier.html">CollectionIdentifier</a>
+  
+    <li><a href="../CollectionIdentifiersController.html">CollectionIdentifiersController</a>
+  
+    <li><a href="../CommentsController.html">CommentsController</a>
+  
+    <li><a href="../CommunitiesController.html">CommunitiesController</a>
+  
+    <li><a href="../Community.html">Community</a>
+  
+    <li><a href="../CrossSiteController.html">CrossSiteController</a>
+  
+    <li><a href="../DDBIdentifier.html">DDBIdentifier</a>
+  
+    <li><a href="../DdbIdentifiersController.html">DdbIdentifiersController</a>
+  
+    <li><a href="../Decree.html">Decree</a>
+  
+    <li><a href="../DecreesController.html">DecreesController</a>
+  
+    <li><a href="../DocosController.html">DocosController</a>
+  
+    <li><a href="../DocovideosController.html">DocovideosController</a>
+  
+    <li><a href="../Emailer.html">Emailer</a>
+  
+    <li><a href="../EmailerMailer.html">EmailerMailer</a>
+  
+    <li><a href="../EmailersController.html">EmailersController</a>
+  
+    <li><a href="../Event.html">Event</a>
+  
+    <li><a href="../EventsController.html">EventsController</a>
+  
+    <li><a href="../GitConf.html">GitConf</a>
+  
+    <li><a href="../HGVIdentifier.html">HGVIdentifier</a>
+  
+    <li><a href="../HGVTransIdentifier.html">HGVTransIdentifier</a>
+  
+    <li><a href="../HelperController.html">HelperController</a>
+  
+    <li><a href="../HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a>
+  
+    <li><a href="../HgvTransGlossariesController.html">HgvTransGlossariesController</a>
+  
+    <li><a href="../HgvTransIdentifiersController.html">HgvTransIdentifiersController</a>
+  
+    <li><a href="../Identifier.html">Identifier</a>
+  
+    <li><a href="../IdentifiersController.html">IdentifiersController</a>
+  
+    <li><a href="../Integer.html">Integer</a>
+  
+    <li><a href="../Leiden.html">Leiden</a>
+  
+    <li><a href="../LeidenController.html">LeidenController</a>
+  
+    <li><a href="../LinkingInfo.html">LinkingInfo</a>
+  
+    <li><a href="../MaintenanceMode.html">MaintenanceMode</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../PrettySsime.html">PrettySsime</a>
+  
+    <li><a href="../Publication.html">Publication</a>
+  
+    <li><a href="../PublicationsController.html">PublicationsController</a>
+  
+    <li><a href="../Rails.html">Rails</a>
+  
+    <li><a href="../RepositoriesController.html">RepositoriesController</a>
+  
+    <li><a href="../Repository.html">Repository</a>
+  
+    <li><a href="../RpxController.html">RpxController</a>
+  
+    <li><a href="../TranslationHelperController.html">TranslationHelperController</a>
+  
+    <li><a href="../TranslationLeiden.html">TranslationLeiden</a>
+  
+    <li><a href="../TranslationLeidenController.html">TranslationLeidenController</a>
+  
+    <li><a href="../User.html">User</a>
+  
+    <li><a href="../UserController.html">UserController</a>
+  
+    <li><a href="../UserIdentifier.html">UserIdentifier</a>
+  
+    <li><a href="../Vote.html">Vote</a>
+  
+    <li><a href="../VotesController.html">VotesController</a>
+  
+    <li><a href="../WelcomeController.html">WelcomeController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class BiblioIdentifier::RelatedArticle</h1>
+
+  <div id="description" class="description">
+    
+<p>Data structure for related articles, (i.e. series, volume, number, ddb, tm
+and inventory)</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-ddb" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">ddb</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-inventory" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">inventory</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-number" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">number</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-series" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">series</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-tm" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">tm</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-volume" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">volume</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(series = '', volume = '', number = '', ddb = '', tm = '', inventory = '')</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 1009</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> <span class="ruby-identifier">series</span> = <span class="ruby-string">''</span>, <span class="ruby-identifier">volume</span> = <span class="ruby-string">''</span>, <span class="ruby-identifier">number</span> = <span class="ruby-string">''</span>, <span class="ruby-identifier">ddb</span> = <span class="ruby-string">''</span>, <span class="ruby-identifier">tm</span> = <span class="ruby-string">''</span>, <span class="ruby-identifier">inventory</span> = <span class="ruby-string">''</span>
+  <span class="ruby-ivar">@series</span> = <span class="ruby-identifier">series</span>
+  <span class="ruby-ivar">@volume</span> = <span class="ruby-identifier">volume</span>
+  <span class="ruby-ivar">@number</span> = <span class="ruby-identifier">number</span>
+  <span class="ruby-ivar">@tm</span> = <span class="ruby-identifier">tm</span>
+  <span class="ruby-ivar">@ddb</span> = <span class="ruby-identifier">ddb</span>
+  <span class="ruby-ivar">@inventory</span> = <span class="ruby-identifier">inventory</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

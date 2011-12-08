@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>Class: BiblioFormBuilder</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/helpers/biblio_form_builder.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">ActionView::Helpers::FormBuilder
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-label">#label</a>
+    
+    <li><a href="#method-i-make_label">#make_label</a>
+    
+    <li><a href="#method-i-make_options">#make_options</a>
+    
+    <li><a href="#method-i-select">#select</a>
+    
+    <li><a href="#method-i-text_area">#text_area</a>
+    
+    <li><a href="#method-i-text_field">#text_field</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo.html">HgvMetaIdentifierHelper::HgvGeo</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/GeoSpot.html">HgvMetaIdentifierHelper::HgvGeo::GeoSpot</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Place.html">HgvMetaIdentifierHelper::HgvGeo::Place</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Provenance.html">HgvMetaIdentifierHelper::HgvGeo::Provenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a>
+  
+    <li><a href="./BiblioIdentifier.html">BiblioIdentifier</a>
+  
+    <li><a href="./BiblioIdentifier/Container.html">BiblioIdentifier::Container</a>
+  
+    <li><a href="./BiblioIdentifier/Note.html">BiblioIdentifier::Note</a>
+  
+    <li><a href="./BiblioIdentifier/PublicationPerson.html">BiblioIdentifier::PublicationPerson</a>
+  
+    <li><a href="./BiblioIdentifier/Publisher.html">BiblioIdentifier::Publisher</a>
+  
+    <li><a href="./BiblioIdentifier/RelatedArticle.html">BiblioIdentifier::RelatedArticle</a>
+  
+    <li><a href="./BiblioIdentifier/RelatedItem.html">BiblioIdentifier::RelatedItem</a>
+  
+    <li><a href="./BiblioIdentifier/Reviewee.html">BiblioIdentifier::Reviewee</a>
+  
+    <li><a href="./BiblioIdentifier/ShortTitle.html">BiblioIdentifier::ShortTitle</a>
+  
+    <li><a href="./JRubyXML.html">JRubyXML</a>
+  
+    <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a>
+  
+    <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a>
+  
+    <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a>
+  
+    <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a>
+  
+    <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a>
+  
+    <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a>
+  
+    <li><a href="./JRubyXML/RDFValidator.html">JRubyXML::RDFValidator</a>
+  
+    <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a>
+  
+    <li><a href="./REXML.html">REXML</a>
+  
+    <li><a href="./REXML/Document.html">REXML::Document</a>
+  
+    <li><a href="./REXML/Element.html">REXML::Element</a>
+  
+    <li><a href="./REXML/XPath.html">REXML::XPath</a>
+  
+    <li><a href="./NumbersRDF.html">NumbersRDF</a>
+  
+    <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a>
+  
+    <li><a href="./NumbersRDF/Timeout.html">NumbersRDF::Timeout</a>
+  
+    <li><a href="./Rpx.html">Rpx</a>
+  
+    <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a>
+  
+    <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a>
+  
+    <li><a href="./Comment.html">Comment</a>
+  
+    <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a>
+  
+    <li><a href="./Doco.html">Doco</a>
+  
+    <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a>
+  
+    <li><a href="./Grit.html">Grit</a>
+  
+    <li><a href="./Grit/Commit.html">Grit::Commit</a>
+  
+    <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+    <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a>
+  
+    <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a>
+  
+    <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a>
+  
+    <li><a href="./APISIdentifier.html">APISIdentifier</a>
+  
+    <li><a href="./AjaxProxyController.html">AjaxProxyController</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./BiblioFormBuilder.html">BiblioFormBuilder</a>
+  
+    <li><a href="./BiblioIdentifiersController.html">BiblioIdentifiersController</a>
+  
+    <li><a href="./Board.html">Board</a>
+  
+    <li><a href="./BoardsController.html">BoardsController</a>
+  
+    <li><a href="./CollectionIdentifier.html">CollectionIdentifier</a>
+  
+    <li><a href="./CollectionIdentifiersController.html">CollectionIdentifiersController</a>
+  
+    <li><a href="./CommentsController.html">CommentsController</a>
+  
+    <li><a href="./CommunitiesController.html">CommunitiesController</a>
+  
+    <li><a href="./Community.html">Community</a>
+  
+    <li><a href="./CrossSiteController.html">CrossSiteController</a>
+  
+    <li><a href="./DDBIdentifier.html">DDBIdentifier</a>
+  
+    <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a>
+  
+    <li><a href="./Decree.html">Decree</a>
+  
+    <li><a href="./DecreesController.html">DecreesController</a>
+  
+    <li><a href="./DocosController.html">DocosController</a>
+  
+    <li><a href="./DocovideosController.html">DocovideosController</a>
+  
+    <li><a href="./Emailer.html">Emailer</a>
+  
+    <li><a href="./EmailerMailer.html">EmailerMailer</a>
+  
+    <li><a href="./EmailersController.html">EmailersController</a>
+  
+    <li><a href="./Event.html">Event</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./GitConf.html">GitConf</a>
+  
+    <li><a href="./HGVIdentifier.html">HGVIdentifier</a>
+  
+    <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a>
+  
+    <li><a href="./HelperController.html">HelperController</a>
+  
+    <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a>
+  
+    <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a>
+  
+    <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a>
+  
+    <li><a href="./Identifier.html">Identifier</a>
+  
+    <li><a href="./IdentifiersController.html">IdentifiersController</a>
+  
+    <li><a href="./Integer.html">Integer</a>
+  
+    <li><a href="./Leiden.html">Leiden</a>
+  
+    <li><a href="./LeidenController.html">LeidenController</a>
+  
+    <li><a href="./LinkingInfo.html">LinkingInfo</a>
+  
+    <li><a href="./MaintenanceMode.html">MaintenanceMode</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./PrettySsime.html">PrettySsime</a>
+  
+    <li><a href="./Publication.html">Publication</a>
+  
+    <li><a href="./PublicationsController.html">PublicationsController</a>
+  
+    <li><a href="./Rails.html">Rails</a>
+  
+    <li><a href="./RepositoriesController.html">RepositoriesController</a>
+  
+    <li><a href="./Repository.html">Repository</a>
+  
+    <li><a href="./RpxController.html">RpxController</a>
+  
+    <li><a href="./TranslationHelperController.html">TranslationHelperController</a>
+  
+    <li><a href="./TranslationLeiden.html">TranslationLeiden</a>
+  
+    <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserController.html">UserController</a>
+  
+    <li><a href="./UserIdentifier.html">UserIdentifier</a>
+  
+    <li><a href="./Vote.html">Vote</a>
+  
+    <li><a href="./VotesController.html">VotesController</a>
+  
+    <li><a href="./WelcomeController.html">WelcomeController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class BiblioFormBuilder</h1>
+
+  <div id="description" class="description">
+    
+<p>Helper for creation of forms for class <code>BiblioIdentifier</code></p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-label" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">label</span><span
+            class="method-args">(label, *args)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Generates a label tag</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>label</code> → biblio key, e.g. <code>:articleTitle</code></p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>HTML label</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="label-source">
+            <pre><span class="ruby-comment"># File app/helpers/biblio_form_builder.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">label</span> <span class="ruby-identifier">label</span>, *<span class="ruby-identifier">args</span>
+  <span class="ruby-identifier">make_label</span> <span class="ruby-identifier">label</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- label-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- label-method -->
+
+    
+      <div id="method-i-make_label" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">make_label</span><span
+            class="method-args">(label)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Provides translated label tag for biblio data</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>label</code> → key, any valid biblio :key</p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>HTLM label tag</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="make_label-source">
+            <pre><span class="ruby-comment"># File app/helpers/biblio_form_builder.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_label</span> <span class="ruby-identifier">label</span>
+  <span class="ruby-ivar">@template</span>.<span class="ruby-identifier">content_tag</span>(<span class="ruby-string">'label'</span>, <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'biblio.label.'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">label</span>.<span class="ruby-identifier">to_s</span>), <span class="ruby-value">:title</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">BiblioIdentifier</span>.<span class="ruby-constant">XPATH</span>(<span class="ruby-identifier">label</span>.<span class="ruby-identifier">to_s</span>), <span class="ruby-value">:for</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@object_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">'_'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">label</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'label_'</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@object_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">'_'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">label</span>.<span class="ruby-identifier">to_s</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- make_label-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- make_label-method -->
+
+    
+      <div id="method-i-make_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">make_options</span><span
+            class="method-args">(label)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Provides translated values to be used in a drop down box</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>label</code> → key, <code>:language</code>, <code>:language</code>,
+<code>:subtype</code>, <code>:publisherType</code> or
+<code>:shortTitleResponsibility</code></p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p><code>Array</code> of +Array+s that can be used with rails’
+options_for_select function for special biblio keys</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="make_options-source">
+            <pre><span class="ruby-comment"># File app/helpers/biblio_form_builder.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">make_options</span> <span class="ruby-identifier">label</span>
+  {
+    <span class="ruby-value">:language</span> =<span class="ruby-operator">&gt;</span> [
+      [<span class="ruby-string">''</span>, <span class="ruby-string">''</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'language.fr'</span>), <span class="ruby-string">'fr'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'language.en'</span>), <span class="ruby-string">'en'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'language.de'</span>), <span class="ruby-string">'de'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'language.it'</span>), <span class="ruby-string">'it'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'language.es'</span>), <span class="ruby-string">'es'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'language.la'</span>), <span class="ruby-string">'la'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'language.el'</span>), <span class="ruby-string">'el'</span>]
+    ],
+    <span class="ruby-value">:supertype</span> =<span class="ruby-operator">&gt;</span> [
+      [<span class="ruby-string">''</span>, <span class="ruby-string">''</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'biblio.type.book'</span>), <span class="ruby-string">'book'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'biblio.type.journal'</span>), <span class="ruby-string">'journal'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'biblio.type.article'</span>), <span class="ruby-string">'article'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'biblio.type.review'</span>), <span class="ruby-string">'review'</span>]
+    ],
+    <span class="ruby-value">:subtype</span> =<span class="ruby-operator">&gt;</span> [
+      [<span class="ruby-string">''</span>, <span class="ruby-string">''</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'biblio.subtype.book'</span>), <span class="ruby-string">'book'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'biblio.subtype.journal'</span>), <span class="ruby-string">'journal'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'biblio.subtype.other'</span>), <span class="ruby-string">'other'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'biblio.subtype.edited'</span>), <span class="ruby-string">'edited'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'biblio.subtype.authored'</span>), <span class="ruby-string">'authored'</span>]
+    ],
+    <span class="ruby-value">:publisherType</span> =<span class="ruby-operator">&gt;</span> [
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'biblio.publisherType.name'</span>), <span class="ruby-string">'publisher'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'biblio.publisherType.place'</span>), <span class="ruby-string">'pubPlace'</span>]
+    ],
+    <span class="ruby-value">:shortTitleResponsibility</span> =<span class="ruby-operator">&gt;</span> [
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'biblio.shortTitleResponsibility.bp'</span>), <span class="ruby-string">'BP'</span>],
+      [<span class="ruby-constant">I18n</span>.<span class="ruby-identifier">t</span>(<span class="ruby-string">'biblio.shortTitleResponsibility.cl'</span>), <span class="ruby-string">'Checklist'</span>]
+    ]
+  }[<span class="ruby-identifier">label</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- make_options-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- make_options-method -->
+
+    
+      <div id="method-i-select" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">select</span><span
+            class="method-args">(label, options = [], *args)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Generates a select box with a preceding label tag</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>label</code> → biblio key, e.g. <code>:articleTitle</code></p>
+</li><li>
+<p>options → HTML options, defaults to empty <code>Array</code></p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>HTML label and select box</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="select-source">
+            <pre><span class="ruby-comment"># File app/helpers/biblio_form_builder.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">select</span> <span class="ruby-identifier">label</span>, <span class="ruby-identifier">options</span> = [], *<span class="ruby-identifier">args</span>
+  <span class="ruby-identifier">options</span> = <span class="ruby-identifier">make_options</span>(<span class="ruby-identifier">label</span>)
+  <span class="ruby-identifier">make_label</span>(<span class="ruby-identifier">label</span>) <span class="ruby-operator">+</span> <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- select-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- select-method -->
+
+    
+      <div id="method-i-text_area" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">text_area</span><span
+            class="method-args">(label, *args)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Generates a text area field with a preceding label tag</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>label</code> → biblio key, e.g. <code>:articleTitle</code></p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>HTML label and text area field</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="text_area-source">
+            <pre><span class="ruby-comment"># File app/helpers/biblio_form_builder.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text_area</span> <span class="ruby-identifier">label</span>, *<span class="ruby-identifier">args</span>
+  <span class="ruby-identifier">make_label</span>(<span class="ruby-identifier">label</span>) <span class="ruby-operator">+</span> <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- text_area-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- text_area-method -->
+
+    
+      <div id="method-i-text_field" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">text_field</span><span
+            class="method-args">(label, *args)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Generates a text field with a preceding label tag</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>label</code> → biblio key, e.g. <code>:articleTitle</code></p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>HTML label and input field of type text</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="text_field-source">
+            <pre><span class="ruby-comment"># File app/helpers/biblio_form_builder.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">text_field</span> <span class="ruby-identifier">label</span>, *<span class="ruby-identifier">args</span>
+  <span class="ruby-identifier">make_label</span>(<span class="ruby-identifier">label</span>) <span class="ruby-operator">+</span> <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- text_field-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- text_field-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

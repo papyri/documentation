@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>Class: CommunitiesController</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/communities_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-add_admin">#add_admin</a>
+    
+    <li><a href="#method-i-add_admin_page">#add_admin_page</a>
+    
+    <li><a href="#method-i-add_member">#add_member</a>
+    
+    <li><a href="#method-i-add_member_page">#add_member_page</a>
+    
+    <li><a href="#method-i-create">#create</a>
+    
+    <li><a href="#method-i-destroy">#destroy</a>
+    
+    <li><a href="#method-i-edit">#edit</a>
+    
+    <li><a href="#method-i-edit_end_user">#edit_end_user</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+    <li><a href="#method-i-list_publications">#list_publications</a>
+    
+    <li><a href="#method-i-new">#new</a>
+    
+    <li><a href="#method-i-remove_admin">#remove_admin</a>
+    
+    <li><a href="#method-i-remove_current_user">#remove_current_user</a>
+    
+    <li><a href="#method-i-remove_current_user_membership">#remove_current_user_membership</a>
+    
+    <li><a href="#method-i-remove_member">#remove_member</a>
+    
+    <li><a href="#method-i-set_end_user">#set_end_user</a>
+    
+    <li><a href="#method-i-show">#show</a>
+    
+    <li><a href="#method-i-update">#update</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo.html">HgvMetaIdentifierHelper::HgvGeo</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/GeoSpot.html">HgvMetaIdentifierHelper::HgvGeo::GeoSpot</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Place.html">HgvMetaIdentifierHelper::HgvGeo::Place</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Provenance.html">HgvMetaIdentifierHelper::HgvGeo::Provenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a>
+  
+    <li><a href="./BiblioIdentifier.html">BiblioIdentifier</a>
+  
+    <li><a href="./BiblioIdentifier/Container.html">BiblioIdentifier::Container</a>
+  
+    <li><a href="./BiblioIdentifier/Note.html">BiblioIdentifier::Note</a>
+  
+    <li><a href="./BiblioIdentifier/PublicationPerson.html">BiblioIdentifier::PublicationPerson</a>
+  
+    <li><a href="./BiblioIdentifier/Publisher.html">BiblioIdentifier::Publisher</a>
+  
+    <li><a href="./BiblioIdentifier/RelatedArticle.html">BiblioIdentifier::RelatedArticle</a>
+  
+    <li><a href="./BiblioIdentifier/RelatedItem.html">BiblioIdentifier::RelatedItem</a>
+  
+    <li><a href="./BiblioIdentifier/Reviewee.html">BiblioIdentifier::Reviewee</a>
+  
+    <li><a href="./BiblioIdentifier/ShortTitle.html">BiblioIdentifier::ShortTitle</a>
+  
+    <li><a href="./JRubyXML.html">JRubyXML</a>
+  
+    <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a>
+  
+    <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a>
+  
+    <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a>
+  
+    <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a>
+  
+    <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a>
+  
+    <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a>
+  
+    <li><a href="./JRubyXML/RDFValidator.html">JRubyXML::RDFValidator</a>
+  
+    <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a>
+  
+    <li><a href="./REXML.html">REXML</a>
+  
+    <li><a href="./REXML/Document.html">REXML::Document</a>
+  
+    <li><a href="./REXML/Element.html">REXML::Element</a>
+  
+    <li><a href="./REXML/XPath.html">REXML::XPath</a>
+  
+    <li><a href="./NumbersRDF.html">NumbersRDF</a>
+  
+    <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a>
+  
+    <li><a href="./NumbersRDF/Timeout.html">NumbersRDF::Timeout</a>
+  
+    <li><a href="./Rpx.html">Rpx</a>
+  
+    <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a>
+  
+    <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a>
+  
+    <li><a href="./Comment.html">Comment</a>
+  
+    <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a>
+  
+    <li><a href="./Doco.html">Doco</a>
+  
+    <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a>
+  
+    <li><a href="./Grit.html">Grit</a>
+  
+    <li><a href="./Grit/Commit.html">Grit::Commit</a>
+  
+    <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+    <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a>
+  
+    <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a>
+  
+    <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a>
+  
+    <li><a href="./APISIdentifier.html">APISIdentifier</a>
+  
+    <li><a href="./AjaxProxyController.html">AjaxProxyController</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./BiblioFormBuilder.html">BiblioFormBuilder</a>
+  
+    <li><a href="./BiblioIdentifiersController.html">BiblioIdentifiersController</a>
+  
+    <li><a href="./Board.html">Board</a>
+  
+    <li><a href="./BoardsController.html">BoardsController</a>
+  
+    <li><a href="./CollectionIdentifier.html">CollectionIdentifier</a>
+  
+    <li><a href="./CollectionIdentifiersController.html">CollectionIdentifiersController</a>
+  
+    <li><a href="./CommentsController.html">CommentsController</a>
+  
+    <li><a href="./CommunitiesController.html">CommunitiesController</a>
+  
+    <li><a href="./Community.html">Community</a>
+  
+    <li><a href="./CrossSiteController.html">CrossSiteController</a>
+  
+    <li><a href="./DDBIdentifier.html">DDBIdentifier</a>
+  
+    <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a>
+  
+    <li><a href="./Decree.html">Decree</a>
+  
+    <li><a href="./DecreesController.html">DecreesController</a>
+  
+    <li><a href="./DocosController.html">DocosController</a>
+  
+    <li><a href="./DocovideosController.html">DocovideosController</a>
+  
+    <li><a href="./Emailer.html">Emailer</a>
+  
+    <li><a href="./EmailerMailer.html">EmailerMailer</a>
+  
+    <li><a href="./EmailersController.html">EmailersController</a>
+  
+    <li><a href="./Event.html">Event</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./GitConf.html">GitConf</a>
+  
+    <li><a href="./HGVIdentifier.html">HGVIdentifier</a>
+  
+    <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a>
+  
+    <li><a href="./HelperController.html">HelperController</a>
+  
+    <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a>
+  
+    <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a>
+  
+    <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a>
+  
+    <li><a href="./Identifier.html">Identifier</a>
+  
+    <li><a href="./IdentifiersController.html">IdentifiersController</a>
+  
+    <li><a href="./Integer.html">Integer</a>
+  
+    <li><a href="./Leiden.html">Leiden</a>
+  
+    <li><a href="./LeidenController.html">LeidenController</a>
+  
+    <li><a href="./LinkingInfo.html">LinkingInfo</a>
+  
+    <li><a href="./MaintenanceMode.html">MaintenanceMode</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./PrettySsime.html">PrettySsime</a>
+  
+    <li><a href="./Publication.html">Publication</a>
+  
+    <li><a href="./PublicationsController.html">PublicationsController</a>
+  
+    <li><a href="./Rails.html">Rails</a>
+  
+    <li><a href="./RepositoriesController.html">RepositoriesController</a>
+  
+    <li><a href="./Repository.html">Repository</a>
+  
+    <li><a href="./RpxController.html">RpxController</a>
+  
+    <li><a href="./TranslationHelperController.html">TranslationHelperController</a>
+  
+    <li><a href="./TranslationLeiden.html">TranslationLeiden</a>
+  
+    <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserController.html">UserController</a>
+  
+    <li><a href="./UserIdentifier.html">UserIdentifier</a>
+  
+    <li><a href="./Vote.html">Vote</a>
+  
+    <li><a href="./VotesController.html">VotesController</a>
+  
+    <li><a href="./WelcomeController.html">WelcomeController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class CommunitiesController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-add_admin" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_admin</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Adds user to community admin list.</p>
+          
+
+          
+          <div class="method-source-code" id="add_admin-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_admin</span>
+ <span class="ruby-comment"># raise params.inspect</span>
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>])
+
+  <span class="ruby-comment">#raise @community.admins.length.to_s</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">admins</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>) 
+  
+    <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">admins</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">user</span>
+    <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;add_admin_page&quot;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- add_admin-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- add_admin-method -->
+
+    
+      <div id="method-i-add_admin_page" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_admin_page</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_admin_page-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_admin_page</span>
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- add_admin_page-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- add_admin_page-method -->
+
+    
+      <div id="method-i-add_member" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_member</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Adds a member to the community members list. These are the users who can
+submit to the community.</p>
+          
+
+          
+          <div class="method-source-code" id="add_member-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_member</span>    
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>])
+
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">members</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>) 
+    <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">members</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">user</span>
+    <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;add_member_page&quot;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- add_member-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- add_member-method -->
+
+    
+      <div id="method-i-add_member_page" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_member_page</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>def find_member</p>
+
+<pre>@community = Community.find(params[:id])</pre>
+
+<p>end</p>
+          
+
+          
+          <div class="method-source-code" id="add_member_page-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_member_page</span>
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- add_member_page-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- add_member_page-method -->
+
+    
+      <div id="method-i-create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>POST /communities POST /communities.xml</p>
+          
+
+          
+          <div class="method-source-code" id="create-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:community</span>])
+  <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">admins</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@current_user</span>
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">save!</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">'Community was successfully created.'</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'edit'</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">id</span>) }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:created</span>, <span class="ruby-value">:location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span> }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;new&quot;</span> }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:unprocessable_entity</span> }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create-method -->
+
+    
+      <div id="method-i-destroy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">destroy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>DELETE /communities/1 DELETE /communities/1.xml</p>
+          
+
+          
+          <div class="method-source-code" id="destroy-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-identifier">community_name</span> = <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">format_name</span>
+  
+  <span class="ruby-comment">#find all of the publications that belonged to the community and reset them to sosol</span>
+  <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">publications</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">community</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">p</span>.<span class="ruby-identifier">save</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment">#this will not affect the boards copies &amp; they will be deleted along with the community</span>
+  <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">destroy</span>
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-identifier">community_name</span> <span class="ruby-operator">+</span> <span class="ruby-string">' community no longer exist.'</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:controller=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">'user'</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'admin'</span>) }
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">head</span> <span class="ruby-value">:ok</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- destroy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- destroy-method -->
+
+    
+      <div id="method-i-edit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>GET /communities/1/edit</p>
+          
+
+          
+          <div class="method-source-code" id="edit-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit-method -->
+
+    
+      <div id="method-i-edit_end_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit_end_user</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit_end_user-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_end_user</span>
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit_end_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit_end_user-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>GET /communities GET /communities.xml</p>
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@communities</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">all</span>
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-comment"># index.html.erb</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@communities</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+      <div id="method-i-list_publications" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">list_publications</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>List all the publications that belong to a community. (hidden view as of
+10-10-2011)</p>
+          
+
+          
+          <div class="method-source-code" id="list_publications-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 97</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">list_publications</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-ivar">@community</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+   <span class="ruby-ivar">@publications</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_community_id</span>(<span class="ruby-ivar">@community</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:identifiers</span>], <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- list_publications-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- list_publications-method -->
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>GET /communities/new GET /communities/new.xml</p>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-comment"># new.html.erb</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-i-remove_admin" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">remove_admin</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Removes user form community admin list.</p>
+          
+
+          
+          <div class="method-source-code" id="remove_admin-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 174</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_admin</span>
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:admin_id</span>])
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@current_user</span>
+    <span class="ruby-comment">#warn them about deleting themselves as admins</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;current_user_warning&quot;</span>
+    <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-value">1</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">admins</span>.<span class="ruby-identifier">length</span>
+      <span class="ruby-comment">#dont let them remove themselves if they are the last admin</span>
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-string">&quot;Cannot remove you since you are the only admin for this community.&quot;</span>
+      <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;add_admin_page&quot;</span>,<span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">id</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">admins</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">user</span>)
+  <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">save</span>
+
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;add_admin_page&quot;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- remove_admin-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- remove_admin-method -->
+
+    
+      <div id="method-i-remove_current_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">remove_current_user</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Removes the current user from the community admin list.</p>
+          
+
+          
+          <div class="method-source-code" id="remove_current_user-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_current_user</span>  
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+
+  <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">admins</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@current_user</span>)
+  <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">save</span>
+
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;show&quot;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- remove_current_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- remove_current_user-method -->
+
+    
+      <div id="method-i-remove_current_user_membership" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">remove_current_user_membership</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Removes the current user from the community members list. Used to let the
+user leave a community.</p>
+          
+
+          
+          <div class="method-source-code" id="remove_current_user_membership-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_current_user_membership</span>
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  
+  <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">members</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-ivar">@current_user</span>)
+  <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">save</span>
+
+  <span class="ruby-comment">#redirect_to :action =&gt; &quot;edit&quot;, :id =&gt; (@community).id</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;user&quot;</span>, <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;admin&quot;</span>    
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- remove_current_user_membership-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- remove_current_user_membership-method -->
+
+    
+      <div id="method-i-remove_member" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">remove_member</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Removes member from the communities members list.</p>
+          
+
+          
+          <div class="method-source-code" id="remove_member-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_member</span>
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:member_id</span>])
+
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  
+  <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">members</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">user</span>)
+  <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">save</span>
+
+  <span class="ruby-comment">#redirect_to :action =&gt; &quot;edit&quot;, :id =&gt; (@community).id</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;add_member_page&quot;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- remove_member-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- remove_member-method -->
+
+    
+      <div id="method-i-set_end_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_end_user</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Sets the end_user for the community.  If this is not set, then publications
+may not be submitted nor finalized.</p>
+          
+
+          
+          <div class="method-source-code" id="set_end_user-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_end_user</span>
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user_id</span>])
+  
+  <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">end_user_id</span> = <span class="ruby-identifier">user</span>.<span class="ruby-identifier">id</span>
+  <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">save</span>
+  
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;edit&quot;</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- set_end_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- set_end_user-method -->
+
+    
+      <div id="method-i-show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>GET /communities/1 GET /communities/1.xml</p>
+          
+
+          
+          <div class="method-source-code" id="show-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-comment"># show.html.erb</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- show-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- show-method -->
+
+    
+      <div id="method-i-update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>PUT /communities/1 PUT /communities/1.xml</p>
+          
+
+          
+          <div class="method-source-code" id="update-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">update_attributes</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:community</span>])
+      <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">'Community was successfully updated.'</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span>(<span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'edit'</span>, <span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">id</span>) }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">head</span> <span class="ruby-value">:ok</span> }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;edit&quot;</span> }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">xml</span>  { <span class="ruby-identifier">render</span> <span class="ruby-value">:xml</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:unprocessable_entity</span> }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

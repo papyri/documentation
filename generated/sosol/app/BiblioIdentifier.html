@@ -1,0 +1,2641 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>Class: BiblioIdentifier</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/biblio_identifier.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="HGVIdentifier.html">HGVIdentifier</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-XPATH">::XPATH</a>
+    
+    <li><a href="#method-c-next_temporary_identifier">::next_temporary_identifier</a>
+    
+    <li><a href="#method-i-after_find">#after_find</a>
+    
+    <li><a href="#method-i-epiDoc">#epiDoc</a>
+    
+    <li><a href="#method-i-getBiblioPath">#getBiblioPath</a>
+    
+    <li><a href="#method-i-getRelatedItemElements">#getRelatedItemElements</a>
+    
+    <li><a href="#method-i-id_attribute">#id_attribute</a>
+    
+    <li><a href="#method-i-is_valid_xml-3F">#is_valid_xml?</a>
+    
+    <li><a href="#method-i-mutable-3F">#mutable?</a>
+    
+    <li><a href="#method-i-n_attribute">#n_attribute</a>
+    
+    <li><a href="#method-i-populateFromEpiDoc">#populateFromEpiDoc</a>
+    
+    <li><a href="#method-i-populateFromEpiDocContainer">#populateFromEpiDocContainer</a>
+    
+    <li><a href="#method-i-populateFromEpiDocNote">#populateFromEpiDocNote</a>
+    
+    <li><a href="#method-i-populateFromEpiDocOriginalBp">#populateFromEpiDocOriginalBp</a>
+    
+    <li><a href="#method-i-populateFromEpiDocPerson">#populateFromEpiDocPerson</a>
+    
+    <li><a href="#method-i-populateFromEpiDocPublisher">#populateFromEpiDocPublisher</a>
+    
+    <li><a href="#method-i-populateFromEpiDocRelatedArticle">#populateFromEpiDocRelatedArticle</a>
+    
+    <li><a href="#method-i-populateFromEpiDocRelatedItem">#populateFromEpiDocRelatedItem</a>
+    
+    <li><a href="#method-i-populateFromEpiDocReviewee">#populateFromEpiDocReviewee</a>
+    
+    <li><a href="#method-i-populateFromEpiDocShortTitle">#populateFromEpiDocShortTitle</a>
+    
+    <li><a href="#method-i-populateFromEpiDocSimple">#populateFromEpiDocSimple</a>
+    
+    <li><a href="#method-i-preview">#preview</a>
+    
+    <li><a href="#method-i-set_content">#set_content</a>
+    
+    <li><a href="#method-i-set_epidoc">#set_epidoc</a>
+    
+    <li><a href="#method-i-sortEpiDoc">#sortEpiDoc</a>
+    
+    <li><a href="#method-i-toXmlString">#toXmlString</a>
+    
+    <li><a href="#method-i-to_path">#to_path</a>
+    
+    <li><a href="#method-i-updateEpiDoc">#updateEpiDoc</a>
+    
+    <li><a href="#method-i-updateEpiDocRelatedItem">#updateEpiDocRelatedItem</a>
+    
+    <li><a href="#method-i-updateFromPost">#updateFromPost</a>
+    
+    <li><a href="#method-i-updateFromPostContainer">#updateFromPostContainer</a>
+    
+    <li><a href="#method-i-updateFromPostNote">#updateFromPostNote</a>
+    
+    <li><a href="#method-i-updateFromPostPerson">#updateFromPostPerson</a>
+    
+    <li><a href="#method-i-updateFromPostPublisher">#updateFromPostPublisher</a>
+    
+    <li><a href="#method-i-updateFromPostRelatedArticle">#updateFromPostRelatedArticle</a>
+    
+    <li><a href="#method-i-updateFromPostRelatedItem">#updateFromPostRelatedItem</a>
+    
+    <li><a href="#method-i-updateFromPostReviewee">#updateFromPostReviewee</a>
+    
+    <li><a href="#method-i-updateFromPostShortTitle">#updateFromPostShortTitle</a>
+    
+    <li><a href="#method-i-updateFromPostSimple">#updateFromPostSimple</a>
+    
+    <li><a href="#method-i-wrap_xml">#wrap_xml</a>
+    
+    <li><a href="#method-i-xml_title_text">#xml_title_text</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./HgvMetaIdentifierHelper.html">HgvMetaIdentifierHelper</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvDate.html">HgvMetaIdentifierHelper::HgvDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFormat.html">HgvMetaIdentifierHelper::HgvFormat</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvFuzzy.html">HgvMetaIdentifierHelper::HgvFuzzy</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo.html">HgvMetaIdentifierHelper::HgvGeo</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/GeoSpot.html">HgvMetaIdentifierHelper::HgvGeo::GeoSpot</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Place.html">HgvMetaIdentifierHelper::HgvGeo::Place</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvGeo/Provenance.html">HgvMetaIdentifierHelper::HgvGeo::Provenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvMentionedDate.html">HgvMetaIdentifierHelper::HgvMentionedDate</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvProvenance.html">HgvMetaIdentifierHelper::HgvProvenance</a>
+  
+    <li><a href="./HgvMetaIdentifierHelper/HgvPublication.html">HgvMetaIdentifierHelper::HgvPublication</a>
+  
+    <li><a href="./BiblioIdentifier.html">BiblioIdentifier</a>
+  
+    <li><a href="./BiblioIdentifier/Container.html">BiblioIdentifier::Container</a>
+  
+    <li><a href="./BiblioIdentifier/Note.html">BiblioIdentifier::Note</a>
+  
+    <li><a href="./BiblioIdentifier/PublicationPerson.html">BiblioIdentifier::PublicationPerson</a>
+  
+    <li><a href="./BiblioIdentifier/Publisher.html">BiblioIdentifier::Publisher</a>
+  
+    <li><a href="./BiblioIdentifier/RelatedArticle.html">BiblioIdentifier::RelatedArticle</a>
+  
+    <li><a href="./BiblioIdentifier/RelatedItem.html">BiblioIdentifier::RelatedItem</a>
+  
+    <li><a href="./BiblioIdentifier/Reviewee.html">BiblioIdentifier::Reviewee</a>
+  
+    <li><a href="./BiblioIdentifier/ShortTitle.html">BiblioIdentifier::ShortTitle</a>
+  
+    <li><a href="./JRubyXML.html">JRubyXML</a>
+  
+    <li><a href="./JRubyXML/EpiDocP4Validator.html">JRubyXML::EpiDocP4Validator</a>
+  
+    <li><a href="./JRubyXML/EpiDocP5Validator.html">JRubyXML::EpiDocP5Validator</a>
+  
+    <li><a href="./JRubyXML/JARVValidator.html">JRubyXML::JARVValidator</a>
+  
+    <li><a href="./JRubyXML/NamespaceContext.html">JRubyXML::NamespaceContext</a>
+  
+    <li><a href="./JRubyXML/ParseError.html">JRubyXML::ParseError</a>
+  
+    <li><a href="./JRubyXML/ParseErrorHandler.html">JRubyXML::ParseErrorHandler</a>
+  
+    <li><a href="./JRubyXML/RDFValidator.html">JRubyXML::RDFValidator</a>
+  
+    <li><a href="./JRubyXML/TransformErrorListener.html">JRubyXML::TransformErrorListener</a>
+  
+    <li><a href="./REXML.html">REXML</a>
+  
+    <li><a href="./REXML/Document.html">REXML::Document</a>
+  
+    <li><a href="./REXML/Element.html">REXML::Element</a>
+  
+    <li><a href="./REXML/XPath.html">REXML::XPath</a>
+  
+    <li><a href="./NumbersRDF.html">NumbersRDF</a>
+  
+    <li><a href="./NumbersRDF/NumbersHelper.html">NumbersRDF::NumbersHelper</a>
+  
+    <li><a href="./NumbersRDF/Timeout.html">NumbersRDF::Timeout</a>
+  
+    <li><a href="./Rpx.html">Rpx</a>
+  
+    <li><a href="./Rpx/RpxException.html">Rpx::RpxException</a>
+  
+    <li><a href="./Rpx/RpxHelper.html">Rpx::RpxHelper</a>
+  
+    <li><a href="./Comment.html">Comment</a>
+  
+    <li><a href="./Comment/CombineComment.html">Comment::CombineComment</a>
+  
+    <li><a href="./Doco.html">Doco</a>
+  
+    <li><a href="./Doco/DocoNode.html">Doco::DocoNode</a>
+  
+    <li><a href="./Grit.html">Grit</a>
+  
+    <li><a href="./Grit/Commit.html">Grit::Commit</a>
+  
+    <li><a href="./HGVMetaIdentifier.html">HGVMetaIdentifier</a>
+  
+    <li><a href="./HGVMetaIdentifier/HgvMetaConfiguration.html">HGVMetaIdentifier::HgvMetaConfiguration</a>
+  
+    <li><a href="./HGVTransGlossary.html">HGVTransGlossary</a>
+  
+    <li><a href="./HGVTransGlossary/Entry.html">HGVTransGlossary::Entry</a>
+  
+    <li><a href="./APISIdentifier.html">APISIdentifier</a>
+  
+    <li><a href="./AjaxProxyController.html">AjaxProxyController</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./BiblioFormBuilder.html">BiblioFormBuilder</a>
+  
+    <li><a href="./BiblioIdentifiersController.html">BiblioIdentifiersController</a>
+  
+    <li><a href="./Board.html">Board</a>
+  
+    <li><a href="./BoardsController.html">BoardsController</a>
+  
+    <li><a href="./CollectionIdentifier.html">CollectionIdentifier</a>
+  
+    <li><a href="./CollectionIdentifiersController.html">CollectionIdentifiersController</a>
+  
+    <li><a href="./CommentsController.html">CommentsController</a>
+  
+    <li><a href="./CommunitiesController.html">CommunitiesController</a>
+  
+    <li><a href="./Community.html">Community</a>
+  
+    <li><a href="./CrossSiteController.html">CrossSiteController</a>
+  
+    <li><a href="./DDBIdentifier.html">DDBIdentifier</a>
+  
+    <li><a href="./DdbIdentifiersController.html">DdbIdentifiersController</a>
+  
+    <li><a href="./Decree.html">Decree</a>
+  
+    <li><a href="./DecreesController.html">DecreesController</a>
+  
+    <li><a href="./DocosController.html">DocosController</a>
+  
+    <li><a href="./DocovideosController.html">DocovideosController</a>
+  
+    <li><a href="./Emailer.html">Emailer</a>
+  
+    <li><a href="./EmailerMailer.html">EmailerMailer</a>
+  
+    <li><a href="./EmailersController.html">EmailersController</a>
+  
+    <li><a href="./Event.html">Event</a>
+  
+    <li><a href="./EventsController.html">EventsController</a>
+  
+    <li><a href="./GitConf.html">GitConf</a>
+  
+    <li><a href="./HGVIdentifier.html">HGVIdentifier</a>
+  
+    <li><a href="./HGVTransIdentifier.html">HGVTransIdentifier</a>
+  
+    <li><a href="./HelperController.html">HelperController</a>
+  
+    <li><a href="./HgvMetaIdentifiersController.html">HgvMetaIdentifiersController</a>
+  
+    <li><a href="./HgvTransGlossariesController.html">HgvTransGlossariesController</a>
+  
+    <li><a href="./HgvTransIdentifiersController.html">HgvTransIdentifiersController</a>
+  
+    <li><a href="./Identifier.html">Identifier</a>
+  
+    <li><a href="./IdentifiersController.html">IdentifiersController</a>
+  
+    <li><a href="./Integer.html">Integer</a>
+  
+    <li><a href="./Leiden.html">Leiden</a>
+  
+    <li><a href="./LeidenController.html">LeidenController</a>
+  
+    <li><a href="./LinkingInfo.html">LinkingInfo</a>
+  
+    <li><a href="./MaintenanceMode.html">MaintenanceMode</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./PrettySsime.html">PrettySsime</a>
+  
+    <li><a href="./Publication.html">Publication</a>
+  
+    <li><a href="./PublicationsController.html">PublicationsController</a>
+  
+    <li><a href="./Rails.html">Rails</a>
+  
+    <li><a href="./RepositoriesController.html">RepositoriesController</a>
+  
+    <li><a href="./Repository.html">Repository</a>
+  
+    <li><a href="./RpxController.html">RpxController</a>
+  
+    <li><a href="./TranslationHelperController.html">TranslationHelperController</a>
+  
+    <li><a href="./TranslationLeiden.html">TranslationLeiden</a>
+  
+    <li><a href="./TranslationLeidenController.html">TranslationLeidenController</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserController.html">UserController</a>
+  
+    <li><a href="./UserIdentifier.html">UserIdentifier</a>
+  
+    <li><a href="./Vote.html">Vote</a>
+  
+    <li><a href="./VotesController.html">VotesController</a>
+  
+    <li><a href="./WelcomeController.html">WelcomeController</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class BiblioIdentifier</h1>
+
+  <div id="description" class="description">
+    
+<p>Model class for bibliography records as they reside in the Biblio folder of
+idp.data’s git repository</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="FRIENDLY_NAME">FRIENDLY_NAME
+        
+        <dd class="description">
+        
+      
+        <dt id="IDENTIFIER_NAMESPACE">IDENTIFIER_NAMESPACE
+        
+        <dd class="description">
+        
+      
+        <dt id="PATH_PREFIX">PATH_PREFIX
+        
+        <dd class="description">
+        
+      
+        <dt id="XML_VALIDATOR">XML_VALIDATOR
+        
+        <dd class="description">
+        
+      
+        <dt id="XPATH">XPATH
+        
+        <dd class="description"><p>A map (key → xpath) of all relevant xpaths for data lookup and storage</p>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-configuration" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">configuration</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-valid_epidoc_attributes" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">valid_epidoc_attributes</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-XPATH" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">XPATH</span><span
+            class="method-args">(key)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retrieve xpath for a given key</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>key</code> → biblio key, e.g. <code>:articleTitle</code></p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>xpath as stored within <code>XPATH</code> variable or an empty string if no
+xpath could be found</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="XPATH-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-constant">XPATH</span> <span class="ruby-identifier">key</span>
+  <span class="ruby-constant">XPATH</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_sym</span>] <span class="ruby-operator">?</span> <span class="ruby-constant">XPATH</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_sym</span>] <span class="ruby-operator">:</span> <span class="ruby-string">''</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- XPATH-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- XPATH-method -->
+
+    
+      <div id="method-c-next_temporary_identifier" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">next_temporary_identifier</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Determines the next ‘SoSOL’ temporary name for the associated
+identifier This overrides the identifier superclass definition so that
+SoSOL-side biblio id’s will be e.g. papyri.info/biblio/2011-0001 instead
+of papyri.info/biblio/SoSOL;2011;0001</p>
+<ul><li>
+<p>starts at ‘1’ each year</p>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>temporary identifier name</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="next_temporary_identifier-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">next_temporary_identifier</span>
+  <span class="ruby-identifier">year</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">year</span>
+  <span class="ruby-identifier">latest</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>,
+                     <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-string">&quot;name like ?&quot;</span>, <span class="ruby-node">&quot;papyri.info/#{self::IDENTIFIER_NAMESPACE}/#{year}-%&quot;</span>],
+                     <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;name DESC&quot;</span>,
+                     <span class="ruby-value">:limit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">first</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">latest</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-comment"># no constructed id's for this year/class</span>
+    <span class="ruby-identifier">document_number</span> = <span class="ruby-value">1</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">document_number</span> = <span class="ruby-identifier">latest</span>.<span class="ruby-identifier">to_components</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'-'</span>).<span class="ruby-identifier">last</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">sprintf</span>(<span class="ruby-node">&quot;papyri.info/#{self::IDENTIFIER_NAMESPACE}/%04d-%04d&quot;</span>,
+                 <span class="ruby-identifier">year</span>, <span class="ruby-identifier">document_number</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- next_temporary_identifier-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- next_temporary_identifier-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-after_find" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">after_find</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retrieves data from xml or sets empty defaults Side effect on
+<code>self</code> attributes</p>
+          
+
+          
+          <div class="method-source-code" id="after_find-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">after_find</span>
+
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:articleTitle</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:journalTitle</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:journalTitleShort</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:bookTitle</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:bookTitleShort</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:supertype</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:subtype</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:language</span>] = <span class="ruby-string">''</span>
+  
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:bp</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:bpOld</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:idp</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:isbn</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:sd</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:checklist</span>] = <span class="ruby-string">''</span>
+
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:date</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:edition</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:issue</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:distributor</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:paginationFrom</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:paginationTo</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:paginationTotal</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:paginationPreface</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:illustration</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:note</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:reedition</span>] = <span class="ruby-string">''</span>
+  
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:monograph</span>] = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:series</span>] = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:journal</span>] = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:publisherList</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:authorList</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:editorList</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:revieweeList</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:containerList</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:relatedArticleList</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:originalBp</span>] = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  
+  <span class="ruby-identifier">populateFromEpiDoc</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- after_find-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- after_find-method -->
+
+    
+      <div id="method-i-epiDoc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">epiDoc</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates <a href="REXML.html">REXML</a> object model from xml string</p>
+<ul><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>+REXML::Document+ with biblio EpiDoc</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="epiDoc-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">epiDoc</span>
+  <span class="ruby-ivar">@epiDocX</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- epiDoc-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- epiDoc-method -->
+
+    
+      <div id="method-i-getBiblioPath" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getBiblioPath</span><span
+            class="method-args">(biblioId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Builds the file path for a given biblio id, e.g. Biblio/1/23.xml</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>biblioId</code> → biblioId, e.g. <code>12345</code> for xwalked
+biblio records or <code>54321-2012</code> for records created via SoSOL
+interface</p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p><code>String</code> file path, like <code>Biblio/13/12345.xml</code> or
+<code>Biblio/2012/54321.xml</code></p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getBiblioPath-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 712</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getBiblioPath</span> <span class="ruby-identifier">biblioId</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">biblioId</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'-'</span>)
+    <span class="ruby-identifier">biblioId</span> = <span class="ruby-identifier">biblioId</span>[<span class="ruby-regexp">/\A(\d+)-(\d+)\Z/</span>, <span class="ruby-value">1</span>]
+    <span class="ruby-identifier">folder</span> = <span class="ruby-node">$2</span>
+    <span class="ruby-string">'Biblio/'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">folder</span> <span class="ruby-operator">+</span> <span class="ruby-string">'/'</span>  <span class="ruby-operator">+</span> <span class="ruby-identifier">biblioId</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">'.xml'</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-string">'Biblio/'</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">biblioId</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">/</span> <span class="ruby-value">1000.0</span>).<span class="ruby-identifier">ceil</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">'/'</span>  <span class="ruby-operator">+</span> <span class="ruby-identifier">biblioId</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">'.xml'</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getBiblioPath-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getBiblioPath-method -->
+
+    
+      <div id="method-i-getRelatedItemElements" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">getRelatedItemElements</span><span
+            class="method-args">(biblioId)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Grabs another biblio file from <code>CANONICAL_REPOSITORY</code>‘s master
+branch and extracts its title, author, date, etc. information</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>biblioId</code> → id of biblio record of interest</p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p><code>Array</code> of +REXML::Element+s or emtpy array if the requested
+record cannot be found</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="getRelatedItemElements-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 679</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">getRelatedItemElements</span> <span class="ruby-identifier">biblioId</span>
+  <span class="ruby-identifier">result</span> = []
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">biblioId</span> = <span class="ruby-identifier">biblioId</span>[<span class="ruby-regexp">/\A[^\d]*([\d\-]+)\Z/</span>, <span class="ruby-value">1</span>] <span class="ruby-comment"># expecting sth like http://papyri.info/biblio/12345 or like http://papyri.info/biblio/2010-123345 or just the id, i.e. 12345 or 2010-12345</span>
+
+    <span class="ruby-identifier">git</span> = <span class="ruby-constant">Grit</span><span class="ruby-operator">::</span><span class="ruby-constant">Repo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">CANONICAL_REPOSITORY</span>).<span class="ruby-identifier">commits</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">tree</span>
+    <span class="ruby-identifier">biblio</span> = <span class="ruby-identifier">git</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">getBiblioPath</span>(<span class="ruby-identifier">biblioId</span>)
+    <span class="ruby-identifier">relatedItem</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">biblio</span>.<span class="ruby-identifier">data</span>)
+
+    <span class="ruby-identifier">result</span>[<span class="ruby-identifier">result</span>.<span class="ruby-identifier">length</span>] = <span class="ruby-keyword">if</span> <span class="ruby-identifier">relatedItem</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;//title[starts-with(@type, 'short')]&quot;</span>]
+      <span class="ruby-identifier">relatedItem</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;//title[starts-with(@type, 'short')]&quot;</span>]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">relatedItem</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;//title&quot;</span>]
+    <span class="ruby-keyword">end</span>
+
+    [<span class="ruby-string">&quot;//author&quot;</span>, <span class="ruby-string">&quot;//pubPlace&quot;</span>, <span class="ruby-string">&quot;//date&quot;</span>, <span class="ruby-string">&quot;//editor&quot;</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">xpath</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">relatedItem</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-identifier">xpath</span>]
+        <span class="ruby-identifier">result</span>[<span class="ruby-identifier">result</span>.<span class="ruby-identifier">length</span>] = <span class="ruby-identifier">relatedItem</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-identifier">xpath</span>]
+      <span class="ruby-keyword">end</span>
+    }
+
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- getRelatedItemElements-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- getRelatedItemElements-method -->
+
+    
+      <div id="method-i-id_attribute" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">id_attribute</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>?</p>
+          
+
+          
+          <div class="method-source-code" id="id_attribute-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">id_attribute</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-node">&quot;b#{name.split('/').last}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- id_attribute-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- id_attribute-method -->
+
+    
+      <div id="method-i-is_valid_xml-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">is_valid_xml?</span><span
+            class="method-args">(content = nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Validation of identifier XML file against tei-epidoc.rng file</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>content</code> -&gt; XML to validate if passed in, pulled from
+repository if not passed in</p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>true/false</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="is_valid_xml-3F-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">is_valid_xml?</span>(<span class="ruby-identifier">content</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">content</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">content</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span><span class="ruby-operator">::</span><span class="ruby-constant">XML_VALIDATOR</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">validate</span>(
+    <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">input_source_from_string</span>(<span class="ruby-identifier">wrap_xml</span>(<span class="ruby-identifier">content</span>)))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- is_valid_xml-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- is_valid_xml-3F-method -->
+
+    
+      <div id="method-i-mutable-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">mutable?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Checks whether the user may be allowed to edit the content of this biblio
+record</p>
+<ul><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>true if user may make changes to the data stored within EpiDoc</p>
+</li><li>
+<p>false otherwise</p>
+</li></ul>
+</li></ul>
+
+<p>Assumes that there is no restriction to editing biblio files</p>
+          
+
+          
+          <div class="method-source-code" id="mutable-3F-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mutable?</span>
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- mutable-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- mutable-3F-method -->
+
+    
+      <div id="method-i-n_attribute" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">n_attribute</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>?</p>
+          
+
+          
+          <div class="method-source-code" id="n_attribute-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">n_attribute</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-string">''</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- n_attribute-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- n_attribute-method -->
+
+    
+      <div id="method-i-preview" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">preview</span><span
+            class="method-args">(parameters = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Generates a preview document by running an xsl transformation on the biblio
+xml document</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>parameters</code> → additional parameters to controll the
+transformation process (optional), should be given as a <code>Hash</code>,
+e.g. {‘citationStyle’ =&gt; ‘Sammelbuch’}</p>
+</li><li>
+<p><code>xsl</code> → <code>String</code> or <code>Array</code>, path to xsl
+document for the transformation, starting from <code>RAILS_ROOT</code></p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p><code>String</code>, result of xsl transformation</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="preview-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">preview</span> <span class="ruby-identifier">parameters</span> = {}, <span class="ruby-identifier">xsl</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
+    <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>),
+    <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_file</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RAILS_ROOT</span>,
+      <span class="ruby-identifier">xsl</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">xsl</span> <span class="ruby-operator">:</span> <span class="ruby-node">%w{data xslt biblio pn-preview.xsl}</span>)),
+      <span class="ruby-identifier">parameters</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- preview-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- preview-method -->
+
+    
+      <div id="method-i-set_content" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_content</span><span
+            class="method-args">(content, options = {})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Commits identifier XML to the repository. Overrides <a
+href="Identifier.html#method-i-set_content">Identifier#set_content</a> to
+reset memoized value set in <a
+href="BiblioIdentifier.html#method-i-epiDoc">#epiDoc</a>.</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>content</code> -&gt; the XML you want committed to the repository</p>
+</li><li>
+<p><code>options</code> -&gt; hash of options to pass to repository (ex. -
+:comment, :actor)</p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>a String of the SHA1 of the commit</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="set_content-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 258</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_content</span>(<span class="ruby-identifier">content</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-ivar">@epiDocX</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">super</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- set_content-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- set_content-method -->
+
+    
+      <div id="method-i-set_epidoc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_epidoc</span><span
+            class="method-args">(attributes_hash, comment)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Updates EpiDoc file with values from incoming post string, validates xml
+and commits it to the user repository</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>attributes_hash</code> → post parameters</p>
+</li><li>
+<p><code>comment</code> → user comment passed in via post</p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p><code>String</code> of the SHA1 of the commit</p>
+</li></ul>
+</li></ul>
+
+<p>Side effect on user’s git repository branch, writes altered xml back to
+file</p>
+          
+
+          
+          <div class="method-source-code" id="set_epidoc-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 244</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_epidoc</span>(<span class="ruby-identifier">attributes_hash</span>, <span class="ruby-identifier">comment</span>)
+  <span class="ruby-identifier">epiDocXml</span> = <span class="ruby-identifier">updateFromPost</span>(<span class="ruby-identifier">attributes_hash</span>)
+
+  <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-identifier">epiDocXml</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">epiDocXml</span>, <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">comment</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- set_epidoc-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- set_epidoc-method -->
+
+    
+      <div id="method-i-sortEpiDoc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sortEpiDoc</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Shifts TEI:seg tags and TEI:indo tags down to the bottom of the document
+Assumes that @epiDoc variable contains <a
+href="REXML/Document.html">REXML::Document</a> of current biblio record
+Side effect on +@epiDoc+ (changes order of elements)</p>
+          
+
+          
+          <div class="method-source-code" id="sortEpiDoc-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 346</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sortEpiDoc</span>
+  [<span class="ruby-string">'/bibl/seg'</span>, <span class="ruby-string">'/bibl/idno'</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">xpath</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">each_element</span>(<span class="ruby-identifier">xpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">element</span>
+      <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">add</span> <span class="ruby-identifier">element</span>
+    }
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- sortEpiDoc-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- sortEpiDoc-method -->
+
+    
+      <div id="method-i-toXmlString" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">toXmlString</span><span
+            class="method-args">(xmlObject)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Converts <a href="REXML/Document.html">REXML::Document</a> / ::Element into
+xml string</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>xmlObject</code> → <a
+href="REXML/Document.html">REXML::Document</a> / ::Element</p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p><code>String</code> formatted xml string using child class <a
+href="PrettySsime.html">PrettySsime</a> of parent class
++REXML::Formatters::Pretty+</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="toXmlString-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 334</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">toXmlString</span> <span class="ruby-identifier">xmlObject</span>
+  <span class="ruby-identifier">formatter</span> = <span class="ruby-constant">PrettySsime</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">formatter</span>.<span class="ruby-identifier">compact</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">formatter</span>.<span class="ruby-identifier">width</span> = <span class="ruby-value">2</span><span class="ruby-operator">**</span><span class="ruby-value">32</span>
+  <span class="ruby-identifier">modified_xml_content</span> = <span class="ruby-string">''</span>
+  <span class="ruby-identifier">formatter</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">xmlObject</span>, <span class="ruby-identifier">modified_xml_content</span>
+  <span class="ruby-identifier">modified_xml_content</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- toXmlString-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- toXmlString-method -->
+
+    
+      <div id="method-i-to_path" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_path</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>?</p>
+          
+
+          
+          <div class="method-source-code" id="to_path-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_path</span>
+  <span class="ruby-identifier">path_components</span> = [ <span class="ruby-constant">PATH_PREFIX</span> ]
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'-'</span>).<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">document_id</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'/'</span>).<span class="ruby-identifier">last</span>
+    <span class="ruby-identifier">year</span>, <span class="ruby-identifier">document</span> = <span class="ruby-identifier">document_id</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">'-'</span>)
+    <span class="ruby-identifier">xml_path</span> = <span class="ruby-identifier">document</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">'.xml'</span>
+    
+    <span class="ruby-comment"># path_components will be e.g. PATH_PREFIX,SoSOL,2011,0001.xml</span>
+    <span class="ruby-identifier">path_components</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span><span class="ruby-operator">::</span><span class="ruby-constant">TEMPORARY_COLLECTION</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">year</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">xml_path</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># assume the name is e.g. biblio/9237</span>
+    <span class="ruby-identifier">number</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_components</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-comment"># 9237</span>
+
+    <span class="ruby-identifier">dir_number</span> = ((<span class="ruby-identifier">number</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">/</span> <span class="ruby-value">1000</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">xml_path</span> = <span class="ruby-identifier">number</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">'.xml'</span>
+
+    <span class="ruby-identifier">path_components</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">dir_number</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">xml_path</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># e.g. Biblio/10/9237.xml</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">path_components</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_path-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_path-method -->
+
+    
+      <div id="method-i-updateEpiDoc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">updateEpiDoc</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>A lengthy method that is indeed a sequence of updating procedures for all
+data fields of the biblio record Assumes that +<a
+href="http://key">self</a>+ contains all data (clean, complete and
+sanitised) necessary to update the underlying EpiDoc document, mainly uses
+xpaths provided in +<a href="http://key">XPATH</a>+ Side effect on
++@epiDoc+</p>
+          
+
+          
+          <div class="method-source-code" id="updateEpiDoc-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 489</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">updateEpiDoc</span>
+
+  [<span class="ruby-value">:articleTitle</span>, <span class="ruby-value">:journalTitle</span>, <span class="ruby-value">:bookTitle</span>, <span class="ruby-value">:supertype</span>, <span class="ruby-value">:subtype</span>, <span class="ruby-value">:language</span>, <span class="ruby-value">:bp</span>, <span class="ruby-value">:bpOld</span>, <span class="ruby-value">:isbn</span>, <span class="ruby-value">:sd</span>, <span class="ruby-value">:checklist</span>, <span class="ruby-value">:date</span>, <span class="ruby-value">:edition</span>, <span class="ruby-value">:issue</span>, <span class="ruby-value">:distributor</span>, <span class="ruby-value">:paginationFrom</span>, <span class="ruby-value">:paginationTo</span>, <span class="ruby-value">:paginationTotal</span>, <span class="ruby-value">:paginationPreface</span>, <span class="ruby-value">:illustration</span>, <span class="ruby-value">:no</span>, <span class="ruby-value">:col</span>, <span class="ruby-value">:tome</span>, <span class="ruby-value">:link</span>, <span class="ruby-value">:fasc</span>, <span class="ruby-value">:reedition</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">attribute</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">path</span> = <span class="ruby-constant">XPATH</span>[<span class="ruby-identifier">key</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">path</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/(.+)\/@([^\[\]\/]+)\Z/</span>
+      <span class="ruby-identifier">path</span> = <span class="ruby-node">$1</span>
+      <span class="ruby-identifier">attribute</span> = <span class="ruby-node">$2</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">element</span> = <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">bulldozePath</span> <span class="ruby-identifier">path</span>
+      <span class="ruby-keyword">unless</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">nil?</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">attribute</span>
+          <span class="ruby-identifier">element</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">attribute</span>] = <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>]
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-value">:paginationTo</span>
+            <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> = <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">+</span> (<span class="ruby-keyword">self</span>[<span class="ruby-value">:paginationFrom</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-keyword">self</span>[<span class="ruby-value">:paginationFrom</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-string">'-'</span> <span class="ruby-operator">+</span> <span class="ruby-keyword">self</span>[<span class="ruby-value">:paginationFrom</span>] <span class="ruby-operator">:</span> <span class="ruby-string">''</span> )
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> = <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>]
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">path</span> <span class="ruby-operator">!=</span> <span class="ruby-string">'/bibl'</span>
+        <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">delete_all</span> <span class="ruby-identifier">path</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+  }
+
+  [<span class="ruby-value">:authorList</span>, <span class="ruby-value">:editorList</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">delete_all</span> <span class="ruby-constant">XPATH</span>[<span class="ruby-identifier">key</span>]
+    <span class="ruby-identifier">index</span> = <span class="ruby-value">1</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">person</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">element</span> = <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">bulldozePath</span> <span class="ruby-constant">XPATH</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;[@n='&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">index</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;']&quot;</span>
+      <span class="ruby-keyword">unless</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">nil?</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">person</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">person</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">empty?</span>
+          <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">person</span>.<span class="ruby-identifier">name</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">person</span>.<span class="ruby-identifier">firstName</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">person</span>.<span class="ruby-identifier">firstName</span>.<span class="ruby-identifier">empty?</span>
+          <span class="ruby-identifier">child</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">'forename'</span>
+          <span class="ruby-identifier">child</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">person</span>.<span class="ruby-identifier">firstName</span>
+          <span class="ruby-identifier">element</span>.<span class="ruby-identifier">add</span> <span class="ruby-identifier">child</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">person</span>.<span class="ruby-identifier">lastName</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">person</span>.<span class="ruby-identifier">lastName</span>.<span class="ruby-identifier">empty?</span>
+          <span class="ruby-identifier">child</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">'surname'</span>
+          <span class="ruby-identifier">child</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">person</span>.<span class="ruby-identifier">lastName</span>
+          <span class="ruby-identifier">element</span>.<span class="ruby-identifier">add</span> <span class="ruby-identifier">child</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    }
+  }
+
+  <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">delete_all</span> <span class="ruby-constant">XPATH</span>[<span class="ruby-value">:publisherList</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>[<span class="ruby-value">:publisherList</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>[<span class="ruby-value">:publisherList</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-identifier">basePath</span> = <span class="ruby-constant">XPATH</span>[<span class="ruby-value">:publisherList</span>][<span class="ruby-regexp">/\A(.+)node\(\).+\Z/</span>, <span class="ruby-value">1</span>]
+    
+    <span class="ruby-identifier">index</span> = {<span class="ruby-string">'pubPlace'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>, <span class="ruby-string">'publisher'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>}
+    <span class="ruby-keyword">self</span>[<span class="ruby-value">:publisherList</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">publisher</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">publisher</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">publisher</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">element</span> = <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">bulldozePath</span> <span class="ruby-identifier">basePath</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">publisher</span>.<span class="ruby-identifier">publisherType</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;[@n='&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">index</span>[<span class="ruby-identifier">publisher</span>.<span class="ruby-identifier">publisherType</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;']&quot;</span>
+        <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">publisher</span>.<span class="ruby-identifier">value</span>
+        <span class="ruby-identifier">index</span>[<span class="ruby-identifier">publisher</span>.<span class="ruby-identifier">publisherType</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">end</span>
+    }
+  <span class="ruby-keyword">end</span>
+
+
+ [<span class="ruby-value">:journalTitleShort</span>, <span class="ruby-value">:bookTitleShort</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+   <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">delete_all</span> <span class="ruby-constant">XPATH</span>[<span class="ruby-identifier">key</span>]
+   <span class="ruby-identifier">index</span> = <span class="ruby-value">1</span>
+   <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">shorty</span><span class="ruby-operator">|</span>
+     <span class="ruby-keyword">if</span> <span class="ruby-identifier">shorty</span>.<span class="ruby-identifier">title</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">shorty</span>.<span class="ruby-identifier">title</span>.<span class="ruby-identifier">empty?</span>
+       <span class="ruby-identifier">xpath</span> = <span class="ruby-constant">XPATH</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">sub</span>(<span class="ruby-string">&quot;[starts-with(@type, 'short')]&quot;</span>, <span class="ruby-string">&quot;[@type='short']&quot;</span>) <span class="ruby-comment"># make xpath deterministic</span>
+
+       <span class="ruby-identifier">element</span> = <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">bulldozePath</span> <span class="ruby-identifier">xpath</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;[@n='&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">index</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;']&quot;</span>
+       <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">shorty</span>.<span class="ruby-identifier">title</span>
+       <span class="ruby-keyword">if</span> <span class="ruby-identifier">shorty</span>.<span class="ruby-identifier">responsibility</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">shorty</span>.<span class="ruby-identifier">responsibility</span>.<span class="ruby-identifier">empty?</span>
+         <span class="ruby-identifier">element</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'type'</span>] <span class="ruby-operator">+=</span> <span class="ruby-string">'-'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">shorty</span>.<span class="ruby-identifier">responsibility</span>
+       <span class="ruby-keyword">end</span>
+       <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+     <span class="ruby-keyword">end</span>
+   }
+   
+ }
+
+ <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">delete_all</span> <span class="ruby-constant">XPATH</span>[<span class="ruby-value">:note</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>[<span class="ruby-value">:note</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>[<span class="ruby-value">:note</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-identifier">path</span> = <span class="ruby-constant">XPATH</span>[<span class="ruby-value">:note</span>][<span class="ruby-regexp">/\A(.+)\[@resp\]\Z/</span>, <span class="ruby-value">1</span>]
+    <span class="ruby-identifier">index</span> = <span class="ruby-value">1</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-value">:note</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">note</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">note</span>.<span class="ruby-identifier">annotation</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">note</span>.<span class="ruby-identifier">annotation</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">element</span> = <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">bulldozePath</span> <span class="ruby-identifier">path</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;[@n='&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">index</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;']&quot;</span>
+        <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">note</span>.<span class="ruby-identifier">annotation</span>
+       <span class="ruby-keyword">if</span> <span class="ruby-identifier">note</span>.<span class="ruby-identifier">responsibility</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">note</span>.<span class="ruby-identifier">responsibility</span>.<span class="ruby-identifier">empty?</span>
+         <span class="ruby-identifier">element</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'resp'</span>] = <span class="ruby-identifier">note</span>.<span class="ruby-identifier">responsibility</span>
+       <span class="ruby-keyword">end</span>
+       <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">end</span>
+    }
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">updateEpiDocRelatedItem</span> <span class="ruby-value">:revieweeList</span>
+  <span class="ruby-identifier">updateEpiDocRelatedItem</span> <span class="ruby-value">:containerList</span>
+  
+  <span class="ruby-identifier">xpathBase</span> = <span class="ruby-constant">XPATH</span>[<span class="ruby-value">:relatedArticleList</span>][<span class="ruby-regexp">/\A(.+)(\/bibl)\Z/</span>, <span class="ruby-value">1</span>]
+  <span class="ruby-identifier">xpathBibl</span> = <span class="ruby-node">$2</span>
+  <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">delete_all</span> <span class="ruby-identifier">xpathBase</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>[<span class="ruby-value">:relatedArticleList</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>[<span class="ruby-value">:relatedArticleList</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-identifier">index</span> = <span class="ruby-value">1</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-value">:relatedArticleList</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">relatedArticle</span><span class="ruby-operator">|</span>
+
+      <span class="ruby-identifier">element</span> = <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">bulldozePath</span> <span class="ruby-identifier">xpathBase</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;[@n='&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">index</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;']&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">xpathBibl</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">series</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">series</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">child</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">'title'</span>, <span class="ruby-identifier">element</span>
+        <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'level'</span>] = <span class="ruby-string">'s'</span>
+        <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'type'</span>] = <span class="ruby-string">'short'</span>
+        <span class="ruby-identifier">child</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">series</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">volume</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">volume</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">child</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">'biblScope'</span>, <span class="ruby-identifier">element</span>
+        <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'type'</span>] = <span class="ruby-string">'vol'</span>
+        <span class="ruby-identifier">child</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">volume</span>
+      <span class="ruby-keyword">end</span>
+      
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">number</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">number</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">child</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">'biblScope'</span>, <span class="ruby-identifier">element</span>
+        <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'type'</span>] = <span class="ruby-string">'num'</span>
+        <span class="ruby-identifier">child</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">number</span>
+      <span class="ruby-keyword">end</span>
+      
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">ddb</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">ddb</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">child</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">'idno'</span>, <span class="ruby-identifier">element</span>
+        <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'type'</span>] = <span class="ruby-string">'ddb'</span>
+        <span class="ruby-identifier">child</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">ddb</span>
+      <span class="ruby-keyword">end</span>
+      
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">tm</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">tm</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">child</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">'idno'</span>, <span class="ruby-identifier">element</span>
+        <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'type'</span>] = <span class="ruby-string">'tm'</span>
+        <span class="ruby-identifier">child</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">tm</span>
+      <span class="ruby-keyword">end</span>
+      
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">inventory</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">inventory</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">child</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">'idno'</span>, <span class="ruby-identifier">element</span>
+        <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'type'</span>] = <span class="ruby-string">'invNo'</span>
+        <span class="ruby-identifier">child</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">relatedArticle</span>.<span class="ruby-identifier">inventory</span>
+      <span class="ruby-keyword">end</span>        
+
+      <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    }
+  <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- updateEpiDoc-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- updateEpiDoc-method -->
+
+    
+      <div id="method-i-updateEpiDocRelatedItem" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">updateEpiDocRelatedItem</span><span
+            class="method-args">(key)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method to avoid replication for related items such as, reviewees and
+containers, also tries to retrieve biblio record that is bein referred to
+and loads information from this record into the current one</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>key</code> → key of the related item that should be saved to
+EpiDoc, i.e. <code>:revieeList</code> or <code>:containerList</code></p>
+</li></ul>
+</li></ul>
+
+<p>Assumes +@epiDoc+ contains +REXML::Document+ with biblio record Side effect
+on +<a href="http://:revieeList">self</a>+ or +<a
+href="http://:containerList">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="updateEpiDocRelatedItem-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 651</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">updateEpiDocRelatedItem</span> <span class="ruby-identifier">key</span>
+  <span class="ruby-identifier">xpathBase</span> = <span class="ruby-constant">XPATH</span>[<span class="ruby-identifier">key</span>][<span class="ruby-regexp">/\A(.+)(\/bibl)\Z/</span>, <span class="ruby-value">1</span>]
+  <span class="ruby-identifier">xpathBibl</span> = <span class="ruby-node">$2</span>
+  <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">delete_all</span> <span class="ruby-identifier">xpathBase</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+    <span class="ruby-identifier">index</span> = <span class="ruby-value">1</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">relatedItem</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">element</span> = <span class="ruby-ivar">@epiDoc</span>.<span class="ruby-identifier">bulldozePath</span> <span class="ruby-identifier">xpathBase</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;[@n='&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">index</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;']&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">xpathBibl</span>
+      <span class="ruby-keyword">unless</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">nil?</span>
+        <span class="ruby-identifier">ptr</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">'ptr'</span>)
+        <span class="ruby-identifier">ptr</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'target'</span>] = <span class="ruby-identifier">relatedItem</span>.<span class="ruby-identifier">pointer</span>
+        <span class="ruby-identifier">element</span>.<span class="ruby-identifier">add</span> <span class="ruby-identifier">ptr</span>
+        <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Comment</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">' ignore - start, i.e. SoSOL users may not edit this '</span>, <span class="ruby-identifier">element</span>)
+        <span class="ruby-identifier">getRelatedItemElements</span>(<span class="ruby-identifier">relatedItem</span>.<span class="ruby-identifier">pointer</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">ignore</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">element</span>.<span class="ruby-identifier">add</span> <span class="ruby-identifier">ignore</span>
+        }
+        <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Comment</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">' ignore - stop '</span>, <span class="ruby-identifier">element</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- updateEpiDocRelatedItem-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- updateEpiDocRelatedItem-method -->
+
+    
+      <div id="method-i-updateFromPost" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">updateFromPost</span><span
+            class="method-args">(params)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Updates internal EpiDoc representation from user parameters</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>params</code> → post data sent in from the client’s form</p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p><code>String</code> EpiDoc xml containing altered version of the file</p>
+</li></ul>
+</li></ul>
+
+<p>Side effect on +@post+ (contains original post data) and +@epiDoc+ (<a
+href="REXML/Document.html">REXML::Document</a>, updated version of the
+biblio record)</p>
+          
+
+          
+          <div class="method-source-code" id="updateFromPost-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 269</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">updateFromPost</span> <span class="ruby-identifier">params</span>
+  <span class="ruby-ivar">@post</span> = <span class="ruby-identifier">params</span>
+  <span class="ruby-ivar">@epiDoc</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">epiDoc</span>
+
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:articleTitle</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:journalTitle</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:bookTitle</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:supertype</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:subtype</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:language</span>
+  
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:bp</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:bpOld</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:idp</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:isbn</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:sd</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:checklist</span>
+
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:date</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:edition</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:issue</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:distributor</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:paginationFrom</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:paginationTo</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:paginationTotal</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:paginationPreface</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:illustration</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:no</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:col</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:tome</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:link</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:fasc</span>
+  <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-value">:reedition</span>
+  
+  <span class="ruby-identifier">updateFromPostPerson</span> <span class="ruby-value">:authorList</span>
+  <span class="ruby-identifier">updateFromPostPerson</span> <span class="ruby-value">:editorList</span>
+  
+  <span class="ruby-identifier">updateFromPostShortTitle</span> <span class="ruby-value">:journalTitleShort</span>
+  <span class="ruby-identifier">updateFromPostShortTitle</span> <span class="ruby-value">:bookTitleShort</span>
+  
+  <span class="ruby-identifier">updateFromPostNote</span>
+ 
+  <span class="ruby-identifier">updateFromPostPublisher</span>
+
+  <span class="ruby-identifier">updateFromPostReviewee</span>
+  
+  <span class="ruby-identifier">updateFromPostContainer</span>
+
+  <span class="ruby-identifier">updateFromPostRelatedArticle</span>
+
+  <span class="ruby-identifier">updateEpiDoc</span>
+  
+  <span class="ruby-identifier">sortEpiDoc</span>
+  
+  <span class="ruby-comment"># write back to a string</span>
+  <span class="ruby-identifier">modified_xml_content</span> = <span class="ruby-identifier">toXmlString</span> <span class="ruby-ivar">@epiDoc</span>
+
+  <span class="ruby-identifier">modified_xml_content</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- updateFromPost-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- updateFromPost-method -->
+
+    
+      <div id="method-i-updateFromPostContainer" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">updateFromPostContainer</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Adapter method to call <code>updateFromPostRelatedItem</code> for related
+items of type <code>Container</code> (i.e. journals and books) Side effect
+on +<a href="http://:containerList">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="updateFromPostContainer-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 448</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">updateFromPostContainer</span>
+  <span class="ruby-identifier">updateFromPostRelatedItem</span> <span class="ruby-value">:containerList</span>, <span class="ruby-constant">Container</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- updateFromPostContainer-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- updateFromPostContainer-method -->
+
+    
+      <div id="method-i-updateFromPostNote" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">updateFromPostNote</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Writes post data concerning <code>:note</code> to +<a
+href="http://:note">self</a>+ (is actually a list, but doesn’t say so in
+its names because it used to be a single value) Assumes that member
+variable +@post+ is set Side effect on +<a href="http://:note">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="updateFromPostNote-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 415</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">updateFromPostNote</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:note</span>] = []
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@post</span>[<span class="ruby-value">:note</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@post</span>[<span class="ruby-value">:note</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-ivar">@post</span>[<span class="ruby-value">:note</span>].<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">index</span>, <span class="ruby-identifier">note</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">note</span>[<span class="ruby-value">:annotation</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-keyword">self</span>[<span class="ruby-value">:note</span>][<span class="ruby-keyword">self</span>[<span class="ruby-value">:note</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">Note</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">!</span><span class="ruby-identifier">note</span>[<span class="ruby-value">:responsibility</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">note</span>[<span class="ruby-value">:responsibility</span>].<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">note</span>[<span class="ruby-value">:annotation</span>].<span class="ruby-identifier">strip</span>)
+      <span class="ruby-keyword">end</span>
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- updateFromPostNote-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- updateFromPostNote-method -->
+
+    
+      <div id="method-i-updateFromPostPerson" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">updateFromPostPerson</span><span
+            class="method-args">(key)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Updates internal variables that contains names</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>key</code> → key of person category of interest, may be either
+<code>:authorList</code> or <code>:editorList</code></p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>the new value of +<a href="http://key">self</a>+ which is an
+<code>Array</code> containing all <code>Person</code> objects that could be
+build from post data information</p>
+</li></ul>
+</li></ul>
+
+<p>Assumes that post data is stored in instance variable +@post+ Side effect
+on +<a href="http://key">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="updateFromPostPerson-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 373</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">updateFromPostPerson</span> <span class="ruby-identifier">key</span>
+  <span class="ruby-identifier">list</span> = []
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@post</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">&amp;&amp;</span>  <span class="ruby-ivar">@post</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-ivar">@post</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">each_pair</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">index</span>, <span class="ruby-identifier">person</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">newbie</span> = <span class="ruby-constant">PublicationPerson</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">person</span>[<span class="ruby-value">:firstName</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">person</span>[<span class="ruby-value">:firstName</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">newbie</span>.<span class="ruby-identifier">firstName</span> = <span class="ruby-identifier">person</span>[<span class="ruby-value">:firstName</span>].<span class="ruby-identifier">strip</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">person</span>[<span class="ruby-value">:lastName</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">person</span>[<span class="ruby-value">:lastName</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">newbie</span>.<span class="ruby-identifier">lastName</span> = <span class="ruby-identifier">person</span>[<span class="ruby-value">:lastName</span>].<span class="ruby-identifier">strip</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">person</span>[<span class="ruby-value">:name</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">person</span>[<span class="ruby-value">:name</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">newbie</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">person</span>[<span class="ruby-value">:name</span>].<span class="ruby-identifier">strip</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">list</span>[<span class="ruby-identifier">list</span>.<span class="ruby-identifier">length</span>] = <span class="ruby-identifier">newbie</span>
+    }
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">list</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- updateFromPostPerson-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- updateFromPostPerson-method -->
+
+    
+      <div id="method-i-updateFromPostPublisher" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">updateFromPostPublisher</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Writes publisher information (names and places) to +<a
+href="http://:publisherList">self</a>+ Assumes that member variable +@post+
+contains post data from user form Side effect on +<a
+href="http://:publisherList">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="updateFromPostPublisher-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 429</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">updateFromPostPublisher</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:publisherList</span>] = []
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@post</span>[<span class="ruby-value">:publisherList</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@post</span>[<span class="ruby-value">:publisherList</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-ivar">@post</span>[<span class="ruby-value">:publisherList</span>].<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">index</span>, <span class="ruby-identifier">publisher</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">publisher</span>[<span class="ruby-value">:value</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">publisher</span>[<span class="ruby-value">:publisherType</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">publisher</span>[<span class="ruby-value">:value</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> [<span class="ruby-string">'pubPlace'</span>, <span class="ruby-string">'publisher'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">publisher</span>[<span class="ruby-value">:publisherType</span>].<span class="ruby-identifier">strip</span>)
+        <span class="ruby-keyword">self</span>[<span class="ruby-value">:publisherList</span>][<span class="ruby-keyword">self</span>[<span class="ruby-value">:publisherList</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">Publisher</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">publisher</span>[<span class="ruby-value">:publisherType</span>].<span class="ruby-identifier">strip</span>, <span class="ruby-identifier">publisher</span>[<span class="ruby-value">:value</span>].<span class="ruby-identifier">strip</span>)
+      <span class="ruby-keyword">end</span>
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- updateFromPostPublisher-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- updateFromPostPublisher-method -->
+
+    
+      <div id="method-i-updateFromPostRelatedArticle" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">updateFromPostRelatedArticle</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Updates related articles from data provided via post parameters Assumes
+that @post variable contains user data from biblio form Side effect on +<a
+href="http://:relatedArticleList">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="updateFromPostRelatedArticle-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 470</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">updateFromPostRelatedArticle</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-value">:relatedArticleList</span>] = []
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@post</span>[<span class="ruby-value">:relatedArticleList</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@post</span>[<span class="ruby-value">:relatedArticleList</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-ivar">@post</span>[<span class="ruby-value">:relatedArticleList</span>].<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">article</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">series</span>    = <span class="ruby-identifier">article</span>[<span class="ruby-value">:series</span>]
+      <span class="ruby-identifier">volume</span>    = <span class="ruby-identifier">article</span>[<span class="ruby-value">:volume</span>]
+      <span class="ruby-identifier">number</span>    = <span class="ruby-identifier">article</span>[<span class="ruby-value">:number</span>]
+      <span class="ruby-identifier">ddb</span>       = <span class="ruby-identifier">article</span>[<span class="ruby-value">:ddb</span>]
+      <span class="ruby-identifier">tm</span>        = <span class="ruby-identifier">article</span>[<span class="ruby-value">:tm</span>]
+      <span class="ruby-identifier">inventory</span> = <span class="ruby-identifier">article</span>[<span class="ruby-value">:inventory</span>]
+
+      <span class="ruby-keyword">self</span>[<span class="ruby-value">:relatedArticleList</span>][<span class="ruby-keyword">self</span>[<span class="ruby-value">:relatedArticleList</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">RelatedArticle</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">series</span>, <span class="ruby-identifier">volume</span>, <span class="ruby-identifier">number</span>, <span class="ruby-identifier">ddb</span>, <span class="ruby-identifier">tm</span>, <span class="ruby-identifier">inventory</span>)
+    }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- updateFromPostRelatedArticle-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- updateFromPostRelatedArticle-method -->
+
+    
+      <div id="method-i-updateFromPostRelatedItem" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">updateFromPostRelatedItem</span><span
+            class="method-args">(typeX, classX)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Method to retrieve post data concerning related items and stored in object
+variables</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>typeX</code> → key, may be <code>:revieweeList</code> or
+<code>:containerList</code></p>
+</li><li>
+<p><code>classX</code> → class name, may be <code>Reviewee</code> or
+<code>Container</code></p>
+</li></ul>
+</li></ul>
+
+<p>Assumes valid values in member +@post+ Side effect on +<a
+href="http://:revieweeList">self</a>+ or +<a
+href="http://:containerList">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="updateFromPostRelatedItem-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 458</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">updateFromPostRelatedItem</span> <span class="ruby-identifier">typeX</span>, <span class="ruby-identifier">classX</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-identifier">typeX</span>] = []
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@post</span>[<span class="ruby-identifier">typeX</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@post</span>[<span class="ruby-identifier">typeX</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-ivar">@post</span>[<span class="ruby-identifier">typeX</span>].<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">pointer</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">self</span>[<span class="ruby-identifier">typeX</span>][<span class="ruby-keyword">self</span>[<span class="ruby-identifier">typeX</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-identifier">classX</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">pointer</span>)
+  }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- updateFromPostRelatedItem-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- updateFromPostRelatedItem-method -->
+
+    
+      <div id="method-i-updateFromPostReviewee" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">updateFromPostReviewee</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Adapter method to call <code>updateFromPostRelatedItem</code> for related
+items of type <code>Reviewee</code> (i.e. articles) Side effect on +<a
+href="http://:revieweeList">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="updateFromPostReviewee-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 442</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">updateFromPostReviewee</span>
+  <span class="ruby-identifier">updateFromPostRelatedItem</span> <span class="ruby-value">:revieweeList</span>, <span class="ruby-constant">Reviewee</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- updateFromPostReviewee-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- updateFromPostReviewee-method -->
+
+    
+      <div id="method-i-updateFromPostShortTitle" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">updateFromPostShortTitle</span><span
+            class="method-args">(key)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Updates internal variables that deal with short titles, i.e. first name,
+last name or a conjunction of both (short titles are actually stored as a
+list, but their names don’t tell because they used to be a atoms)</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>key</code> → key of respective short title, may be
+<code>:journalTitleShort</code> or <code>:bookTitleShort</code></p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>the new value of +<a href="http://key">self</a>+ which is an
+<code>Array</code> containing all <code>ShortTitle</code> objects that
+could be build from post data information</p>
+</li></ul>
+</li></ul>
+
+<p>Assumes post data in instance variable +@post+ Side effect on +<a
+href="http://key">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="updateFromPostShortTitle-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 400</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">updateFromPostShortTitle</span> <span class="ruby-identifier">key</span>
+  <span class="ruby-identifier">list</span> = []
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@post</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@post</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-ivar">@post</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">index</span>, <span class="ruby-identifier">title</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">title</span>[<span class="ruby-value">:title</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-identifier">list</span>[<span class="ruby-identifier">list</span>.<span class="ruby-identifier">length</span>] = <span class="ruby-constant">ShortTitle</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">title</span>[<span class="ruby-value">:title</span>].<span class="ruby-identifier">strip</span>, <span class="ruby-operator">!</span><span class="ruby-identifier">title</span>[<span class="ruby-value">:responsibility</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">title</span>[<span class="ruby-value">:responsibility</span>].<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>)
+      <span class="ruby-keyword">end</span>
+    }
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">list</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- updateFromPostShortTitle-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- updateFromPostShortTitle-method -->
+
+    
+      <div id="method-i-updateFromPostSimple" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">updateFromPostSimple</span><span
+            class="method-args">(key)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Updates internal values from post data which are simple strings</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>key</code> → key of element of interest, e.g.
+<code>:articleTitle</code></p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>the new value of +<a href="http://key">self</a>+</p>
+</li></ul>
+</li></ul>
+
+<p>Assumes +@post+ contains post data entered by the user Side effect on +<a
+href="http://key">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="updateFromPostSimple-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 362</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">updateFromPostSimple</span> <span class="ruby-identifier">key</span>
+  <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-ivar">@post</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@post</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@post</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@post</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- updateFromPostSimple-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- updateFromPostSimple-method -->
+
+    
+      <div id="method-i-wrap_xml" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">wrap_xml</span><span
+            class="method-args">(content)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Wrap biblio xml stub in biblio xml wrapper to make it valid TEI</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>content</code> -&gt; XML to wrap</p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong> :</p>
+<ul><li>
+<p>wrapped XML content as String</p>
+</li></ul>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="wrap_xml-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">wrap_xml</span>(<span class="ruby-identifier">content</span>)
+  <span class="ruby-identifier">xml_stub</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">content</span>)
+  <span class="ruby-identifier">xml_wrapper</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RAILS_ROOT</span>, [<span class="ruby-string">'data'</span>,<span class="ruby-string">'templates'</span>], <span class="ruby-string">'biblio_dummy_wrapper.xml'</span>)))
+  <span class="ruby-identifier">basepath</span> = <span class="ruby-string">'/TEI/text/body/div[@type = &quot;bibliography&quot;]'</span>
+  <span class="ruby-identifier">add_node_here</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">XPath</span>.<span class="ruby-identifier">first</span>(<span class="ruby-identifier">xml_wrapper</span>, <span class="ruby-identifier">basepath</span>)
+  <span class="ruby-identifier">add_node_here</span>.<span class="ruby-identifier">add_element</span> <span class="ruby-identifier">xml_stub</span>.<span class="ruby-identifier">root</span>
+
+  <span class="ruby-identifier">wrapped_xml_content</span> = <span class="ruby-string">''</span>
+  <span class="ruby-identifier">xml_wrapper</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">wrapped_xml_content</span>)
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">wrapped_xml_content</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- wrap_xml-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- wrap_xml-method -->
+
+    
+      <div id="method-i-xml_title_text" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">xml_title_text</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>?</p>
+          
+
+          
+          <div class="method-source-code" id="xml_title_text-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">xml_title_text</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-string">''</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- xml_title_text-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- xml_title_text-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+     <section id="protected-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Protected Instance Methods</h3>
+
+    
+      <div id="method-i-populateFromEpiDoc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populateFromEpiDoc</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retrieves biblio information from EpiDoc fragment and stores in member
+variables for later and handy access Side effect on +<a
+href="http://key">self</a>+ where key is sth. like
+<code>:articleTitle</code></p>
+          
+
+          
+          <div class="method-source-code" id="populateFromEpiDoc-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 726</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">populateFromEpiDoc</span>
+
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:articleTitle</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:journalTitle</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:bookTitle</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:supertype</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:subtype</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:language</span>
+  
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:bp</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:bpOld</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:idp</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:isbn</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:sd</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:checklist</span>
+
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:date</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:edition</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:issue</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:distributor</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:paginationFrom</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:paginationTo</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:paginationTotal</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:paginationPreface</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:illustration</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:no</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:col</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:tome</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:link</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:fasc</span>
+  <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-value">:reedition</span>
+
+  <span class="ruby-identifier">populateFromEpiDocPerson</span> <span class="ruby-value">:authorList</span>
+  <span class="ruby-identifier">populateFromEpiDocPerson</span> <span class="ruby-value">:editorList</span>
+  
+  <span class="ruby-identifier">populateFromEpiDocShortTitle</span> <span class="ruby-value">:journalTitleShort</span>
+  <span class="ruby-identifier">populateFromEpiDocShortTitle</span> <span class="ruby-value">:bookTitleShort</span>
+  
+  <span class="ruby-identifier">populateFromEpiDocNote</span>
+ 
+  <span class="ruby-identifier">populateFromEpiDocPublisher</span>
+ 
+  <span class="ruby-identifier">populateFromEpiDocReviewee</span>
+  
+  <span class="ruby-identifier">populateFromEpiDocContainer</span>
+ 
+  <span class="ruby-identifier">populateFromEpiDocRelatedArticle</span>
+ 
+  <span class="ruby-identifier">populateFromEpiDocOriginalBp</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- populateFromEpiDoc-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- populateFromEpiDoc-method -->
+
+    
+      <div id="method-i-populateFromEpiDocContainer" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populateFromEpiDocContainer</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Shortcut access to method <code>populateFromEpiDocRelatedItem</code> for
+container elements (books or journals) Side effect on +<a
+href="http://:containerList">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="populateFromEpiDocContainer-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 877</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">populateFromEpiDocContainer</span>
+  <span class="ruby-identifier">populateFromEpiDocRelatedItem</span> <span class="ruby-value">:containerList</span>, <span class="ruby-constant">Container</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- populateFromEpiDocContainer-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- populateFromEpiDocContainer-method -->
+
+    
+      <div id="method-i-populateFromEpiDocNote" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populateFromEpiDocNote</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Scans EpiDoc document for remarks and annotation and stores them in member
++<a href="http://:note">self</a>+ Side effect on +<a
+href="http://:note">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="populateFromEpiDocNote-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 861</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">populateFromEpiDocNote</span>
+  <span class="ruby-identifier">epiDoc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-constant">XPATH</span>[<span class="ruby-value">:note</span>]){<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">'resp'</span>)
+      <span class="ruby-keyword">self</span>[<span class="ruby-value">:note</span>][<span class="ruby-keyword">self</span>[<span class="ruby-value">:note</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">Note</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">element</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'resp'</span>], <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>)
+    <span class="ruby-keyword">end</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- populateFromEpiDocNote-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- populateFromEpiDocNote-method -->
+
+    
+      <div id="method-i-populateFromEpiDocOriginalBp" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populateFromEpiDocOriginalBp</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Gets original BP data from EpiDoc <a
+href="http://@type='original'">TEI:seg</a> tags (Index, Index bis, Titre,
+<a href="Publication.html">Publication</a>, Resumé, S.B. &amp; S.E.G.,
+C.R.) as well as from old or new bp id Side effect on +<a
+href="http://:originalBp">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="populateFromEpiDocOriginalBp-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 926</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">populateFromEpiDocOriginalBp</span>
+  {
+    <span class="ruby-string">'Index'</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;/bibl/seg[@type='original'][@subtype='index']&quot;</span>,
+    <span class="ruby-string">'Index bis'</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;/bibl/seg[@type='original'][@subtype='indexBis']&quot;</span>,
+    <span class="ruby-string">'Titre'</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;/bibl/seg[@type='original'][@subtype='titre']&quot;</span>,
+    <span class="ruby-string">'Publication'</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;/bibl/seg[@type='original'][@subtype='publication']&quot;</span>,
+    <span class="ruby-string">'Resumé'</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;/bibl/seg[@type='original'][@subtype='resume']&quot;</span>,
+    <span class="ruby-string">'S.B. &amp; S.E.G.'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;/bibl/seg[@type='original'][@subtype='sbSeg']&quot;</span>,
+    <span class="ruby-string">'C.R.'</span>          =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;/bibl/seg[@type='original'][@subtype='cr']&quot;</span>
+  }.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">title</span>, <span class="ruby-identifier">xpath</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">element</span> = <span class="ruby-identifier">epiDoc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-identifier">xpath</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">element</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-keyword">self</span>[<span class="ruby-value">:originalBp</span>][<span class="ruby-identifier">title</span>] = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>
+    <span class="ruby-keyword">end</span>
+  }
+
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>[<span class="ruby-value">:bp</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-keyword">self</span>[<span class="ruby-value">:bp</span>].<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-value">:originalBp</span>][<span class="ruby-string">'No'</span>] = <span class="ruby-keyword">self</span>[<span class="ruby-value">:bp</span>]
+  <span class="ruby-keyword">elsif</span> <span class="ruby-keyword">self</span>[<span class="ruby-value">:bpOld</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-keyword">self</span>[<span class="ruby-value">:bpOld</span>].<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-value">:originalBp</span>][<span class="ruby-string">'Ancien No'</span>] = <span class="ruby-keyword">self</span>[<span class="ruby-value">:bpOld</span>]
+  <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- populateFromEpiDocOriginalBp-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- populateFromEpiDocOriginalBp-method -->
+
+    
+      <div id="method-i-populateFromEpiDocPerson" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populateFromEpiDocPerson</span><span
+            class="method-args">(key)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Reads author and editor information from EpiDoc and writes as objects of
+class <code>PublicationPerson</code> to +<a
+href="http://:authorList">self</a>+ resp. +<a
+href="http://:editorList">self</a>+</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>key</code> → <code>:authorList</code> or <code>:editorList</code></p>
+</li></ul>
+</li></ul>
+
+<p>Side effect on  +<a href="http://:authorList">self</a>+ or +<a
+href="http://:editorList">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="populateFromEpiDocPerson-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 804</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">populateFromEpiDocPerson</span> <span class="ruby-identifier">key</span>
+  <span class="ruby-identifier">list</span> = []
+  <span class="ruby-identifier">path</span> = <span class="ruby-constant">XPATH</span>[<span class="ruby-identifier">key</span>]
+  <span class="ruby-identifier">epiDoc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-identifier">path</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">person</span><span class="ruby-operator">|</span>
+
+    <span class="ruby-identifier">newbie</span> = <span class="ruby-constant">PublicationPerson</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">indexFirst</span> = <span class="ruby-identifier">indexLast</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">element</span> = <span class="ruby-identifier">person</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">'forename'</span>]
+      <span class="ruby-identifier">newbie</span>.<span class="ruby-identifier">firstName</span> = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>
+      <span class="ruby-identifier">indexFirst</span> = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">index_in_parent</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">element</span> = <span class="ruby-identifier">person</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">'surname'</span>]
+      <span class="ruby-identifier">newbie</span>.<span class="ruby-identifier">lastName</span> = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>
+      <span class="ruby-identifier">indexLast</span> = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">index_in_parent</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">person</span>.<span class="ruby-identifier">text</span>
+      <span class="ruby-identifier">newbie</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">person</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">indexLast</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">indexFirst</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">indexLast</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">indexFirst</span>
+      <span class="ruby-identifier">newbie</span>.<span class="ruby-identifier">swap</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">list</span>[<span class="ruby-identifier">list</span>.<span class="ruby-identifier">length</span>] = <span class="ruby-identifier">newbie</span>
+  }
+
+  <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">list</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- populateFromEpiDocPerson-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- populateFromEpiDocPerson-method -->
+
+    
+      <div id="method-i-populateFromEpiDocPublisher" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populateFromEpiDocPublisher</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retrieves publisher information from EpiDoc, i.e. place names as well as
+names of persons or organisations Side effect on +<a
+href="http://:publisherList">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="populateFromEpiDocPublisher-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 851</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">populateFromEpiDocPublisher</span>
+  <span class="ruby-identifier">epiDoc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-constant">XPATH</span>[<span class="ruby-value">:publisherList</span>]){<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">type</span> = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+    <span class="ruby-identifier">value</span> = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-value">:publisherList</span>][<span class="ruby-keyword">self</span>[<span class="ruby-value">:publisherList</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">Publisher</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">value</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- populateFromEpiDocPublisher-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- populateFromEpiDocPublisher-method -->
+
+    
+      <div id="method-i-populateFromEpiDocRelatedArticle" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populateFromEpiDocRelatedArticle</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retrieves related articles (series, volume, number, ddb, tm, inventory)
+from EpiDoc writes a list of <code>RelatedArticle</code> objects to +<a
+href="http://:relatedArticleList">self</a>+ Side effect on +<a
+href="http://:relatedArticleList">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="populateFromEpiDocRelatedArticle-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 909</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">populateFromEpiDocRelatedArticle</span>
+  <span class="ruby-identifier">epiDoc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-constant">XPATH</span>[<span class="ruby-value">:relatedArticleList</span>]){<span class="ruby-operator">|</span><span class="ruby-identifier">bibl</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">series</span>    = <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;title[@level='s'][@type='short']&quot;</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;title[@level='s'][@type='short']&quot;</span>].<span class="ruby-identifier">text</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>
+    <span class="ruby-identifier">volume</span>    = <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;biblScope[@type='vol']&quot;</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;biblScope[@type='vol']&quot;</span>].<span class="ruby-identifier">text</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>
+    <span class="ruby-identifier">number</span>    = <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;biblScope[@type='num']&quot;</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;biblScope[@type='num']&quot;</span>].<span class="ruby-identifier">text</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>
+    <span class="ruby-identifier">ddb</span>       = <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;idno[@type='ddb']&quot;</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;idno[@type='ddb']&quot;</span>].<span class="ruby-identifier">text</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>
+    <span class="ruby-identifier">tm</span>        = <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;idno[@type='tm']&quot;</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;idno[@type='tm']&quot;</span>].<span class="ruby-identifier">text</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>
+    <span class="ruby-identifier">inventory</span> = <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;idno[@type='invNo']&quot;</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;idno[@type='invNo']&quot;</span>].<span class="ruby-identifier">text</span> <span class="ruby-operator">:</span> <span class="ruby-string">''</span>
+
+    <span class="ruby-keyword">self</span>[<span class="ruby-value">:relatedArticleList</span>][<span class="ruby-keyword">self</span>[<span class="ruby-value">:relatedArticleList</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-constant">RelatedArticle</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">series</span>, <span class="ruby-identifier">volume</span>, <span class="ruby-identifier">number</span>, <span class="ruby-identifier">ddb</span>, <span class="ruby-identifier">tm</span>, <span class="ruby-identifier">inventory</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- populateFromEpiDocRelatedArticle-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- populateFromEpiDocRelatedArticle-method -->
+
+    
+      <div id="method-i-populateFromEpiDocRelatedItem" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populateFromEpiDocRelatedItem</span><span
+            class="method-args">(typeX, classX)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Generic method to retrieve EpiDoc data from standard biblio structures of
++TEI:relatedItem+ and save it as an <code>Array</code> to respetive member
+variable</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>typeX</code> → <code>:revieweeList</code> or
+<code>:containerList</code></p>
+</li><li>
+<p><code>classX</code> → <code>Reviewee</code>  or <code>Container</code></p>
+</li></ul>
+</li></ul>
+
+<p>Side effect on +<a href="http://:revieweeList">self</a>+ or +<a
+href="http://:containerList">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="populateFromEpiDocRelatedItem-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 886</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">populateFromEpiDocRelatedItem</span> <span class="ruby-identifier">typeX</span>, <span class="ruby-identifier">classX</span>
+  <span class="ruby-identifier">epiDoc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-constant">XPATH</span>[<span class="ruby-identifier">typeX</span>]){<span class="ruby-operator">|</span><span class="ruby-identifier">bibl</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">pointer</span> = <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">'ptr'</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">'ptr'</span>].<span class="ruby-identifier">attributes</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">'ptr'</span>].<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'target'</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">'ptr'</span>].<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'target'</span>] <span class="ruby-operator">:</span> <span class="ruby-string">''</span>
+    <span class="ruby-identifier">ignore</span> = {}
+    
+    <span class="ruby-identifier">bibl</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span>
+      
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">!=</span> <span class="ruby-string">'ptr'</span>
+        <span class="ruby-identifier">key</span> = <span class="ruby-identifier">child</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-string">'idno'</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'type'</span>]
+          <span class="ruby-identifier">key</span> = <span class="ruby-identifier">child</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'type'</span>]
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-identifier">ignore</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">child</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">:</span> <span class="ruby-string">'?'</span>
+      <span class="ruby-keyword">end</span>
+    }
+
+    <span class="ruby-keyword">self</span>[<span class="ruby-identifier">typeX</span>][<span class="ruby-keyword">self</span>[<span class="ruby-identifier">typeX</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-identifier">classX</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">pointer</span>, <span class="ruby-identifier">ignore</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- populateFromEpiDocRelatedItem-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- populateFromEpiDocRelatedItem-method -->
+
+    
+      <div id="method-i-populateFromEpiDocReviewee" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populateFromEpiDocReviewee</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Shortcut access to method <code>populateFromEpiDocRelatedItem</code> for
+reviewees Side effect on +<a href="http://:revieweeList">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="populateFromEpiDocReviewee-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 871</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">populateFromEpiDocReviewee</span>
+  <span class="ruby-identifier">populateFromEpiDocRelatedItem</span> <span class="ruby-value">:revieweeList</span>, <span class="ruby-constant">Reviewee</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- populateFromEpiDocReviewee-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- populateFromEpiDocReviewee-method -->
+
+    
+      <div id="method-i-populateFromEpiDocShortTitle" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populateFromEpiDocShortTitle</span><span
+            class="method-args">(key)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Populates short title attributes with objects of class
+<code>ShortTitle</code> and fills them with all information that can be
+retrieved from EpiDoc</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>key</code> → <code>:journalTitleShort</code> or
+<code>:bookTitleShort</code></p>
+</li></ul>
+</li></ul>
+
+<p>Side effect on +<a href="http://:journalTitleShort">self</a>+ or +<a
+href="http://:bookTitleShort">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="populateFromEpiDocShortTitle-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 835</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">populateFromEpiDocShortTitle</span> <span class="ruby-identifier">key</span>
+  <span class="ruby-identifier">list</span> = []
+  <span class="ruby-identifier">path</span> = <span class="ruby-constant">XPATH</span>[<span class="ruby-identifier">key</span>]
+  <span class="ruby-identifier">epiDoc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-identifier">path</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">title</span><span class="ruby-operator">|</span>
+    
+    <span class="ruby-identifier">responsibility</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">title</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'type'</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">title</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'type'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-string">'-'</span>)
+      <span class="ruby-identifier">title</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-string">'type'</span>].<span class="ruby-identifier">partition</span>(<span class="ruby-string">'-'</span>)[<span class="ruby-value">2</span>]
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">list</span>[<span class="ruby-identifier">list</span>.<span class="ruby-identifier">length</span>] = <span class="ruby-constant">ShortTitle</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">title</span>.<span class="ruby-identifier">text</span>, <span class="ruby-identifier">responsibility</span>)
+  }
+  <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">list</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- populateFromEpiDocShortTitle-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- populateFromEpiDocShortTitle-method -->
+
+    
+      <div id="method-i-populateFromEpiDocSimple" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">populateFromEpiDocSimple</span><span
+            class="method-args">(key)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retrieves information from EpiDoc fragmet which are single values (i.e.
+tags that are not repeated, no lists) and which are accessible via a
+straightforward xpath, given in variable +<a href="http://key">XPATH</a>+</p>
+<ul><li>
+<p><strong>Args</strong>  :</p>
+<ul><li>
+<p><code>key</code> → key, e.g. <code>:link</code></p>
+</li></ul>
+</li></ul>
+
+<p>Side effect on +<a href="http://key">self</a>+</p>
+          
+
+          
+          <div class="method-source-code" id="populateFromEpiDocSimple-source">
+            <pre><span class="ruby-comment"># File app/models/biblio_identifier.rb, line 782</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">populateFromEpiDocSimple</span> <span class="ruby-identifier">key</span>
+  <span class="ruby-identifier">attribute</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">path</span> = <span class="ruby-constant">XPATH</span>[<span class="ruby-identifier">key</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">path</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/(.+)\/@([^\[\]\/]+)\Z/</span>
+    <span class="ruby-identifier">path</span> = <span class="ruby-node">$1</span>
+    <span class="ruby-identifier">attribute</span> = <span class="ruby-node">$2</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">epiDoc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-identifier">path</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">attribute</span>
+      <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">epiDoc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-identifier">path</span>].<span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">attribute</span>]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">epiDoc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-identifier">path</span>].<span class="ruby-identifier">text</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-string">''</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- populateFromEpiDocSimple-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- populateFromEpiDocSimple-method -->
+
+    
+    </section><!-- protected-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
