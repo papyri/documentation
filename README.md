@@ -16,6 +16,7 @@ Project-wide Documentation for Integrating Digital Papyrology
 * Ruby
 * Git
 * Apache Maven
+* `yard` gem (for RXSugar documentation)
 * [Jekyll](https://github.com/mojombo/jekyll) (optional)
 
 ## Usage
