@@ -195,7 +195,8 @@ Handles all the necessary backend (Solr) and frontend (HTML) interactions needed
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getCSSSelectorID()">getCSSSelectorID</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the <code>formName</code> member in lower case, to be used as an id value for
+ the HTML form control</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -212,7 +213,8 @@ Handles all the necessary backend (Solr) and frontend (HTML) interactions needed
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayValue(java.lang.String)">getDisplayValue</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Takes a raw facet value and formats it appropriately for display in the facet's 
+ HTML form control.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -236,7 +238,7 @@ Handles all the necessary backend (Solr) and frontend (HTML) interactions needed
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFormNames()">getFormNames</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the value(s) to be used for the name attribute on HTML form controls.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -387,13 +389,54 @@ public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Boolean.h
 </DL>
 <HR>
 
+<A NAME="getFormNames()"><!-- --></A><H3>
+getFormNames</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[] <B>getFormNames</B>()</PRE>
+<DL>
+<DD>Returns the value(s) to be used for the name attribute on HTML form controls.
+ 
+ In most cases only one value is required, and will be tat of the <code>formName</code>
+ member. However, some facets have more than one HTML control - hence the need for 
+ this method to return an array of Strings, rather than a String.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD></DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="getCSSSelectorID()"><!-- --></A><H3>
 getCSSSelectorID</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getCSSSelectorID</B>()</PRE>
 <DL>
+<DD>Returns the <code>formName</code> member in lower case, to be used as an id value for
+ the HTML form control
+<P>
 <DD><DL>
+
+<DT><B>Returns:</B><DD></DL>
+</DD>
 </DL>
+<HR>
+
+<A NAME="getDisplayValue(java.lang.String)"><!-- --></A><H3>
+getDisplayValue</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getDisplayValue</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</PRE>
+<DL>
+<DD>Takes a raw facet value and formats it appropriately for display in the facet's 
+ HTML form control.
+ 
+ Under most circumstances, the passed value itself will be appropriate for display;
+ some subclasses, however, may need to override this method to cope with particular
+ values requiring special treatment.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>value</CODE> - 
+<DT><B>Returns:</B><DD></DL>
 </DD>
 </DL>
 <HR>
@@ -425,28 +468,6 @@ getDisplayName</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getDisplayName</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;facetParam,
                              <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;facetValue)</PRE>
-<DL>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getDisplayValue(java.lang.String)"><!-- --></A><H3>
-getDisplayValue</H3>
-<PRE>
-public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getDisplayValue</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</PRE>
-<DL>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getFormNames()"><!-- --></A><H3>
-getFormNames</H3>
-<PRE>
-public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[] <B>getFormNames</B>()</PRE>
 <DL>
 <DD><DL>
 </DL>

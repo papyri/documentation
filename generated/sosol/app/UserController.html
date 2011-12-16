@@ -88,6 +88,12 @@
     
     <li><a href="#method-i-developer">#developer</a>
     
+    <li><a href="#method-i-download_by_status">#download_by_status</a>
+    
+    <li><a href="#method-i-download_options">#download_options</a>
+    
+    <li><a href="#method-i-download_user_publications">#download_user_publications</a>
+    
     <li><a href="#method-i-edit_user_admins">#edit_user_admins</a>
     
     <li><a href="#method-i-email_everybody">#email_everybody</a>
@@ -818,6 +824,210 @@ no board_id. Will render old dashboard if given old as parameter.</p>
 
         
       </div><!-- developer-method -->
+
+    
+      <div id="method-i-download_by_status" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">download_by_status</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Collects and downloads zip file with all of the publications of the given
+status and community (or PE if no community).</p>
+          
+
+          
+          <div class="method-source-code" id="download_by_status-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 435</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">download_by_status</span>
+
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'zip/zip'</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'zip/zipfilesystem'</span>
+   
+  <span class="ruby-identifier">status_wanted</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:status</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;unknown&quot;</span> <span class="ruby-comment">#&quot;committed&quot; </span>
+  <span class="ruby-comment">#only let them download status that are accessable</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span> <span class="ruby-node">%w{new editing submitted committed}</span>.<span class="ruby-identifier">include?</span><span class="ruby-identifier">status_wanted</span>
+    <span class="ruby-comment">#status_wanted = &quot;committed&quot;</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-identifier">status_wanted</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; status is not downloadable.&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span> 
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+   
+  <span class="ruby-identifier">cid</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:community_id</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword">nil</span>  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">cid</span>
+    <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">cid</span>)  
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-ivar">@publications</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:community_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cid</span>, <span class="ruby-value">:owner_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:creator_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:parent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">status_wanted</span> }, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:identifiers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:votes</span>}], <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+ 
+  <span class="ruby-identifier">t</span> = <span class="ruby-constant">Tempfile</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;publication_download_#{@current_user.name}-#{request.remote_ip}&quot;</span>)
+  
+  <span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">ZipOutputStream</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">path</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">zos</span><span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@publications</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">publication</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>
+          <span class="ruby-comment">#raise id.title + &quot; ... &quot; + id.name + &quot; ... &quot; + id.title.gsub(/\s/,'_')</span>
+          
+          <span class="ruby-comment">#simple paths for just this pub</span>
+          <span class="ruby-comment">#zos.put_next_entry( id.class::FRIENDLY_NAME + &quot;-&quot; + id.title.gsub(/\s/,'_') + &quot;.xml&quot;)</span>
+          
+          <span class="ruby-comment">#full path as used in repo</span>
+          <span class="ruby-identifier">zos</span>.<span class="ruby-identifier">put_next_entry</span>( <span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_path</span>)
+          
+          <span class="ruby-identifier">zos</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">id</span>.<span class="ruby-identifier">xml_content</span>
+        <span class="ruby-keyword">end</span> 
+      <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>    
+  
+  <span class="ruby-comment"># End of the block  automatically closes the zip? file.</span>
+ 
+  <span class="ruby-comment"># The temp file will be deleted some time...</span>
+<span class="ruby-comment">#add com name</span>
+  <span class="ruby-identifier">community</span> = <span class="ruby-string">&quot;PE&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@community</span>
+    <span class="ruby-identifier">community</span> = <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">format_name</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">filename</span> = <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;_&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">community</span> <span class="ruby-operator">+</span>  <span class="ruby-string">&quot;_&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">status_wanted</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;_&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.zip&quot;</span>
+  <span class="ruby-identifier">send_file</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">path</span>, <span class="ruby-value">:type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'application/zip'</span>, <span class="ruby-value">:disposition</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'attachment'</span>, <span class="ruby-value">:filename</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">filename</span>
+
+  <span class="ruby-identifier">t</span>.<span class="ruby-identifier">close</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- download_by_status-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- download_by_status-method -->
+
+    
+      <div id="method-i-download_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">download_options</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Determines which combos of boards &amp; publication status’ exist so we
+can ask the user which one they want to download.</p>
+          
+
+          
+          <div class="method-source-code" id="download_options-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 530</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">download_options</span>
+
+  <span class="ruby-comment">#has become overkill for current method, really only need to see if any of these publications exists, dont need the whole list</span>
+  <span class="ruby-identifier">cid</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@submitted_publications</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:community_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cid</span>, <span class="ruby-value">:owner_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:creator_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:parent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'submitted'</span> }, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:identifiers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:votes</span>}], <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+  <span class="ruby-ivar">@editing_publications</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:community_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cid</span>,<span class="ruby-value">:owner_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:creator_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:parent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'editing'</span> }, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:identifiers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:votes</span>}], <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+  <span class="ruby-ivar">@new_publications</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:community_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cid</span>,<span class="ruby-value">:owner_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:creator_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:parent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'new'</span> }, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:identifiers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:votes</span>}], <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+  <span class="ruby-ivar">@committed_publications</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:community_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cid</span>,<span class="ruby-value">:owner_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:creator_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:parent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'committed'</span> }, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:identifiers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:votes</span>}], <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+  
+ <span class="ruby-comment"># @community = Community.find_by_id(cid)</span>
+
+  <span class="ruby-ivar">@communities</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">community_memberships</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">community_memberships</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>  
+      <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">community_memberships</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">community</span><span class="ruby-operator">|</span>
+        <span class="ruby-comment">#raise community.id.to_s</span>
+        <span class="ruby-identifier">cid</span> = <span class="ruby-identifier">community</span>.<span class="ruby-identifier">id</span>
+        <span class="ruby-comment">#raise community.name</span>
+        <span class="ruby-ivar">@communities</span>[<span class="ruby-identifier">cid</span>] = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-ivar">@communities</span>[<span class="ruby-identifier">cid</span>][<span class="ruby-value">:id</span>] = <span class="ruby-identifier">cid</span> 
+        <span class="ruby-ivar">@communities</span>[<span class="ruby-identifier">cid</span>][<span class="ruby-value">:name</span>] = <span class="ruby-identifier">community</span>.<span class="ruby-identifier">format_name</span>
+        <span class="ruby-ivar">@communities</span>[<span class="ruby-identifier">cid</span>][<span class="ruby-value">:submitted_publications</span>] = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:community_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cid</span>, <span class="ruby-value">:owner_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:creator_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:parent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'submitted'</span> }, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:identifiers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:votes</span>}], <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+        <span class="ruby-ivar">@communities</span>[<span class="ruby-identifier">cid</span>][<span class="ruby-value">:editing_publications</span>] = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:community_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cid</span>,<span class="ruby-value">:owner_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:creator_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:parent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'editing'</span> }, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:identifiers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:votes</span>}], <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+        <span class="ruby-ivar">@communities</span>[<span class="ruby-identifier">cid</span>][<span class="ruby-value">:new_publications</span>] = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:community_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cid</span>,<span class="ruby-value">:owner_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:creator_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:parent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'new'</span> }, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:identifiers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:votes</span>}], <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+        <span class="ruby-ivar">@communities</span>[<span class="ruby-identifier">cid</span>][<span class="ruby-value">:committed_publications</span>] = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:community_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cid</span>,<span class="ruby-value">:owner_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:creator_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:parent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'committed'</span> }, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:identifiers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:votes</span>}], <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+      <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>    
+    
+  
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- download_options-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- download_options-method -->
+
+    
+      <div id="method-i-download_user_publications" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">download_user_publications</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Combines all of the user’s publications (for PE or the given board,
+regardless of status) into one download.</p>
+          
+
+          
+          <div class="method-source-code" id="download_user_publications-source">
+            <pre><span class="ruby-comment"># File app/controllers/user_controller.rb, line 489</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">download_user_publications</span>
+
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'zip/zip'</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">'zip/zipfilesystem'</span>
+   
+ 
+  <span class="ruby-identifier">cid</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:community_id</span>]
+  <span class="ruby-ivar">@submitted_publications</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:community_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cid</span>, <span class="ruby-value">:owner_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:creator_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:parent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'submitted'</span> }, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:identifiers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:votes</span>}], <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+  <span class="ruby-ivar">@editing_publications</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:community_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cid</span>,<span class="ruby-value">:owner_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:creator_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:parent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'editing'</span> }, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:identifiers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:votes</span>}], <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+  <span class="ruby-ivar">@new_publications</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:community_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cid</span>,<span class="ruby-value">:owner_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:creator_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:parent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'new'</span> }, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:identifiers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:votes</span>}], <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+  <span class="ruby-ivar">@committed_publications</span> = <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_all_by_owner_id</span>(<span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:community_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cid</span>,<span class="ruby-value">:owner_type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'User'</span>, <span class="ruby-value">:creator_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:parent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'committed'</span> }, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:identifiers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:votes</span>}], <span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;updated_at DESC&quot;</span>)
+  
+  <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">cid</span>)
+ 
+  <span class="ruby-ivar">@publications</span> = <span class="ruby-ivar">@submitted_publications</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@editing_publications</span>  <span class="ruby-operator">+</span> <span class="ruby-ivar">@new_publications</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@committed_publications</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-constant">Tempfile</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;publication_download_#{@current_user.name}-#{request.remote_ip}&quot;</span>)
+  
+  <span class="ruby-constant">Zip</span><span class="ruby-operator">::</span><span class="ruby-constant">ZipOutputStream</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">t</span>.<span class="ruby-identifier">path</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">zos</span><span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@publications</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">publication</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>         
+          <span class="ruby-comment">#full path as used in repo</span>
+          <span class="ruby-identifier">zos</span>.<span class="ruby-identifier">put_next_entry</span>( <span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_path</span>)
+          <span class="ruby-identifier">zos</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">id</span>.<span class="ruby-identifier">xml_content</span>
+        <span class="ruby-keyword">end</span> 
+      <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>    
+  
+  <span class="ruby-comment"># End of the block  automatically closes the zip? file.</span>
+ 
+  <span class="ruby-comment"># The temp file will be deleted some time...</span>
+    <span class="ruby-identifier">community</span> = <span class="ruby-string">&quot;PE&quot;</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@community</span>
+    <span class="ruby-identifier">community</span> = <span class="ruby-ivar">@community</span>.<span class="ruby-identifier">format_name</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">filename</span> = <span class="ruby-ivar">@current_user</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;_&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">community</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;_&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.zip&quot;</span>
+  <span class="ruby-identifier">send_file</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">path</span>, <span class="ruby-value">:type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'application/zip'</span>, <span class="ruby-value">:disposition</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'attachment'</span>, <span class="ruby-value">:filename</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">filename</span>
+
+  <span class="ruby-identifier">t</span>.<span class="ruby-identifier">close</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- download_user_publications-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- download_user_publications-method -->
 
     
       <div id="method-i-edit_user_admins" class="method-detail ">

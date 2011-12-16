@@ -247,7 +247,8 @@ The <code>Facet</code> used for setting and displaying date constraints.
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/DateFacet.html#getDisplayValue(java.lang.String)">getDisplayValue</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;date)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Takes a raw facet value and formats it appropriately for display in the facet's 
+ HTML form control.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -263,7 +264,7 @@ The <code>Facet</code> used for setting and displaying date constraints.
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/DateFacet.html#getFormNames()">getFormNames</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the value(s) to be used for the name attribute on HTML form controls.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -407,11 +408,20 @@ getDisplayValue</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getDisplayValue</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;date)</PRE>
 <DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayValue(java.lang.String)">Facet</A></CODE></B></DD>
+<DD>Takes a raw facet value and formats it appropriately for display in the facet's 
+ HTML form control.
+ 
+ Under most circumstances, the passed value itself will be appropriate for display;
+ some subclasses, however, may need to override this method to cope with particular
+ values requiring special treatment.
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayValue(java.lang.String)">getDisplayValue</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
 </DD>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD></DL>
 </DD>
 </DL>
 <HR>
@@ -527,11 +537,19 @@ getFormNames</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[] <B>getFormNames</B>()</PRE>
 <DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFormNames()">Facet</A></CODE></B></DD>
+<DD>Returns the value(s) to be used for the name attribute on HTML form controls.
+ 
+ In most cases only one value is required, and will be tat of the <code>formName</code>
+ member. However, some facets have more than one HTML control - hence the need for 
+ this method to return an array of Strings, rather than a String.
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFormNames()">getFormNames</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
 </DD>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD></DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->

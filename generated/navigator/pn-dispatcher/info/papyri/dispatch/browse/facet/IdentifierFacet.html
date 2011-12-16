@@ -129,7 +129,7 @@ Class IdentifierFacet</H2>
 <DT><B>Author:</B></DT>
   <DD>thill</DD>
 <DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet"><CODE>Facet</CODE></A>, 
-<CODE>SearchConfiguration</CODE></DL>
+<CODE>info.papyri.dispatch.browse.facet.SearchConfiguration</CODE></DL>
 <HR>
 
 <P>
@@ -186,6 +186,15 @@ Class IdentifierFacet</H2>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/IdentifierFacet.html#anyConstraintSet()">anyConstraintSet</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines whether a constraint has been set on the <code>Facet</code> as a whole,
+ as opposed to simply on the particular <code>SearchConfiguration</code></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;org.apache.solr.client.solrj.SolrQuery</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/IdentifierFacet.html#buildQueryContribution(org.apache.solr.client.solrj.SolrQuery)">buildQueryContribution</A></B>(org.apache.solr.client.solrj.SolrQuery&nbsp;solrQuery)</CODE>
 
@@ -237,7 +246,8 @@ Class IdentifierFacet</H2>
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/IdentifierFacet.html#getDisplayValue(java.lang.String)">getDisplayValue</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Takes a raw facet value and formats it appropriately for display in the facet's 
+ HTML form control.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -253,7 +263,7 @@ Class IdentifierFacet</H2>
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/IdentifierFacet.html#getFormNames()">getFormNames</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the value(s) to be used for the name attribute on HTML form controls.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -493,11 +503,20 @@ getDisplayValue</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getDisplayValue</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;value)</PRE>
 <DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayValue(java.lang.String)">Facet</A></CODE></B></DD>
+<DD>Takes a raw facet value and formats it appropriately for display in the facet's 
+ HTML form control.
+ 
+ Under most circumstances, the passed value itself will be appropriate for display;
+ some subclasses, however, may need to override this method to cope with particular
+ values requiring special treatment.
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayValue(java.lang.String)">getDisplayValue</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
 </DD>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD></DL>
 </DD>
 </DL>
 <HR>
@@ -507,11 +526,34 @@ getFormNames</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[] <B>getFormNames</B>()</PRE>
 <DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFormNames()">Facet</A></CODE></B></DD>
+<DD>Returns the value(s) to be used for the name attribute on HTML form controls.
+ 
+ In most cases only one value is required, and will be tat of the <code>formName</code>
+ member. However, some facets have more than one HTML control - hence the need for 
+ this method to return an array of Strings, rather than a String.
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFormNames()">getFormNames</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
 </DD>
 <DD><DL>
+
+<DT><B>Returns:</B><DD></DL>
+</DD>
 </DL>
+<HR>
+
+<A NAME="anyConstraintSet()"><!-- --></A><H3>
+anyConstraintSet</H3>
+<PRE>
+public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</A> <B>anyConstraintSet</B>()</PRE>
+<DL>
+<DD>Determines whether a constraint has been set on the <code>Facet</code> as a whole,
+ as opposed to simply on the particular <code>SearchConfiguration</code>
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD></DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->

@@ -109,24 +109,24 @@ Class CollectionBrowser</H2>
 <P>
 Servlet enabling collection-browsing functionality
  
- Note that the nomenclature throughout this code is distinctive in the following ways:
- (i) The entities to be displayed are thought of as consisting of either <i>documents</i>, 
- or <i>collections</i> of documents - and note that the latter may have intermediate collections
- between them and the documents that comprise them. The former are modelled using the
- <code>DocumentBrowseRecord</code> and <code>DocumentCollectionBrowseRecord</code>s respectively.
- (ii) To reflect this hierarchical relationship, the standard generational parent -> child 
- metaphor is used. Collections, then, may be parents of other collections, or of documents; 
- they may also be children of other collections; and all documents are children of collections.
- (iii) Perhaps confusingly, the term <i>collection</i> is also used to refer to the top 
- level of this hierarchy - i.e., to the ddbdp, hgv, or apis collections. The hierarchy
- as a whole runs collection -> series -> volume -> item
+ The design of this servlet is very simple: it parses the request for paths of the form
+ /[collection][/series]?[/volume]? and translates these into SPARQL queries. The only wrinkle
+ in this process is the irregularity of document collection hierarchies: while some series are
+ subdivided into volumes, others are not. In order to negotiate this irregularity, an optional
+ SPARQL clause checking whether the children of the current collection's contents are documents 
+ or collections of documents is added.
+ 
+ When the display reaches document level the user is rerouted to the faceted browser; i.e.,
+ when the display is at one level *above* document level, the links provided for drilling
+ deeper into the collections are to the faceted browser, with appropriate query-string
+ arguments.
 <P>
 
 <P>
 <DL>
 <DT><B>Author:</B></DT>
   <DD>thill</DD>
-<DT><B>See Also:</B><DD><A HREF="../../../../info/papyri/dispatch/browse/DocumentBrowseRecord.html" title="class in info.papyri.dispatch.browse"><CODE>DocumentBrowseRecord</CODE></A>, 
+<DT><B>See Also:</B><DD><A HREF="../../../../info/papyri/dispatch/browse/CollectionBrowser.html#parseUriToCollectionRecord(java.util.LinkedHashMap, java.lang.String, java.lang.String, java.lang.String)"><CODE>parseUriToCollectionRecord(java.util.LinkedHashMap, java.lang.String, java.lang.String, java.lang.String)</CODE></A>, 
 <A HREF="../../../../info/papyri/dispatch/browse/DocumentCollectionBrowseRecord.html" title="class in info.papyri.dispatch.browse"><CODE>DocumentCollectionBrowseRecord</CODE></A>, 
 <A HREF="../../../../serialized-form.html#info.papyri.dispatch.browse.CollectionBrowser">Serialized Form</A></DL>
 <HR>

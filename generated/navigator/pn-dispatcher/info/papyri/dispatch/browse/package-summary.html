@@ -95,10 +95,8 @@ Package info.papyri.dispatch.browse
 <TD WIDTH="15%"><B><A HREF="../../../../info/papyri/dispatch/browse/CollectionBrowser.html" title="class in info.papyri.dispatch.browse">CollectionBrowser</A></B></TD>
 <TD>Servlet enabling collection-browsing functionality
  
- Note that the nomenclature throughout this code is distinctive in the following ways:
- (i) The entities to be displayed are thought of as consisting of either <i>documents</i>, 
- or <i>collections</i> of documents - and note that the latter may have intermediate collections
- between them and the documents that comprise them.</TD>
+ The design of this servlet is very simple: it parses the request for paths of the form
+ /[collection][/series]?[/volume]? and translates these into SPARQL queries.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../info/papyri/dispatch/browse/DocumentBrowseRecord.html" title="class in info.papyri.dispatch.browse">DocumentBrowseRecord</A></B></TD>
@@ -112,7 +110,7 @@ Package info.papyri.dispatch.browse
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../info/papyri/dispatch/browse/IdComparator.html" title="class in info.papyri.dispatch.browse">IdComparator</A></B></TD>
-<TD>&nbsp;</TD>
+<TD>Compares id values to order them both numerically and alphabetically.</TD>
 </TR>
 </TABLE>
 &nbsp;

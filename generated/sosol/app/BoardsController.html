@@ -74,6 +74,8 @@
     
     <li><a href="#method-i-check_admin">#check_admin</a>
     
+    <li><a href="#method-i-confirm_destroy">#confirm_destroy</a>
+    
     <li><a href="#method-i-create">#create</a>
     
     <li><a href="#method-i-destroy">#destroy</a>
@@ -91,6 +93,8 @@
     <li><a href="#method-i-rank">#rank</a>
     
     <li><a href="#method-i-remove_member">#remove_member</a>
+    
+    <li><a href="#method-i-send_board_reminder_emails">#send_board_reminder_emails</a>
     
     <li><a href="#method-i-show">#show</a>
     
@@ -428,6 +432,36 @@
 
         
       </div><!-- check_admin-method -->
+
+    
+      <div id="method-i-confirm_destroy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">confirm_destroy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="confirm_destroy-source">
+            <pre><span class="ruby-comment"># File app/controllers/boards_controller.rb, line 324</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">confirm_destroy</span>
+  <span class="ruby-ivar">@board</span> = <span class="ruby-constant">Board</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- confirm_destroy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- confirm_destroy-method -->
 
     
       <div id="method-i-create" class="method-detail ">
@@ -796,6 +830,116 @@ are only for that community. If no community_id is given then the
 
         
       </div><!-- remove_member-method -->
+
+    
+      <div id="method-i-send_board_reminder_emails" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">send_board_reminder_emails</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="send_board_reminder_emails-source">
+            <pre><span class="ruby-comment"># File app/controllers/boards_controller.rb, line 240</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">send_board_reminder_emails</span>
+    
+  <span class="ruby-identifier">addresses</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span> 
+  
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">params</span>[<span class="ruby-value">:community_id</span>])
+    <span class="ruby-identifier">boards</span> = <span class="ruby-constant">Board</span>.<span class="ruby-identifier">ranked_by_community_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:community_id</span>]) 
+    <span class="ruby-identifier">community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:community_id</span>]) 
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">boards</span> = <span class="ruby-constant">Board</span>.<span class="ruby-identifier">ranked</span>
+  <span class="ruby-keyword">end</span>
+  
+  
+  <span class="ruby-identifier">body_text</span> = <span class="ruby-string">'Greetings '</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">community</span>
+    <span class="ruby-identifier">body_text</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">community</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; &quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">time_str</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-string">&quot;%Y-%m-%d&quot;</span>)
+  <span class="ruby-identifier">body_text</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;Board Members, as of &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">time_str</span>  <span class="ruby-operator">+</span> <span class="ruby-string">&quot;, &quot;</span>
+  <span class="ruby-identifier">boards</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">board</span><span class="ruby-operator">|</span>
+    <span class="ruby-comment">#grab addresses for this board </span>
+    <span class="ruby-identifier">board</span>.<span class="ruby-identifier">users</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">board_user</span><span class="ruby-operator">|</span>          
+      <span class="ruby-identifier">addresses</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">board_user</span>.<span class="ruby-identifier">email</span>        
+    <span class="ruby-keyword">end</span>
+  
+    <span class="ruby-identifier">body_text</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">board</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; has &quot;</span> 
+      
+    <span class="ruby-comment">#find all pubs that are still in voting phase         </span>
+    <span class="ruby-identifier">voting_publications</span> = <span class="ruby-identifier">board</span>.<span class="ruby-identifier">publications</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">'voting'</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">p</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>}.<span class="ruby-identifier">compact</span>
+    <span class="ruby-comment">#voting_publications = Publication.find_all_by_owner_id(board.id, :conditions =&gt; {:owner_type =&gt; 'Board', :status =&gt; &quot;voting&quot;}  )</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">voting_publications</span>
+      <span class="ruby-identifier">body_text</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">voting_publications</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">body_text</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;no&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">body_text</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot; publications requiring voting action, &quot;</span>
+    
+    <span class="ruby-identifier">body_text</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot; and &quot;</span>
+  
+    <span class="ruby-identifier">approved_publications</span> = <span class="ruby-identifier">board</span>.<span class="ruby-identifier">publications</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">'approved'</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">p</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>}.<span class="ruby-identifier">compact</span>
+    <span class="ruby-comment">#approved_publications = Publication.find_all_by_owner_id(board.id, :conditions =&gt; {:owner_type =&gt; &quot;Board&quot;, :status =&gt; &quot;approved&quot; }  )</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">approved_publications</span>
+      <span class="ruby-identifier">body_text</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">approved_publications</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">body_text</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;no&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">body_text</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot; approved publications waiting to be finalized.  &quot;</span>    
+    
+    
+    <span class="ruby-identifier">completed_publications</span> = <span class="ruby-identifier">board</span>.<span class="ruby-identifier">publications</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> (<span class="ruby-identifier">p</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">'committed'</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">'archived'</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">p</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>}.<span class="ruby-identifier">compact</span>
+    
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">completed_publications</span>
+      <span class="ruby-identifier">body_text</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">completed_publications</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">body_text</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;No&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">body_text</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot; publications have been committed.&quot;</span>
+    
+    
+    <span class="ruby-identifier">subject_line</span> = <span class="ruby-string">&quot;&quot;</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">community</span>
+      <span class="ruby-identifier">subject_line</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">community</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; &quot;</span>
+    <span class="ruby-keyword">end</span>  
+    <span class="ruby-identifier">subject_line</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;Board Publication Status Reminder &quot;</span> 
+    
+    <span class="ruby-identifier">addresses</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">address</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">address</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">address</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;&quot;</span>
+        <span class="ruby-keyword">begin</span>
+          <span class="ruby-constant">EmailerMailer</span>.<span class="ruby-identifier">deliver_send_email_out</span>(<span class="ruby-identifier">address</span>, <span class="ruby-identifier">subject_line</span>, <span class="ruby-identifier">body_text</span>)                       
+        <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+          <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span>(<span class="ruby-node">&quot;Error sending email: #{e.class.to_s}, #{e.to_s}&quot;</span>)
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>   
+  <span class="ruby-keyword">end</span>
+  
+  
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">community</span> 
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;Notifications sent to all &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">community</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; board members.&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;Notifications sent to all PE board members.&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">dashboard_url</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- send_board_reminder_emails-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- send_board_reminder_emails-method -->
 
     
       <div id="method-i-show" class="method-detail ">

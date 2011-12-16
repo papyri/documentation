@@ -78,6 +78,8 @@
     
     <li><a href="#method-i-add_member_page">#add_member_page</a>
     
+    <li><a href="#method-i-confirm_destroy">#confirm_destroy</a>
+    
     <li><a href="#method-i-create">#create</a>
     
     <li><a href="#method-i-destroy">#destroy</a>
@@ -511,6 +513,36 @@ submit to the community.</p>
 
         
       </div><!-- add_member_page-method -->
+
+    
+      <div id="method-i-confirm_destroy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">confirm_destroy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="confirm_destroy-source">
+            <pre><span class="ruby-comment"># File app/controllers/communities_controller.rb, line 223</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">confirm_destroy</span>
+    <span class="ruby-ivar">@community</span> = <span class="ruby-constant">Community</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- confirm_destroy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- confirm_destroy-method -->
 
     
       <div id="method-i-create" class="method-detail ">

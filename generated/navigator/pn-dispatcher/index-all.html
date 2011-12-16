@@ -100,6 +100,10 @@ Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatc
 <DT><A HREF="./info/papyri/dispatch/browse/facet/StringSearchFacet.html#addConstraints(java.util.Map)"><B>addConstraints(Map&lt;String, String[]&gt;)</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/StringSearchFacet.html" title="class in info.papyri.dispatch.browse.facet">StringSearchFacet</A>
 <DD>&nbsp;
+<DT><A HREF="./info/papyri/dispatch/browse/facet/IdentifierFacet.html#anyConstraintSet()"><B>anyConstraintSet()</B></A> - 
+Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/IdentifierFacet.html" title="class in info.papyri.dispatch.browse.facet">IdentifierFacet</A>
+<DD>Determines whether a constraint has been set on the <code>Facet</code> as a whole,
+ as opposed to simply on the particular <code>SearchConfiguration</code>
 <DT><A HREF="./info/papyri/dispatch/DispatcherServlet.html#apis(java.lang.String)"><B>apis(String)</B></A> - 
 Method in class info.papyri.dispatch.<A HREF="./info/papyri/dispatch/DispatcherServlet.html" title="class in info.papyri.dispatch">DispatcherServlet</A>
 <DD>&nbsp;
@@ -156,10 +160,8 @@ Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatc
 <DL>
 <DT><A HREF="./info/papyri/dispatch/browse/CollectionBrowser.html" title="class in info.papyri.dispatch.browse"><B>CollectionBrowser</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/package-summary.html">info.papyri.dispatch.browse</A><DD>Servlet enabling collection-browsing functionality
  
- Note that the nomenclature throughout this code is distinctive in the following ways:
- (i) The entities to be displayed are thought of as consisting of either <i>documents</i>, 
- or <i>collections</i> of documents - and note that the latter may have intermediate collections
- between them and the documents that comprise them.<DT><A HREF="./info/papyri/dispatch/browse/CollectionBrowser.html#CollectionBrowser()"><B>CollectionBrowser()</B></A> - 
+ The design of this servlet is very simple: it parses the request for paths of the form
+ /[collection][/series]?[/volume]? and translates these into SPARQL queries.<DT><A HREF="./info/papyri/dispatch/browse/CollectionBrowser.html#CollectionBrowser()"><B>CollectionBrowser()</B></A> - 
 Constructor for class info.papyri.dispatch.browse.<A HREF="./info/papyri/dispatch/browse/CollectionBrowser.html" title="class in info.papyri.dispatch.browse">CollectionBrowser</A>
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/browse/IdComparator.html#compare(java.lang.Object, java.lang.Object)"><B>compare(Object, Object)</B></A> - 
@@ -379,7 +381,8 @@ Method in class info.papyri.dispatch.browse.<A HREF="./info/papyri/dispatch/brow
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/browse/facet/Facet.html#getCSSSelectorID()"><B>getCSSSelectorID()</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A>
-<DD>&nbsp;
+<DD>Returns the <code>formName</code> member in lower case, to be used as an id value for
+ the HTML form control
 <DT><A HREF="./info/papyri/dispatch/browse/facet/StringSearchFacet.html#getCSSSelectorID()"><B>getCSSSelectorID()</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/StringSearchFacet.html" title="class in info.papyri.dispatch.browse.facet">StringSearchFacet</A>
 <DD>&nbsp;
@@ -406,7 +409,8 @@ Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatc
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/browse/facet/Facet.html#getDisplayValue(java.lang.String)"><B>getDisplayValue(String)</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A>
-<DD>&nbsp;
+<DD>Takes a raw facet value and formats it appropriately for display in the facet's 
+ HTML form control.
 <DT><A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html#getDisplayValue(java.lang.String)"><B>getDisplayValue(String)</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html" title="class in info.papyri.dispatch.browse.facet">HasImagesFacet</A>
 <DD>&nbsp;
@@ -453,7 +457,7 @@ Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatc
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/browse/facet/Facet.html#getFormNames()"><B>getFormNames()</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A>
-<DD>&nbsp;
+<DD>Returns the value(s) to be used for the name attribute on HTML form controls.
 <DT><A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html#getFormNames()"><B>getFormNames()</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html" title="class in info.papyri.dispatch.browse.facet">HasImagesFacet</A>
 <DD>&nbsp;
@@ -465,7 +469,7 @@ Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatc
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/browse/facet/StringSearchFacet.html#getHighlightString()"><B>getHighlightString()</B></A> - 
 Method in class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/StringSearchFacet.html" title="class in info.papyri.dispatch.browse.facet">StringSearchFacet</A>
-<DD>&nbsp;
+<DD>Returns the text to be highlighted for each of the <code>SearchConfiguration</code> objects.
 <DT><A HREF="./info/papyri/dispatch/browse/BrowseRecord.html#getHTML()"><B>getHTML()</B></A> - 
 Method in class info.papyri.dispatch.browse.<A HREF="./info/papyri/dispatch/browse/BrowseRecord.html" title="class in info.papyri.dispatch.browse">BrowseRecord</A>
 <DD>Returns an html representation of the Record.
@@ -559,7 +563,8 @@ Method in class info.papyri.dispatch.<A HREF="./info/papyri/dispatch/FileUtils.h
 <A NAME="_H_"><!-- --></A><H2>
 <B>H</B></H2>
 <DL>
-<DT><A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>HasImagesFacet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html#HasImagesFacet()"><B>HasImagesFacet()</B></A> - 
+<DT><A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>HasImagesFacet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD>Facet class for selecting records based on the availability of images within
+ papyri.info, online more generally, or in print publications.<DT><A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html#HasImagesFacet()"><B>HasImagesFacet()</B></A> - 
 Constructor for class info.papyri.dispatch.browse.facet.<A HREF="./info/papyri/dispatch/browse/facet/HasImagesFacet.html" title="class in info.papyri.dispatch.browse.facet">HasImagesFacet</A>
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/DispatcherRequestWrapper.ParameterEnumeration.html#hasMoreElements()"><B>hasMoreElements()</B></A> - 
@@ -588,7 +593,7 @@ Method in class info.papyri.dispatch.<A HREF="./info/papyri/dispatch/FileUtils.h
 <A NAME="_I_"><!-- --></A><H2>
 <B>I</B></H2>
 <DL>
-<DT><A HREF="./info/papyri/dispatch/browse/IdComparator.html" title="class in info.papyri.dispatch.browse"><B>IdComparator</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/package-summary.html">info.papyri.dispatch.browse</A><DD>&nbsp;<DT><A HREF="./info/papyri/dispatch/browse/IdComparator.html#IdComparator()"><B>IdComparator()</B></A> - 
+<DT><A HREF="./info/papyri/dispatch/browse/IdComparator.html" title="class in info.papyri.dispatch.browse"><B>IdComparator</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/package-summary.html">info.papyri.dispatch.browse</A><DD>Compares id values to order them both numerically and alphabetically.<DT><A HREF="./info/papyri/dispatch/browse/IdComparator.html#IdComparator()"><B>IdComparator()</B></A> - 
 Constructor for class info.papyri.dispatch.browse.<A HREF="./info/papyri/dispatch/browse/IdComparator.html" title="class in info.papyri.dispatch.browse">IdComparator</A>
 <DD>&nbsp;
 <DT><A HREF="./info/papyri/dispatch/browse/facet/IdentifierFacet.html" title="class in info.papyri.dispatch.browse.facet"><B>IdentifierFacet</B></A> - Class in <A HREF="./info/papyri/dispatch/browse/facet/package-summary.html">info.papyri.dispatch.browse.facet</A><DD><code>Facet</code> for selecting texts based on DDbDP/HGV series, APIS collection,

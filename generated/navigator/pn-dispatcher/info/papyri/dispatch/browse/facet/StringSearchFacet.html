@@ -107,7 +107,15 @@ Replicates the functioning of <code>info.papyri.dispatch.Search</code> in a
  Note that although the algorithm used for the search process is intended to
  replicate that defined in <code>info.papyri.dispatch.Search</code> it is implemented
  very differently. The logic for string-handling is all encapsulated in the inner 
- SearchConfiguration class, below and more specific documentation is provided there.
+ SearchConfiguration class, below, and more specific documentation is provided there.
+ 
+ One important difference between this subclass and other <code>Facet</code> subclasses
+ is that repeated complex (that is to say, involving more than one request parameter)
+ searches are possible. This means that search parameters must be ordered, both to 
+ ensure that they remain correctly correlated with each other (so that for example the
+ IGNORE_CAPS setting used in one search is not mistakenly applied to another) and so
+ that they can be displayed correctly. Most of the methods overriding <code>Facet</code> 
+ methods do so in order to provide this ordering functionality.
 <P>
 
 <P>
@@ -116,7 +124,8 @@ Replicates the functioning of <code>info.papyri.dispatch.Search</code> in a
   <DD>2011.08.19</DD>
 <DT><B>Author:</B></DT>
   <DD>thill</DD>
-<DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/Search.html" title="class in info.papyri.dispatch"><CODE>Search</CODE></A></DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../info/papyri/dispatch/Search.html" title="class in info.papyri.dispatch"><CODE>Search</CODE></A>, 
+<CODE>StringSearchFacet.SearchConfiguration</CODE></DL>
 <HR>
 
 <P>
@@ -206,7 +215,8 @@ Replicates the functioning of <code>info.papyri.dispatch.Search</code> in a
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/StringSearchFacet.html#getCSSSelectorID()">getCSSSelectorID</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the <code>formName</code> member in lower case, to be used as an id value for
+ the HTML form control</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -223,7 +233,8 @@ Replicates the functioning of <code>info.papyri.dispatch.Search</code> in a
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/StringSearchFacet.html#getDisplayValue(java.lang.String)">getDisplayValue</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;facetValue)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Takes a raw facet value and formats it appropriately for display in the facet's 
+ HTML form control.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -239,7 +250,7 @@ Replicates the functioning of <code>info.papyri.dispatch.Search</code> in a
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/StringSearchFacet.html#getFormNames()">getFormNames</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the value(s) to be used for the name attribute on HTML form controls.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -247,7 +258,7 @@ Replicates the functioning of <code>info.papyri.dispatch.Search</code> in a
 <TD><CODE><B><A HREF="../../../../../info/papyri/dispatch/browse/facet/StringSearchFacet.html#getHighlightString()">getHighlightString</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the text to be highlighted for each of the <code>SearchConfiguration</code> objects.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -390,11 +401,20 @@ getDisplayValue</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getDisplayValue</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;facetValue)</PRE>
 <DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayValue(java.lang.String)">Facet</A></CODE></B></DD>
+<DD>Takes a raw facet value and formats it appropriately for display in the facet's 
+ HTML form control.
+ 
+ Under most circumstances, the passed value itself will be appropriate for display;
+ some subclasses, however, may need to override this method to cope with particular
+ values requiring special treatment.
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getDisplayValue(java.lang.String)">getDisplayValue</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
 </DD>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD></DL>
 </DD>
 </DL>
 <HR>
@@ -464,11 +484,16 @@ getCSSSelectorID</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getCSSSelectorID</B>()</PRE>
 <DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getCSSSelectorID()">Facet</A></CODE></B></DD>
+<DD>Returns the <code>formName</code> member in lower case, to be used as an id value for
+ the HTML form control
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getCSSSelectorID()">getCSSSelectorID</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
 </DD>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD></DL>
 </DD>
 </DL>
 <HR>
@@ -499,11 +524,19 @@ getFormNames</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>[] <B>getFormNames</B>()</PRE>
 <DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFormNames()">Facet</A></CODE></B></DD>
+<DD>Returns the value(s) to be used for the name attribute on HTML form controls.
+ 
+ In most cases only one value is required, and will be tat of the <code>formName</code>
+ member. However, some facets have more than one HTML control - hence the need for 
+ this method to return an array of Strings, rather than a String.
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html#getFormNames()">getFormNames</A></CODE> in class <CODE><A HREF="../../../../../info/papyri/dispatch/browse/facet/Facet.html" title="class in info.papyri.dispatch.browse.facet">Facet</A></CODE></DL>
 </DD>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD></DL>
 </DD>
 </DL>
 <HR>
@@ -544,8 +577,11 @@ getHighlightString</H3>
 <PRE>
 public <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A> <B>getHighlightString</B>()</PRE>
 <DL>
+<DD>Returns the text to be highlighted for each of the <code>SearchConfiguration</code> objects.
+<P>
 <DD><DL>
-</DL>
+
+<DT><B>Returns:</B><DD></DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
