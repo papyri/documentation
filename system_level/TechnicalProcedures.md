@@ -334,3 +334,112 @@ Release Processes
 
 Miscellaneous Processes
 -----------------------
+
+1. Git Repository Maintenance
+    1. Run ‘git fetch --all’ on canonical repository. This should fetch all objects from remote repositories.
+    2. Run git repack on canonical repository – command is ‘git repack -a -l’. See ‘git help repack’.
+    3. Garbage collection on repositories – command is ‘git gc --no-prune‘. See ‘git help gc’.
+    4. The ‘git fsck’ command can be used to verify repository integrity. This also outputs a number of warnings due to zero-padded modes, which can be ignored.
+    5. When merging a branch like textchange or xwalk for testing use "git merge -s recursive -Xtheirs remote/branchname" - makes things easier (should always pick their side of the merge)
+
+2. SoSOL Maintenance
+    
+    Sometimes you may need to perform different kinds of maintenance on a production instance of SoSOL - changing or fixing things that there’s no UI for, for example. This can often be done through a using a production console, or interacting with the production MySQL database and data repositories directly.
+
+    **Production Console**
+
+    1. Switch to the directory the production SoSOL instance is running from (or where the production .war was built from). For NYU, this is done with ‘cd /data/papyri.info/sosol/editor/’.
+    2. Run ‘jruby script/console production’
+    3. You now have an interactive Ruby shell (a la ‘irb’) with access to the full SoSOL production environment - including data models and database access. Be cautious, particularly as the user you’re logged in as may not have write permission to the production Git repositories.
+
+    **MySQL Database**
+
+    MySQL credentials and database info can be found under the “production” section of config/database.yml for a production SoSOL instance. Use these credentials to connect with your favorite MySQL client - you may need to use SSH tunneling as well.
+
+    **Data Repositories**
+
+    SoSOL uses a number of Git repositories to store data. You may need to look in these to check branches, commits, repository integrity, etc. The root directory for this is set by the REPOSITORY_ROOT constant in SoSOL (usually in config/environment.rb), defaulting to db/git. For NYU production, this is /data/papyri.info/sosol/repo. This will then have under it canonical.git (the canonical repository, and normally the only full one - all the other repositories are bare clones of this repository which refer to it using object/info/alternates), as well as users, boards, and communities. You can switch to an individual repository to list branches or show objects. Keep in mind these repositories are bare and have no checkout, so some operations may be difficult to perform. If you must, you may be able to clone the repository somewhere else to obtain a checkout and do work then push the changes back, but it is recommended that you take the production instance of SoSOL offline for such work.
+
+2. PN Maintenance
+
+    See https://github.com/papyri/navigator (README.md).
+
+3. NYU Preservation
+
+    * weekly snapshots
+    * natural evolution of the data (snapshots activated by the passing of certain defined change thresholds)
+
+4. DDbDP/HGV SoSOL Records Relationship Management
+
+    TODO: How to verify data points between records stay in sync – not sure what this is – need help. Papies describe idnos, HC describe how Numbers Server aggregates.
+
+5. GitHub Account/Access
+
+    1. Open a browser and go to the GitHub website (https://github.com/).
+    2. Create an account on GitHub.
+    3. Ask one of the ‘papyri.info’ project GitHub administrators (currently Ryan Baumann or Hugh Cayless) to add your GitHub ID to the papyri organization/team on GitHub.
+    4. Set up ‘ssh’ access to the GitHub repositories by following either http://help.github.com/mac-set-up-git/, http://help.github.com/linux-set-up-git/, or http://help.github.com/win-set-up-git/ depending on your operating system.
+
+6. Create Local Git Repository for XSugar/SoSOL/IDP Data
+
+    1. Load Git on your machine.  See http://git-scm.com/ for the latest.
+    2. Create a directory where you would like to store your local copy of the Git repository (ex. “mkdir sosol” in terminal window or use your favorite file managing GUI interface)
+    3. Open a terminal window and go to the directory you created for this Git Repository (ex. “cd sosol”
+    4. The following steps are documented in a way to set up the Halsted repository as the default (origin) remote repository and adding the GitHub repository as an alternative remote (‘ghs’ in the examples).  You may set up to the GitHub repository as the default (origin) remote if that is your desire by ‘cloning’ from there instead.  The Halsted repository for ‘idp.data’ is set up to automatically pull updates from the GitHub repository.
+    5. Use Git command line to clone the repository you want. (ex. ”git clone ssh://halsted.vis.uky.edu/srv/git/protosite.git” will clone the SoSOL code repository from the Halsted server).  Substituting ‘xsugar’ for ‘protosite’ will get the xsugar repository and ‘idp.data’ for ‘protosite’ will get the IDP data repository.  This will create a default ‘master’ branch pointing to the default ‘origin/master’ remote branch on Halsted.  This process will also create another directory level in the directory you issued the command in (ex. “sosol/protosite”).  This sets up the following default remote and branch in your project directory ‘.git/config’ file for syncing your local and remote repositories.
+
+             [remote "origin"] 
+               fetch = +refs/heads/*:refs/remotes/origin/*
+               url = ssh://jfox@halsted.vis.uky.edu/srv/git/protosite.git
+
+             [branch "master"]
+               remote = origin
+               merge = refs/heads/master
+
+    6. Go to the new directory created based on which repository you cloned – xsugar, prototsite, or idp.data (ex. “cd protosite”).
+    7. git config --global user.name "Your Name Comes Here" - to set up your name as it will be seen when you do Git commands that modify the repository
+    8. git config --global user.email “you@yourdomain.com” - to set up your email as it will be seen when you do Git commands that modify the repository
+    9. If using Windows - git config --global core.autocrlf false – to keep Git from automatically converting line endings to CRLF in Windows.  But you will need to change your text editor to use LF line endings to match Linux/Mac.  This keeps diffs from showing every line changing just because of line endings and makes file sharing across multiple platforms a little nicer.
+    10. git config --global color.ui true - Git colors its output if the output goes to a terminal.  This is optional but will make output from some Git line commands more readable.
+    11. git config -l – to confirm your configuration settings
+    12. If you need to push changes to the GitHub repository, follow the GitHub Account/Access process to get write access to the GitHub repository and then execute this command – “git remote add ghs ssh://git@github.com/papyri/sosol.git“ (‘ghs’ in this command can be anything you want it to be – it will be the name of the remote used in Git commands) - this adds a remote of the GitHub repository so you may ‘fetch’ updates from this alternate public remote repository.  This sets up the following remote in your project directory ‘.git/config’ file for retrieving updates from this remote repository (or other Git actions).
+   
+              [remote "ghs"]
+                url = ssh://git@github.com/papyri/sosol.git
+                fetch = +refs/heads/*:refs/remotes/ghs/*
+
+    13. git remote – to confirm your remote is set up correctly (ex. should see ‘ghs’ and ‘origin’ where ‘ghs’ is the remote name used above).
+
+              jfox@jfox-laptop:~/ghs/protosite$ git remote
+              ghs
+              origin
+   
+    14. git fetch ghs  (where ‘ghs’ is the remote name used above) – to fetch the GitHub repository data to your local machine.
+    15. git remote show origin and git remote show ghs (where ‘ghs’ is the remote name used above) – to see how Git views the status of both remote repositories via your local machine.  This command shows the HEAD branch, remote branches, local branches configured for ‘git pull’, and local refs configured for ‘git push’, and the ‘up to date’ status of the local branches.  A ‘fast-forwardable’ status means the local branch has changes that can and will be pushed to the remote repository next time a ‘git push’ is performed on a branch and/or remote that points to that repository.  A ‘local out of date’ status means the remote branch contains updates that the local branch does not have and a ‘fetch’ of the remote repository needs to be performed (‘git fetch ghs’  where ‘ghs’ is the remote name) and then a merge of the ‘fetched’ remote branch into your local branch (‘git checkout metadata’ and then ‘git merge ghs/metadata’ would merge the ‘ghs’ remote ‘metadata’ branch into the local ‘metadata’ branch).  An ‘up to date’ status means your local branch matches the remote branch.
+         Before the merge:
+         After the merge:
+    16. You can ‘push’ updates to both the ‘origin’ and ‘ghs’ remote repositories with 1 command from any local branch with a matching name (ex. master, integration, etc.) by setting up a ‘public’ remote (or whatever name you want to give it) in your project directory ‘.git/config’ file.  Open the ‘.git/config’ file in your favorite text editor and copy a current remote and change it to contain all the URL’s you want to be able to push to at the same time. (see picture below for ex. of Halsted and GitHub).  Now if you ‘push’ to the ‘public’ remote (ex. ‘git checkout integration’ and then ‘git push public’), all your local branch updates will be pushed to the defined ‘public’ remote repositories with a matching branch name.  If you want to push just the branch you are on (checked out) to a specific remote, you may do that by specifying the remote and branch in the command.  Example – ‘git push ghs integration’ will push the ‘integration’ branch to the ‘ghs’ remote.
+    17. This gives you the basic set up for setting up and maintaining data/code in a Git repository.  As you learn more about Git, you may discover other ways of doing some of the same things.
+
+7. Key Interfaces
+
+    * NYU Preservation Team
+    * XSLT stylesheets
+    * RNG Schema
+    * Leiden+
+    * XSugar Grammar
+    * EpiDoc Standards
+    * Documentation
+        * On-Line Leiden+
+        * On-Line Translation
+        * On-Line Video
+        * EpiDoc
+        * System – PowerPoint and code
+    * HGV
+    * Search Interface
+    * Peer-projects
+    * User Notifications
+    * Automated Testing
+    * Regression Testing
+    * Archived Snapshots
+    * Repositories
