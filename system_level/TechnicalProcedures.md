@@ -227,3 +227,110 @@ Data Processes
 
 Release Processes
 -----------------
+
+1. Release Staging/Tagging
+
+    SoSOL normally uses a release_staging branch for tagged releases. This branch allows you to keep a branch which has the development branch(es) merged onto it, then external dependencies can be frozen on the release staging branch. Individual fixes from development branches can also then be cherry-picked during the release testing process. Don’t merge release_staging back onto your development branch, unless you also want externals frozen there.
+
+    1. Check out the release_staging branch, merge your development branch with e.g. “git merge integration”.
+    2. Freeze external dependencies by editing config/externals.yml. You can then update them on your local checkout with “cap local externals:setup”. Commit this change to the release_staging branch.
+    3. Use “git log -1” to get the commit SHA of the most recent revision on the release_staging branch. Use this to tag a release e.g.: git tag -m 'SoSOL v1.0.17-rc4' v1.0.17-rc4 5956ce86b39f5f73fc1f209e5575a72631ab4032
+    4. If incrementing version number instead of release candidate number (rc), tag last rc of previous version to be the final release for that version, e.g. “git show v1.0.17-rc4” to find the commit SHA, then: git tag -m 'SoSOL v1.0.17' v1.0.17 5956ce86b39f5f73fc1f209e5575a72631ab4032
+    5. Push the commit with “git push”, then the tag with “git push --tags”.
+
+2. Release Process
+
+    1. Make code, environment file, XSLT, stylesheet, etc. changes
+    2. Release to Development (go to https://github.com/papyri/sosol/tree/release_staging and look at the ‘switch tags’ dropdown to see the latest tag) (NYU http://dev.papyri.info)(follow Development Release Process – will include any environmental changes unique to the Development environment).
+    3. Papyrologists (and team) test the new functionality and regression test also – approximately 3 days
+    4. Changes OK?
+        * Yes – continue to next step
+        * No – return to step 1 (fix whatever the problem is and start release from the beginning)
+    5. Release to Production (NYU http://papyri.info) (follow Production Release Process – will include any environmental changes unique to the Production environment)
+    6. Papyrologists (and team) test the new functionality and regression test also
+    7. Changes OK?
+        * Yes – continue to next step
+        * No – return to step 1 (fix whatever the problem is and start release from the beginning)
+    8. Publish release/change notifications to ????? papylist? Blogs?
+   
+3. Development Release Process
+
+    1. ssh to dl-papyri, get a mysql dump of the idp database, copy it to dev-dl-papyri
+    2. ssh to dev-dl-papyri
+    3. /etc/init.d/dlib_tomcat_pi stop-tc (stop sosol)
+    4. /etc/init.d/dlib_tomcat_pi stop-xs (stop xsugar)
+    5. reload the database
+    6. cd /data/papyri.info/sosol
+    7. remove the repo/ dir and rsync a copy from prodo
+    8. chown repo to tomcat
+    9. Build SoSOL
+    10. cd /data/papyri.info/idp.data
+    11. sudo su tomcat
+    12. git pull github master (this assumes github is up-to-date)
+    13. cd /data/papyri.info/git/navigator
+    14. git fetch
+    15. git merge <release tag>
+    16. cd pn-mapping
+    17. lein run map-all
+    18. If there are solr schema changes, we might need to restart solr: /etc/init.d/dlib_tomcat_pi stop-solr / start-solr
+    19. cd ../pn-indexer
+    20. lein run
+    21. cd ../pn-dispatcher
+    22. mvn clean package
+    23. sudo mv target/dispatch.war /usr/local/tomcat-solr/webapps/
+    24. start sosol and xsugar
+
+4. Build SoSOL
+
+    1. cd editor/
+    2. *not sure - but may need something added somewhere in here to  Pull In Metadata Changes - used to be done during the ‘test’ release but that is going away.  So will need to pull in here or maybe work from the same branch - depends on how as to whether some ‘merge’ needs to take place in this process I think.*
+    3. git fetch
+    4. git merge <tag name>
+    5. cap local externals:setup
+    6. chown tomcat the xsugar standalone directory
+    7. (possibly rake db:migrate if there are databases changes)
+    8. jruby -S warble war
+    9. sudo rm /usr/local/tomcat/webapps/editor*
+    10. sudo mv editor.war /usr/local/tomcat/webapps/
+
+5. Production Release Process 
+
+    (This is a typical release, sometimes there are variations. Hugh likes to write up a release plan.)
+   
+    1. put up maintenance page (edit pi.conf file and restart apache)
+    2. stop sosol and xsugar
+    3. follow Re-Publish PN/PE Data
+    4. cd /data/papyri.info/sosol/editor
+    5. git fetch
+    6. git merge <release tag>
+    7. Build SoSOL
+    8. cd /data/papyri.info/git/navigator
+    9. git fetch
+    10. git merge <release tag>
+    11. Re-Publish PN/PE Data
+    12. cd pn-dispatcher
+    13. mvn clean package
+    14. sudo mv target/dispatch.war /usr/local/tomcat-solr/webapps/
+    15. start xsugar and sosol
+
+6. Pull In Metadata Changes
+
+    1. may need tweaked to be part of ‘development’ release or totally removed if decide to work from same branch
+    2. You now need to merge updates from the ‘master’ branch with updates from ‘metadata’ branch (maintained via the HGV support team).  There is a “metadata_integration’ branch on the Halsted repository for this purpose.
+    3. git checkout metadata_integration - to prepare for integrating the 2 branches and testing.  Doing ‘grb track metadata_integration’ will create the tracking branch for you if you had not previously set it up.
+    4. git pull – to make sure the branch is up to date
+    5. git merge ghs/metadata – to merge in changes from the GitHub ‘metadata’ branch.  Resolve any merge conflicts that occur.  (You may have a local ‘metadata’ branch and may merge from there if you have it up to date and prefer that method).
+    6. git merge master – to merge in changes from ‘master’ branch.  Resolve any merge conflicts that occur.
+    7. Stop the servers and do jruby –S rake – this will run all the automated regression tests.  Fix any errors that may occur.
+    8. Start up the servers to run the SoSOL application and do a cursory test to make sure it runs OK and changes you expect to appear are there, etc.
+    9. Once you are satisfied with the changes and the way the application is running, the updated ‘metadata_integration’ branch need to be ‘pushed’ out.  There are options here:
+        1. git push public – will attempt to push all local branches with matching names in the ‘public’ repositories
+        2. git push public metadata_integration – will attempt to push only the ‘metadata_integration’ local branch to the ‘public’ repositories (Halsted and GitHub)
+    10. git checkout master - to prepare for merging in the ‘metadata_integration ‘ branch 
+    11. git merge metadata_integration – to merge in changes from the ‘metadata_integeration’ branch.  Resolve any merge conflicts that occur.  This in effect, merges in any changes from the ‘metadata’ branch into the ‘master’ branch.
+    12. The updated ‘master’ branch needs to be ‘pushed’ out.  There are options here:
+         1. git push public – will attempt to push all local branches with matching names in the ‘public’ repositories.
+         2. git push public master – will attempt to push only the ‘master’ local branch to the ‘public’ repositories (Halsted and GitHub).
+
+Miscellaneous Processes
+-----------------------
