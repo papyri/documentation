@@ -4,9 +4,9 @@ PN/PE Technical Procedures
 PN Processes
 ------------
 
-1. PN Code Modification
+1. **PN Code Modification**
     1. TODO: Need to get from Hugh
-2. Peers: We change API and hurt someone
+2. **Peers: We change API and hurt someone**
     * Solr API
     * Trismegistos
     * ATOM Feed
@@ -14,7 +14,7 @@ PN Processes
 PE/SoSOL Processes
 ------------------
 
-1. SoSOL Code Modification
+1. **SoSOL Code Modification**
 
     See also `doc/README_FOR_APP`.
 
@@ -30,7 +30,7 @@ PE/SoSOL Processes
         * No – continue to next step
     7. Should be ready for the next execution of the Release Process.
 
-2. GUI Help Menu Change
+2. **GUI Help Menu Change**
     1. Files in the SoSOL project that contain code used specifically to create or link from the Text Help Menu are:
         * Controllers - helper_controller.rb, leiden_controller.rb
         * Model - leiden.rb
@@ -56,7 +56,7 @@ PE/SoSOL Processes
     4. Any changes made to the menu-for-applications.js file that was originally downloaded from http://www.dhtmlgoodies.com DHTML Suite/menu bar is marked with `jfox` and commented as to why
     5. Follow the SoSOL Code Modification process to change the above files and release them to the appropriate environments.
 
-3. UI and CSS
+3. **UI and CSS**
    
     Navigator (PN) and Editor(PE) use similar but different css. master.css is used by both. master_additions.css contains additions and alterations to master.css for the PN side.
    
@@ -69,7 +69,7 @@ PE/SoSOL Processes
      * siteurl/cross_site/sign_in_outfor just the sign in out links
      * siteurl/cross_site/advanced_create for just the advanced create link
 
-4. Leiden+ Change (text/translation)
+4. **Leiden+ Change (text/translation)**
     1. Open a terminal window and traverse to the `xsugar` directory (ex. `cd ~/gitsugar/xsugar`) where you have placed the XSugar Grammar file (see Create Local Git Repository for XSugar/SoSOL/IDP data for setting up a local repository that will sync with the Halsted and/or GitHub repositories).
     2. This process will be based on doing changes in the `master` branch.  As you get familiar with Git, there are other processes you may choose to use to create an `alternate` branch to make your changes in and then merge the `alternate` back into the `master`.  Example – `git checkout –b whatever` will create and checkout a new branch named `whatever` using the branch you are currently in (let`s say `master`) as a starting point.  You can make modifications in the `whatever` branch and test them.  Then `git checkout master` to return to the `master` branch.  A `git merge whatever` will then merge the changes from the `whatever` branch into the `master` branch`.
     3. Do a `git branch` command to see what branch you are in (`*` will be shown by active branch).  If you are not in the `master`, do a `git checkout master` to traverse there.
@@ -96,22 +96,22 @@ PE/SoSOL Processes
     14. Verify the changes are viewed as expected using XSLT Stylesheet by using the `preview` tab for the corresponding identifier (text or translation) in the SoSOL application.
     15. Leiden+ changes will be available at the next code release to the production environment when the `config/externals.yml` file on the `release_staging` branch is updated to point to the new XSugar Grammar commit containing your changes.
 
-5. Provide users ability to download a publication 
+5. **Provide users ability to download a publication**
    
     Added 'Download Copy' button to 'Overview' page and as 'Admin' function.
 
-6. Update `collection.rdf` during rename
+6. **Update `collection.rdf` during rename**
    
     Added new rename feature to SoSOL. On rename, if string is unknown to collection.rdf returns 'no-go' and invite entry of new human readable series (O.Abu Mina) and ddb title (e.g. o.abu.mina;;1). Uses entry to populate collection.rdf.
 
-7. Batch rename series
+7. **Batch rename series**
 
     When papyri.info already has records for a volume such as O.Stras. where the ddb-hybrid idno is e.g. o.stras;;23, the construction of the idno indicates that there is no volume number (subsequent volumes not expected). When, however, volume two of O.Stras. does appear (as it did), then within the system all o.stras;;#### have to be changed to o.stras;1;####. XSLT to do this transformation has to be created case by case. Thereafter commit to github. Then rerun of Numbers Server necessary. 
 
 Validation/Display Processes
 ----------------------------
 
-1. EpiDoc RNG Schema Change
+1. **EpiDoc RNG Schema Change**
 
     TODO: Need to link to EpiDoc community documentation on doing schema changes and publications.
 
@@ -131,7 +131,7 @@ Validation/Display Processes
     14. Make changes to the SoSOL preprocess XSLT to apply these same ‘mass updates’ to ‘user’ files using the XML Updates via SoSOL XSLT process.
     15. Does this likely affect core ‘papyrological conventions’? If so, alert editorial board to update.
 
-2. PN/SoSOL XSLT Display Stylesheet Modification
+2. **PN/SoSOL XSLT Display Stylesheet Modification**
     1. Update the portion(s) of the EpiDoc XSLT Display Stylesheet to modify the way the EpiDoc XML is displayed within PN/SoSOL.  This is located at https://epidoc.svn.sourceforge.net/svnroot/epidoc/trunk/example-p5-xslt/ - current authorized editors are Gabriel Bodard, Hugh Cayless, Tom Elliott or Noel Fiser. 
     2. Create a new tag for the modification made at https://epidoc.svn.sourceforge.net/svnroot/epidoc/tags/ 
     3. Let the PN and SoSOL development teams know what the new tag to include in the next production release.
@@ -141,7 +141,7 @@ Validation/Display Processes
 Data Processes
 --------------
 
-1. Data Modification
+1. **Data Modification**
 
     **XML Updates via SoSOL XSLT**
 
@@ -171,7 +171,7 @@ Data Processes
     9. Use the Re-publish PN/PE Data process to make the changes visible via PN and newly checked out PE files.
     10. Follow the XML Updates via SoSOL XSLT process to ensure the changes are applied to ‘user’ files that were not in the canonical repository when this ‘global’ change was made. 
 
-2. Modify Reverse Crosswalker/Crosswalker
+2. **Modify Reverse Crosswalker/Crosswalker**
 
     **Modify Crosswalk / What has to happen after the Crosswalker has been called to action?**
 
@@ -181,24 +181,24 @@ Data Processes
 
     The crosswalker applications are tools that need to be modified if an interface on either end (input or output) has changed....
 
-3. Detect and Resolve Git Update Conflicts
+3. **Detect and Resolve Git Update Conflicts**
 
     The automated sync process will fail in the case of a merge conflict, and sometimes merge conflicts occur during manual sync. These are flagged in the files, and the merge conflict must be resolved manually and committed.
 
-4. Add Data to Numbers Server
+4. **Add Data to Numbers Server**
 
     This assumes GitHub and canonical data have been merged.
 
     1. `cd /data/papyri.info/git/navigator/pn-mapping`
     2. `lein run map-all`
 
-5. Re-index PN Canonical Data
+5. **Re-index PN Canonical Data**
 
     1. changed sic/corr to orig/reg caused search to not work correctly. Hugh needed to change something and do a re-index. `^καγω^` 11 hits and `"και εγω"` 301 hits
     2. `cd /data/papyri.info/git/navigator/pn-indexer`
     3. `lein run`
 
-6. Re-publish PN/PE Data
+6. **Re-publish PN/PE Data**
 
     TODO: Details – believe this entails copying/cloning/merging/??? data from production SoSOL canonical to PN canonical, updating numbers server, and re-indexing for searching. (????)
 
@@ -220,7 +220,7 @@ Data Processes
     16. Re-index PN canonical data so new data will be searchable, etc.(follow Re-index PN Canonical Data)
     17. Bring SoSOL back online
 
-7. SoSOL Broken Publication
+7. **SoSOL Broken Publication**
 
     1. Withdraw button available on board member’s publication overview removes **all copies** of the submitted publication **for all boards**, including finalizing copies. This does not affect any commits to canonical that have already been finalized. This, in effect, clears out any inconsistent states that may arise in a publication and returns it to being unsubmitted.
     2. For publications this doesn‘t fix, see SoSOL maintenance.
@@ -228,7 +228,7 @@ Data Processes
 Release Processes
 -----------------
 
-1. Release Staging/Tagging
+1. **Release Staging/Tagging**
 
     SoSOL normally uses a release_staging branch for tagged releases. This branch allows you to keep a branch which has the development branch(es) merged onto it, then external dependencies can be frozen on the release staging branch. Individual fixes from development branches can also then be cherry-picked during the release testing process. Don’t merge release_staging back onto your development branch, unless you also want externals frozen there.
 
@@ -238,7 +238,7 @@ Release Processes
     4. If incrementing version number instead of release candidate number (rc), tag last rc of previous version to be the final release for that version, e.g. “git show v1.0.17-rc4” to find the commit SHA, then: git tag -m 'SoSOL v1.0.17' v1.0.17 5956ce86b39f5f73fc1f209e5575a72631ab4032
     5. Push the commit with “git push”, then the tag with “git push --tags”.
 
-2. Release Process
+2. **Release Process**
 
     1. Make code, environment file, XSLT, stylesheet, etc. changes
     2. Release to Development (go to https://github.com/papyri/sosol/tree/release_staging and look at the ‘switch tags’ dropdown to see the latest tag) (NYU http://dev.papyri.info)(follow Development Release Process – will include any environmental changes unique to the Development environment).
@@ -253,7 +253,7 @@ Release Processes
         * No – return to step 1 (fix whatever the problem is and start release from the beginning)
     8. Publish release/change notifications to ????? papylist? Blogs?
    
-3. Development Release Process
+3. **Development Release Process**
 
     1. ssh to dl-papyri, get a mysql dump of the idp database, copy it to dev-dl-papyri
     2. ssh to dev-dl-papyri
@@ -280,7 +280,7 @@ Release Processes
     23. sudo mv target/dispatch.war /usr/local/tomcat-solr/webapps/
     24. start sosol and xsugar
 
-4. Build SoSOL
+4. **Build SoSOL**
 
     1. cd editor/
     2. *not sure - but may need something added somewhere in here to  Pull In Metadata Changes - used to be done during the ‘test’ release but that is going away.  So will need to pull in here or maybe work from the same branch - depends on how as to whether some ‘merge’ needs to take place in this process I think.*
@@ -293,7 +293,7 @@ Release Processes
     9. sudo rm /usr/local/tomcat/webapps/editor*
     10. sudo mv editor.war /usr/local/tomcat/webapps/
 
-5. Production Release Process 
+5. **Production Release Process**
 
     (This is a typical release, sometimes there are variations. Hugh likes to write up a release plan.)
    
@@ -313,7 +313,7 @@ Release Processes
     14. sudo mv target/dispatch.war /usr/local/tomcat-solr/webapps/
     15. start xsugar and sosol
 
-6. Pull In Metadata Changes
+6. **Pull In Metadata Changes**
 
     1. may need tweaked to be part of ‘development’ release or totally removed if decide to work from same branch
     2. You now need to merge updates from the ‘master’ branch with updates from ‘metadata’ branch (maintained via the HGV support team).  There is a “metadata_integration’ branch on the Halsted repository for this purpose.
@@ -335,14 +335,14 @@ Release Processes
 Miscellaneous Processes
 -----------------------
 
-1. Git Repository Maintenance
+1. **Git Repository Maintenance**
     1. Run ‘git fetch --all’ on canonical repository. This should fetch all objects from remote repositories.
     2. Run git repack on canonical repository – command is ‘git repack -a -l’. See ‘git help repack’.
     3. Garbage collection on repositories – command is ‘git gc --no-prune‘. See ‘git help gc’.
     4. The ‘git fsck’ command can be used to verify repository integrity. This also outputs a number of warnings due to zero-padded modes, which can be ignored.
     5. When merging a branch like textchange or xwalk for testing use "git merge -s recursive -Xtheirs remote/branchname" - makes things easier (should always pick their side of the merge)
 
-2. SoSOL Maintenance
+2. **SoSOL Maintenance**
     
     Sometimes you may need to perform different kinds of maintenance on a production instance of SoSOL - changing or fixing things that there’s no UI for, for example. This can often be done through a using a production console, or interacting with the production MySQL database and data repositories directly.
 
@@ -360,27 +360,27 @@ Miscellaneous Processes
 
     SoSOL uses a number of Git repositories to store data. You may need to look in these to check branches, commits, repository integrity, etc. The root directory for this is set by the REPOSITORY_ROOT constant in SoSOL (usually in config/environment.rb), defaulting to db/git. For NYU production, this is /data/papyri.info/sosol/repo. This will then have under it canonical.git (the canonical repository, and normally the only full one - all the other repositories are bare clones of this repository which refer to it using object/info/alternates), as well as users, boards, and communities. You can switch to an individual repository to list branches or show objects. Keep in mind these repositories are bare and have no checkout, so some operations may be difficult to perform. If you must, you may be able to clone the repository somewhere else to obtain a checkout and do work then push the changes back, but it is recommended that you take the production instance of SoSOL offline for such work.
 
-2. PN Maintenance
+2. **PN Maintenance**
 
     See https://github.com/papyri/navigator (README.md).
 
-3. NYU Preservation
+3. **NYU Preservation**
 
     * weekly snapshots
     * natural evolution of the data (snapshots activated by the passing of certain defined change thresholds)
 
-4. DDbDP/HGV SoSOL Records Relationship Management
+4. **DDbDP/HGV SoSOL Records Relationship Management**
 
     TODO: How to verify data points between records stay in sync – not sure what this is – need help. Papies describe idnos, HC describe how Numbers Server aggregates.
 
-5. GitHub Account/Access
+5. **GitHub Account/Access**
 
     1. Open a browser and go to the GitHub website (https://github.com/).
     2. Create an account on GitHub.
     3. Ask one of the ‘papyri.info’ project GitHub administrators (currently Ryan Baumann or Hugh Cayless) to add your GitHub ID to the papyri organization/team on GitHub.
     4. Set up ‘ssh’ access to the GitHub repositories by following either http://help.github.com/mac-set-up-git/, http://help.github.com/linux-set-up-git/, or http://help.github.com/win-set-up-git/ depending on your operating system.
 
-6. Create Local Git Repository for XSugar/SoSOL/IDP Data
+6. **Create Local Git Repository for XSugar/SoSOL/IDP Data**
 
     1. Load Git on your machine.  See http://git-scm.com/ for the latest.
     2. Create a directory where you would like to store your local copy of the Git repository (ex. “mkdir sosol” in terminal window or use your favorite file managing GUI interface)
@@ -421,7 +421,7 @@ Miscellaneous Processes
     16. You can ‘push’ updates to both the ‘origin’ and ‘ghs’ remote repositories with 1 command from any local branch with a matching name (ex. master, integration, etc.) by setting up a ‘public’ remote (or whatever name you want to give it) in your project directory ‘.git/config’ file.  Open the ‘.git/config’ file in your favorite text editor and copy a current remote and change it to contain all the URL’s you want to be able to push to at the same time. (see picture below for ex. of Halsted and GitHub).  Now if you ‘push’ to the ‘public’ remote (ex. ‘git checkout integration’ and then ‘git push public’), all your local branch updates will be pushed to the defined ‘public’ remote repositories with a matching branch name.  If you want to push just the branch you are on (checked out) to a specific remote, you may do that by specifying the remote and branch in the command.  Example – ‘git push ghs integration’ will push the ‘integration’ branch to the ‘ghs’ remote.
     17. This gives you the basic set up for setting up and maintaining data/code in a Git repository.  As you learn more about Git, you may discover other ways of doing some of the same things.
 
-7. Key Interfaces
+7. **Key Interfaces**
 
     * NYU Preservation Team
     * XSLT stylesheets
