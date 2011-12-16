@@ -110,3 +110,120 @@ PE/SoSOL Processes
 
 Validation/Display Processes
 ----------------------------
+
+1. EpiDoc RNG Schema Change
+
+    TODO: Need to link to EpiDoc community documentation on doing schema changes and publications.
+
+    1. Discuss and coordinate proposed changes with the wider EpiDoc community via the Markup list.
+    2. Coordinate with any other EpiDoc projects that are actively modifying the schema and then update EpiDoc RNG schema – located at http://epidoc.svn.sourceforge.net/viewvc/epidoc/trunk/schema/tei-epidoc.rng - to implement the desired changes. Methods for making these changes are provided in the README.txt file in the same SVN folder. The result will become the latest development version, which you should upload to http://www.stoa.org/epidoc/schema/dev/tei-epidoc.rng. A concurrent notice must be sent to the Markup list outlining the changes and reporting the update to the public dev version of the schema.
+    3. Once stable/tested, copy changes made to EpiDoc RNG to primary public server – located at http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng - current authorized editors are Gabriel Bodard, Hugh Cayless, Tom Elliott or Noel Fiser - also related to #713
+    4. Update EpiDoc Guidelines (coordinate with wider EpiDoc community) – located at http://www.stoa.org/epidoc/gl/dev/toc.html - current authorized editors are Gabriel Bodard, Tom Elliott, Ryan Baumann – are these right?
+    5. Alert Gabriel Bodard that EpiDoc Cheatsheet may need to be revised. It is located at http://epidoc.svn.sourceforge.net/viewvc/epidoc/trunk/guidelines/msword/cheatsheet.doc - current 
+    6. Does this affect the PN/SoSOL XSLT Display, indexing, or mapping stylesheets?  If so coordinate and carry out changes to the example EpiDoc stylesheets and propagate them through the PN/SoSOL system. See the PN/SoSOL XSLT Display Stylesheet Modification process.
+    7. Does this likely affect the Leiden+ Syntax/Grammar? Coordinate and execute any needed updates in collaboration with the Editorial board(s) and development team: Leiden+ Change (text/translation).
+    8. Does this affect the Leiden+ Syntax Documentation? If so, coordinate with Editorial board so that they update the documentation using the Leiden+/Translation Leiden+ Documentation Change process if it does
+    9. Does this affect the Leiden+ Helpers? If so, update the Helpers using the GUI Help Menu Change process if it does
+    10. Does this affect the “new document” templates in SoSOL? If so, update. Ryan see comment.
+    11. Notify Heidelberg of the change so that they can check and, if necessary, carry out the Modify Reverse Crosswalker/Crosswalker process if needed.
+    12. Notify the Editorial board so that they can publish appropriate (their judgment) change notice(s) to active users 
+    13. Do any mass updates needed to the Git Repository XML using the Global XML Updates process.  
+    14. Make changes to the SoSOL preprocess XSLT to apply these same ‘mass updates’ to ‘user’ files using the XML Updates via SoSOL XSLT process.
+    15. Does this likely affect core ‘papyrological conventions’? If so, alert editorial board to update.
+
+2. PN/SoSOL XSLT Display Stylesheet Modification
+    1. Update the portion(s) of the EpiDoc XSLT Display Stylesheet to modify the way the EpiDoc XML is displayed within PN/SoSOL.  This is located at https://epidoc.svn.sourceforge.net/svnroot/epidoc/trunk/example-p5-xslt/ - current authorized editors are Gabriel Bodard, Hugh Cayless, Tom Elliott or Noel Fiser. 
+    2. Create a new tag for the modification made at https://epidoc.svn.sourceforge.net/svnroot/epidoc/tags/ 
+    3. Let the PN and SoSOL development teams know what the new tag to include in the next production release.
+    4. SoSOL team switches to tag, diffing start-edition.xsl against the previous tag to see if any includes from the calling templates at https://github.com/papyri/sosol/blob/master/data/xslt/pn/start-div-portlet.xsl and https://github.com/papyri/sosol/blob/master/data/xslt/pn/start-divtrans-portlet.xsl need to be changed.
+    5. Merge changes into pn-xslt - notify Hugh/Tim that this needs to be done.
+
+Data Processes
+--------------
+
+1. Data Modification
+
+    **XML Updates via SoSOL XSLT**
+
+    1. Changes applied via the SoSOL application before saving a text or translation XML file.
+    2. These changes are applied to the XML file via a XSLT stylesheet maintained as part of the SoSOL application.  These stylesheets can be found in the SoSOL code directory at: 
+        * text = data/xslt/ddb/preprocess.xsl 
+        * translation = data/xslt/translation/preprocess.xsl
+    3. Any changes needed may be added to the file(s) above and released to the production environment using the normal Release Process.
+    4. Many changes found here are first applied via the Global XML Updates process and then added here to catch any ‘user’ files that were not in the canonical repository when the ‘global’ change was made.
+    5. In-process texts will get this XSLT applied automatically whenever the set_xml_content method is called, which for translations and texts is what calls the pre-processing. Since part of automatically updating the revisionDesc during finalization now does this, this should happen transparently for finalized texts.
+    6. *What’s the regime for sun-setting such patches so they’re not left hanging around in the save step?*
+    7. *There was a proposed mechanism for notifying users of such modifications, but where this should go is ambiguous. At one point the Digital Papyrology blog and/or some sort of “news” on the papyri.info home page was proposed. Josh: still desired?*
+
+    **Global XML Updates**
+
+    1. Global change applied to all canonical XML files that meet the criteria – must have a comment added into the change history in the XML file (‘<change>’ tag inside ‘<revisionDesc>’ tag)
+    2. Usually applied using an XLST style sheet ran against the canonical repository XML files.
+    3. If you have not done it before, use the Create Local Git Repository for XSugar/SoSOL/IDP data process to create a local copy of the ‘idp.data’ repository.
+    4. Make sure you are on the ‘master’ branch and it is up to date (‘git checkout master’ and then ‘git pull’).
+    5. Create a new branch to apply your changes to from the ‘master’ branch (‘git checkout –b makechanges’.
+    6. Apply the XSLT to XML files you need to update in the appropriate working directory
+        * Text files = DDB_EpiDoc_XML directory
+        * Translation files = HGV_trans_EpiDoc directory
+        * HGV = HGV_meta_EpiDoc directory
+    7. Validate the XSLT performed the changes you wanted and no other extraneous ones occurred.
+    8. Return to the ‘master’ branch and merge the branch with the changes into the ‘master’ branch (‘git checkout master’ and ‘git merge makechanges’ based on example above).
+    9. Use the Re-publish PN/PE Data process to make the changes visible via PN and newly checked out PE files.
+    10. Follow the XML Updates via SoSOL XSLT process to ensure the changes are applied to ‘user’ files that were not in the canonical repository when this ‘global’ change was made. 
+
+2. Modify Reverse Crosswalker/Crosswalker
+
+    **Modify Crosswalk / What has to happen after the Crosswalker has been called to action?**
+
+    * Commit recently crosswalked data to master branch of idp.data repository
+    * Synchronise all existing mirrors of idp.data repository
+    * Call number server to index the new stuff → Hugh
+
+    The crosswalker applications are tools that need to be modified if an interface on either end (input or output) has changed....
+
+3. Detect and Resolve Git Update Conflicts
+
+    The automated sync process will fail in the case of a merge conflict, and sometimes merge conflicts occur during manual sync. These are flagged in the files, and the merge conflict must be resolved manually and committed.
+
+4. Add Data to Numbers Server
+
+    This assumes GitHub and canonical data have been merged.
+
+    1. `cd /data/papyri.info/git/navigator/pn-mapping`
+    2. `lein run map-all`
+
+5. Re-index PN Canonical Data
+
+    1. changed sic/corr to orig/reg caused search to not work correctly. Hugh needed to change something and do a re-index. `^καγω^` 11 hits and `"και εγω"` 301 hits
+    2. `cd /data/papyri.info/git/navigator/pn-indexer`
+    3. `lein run`
+
+6. Re-publish PN/PE Data
+
+    TODO: Details – believe this entails copying/cloning/merging/??? data from production SoSOL canonical to PN canonical, updating numbers server, and re-indexing for searching. (????)
+
+    1. Take SoSOL offline so no new changes can be made
+    2. cd /data/papyri.info/idp.data
+    3. sudo su tomcat
+    4. git pull canonical master
+    5. git pull github master
+    6. There may be merge conflicts, if so, they need to be resolved and committed
+    7. git push canonical (may be slow if it triggers a garbage collection)
+    8. git push github
+    9. cd /data/papyri.info/sosol/repo
+    10. run git --git-dir=canonical.git gc --no-prune
+    11. cd boards
+    12. find . -name "*.git" -exec git --git-dir="{}" gc --no-prune \;
+    13. cd ../users
+    14. find . -name "*.git" -exec git --git-dir="{}" gc --no-prune \; (this last may take a very long time—sometimes I just do Josh, James, and other board members)
+    15. Update numbers server with new data just merged ( follow Add Data to Numbers Server )
+    16. Re-index PN canonical data so new data will be searchable, etc.(follow Re-index PN Canonical Data)
+    17. Bring SoSOL back online
+
+7. SoSOL Broken Publication
+
+    1. Withdraw button available on board member’s publication overview removes **all copies** of the submitted publication **for all boards**, including finalizing copies. This does not affect any commits to canonical that have already been finalized. This, in effect, clears out any inconsistent states that may arise in a publication and returns it to being unsubmitted.
+    2. For publications this doesn‘t fix, see SoSOL maintenance.
+
+Release Processes
+-----------------
