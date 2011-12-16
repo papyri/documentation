@@ -1,3 +1,8 @@
+---
+layout: default
+title: PN/PE Technical Procedures
+---
+
 PN/PE Technical Procedures
 ==============================
 
