@@ -56,7 +56,7 @@ PE/SoSOL Processes <a id="PE"></a>
 
 1. **SoSOL Code Modification**
 
-    See also `doc/README_FOR_APP`.
+    See also [`doc/README_FOR_APP`](https://github.com/papyri/sosol/blob/master/doc/README_FOR_APP).
 
     1. Set up a local repository for SoSOL to make modifications in using the Create Local Git Repository for XSugar/SoSOL/IDP data process. 
     2. Use your favorite text editor/IDE to make changes to file(s) in your local directory (yourdirectory/protosite)
@@ -403,7 +403,7 @@ Miscellaneous Processes <a id="misc"></a>
 
 2. **PN Maintenance**
 
-    See https://github.com/papyri/navigator (README.md).
+    See [Navigator README](https://github.com/papyri/navigator/blob/master/README.md).
 
 3. **NYU Preservation**
 
