@@ -61,7 +61,7 @@ PE/SoSOL Processes <a id="PE"></a>
 
 1. **SoSOL Code Modification**
 
-    See also `doc/README_FOR_APP`.
+    See also [`doc/README_FOR_APP`](https://github.com/papyri/sosol/blob/master/doc/README_FOR_APP).
 
     1. Set up a local repository for SoSOL to make modifications in using the Create Local Git Repository for XSugar/SoSOL/IDP data process. 
     2. Use your favorite text editor/IDE to make changes to file(s) in your local directory (yourdirectory/protosite)
@@ -99,7 +99,7 @@ PE/SoSOL Processes <a id="PE"></a>
         * Javascripts – under ddb_identifiers directory =  commentary.haml - contains javascript besides the Rails view code - functions generateFrontmatterCommentaryForm and generateCommentaryForm dynamically build the menu when needed
         * Javascripts - commentary.js, confirm.js, menu-for-applications.js
         * Stylesheets – helper.css, menu-bar.css, menu-item.css 
-    4. Any changes made to the menu-for-applications.js file that was originally downloaded from http://www.dhtmlgoodies.com DHTML Suite/menu bar is marked with `jfox` and commented as to why
+    4. Any changes made to the menu-for-applications.js file that was originally downloaded from <http://www.dhtmlgoodies.com> DHTML Suite/menu bar is marked with `jfox` and commented as to why
     5. Follow the SoSOL Code Modification process to change the above files and release them to the appropriate environments.
 
 3. **UI and CSS**
@@ -134,7 +134,7 @@ PE/SoSOL Processes <a id="PE"></a>
         * update the `rakefile` file in the `xsugar` directory to point to back to the regression testing file – change `FileList["test/testquick_*.rb"]` to `FileList["test/test_*.rb"]` (approximately line 9)
         * in a terminal window at the `xsugar` directory use command line to run a regression test (ex. `jruby -S rake >> rakregress0311_v01.txt` executes a test with the results sent to file `rakregress0311_v01.txt` in the `xsugar` directory – leave off the `rake >> rakegress0311_v01.txt` and the results will shown in your terminal window)
         * view the results – if no errors, continue to the next step, otherwise make corrections and return to the previous step to run the test again or possibly to the `quick` test step if you need to start over with new Leiden+
-        * You may review website http://www.brics.dk/xsugar/examples.html to see examples of how to test in native java if you prefer – but the method above is based on files/processes used in the SoSOL application.
+        * You may review the website <http://www.brics.dk/xsugar/examples.html> to see examples of how to test in native java if you prefer – but the method above is based on files/processes used in the SoSOL application.
     10. Commit the changes to the grammar and regression test case files (ex. `git commit -a -m "commit message here" ` command will commit all non-committed changes in the directory with the message you enter)
     11. Push the changes out to the Halsted and GitHub repositories by doing the `git push public` command where `public` is a remote pointing to URL`s for both Halsted and GitHub.
     12. Does this affect the Leiden+ Helpers? – Update using the GUI Help Menu Change process if it does
@@ -162,10 +162,10 @@ Validation/Display Processes <a id="validation"></a>
     TODO: Need to link to EpiDoc community documentation on doing schema changes and publications.
 
     1. Discuss and coordinate proposed changes with the wider EpiDoc community via the Markup list.
-    2. Coordinate with any other EpiDoc projects that are actively modifying the schema and then update EpiDoc RNG schema – located at http://epidoc.svn.sourceforge.net/viewvc/epidoc/trunk/schema/tei-epidoc.rng - to implement the desired changes. Methods for making these changes are provided in the README.txt file in the same SVN folder. The result will become the latest development version, which you should upload to http://www.stoa.org/epidoc/schema/dev/tei-epidoc.rng. A concurrent notice must be sent to the Markup list outlining the changes and reporting the update to the public dev version of the schema.
-    3. Once stable/tested, copy changes made to EpiDoc RNG to primary public server – located at http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng - current authorized editors are Gabriel Bodard, Hugh Cayless, Tom Elliott or Noel Fiser - also related to #713
-    4. Update EpiDoc Guidelines (coordinate with wider EpiDoc community) – located at http://www.stoa.org/epidoc/gl/dev/toc.html - current authorized editors are Gabriel Bodard, Tom Elliott, Ryan Baumann – are these right?
-    5. Alert Gabriel Bodard that EpiDoc Cheatsheet may need to be revised. It is located at http://epidoc.svn.sourceforge.net/viewvc/epidoc/trunk/guidelines/msword/cheatsheet.doc - current 
+    2. Coordinate with any other EpiDoc projects that are actively modifying the schema and then update EpiDoc RNG schema – located at <http://epidoc.svn.sourceforge.net/viewvc/epidoc/trunk/schema/tei-epidoc.rng> - to implement the desired changes. Methods for making these changes are provided in the README.txt file in the same SVN folder. The result will become the latest development version, which you should upload to <http://www.stoa.org/epidoc/schema/dev/tei-epidoc.rng>. A concurrent notice must be sent to the Markup list outlining the changes and reporting the update to the public dev version of the schema.
+    3. Once stable/tested, copy changes made to EpiDoc RNG to primary public server – located at <http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng> - current authorized editors are Gabriel Bodard, Hugh Cayless, Tom Elliott or Noel Fiser - also related to #713
+    4. Update EpiDoc Guidelines (coordinate with wider EpiDoc community) – located at <http://www.stoa.org/epidoc/gl/dev/toc.html> - current authorized editors are Gabriel Bodard, Tom Elliott, Ryan Baumann
+    5. Alert Gabriel Bodard that EpiDoc Cheatsheet may need to be revised. It is located at <http://epidoc.svn.sourceforge.net/viewvc/epidoc/trunk/guidelines/msword/cheatsheet.doc> - current 
     6. Does this affect the PN/SoSOL XSLT Display, indexing, or mapping stylesheets?  If so coordinate and carry out changes to the example EpiDoc stylesheets and propagate them through the PN/SoSOL system. See the PN/SoSOL XSLT Display Stylesheet Modification process.
     7. Does this likely affect the Leiden+ Syntax/Grammar? Coordinate and execute any needed updates in collaboration with the Editorial board(s) and development team: Leiden+ Change (text/translation).
     8. Does this affect the Leiden+ Syntax Documentation? If so, coordinate with Editorial board so that they update the documentation using the Leiden+/Translation Leiden+ Documentation Change process if it does
@@ -178,10 +178,10 @@ Validation/Display Processes <a id="validation"></a>
     15. Does this likely affect core 'papyrological conventions'? If so, alert editorial board to update.
 
 2. **PN/SoSOL XSLT Display Stylesheet Modification**
-    1. Update the portion(s) of the EpiDoc XSLT Display Stylesheet to modify the way the EpiDoc XML is displayed within PN/SoSOL.  This is located at https://epidoc.svn.sourceforge.net/svnroot/epidoc/trunk/example-p5-xslt/ - current authorized editors are Gabriel Bodard, Hugh Cayless, Tom Elliott or Noel Fiser. 
-    2. Create a new tag for the modification made at https://epidoc.svn.sourceforge.net/svnroot/epidoc/tags/ 
+    1. Update the portion(s) of the EpiDoc XSLT Display Stylesheet to modify the way the EpiDoc XML is displayed within PN/SoSOL.  This is located at <https://epidoc.svn.sourceforge.net/svnroot/epidoc/trunk/example-p5-xslt/> - current authorized editors are Gabriel Bodard, Hugh Cayless, Tom Elliott or Noel Fiser. 
+    2. Create a new tag for the modification made at <https://epidoc.svn.sourceforge.net/svnroot/epidoc/tags/>
     3. Let the PN and SoSOL development teams know what the new tag to include in the next production release.
-    4. SoSOL team switches to tag, diffing start-edition.xsl against the previous tag to see if any includes from the calling templates at https://github.com/papyri/sosol/blob/master/data/xslt/pn/start-div-portlet.xsl and https://github.com/papyri/sosol/blob/master/data/xslt/pn/start-divtrans-portlet.xsl need to be changed.
+    4. SoSOL team switches to tag during Release Process, `cap local externals:setup` updates the local copy to the tag, [DDB preview stylesheet calls EpiDoc stylesheets](https://github.com/papyri/sosol/blob/master/data/xslt/ddb/preview.xsl)
     5. Merge changes into pn-xslt - notify Hugh/Tim that this needs to be done.
 
 Data Processes <a id="data"></a>
@@ -287,12 +287,12 @@ Release Processes <a id="release"></a>
 2. **Release Process**
 
     1. Make code, environment file, XSLT, stylesheet, etc. changes
-    2. Release to Development (go to https://github.com/papyri/sosol/tree/release_staging and look at the "switch tags" dropdown to see the latest tag) (NYU http://dev.papyri.info)(follow Development Release Process – will include any environmental changes unique to the Development environment).
+    2. Release to Development (NYU <http://dev.papyri.info>) (go to <https://github.com/papyri/sosol/tree/release_staging> and look at the "switch tags" dropdown to see the latest tag) (follow Development Release Process – will include any environmental changes unique to the Development environment).
     3. Papyrologists (and team) test the new functionality and regression test also – approximately 3 days
     4. Changes OK?
         * Yes – continue to next step
         * No – return to step 1 (fix whatever the problem is and start release from the beginning)
-    5. Release to Production (NYU http://papyri.info) (follow Production Release Process – will include any environmental changes unique to the Production environment)
+    5. Release to Production (NYU <http://papyri.info>) (follow Production Release Process – will include any environmental changes unique to the Production environment)
     6. Papyrologists (and team) test the new functionality and regression test also
     7. Changes OK?
         * Yes – continue to next step
@@ -408,7 +408,7 @@ Miscellaneous Processes <a id="misc"></a>
 
 2. **PN Maintenance**
 
-    See https://github.com/papyri/navigator (README.md).
+    See [Navigator README](https://github.com/papyri/navigator/blob/master/README.md).
 
 3. **NYU Preservation**
 
@@ -421,14 +421,14 @@ Miscellaneous Processes <a id="misc"></a>
 
 5. **GitHub Account/Access**
 
-    1. Open a browser and go to the GitHub website (https://github.com/).
+    1. Open a browser and go to the GitHub website (<https://github.com/>).
     2. Create an account on GitHub.
     3. Ask one of the "papyri.info" project GitHub administrators (currently Ryan Baumann or Hugh Cayless) to add your GitHub ID to the papyri organization/team on GitHub.
-    4. Set up `ssh` access to the GitHub repositories by following either http://help.github.com/mac-set-up-git/, http://help.github.com/linux-set-up-git/, or http://help.github.com/win-set-up-git/ depending on your operating system.
+    4. Set up `ssh` access to the GitHub repositories by following either <http://help.github.com/mac-set-up-git/>, <http://help.github.com/linux-set-up-git/>, or <http://help.github.com/win-set-up-git/> depending on your operating system.
 
 6. **Create Local Git Repository for XSugar/SoSOL/IDP Data**
 
-    1. Load Git on your machine.  See http://git-scm.com/ for the latest.
+    1. Load Git on your machine.  See <http://git-scm.com/> for the latest.
     2. Create a directory where you would like to store your local copy of the Git repository (ex. `mkdir sosol` in terminal window or use your favorite file managing GUI interface)
     3. Open a terminal window and go to the directory you created for this Git Repository (ex. `cd sosol`
     4. The following steps are documented in a way to set up the Halsted repository as the default (origin) remote repository and adding the GitHub repository as an alternative remote ("ghs" in the examples).  You may set up to the GitHub repository as the default (origin) remote if that is your desire by "cloning" from there instead.  The Halsted repository for "idp.data" is set up to automatically pull updates from the GitHub repository.
