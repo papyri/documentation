@@ -1,7 +1,47 @@
 PN/PE Technical Procedures
 ==============================
 
-PN Processes
+* [PN Processes](#PN)
+    * PN Code Modification
+    * Peers
+* [PE/SoSOL Processes](#PE)
+    * SoSOL Code Modification
+    * GUI Help Menu Change
+    * UI and CSS
+    * Leiden+ Change (text/translation)
+    * Provide users ability to download a publication
+    * Update collection.rdf during rename
+    * Batch Rename Series
+* [Validation/Display Processes](#validation)
+    * EpiDoc RNG Schema Change
+    * PN/SoSOL XSLT Display Stylesheet Modification
+* [Data Processes](#data)
+    * Data Modification
+        * XML Updates via SoSOL XSLT
+        * Global XML Updates
+    * Modify Reverse Crosswalker/Crosswalker
+    * Detect and Resolve Git Update Conflicts
+    * Add Data to Numbers Server
+    * Re-index PN Canonical Data
+    * Re-publish PN/PE Data
+    * SoSOL Broken Publication
+* [Release Processes](#release)
+    * Release Process
+    * Development Release Process
+    * Build SoSOL
+    * Production Release Process
+    * Pull in Metadata Changes
+* [Miscellaneous Processes](#misc)
+    * Git Repository Maintenance
+    * SoSOL Maintenance
+    * PN Maintenance
+    * NYU Preservation
+    * DDbDP/HGV SoSOL Records Relationship Management
+    * GitHub Account/Access
+    * Create Local Git Repository for XSugar/SoSOL/IDP Data
+    * Key Interfaces
+
+PN Processes <a id="PN"></a>
 ------------
 
 1. **PN Code Modification**
@@ -11,7 +51,7 @@ PN Processes
     * Trismegistos
     * ATOM Feed
 
-PE/SoSOL Processes
+PE/SoSOL Processes <a id="PE"></a>
 ------------------
 
 1. **SoSOL Code Modification**
@@ -109,7 +149,7 @@ PE/SoSOL Processes
 
     When papyri.info already has records for a volume such as O.Stras. where the ddb-hybrid idno is e.g. o.stras;;23, the construction of the idno indicates that there is no volume number (subsequent volumes not expected). When, however, volume two of O.Stras. does appear (as it did), then within the system all o.stras;;#### have to be changed to o.stras;1;####. XSLT to do this transformation has to be created case by case. Thereafter commit to github. Then rerun of Numbers Server necessary. 
 
-Validation/Display Processes
+Validation/Display Processes <a id="validation"></a>
 ----------------------------
 
 1. **EpiDoc RNG Schema Change**
@@ -139,7 +179,7 @@ Validation/Display Processes
     4. SoSOL team switches to tag, diffing start-edition.xsl against the previous tag to see if any includes from the calling templates at https://github.com/papyri/sosol/blob/master/data/xslt/pn/start-div-portlet.xsl and https://github.com/papyri/sosol/blob/master/data/xslt/pn/start-divtrans-portlet.xsl need to be changed.
     5. Merge changes into pn-xslt - notify Hugh/Tim that this needs to be done.
 
-Data Processes
+Data Processes <a id="data"></a>
 --------------
 
 1. **Data Modification**
@@ -226,7 +266,7 @@ Data Processes
     1. Withdraw button available on board member's publication overview removes **all copies** of the submitted publication **for all boards**, including finalizing copies. This does not affect any commits to canonical that have already been finalized. This, in effect, clears out any inconsistent states that may arise in a publication and returns it to being unsubmitted.
     2. For publications this doesn't fix, see SoSOL maintenance.
 
-Release Processes
+Release Processes <a id="release"></a>
 -----------------
 
 1. **Release Staging/Tagging**
@@ -333,7 +373,7 @@ Release Processes
          1. git push public – will attempt to push all local branches with matching names in the "public" repositories.
          2. git push public master – will attempt to push only the "master" local branch to the "public" repositories (Halsted and GitHub).
 
-Miscellaneous Processes
+Miscellaneous Processes <a id="misc"></a>
 -----------------------
 
 1. **Git Repository Maintenance**
