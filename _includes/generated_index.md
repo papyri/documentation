@@ -3,3 +3,5 @@
 * [RXSugar library documentation](generated/xsugar/rxsugar)
 * [pn-dispatcher documentation](generated/navigator/pn-dispatcher)
 * [pn-sync documentation](generated/navigator/pn-sync)
+* [pn-indexer documentation](generated/navigator/pn-indexer)
+* [pn-mapping documentation](generated/navigator/pn-mapping)
