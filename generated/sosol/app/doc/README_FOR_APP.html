@@ -277,13 +277,77 @@
 
 <div id="documentation" class="description">
   
+<h1 id="label-App+Structure">App Structure</h1>
+
+<h2 id="label-File+Structure">File Structure</h2>
+
+<pre class="ruby"><span class="ruby-identifier">app</span><span class="ruby-operator">/</span>                  <span class="ruby-identifier">application</span> <span class="ruby-identifier">code</span>
+  <span class="ruby-identifier">controllers</span><span class="ruby-operator">/</span>        <span class="ruby-identifier">controller</span> <span class="ruby-identifier">code</span>
+  <span class="ruby-identifier">helpers</span><span class="ruby-operator">/</span>            <span class="ruby-identifier">shared</span> <span class="ruby-identifier">helper</span> <span class="ruby-identifier">code</span>
+  <span class="ruby-identifier">models</span><span class="ruby-operator">/</span>             <span class="ruby-identifier">model</span> <span class="ruby-identifier">code</span>
+  <span class="ruby-identifier">views</span><span class="ruby-operator">/</span>              <span class="ruby-identifier">view</span> <span class="ruby-identifier">code</span><span class="ruby-operator">/</span><span class="ruby-identifier">templates</span>
+<span class="ruby-identifier">config</span><span class="ruby-operator">/</span>               <span class="ruby-identifier">application</span> <span class="ruby-identifier">configuration</span>
+  <span class="ruby-identifier">boot</span>.<span class="ruby-identifier">rb</span>             <span class="ruby-constant">Rails</span> <span class="ruby-identifier">boot</span> <span class="ruby-identifier">script</span>
+  <span class="ruby-identifier">database</span>.<span class="ruby-identifier">yml</span>        <span class="ruby-constant">Rails</span> <span class="ruby-identifier">database</span> <span class="ruby-identifier">configuration</span>
+  <span class="ruby-identifier">deploy</span>.<span class="ruby-identifier">rb</span>           <span class="ruby-constant">Capistrano</span> <span class="ruby-identifier">deployment</span> <span class="ruby-identifier">file</span>
+  <span class="ruby-identifier">environment</span>.<span class="ruby-identifier">rb</span>      <span class="ruby-constant">Rails</span> <span class="ruby-identifier">environment</span> <span class="ruby-identifier">script</span> (<span class="ruby-identifier">defines</span> <span class="ruby-identifier">gem</span> <span class="ruby-identifier">deps</span>, <span class="ruby-identifier">etc</span>.)
+  <span class="ruby-identifier">environments</span><span class="ruby-operator">/</span>       <span class="ruby-identifier">environment</span><span class="ruby-operator">-</span><span class="ruby-identifier">specific</span> <span class="ruby-identifier">override</span> <span class="ruby-identifier">scripts</span> (<span class="ruby-identifier">i</span>.<span class="ruby-identifier">e</span>. <span class="ruby-identifier">for</span> <span class="ruby-identifier">production</span>, <span class="ruby-identifier">development</span>, <span class="ruby-identifier">testing</span>)
+  <span class="ruby-identifier">externals</span>.<span class="ruby-identifier">yml</span>       <span class="ruby-constant">Capistrano</span> <span class="ruby-identifier">external</span> <span class="ruby-identifier">definitions</span>, <span class="ruby-identifier">used</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">freezing</span> <span class="ruby-identifier">external</span> <span class="ruby-identifier">dependencies</span>
+  <span class="ruby-identifier">hgv</span>.<span class="ruby-identifier">yml</span>
+  <span class="ruby-identifier">initializers</span><span class="ruby-operator">/</span>       <span class="ruby-constant">Rails</span> <span class="ruby-identifier">initializer</span> <span class="ruby-identifier">scripts</span>
+  <span class="ruby-identifier">locales</span><span class="ruby-operator">/</span>            <span class="ruby-constant">Rails</span> <span class="ruby-identifier">i18n</span> <span class="ruby-identifier">locales</span>
+  <span class="ruby-identifier">routes</span>.<span class="ruby-identifier">rb</span>           <span class="ruby-constant">Rails</span> <span class="ruby-identifier">route</span> <span class="ruby-identifier">configuration</span>
+  <span class="ruby-identifier">warble</span>.<span class="ruby-identifier">rb</span>           <span class="ruby-constant">Warbler</span> <span class="ruby-identifier">configuration</span>, <span class="ruby-keyword">for</span> <span class="ruby-identifier">packing</span> <span class="ruby-identifier">app</span> <span class="ruby-identifier">into</span> .<span class="ruby-identifier">war</span> <span class="ruby-identifier">file</span>
+<span class="ruby-identifier">data</span><span class="ruby-operator">/</span>                 <span class="ruby-identifier">application</span> <span class="ruby-identifier">data</span>
+  <span class="ruby-identifier">lookup</span><span class="ruby-operator">/</span>             <span class="ruby-constant">XML</span> <span class="ruby-identifier">lookup</span> <span class="ruby-identifier">files</span> <span class="ruby-keyword">for</span> <span class="ruby-constant">HGV</span>
+  <span class="ruby-identifier">templates</span><span class="ruby-operator">/</span>          <span class="ruby-identifier">data</span> <span class="ruby-identifier">templates</span>, <span class="ruby-identifier">e</span>.<span class="ruby-identifier">g</span>. <span class="ruby-identifier">for</span> <span class="ruby-identifier">new</span> <span class="ruby-identifier">documents</span>
+  <span class="ruby-identifier">xslt</span><span class="ruby-operator">/</span>               <span class="ruby-constant">XSLT</span> <span class="ruby-identifier">data</span>
+    <span class="ruby-identifier">biblio</span><span class="ruby-operator">/</span>           <span class="ruby-constant">XSLT</span> <span class="ruby-keyword">for</span> <span class="ruby-constant">BiblioIdentifier</span>
+    <span class="ruby-identifier">common</span><span class="ruby-operator">/</span>           <span class="ruby-constant">Shared</span> <span class="ruby-constant">XSLT</span> <span class="ruby-identifier">files</span>
+    <span class="ruby-identifier">ddb</span><span class="ruby-operator">/</span>              <span class="ruby-constant">XSLT</span> <span class="ruby-keyword">for</span> <span class="ruby-constant">DDBIdentifier</span>
+    <span class="ruby-identifier">epidoc</span><span class="ruby-operator">/</span>           <span class="ruby-constant">Capistrano</span><span class="ruby-operator">-</span><span class="ruby-identifier">defined</span> <span class="ruby-identifier">external</span> <span class="ruby-constant">XSLT</span> <span class="ruby-identifier">from</span> <span class="ruby-constant">EpiDoc</span> <span class="ruby-identifier">example</span><span class="ruby-operator">-</span><span class="ruby-identifier">p5</span><span class="ruby-operator">-</span><span class="ruby-identifier">xslt</span>
+    <span class="ruby-identifier">metadata</span><span class="ruby-operator">/</span>         <span class="ruby-constant">XSLT</span> <span class="ruby-keyword">for</span> <span class="ruby-constant">HGVMetaIdentifier</span>
+    <span class="ruby-identifier">pn</span><span class="ruby-operator">/</span>               <span class="ruby-constant">PN</span> <span class="ruby-constant">XSLT</span>
+      <span class="ruby-identifier">navigator</span><span class="ruby-operator">/</span>      <span class="ruby-constant">Capistrano</span><span class="ruby-operator">-</span><span class="ruby-identifier">defined</span> <span class="ruby-identifier">external</span> <span class="ruby-constant">XSLT</span> <span class="ruby-identifier">from</span> <span class="ruby-constant">Navigator</span>
+    <span class="ruby-identifier">translation</span><span class="ruby-operator">/</span>      <span class="ruby-constant">XSLT</span> <span class="ruby-keyword">for</span> <span class="ruby-constant">HGVTransIdentifier</span>
+<span class="ruby-identifier">db</span><span class="ruby-operator">/</span>                   <span class="ruby-identifier">database</span> <span class="ruby-identifier">data</span> (<span class="ruby-constant">SQLite</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">development</span><span class="ruby-operator">/</span><span class="ruby-identifier">testing</span>, <span class="ruby-constant">Git</span> <span class="ruby-identifier">repositories</span>)
+  <span class="ruby-identifier">git</span><span class="ruby-operator">/</span>                <span class="ruby-identifier">development</span><span class="ruby-operator">/</span><span class="ruby-identifier">production</span> <span class="ruby-constant">Git</span> <span class="ruby-identifier">repositories</span>
+  <span class="ruby-identifier">migrate</span><span class="ruby-operator">/</span>            <span class="ruby-constant">Rails</span> <span class="ruby-identifier">database</span> <span class="ruby-identifier">migration</span> <span class="ruby-identifier">scripts</span>
+  <span class="ruby-identifier">test</span><span class="ruby-operator">/</span>               <span class="ruby-identifier">test</span> <span class="ruby-identifier">environment</span> <span class="ruby-identifier">git</span> <span class="ruby-identifier">repositories</span>
+<span class="ruby-identifier">doc</span><span class="ruby-operator">/</span>                  <span class="ruby-identifier">generated</span> <span class="ruby-identifier">documentation</span>
+<span class="ruby-identifier">lib</span><span class="ruby-operator">/</span>                  <span class="ruby-identifier">shared</span> <span class="ruby-identifier">application</span> <span class="ruby-identifier">libraries</span>
+  <span class="ruby-identifier">git_conf</span>.<span class="ruby-identifier">rb</span>         <span class="ruby-identifier">allows</span> <span class="ruby-identifier">setting</span> <span class="ruby-identifier">per</span><span class="ruby-operator">-</span><span class="ruby-identifier">branch</span> <span class="ruby-constant">Git</span> <span class="ruby-identifier">repositories</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">development</span>
+  <span class="ruby-identifier">java</span><span class="ruby-operator">/</span>               <span class="ruby-constant">Java</span> <span class="ruby-constant">JAR</span> <span class="ruby-identifier">files</span>, <span class="ruby-identifier">usable</span> <span class="ruby-identifier">by</span> <span class="ruby-constant">JRuby</span>
+  <span class="ruby-identifier">jruby_xml</span>.<span class="ruby-identifier">rb</span>        <span class="ruby-constant">JRubyXML</span> <span class="ruby-keyword">class</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">abstracting</span> <span class="ruby-constant">Java</span> <span class="ruby-constant">XML</span> <span class="ruby-identifier">libraries</span>
+  <span class="ruby-identifier">linking_info</span>.<span class="ruby-identifier">rb</span>     <span class="ruby-constant">LinkingInfo</span> <span class="ruby-keyword">class</span>
+  <span class="ruby-identifier">maintenance_mode</span>.<span class="ruby-identifier">rb</span> <span class="ruby-constant">MaintenanceMode</span> <span class="ruby-keyword">module</span>, <span class="ruby-identifier">enables</span> <span class="ruby-identifier">cap</span> <span class="ruby-identifier">deploy</span>:<span class="ruby-identifier">web</span><span class="ruby-operator">:</span><span class="ruby-identifier">enable</span><span class="ruby-operator">/</span><span class="ruby-identifier">disable</span>
+  <span class="ruby-identifier">numbers_rdf</span>.<span class="ruby-identifier">rb</span>      <span class="ruby-constant">NumbersRDF</span> <span class="ruby-keyword">module</span>, <span class="ruby-keyword">for</span> <span class="ruby-identifier">interaction</span> <span class="ruby-identifier">with</span> <span class="ruby-constant">Numbers</span> <span class="ruby-constant">Server</span>
+  <span class="ruby-identifier">rpx</span>.<span class="ruby-identifier">rb</span>              <span class="ruby-constant">Rpx</span> <span class="ruby-keyword">module</span>, <span class="ruby-keyword">for</span> <span class="ruby-constant">RPX</span> <span class="ruby-identifier">authentication</span>
+  <span class="ruby-identifier">tasks</span><span class="ruby-operator">/</span>              <span class="ruby-constant">Additional</span> <span class="ruby-identifier">rake</span> <span class="ruby-identifier">task</span> <span class="ruby-identifier">definitions</span>
+<span class="ruby-identifier">log</span><span class="ruby-operator">/</span>                  <span class="ruby-identifier">running</span> <span class="ruby-identifier">application</span> <span class="ruby-identifier">log</span> <span class="ruby-identifier">directory</span>
+<span class="ruby-identifier">public</span><span class="ruby-operator">/</span>               <span class="ruby-identifier">static</span> <span class="ruby-identifier">web</span> <span class="ruby-identifier">application</span> <span class="ruby-identifier">data</span> (<span class="ruby-identifier">error</span> <span class="ruby-identifier">pages</span>, <span class="ruby-constant">JS</span>, <span class="ruby-constant">CSS</span>, <span class="ruby-identifier">images</span>)
+  <span class="ruby-identifier">flash</span><span class="ruby-operator">/</span>              <span class="ruby-constant">Flash</span> <span class="ruby-identifier">files</span>
+  <span class="ruby-identifier">images</span><span class="ruby-operator">/</span>             <span class="ruby-identifier">image</span> <span class="ruby-identifier">files</span>
+  <span class="ruby-identifier">javascripts</span><span class="ruby-operator">/</span>        <span class="ruby-constant">JS</span> <span class="ruby-identifier">files</span>
+  <span class="ruby-identifier">stylesheets</span><span class="ruby-operator">/</span>        <span class="ruby-constant">CSS</span> <span class="ruby-identifier">files</span>
+    <span class="ruby-identifier">sass</span><span class="ruby-operator">/</span>             <span class="ruby-constant">SASS</span> <span class="ruby-identifier">source</span> <span class="ruby-identifier">files</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">generated</span> <span class="ruby-constant">CSS</span>
+<span class="ruby-identifier">test</span><span class="ruby-operator">/</span>                 <span class="ruby-identifier">test</span> <span class="ruby-identifier">code</span>
+  <span class="ruby-identifier">fixtures</span><span class="ruby-operator">/</span>           <span class="ruby-identifier">test</span> <span class="ruby-identifier">fixtures</span>
+  <span class="ruby-identifier">functional</span><span class="ruby-operator">/</span>         <span class="ruby-identifier">functional</span> <span class="ruby-identifier">tests</span>
+  <span class="ruby-identifier">integration</span><span class="ruby-operator">/</span>        <span class="ruby-identifier">integration</span> <span class="ruby-identifier">tests</span>
+  <span class="ruby-identifier">unit</span><span class="ruby-operator">/</span>               <span class="ruby-identifier">unit</span> <span class="ruby-identifier">tests</span>
+<span class="ruby-identifier">tmp</span><span class="ruby-operator">/</span>                  <span class="ruby-identifier">temporary</span> <span class="ruby-identifier">data</span>
+<span class="ruby-identifier">vendor</span><span class="ruby-operator">/</span>               <span class="ruby-value">3</span><span class="ruby-identifier">rd</span><span class="ruby-operator">-</span><span class="ruby-identifier">party</span> <span class="ruby-identifier">code</span> (<span class="ruby-identifier">i</span>.<span class="ruby-identifier">e</span>. <span class="ruby-identifier">frozen</span> <span class="ruby-identifier">gems</span>)
+</pre>
+
 <h1 id="label-JRuby+Deployment">JRuby Deployment</h1>
 
 <h2 id="label-Requirements">Requirements</h2>
 <ul><li>
 <p>Java SE 6 (1.6+)</p>
 </li><li>
-<p>JRuby (1.3.1+) ”tested on 1.3.1 and 1.4.0”</p>
+<p>JRuby (1.3.1+) - tested through JRuby 1.6.4. JRuby 1.6.5 seems to break
+things due to rubygems incompatibility.</p>
 </li><li>
 <p>Git (1.6.1.3+)</p>
 </li></ul>
@@ -291,8 +355,6 @@
 <h2 id="label-Initial+setup+steps+for+development">Initial setup steps for development</h2>
 <ul><li>
 <p>get source from [<a
-href="http://sourceforge.net/projects/sosol/develop">sourceforge.net/projects/sosol/develop</a>
-SourceForge] or [<a
 href="https://github.com/papyri/sosol">github.com/papyri/sosol</a> GitHub]</p>
 </li><li>
 <p>copy in/create config/environments/*_secret.rb (where * is development,
