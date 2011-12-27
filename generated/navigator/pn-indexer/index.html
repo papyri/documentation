@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8" content="text/html" http-equiv="Content-Type" /><meta content="Loads triple data into the papyri.info numbers server" name="description" /><style type="text/css">/**
+<html><head><meta charset="utf-8" content="text/html" http-equiv="Content-Type" /><meta name="description" /><style type="text/css">/**
  * SyntaxHighlighter
  * http://alexgorbatchev.com/SyntaxHighlighter
  *
@@ -3122,373 +3122,685 @@ $(document).ready(function() {
     ul.css('margin-top', '0px')
 
 })
-</script><title>pn-mapping -- Marginalia</title></head><body><table><tr><td class="docs"><div class="header"><h1 class="project-name">pn-mapping</h1><h2 class="project-version">1.0-SNAPSHOT</h2><br /><p>Loads triple data into the papyri.info numbers server</p>
-</div><div class="dependencies"><h3>dependencies</h3><table><tr><td class="dep-name">org.clojure/clojure</td><td class="dotted"><hr /></td><td class="dep-version">1.3.0</td></tr><tr><td class="dep-name">org.clojure/clojure-contrib</td><td class="dotted"><hr /></td><td class="dep-version">1.1.0</td></tr><tr><td class="dep-name">net.sf.saxon/saxon-he</td><td class="dotted"><hr /></td><td class="dep-version">9.2.0.2</td></tr><tr><td class="dep-name">xerces/xercesImpl</td><td class="dotted"><hr /></td><td class="dep-version">2.9.1</td></tr><tr><td class="dep-name">xml-apis/xml-apis</td><td class="dotted"><hr /></td><td class="dep-version">1.3.04</td></tr><tr><td class="dep-name">xml-resolver/xml-resolver</td><td class="dotted"><hr /></td><td class="dep-version">1.2</td></tr><tr><td class="dep-name">papyri.info.mulgara/querylang</td><td class="dotted"><hr /></td><td class="dep-version">2.1.9</td></tr></table></div><div class="dependencies"><h3>dev dependencies</h3><table><tr><td class="dep-name">lein-marginalia</td><td class="dotted"><hr /></td><td class="dep-version">0.7.0-SNAPSHOT</td></tr></table></div></td><td class="codes" style="text-align: center; vertical-align: middle;color: #666;padding-right:20px"><br /><br /><br />(this space intentionally left almost blank)</td></tr><tr><td class="docs"><div class="toc"><a name="toc"><h3>namespaces</h3></a><ul><li><a href="#info.papyri.map">info.papyri.map</a></li></ul></div></td><td class="codes">&nbsp;</td></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#info.papyri.map" name="info.papyri.map"><h1 class="project-name">info.papyri.map</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs"><h2>PN Mapper</h2>
+</script><title>pn-indexer -- Marginalia</title></head><body><table><tr><td class="docs"><div class="header"><h1 class="project-name">pn-indexer</h1><h2 class="project-version">1.0-SNAPSHOT</h2><br />
+</div><div class="dependencies"><h3>dependencies</h3><table><tr><td class="dep-name">org.clojure/clojure</td><td class="dotted"><hr /></td><td class="dep-version">1.3.0</td></tr><tr><td class="dep-name">org.clojure/clojure-contrib</td><td class="dotted"><hr /></td><td class="dep-version">1.1.0</td></tr><tr><td class="dep-name">ant/ant-launcher</td><td class="dotted"><hr /></td><td class="dep-version">1.6.2</td></tr><tr><td class="dep-name">org.apache.maven/maven-ant-tasks</td><td class="dotted"><hr /></td><td class="dep-version">2.0.10</td></tr><tr><td class="dep-name">org.apache.solr/solr-core</td><td class="dotted"><hr /></td><td class="dep-version">3.3.0</td></tr><tr><td class="dep-name">org.apache.solr/solr-solrj</td><td class="dotted"><hr /></td><td class="dep-version">3.3.0</td></tr><tr><td class="dep-name">org.apache.solr/solr-commons-csv</td><td class="dotted"><hr /></td><td class="dep-version">3.3.0</td></tr><tr><td class="dep-name">com.hp.hpl.jena/jena</td><td class="dotted"><hr /></td><td class="dep-version">2.6.4</td></tr><tr><td class="dep-name">com.hp.hpl.jena/iri</td><td class="dotted"><hr /></td><td class="dep-version">0.8</td></tr><tr><td class="dep-name">net.sf.saxon/saxon-he</td><td class="dotted"><hr /></td><td class="dep-version">9.2.0.2</td></tr><tr><td class="dep-name">com.ibm.icu/icu4j</td><td class="dotted"><hr /></td><td class="dep-version">3.8</td></tr><tr><td class="dep-name">log4j/log4j</td><td class="dotted"><hr /></td><td class="dep-version">1.2.16</td></tr><tr><td class="dep-name">org.slf4j/slf4j-api</td><td class="dotted"><hr /></td><td class="dep-version">1.6.1</td></tr><tr><td class="dep-name">org.slf4j/slf4j-log4j12</td><td class="dotted"><hr /></td><td class="dep-version">1.6.1</td></tr><tr><td class="dep-name">xerces/xercesImpl</td><td class="dotted"><hr /></td><td class="dep-version">2.9.1</td></tr><tr><td class="dep-name">xml-apis/xml-apis</td><td class="dotted"><hr /></td><td class="dep-version">1.3.04</td></tr><tr><td class="dep-name">commons-httpclient/commons-httpclient</td><td class="dotted"><hr /></td><td class="dep-version">3.1</td></tr><tr><td class="dep-name">commons-logging/commons-logging</td><td class="dotted"><hr /></td><td class="dep-version">1.1.1</td></tr><tr><td class="dep-name">commons-codec/commons-codec</td><td class="dotted"><hr /></td><td class="dep-version">1.5</td></tr><tr><td class="dep-name">papyri.info.mulgara/querylang</td><td class="dotted"><hr /></td><td class="dep-version">2.1.9</td></tr></table></div><div class="dependencies"><h3>dev dependencies</h3><table><tr><td class="dep-name">lein-marginalia</td><td class="dotted"><hr /></td><td class="dep-version">0.7.0-SNAPSHOT</td></tr></table></div></td><td class="codes" style="text-align: center; vertical-align: middle;color: #666;padding-right:20px"><br /><br /><br />(this space intentionally left almost blank)</td></tr><tr><td class="docs"><div class="toc"><a name="toc"><h3>namespaces</h3></a><ul><li><a href="#info.papyri.indexer">info.papyri.indexer</a></li></ul></div></td><td class="codes">&nbsp;</td></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#info.papyri.indexer" name="info.papyri.indexer"><h1 class="project-name">info.papyri.indexer</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs"><h2>PN Indexer</h2>
 
-<p>The PN Mapper provides functions for loading data into the PN's triple store, which uses 
-<a href="http://www.mulgara.org/">Mulgara</a>. It uses XSLT to transform XML files into RDF for loading
-into the triple store and does some inferencing to fill out the graph of relationships
-harvested from the XML. When compiled into a JAR, it exposes several static methods that can be
-called by external Java processes. </p>
+<p>The indexer is responsible for generating most of the Papyrological Navigator.
+It loads data into the Solr indexes (for data, bibliography, and lemmas), and generates
+HTML and text representations of the data. When compiled into a JAR, it exposes some
+static methods which allow its functions to be called from Java code.</p>
 
-<h3>Usage:</h3>
+<p>Most of the work in PN Indexer is done by queueing up (via a query on the Numbers Server) 
+first the DDbDP data with any matching HGV and APIS records, then HGV data with any matching 
+APIS records but without any matching DDbDP record, then APIS without any DDbDP or HGV 
+matches. This queue of URIs is then processed. URIs are resolved to filenames, and those XML
+files are transformed using XSLT into Solr add documents, HTML files, and text files.</p>
+
+<h3>Usage</h3>
 
 <p>(from Leiningen)</p>
 
 <ul>
-<li><code>map-all [&lt;directory&gt;]</code> — runs the mapping process over either the files in the directory provided, or over the predefined PN directories</li>
-<li><code>map-files &lt;files&gt;</code> — processes the list of files provided</li>
-<li><code>load-file &lt;file&gt;</code> — convenience function for loading a file containing triples</li>
-<li><code>delete-graph</code> — drops the papyri.info graph</li>
-<li><code>delete-uri</code> — deletes triples where the given URI is the subject or object</li>
-<li><code>insert-inferences [&lt;uri&gt;]</code> — runs the inferencing process just for the given URI, or for the whole dataset.</li>
+<li>run without arguments — builds the PN index (pn-search-offline) and HTML/txt pages for texts and data</li>
+<li>run with a list of files — indexes and generates HTML/txt for just the files provided</li>
+<li><code>biblio</code> — builds the PN index for bibliography (biblio-search)</li>
+<li><code>load-lemmas</code> — loads the morphological data from the Perseus lemma db into the lemma index (morph-search)</li>
 </ul>
 
 <p>(from Java)</p>
 
 <ul>
-<li><code>info.papyri.map.mapAll(String dir)</code> (dir can be null)</li>
-<li><code>info.papyri.map.mapFiles(List&lt;String&gt; files)</code></li>
-<li><code>info.papyri.map.loadFile(String file)</code></li>
-<li><code>info.papyri.map.deleteGraph()</code></li>
-<li><code>info.papyri.map.deleteUri(String uri)</code></li>
-<li><code>info.papyri.map.insertInferences(String file)</code> (file can be null)</li>
+<li><code>info.papyri.indexer.index(List&lt;String&gt; files)</code> (files can be null)</li>
+<li><code>info.papyri.indexer.loadBiblio()</code></li>
+<li><code>info.papyri.indexer.loadLemmas()</code></li>
 </ul>
-</td><td class="codes"><pre class="brush: clojure">(ns info.papyri.map
+</td><td class="codes"></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(ns info.papyri.indexer
   (:gen-class
-   :name info.papyri.map
-   :methods [#^{:static true} [deleteGraph [] void]
-            #^{:static true} [deleteUri [String] void]
-            #^{:static true} [loadFile [String] void]
-            #^{:static true} [insertInferences [String] void]
-            #^{:static true} [mapFiles [java.util.List] void]
-            #^{:static true} [mapAll [java.util.List] void]
-            ])
-  (:import (java.io BufferedReader ByteArrayInputStream ByteArrayOutputStream File FileInputStream FileOutputStream FileReader StringWriter)
-           (java.net URI)
-           (java.nio.charset Charset)
-           (java.util.concurrent Executors ConcurrentLinkedQueue)
-           (javax.activation MimeType)
-           (javax.xml.transform Templates Transformer)
-           (javax.xml.transform.stream StreamSource StreamResult)
-           (net.sf.saxon Configuration FeatureKeys StandardErrorListener StandardURIResolver PreparedStylesheet TransformerFactoryImpl)
-           ;;(net.sf.saxon.lib FeatureKeys StandardErrorListener StandardURIResolver)
-           (net.sf.saxon.trans CompilerInfo XPathException)
-           (org.mulgara.connection Connection ConnectionFactory)
-           (org.mulgara.query Answer Query)
-           (org.mulgara.query.operation Command CreateGraph Insertion Load Deletion DropGraph)
-           (org.mulgara.sparql SparqlInterpreter)
-           (org.mulgara.itql TqlInterpreter)))</pre></td></tr><tr><td class="docs">
-</td><td class="codes"><pre class="brush: clojure">(def xsl (ref nil))
-(def pxslt (ref nil))
-(def buffer (ref nil))
-(def flushing (ref false))
-(def output (ref nil))
+   :name info.papyri.indexer
+   :methods [#^{:static true} [index [java.util.List] void]
+             #^{:static true} [loadBiblio [] void]
+             #^{:static true} [loadLemmas [] void]])
+  (:use clojure.contrib.math)
+  (:import
+    (clojure.lang ISeq)
+    (com.hp.hpl.jena.rdf.model Model ModelFactory Resource ResourceFactory)
+    (java.io File FileInputStream FileOutputStream FileReader StringWriter FileWriter)
+    (java.net URI URL URLEncoder URLDecoder)
+    (java.nio.charset Charset)
+    (java.text Normalizer Normalizer$Form)
+    (java.util ArrayList TreeMap)
+    (java.util.concurrent Executors ConcurrentLinkedQueue ConcurrentSkipListSet)
+    (javax.xml.parsers SAXParserFactory)
+    (javax.xml.transform Result )
+    (javax.xml.transform.sax SAXResult)
+    (javax.xml.transform.stream StreamSource StreamResult)
+    (net.sf.saxon Configuration FeatureKeys PreparedStylesheet StandardErrorListener StandardURIResolver TransformerFactoryImpl)
+    (net.sf.saxon.trans CompilerInfo XPathException)
+    (org.apache.solr.client.solrj SolrServer SolrQuery)
+    (org.apache.solr.client.solrj.impl CommonsHttpSolrServer StreamingUpdateSolrServer BinaryRequestWriter)
+    (org.apache.solr.client.solrj.request RequestWriter)
+    (org.apache.solr.common SolrInputDocument)
+    (org.mulgara.connection Connection ConnectionFactory)
+    (org.mulgara.query Answer ConstructQuery Query)
+    (org.mulgara.query.operation Command CreateGraph)
+    (org.mulgara.sparql SparqlInterpreter)
+    (org.xml.sax InputSource)
+    (org.xml.sax.helpers DefaultHandler)))</pre></td></tr><tr><td class="docs"><p>NOTE: hard-coded paths and addresses</p>
+</td><td class="codes"><pre class="brush: clojure">(def filepath &quot;/data/papyri.info/idp.data&quot;)
+(def xsltpath &quot;/data/papyri.info/git/navigator/pn-xslt&quot;)
+(def htpath &quot;/data/papyri.info/pn/idp.html&quot;)
+(def solrurl &quot;http://localhost:8083/solr/&quot;)
+(def numbersurl &quot;http://localhost:8090/sparql?query=&quot;)
 (def server (URI/create &quot;rmi://localhost/server1&quot;))
 (def graph (URI/create &quot;rmi://localhost/papyri.info#pi&quot;))
-(def param (ref nil))</pre></td></tr><tr><td class="docs"><p>NOTE: hard-coded file and directory locations</p>
-</td><td class="codes"><pre class="brush: clojure">(def xslts {&quot;DDB_EpiDoc_XML&quot; &quot;/data/papyri.info/git/navigator/pn-mapping/xslt/ddbdp-rdf.xsl&quot;,
-      &quot;HGV_meta_EpiDoc&quot; &quot;/data/papyri.info/git/navigator/pn-mapping/xslt/hgv-rdf.xsl&quot;,
-      &quot;APIS&quot; &quot;/data/papyri.info/git/navigator/pn-mapping/xslt/apis-rdf.xsl&quot;,
-      &quot;HGV_trans_EpiDoc&quot; &quot;/data/papyri.info/git/navigator/pn-mapping/xslt/hgvtrans-rdf.xsl&quot;,
-      &quot;Biblio&quot; &quot;/data/papyri.info/git/navigator/pn-mapping/xslt/biblio-rdf.xsl&quot;})
-(def idproot &quot;/data/papyri.info/idp.data&quot;)
-(def ddbroot &quot;/data/papyri.info/idp.data/DDB_EpiDoc_XML&quot;)
-(def help (str &quot;Usage: &lt;function&gt; [&lt;params&gt;]\n&quot;
-     &quot;Functions: map-all [&lt;directory&gt;], map-files &lt;file list&gt;, load-file &lt;file&gt;, &quot;
-     &quot;delete-graph, delete-uri &lt;uri&gt;, insert-inferences &lt;uri&gt;.&quot;))</pre></td></tr><tr><td class="docs"><h2>Utility functions</h2>
-</td><td class="codes"></td></tr><tr><td class="docs"><p>Returns the portion of the first string parameter that occurs before the string in the second
-  parameter, or the whole string if the second parameter does not occur in the first.</p>
+(def nthreads 10)
+(def nserver &quot;localhost&quot;)
+(def collections (ref (ConcurrentLinkedQueue.)))
+(def htmltemplates (ref nil))
+(def html (ref (ConcurrentLinkedQueue.)))
+(def solrtemplates (ref nil))
+(def text (ref (ConcurrentLinkedQueue.)))
+(def texttemplates (ref nil))
+(def bibsolrtemplates (ref nil))
+(def bibhtmltemplates (ref nil))
+(def links (ref (ConcurrentLinkedQueue.)))
+(def words (ref (ConcurrentSkipListSet.)))
+(def solr (ref nil))
+(def solrbiblio (ref nil))
+(def ^:dynamic *current*)
+(def ^:dynamic *doc*)
+(def ^:dynamic *index*)</pre></td></tr><tr><td class="docs"><p>Adds the list of words provided to the set in the ref <code>words</code>.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn add-words 
+  [words]
+  (let [word-arr (.split words &quot;\\s+&quot;)]
+    (for [word word-arr]
+      (.add @words word))))</pre></td></tr><tr><td class="docs"><p>A document handler for Solr that handles the conversion of a SOLR XML
+  document into a Java object representing an add document and then when 
+  the document has been read to its end, adds that document to the 
+  <code>StreamingUpdateSolrServer</code> stored in the @solr ref.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn dochandler 
+  []
+  (SAXResult. 
+    (let [current (StringBuilder.)
+          chars  (StringBuilder.)
+          solrdoc (SolrInputDocument.)]
+      (proxy [DefaultHandler] []
+        (startElement [uri local qname atts]
+          (when (= local &quot;field&quot;)
+            (doto current (.append (.getValue atts &quot;name&quot;)))
+            (when (&gt; (.length chars) 0)
+              (doto chars (.delete 0 (.length chars))))))
+        (characters [ch start length]
+          (doto chars (.append ch start length)))
+        (endElement [uri local qname]
+          (when (&gt; (.length current) 0)
+            (.addField solrdoc (.toString current) (.toString chars))
+            (doto current (.delete 0 (.length current)))))
+        (endDocument []
+          (when (not (nil? (.getField solrdoc &quot;transcription&quot;)))
+            (add-words (.getFieldValue solrdoc &quot;transcription&quot;)))
+          (.add @solr solrdoc))))))</pre></td></tr><tr><td class="docs"><p>A document handler that behaves much like <code>dochandler</code> above, but
+  works for bibliographic records.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn bibliodochandler 
+  []
+     (SAXResult. 
+      (let [current (StringBuilder.)
+	    chars  (StringBuilder.)
+	    solrdoc (SolrInputDocument.)]
+	(proxy [DefaultHandler] []
+	  (startElement [uri local qname atts]
+			(when (= local &quot;field&quot;)
+			  (doto current (.append (.getValue atts &quot;name&quot;)))
+			  (when (&gt; (.length chars) 0)
+			    (doto chars (.delete 0 (.length chars))))))
+	  (characters [ch start length]
+		      (doto chars (.append ch start length)))
+	  (endElement [uri local qname]
+		      (when (&gt; (.length current) 0)
+			(.addField solrdoc (.toString current) (.toString chars))
+			(doto current (.delete 0 (.length current)))))
+	  (endDocument []
+		       (.add @solrbiblio solrdoc))))))</pre></td></tr><tr><td class="docs"><p>Performs a file copy from the source to the destination, making directories if necessary.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn copy
+  [in out]
+  (try
+    (let [outfile (File. out)]
+      (.mkdirs (.getParentFile outfile))
+      (.createNewFile outfile))
+    (let [buffer (byte-array 1024)
+    from (FileInputStream. in)
+    to (FileOutputStream. out)]
+      (loop []
+  (let [size (.read from buffer)]
+    (when (pos? size)
+      (.write to buffer 0 size)
+      (recur))))
+      (.close from)
+      (.close to))
+    (catch Exception e
+      (println (str (.getMessage e) &quot; copying &quot; in &quot; to &quot; out &quot;.&quot;)))))</pre></td></tr><tr><td class="docs"><p>Initializes the XSLT template pool.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn init-templates
+    [xslt, nthreads, pool]
+  (dosync (ref-set (load-string pool) (ConcurrentLinkedQueue.) ))
+  (dotimes [n nthreads]
+    (let [xsl-src (StreamSource. (FileInputStream. xslt))
+            configuration (Configuration.)
+            compiler-info (CompilerInfo.)]
+          (doto xsl-src 
+            (.setSystemId xslt))
+    (doto configuration
+      (.setXIncludeAware true))
+          (doto compiler-info
+            (.setErrorListener (StandardErrorListener.))
+            (.setURIResolver (StandardURIResolver. configuration)))
+          (dosync (.add (load-string (str &quot;@&quot; pool)) (PreparedStylesheet/compile xsl-src configuration compiler-info))))))</pre></td></tr><tr><td class="docs"><h2>Utility functions</h2>
+</td><td class="codes"></td></tr><tr><td class="docs"><p>Returns the part of string1 that comes after the first occurrence of string2, or 
+  nil if string1 does not contain string2.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn substring-after
+  [string1 string2]
+  (when (.contains string1 string2) (.substring string1 (+ (.indexOf string1 string2) (.length string2)))))</pre></td></tr><tr><td class="docs"><p>Returns the part of string1 that comes before the first occurrence of string2, or
+  nil if string1 does not contain string2.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn substring-before
   [string1 string2]
-  (.substring string1 0 (if (.contains string1 string2) (.indexOf string1 string2) 0)))</pre></td></tr><tr><td class="docs"><p>Writes the queued-up RDF triples to Mulgara.</p>
-</td><td class="codes"><pre class="brush: clojure">(defn flush-buffer 
-  [n]
-  (println (str &quot;Loading &quot; n &quot; records to &quot; server))
-  (let [rdf (StringBuffer.)
-        times (if (not (nil? n)) n 500)
-        factory (ConnectionFactory.)
-        conn (.newConnection factory server)]
-    (try
-      (doto rdf
-        (.append &quot;&lt;rdf:RDF xmlns:rdf=\&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#\&quot; 
-        xmlns:dcterms=\&quot;http://purl.org/dc/terms/\&quot; 
-        xmlns:rdfs=\&quot;http://www.w3.org/2000/01/rdf-schema#\&quot;&gt;&quot;))
-      (dotimes [n times]
-        (let [string (.poll @buffer)]
-          (if (not (nil? string))
-            (.append rdf string))))
-      (doto rdf
-        (.append &quot;&lt;/rdf:RDF&gt;&quot;))
-      (.execute (Load. graph (ByteArrayInputStream. (.getBytes (.toString rdf) (Charset/forName &quot;UTF-8&quot;))) (MimeType. &quot;application/rdf+xml&quot;)) conn)
-      (catch Exception e
-        (.println *err* (str (.getMessage e) &quot; talking to Mulgara.&quot;)))
-      (finally
-        (doto conn
-          (.close))))))</pre></td></tr><tr><td class="docs"><h2>XSLT Functions</h2>
-</td><td class="codes"></td></tr><tr><td class="docs"><p>Performs the XSLT transform defined by <em>init-xslt</em> on the file passed as a parameter.</p>
+  (when (.contains string1 string2) (.substring string1 0 (.indexOf string1 string2))))</pre></td></tr><tr><td class="docs"><p>Wrapper for the <code>java.net.URLEncoder.encode()</code> method.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn encode-url
+  [url]
+  (URLEncoder/encode url &quot;UTF-8&quot;))</pre></td></tr><tr><td class="docs"><p>Wrapper for the <code>java.net.URLEncoder.decode()</code> method.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn decode-url
+  [url]
+  (URLDecoder/decode url &quot;UTF-8&quot;))</pre></td></tr><tr><td class="docs"><p>Resolves the filename of the local XML file associated with the given URL.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn get-filename
+  [url]
+  (if (.contains url &quot;ddbdp/&quot;)
+    (let [identifier (.split (substring-before (substring-after url &quot;http://papyri.info/ddbdp/&quot;) &quot;/source&quot;) &quot;;&quot;)]
+      (if (= (second identifier) &quot;&quot;)
+        (str filepath &quot;/DDB_EpiDoc_XML/&quot; (first identifier) &quot;/&quot; (first identifier) &quot;.&quot;
+       (.replace (.replace (.replace (.replace (last identifier) &quot;,&quot; &quot;-&quot;) &quot;/&quot; &quot;_&quot;) &quot;%2F&quot; &quot;_&quot;) &quot;%2C&quot; &quot;-&quot;) &quot;.xml&quot;)
+        (str filepath &quot;/DDB_EpiDoc_XML/&quot; (first identifier) &quot;/&quot; (first identifier) &quot;.&quot; (second identifier) 
+       &quot;/&quot; (first identifier) &quot;.&quot; (second identifier) &quot;.&quot;
+       (.replace (.replace (.replace (.replace (last identifier) &quot;,&quot; &quot;-&quot;) &quot;/&quot; &quot;_&quot;) &quot;%2F&quot; &quot;_&quot;) &quot;%2C&quot; &quot;-&quot;) &quot;.xml&quot;)))
+    (if (.contains url &quot;hgv/&quot;)
+      (let [identifier (substring-before (substring-after url &quot;http://papyri.info/hgv/&quot;) &quot;/source&quot;)
+            id-int (Integer/parseInt (.replaceAll identifier &quot;[a-z]&quot; &quot;&quot;))]
+        (str filepath &quot;/HGV_meta_EpiDoc/HGV&quot; (ceil (/ id-int 1000)) &quot;/&quot; identifier &quot;.xml&quot;))
+      (when (.contains url &quot;apis/&quot;)
+        (let [identifier (.split (substring-before (substring-after url &quot;http://papyri.info/apis/&quot;) &quot;/source&quot;) &quot;\\.&quot;)]
+          (str filepath &quot;/APIS/&quot; (first identifier) &quot;/xml/&quot; (first identifier) &quot;.&quot; (second identifier) &quot;.&quot; (last identifier) &quot;.xml&quot;))))))</pre></td></tr><tr><td class="docs"><p>Resolves the filename of the local text file associated with the given URL.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn get-txt-filename
+  [url]
+  (try (if (.startsWith url &quot;file:&quot;)
+    (.replace (str htpath (substring-before (substring-after url (str &quot;file:&quot; filepath)) &quot;.xml&quot;) &quot;.txt&quot;) &quot;/xml/&quot; &quot;/&quot;)
+    (if (.contains url &quot;ddbdp&quot;)
+      (let [url (decode-url url)]
+  (when (.endsWith url &quot;/source&quot;)
+    (let [identifier (.split (substring-before (substring-after url &quot;http://papyri.info/ddbdp/&quot;) &quot;/source&quot;) &quot;;&quot;)]
+      (if (= (second identifier) &quot;&quot;)
+        (str htpath &quot;/DDB_EpiDoc_XML/&quot; (first identifier) &quot;/&quot; (first identifier) &quot;.&quot;
+       (.replace (.replace (last identifier) &quot;,&quot; &quot;-&quot;) &quot;/&quot; &quot;_&quot;) &quot;.txt&quot;)
+        (str htpath &quot;/DDB_EpiDoc_XML/&quot; (first identifier) &quot;/&quot; (first identifier) &quot;.&quot; (second identifier) 
+       &quot;/&quot; (first identifier) &quot;.&quot; (second identifier) &quot;.&quot;
+       (.replace (.replace (last identifier) &quot;,&quot; &quot;-&quot;) &quot;/&quot; &quot;_&quot;) &quot;.txt&quot;)))))
+      (if (.contains url &quot;hgv&quot;)
+        (when (.endsWith url &quot;/source&quot;)
+          (let [identifier (substring-before (substring-after url &quot;http://papyri.info/hgv/&quot;) &quot;/source&quot;)
+                id-int (Integer/parseInt (.replaceAll identifier &quot;[a-z]&quot; &quot;&quot;))]
+            (str htpath &quot;/HGV_meta_EpiDoc/HGV&quot; (ceil (/ id-int 1000)) &quot;/&quot; identifier &quot;.txt&quot;)))
+        (when (.contains url &quot;/apis&quot;)
+          (if (.endsWith url &quot;/source&quot;)
+            (let [identifier (.split (substring-before (substring-after url &quot;http://papyri.info/apis/&quot;) &quot;/source&quot;) &quot;\\.&quot;)]
+              (str htpath &quot;/APIS/&quot; (first identifier) &quot;/&quot; (first identifier) &quot;.&quot; (second identifier) &quot;.&quot; (last identifier) &quot;.txt&quot;)))))))
+       (catch Exception e
+   (println (str (.getMessage e) &quot; processing &quot; url &quot;.&quot;)))))</pre></td></tr><tr><td class="docs"><p>Resolves the filename of the local HTML file associated with the given URL.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn get-html-filename
+  [url]
+  (try (if (.startsWith url &quot;file:&quot;)
+    (.replace (str htpath (substring-before (substring-after url (str &quot;file:&quot; filepath)) &quot;.xml&quot;) &quot;.html&quot;) &quot;/xml/&quot; &quot;/&quot;)
+    (if (.contains url &quot;ddbdp&quot;)
+      (let [url (decode-url url)]
+  (if (.endsWith url &quot;/source&quot;)
+        (let [identifier (.split (substring-before (substring-after url &quot;http://papyri.info/ddbdp/&quot;) &quot;/source&quot;) &quot;;&quot;)]
+          (if (= (second identifier) &quot;&quot;)
+            (str htpath &quot;/DDB_EpiDoc_XML/&quot; (first identifier) &quot;/&quot; (first identifier) &quot;.&quot;
+     (.replace (.replace (last identifier) &quot;,&quot; &quot;-&quot;) &quot;/&quot; &quot;_&quot;) &quot;.html&quot;)
+            (str htpath &quot;/DDB_EpiDoc_XML/&quot; (first identifier) &quot;/&quot; (first identifier) &quot;.&quot; (second identifier) 
+     &quot;/&quot; (first identifier) &quot;.&quot; (second identifier) &quot;.&quot;
+     (.replace (.replace (last identifier) &quot;,&quot; &quot;-&quot;) &quot;/&quot; &quot;_&quot;) &quot;.html&quot;)))
+        (if (= url &quot;http://papyri.info/ddbdp&quot;)
+          (str htpath &quot;/DDB_EpiDoc_XML/index.html&quot;)
+    (if (.contains url &quot;;&quot;)
+      (let [identifier (.split (substring-after url &quot;http://papyri.info/ddbdp/&quot;) &quot;;&quot;)]
+        (str htpath &quot;/DDB_EpiDoc_XML/&quot; (first identifier) &quot;/&quot; (first identifier) &quot;.&quot; (second identifier) &quot;/index.html&quot;))
+      (str htpath &quot;/DDB_EpiDoc_XML/&quot; (substring-after url &quot;http://papyri.info/ddbdp/&quot;) &quot;/index.html&quot;)))))
+      (if (.contains url &quot;hgv&quot;)
+        (if (.endsWith url &quot;/source&quot;)
+          (let [identifier (substring-before (substring-after url &quot;http://papyri.info/hgv/&quot;) &quot;/source&quot;)
+                id-int (Integer/parseInt (.replaceAll identifier &quot;[a-z]&quot; &quot;&quot;))]
+            (str htpath &quot;/HGV_meta_EpiDoc/HGV&quot; (ceil (/ id-int 1000)) &quot;/&quot; identifier &quot;.html&quot;))
+          (if (= url &quot;http://papyri.info/hgv&quot;)
+            (str htpath &quot;/HGV_meta_EpiDoc/index.html&quot;)
+            (str htpath &quot;/HGV_meta_EpiDoc/&quot; (substring-after url &quot;http://papyri.info/hgv/&quot;) &quot;/index.html&quot;)))
+        (when (.contains url &quot;/apis&quot;)
+          (if (.endsWith url &quot;/source&quot;)
+            (let [identifier (.split (substring-before (substring-after url &quot;http://papyri.info/apis/&quot;) &quot;/source&quot;) &quot;\\.&quot;)]
+              (str htpath &quot;/APIS/&quot; (first identifier) &quot;/&quot; (first identifier) &quot;.&quot; (second identifier) &quot;.&quot; (last identifier) &quot;.html&quot;))
+            (if (= url &quot;http://papyri.info/apis&quot;)
+              (str htpath &quot;/APIS/index.html&quot;)
+              (str htpath &quot;/APIS/&quot; (substring-after url &quot;http://papyri.info/apis/&quot;) &quot;/index.html&quot;)))))))
+       (catch Exception e
+   (println (str (.getMessage e) &quot; processing &quot; url &quot;.&quot;)))))</pre></td></tr><tr><td class="docs"><p>Runs an XSLT transform on the <code>java.io.File</code> in the first parameter, 
+  using a list of key/value parameter pairs, and feeds the result of the transform into
+  a <code>javax.xml.transform.Result</code>.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn transform
-  [file]
-  (let [transformer (.newTransformer @pxslt)
-        out (StringWriter.)
-        outstr (StreamResult. out)]
-    (try
-      (if (not (nil? @param))
-        (doto transformer
-          (.setParameter (first @param) (second @param))))
-      (.transform transformer (StreamSource. (FileInputStream. file)) outstr)
-      ;; (println (.toString out))
-      (.add @buffer (.toString out))
-      (catch Exception e 
-        (.println *err* (str (.getMessage e) &quot; processing file &quot; file))))))</pre></td></tr><tr><td class="docs"><p>Initializes the provided XSLT file, compiles it into a PreparedStylesheet and stores
- that in a ref.</p>
-</td><td class="codes"><pre class="brush: clojure">(defn init-xslt
-    [xslt]
-  (when (not= xslt @xsl)
-    (dosync (ref-set xsl xslt))
-    (if (.contains xslt &quot;ddbdp-rdf&quot;) 
-      (dosync (ref-set param (list &quot;root&quot; idproot)))
-      (dosync (ref-set param (list &quot;DDB-root&quot; ddbroot))))
-    (let [xsl-src (StreamSource. (FileInputStream. xslt))
-        configuration (Configuration.)
-        compiler-info (CompilerInfo.)]
-        (doto xsl-src 
-          (.setSystemId xslt))
-        (doto compiler-info
-          (.setErrorListener (StandardErrorListener.))
-          (.setURIResolver (StandardURIResolver. configuration)))
-        (dosync (ref-set pxslt (PreparedStylesheet/compile xsl-src configuration compiler-info))))))</pre></td></tr><tr><td class="docs"><p>Picks the correct XSLT for the provided file.</p>
-</td><td class="codes"><pre class="brush: clojure">(defn choose-xslt
-  [file]
-  (cond (.contains (str file) &quot;DDB_EpiDoc_XML&quot;) (xslts &quot;DDB_EpiDoc_XML&quot;)
-    (.contains (str file) &quot;HGV_meta_EpiDoc&quot;) (xslts &quot;HGV_meta_EpiDoc&quot;)
-    (.contains (str file) &quot;APIS&quot;) (xslts &quot;APIS&quot;)
-    (.contains (str file) &quot;HGV_trans_EpiDoc&quot;) (xslts &quot;HGV_trans_EpiDoc&quot;)
-    (.contains (str file) &quot;Biblio&quot;) (xslts &quot;Biblio&quot;)))</pre></td></tr><tr><td class="docs"><h2>Mulgara Functions</h2>
-</td><td class="codes"></td></tr><tr><td class="docs"><p>Creates a SPARQL query to lookup a URI given the filename (which is stored as
-  an identifier.</p>
-</td><td class="codes"><pre class="brush: clojure">(defn format-url-query
-  [filename] 
-  (format 
-    &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
-    select ?uri
-    from &lt;rmi://localhost/papyri.info#pi&gt;
-    where {?uri dc:identifier \&quot;%s\&quot;}&quot; filename))</pre></td></tr><tr><td class="docs"><p>Executes a SPARQL Query in Mulgara.</p>
+  [url, params, #^Result out, pool]
+    (let [xslt (.poll pool)
+    transformer (.newTransformer xslt)]
+      (try
+        (when (not (== 0 (count params)))
+          (doseq [param params] (doto transformer
+            (.setParameter (first param) (second param)))))
+        (.transform transformer (StreamSource. (.openStream (URL. url))) out)
+        (catch Exception e
+          (println (str (.getMessage e) &quot; transforming &quot; url &quot;.&quot;))
+          (.printStackTrace e))
+        (finally
+          (.add pool xslt)))))</pre></td></tr><tr><td class="docs"><h2>SPARQL Queries</h2>
+
+<p>Each of the following functions formats a SPARQL query.</p>
+</td><td class="codes"></td></tr><tr><td class="docs"><p>Constructs a set of triples where A <code>&lt;dc:relation&gt;</code> B if A <code>&lt;dc:hasPart&gt;</code> B.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn has-part-query
+  [url]
+  (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            construct {&lt;%s&gt; dc:relation ?a}
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:hasPart ?a }&quot; url url))</pre></td></tr><tr><td class="docs"><p>Reurns a flattened list of parent, child, grandchild URIs.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn is-part-of-query
+	[url]
+	(format &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt;
+			select ?p ?gp ?ggp
+			from &lt;rmi://localhost/papyri.info#pi&gt;
+			where{ &lt;%s&gt; dc:isPartOf ?p .
+				   ?p dc:isPartOf ?gp .
+				   optional { ?gp dc:isPartOf ?ggp }
+			}&quot; url))</pre></td></tr><tr><td class="docs"><p>Retrieves a set of triples where A <code>&lt;dc:relation&gt;</code> B when A is a child of the given URI.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn batch-relation-query
+  [url]
+  (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            construct {?a dc:relation ?b}
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:hasPart ?a .
+                    ?a dc:relation ?b}&quot; url))</pre></td></tr><tr><td class="docs"><p>Returns URIs that are the object of <code>&lt;dc:relation&gt;</code>s where the given URI is the subject.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn relation-query
+  [url]
+  (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            select ?a
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:relation ?a }&quot; url))</pre></td></tr><tr><td class="docs"><p>Gets the set of triples where A <code>&lt;dc:replaces&gt;</code> B for a given collection.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn batch-replaces-query
+  [url]
+  (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            construct {?a dc:replaces ?b}
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:hasPart ?a .
+                    ?a dc:replaces ?b }&quot; url))</pre></td></tr><tr><td class="docs"><p>Gets the set of triples where A <code>&lt;dc:source</code> B for a given collection.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn batch-hgv-source-query
+	[url]
+    (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            construct {?a dc:source ?b}
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:hasPart ?a .
+                    ?a dc:source ?b }&quot; url))</pre></td></tr><tr><td class="docs"><p>Returns A where the given URI <code>&lt;dc:source&gt;</code> A.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn hgv-source-query
+	[url]
+    (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            select ?a
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:source ?a  }&quot; url))        </pre></td></tr><tr><td class="docs"><p>Gets <code>dc:source</code>s for items in a given collection where there are 
+  related HGV docs with sources.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn batch-other-source-query
+	[url]
+    (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            construct {?a dc:source ?b}
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:hasPart ?a .
+                    ?a dc:relation ?hgv .
+                    ?hgv dc:source ?b }&quot; url))</pre></td></tr><tr><td class="docs"><p>Gets <code>dc:source</code>s for the given URI using related HGV docs.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn other-source-query
+	[url]
+    (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            select ?a
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:relation ?hgv .
+                    ?hgv dc:source ?a }&quot; url))        </pre></td></tr><tr><td class="docs"><p>Gets <code>dc:bibliographicCitation</code>s for items in a given collection where 
+  there are related sources with bibliography.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn batch-hgv-citation-query
+	[url]
+    (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            construct {?a dc:bibliographicCitation ?c}
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:hasPart ?a .
+                    ?a dc:source ?b .
+                    ?b dc:bibliographicCitation ?c }&quot; url))  </pre></td></tr><tr><td class="docs"><p>Gets a bibliographic citation for the given URI, using the related source.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn hgv-citation-query
+	[url]
+    (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            select ?a
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:source ?b .
+                    ?b dc:bibliographicCitation ?a }&quot; url)) </pre></td></tr><tr><td class="docs"><p>Gets bibliographic citations for items in a given collection, via their
+  relationship with HGV records.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn batch-other-citation-query
+	[url]
+    (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            construct {?a dc:bibliographicCitation ?c}
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:hasPart ?a .
+                    ?a dc:relation ?hgv .
+                    ?hgv dc:source ?b .
+                    ?b dc:bibliographicCitation ?c }&quot; url))  </pre></td></tr><tr><td class="docs"><p>Gets bibliographic citations for a given item via its relationship
+  to HGV records.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn other-citation-query
+	[url]
+    (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            select ?a
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:relation ?hgv .
+                    ?hgv dc:source ?b .
+                    ?b dc:bibliographicCitation ?a }&quot; url))  </pre></td></tr><tr><td class="docs"><p>Finds items that the given item replaces.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn replaces-query
+  [url]
+  (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            select ?a
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:replaces ?a }&quot; url))</pre></td></tr><tr><td class="docs"><p>Finds items in a given collection that are replaced by other items.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn batch-is-replaced-by-query
+  [url]
+  (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            construct {?a dc:isReplacedBy ?b}
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:hasPart ?a .
+                    ?a dc:isReplacedBy ?b }&quot; url))</pre></td></tr><tr><td class="docs"><p>Finds any item that replaces the given item.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn is-replaced-by-query
+  [url]
+  (format  &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
+            select ?a
+            from &lt;rmi://localhost/papyri.info#pi&gt;
+            where { &lt;%s&gt; dc:isReplacedBy ?a }&quot; url))</pre></td></tr><tr><td class="docs"><h2>Mulgara functions</h2>
+</td><td class="codes"></td></tr><tr><td class="docs"><p>Builds a row of results from Mulgara into a vector.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn collect-row  
+  [row]
+  (let [*row* (transient [])]
+    (dotimes [n (.getNumberOfVariables row)]
+      (conj! *row* (.toString (.getObject row n))))
+    (persistent! *row*)))</pre></td></tr><tr><td class="docs"><p>Executes the query provided and returns a vector of vectors containing the results</p>
 </td><td class="codes"><pre class="brush: clojure">(defn execute-query
   [query]
-  (let [interpreter (SparqlInterpreter.)]
-    (.execute (.parseQuery interpreter query) (.newConnection (ConnectionFactory.) server))))</pre></td></tr><tr><td class="docs"><p>Extracts the filename id portion of a file path.</p>
-</td><td class="codes"><pre class="brush: clojure">(defn get-filename 
-  [file]
-  (substring-before (.substring (inc (.lastIndexOf file &quot;/&quot;))) &quot;.xml&quot;))</pre></td></tr><tr><td class="docs"><p>Executes a SPARQL query to resolve the papyri.info URI from a given filename.</p>
-</td><td class="codes"><pre class="brush: clojure">(defn url-from-file
-  [file]
-  (when file
-    (let [answer (execute-query (format-url-query (get-filename file)))]
-    (.toString (.getObject answer 0)))))</pre></td></tr><tr><td class="docs"><h2>Class Methods</h2>
-
-<p>The following methods are callable from Java using the generated class.</p>
-</td><td class="codes"></td></tr><tr><td class="docs"><p>Drops the whole graph. Use when you need to clear out the database completely.</p>
-</td><td class="codes"><pre class="brush: clojure">(defn -deleteGraph
+  (let [interpreter (SparqlInterpreter.)
+        answerlist (ArrayList.)
+        conn (.newConnection (ConnectionFactory.) server)]
+    (with-open [answer (.execute (.parseQuery interpreter query) conn)]
+      (loop [result []]
+        (if (.next answer)
+          (recur (conj result
+                       (collect-row answer)))
+          result)))))</pre></td></tr><tr><td class="docs"><h2>Data queueing functions</h2>
+</td><td class="codes"></td></tr><tr><td class="docs"><p>Adds the given URL to the @html queue for processing, along with associated data.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn queue-item
+  [url]
+  (println (get-filename url))
+  (let [relations (execute-query (relation-query url))
+       replaces (execute-query (replaces-query url))
+       is-replaced-by (execute-query (is-replaced-by-query url))
+       is-part-of (execute-query (is-part-of-query url))
+       source (if (empty? (re-seq #&quot;/hgv/&quot; url))
+       		   	  (execute-query (other-source-query url))
+       		   	  (execute-query (hgv-source-query url)))
+       citation(if (empty? (re-seq #&quot;/hgv&quot; url))
+       			  (execute-query (other-citation-query url))
+       			  (execute-query (hgv-citation-query url)))
+       ]
+    (.add @html (list (str &quot;file:&quot; (get-filename url))
+          (list &quot;collection&quot; (substring-before (substring-after url &quot;http://papyri.info/&quot;) &quot;/&quot;))
+          (list &quot;related&quot; (apply str (interpose &quot; &quot; (for [x relations] (first x)))))
+          (list &quot;replaces&quot; (apply str (interpose &quot; &quot; (for [x replaces] (first x))))) 
+          (list &quot;isReplacedBy&quot; (apply str (interpose &quot; &quot; (for [x is-replaced-by] (first x)))))
+          (list &quot;isPartOf&quot; (apply str (interpose &quot; &quot; (first is-part-of))))
+          (list &quot;sources&quot; (apply str (interpose &quot; &quot; (for [x source](first x)))))
+          (list &quot;citationForm&quot; (apply str (interpose &quot; &quot; (for [x citation](first x)))))
+          (list &quot;server&quot; nserver)))))</pre></td></tr><tr><td class="docs"><p>Adds children of the given collection or volume to the @html queue for processing,
+  along with a set of parameters.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn queue-items
+  [url exclude prev-urls]
+  (let [all-urls (cons url prev-urls)
+        items (execute-query (has-part-query url))
+        relations (execute-query (batch-relation-query url))
+        replaces (execute-query (batch-replaces-query url))
+        is-replaced-by (execute-query (batch-is-replaced-by-query url))
+        all-sources (if (empty? (re-seq #&quot;/hgv/&quot; url))
+                      (execute-query (batch-other-source-query url))
+        			        (execute-query (batch-hgv-source-query url)))
+        all-citations (if (empty? (re-seq #&quot;/hgv/&quot; url))
+                        (execute-query (batch-other-citation-query url))
+                        (execute-query (batch-hgv-citation-query url)))]	
+    (doseq [item items]
+      (let  [related (if (empty? relations) ()
+                       (filter (fn [x] (= (first x) (last item))) relations))
+             reprint-from (if (empty? replaces) ()
+                            (filter (fn [x] (= (first x) (last item))) replaces))
+             sources (if (empty? all-sources) ()
+                       (filter (fn [x] (= (first x) (last item))) all-sources))
+             citations (if (empty? all-citations) ()
+                         (filter (fn [x] (= (first x) (last item))) all-citations))
+             reprint-in (if (empty? is-replaced-by) ()
+                          (filter (fn [x] (= (first x) (last item))) is-replaced-by))
+             exclusion (some (set (for [x (filter 
+                                            (fn [s] (and (.startsWith (last s) &quot;http://papyri.info&quot;) 
+                                                         (not (.contains (.toString (last s)) &quot;/images/&quot;)))) 
+                                            related)] 
+                                    (substring-before (substring-after (last x) &quot;http://papyri.info/&quot;) &quot;/&quot;))) 
+                             exclude)]
+        (if (nil? exclusion)
+          ( .add @html (list (str &quot;file:&quot; (get-filename (last item)))
+            (list &quot;collection&quot; (substring-before (substring-after (last item) &quot;http://papyri.info/&quot;) &quot;/&quot;))
+            (list &quot;related&quot; (apply str (interpose &quot; &quot; (for [x related] (last x)))))
+            (list &quot;replaces&quot; (apply str (interpose &quot; &quot; (for [x reprint-from] (last x))))) 
+            (list &quot;isReplacedBy&quot; (apply str (interpose &quot; &quot; (for [x reprint-in] (last x)))))
+            (list &quot;isPartOf&quot; (apply str (interpose &quot; &quot; all-urls)))   
+            (list &quot;sources&quot; (apply str (interpose &quot; &quot; (for [x sources](last x)))))  
+            (list &quot;citationForm&quot; (apply str (interpose &quot;&quot; (for [x citations](last x)))))       
+            (list &quot;server&quot; nserver)))
+          (do (.add @links (list (get-html-filename 
+                                   (.toString 
+                                     (last 
+                                       (reduce (fn [x y] 
+                                                 (if (.contains (last x) exclusion) x y)) 
+                                               related))))
+                                 (get-html-filename (.toString (last item)))))
+            (.add @links (list (get-txt-filename 
+                                 (.toString 
+                                   (last 
+                                     (reduce (fn [x y] 
+                                               (if (.contains (last x) exclusion) x y)) 
+                                             related))))
+                               (get-txt-filename (last item))))))))))	</pre></td></tr><tr><td class="docs"><p>Adds URLs to the HTML transform and indexing queues for processing.  Takes a URL, like 
+  <code>http://papyri.info/ddbdp</code>, a set of collections to exclude and recurses down to the item level.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn queue-collections
+  [url exclude prev-urls]
+  ;; TODO: generate symlinks for relations
+  ;; queue for HTML generation
+   (let [all-urls (cons url prev-urls)
+         items (execute-query (has-part-query url))]
+    (when (&gt; (count items) 0)
+      (if (.endsWith (last (first items)) &quot;/source&quot;)
+        (queue-items url exclude prev-urls)
+        (doseq [item items]
+          (queue-collections (last item) exclude all-urls))))))</pre></td></tr><tr><td class="docs"><h2>File generation and indexing functions</h2>
+</td><td class="codes"></td></tr><tr><td class="docs"><p>Builds the HTML files for the PN.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn generate-html
   []
-  (let [factory (ConnectionFactory.)
-        conn (.newConnection factory server)
-        interpreter (SparqlInterpreter.)]
-      (.execute conn (DropGraph. graph))
-      (.close conn)))</pre></td></tr><tr><td class="docs"><p>Deletes relations where the provided URI is the subject or the object.</p>
-</td><td class="codes"><pre class="brush: clojure">(defn -deleteUri
-  [uri]
-  (let [deletesub (str &quot;construct { &lt;&quot; uri &quot;&gt; ?p ?r }
-                        from &lt;rmi://localhost/papyri.info#pi&gt;
-                        where { &lt;&quot; uri &quot;&gt; ?p ?r }&quot;)
-        deleteobj (str &quot;construct { ?s ?p &lt;&quot; uri &quot;&gt;}
-                        from &lt;rmi://localhost/papyri.info#pi&gt;
-                        where { ?s ?p &lt;&quot; uri &quot;&gt;}&quot;)]
-  (let [factory (ConnectionFactory.)
-        conn (.newConnection factory server)
-        interpreter (SparqlInterpreter.)]
-    (.execute conn (CreateGraph. graph))
-    (.execute (Deletion. graph, (.parseQuery interpreter deletesub)) conn)
-    (.execute (Deletion. graph, (.parseQuery interpreter deleteobj)) conn)
-    (.close conn))))</pre></td></tr><tr><td class="docs"><p>Deletes relations where the predicate is the provided URI.</p>
-</td><td class="codes"><pre class="brush: clojure">(defn -deleteRelation
-  [uri]
-  (let [deleterel (str &quot;construct { ?s &lt;&quot; uri &quot;&gt; ?r }
-                        from &lt;rmi://localhost/papyri.info#pi&gt;
-                        where { ?s &lt;&quot; uri &quot;&gt; ?r }&quot;)]
-  (let [factory (ConnectionFactory.)
-        conn (.newConnection factory server)
-        interpreter (SparqlInterpreter.)]
-    (.execute conn (CreateGraph. graph))
-    (.execute (Deletion. graph, (.parseQuery interpreter deleterel)) conn)
-    (.close conn))))</pre></td></tr><tr><td class="docs"><p>Loads data from the provided file into the database.</p>
-</td><td class="codes"><pre class="brush: clojure">(defn -loadFile
-  [f]
-  (let [factory (ConnectionFactory.)
-        conn (.newConnection factory server)
-        file (File. f)]
-      (.execute conn (CreateGraph. graph))
-      (.execute (Load. (.toURI file) graph, true) conn)
-      (.close conn)))</pre></td></tr><tr><td class="docs"><p>Does some inferencing to fill out the graph, either for the provided URL only,
-  or for the whole database if no URI is provided.</p>
-</td><td class="codes"><pre class="brush: clojure">(defn -insertInferences
-  [file]
-  (if-let [url (url-from-file file)]
-    ;; insertions run on a provided URI
-    (let [factory (ConnectionFactory.)
-          conn (.newConnection factory server)
-          interpreter (SparqlInterpreter.)
-          ]
-      (.execute conn (CreateGraph. graph))
-      (.execute
-       (Insertion. graph,
-       (.parseQuery interpreter
-        (str &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; &quot;
-             &quot;construct{?s dc:hasPart &lt;&quot; url &quot;&gt;} &quot;
-             &quot;from &lt;rmi://localhost/papyri.info#pi&gt; &quot;
-             &quot;where { &lt;&quot; url &quot;&gt; dc:isPartOf ?s}&quot;))) conn)
-      (.execute
-       (Insertion. graph,
-       (.parseQuery interpreter
-        (str &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; &quot;
-             &quot;construct{?s dc:relation &lt;&quot; url &quot;&gt;} &quot;
-             &quot;from &lt;rmi://localhost/papyri.info#pi&gt; &quot;
-             &quot;where { &lt;&quot; url &quot;&gt; dc:relation ?s}&quot;))) conn)
-      (.execute
-       (Insertion. graph,
-       (.parseQuery interpreter
-        (str &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; &quot;
-             &quot;construct{&lt;&quot; url &quot;&gt; dc:relation ?o2} &quot;
-             &quot;from &lt;rmi://localhost/papyri.info#pi&gt; &quot;
-             &quot;where { &lt;&quot; url &quot;&gt; dc:relation ?o1 . &quot;
-             &quot;?o1 dc:relation ?o2 &quot;
-             &quot;filter (!sameTerm(&lt;&quot; url &quot;&gt;, ?o2))}&quot;))) conn)
-      (.close conn))
-    ;; insertions run on the whole data set
-    (let [factory (ConnectionFactory.)
-          conn (.newConnection factory server)
-          interpreter (SparqlInterpreter.)]
-      ;; get dc:hasPart relations for every dc:isPartOf that exists
-      (def hasPart (str &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; &quot;
-      &quot;construct{?s dc:hasPart ?o} &quot;
-      &quot;from &lt;rmi://localhost/papyri.info#pi&gt; &quot;
-      &quot;where { ?o dc:isPartOf ?s}&quot;))
-      ;; reciprocal dc:relations
-      (def relation &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt; 
-      construct{?s dc:relation ?o} 
-      from &lt;rmi://localhost/papyri.info#pi&gt; 
-      where { ?o dc:relation ?s}&quot;)
-      ;; inserts &lt;dc:relation&gt;s for translation URIs
-      (def translations &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt;
-      construct { ?r1 &lt;http://purl.org/dc/terms/relation&gt; ?r2 }
-      from &lt;rmi://localhost/papyri.info#pi&gt;
-      where {
-      ?i dc:relation ?r1 .
-      ?i dc:relation ?r2 .
-      FILTER  regex(str(?i), \&quot;^http://papyri.info/hgv\&quot;) 
-      FILTER  regex(str(?r1), \&quot;^http://papyri.info/ddbdp\&quot;)
-      FILTER  regex(str(?r2), \&quot;^http://papyri.info/hgvtrans\&quot;)}&quot;)
-      ;; inserts &lt;dc:relation&gt;s for image URIs
-      (def images &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt;
-      construct { ?r1 &lt;http://purl.org/dc/terms/relation&gt; ?r2 }
-      from &lt;rmi://localhost/papyri.info#pi&gt;
-      where {
-      ?c dc:isPartOf &lt;http://papyri.info/apis&gt; .
-      ?i dc:isPartOf ?c .
-      ?i dc:relation ?r1 .
-      ?i dc:relation ?r2 .
-      FILTER ( regex(str(?r1), \&quot;^http://papyri.info/ddbdp\&quot;) || regex(str(?r1), \&quot;^http://papyri.info/hgv\&quot;)) 
-      FILTER  regex(str(?r2), \&quot;^http://papyri.info/images\&quot;)}&quot;)
-      ;; A &lt;dc:relation&gt; B; B &lt;dc:relation&gt; C -&gt; A &lt;dc:relation&gt; C
-      (def transitive-rels 
-        (if (nil? url) (str &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt;
-                             construct{?s dc:relation ?o2}
-                             from &lt;rmi://localhost/papyri.info#pi&gt;
-                             where { ?s dc:relation ?o1 .
-                                     ?o1 dc:relation ?o2 
-                             filter (!sameTerm(?s, ?o2))}&quot;)
-                        (str &quot;prefix dc: &lt;http://purl.org/dc/terms/&gt;
-                              construct{&lt;&quot; url &quot;&gt; dc:relation ?o2}
-                              from &lt;rmi://localhost/papyri.info#pi&gt;
-                              where { &lt;&quot; url &quot;&gt; dc:relation ?o1 .
-                                      ?o1 dc:relation ?o2 
-                              filter (!sameTerm(&lt;&quot; url &quot;&gt;, ?o2))}&quot;)))
-      (.execute conn (CreateGraph. graph))
-      (.execute (Insertion. graph, (.parseQuery interpreter hasPart)) conn)
-      (.execute (Insertion. graph, (.parseQuery interpreter relation)) conn)
-      (.execute (Insertion. graph, (.parseQuery interpreter translations)) conn)
-      (.execute (Insertion. graph, (.parseQuery interpreter images)) conn)
-      (.execute (Insertion. graph, (.parseQuery interpreter transitive-rels)) conn)
-      (.close conn))))</pre></td></tr><tr><td class="docs"><p>Runs the mapping process over a directory full of files.</p>
-</td><td class="codes"><pre class="brush: clojure">(defn load-map 
-  [file]
-  (def nthreads 5)
-  (dosync (ref-set buffer (ConcurrentLinkedQueue.) ))
-  (let [xsl (choose-xslt file)]
-    (init-xslt xsl))
-  (let [factory (ConnectionFactory.)
-      conn (.newConnection factory server)
-      create (CreateGraph. graph)]
-    (.execute conn create)
-    (.close conn))
+    (let [pool (Executors/newFixedThreadPool nthreads)
+    tasks (map (fn [x]
+         (fn []
+           (try (.mkdirs (.getParentFile (File. (get-html-filename (first x)))))
+          ;(println &quot;Transforming &quot; (first x) &quot; to &quot; (get-html-filename (first x)))
+          (transform (if (.startsWith (first x) &quot;http&quot;)
+            (str (.replace (first x) &quot;papyri.info&quot; nserver) &quot;/rdf&quot;)
+            (first x))
+          (list (second x) (nth x 2) (nth x 3) (nth x 4) (nth x 5) (nth x 6) (nth x 7) (nth x 8))
+          (StreamResult. (File. (get-html-filename (first x)))) @htmltemplates)
+           (catch Exception e
+       (.printStackTrace e)
+       (println (str &quot;Error converting file &quot; (first x) &quot; to &quot; (get-html-filename (first x))))))))
+       @html)]
+    (doseq [future (.invokeAll pool tasks)]
+      (.get future))
+    (doto pool
+      (.shutdown)))
+    (dosync (ref-set text @html)
+      (ref-set htmltemplates nil)))</pre></td></tr><tr><td class="docs"><p>Builds the text files for the PN.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn generate-text
+  []
+    (let [pool (Executors/newFixedThreadPool nthreads)
+        tasks (map (fn [x]
+         (fn []
+           (when (not (.startsWith (first x) &quot;http&quot;))
+       (try (.mkdirs (.getParentFile (File. (get-html-filename (first x)))))
+            (transform (if (.startsWith (first x) &quot;http&quot;)
+            							   ((println &quot;File is &quot; + (first x))
+                                           (str (.replace (first x) &quot;papyri.info&quot; nserver) &quot;/rdf&quot;))
+                                           (first x))
+           (list (second x) (nth x 2) (nth x 3) (nth x 4))
+           (StreamResult. (File. (get-txt-filename (first x)))) @texttemplates)
+            (catch Exception e
+        (.printStackTrace e)
+        (println (str &quot;Error converting file &quot; (first x) &quot; to &quot; (get-txt-filename (first x)))))))))
+       @text)]
+    (doseq [future (.invokeAll pool tasks)]
+      (.get future))
+    (doto pool
+      (.shutdown)))
+    (dosync (ref-set texttemplates nil)))</pre></td></tr><tr><td class="docs"><p>Dumps accumulated word lists into a file.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn print-words 
+  []
+     (let [out (FileWriter. (File. &quot;/data/papyri.info/words.txt&quot;))]
+       (for [word @words]
+   (.write out (str word &quot;\n&quot;)))))</pre></td></tr><tr><td class="docs"><p>Loads morphological data from the given file into the morph-search Solr index.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn load-morphs 
+ [file]
+ (let [value (StringBuilder.)
+       handler (proxy [DefaultHandler] []
+		 (startElement [uri local qname atts]
+			       (set! *current* qname)
+			       (when (= qname &quot;analysis&quot;)
+				 (set! *doc* (SolrInputDocument.))
+				 (set! *index* (+ *index* 1))
+				 (.addField *doc* &quot;id&quot; *index*)))
+		 (characters [ch start length]
+			     (when-not (.startsWith *current* &quot;analys&quot;)
+			       (.append value ch start length)))
+		 (endElement [uri local qname]
+			     (if (not (.startsWith qname &quot;analys&quot;))
+			       (.addField *doc* *current* (.toString value))
+			       (.add @solr *doc*))
+			     (set! *current* &quot;analysis&quot;)
+			     (.delete value 0 (.length value))))]
+   (.. SAXParserFactory newInstance newSAXParser
+       (parse (InputSource. (FileInputStream. file)) 
+	      handler))))</pre></td></tr><tr><td class="docs"><h2>Java static methods</h2>
+</td><td class="codes"></td></tr><tr><td class="docs"><p>Calls the morphological data-loading procedure on the Greek and Latin XML files from Perseus.
+  NOTE: hard code file paths.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn -loadLemmas 
+  []
+  (binding [*current* nil
+      *doc* nil
+	    *index* 0]
+    (dosync (ref-set solr (StreamingUpdateSolrServer. (str solrurl &quot;morph-search/&quot;) 5000 5))
+	    (.setRequestWriter @solr (BinaryRequestWriter.)))
+    (load-morphs &quot;/data/papyri.info/git/navigator/pn-lemmas/greek.morph.unicode.xml&quot;)
+    (load-morphs &quot;/data/papyri.info/git/navigator/pn-lemmas/latin.morph.xml&quot;)
+    (let [solr (CommonsHttpSolrServer. (str solrurl &quot;morph-search/&quot;))]
+      (doto solr
+	(.commit)
+	(.optimize)))))</pre></td></tr><tr><td class="docs"><p>Loads bibliographic data into the biblio-search SOlr index.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn -loadBiblio 
+  []
+  (init-templates (str xsltpath &quot;/Biblio2Solr.xsl&quot;) nthreads &quot;info.papyri.indexer/bibsolrtemplates&quot;)
+  (init-templates (str xsltpath &quot;/Biblio2HTML.xsl&quot;) nthreads &quot;info.papyri.indexer/bibhtmltemplates&quot;)
+  (dosync (ref-set solrbiblio (StreamingUpdateSolrServer. (str solrurl &quot;biblio-search/&quot;) 1000 5))
+          (.setRequestWriter @solrbiblio (BinaryRequestWriter.)))
+  ;; Generate and Index bibliography
+  (println &quot;Generating and indexing bibliography...&quot;)
   (let [pool (Executors/newFixedThreadPool nthreads)
-      files (file-seq (File. file))
-      tasks (map (fn [x]
-        (fn []
-          (transform x)
-          (if (&gt; (count @buffer) 500)
-          (flush-buffer nil))))
-        (filter #(.endsWith (.getName %) &quot;.xml&quot;) files))]
-      (doseq [future (.invokeAll pool tasks)]
-        (.get future))
-      (doto pool
-        (.shutdown)))
-  (flush-buffer (count @buffer)))</pre></td></tr><tr><td class="docs"><p>Maps a list of files</p>
-</td><td class="codes"><pre class="brush: clojure">(defn -mapFiles
-  [files]
-  (println (str &quot;Mapping &quot; (.size files) &quot; files.&quot;))
-  (dosync (ref-set buffer (ConcurrentLinkedQueue.) ))
-  (when (&gt; (.size files) 0)
-    (doseq [file files]
-       (let [xsl (choose-xslt file)]
-         (init-xslt xsl))
-       (transform file))
-    (flush-buffer (count @buffer))))</pre></td></tr><tr><td class="docs"><p>Maps the whole dataset.</p>
-</td><td class="codes"><pre class="brush: clojure">(defn -mapAll
-  [args]
-  (if (&gt; (count args) 0) 
-    (load-map (first args)))
-    (do 
-      (println &quot;Deleting Relations&quot;)
-      (-deleteRelation &quot;http://purl.org/dc/terms/relation&quot;)
-      (println &quot;Processing DDB_EpiDoc_XML&quot;)
-      (load-map (str idproot &quot;/DDB_EpiDoc_XML&quot;))
-      (println &quot;Processing HGV_meta_EpiDoc&quot;)
-      (load-map (str idproot &quot;/HGV_meta_EpiDoc&quot;))
-      (println &quot;Processing APIS&quot;)
-      (load-map (str idproot &quot;/APIS&quot;))
-      (println &quot;Processing HGV_trans_EpiDoc&quot;)
-      (load-map (str idproot &quot;/HGV_trans_EpiDoc&quot;))
-      (println &quot;Processing Bibliography&quot;)
-      (load-map (str idproot &quot;/Biblio&quot;)))
-  (-loadFile &quot;/data/papyri.info/git/navigator/pn-mapping/sources/collection.rdf&quot;)
-  (-loadFile &quot;/data/papyri.info/git/navigator/pn-mapping/sources/apis-images.n3&quot;)
-  (-loadFile &quot;/data/papyri.info/git/navigator/pn-mapping/sources/glrt.n3&quot;)
-  (-insertInferences nil))</pre></td></tr><tr><td class="docs">
-</td><td class="codes"><pre class="brush: clojure">(defn -main
+        htmlpath (str htpath &quot;/biblio/&quot;)
+        files (file-seq (File. (str filepath &quot;/Biblio&quot;)))
+        tasks (map (fn [x]
+                     (fn []
+                       (transform (str &quot;file://&quot; (.getAbsolutePath x)) () (bibliodochandler) @bibsolrtemplates)
+                       (transform (str &quot;file://&quot; (.getAbsolutePath x)) ()
+                                  (StreamResult. (File. (str htmlpath (.getName (.getParentFile x)) &quot;/&quot; (.replace (.getName x) &quot;.xml&quot; &quot;.html&quot;))))
+                                  @bibhtmltemplates)))
+                   (filter #(.endsWith (.getName %) &quot;.xml&quot;) files))]
+    (doseq [future (.invokeAll pool tasks)]
+      (.get future))
+    (doto pool
+      (.shutdown)))
+  (println &quot;Optimizing index...&quot;)
+  (doto @solrbiblio
+    (.commit)
+    (.optimize)))</pre></td></tr><tr><td class="docs"><p>Runs the main PN indexing process.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn -index 
   [&amp; args]
+  (init-templates (str xsltpath &quot;/RDF2HTML.xsl&quot;) nthreads &quot;info.papyri.indexer/htmltemplates&quot;)
+  (init-templates (str xsltpath &quot;/RDF2Solr.xsl&quot;) nthreads &quot;info.papyri.indexer/solrtemplates&quot;)
+  (init-templates (str xsltpath &quot;/MakeText.xsl&quot;) nthreads &quot;info.papyri.indexer/texttemplates&quot;)
+  (if (nil? (first args))
+    (do
+      (println &quot;Queueing DDbDP...&quot;)
+      (queue-collections &quot;http://papyri.info/ddbdp&quot; () ())
+      (println (str &quot;Queued &quot; (count @html) &quot; documents.&quot;))
+      (println &quot;Queueing HGV...&quot;)
+      (queue-collections &quot;http://papyri.info/hgv&quot; '(&quot;ddbdp&quot;) ())
+      (println (str &quot;Queued &quot; (count @html) &quot; documents.&quot;))
+      (println &quot;Queueing APIS...&quot;)
+      (queue-collections &quot;http://papyri.info/apis&quot; '(&quot;ddbdp&quot;, &quot;hgv&quot;) ())
+      (println (str &quot;Queued &quot; (count @html) &quot; documents.&quot;)))
+    (doseq [arg (first args)] (queue-item arg)))
+  (dosync (ref-set text @html))
+  ;; Generate HTML
+  (println &quot;Generating HTML...&quot;)
+  (generate-html)
+  ;; Generate text
+  (println &quot;Generating text...&quot;)
+  (generate-text)
+  (dosync (ref-set solr (StreamingUpdateSolrServer. (str solrurl &quot;pn-search-offline/&quot;) 500 5))
+	  (.setRequestWriter @solr (BinaryRequestWriter.)))
+  ;; Index docs queued in @text
+  (println &quot;Indexing text...&quot;)
+  (let [pool (Executors/newFixedThreadPool nthreads)
+        tasks
+   	(map (fn [x]
+  	       (fn []
+  		 (when (not (.startsWith (first x) &quot;http&quot;))
+  		   (transform (first x)
+  			      (list (second x) (nth x 2))
+  			      (dochandler) @solrtemplates)))) @text)]
+    (doseq [future (.invokeAll pool tasks)]
+      (.get future))
+    (doto pool
+      (.shutdown)))
+  (println &quot;Optimizing index...&quot;)
+  (doto @solr
+    (.commit)
+    (.optimize))
+  (dosync (ref-set html nil)
+    (ref-set text nil)
+    (ref-set solrtemplates nil))
+  (print-words))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn -main [&amp; args]
   (if (&gt; (count args) 0)
-    (let [function (first args)]
-      (cond (= function &quot;map-all&quot;) (-mapAll (rest args))
-            (= function &quot;map-files&quot;) (-mapFiles (rest args))
-            (= function &quot;load-file&quot;) (-loadFile (second args))
-            (= function &quot;delete-graph&quot;) (-deleteGraph)
-            (= function &quot;delete-uri&quot;) (-deleteUri (second args))
-            (= function &quot;delete-relation&quot;) (-deleteRelation (second args))
-            (= function &quot;insert-inferences&quot;) (if (&gt; (count args) 1)
-              (for [file (rest args)] 
-                (-insertInferences (url-from-file file)))
-              (-insertInferences nil))
-            (= function &quot;help&quot;) (print help)))
-    ((print help))))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr></table><div class="footer">Generated by <a href="https://github.com/fogus/marginalia">Marginalia</a>.&nbsp;&nbsp;Syntax highlighting provided by Alex Gorbatchev's <a href="http://alexgorbatchev.com/SyntaxHighlighter/">SyntaxHighlighter</a><div id="floating-toc"><ul><li class="floating-toc-li" id="floating-toc_info.papyri.map">info.papyri.map</li></ul></div></div><script type="text/javascript">SyntaxHighlighter.defaults['gutter'] = false;
+    (case (first args) 
+      &quot;load-lemmas&quot; (-loadLemmas)
+      &quot;biblio&quot; (-loadBiblio)
+      (-index args))
+    (-index)))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr></table><div class="footer">Generated by <a href="https://github.com/fogus/marginalia">Marginalia</a>.&nbsp;&nbsp;Syntax highlighting provided by Alex Gorbatchev's <a href="http://alexgorbatchev.com/SyntaxHighlighter/">SyntaxHighlighter</a><div id="floating-toc"><ul><li class="floating-toc-li" id="floating-toc_info.papyri.indexer">info.papyri.indexer</li></ul></div></div><script type="text/javascript">SyntaxHighlighter.defaults['gutter'] = false;
        SyntaxHighlighter.all()</script></body></html>
