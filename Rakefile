@@ -38,6 +38,20 @@ repositories = {
       :working_directory => 'pn-sync',
       :target => 'pn-sync',
       :source => 'pn-sync/target/site/apidocs'
+    },
+      {
+      :description => 'pn-indexer documentation',
+      :command => 'cp -v docs/uberdoc.html docs/index.html',
+      :working_directory => 'pn-indexer',
+      :target => 'pn-indexer',
+      :source => 'pn-indexer/docs'
+    },
+    {
+      :description => 'pn-mapping documentation',
+      :command => 'cp -v docs/uberdoc.html docs/index.html',
+      :working_directory => 'pn-mapping',
+      :target => 'pn-mapping',
+      :source => 'pn-mapping/docs'
     }
   ],
   "mapping" => []
@@ -114,7 +128,7 @@ namespace "docs" do
       Dir.glob(File.join('system_level','**','*.md')).each do |md_file|
         title = YAML.load_file(md_file)['title']
         base_name = md_file.sub(/\.md$/,'')
-        index_content += "* [#{title}](#{base_name}.html)"
+        index_content += "* [#{title}](#{base_name}.html)\n"
       end
       FileUtils.mkdir_p('_includes')
       File.open(index_file,'w') {|f| f.write(index_content)}
