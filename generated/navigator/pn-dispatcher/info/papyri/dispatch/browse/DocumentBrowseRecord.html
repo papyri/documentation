@@ -179,6 +179,17 @@ The <code>DocumentBrowseRecord</code> class stores summary information regarding
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an html representation of the Record.</TD>
 </TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../info/papyri/dispatch/browse/DocumentBrowseRecord.html#setSolrData(org.apache.solr.client.solrj.SolrQuery, long, long)">setSolrData</A></B>(org.apache.solr.client.solrj.SolrQuery&nbsp;sq,
+            long&nbsp;position,
+            long&nbsp;total)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the Solr data required for the document to generate a Solr query string
+ returning itself and its immediate neighbours in the result set.</TD>
+</TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
@@ -281,6 +292,27 @@ public int <B>compareTo</B>(<A HREF="http://download.oracle.com/javase/6/docs/ap
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>o</CODE> - 
 <DT><B>Returns:</B><DD></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setSolrData(org.apache.solr.client.solrj.SolrQuery, long, long)"><!-- --></A><H3>
+setSolrData</H3>
+<PRE>
+public void <B>setSolrData</B>(org.apache.solr.client.solrj.SolrQuery&nbsp;sq,
+                        long&nbsp;position,
+                        long&nbsp;total)</PRE>
+<DL>
+<DD>Sets the Solr data required for the document to generate a Solr query string
+ returning itself and its immediate neighbours in the result set.
+ 
+ Used for linear browsing functionality
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>sq</CODE> - A Solr querystring retrieving the current record and its immediate neighbour(s)<DD><CODE>position</CODE> - The position of this record in the current resultset<DD><CODE>total</CODE> - The total number of records in the current resultset</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
