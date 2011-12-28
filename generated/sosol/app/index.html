@@ -275,7 +275,316 @@
   </div>
 </nav>
 
-<p>This is the API documentation for Rails Application Documentation.
+<div id="documentation" class="description">
+  
+<h1 id="label-App+Structure">App Structure</h1>
+
+<h2 id="label-File+Structure">File Structure</h2>
+
+<pre class="ruby"><span class="ruby-identifier">app</span><span class="ruby-operator">/</span>                  <span class="ruby-identifier">application</span> <span class="ruby-identifier">code</span>
+  <span class="ruby-identifier">controllers</span><span class="ruby-operator">/</span>        <span class="ruby-identifier">controller</span> <span class="ruby-identifier">code</span>
+  <span class="ruby-identifier">helpers</span><span class="ruby-operator">/</span>            <span class="ruby-identifier">shared</span> <span class="ruby-identifier">helper</span> <span class="ruby-identifier">code</span>
+  <span class="ruby-identifier">models</span><span class="ruby-operator">/</span>             <span class="ruby-identifier">model</span> <span class="ruby-identifier">code</span>
+  <span class="ruby-identifier">views</span><span class="ruby-operator">/</span>              <span class="ruby-identifier">view</span> <span class="ruby-identifier">code</span><span class="ruby-operator">/</span><span class="ruby-identifier">templates</span>
+<span class="ruby-identifier">config</span><span class="ruby-operator">/</span>               <span class="ruby-identifier">application</span> <span class="ruby-identifier">configuration</span>
+  <span class="ruby-identifier">boot</span>.<span class="ruby-identifier">rb</span>             <span class="ruby-constant">Rails</span> <span class="ruby-identifier">boot</span> <span class="ruby-identifier">script</span>
+  <span class="ruby-identifier">database</span>.<span class="ruby-identifier">yml</span>        <span class="ruby-constant">Rails</span> <span class="ruby-identifier">database</span> <span class="ruby-identifier">configuration</span>
+  <span class="ruby-identifier">deploy</span>.<span class="ruby-identifier">rb</span>           <span class="ruby-constant">Capistrano</span> <span class="ruby-identifier">deployment</span> <span class="ruby-identifier">file</span>
+  <span class="ruby-identifier">environment</span>.<span class="ruby-identifier">rb</span>      <span class="ruby-constant">Rails</span> <span class="ruby-identifier">environment</span> <span class="ruby-identifier">script</span> (<span class="ruby-identifier">defines</span> <span class="ruby-identifier">gem</span> <span class="ruby-identifier">deps</span>, <span class="ruby-identifier">etc</span>.)
+  <span class="ruby-identifier">environments</span><span class="ruby-operator">/</span>       <span class="ruby-identifier">environment</span><span class="ruby-operator">-</span><span class="ruby-identifier">specific</span> <span class="ruby-identifier">override</span> <span class="ruby-identifier">scripts</span> (<span class="ruby-identifier">i</span>.<span class="ruby-identifier">e</span>. <span class="ruby-identifier">for</span> <span class="ruby-identifier">production</span>, <span class="ruby-identifier">development</span>, <span class="ruby-identifier">testing</span>)
+  <span class="ruby-identifier">externals</span>.<span class="ruby-identifier">yml</span>       <span class="ruby-constant">Capistrano</span> <span class="ruby-identifier">external</span> <span class="ruby-identifier">definitions</span>, <span class="ruby-identifier">used</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">freezing</span> <span class="ruby-identifier">external</span> <span class="ruby-identifier">dependencies</span>
+  <span class="ruby-identifier">hgv</span>.<span class="ruby-identifier">yml</span>
+  <span class="ruby-identifier">initializers</span><span class="ruby-operator">/</span>       <span class="ruby-constant">Rails</span> <span class="ruby-identifier">initializer</span> <span class="ruby-identifier">scripts</span>
+  <span class="ruby-identifier">locales</span><span class="ruby-operator">/</span>            <span class="ruby-constant">Rails</span> <span class="ruby-identifier">i18n</span> <span class="ruby-identifier">locales</span>
+  <span class="ruby-identifier">routes</span>.<span class="ruby-identifier">rb</span>           <span class="ruby-constant">Rails</span> <span class="ruby-identifier">route</span> <span class="ruby-identifier">configuration</span>
+  <span class="ruby-identifier">warble</span>.<span class="ruby-identifier">rb</span>           <span class="ruby-constant">Warbler</span> <span class="ruby-identifier">configuration</span>, <span class="ruby-keyword">for</span> <span class="ruby-identifier">packing</span> <span class="ruby-identifier">app</span> <span class="ruby-identifier">into</span> .<span class="ruby-identifier">war</span> <span class="ruby-identifier">file</span>
+<span class="ruby-identifier">data</span><span class="ruby-operator">/</span>                 <span class="ruby-identifier">application</span> <span class="ruby-identifier">data</span>
+  <span class="ruby-identifier">lookup</span><span class="ruby-operator">/</span>             <span class="ruby-constant">XML</span> <span class="ruby-identifier">lookup</span> <span class="ruby-identifier">files</span> <span class="ruby-keyword">for</span> <span class="ruby-constant">HGV</span>
+  <span class="ruby-identifier">templates</span><span class="ruby-operator">/</span>          <span class="ruby-identifier">data</span> <span class="ruby-identifier">templates</span>, <span class="ruby-identifier">e</span>.<span class="ruby-identifier">g</span>. <span class="ruby-identifier">for</span> <span class="ruby-identifier">new</span> <span class="ruby-identifier">documents</span>
+  <span class="ruby-identifier">xslt</span><span class="ruby-operator">/</span>               <span class="ruby-constant">XSLT</span> <span class="ruby-identifier">data</span>
+    <span class="ruby-identifier">biblio</span><span class="ruby-operator">/</span>           <span class="ruby-constant">XSLT</span> <span class="ruby-keyword">for</span> <span class="ruby-constant">BiblioIdentifier</span>
+    <span class="ruby-identifier">common</span><span class="ruby-operator">/</span>           <span class="ruby-constant">Shared</span> <span class="ruby-constant">XSLT</span> <span class="ruby-identifier">files</span>
+    <span class="ruby-identifier">ddb</span><span class="ruby-operator">/</span>              <span class="ruby-constant">XSLT</span> <span class="ruby-keyword">for</span> <span class="ruby-constant">DDBIdentifier</span>
+    <span class="ruby-identifier">epidoc</span><span class="ruby-operator">/</span>           <span class="ruby-constant">Capistrano</span><span class="ruby-operator">-</span><span class="ruby-identifier">defined</span> <span class="ruby-identifier">external</span> <span class="ruby-constant">XSLT</span> <span class="ruby-identifier">from</span> <span class="ruby-constant">EpiDoc</span> <span class="ruby-identifier">example</span><span class="ruby-operator">-</span><span class="ruby-identifier">p5</span><span class="ruby-operator">-</span><span class="ruby-identifier">xslt</span>
+    <span class="ruby-identifier">metadata</span><span class="ruby-operator">/</span>         <span class="ruby-constant">XSLT</span> <span class="ruby-keyword">for</span> <span class="ruby-constant">HGVMetaIdentifier</span>
+    <span class="ruby-identifier">pn</span><span class="ruby-operator">/</span>               <span class="ruby-constant">PN</span> <span class="ruby-constant">XSLT</span>
+      <span class="ruby-identifier">navigator</span><span class="ruby-operator">/</span>      <span class="ruby-constant">Capistrano</span><span class="ruby-operator">-</span><span class="ruby-identifier">defined</span> <span class="ruby-identifier">external</span> <span class="ruby-constant">XSLT</span> <span class="ruby-identifier">from</span> <span class="ruby-constant">Navigator</span>
+    <span class="ruby-identifier">translation</span><span class="ruby-operator">/</span>      <span class="ruby-constant">XSLT</span> <span class="ruby-keyword">for</span> <span class="ruby-constant">HGVTransIdentifier</span>
+<span class="ruby-identifier">db</span><span class="ruby-operator">/</span>                   <span class="ruby-identifier">database</span> <span class="ruby-identifier">data</span> (<span class="ruby-constant">SQLite</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">development</span><span class="ruby-operator">/</span><span class="ruby-identifier">testing</span>, <span class="ruby-constant">Git</span> <span class="ruby-identifier">repositories</span>)
+  <span class="ruby-identifier">git</span><span class="ruby-operator">/</span>                <span class="ruby-identifier">development</span><span class="ruby-operator">/</span><span class="ruby-identifier">production</span> <span class="ruby-constant">Git</span> <span class="ruby-identifier">repositories</span>
+  <span class="ruby-identifier">migrate</span><span class="ruby-operator">/</span>            <span class="ruby-constant">Rails</span> <span class="ruby-identifier">database</span> <span class="ruby-identifier">migration</span> <span class="ruby-identifier">scripts</span>
+  <span class="ruby-identifier">test</span><span class="ruby-operator">/</span>               <span class="ruby-identifier">test</span> <span class="ruby-identifier">environment</span> <span class="ruby-identifier">git</span> <span class="ruby-identifier">repositories</span>
+<span class="ruby-identifier">doc</span><span class="ruby-operator">/</span>                  <span class="ruby-identifier">generated</span> <span class="ruby-identifier">documentation</span>
+<span class="ruby-identifier">lib</span><span class="ruby-operator">/</span>                  <span class="ruby-identifier">shared</span> <span class="ruby-identifier">application</span> <span class="ruby-identifier">libraries</span>
+  <span class="ruby-identifier">git_conf</span>.<span class="ruby-identifier">rb</span>         <span class="ruby-identifier">allows</span> <span class="ruby-identifier">setting</span> <span class="ruby-identifier">per</span><span class="ruby-operator">-</span><span class="ruby-identifier">branch</span> <span class="ruby-constant">Git</span> <span class="ruby-identifier">repositories</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">development</span>
+  <span class="ruby-identifier">java</span><span class="ruby-operator">/</span>               <span class="ruby-constant">Java</span> <span class="ruby-constant">JAR</span> <span class="ruby-identifier">files</span>, <span class="ruby-identifier">usable</span> <span class="ruby-identifier">by</span> <span class="ruby-constant">JRuby</span>
+  <span class="ruby-identifier">jruby_xml</span>.<span class="ruby-identifier">rb</span>        <span class="ruby-constant">JRubyXML</span> <span class="ruby-keyword">class</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">abstracting</span> <span class="ruby-constant">Java</span> <span class="ruby-constant">XML</span> <span class="ruby-identifier">libraries</span>
+  <span class="ruby-identifier">linking_info</span>.<span class="ruby-identifier">rb</span>     <span class="ruby-constant">LinkingInfo</span> <span class="ruby-keyword">class</span>
+  <span class="ruby-identifier">maintenance_mode</span>.<span class="ruby-identifier">rb</span> <span class="ruby-constant">MaintenanceMode</span> <span class="ruby-keyword">module</span>, <span class="ruby-identifier">enables</span> <span class="ruby-identifier">cap</span> <span class="ruby-identifier">deploy</span>:<span class="ruby-identifier">web</span><span class="ruby-operator">:</span><span class="ruby-identifier">enable</span><span class="ruby-operator">/</span><span class="ruby-identifier">disable</span>
+  <span class="ruby-identifier">numbers_rdf</span>.<span class="ruby-identifier">rb</span>      <span class="ruby-constant">NumbersRDF</span> <span class="ruby-keyword">module</span>, <span class="ruby-keyword">for</span> <span class="ruby-identifier">interaction</span> <span class="ruby-identifier">with</span> <span class="ruby-constant">Numbers</span> <span class="ruby-constant">Server</span>
+  <span class="ruby-identifier">rpx</span>.<span class="ruby-identifier">rb</span>              <span class="ruby-constant">Rpx</span> <span class="ruby-keyword">module</span>, <span class="ruby-keyword">for</span> <span class="ruby-constant">RPX</span> <span class="ruby-identifier">authentication</span>
+  <span class="ruby-identifier">tasks</span><span class="ruby-operator">/</span>              <span class="ruby-constant">Additional</span> <span class="ruby-identifier">rake</span> <span class="ruby-identifier">task</span> <span class="ruby-identifier">definitions</span>
+<span class="ruby-identifier">log</span><span class="ruby-operator">/</span>                  <span class="ruby-identifier">running</span> <span class="ruby-identifier">application</span> <span class="ruby-identifier">log</span> <span class="ruby-identifier">directory</span>
+<span class="ruby-identifier">public</span><span class="ruby-operator">/</span>               <span class="ruby-identifier">static</span> <span class="ruby-identifier">web</span> <span class="ruby-identifier">application</span> <span class="ruby-identifier">data</span> (<span class="ruby-identifier">error</span> <span class="ruby-identifier">pages</span>, <span class="ruby-constant">JS</span>, <span class="ruby-constant">CSS</span>, <span class="ruby-identifier">images</span>)
+  <span class="ruby-identifier">flash</span><span class="ruby-operator">/</span>              <span class="ruby-constant">Flash</span> <span class="ruby-identifier">files</span>
+  <span class="ruby-identifier">images</span><span class="ruby-operator">/</span>             <span class="ruby-identifier">image</span> <span class="ruby-identifier">files</span>
+  <span class="ruby-identifier">javascripts</span><span class="ruby-operator">/</span>        <span class="ruby-constant">JS</span> <span class="ruby-identifier">files</span>
+  <span class="ruby-identifier">stylesheets</span><span class="ruby-operator">/</span>        <span class="ruby-constant">CSS</span> <span class="ruby-identifier">files</span>
+    <span class="ruby-identifier">sass</span><span class="ruby-operator">/</span>             <span class="ruby-constant">SASS</span> <span class="ruby-identifier">source</span> <span class="ruby-identifier">files</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">generated</span> <span class="ruby-constant">CSS</span>
+<span class="ruby-identifier">test</span><span class="ruby-operator">/</span>                 <span class="ruby-identifier">test</span> <span class="ruby-identifier">code</span>
+  <span class="ruby-identifier">fixtures</span><span class="ruby-operator">/</span>           <span class="ruby-identifier">test</span> <span class="ruby-identifier">fixtures</span>
+  <span class="ruby-identifier">functional</span><span class="ruby-operator">/</span>         <span class="ruby-identifier">functional</span> <span class="ruby-identifier">tests</span>
+  <span class="ruby-identifier">integration</span><span class="ruby-operator">/</span>        <span class="ruby-identifier">integration</span> <span class="ruby-identifier">tests</span>
+  <span class="ruby-identifier">unit</span><span class="ruby-operator">/</span>               <span class="ruby-identifier">unit</span> <span class="ruby-identifier">tests</span>
+<span class="ruby-identifier">tmp</span><span class="ruby-operator">/</span>                  <span class="ruby-identifier">temporary</span> <span class="ruby-identifier">data</span>
+<span class="ruby-identifier">vendor</span><span class="ruby-operator">/</span>               <span class="ruby-value">3</span><span class="ruby-identifier">rd</span><span class="ruby-operator">-</span><span class="ruby-identifier">party</span> <span class="ruby-identifier">code</span> (<span class="ruby-identifier">i</span>.<span class="ruby-identifier">e</span>. <span class="ruby-identifier">frozen</span> <span class="ruby-identifier">gems</span>)
+</pre>
+
+<h2 id="label-Design+Overview">Design Overview</h2>
+
+<p>The Son of Suda On Line (SoSOL) is one of the main components of the
+Integrating Digital Papyrology project (IDP), aiming to provide a
+repurposable web-based editor for the digital resources in the DDbDP and
+HGV. SoSOL integrates a number of technologies to provide a truly
+next-generation online editing environment. Using JRuby with the <a
+href="../Rails.html">Rails</a> web framework, it is able to take advantage
+of Rails’s wide support in the web development community, as well as
+Java’s excellent XML libraries and support. This includes the use of
+XSugar to define an alternate, lightweight syntax for EpiDoc XML markup,
+called Leiden+. Because XSugar uses a single grammar to define both
+syntaxes in a reversible and bidirectional manner, this is ideal for
+reducing side effects of transforming text in our version-controlled
+system. SoSOL uses the Git distributed version control system as its
+versioning backend, allowing it to use the powerful branching and merging
+strategies it provides, and enabling fully-auditable version control. SoSOL
+also provides for editorial control of changes to the main data repository,
+enabling the democracy of allowing anyone to change anything they choose
+while preserving the academic integrity of canonical published data.</p>
+
+<h3 id="label-Next-Generation+Version+Control">Next-Generation Version Control</h3>
+
+<p>Many online editing environments, such as MediaWiki, use an SQL database as
+the sole mechanism for storing revisions. This can lead to a number of
+problems, such as scaling (most SQL servers are not performance optimized
+for large text fields) and distribution of data (see for example the
+database downloads of the English Wikipedia, which have been notoriously
+problematic for obtaining the full revision history). Most importantly,
+they typically impose a centralized, linear, single-branch version history.
+Because Git is a distributed version control system, it does not impose any
+centralized workflow. As a result, branching and merging have been given
+high priority in its development, allowing for much more concurrent editing
+activity while minimizing the difficulty of merging changes. SoSOL’s use
+of Git is to have one “canonical” Git repository for public, approved
+data and to which commits are restricted. Users and boards each get their
+own Git repositories which act as forks of the canonical repository. This
+allows them to freely make changes to their repository while preserving the
+version history as needed when these changes are merged back into the
+canonical repository. These repositories can also be easily mirrored,
+downloaded, and worked with offline and outside of SoSOL due to the
+distributed nature of Git. This enables a true democracy of data, wherein
+institutions still retain control and approval of the data which they put
+their names on, but any individual may easily obtain the full dataset and
+revision history to edit, contribute to, and republish under the terms of
+license.</p>
+
+<h3 id="label-Alternative+Syntax+for+XML+Editing">Alternative Syntax for XML Editing</h3>
+
+<p>While XML encoding has many advantages, users inexperienced with its use
+may find its syntax difficult or verbose. It is still desirable to harness
+the expertise of these users in other areas and ease their ability to add
+content to the system, while retaining the semantically explicit nature of
+XML markup. To do this, we have used XSugar to allow the definition of a
+“tagless” syntax for EpiDoc XML, which resembles that of the
+traditional printed <a href="../Leiden.html">Leiden</a> conventions for
+epigraphic and papyrological texts where possible. Structures which are
+semantically ambiguous or undefined in <a href="../Leiden.html">Leiden</a>
+but available in EpiDoc (e.g. markup of numbers and their corresponding
+value) have been given additional text markup, referred to comprehensively
+as Leiden+. XSugar enables the definition of this syntax in a single,
+bidirectional grammar file which defines all components of both Leiden+ and
+EpiDoc XML as correspondences, which can be statically checked for
+reversibility and validity. This provides much more rigorous guarantees of
+these properties than alternatives such as using separate XSLT stylesheets
+for each direction of the transform, as well as encoding the relation
+between the components of each syntax in a single location.</p>
+
+<h3 id="label-Repurposable+Design">Repurposable Design</h3>
+
+<p>Due to institutional requirements, the DDbDP and HGV datasets needed
+separate editorial control and publishing mechanisms. In addition, their
+control over different types of content necessitated different editing
+mechanisms for each component. These requirements informed the design of
+how SoSOL interacts with data under its control and how this design is
+repurposable for use in other projects. The two high-level abstractions of
+data made by SoSOL are “publications” and “identifiers”.
+Identifiers are unique strings which can be mapped to a specific file path
+in the repository, while publications are arbitrary aggregations of
+identifiers. By defining an identifier superclass which defines common
+functionality for interacting with the data repository, we can then
+subclass this to provide functionality specific to a given category of
+data. The SoSOL implementation for IDP2, for example, provides identifier
+subclasses for DDbDP transcriptions, HGV metadata, and HGV translations.
+Editorial boards consequently have editorial control for only certain
+subclasses of identifiers. Publications in turn allow representation and
+aggregation of the complex many-to-many relationships these components can
+have (for example, a document with two sides that may have one
+transcription and two metadata components). Packaging these related
+elements together both allows the user to switch between them and editorial
+boards to check related data which they may not have editorial control over
+but still require to make informed decisions about validity and approval.
+SoSOL can thus be integrated into other systems by implementing the
+identifier subclasses necessary for the given dataset as well as coherent
+means for aggregating these components into publications.</p>
+
+<h1 id="label-JRuby+Deployment">JRuby Deployment</h1>
+
+<h2 id="label-Requirements">Requirements</h2>
+<ul><li>
+<p>Java SE 6 (1.6+)</p>
+</li><li>
+<p>JRuby (1.3.1+) - tested through JRuby 1.6.4. JRuby 1.6.5 seems to break
+things due to rubygems incompatibility.</p>
+</li><li>
+<p>Git (1.6.1.3+)</p>
+</li></ul>
+
+<h2 id="label-Initial+setup+steps+for+development">Initial setup steps for development</h2>
+<ul><li>
+<p>get source from [<a
+href="https://github.com/papyri/sosol">github.com/papyri/sosol</a> GitHub]</p>
+</li><li>
+<p>copy in/create config/environments/*_secret.rb (where * is development,
+test, production - sets RPX_API_KEY and RPX_REALM, can get these by
+creating an [<a href="http://www.rpxnow.com/">www.rpxnow.com/</a> RPX]
+account)</p>
+</li></ul>
+
+<pre>RPX_API_KEY = '0b13c31190219061...'
+RPX_REALM = 'SoSOL...'</pre>
+<ul><li>
+<p>jruby -S gem install capistrano (may not work in JRuby)</p>
+</li><li>
+<p>cap local externals:setup (pulls in xsugar, EpiDoc XSLT)</p>
+</li><li>
+<p>jruby -S rake db:migrate</p>
+</li><li>
+<p>clone canonical.git (jruby -S rake git:db:canonical:clone)</p>
+</li><li>
+<p>jruby -S rake (run tests, sanity check)</p>
+</li><li>
+<p>jruby script/server</p>
+</li></ul>
+
+<h2 id="label-WAR-based+deployment">WAR-based deployment</h2>
+<ul><li>
+<p>use warbler to bundle as a standard .war (includes JRuby, gems, etc.) to
+upload to an app server</p>
+<ul><li>
+<p>initialize/migrate your production DB using “RAILS_ENV=production jruby
+-S rake db:migrate” (change production line in config/database.yml for
+your setup)</p>
+</li><li>
+<p>may want to add “config.logger = Logger.new(STDOUT)” to
+config/environment.rb to get <a href="../Rails.html">Rails</a> logging out
+to servlet container</p>
+</li><li>
+<p>run “cap local externals:setup” to fetch externals</p>
+</li><li>
+<p>use “jruby -S warble war” to build the war</p>
+</li><li>
+<p>need to change REPOSITORY_ROOT in config/environment.rb to an absolute
+shared path, because packing up the 500MB+ canonical repo in the war will
+grind things to a halt</p>
+</li></ul>
+</li><li>
+<p>war unpacking isn’t guaranteed (and multiple deploys would overwrite
+changes to the unpacked dir structure anyway) so it seems like alternate
+config will be needed</p>
+<ul><li>
+<p>need a persistent directory for git (overwrite REPOSITORY_ROOT and
+CANONICAL_REPOSITORY in production)</p>
+</li><li>
+<p>DB migrations seem impossible to run from the deployed war context, so
+you’ll have to run them pre-deploy using the production environment on
+some checkout of the code (meaning it will also need access to your
+production DB server credentials)</p>
+</li><li>
+<p>not sure on logs, sessions (may need extra config for new vers of <a
+href="../Rails.html">Rails</a>), rollback (probably impossible to get
+easily in a war context due to also needing to reverse migrations)</p>
+</li></ul>
+</li></ul>
+
+<h2 id="label-Directory-based+deployment">Directory-based deployment</h2>
+<ul><li>
+<p>deploy an unpacked directory and run within JRuby using any variety of
+servers (e.g. jetty-rails, glassfish - N.B. glassfish gem must have all
+required jars invoked inside JRuby on the classpath e.g.
+lib/java/saxon9he.jar) which can be accessed directly or proxied</p>
+</li></ul>
+
+<h1 id="label-Repository+Setup"><a href="../Repository.html">Repository</a> Setup</h1>
+
+<h2 id="label-Canonical+Repository+%28from+Git%29">Canonical <a href="../Repository.html">Repository</a> (from Git)</h2>
+<ul><li>
+<p>Initialize with:</p>
+<ul><li>
+<p>git clone –bare git://github.com/papyri/idp.data.git CANONICAL_REPOSITORY</p>
+</li><li>
+<p>where CANONICAL_REPOSITORY is the path defined in config/environment.rb,
+defaulting to REPOSITORY_ROOT/canonical.git. For WAR-based deploy will want
+to change REPOSITORY_ROOT to an absolute path as noted.</p>
+</li></ul>
+</li><li>
+<p>Data now also mirrored [<a
+href="https://github.com/papyri/idp.data">github.com/papyri/idp.data</a> on
+GitHub]</p>
+</li></ul>
+
+<h1 id="label-Administration">Administration</h1>
+<ul><li>
+<p>“jruby script/console production” should give you a console for the
+production environment (keep in mind things like DB/Git access, you’ll
+need to run this from a location that can access those resources, the
+source, and the correct configs for your production environment)</p>
+<ul><li>
+<p>from here you can give users admin privileges by e.g.:</p>
+<ul><li>
+<p>me = User.find_by_name(‘rfbaumann’)</p>
+</li><li>
+<p>me.admin = true</p>
+</li><li>
+<p>me.save!</p>
+</li></ul>
+</li></ul>
+</li><li>
+<p>can completely reset the database with “jruby -S rake
+RAILS_ENV=production db:reset”</p>
+<ul><li>
+<p>note that this ”won’t” run AR callbacks, so you need to clear
+user/board git repos:</p>
+<ul><li>
+<p>if you plan on ”‘keeping”’ canonical (aka repo 3) i.e. not deleting
+it and recloning from the Git SVN copy, you need to first ensure that it
+has all finalized objects and remove the user repos you’ll delete from
+its alternates file:</p>
+<ul><li>
+<p>cd REPOSITORY_ROOT/canonical.git &amp;&amp; git repack &amp;&amp; echo
+“” &gt; objects/info/alternates</p>
+</li><li>
+<p>can check integrity afterwards with “git fsck”</p>
+</li></ul>
+</li><li>
+<p>rm -rf REPOSITORY_ROOT/boards/*.git REPOSITORY_ROOT/users/*.git</p>
+</li></ul>
+</li><li>
+<p>can also delete every model instance from the console with e.g.
+User.find(:all).each{|u| u.destroy} but this can be tedious if there are
+loose instances of other models that aren’t dependent-destroyed</p>
+</li></ul>
+</li></ul>
+
+</div>
 
 
 <footer id="validator-badges">
