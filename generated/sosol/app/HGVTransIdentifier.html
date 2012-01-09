@@ -386,11 +386,6 @@ vendor/plugins/rxsugar/lib/jruby_helper.rb</p>
         <dd class="description">
         
       
-        <dt id="XML_VALIDATOR">XML_VALIDATOR
-        
-        <dd class="description">
-        
-      
       </dl>
     </section>
     
@@ -432,7 +427,7 @@ part of</p>
 
           
           <div class="method-source-code" id="new_from_template-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 56</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 54</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new_from_template</span>(<span class="ruby-identifier">publication</span>)
   <span class="ruby-identifier">new_identifier</span> = <span class="ruby-keyword">super</span>(<span class="ruby-identifier">publication</span>)
   
@@ -473,7 +468,7 @@ finalization.  Performed using XSLT and then saves it in the repository</p>
 
           
           <div class="method-source-code" id="after_rename-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 126</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 124</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">after_rename</span>(<span class="ruby-identifier">options</span> = {})
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:update_header</span>]
     <span class="ruby-identifier">related_hgv</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_components</span>.<span class="ruby-identifier">last</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">HGVMetaIdentifier</span>}.<span class="ruby-identifier">compact</span>
@@ -528,7 +523,7 @@ content prior to it being committed in this method</p>
 
           
           <div class="method-source-code" id="before_commit-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 72</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 70</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">before_commit</span>(<span class="ruby-identifier">content</span>)
   <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
     <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-identifier">content</span>),
@@ -578,7 +573,7 @@ Translation <a href="Identifier.html">Identifier</a> currently processing</p>
 
           
           <div class="method-source-code" id="get_broken_leiden-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 168</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 166</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_broken_leiden</span>(<span class="ruby-identifier">original_xml</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">original_xml_content</span> = <span class="ruby-identifier">original_xml</span> <span class="ruby-operator">||</span> <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>)
   <span class="ruby-identifier">brokeleiden_path</span> = <span class="ruby-string">'/TEI/text/body/div[@type = &quot;translation&quot;]/div[@subtype = &quot;brokeleiden&quot;]/note'</span>
@@ -617,7 +612,7 @@ Translation <a href="Identifier.html">Identifier</a> currently processing</p>
 
           
           <div class="method-source-code" id="id_attribute-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 36</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 34</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">id_attribute</span>
   <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;hgv-TEMP&quot;</span>
 <span class="ruby-keyword">end</span></pre>
@@ -659,7 +654,7 @@ from the repository</p>
 
           
           <div class="method-source-code" id="leiden_trans-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 187</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 185</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">leiden_trans</span>
   <span class="ruby-identifier">original_xml</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>
   <span class="ruby-identifier">original_xml_content</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">original_xml</span>)
@@ -722,7 +717,7 @@ newly transformed XML</p>
 
           
           <div class="method-source-code" id="leiden_translation_to_xml-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 229</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 227</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">leiden_translation_to_xml</span>(<span class="ruby-identifier">content</span>)
   
   <span class="ruby-comment"># transform the Leiden Translation to XML</span>
@@ -774,7 +769,7 @@ newly transformed XML</p>
 
           
           <div class="method-source-code" id="n_attribute-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 41</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 39</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">n_attribute</span>
   <span class="ruby-identifier">ddb</span> = <span class="ruby-constant">DDBIdentifier</span>.<span class="ruby-identifier">find_by_publication_id</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:limit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>)
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">ddb</span>.<span class="ruby-identifier">n_attribute</span>
@@ -814,7 +809,7 @@ newly transformed XML</p>
 
           
           <div class="method-source-code" id="preview-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 153</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 151</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">preview</span>
     <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
     <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>),
@@ -848,7 +843,7 @@ tranlsations publication</p>
 
           
           <div class="method-source-code" id="related_text-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 65</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 63</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">related_text</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> (<span class="ruby-identifier">i</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">DDBIdentifier</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">i</span>.<span class="ruby-identifier">is_reprinted?</span>}.<span class="ruby-identifier">last</span>
 <span class="ruby-keyword">end</span></pre>
@@ -894,7 +889,7 @@ this repository commit and put</p>
 
           
           <div class="method-source-code" id="save_broken_leiden_trans_to_xml-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 262</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 260</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">save_broken_leiden_trans_to_xml</span>(<span class="ruby-identifier">brokeleiden</span>, <span class="ruby-identifier">commit_comment</span> = <span class="ruby-string">''</span>)
   <span class="ruby-comment"># fetch the original content</span>
   <span class="ruby-identifier">original_xml_content</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>)
@@ -967,7 +962,7 @@ repository commit and put in the comment table</p>
 
           
           <div class="method-source-code" id="set_leiden_translation_content-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 214</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 212</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_leiden_translation_content</span>(<span class="ruby-identifier">leiden_translation_content</span>, <span class="ruby-identifier">comment</span>)
   <span class="ruby-comment"># transform back to XML</span>
   <span class="ruby-identifier">xml_content</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">leiden_translation_to_xml</span>(<span class="ruby-identifier">leiden_translation_content</span>)
@@ -1008,7 +1003,7 @@ attribute)</p>
 
           
           <div class="method-source-code" id="stub_text_structure-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 103</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 101</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">stub_text_structure</span>(<span class="ruby-identifier">lang</span>)
   <span class="ruby-identifier">translation_stub_xsl</span> =
     <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
@@ -1055,7 +1050,7 @@ attribute)</p>
 
           
           <div class="method-source-code" id="to_path-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 17</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_path</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/#{self.class::TEMPORARY_COLLECTION}/</span>
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temporary_path</span>
@@ -1111,7 +1106,7 @@ defined in translation helper)</p>
 
           
           <div class="method-source-code" id="translation_already_in_language-3F-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 85</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 83</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">translation_already_in_language?</span>(<span class="ruby-identifier">lang</span>)
   <span class="ruby-identifier">lang_path</span> = <span class="ruby-string">'/TEI/text/body/div[@type = &quot;translation&quot; and @xml:lang = &quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">lang</span> <span class="ruby-operator">+</span> <span class="ruby-string">'&quot;]'</span>
   
@@ -1151,7 +1146,7 @@ defined in translation helper)</p>
 
           
           <div class="method-source-code" id="xml_title_text-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 47</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_trans_identifier.rb, line 45</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">xml_title_text</span>
   <span class="ruby-keyword">return</span> <span class="ruby-string">&quot; HGVTITLE (DDBTITLE) &quot;</span>
 <span class="ruby-keyword">end</span></pre>

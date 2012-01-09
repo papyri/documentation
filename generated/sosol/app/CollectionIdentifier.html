@@ -325,7 +325,11 @@
   <h1 class="class">class CollectionIdentifier</h1>
 
   <div id="description" class="description">
-    <ul><li>
+    
+<p>Used for directly manipulating <code>collection.rdf</code> in the canonical
+repository. This is assumed to never have an instance belonging to a <a
+href="Publication.html">Publication</a>.</p>
+<ul><li>
 <p>Sub-class of <a href="Identifier.html">Identifier</a></p>
 </li></ul>
 
@@ -347,12 +351,12 @@
       
         <dt id="PATH_PREFIX">PATH_PREFIX
         
-        <dd class="description">
+        <dd class="description"><p><a href="Repository.html">Repository</a> path prefix</p>
         
       
         <dt id="XML_VALIDATOR">XML_VALIDATOR
         
-        <dd class="description">
+        <dd class="description"><p>Validator to use for XML validation</p>
         
       
       </dl>
@@ -378,12 +382,19 @@
 
         <div class="method-description">
           
-          
+          <p>Class method for adding a collection short name -&gt; long name association
+to the memoized collection names hash.</p>
+<ul><li>
+<p><strong>Returns</strong>:</p>
+<ul><li>
+<p>Hash containing short_name -&gt; long_name mappings</p>
+</li></ul>
+</li></ul>
           
 
           
           <div class="method-source-code" id="add_collection_to_collection_names_hash-source">
-            <pre><span class="ruby-comment"># File app/models/collection_identifier.rb, line 67</span>
+            <pre><span class="ruby-comment"># File app/models/collection_identifier.rb, line 112</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">add_collection_to_collection_names_hash</span>(<span class="ruby-identifier">short_name</span>, <span class="ruby-identifier">long_name</span>)
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">collection_names_hash</span>
   <span class="ruby-ivar">@collection_names_hash</span>[<span class="ruby-identifier">short_name</span>] = <span class="ruby-identifier">long_name</span>
@@ -409,12 +420,19 @@
 
         <div class="method-description">
           
-          
+          <p>Class method for accessing a memoized collection names hash built by
+parsing <code>collection.rdf</code>.</p>
+<ul><li>
+<p><strong>Returns</strong>:</p>
+<ul><li>
+<p>Hash containing short_name -&gt; long_name mappings</p>
+</li></ul>
+</li></ul>
           
 
           
           <div class="method-source-code" id="collection_names_hash-source">
-            <pre><span class="ruby-comment"># File app/models/collection_identifier.rb, line 50</span>
+            <pre><span class="ruby-comment"># File app/models/collection_identifier.rb, line 90</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">collection_names_hash</span>
   <span class="ruby-keyword">unless</span> <span class="ruby-keyword">defined?</span> <span class="ruby-ivar">@collection_names_hash</span>
     <span class="ruby-ivar">@collection_names_hash</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>()
@@ -452,12 +470,25 @@
 
         <div class="method-description">
           
-          
+          <p>Given a short collection name, returns the identifier used for it inside
+<code>collection.rdf</code>. e.g.: “bgu” -&gt; “<a
+href="http://papyri.info/ddbdp/bgu">papyri.info/ddbdp/bgu</a>”</p>
+<ul><li>
+<p><strong>Args</strong>:</p>
+<ul><li>
+<p><code>short_name</code> collection short name as string</p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong>:</p>
+<ul><li>
+<p>collection identifier as string</p>
+</li></ul>
+</li></ul>
           
 
           
           <div class="method-source-code" id="short_name_to_identifier-source">
-            <pre><span class="ruby-comment"># File app/models/collection_identifier.rb, line 11</span>
+            <pre><span class="ruby-comment"># File app/models/collection_identifier.rb, line 24</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">short_name_to_identifier</span>(<span class="ruby-identifier">short_name</span>)
   <span class="ruby-keyword">return</span> <span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NumbersHelper</span>.<span class="ruby-identifier">identifier_to_url</span>([<span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NAMESPACE_IDENTIFIER</span>, <span class="ruby-constant">DDBIdentifier</span><span class="ruby-operator">::</span><span class="ruby-constant">IDENTIFIER_NAMESPACE</span>, <span class="ruby-identifier">short_name</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">'/'</span>))
 <span class="ruby-keyword">end</span></pre>
@@ -488,12 +519,26 @@
 
         <div class="method-description">
           
-          
+          <p>Adds collection to <code>collection.rdf</code> XML and commits it to the
+repository. Also updates the memoized collection names hash.</p>
+<ul><li>
+<p><strong>Args</strong>:</p>
+<ul><li>
+<p><code>short_name</code> collection short name as string, e.g.
+“p.nag.hamm”</p>
+</li><li>
+<p><code>long_name</code> collection long name as string, e.g. “P.Nag
+Hamm.”</p>
+</li><li>
+<p><code>actor</code> instance of <a href="User.html">User</a> class who will
+be responsible for the commit</p>
+</li></ul>
+</li></ul>
           
 
           
           <div class="method-source-code" id="add_collection-source">
-            <pre><span class="ruby-comment"># File app/models/collection_identifier.rb, line 15</span>
+            <pre><span class="ruby-comment"># File app/models/collection_identifier.rb, line 35</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">add_collection</span>(<span class="ruby-identifier">short_name</span>, <span class="ruby-identifier">long_name</span>, <span class="ruby-identifier">actor</span>)
   <span class="ruby-keyword">unless</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">has_collection?</span>(<span class="ruby-identifier">short_name</span>)
     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">collection_xml_with_new_collection</span>(<span class="ruby-identifier">short_name</span>, <span class="ruby-identifier">long_name</span>),
@@ -523,12 +568,28 @@
 
         <div class="method-description">
           
-          
+          <p>Adds collection to <code>collection.rdf</code> XML, returning modified XML.
+Does not actually commit anything, just used for XML manipulation.</p>
+<ul><li>
+<p><strong>Args</strong>:</p>
+<ul><li>
+<p><code>short_name</code> collection short name as string, e.g.
+“p.nag.hamm”</p>
+</li><li>
+<p><code>long_name</code> collection long name as string, e.g. “P.Nag
+Hamm.”</p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong>:</p>
+<ul><li>
+<p>modified XML as string</p>
+</li></ul>
+</li></ul>
           
 
           
           <div class="method-source-code" id="collection_xml_with_new_collection-source">
-            <pre><span class="ruby-comment"># File app/models/collection_identifier.rb, line 24</span>
+            <pre><span class="ruby-comment"># File app/models/collection_identifier.rb, line 52</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">collection_xml_with_new_collection</span>(<span class="ruby-identifier">short_name</span>, <span class="ruby-identifier">long_name</span>)
   <span class="ruby-identifier">rdf</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>)
   <span class="ruby-identifier">description</span> = <span class="ruby-identifier">rdf</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">add_element</span> <span class="ruby-string">'rdf:Description'</span>, {<span class="ruby-string">'rdf:about'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">short_name_to_identifier</span>(<span class="ruby-identifier">short_name</span>)}
@@ -564,12 +625,26 @@
 
         <div class="method-description">
           
-          
+          <p>Checks if <code>collection.rdf</code> already contains the collection based
+on its short name. Short names are transformed into identifiers for the
+check, and assumed to be unique. This method does not use the memoized
+collection hash, and always hits the file directly.</p>
+<ul><li>
+<p><strong>Args</strong>:</p>
+<ul><li>
+<p><code>short_name</code> collection short name as string</p>
+</li></ul>
+</li><li>
+<p><strong>Returns</strong>:</p>
+<ul><li>
+<p><code>true</code> or <code>false</code></p>
+</li></ul>
+</li></ul>
           
 
           
           <div class="method-source-code" id="has_collection-3F-source">
-            <pre><span class="ruby-comment"># File app/models/collection_identifier.rb, line 39</span>
+            <pre><span class="ruby-comment"># File app/models/collection_identifier.rb, line 75</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">has_collection?</span>(<span class="ruby-identifier">short_name</span>)
   <span class="ruby-identifier">rdf</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>)
 
@@ -601,12 +676,15 @@
 
         <div class="method-description">
           
-          
+          <p><strong>Returns</strong>:</p>
+<ul><li>
+<p>path to <code>collection.rdf</code> in repository as string</p>
+</li></ul>
           
 
           
           <div class="method-source-code" id="to_path-source">
-            <pre><span class="ruby-comment"># File app/models/collection_identifier.rb, line 7</span>
+            <pre><span class="ruby-comment"># File app/models/collection_identifier.rb, line 13</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_path</span>
   <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">PATH_PREFIX</span>, <span class="ruby-string">'collection.rdf'</span>)
 <span class="ruby-keyword">end</span></pre>

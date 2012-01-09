@@ -644,7 +644,7 @@ children.</p>
 
           
           <div class="method-source-code" id="all_children-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1199</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1183</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">all_children</span>
   <span class="ruby-identifier">all_child_publications</span> = []
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child_publication</span><span class="ruby-operator">|</span>
@@ -688,7 +688,7 @@ the user can withdraw before any voting has taken place.</p>
 
           
           <div class="method-source-code" id="allow_user_withdrawal-3F-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1232</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1216</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">allow_user_withdrawal?</span>(<span class="ruby-identifier">user</span>)
   <span class="ruby-comment">#check any children publications for voting activity</span>
   <span class="ruby-identifier">vote_count</span> = <span class="ruby-value">0</span>;
@@ -824,7 +824,7 @@ inside before_validation_on_update?</p>
 
           
           <div class="method-source-code" id="branch_from_master-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1128</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1112</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">branch_from_master</span>
   <span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">create_branch</span>(<span class="ruby-identifier">branch</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -854,7 +854,7 @@ inside before_validation_on_update?</p>
 
           
           <div class="method-source-code" id="canon_controlled_identifiers-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1161</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1145</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">canon_controlled_identifiers</span>
   <span class="ruby-comment"># TODO: implement a class-level var e.g. CANON_CONTROL for this</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">controlled_identifiers</span>
@@ -885,7 +885,7 @@ inside before_validation_on_update?</p>
 
           
           <div class="method-source-code" id="canon_controlled_paths-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1166</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1150</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">canon_controlled_paths</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">canon_controlled_identifiers</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_path</span>
@@ -912,67 +912,52 @@ inside before_validation_on_update?</p>
 
         <div class="method-description">
           
-          
+          <p>Moves finalizing publication from one finalizer to another.</p>
+
+<p><strong>Args</strong></p>
+<ul><li>
+<p><code>new_finalizer</code> user who will become the finalizer</p>
+</li></ul>
           
 
           
           <div class="method-source-code" id="change_finalizer-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 851</span>
-  <span class="ruby-keyword">def</span> <span class="ruby-identifier">change_finalizer</span>(<span class="ruby-identifier">new_finalizer</span>)
-    <span class="ruby-comment">#need to copy finalizer's copy if they have changed anything</span>
-    <span class="ruby-comment">#copy board pub to new finalizer</span>
-    <span class="ruby-identifier">old_finalizing_publication</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find_finalizer_publication</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 855</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">change_finalizer</span>(<span class="ruby-identifier">new_finalizer</span>)
+  <span class="ruby-comment">#need to copy finalizer's copy if they have changed anything</span>
+  <span class="ruby-identifier">old_finalizing_publication</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find_finalizer_publication</span>
 
-    <span class="ruby-keyword">if</span> <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">nil?</span>
-      <span class="ruby-comment">#some kind of error should be thrown?</span>
-      <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span>(<span class="ruby-string">&quot;Attempt to change finalizer on nonexistent finalize publication &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">title</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; .&quot;</span>)
-      <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
-    <span class="ruby-keyword">end</span>
-<span class="ruby-comment">#    if old_finalizing_publication</span>
-<span class="ruby-comment">#      new_finalizing_publication = old_finalizing_publication.copy_to_owner(new_finalizer) #clone_to_owner(new_finalizer)</span>
-<span class="ruby-comment">#      new_finalizing_publication.parent = old_finalizing_publication.parent</span>
-<span class="ruby-comment">#      new_finalizing_publication.save!</span>
-<span class="ruby-comment">#    end</span>
-    
-    <span class="ruby-comment">#remove former finalizer</span>
-<span class="ruby-comment">#    old_finalizing_publication.destroy</span>
-   
-   
-   <span class="ruby-comment">#########</span>
-    <span class="ruby-comment">#---clone to owner</span>
-    <span class="ruby-identifier">new_finalizing_publication</span> = <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">clone</span>
-    <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">owner</span> = <span class="ruby-identifier">new_finalizer</span>
-    <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">creator</span> = <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">creator</span>
-    <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">title</span> = <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">title</span>
-    <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">branch</span> = <span class="ruby-identifier">title_to_ref</span>(<span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">title</span>)
-    <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">parent</span>
-    
-    <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">save!</span>
-    
-    <span class="ruby-comment"># copy identifiers over to new pub</span>
-    <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">identifier</span><span class="ruby-operator">|</span>
-      <span class="ruby-identifier">duplicate_identifier</span> = <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>
-      <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">identifiers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">duplicate_identifier</span>
-    <span class="ruby-keyword">end</span>
-   <span class="ruby-comment">#===clone to owner</span>
-   
-   <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">copy_branch_from_repo</span>( <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">branch</span>, <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">branch</span>, <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>)
-   <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">save!</span>
-   
-   <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">destroy</span>
-   <span class="ruby-comment">#######</span>
-   
-   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
-   
-   
-    <span class="ruby-comment">#now there are 2 finalizers, any danger in this?</span>
-    <span class="ruby-comment">#now copy any old changes to new</span>
-    
-    
-    <span class="ruby-comment">#copy old finalizer's changes to new finalizer</span>
-    <span class="ruby-comment">#maybe just change owner? creator? but then need to copy over</span>
-    
-  <span class="ruby-keyword">end</span></pre>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-comment">#some kind of error should be thrown?</span>
+    <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">error</span>(<span class="ruby-string">&quot;Attempt to change finalizer on nonexistent finalize publication &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">title</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot; .&quot;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+ 
+  <span class="ruby-comment"># clone publication database record to owner</span>
+  <span class="ruby-identifier">new_finalizing_publication</span> = <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">clone</span>
+  <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">owner</span> = <span class="ruby-identifier">new_finalizer</span>
+  <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">creator</span> = <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">creator</span>
+  <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">title</span> = <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">title</span>
+  <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">branch</span> = <span class="ruby-identifier">title_to_ref</span>(<span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">title</span>)
+  <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">parent</span> = <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">parent</span>
+  
+  <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">save!</span>
+  
+  <span class="ruby-comment"># copy identifiers over to new publication</span>
+  <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">identifier</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">duplicate_identifier</span> = <span class="ruby-identifier">identifier</span>.<span class="ruby-identifier">clone</span>
+    <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">identifiers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">duplicate_identifier</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment"># copy branch to new owner </span>
+  <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">copy_branch_from_repo</span>( <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">branch</span>, <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">branch</span>, <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>)
+  <span class="ruby-identifier">new_finalizing_publication</span>.<span class="ruby-identifier">save!</span>
+ 
+  <span class="ruby-comment"># destroy old publication (including branch)</span>
+  <span class="ruby-identifier">old_finalizing_publication</span>.<span class="ruby-identifier">destroy</span>
+ 
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
           </div><!-- change_finalizer-source -->
           
         </div>
@@ -1064,7 +1049,7 @@ inside before_validation_on_update?</p>
 
           
           <div class="method-source-code" id="children_votes-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1275</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1259</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">children_votes</span>
   <span class="ruby-identifier">vote_total</span> = <span class="ruby-value">0</span>
   <span class="ruby-identifier">vote_ddb</span> = <span class="ruby-value">0</span>
@@ -1121,7 +1106,7 @@ new owner is the end_user for the publication’s community.</p>
 
           
           <div class="method-source-code" id="clone_to_end_user-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1329</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1313</span>
  <span class="ruby-keyword">def</span> <span class="ruby-identifier">clone_to_end_user</span>()
   <span class="ruby-identifier">duplicate</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clone</span>
   <span class="ruby-identifier">duplicate</span>.<span class="ruby-identifier">owner</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">community</span>.<span class="ruby-identifier">end_user</span>
@@ -1170,7 +1155,7 @@ publication.</p>
 
           
           <div class="method-source-code" id="clone_to_owner-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1305</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1289</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">clone_to_owner</span>(<span class="ruby-identifier">new_owner</span>)
   <span class="ruby-identifier">duplicate</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clone</span>
   <span class="ruby-identifier">duplicate</span>.<span class="ruby-identifier">owner</span> = <span class="ruby-identifier">new_owner</span>
@@ -1214,7 +1199,7 @@ publication.</p>
 
           
           <div class="method-source-code" id="commit_to_canon-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1019</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1003</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">commit_to_canon</span>
   <span class="ruby-comment">#commit_sha is just used to return git sha reference point for comment</span>
   <span class="ruby-identifier">commit_sha</span> = <span class="ruby-keyword">nil</span>
@@ -1355,7 +1340,7 @@ publication’s board</p>
 
           
           <div class="method-source-code" id="controlled_identifiers-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1137</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1121</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">controlled_identifiers</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">select</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Board</span>
@@ -1400,7 +1385,7 @@ publication’s board</p>
 
           
           <div class="method-source-code" id="controlled_paths-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1155</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1139</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">controlled_paths</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">controlled_identifiers</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">i</span>.<span class="ruby-identifier">to_path</span>
@@ -1441,7 +1426,7 @@ called from the finalizer’s publication copy.</p>
 
           
           <div class="method-source-code" id="copy_back_to_user-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 936</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 920</span>
   <span class="ruby-keyword">def</span> <span class="ruby-identifier">copy_back_to_user</span>(<span class="ruby-identifier">commit_comment</span>, <span class="ruby-identifier">committer_user</span>)
        <span class="ruby-comment">#copies changes made to this (self) publication back to the creator's publication</span>
        <span class="ruby-comment">#this is intended to be called from the finalizer's publication copy</span>
@@ -1545,7 +1530,7 @@ called from the finalizer’s publication copy.</p>
 
           
           <div class="method-source-code" id="copy_repo_to_parent_repo-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1374</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1358</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">copy_repo_to_parent_repo</span>
    <span class="ruby-comment">#all we need to do is copy the repo back the parents repo</span>
    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">copy_branch_from_repo</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">branch</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">branch</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">repository</span>)
@@ -1577,7 +1562,7 @@ the publications source</p>
 
           
           <div class="method-source-code" id="copy_to_end_user-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1365</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1349</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">copy_to_end_user</span>()
   <span class="ruby-identifier">duplicate</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clone_to_end_user</span>()
   <span class="ruby-identifier">duplicate</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">copy_branch_from_repo</span>(
@@ -1613,7 +1598,7 @@ duplicate publication with new_owner</p>
 
           
           <div class="method-source-code" id="copy_to_owner-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1353</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1337</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">copy_to_owner</span>(<span class="ruby-identifier">new_owner</span>)
   <span class="ruby-identifier">duplicate</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clone_to_owner</span>(<span class="ruby-identifier">new_owner</span>)
   
@@ -1649,7 +1634,7 @@ duplicate publication with new_owner</p>
 
           
           <div class="method-source-code" id="creatable_identifiers-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1472</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1456</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">creatable_identifiers</span>
   <span class="ruby-identifier">creatable_identifiers</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Identifier</span><span class="ruby-operator">::</span><span class="ruby-constant">IDENTIFIER_SUBCLASSES</span>)
   
@@ -1722,7 +1707,7 @@ duplicate publication with new_owner</p>
 
           
           <div class="method-source-code" id="diff_from_canon-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1172</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1156</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">diff_from_canon</span>
   <span class="ruby-identifier">canon</span> = <span class="ruby-constant">Repository</span>.<span class="ruby-identifier">new</span>
   <span class="ruby-identifier">canonical_sha</span> = <span class="ruby-identifier">canon</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">get_head</span>(<span class="ruby-string">'master'</span>).<span class="ruby-identifier">commit</span>.<span class="ruby-identifier">sha</span>
@@ -1758,7 +1743,7 @@ publication</p>
 
           
           <div class="method-source-code" id="entry_identifier-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1382</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1366</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">entry_identifier</span>
   <span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">first</span>
 <span class="ruby-keyword">end</span></pre>
@@ -1789,7 +1774,7 @@ publication</p>
 
           
           <div class="method-source-code" id="find_finalizer_publication-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 916</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 900</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">find_finalizer_publication</span>
 <span class="ruby-comment">#returns the finalizer's publication or nil if finalizer does not exist</span>
   <span class="ruby-constant">Publication</span>.<span class="ruby-identifier">find_by_parent_id</span>( <span class="ruby-keyword">self</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;finalizing&quot;</span> })
@@ -1821,7 +1806,7 @@ publication or <code>nil</code> if no one finalizing this publication.</p>
 
           
           <div class="method-source-code" id="find_finalizer_user-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 908</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 892</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">find_finalizer_user</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">find_finalizer_publication</span>
     <span class="ruby-keyword">return</span> <span class="ruby-identifier">find_finalizer_publication</span>.<span class="ruby-identifier">owner</span>    
@@ -1862,7 +1847,7 @@ Returns that board.</p>
 
           
           <div class="method-source-code" id="find_first_board-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1248</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1232</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">find_first_board</span>
   <span class="ruby-identifier">board_publication</span> = <span class="ruby-keyword">self</span>
   <span class="ruby-keyword">while</span> (<span class="ruby-identifier">board_publication</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;Board&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">board_publication</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">do</span>
@@ -1907,7 +1892,7 @@ Returns that publication.</p>
 
           
           <div class="method-source-code" id="find_first_board_parent-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1266</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1250</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">find_first_board_parent</span>
   <span class="ruby-identifier">board_publication</span> = <span class="ruby-keyword">self</span>
   <span class="ruby-keyword">while</span> (<span class="ruby-identifier">board_publication</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;Board&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">board_publication</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">do</span>
@@ -2080,7 +2065,7 @@ Returns that publication.</p>
 
           
           <div class="method-source-code" id="get_all_comments-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1386</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1370</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_all_comments</span>(<span class="ruby-identifier">title</span>)
   <span class="ruby-identifier">all_built_comments</span> = []
   <span class="ruby-identifier">xml_only_built_comments</span> = []
@@ -2192,7 +2177,7 @@ Returns that publication.</p>
 
           
           <div class="method-source-code" id="head-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 921</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 905</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">head</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">get_head</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">branch</span>).<span class="ruby-identifier">commit</span>.<span class="ruby-identifier">sha</span>
 <span class="ruby-keyword">end</span></pre>
@@ -2301,7 +2286,7 @@ href="Rails.html">Rails</a> logger.</p>
 
           
           <div class="method-source-code" id="merge_base-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 925</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 909</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">merge_base</span>(<span class="ruby-identifier">branch</span> = <span class="ruby-string">'master'</span>)
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">repo</span>.<span class="ruby-identifier">git</span>.<span class="ruby-identifier">merge_base</span>({},<span class="ruby-identifier">branch</span>,<span class="ruby-keyword">self</span>.<span class="ruby-identifier">head</span>).<span class="ruby-identifier">chomp</span>
 <span class="ruby-keyword">end</span></pre>
@@ -2463,7 +2448,7 @@ the publication workflow chain.</p>
 
           
           <div class="method-source-code" id="origin-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1189</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1173</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">origin</span>
   <span class="ruby-comment"># walk the parent list until we encounter one with no parent</span>
   <span class="ruby-identifier">origin_publication</span> = <span class="ruby-keyword">self</span>
@@ -2698,7 +2683,7 @@ in the form of</p>
 
           
           <div class="method-source-code" id="repository-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1347</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1331</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">repository</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>
 <span class="ruby-keyword">end</span></pre>
@@ -2950,7 +2935,7 @@ comment.</p>
 
           
           <div class="method-source-code" id="submission_reason-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1182</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1166</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">submission_reason</span>
   <span class="ruby-identifier">reason</span> = <span class="ruby-constant">Comment</span>.<span class="ruby-identifier">find_by_publication_id</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:conditions</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;reason = 'submit'&quot;</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -3365,7 +3350,7 @@ to “reset” a publication that is in a confused state.</p>
 
           
           <div class="method-source-code" id="withdraw-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1210</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1194</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">withdraw</span>
   <span class="ruby-identifier">original_origin</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">origin</span>
   <span class="ruby-comment">#if(original_origin != self) #commented out so user can withdraw there own pub, note this should not be called without checking that the pub is withdrawable</span>
@@ -3414,7 +3399,7 @@ to “reset” a publication that is in a confused state.</p>
 
           
           <div class="method-source-code" id="identifier_to_ref-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1526</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1510</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">identifier_to_ref</span>(<span class="ruby-identifier">str</span>)
   <span class="ruby-identifier">str</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-string">':;'</span>,<span class="ruby-string">'_'</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -3444,7 +3429,7 @@ to “reset” a publication that is in a confused state.</p>
 
           
           <div class="method-source-code" id="title_to_ref-source">
-            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1521</span>
+            <pre><span class="ruby-comment"># File app/models/publication.rb, line 1505</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">title_to_ref</span>(<span class="ruby-identifier">str</span>)
   <span class="ruby-identifier">str</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-string">' '</span>,<span class="ruby-string">'_'</span>)
 <span class="ruby-keyword">end</span></pre>

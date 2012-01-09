@@ -380,11 +380,6 @@
         <dd class="description">
         
       
-        <dt id="XML_VALIDATOR">XML_VALIDATOR
-        
-        <dd class="description">
-        
-      
       </dl>
     </section>
     
@@ -449,7 +444,7 @@ href="HGVMetaIdentifier.html#attribute-i-valid_epidoc_attributes">#valid_epidoc_
 
           
           <div class="method-source-code" id="after_initialize-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 26</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 24</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">after_initialize</span>
   <span class="ruby-ivar">@configuration</span> = <span class="ruby-constant">HgvMetaConfiguration</span>.<span class="ruby-identifier">new</span> <span class="ruby-comment">#YAML::load_file(File.join(RAILS_ROOT, %w{config hgv.yml}))[:hgv][:metadata]</span>
   <span class="ruby-ivar">@valid_epidoc_attributes</span> = <span class="ruby-ivar">@configuration</span>.<span class="ruby-identifier">keys</span>
@@ -480,7 +475,7 @@ href="HGVMetaIdentifier.html#attribute-i-valid_epidoc_attributes">#valid_epidoc_
 
           
           <div class="method-source-code" id="after_rename-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 202</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 200</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">after_rename</span>(<span class="ruby-identifier">options</span> = {})
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:update_header</span>]
     <span class="ruby-identifier">rewritten_xml</span> =
@@ -539,7 +534,7 @@ first date item will be returned, no matter whether the id machtes or not</p>
 
           
           <div class="method-source-code" id="get_date_item-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 74</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 72</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_date_item</span> <span class="ruby-identifier">date_id</span>    
   <span class="ruby-keyword">self</span>[<span class="ruby-value">:textDate</span>].<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">dateItem</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-identifier">dateItem</span>[<span class="ruby-value">:attributes</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">dateItem</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:id</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">dateItem</span>[<span class="ruby-value">:attributes</span>][<span class="ruby-value">:id</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">date_id</span>)
@@ -586,7 +581,7 @@ attribute&gt;]+ like +<a href="http://:title">self</a>+</p>
 
           
           <div class="method-source-code" id="get_epidoc_attributes-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 93</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 91</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_epidoc_attributes</span>
   <span class="ruby-identifier">doc</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">content</span>
 
@@ -645,7 +640,7 @@ data about the wanted item (especially the xpath to search)</p>
 
           
           <div class="method-source-code" id="get_epidoc_attributes_list-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 113</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 111</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_epidoc_attributes_list</span> <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">config</span>
   <span class="ruby-identifier">list</span> = []
   <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-identifier">config</span>[<span class="ruby-value">:xpath</span>]){<span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span>
@@ -706,7 +701,7 @@ a given configuration node [0 =&gt; {:value =&gt; ”, :attributes =&gt;
 
           
           <div class="method-source-code" id="get_epidoc_attributes_tree-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 130</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 128</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_epidoc_attributes_tree</span> <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">config</span>
   <span class="ruby-identifier">tree</span> = []
   
@@ -791,7 +786,7 @@ configuration object (which may be just an empty string)</p>
 
           
           <div class="method-source-code" id="get_epidoc_attributes_value-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 175</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 173</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_epidoc_attributes_value</span> <span class="ruby-identifier">doc</span>, <span class="ruby-identifier">config</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">element</span> = <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-identifier">config</span>[<span class="ruby-value">:xpath</span>]]
     <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">config</span>[<span class="ruby-value">:default</span>]
@@ -825,7 +820,7 @@ configuration object (which may be just an empty string)</p>
 
           
           <div class="method-source-code" id="id_attribute-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 53</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 51</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">id_attribute</span>
   <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;hgvTEMP&quot;</span>
 <span class="ruby-keyword">end</span></pre>
@@ -855,7 +850,7 @@ configuration object (which may be just an empty string)</p>
 
           
           <div class="method-source-code" id="n_attribute-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 58</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 56</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">n_attribute</span>
   <span class="ruby-identifier">ddb</span> = <span class="ruby-constant">DDBIdentifier</span>.<span class="ruby-identifier">find_by_publication_id</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">id</span>, <span class="ruby-value">:limit</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>)
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">ddb</span>.<span class="ruby-identifier">n_attribute</span>
@@ -897,7 +892,7 @@ EpiDoc key</p>
 
           
           <div class="method-source-code" id="populate_epidoc_attributes_from_attributes_hash-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 222</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 220</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">populate_epidoc_attributes_from_attributes_hash</span> <span class="ruby-identifier">attributes_hash</span>
 
   <span class="ruby-ivar">@configuration</span>.<span class="ruby-identifier">scheme</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">config</span><span class="ruby-operator">|</span>
@@ -966,7 +961,7 @@ e.g. +%w{data xslt epidoc my.xsl})+, defaults to
 
           
           <div class="method-source-code" id="preview-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 16</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 14</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">preview</span> <span class="ruby-identifier">parameters</span> = {}, <span class="ruby-identifier">xsl</span> = <span class="ruby-keyword">nil</span>
   <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
     <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>),
@@ -1017,7 +1012,7 @@ user’s intention</p>
 
           
           <div class="method-source-code" id="set_epidoc-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 190</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 188</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_epidoc</span>(<span class="ruby-identifier">attributes_hash</span>, <span class="ruby-identifier">comment</span>)
   <span class="ruby-identifier">populate_epidoc_attributes_from_attributes_hash</span>(<span class="ruby-identifier">attributes_hash</span>)
 
@@ -1054,7 +1049,7 @@ user’s intention</p>
 
           
           <div class="method-source-code" id="to_path-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 32</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 30</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_path</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/#{self.class::TEMPORARY_COLLECTION}/</span>
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temporary_path</span>
@@ -1100,7 +1095,7 @@ user’s intention</p>
 
           
           <div class="method-source-code" id="xml_title_text-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 64</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 62</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">xml_title_text</span>
   <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;Description of document&quot;</span>
 <span class="ruby-keyword">end</span></pre>
@@ -1150,7 +1145,7 @@ user’s intention</p>
 
           
           <div class="method-source-code" id="attributeLegal-3F-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 423</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 421</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">attributeLegal?</span> <span class="ruby-identifier">key</span>
  <span class="ruby-identifier">legal?</span> <span class="ruby-keyword">self</span>[<span class="ruby-identifier">key</span>]
 <span class="ruby-keyword">end</span></pre>
@@ -1198,7 +1193,7 @@ any)</p>
 
           
           <div class="method-source-code" id="legal-3F-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 434</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 432</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">legal?</span> <span class="ruby-identifier">candide</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">candide</span>
     <span class="ruby-keyword">if</span> (<span class="ruby-identifier">candide</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">candide</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>)) <span class="ruby-operator">&amp;&amp;</span>  <span class="ruby-operator">!</span><span class="ruby-identifier">candide</span>.<span class="ruby-identifier">empty?</span>
@@ -1271,7 +1266,7 @@ checks and some data sanitisation</p>
 
           
           <div class="method-source-code" id="populate_epidoc_attribute-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 543</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 541</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">populate_epidoc_attribute</span> <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">default</span> = <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">value</span>
     <span class="ruby-identifier">value</span> = <span class="ruby-identifier">default</span>
@@ -1324,7 +1319,7 @@ used lateron for easy data access</p>
 
           
           <div class="method-source-code" id="populate_tree_from_attributes_hash-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 562</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 560</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">populate_tree_from_attributes_hash</span> <span class="ruby-identifier">data</span>, <span class="ruby-identifier">config</span>
 
   <span class="ruby-identifier">result_item</span> = {
@@ -1421,7 +1416,7 @@ eine Säule im Steinbruch vollendet und zu Verladung bereit ist”,
 
           
           <div class="method-source-code" id="set_epidoc_attributes-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 342</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 340</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_epidoc_attributes</span>
   <span class="ruby-comment"># load xml document</span>
   <span class="ruby-identifier">doc</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">content</span>
@@ -1550,7 +1545,7 @@ configuration as read from <code>hgv.yml</code> # Side effect on
 
           
           <div class="method-source-code" id="set_epidoc_attributes_tree-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 275</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 273</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_epidoc_attributes_tree</span> <span class="ruby-identifier">parent</span>, <span class="ruby-identifier">xpath</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">config</span>
   <span class="ruby-identifier">child_name</span> = <span class="ruby-identifier">xpath</span>[<span class="ruby-regexp">/\A([\w]+)[\w\/\[\]@:=']*\Z/</span>, <span class="ruby-value">1</span>]
   <span class="ruby-identifier">child_attributes</span> = <span class="ruby-identifier">xpath</span>.<span class="ruby-identifier">scan</span> <span class="ruby-regexp">/@([\w:]+)='([\w]+)'/</span>
@@ -1654,7 +1649,7 @@ contains HGV EpiDoc xml which should be sorted</p>
 
           
           <div class="method-source-code" id="sort-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 469</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_meta_identifier.rb, line 467</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">sort</span> <span class="ruby-identifier">doc</span>
   <span class="ruby-comment"># general</span>
   <span class="ruby-identifier">sort_paths</span> = {

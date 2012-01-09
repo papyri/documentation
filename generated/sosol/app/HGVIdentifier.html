@@ -356,6 +356,11 @@ should be created.</p>
         <dd class="description">
         
       
+        <dt id="XML_VALIDATOR">XML_VALIDATOR
+        
+        <dd class="description">
+        
+      
       </dl>
     </section>
     
@@ -388,7 +393,7 @@ replacing ‘_’ with space</p>
 
           
           <div class="method-source-code" id="collection_names_hash-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_identifier.rb, line 22</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_identifier.rb, line 23</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">collection_names_hash</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">collection_names</span>
   
@@ -434,7 +439,7 @@ replacing ‘_’ with space</p>
 
           
           <div class="method-source-code" id="temporary_path-source">
-            <pre><span class="ruby-comment"># File app/models/hgv_identifier.rb, line 14</span>
+            <pre><span class="ruby-comment"># File app/models/hgv_identifier.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">temporary_path</span>
   <span class="ruby-identifier">trimmed_name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/papyri.info\/hgv\//</span>, <span class="ruby-string">''</span>)
   <span class="ruby-identifier">components</span> = <span class="ruby-identifier">trimmed_name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">';'</span>)

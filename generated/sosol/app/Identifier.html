@@ -445,7 +445,7 @@ class (HGV, DDB, APIS)</p>
 
           
           <div class="method-source-code" id="collection_names-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 194</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 192</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">collection_names</span>
   <span class="ruby-keyword">unless</span> <span class="ruby-keyword">defined?</span> <span class="ruby-ivar">@collection_names</span>
     <span class="ruby-identifier">parts</span> = <span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NumbersHelper</span><span class="ruby-operator">::</span><span class="ruby-identifier">identifier_to_parts</span>([<span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NAMESPACE_IDENTIFIER</span>, <span class="ruby-keyword">self</span><span class="ruby-operator">::</span><span class="ruby-constant">IDENTIFIER_NAMESPACE</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">'/'</span>))
@@ -493,7 +493,7 @@ part of</p>
 
           
           <div class="method-source-code" id="new_from_template-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 208</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 206</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new_from_template</span>(<span class="ruby-identifier">publication</span>)
   <span class="ruby-identifier">new_identifier</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">next_temporary_identifier</span>)
   <span class="ruby-identifier">new_identifier</span>.<span class="ruby-identifier">publication</span> = <span class="ruby-identifier">publication</span>
@@ -540,7 +540,7 @@ identifier</p>
 
           
           <div class="method-source-code" id="next_temporary_identifier-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 240</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 239</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">next_temporary_identifier</span>
   <span class="ruby-identifier">year</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">year</span>
   <span class="ruby-identifier">latest</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:all</span>,
@@ -609,7 +609,7 @@ pulls it from the repository for this identifier</p>
 
           
           <div class="method-source-code" id="add_change_desc-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 400</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 399</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">add_change_desc</span>(<span class="ruby-identifier">text</span> = <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-identifier">user_info</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">creator</span>, <span class="ruby-identifier">input_content</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">doc</span> = <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">apply_xsl_transform</span>(
     <span class="ruby-constant">JRubyXML</span>.<span class="ruby-identifier">stream_from_string</span>(<span class="ruby-identifier">input_content</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">input_content</span>),
@@ -651,7 +651,7 @@ pulls it from the repository for this identifier</p>
 
           
           <div class="method-source-code" id="after_rename-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 376</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 375</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">after_rename</span>(<span class="ruby-identifier">options</span> = {})
 <span class="ruby-keyword">end</span></pre>
           </div><!-- after_rename-source -->
@@ -678,12 +678,15 @@ pulls it from the repository for this identifier</p>
           <p>Put stuff in here you want to do do all identifiers before a commit is done</p>
 <ul><li>
 <p>currently no logic is in here - just returns whatever was passed in</p>
+</li><li>
+<p>intended to be overridden by <a href="Identifier.html">Identifier</a>
+subclasses, if necessary</p>
 </li></ul>
           
 
           
           <div class="method-source-code" id="before_commit-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 92</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 90</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">before_commit</span>(<span class="ruby-identifier">content</span>)
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">content</span>
 <span class="ruby-keyword">end</span></pre>
@@ -718,7 +721,7 @@ pulls it from the repository for this identifier</p>
 
           
           <div class="method-source-code" id="branch-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 66</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 63</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">branch</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-string">'master'</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">branch</span>
 <span class="ruby-keyword">end</span></pre>
@@ -753,7 +756,7 @@ pulls it from the repository for this identifier</p>
 
           
           <div class="method-source-code" id="children-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 40</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 37</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">children</span>
   <span class="ruby-identifier">child_identifiers</span> = []
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child_pub</span><span class="ruby-operator">|</span>
@@ -792,7 +795,7 @@ pulls it from the repository for this identifier</p>
 
           
           <div class="method-source-code" id="content-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 72</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 69</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">content</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">get_file_from_branch</span>(
     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_path</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">branch</span>)
@@ -818,19 +821,19 @@ pulls it from the repository for this identifier</p>
 
         <div class="method-description">
           
-          <p>Creates ERB file from retrieved default XML file template for the
-associated identifier class</p>
+          <p>Processes ERB file from retrieved default XML file template for the
+associated identifier class in data/templates/</p>
 <ul><li>
 <p><strong>Returns</strong> :</p>
 <ul><li>
-<p>template</p>
+<p>evaluated file template as string</p>
 </li></ul>
 </li></ul>
           
 
           
           <div class="method-source-code" id="file_template-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 223</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 222</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">file_template</span>
   <span class="ruby-identifier">template_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">RAILS_ROOT</span>, [<span class="ruby-string">'data'</span>,<span class="ruby-string">'templates'</span>],
                             <span class="ruby-node">&quot;#{self.class.to_s.underscore}.xml.erb&quot;</span>)
@@ -875,7 +878,7 @@ associated identifier class</p>
 
           
           <div class="method-source-code" id="get_commits-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 120</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 118</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_commits</span>
   <span class="ruby-keyword">self</span>[<span class="ruby-value">:commits</span>] = 
     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">get_log_for_file_from_branch</span>(
@@ -914,7 +917,7 @@ associated identifier class</p>
 
           
           <div class="method-source-code" id="get_recent_commit_sha-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 130</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 128</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_recent_commit_sha</span>
   <span class="ruby-identifier">commits</span> = <span class="ruby-identifier">get_commits</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">commits</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">commits</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
@@ -961,7 +964,7 @@ repository if not passed in</p>
 
           
           <div class="method-source-code" id="is_valid_xml-3F-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 82</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 79</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">is_valid_xml?</span>(<span class="ruby-identifier">content</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">content</span>.<span class="ruby-identifier">nil?</span>
     <span class="ruby-identifier">content</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>
@@ -1007,7 +1010,7 @@ repository if not passed in</p>
 
           
           <div class="method-source-code" id="mutable-3F-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 275</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 274</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">mutable?</span>
  
   <span class="ruby-comment">#only let the board edit if they own it</span>
@@ -1063,7 +1066,7 @@ member</p>
 
           
           <div class="method-source-code" id="needs_reviewing-3F-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 463</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 462</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">needs_reviewing?</span>(<span class="ruby-identifier">user_id</span>)
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">modified?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;voting&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">owner_type</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Board&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">controls_identifier?</span>(<span class="ruby-keyword">self</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">user_has_voted?</span>(<span class="ruby-identifier">user_id</span>) <span class="ruby-comment">#!self.user_has_voted?(user_id)</span>
 <span class="ruby-keyword">end</span></pre>
@@ -1099,7 +1102,7 @@ does not have a parent id)</p>
 
           
           <div class="method-source-code" id="origin-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 28</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 25</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">origin</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">detect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">type</span>}
 <span class="ruby-keyword">end</span></pre>
@@ -1136,7 +1139,7 @@ is a part of</p>
 
           
           <div class="method-source-code" id="owner-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 260</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 259</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">owner</span>
   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">nil?</span>
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">owner</span>
@@ -1175,7 +1178,7 @@ is a part of</p>
 
           
           <div class="method-source-code" id="parent-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 34</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 31</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">parent</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">identifiers</span>.<span class="ruby-identifier">detect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">type</span>}
 <span class="ruby-keyword">end</span></pre>
@@ -1203,14 +1206,14 @@ is a part of</p>
           <ul><li>
 <p><strong>Returns</strong> :</p>
 <ul><li>
-<p>this idenfiers origin publication and the origin children, but not self</p>
+<p>this idenfier’s origin publication and the origin children, but not self</p>
 </li></ul>
 </li></ul>
           
 
           
           <div class="method-source-code" id="relatives-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 50</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 47</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">relatives</span>
   <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">origin</span>.<span class="ruby-identifier">nil?</span>
     <span class="ruby-keyword">return</span> []
@@ -1261,7 +1264,7 @@ correct ‘collection’ name</p>
 
           
           <div class="method-source-code" id="rename-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 335</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 334</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">rename</span>(<span class="ruby-identifier">new_name</span>, <span class="ruby-identifier">options</span> = {})
   <span class="ruby-identifier">original</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">clone</span>
   <span class="ruby-identifier">options</span>[<span class="ruby-value">:original</span>] = <span class="ruby-identifier">original</span>
@@ -1331,7 +1334,7 @@ correct ‘collection’ name</p>
 
           
           <div class="method-source-code" id="repository-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 60</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 57</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">repository</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Repository</span>.<span class="ruby-identifier">new</span>() <span class="ruby-operator">:</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">publication</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">repository</span>
 <span class="ruby-keyword">end</span></pre>
@@ -1361,7 +1364,7 @@ correct ‘collection’ name</p>
 
           
           <div class="method-source-code" id="result_action_approve-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 441</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 440</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">result_action_approve</span>
  
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">status</span> = <span class="ruby-string">&quot;approved&quot;</span>
@@ -1393,7 +1396,7 @@ correct ‘collection’ name</p>
 
           
           <div class="method-source-code" id="result_action_graffiti-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 454</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 453</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">result_action_graffiti</span>
   
   <span class="ruby-comment">#delete</span>
@@ -1424,7 +1427,7 @@ correct ‘collection’ name</p>
 
           
           <div class="method-source-code" id="result_action_reject-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 448</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 447</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">result_action_reject</span>
  
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">status</span> = <span class="ruby-string">&quot;rejected&quot;</span>
@@ -1469,7 +1472,7 @@ correct ‘collection’ name</p>
 
           
           <div class="method-source-code" id="set_content-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 102</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 100</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_content</span>(<span class="ruby-identifier">content</span>, <span class="ruby-identifier">options</span> = {})
   <span class="ruby-identifier">options</span>.<span class="ruby-identifier">reverse_merge!</span> <span class="ruby-value">:comment</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">''</span>
   <span class="ruby-identifier">commit_sha</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">repository</span>.<span class="ruby-identifier">commit_content</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_path</span>,
@@ -1525,7 +1528,7 @@ href="Identifier.html#method-i-set_content">#set_content</a></p>
 
           
           <div class="method-source-code" id="set_xml_content-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 308</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 307</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">set_xml_content</span>(<span class="ruby-identifier">content</span>, <span class="ruby-identifier">options</span>)
   <span class="ruby-identifier">default_actor</span> = <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">if</span>((<span class="ruby-operator">!</span><span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">nil?</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">owner</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">User</span>))
@@ -1580,7 +1583,7 @@ using titleize and saves it in the model</p>
 
           
           <div class="method-source-code" id="title-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 384</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 383</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">title</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">read_attribute</span>(<span class="ruby-value">:title</span>).<span class="ruby-identifier">blank?</span>
     <span class="ruby-identifier">write_attribute</span>(<span class="ruby-value">:title</span>,<span class="ruby-keyword">self</span>.<span class="ruby-identifier">titleize</span>)
@@ -1620,7 +1623,7 @@ using titleize and saves it in the model</p>
 
           
           <div class="method-source-code" id="titleize-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 142</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 140</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">titleize</span>
   <span class="ruby-identifier">title</span> = <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">HGVMetaIdentifier</span>
@@ -1690,7 +1693,7 @@ the separate components</p>
 
           
           <div class="method-source-code" id="to_components-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 182</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 180</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_components</span>
   <span class="ruby-identifier">trimmed_name</span> = <span class="ruby-constant">NumbersRDF</span><span class="ruby-operator">::</span><span class="ruby-constant">NumbersHelper</span><span class="ruby-operator">::</span><span class="ruby-identifier">identifier_to_local_identifier</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">name</span>)
   <span class="ruby-comment"># trimmed_name.sub!(/^\/#{self.class::IDENTIFIER_NAMESPACE}\//,'')</span>
@@ -1744,7 +1747,7 @@ the ‘who’ attribute of the ‘change’ tag</p>
 
           
           <div class="method-source-code" id="update_revision_desc-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 420</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 419</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update_revision_desc</span>(<span class="ruby-identifier">comment_text</span>, <span class="ruby-identifier">user</span>)
   <span class="ruby-identifier">commit_message</span> = <span class="ruby-string">&quot;Update revisionDesc\n\n&quot;</span>
   <span class="ruby-identifier">change_desc_content</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">xml_content</span>
@@ -1802,7 +1805,7 @@ not</p>
 
           
           <div class="method-source-code" id="user_has_voted-3F-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 472</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 471</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">user_has_voted?</span>(<span class="ruby-identifier">user_id</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">votes</span>
     <span class="ruby-keyword">self</span>.<span class="ruby-identifier">votes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">vote</span><span class="ruby-operator">|</span>
@@ -1845,7 +1848,7 @@ not</p>
 
           
           <div class="method-source-code" id="xml_content-source">
-            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 298</span>
+            <pre><span class="ruby-comment"># File app/models/identifier.rb, line 297</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">xml_content</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">content</span>
 <span class="ruby-keyword">end</span></pre>
