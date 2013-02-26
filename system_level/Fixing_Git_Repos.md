@@ -35,7 +35,7 @@ where $sha contains the SHA-1 hash of the file, you'll get a copy of the uncompr
 
 and the hash should be the same as the filename. The file still needs to be compressed with zlib, then it can be copied into place.
 
-The Git FAQ explains how to get a list of broken refs at https://git.wiki.kernel.org/index.php/GitFaq#How_to_remove_all_broken_refs_from_a_repository.3F
+The Git FAQ explains how to get a list of [broken refs](https://git.wiki.kernel.org/index.php/GitFaq#How_to_remove_all_broken_refs_from_a_repository.3F)
 
     git for-each-ref --format='%(refname)' | while read ref; do git rev-list --objects $ref >/dev/null || echo "in $ref"; done
 
@@ -53,4 +53,3 @@ You can maybe narrow down the refs you want to target then, by limiting the scop
     
 for example, will only target the last 100 refs, sorted in descending order by creation date. Once the offending ref has been found, you can nuke it by plugging in `git update-ref -d $ref` at the end of the command above.
 
-that is, filter the list of refs using grep, strip out the hashes (show-ref output is in the form <sha-1> <ref-name>), call rev-list on each remaining ref, and delete the offending refs.
