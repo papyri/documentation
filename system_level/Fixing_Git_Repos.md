@@ -47,8 +47,10 @@ may give you a hint, if it contains the file name or id. Then you can look for c
 
     git show-ref | grep <identifying info>
 
-You can maybe narrow down the refs you want to target then, but doing something like:
+You can maybe narrow down the refs you want to target then, by limiting the scope of `git for-each-ref`:
 
-    for ref in `git show-ref | grep "/2013/" | sed "s/^.* \(.*\)$/\1/"`; do git rev-list --objects $ref >/dev/null | git update-ref -d $ref; done
+    git for-each-ref --count=100 --sort=-authordate --format='%(refname)'
+    
+for example, will only target the last 100 refs, sorted in descending order by creation date. Once the offending ref has been found, you can nuke it by plugging in `git update-ref -d $ref` at the end of the command above.
 
 that is, filter the list of refs using grep, strip out the hashes (show-ref output is in the form <sha-1> <ref-name>), call rev-list on each remaining ref, and delete the offending refs.
