@@ -2,17 +2,17 @@ Sometimes objects in the various git repos go missing. This usually isn't a disa
 
 Always start by making a copy of the broken repo, just in case.
 
-Running a git fsck will git you some idea of what's wrong. The output tends to have a lot of garbage in them. Run it with nohup, like
+Running a git fsck will give you some idea of what's wrong. The output tends to have a lot of garbage in it. Run it with nohup, like
 
     nohup git fsck --full & 
 
-to get a file of the output you can poke around in. You're looking for output beginning with "broken link" usually.
+to get a file containing the output you can poke around in. You're looking for output beginning with "broken link" usually.
 
-Missing blobs (files) often exist in another repo, and can be recovered. If you can find the repo that has a copy of the file, something like (run in the broken repo):
+Missing objects often exist in another repo, and can be recovered. If you can find the repo that has a copy of the a missing blob (file) object, something like (run in the broken repo):
 
     git --git-dir=/path/to/repo/containing/object.git cat-file blob <sha-1> | git hash-object -w --stdin
 
-will read out the file from the good repo and write it as an object to the current, broken, one. Blobs are more likely to be recoverable than trees and commits. To recover a tree, if you can find a repo containing it, you can do 
+will read out the file from the good repo and write it as an object to the current, broken, one. Blobs are a bit easier to recover than trees and commits. To recover a tree, if you can find a repo containing it, you can do 
 
     git ls-tree <sha-1>
 
