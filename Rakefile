@@ -53,8 +53,7 @@ repositories = {
       :target => 'pn-mapping',
       :source => 'pn-mapping/docs'
     }
-  ],
-  "mapping" => []
+  ]
 }
 
 namespace "docs" do
@@ -66,6 +65,7 @@ namespace "docs" do
         cwd = FileUtils.pwd
         working_directory = File.join('repositories',repository,directory[:working_directory])
         source_directory = File.join('repositories',repository,directory[:source])
+        FileUtils.mkdir_p(source_directory, :verbose => true)
         source_files = Dir.glob(File.join(working_directory,'**','*')).reject{|f| f =~ /^#{source_directory}/}
         file source_directory => source_files do
           puts "Generating #{directory[:description]}..."
