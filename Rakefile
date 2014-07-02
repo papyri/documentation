@@ -53,8 +53,7 @@ repositories = {
       :target => 'pn-mapping',
       :source => 'pn-mapping/docs'
     }
-  ],
-  "mapping" => []
+  ]
 }
 
 namespace "docs" do
