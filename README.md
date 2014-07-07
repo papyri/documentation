@@ -11,15 +11,14 @@ Project-wide Documentation for Integrating Digital Papyrology
 * Ruby
 * Git
 * Apache Maven
-* `yard` gem (for RXSugar documentation)
-* [Jekyll](https://github.com/mojombo/jekyll) (optional)
+* `bundler` gem
 
 ## Usage
 
-Running `rake` will run the default task to fetch component repositories and build
+Running `bundle exec rake` will run the default task to fetch component repositories and build
 their documentation.
 
-Running `rake jekyll:static` on the `gh-pages` branch will generate the static site
+Running `bundle exec rake jekyll:static` on the `gh-pages` branch will generate the static site
 which is the same as that served via GitHub Pages. This will generate a `_site`
 directory suitable for copying to other webservers.
 
