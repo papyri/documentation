@@ -1,3 +1,3 @@
 markdown: rdiscount
-auto: true
-exclude: repositories
+exclude: [ repositories ]
+highlighter: pygments
