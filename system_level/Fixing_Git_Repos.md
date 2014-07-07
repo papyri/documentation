@@ -1,3 +1,8 @@
+---
+layout: default
+title: Fixing Git Repos
+---
+
 Fixing Git Repos
 ================
 
