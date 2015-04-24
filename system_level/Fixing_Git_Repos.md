@@ -1,6 +1,8 @@
 Fixing Git Repos
 ================
 
+For reference, see <http://git-scm.com/book/en/v2/Git-Internals-Git-Objects>.
+
 Sometimes objects in the various git repos go missing. This usually isn't a disaster, but it may mean that a given repo has refs that are unusable, and you'll need to manually prune them. Warning: because of the way repos are connected, pruning broken refs from one may cause problems in another. E.g. fixing a user repo may break a board repo. So a bit of checking to see whether you can reconstruct missing data often pays off. Repos may be connected via alternates, which you can find in <repo>/objects/info/alternates. Note that these are absolute paths, so renaming/moving repos should be done with care.
 
 Always start by making a copy of the broken repo, just in case.
@@ -29,7 +31,7 @@ and then go find the missing objects. Missing commits, if they can be found in a
 
 then it is possible to re-create the missing commit. Git commits consist of a header followed by the commit data and message. If you do something like 
 
-    printf "commit `git cat-file -p $sha | wc -c`\000" > $sha
+    printf "commit $(git cat-file -p $sha | wc -c | awk '{ print $1 }')\000" > $sha
     git cat-file -p $sha >> $sha
 
 where $sha contains the SHA-1 hash of the file, you'll get a copy of the uncompressed commit. You can verify its correctness by doing
