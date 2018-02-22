@@ -2,22 +2,24 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: RXSugar::RXSugar
   
-    &mdash; Documentation by YARD 0.7.4
+    &mdash; Documentation by YARD 0.9.12
   
 </title>
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '..';
-  if (relpath != '') relpath += '/';
+  pathId = "RXSugar::RXSugar";
+  relpath = '../';
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
 
@@ -33,22 +35,24 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (R)</a> &raquo; 
+    <a href="../_index.html">Index (R)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../RXSugar.html" title="RXSugar (module)">RXSugar</a></span></span>
      &raquo; 
     <span class="title">RXSugar</span>
   
-  
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
-  
-    <a id="method_list_link" href="#">Method List</a>
-  
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
   
 </div>
       <div class="clear"></div>
@@ -61,11 +65,11 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName">Object</span>
       
         <ul class="fullTree">
@@ -76,21 +80,27 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
   
-  
-    
-  
-    
+
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/rxsugar.rb</dd>
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/rxsugar.rb</dd>
+  </dl>
+  
+</div>
+
+
 
 
 
@@ -99,8 +109,8 @@
 
   
     <h2>
-      Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -108,11 +118,65 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (RXSugar) <strong>initialize</strong>(grammar) </a>
+      <a href="#nfc-class_method" title="nfc (class method)">.<strong>nfc</strong>(text)  &#x21d2; Object </a>
     
 
     
   </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nfd-class_method" title="nfd (class method)">.<strong>nfd</strong>(text)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(grammar)  &#x21d2; RXSugar </a>
+    
+
+    
+  </span>
+  
   
     <span class="note title constructor">constructor</span>
   
@@ -133,11 +197,12 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#non_xml_to_xml-instance_method" title="#non_xml_to_xml (instance method)">- (Object) <strong>non_xml_to_xml</strong>(text) </a>
+      <a href="#non_xml_to_xml-instance_method" title="#non_xml_to_xml (instance method)">#<strong>non_xml_to_xml</strong>(text)  &#x21d2; Object </a>
     
 
     
   </span>
+  
   
   
   
@@ -154,11 +219,12 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#print_grammars-instance_method" title="#print_grammars (instance method)">- (Object) <strong>print_grammars</strong> </a>
+      <a href="#print_grammars-instance_method" title="#print_grammars (instance method)">#<strong>print_grammars</strong>  &#x21d2; Object </a>
     
 
     
   </span>
+  
   
   
   
@@ -175,11 +241,12 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reversible%3F-instance_method" title="#reversible? (instance method)">- (Boolean) <strong>reversible?</strong> </a>
+      <a href="#reversible%3F-instance_method" title="#reversible? (instance method)">#<strong>reversible?</strong>  &#x21d2; Boolean </a>
     
 
     
   </span>
+  
   
   
   
@@ -196,11 +263,12 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#xml_to_non_xml-instance_method" title="#xml_to_non_xml (instance method)">- (Object) <strong>xml_to_non_xml</strong>(xml) </a>
+      <a href="#xml_to_non_xml-instance_method" title="#xml_to_non_xml (instance method)">#<strong>xml_to_non_xml</strong>(xml)  &#x21d2; Object </a>
     
 
     
   </span>
+  
   
   
   
@@ -221,16 +289,18 @@
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
+  <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="RXSugar::RXSugar (class)">RXSugar</a></span></tt>) <strong>initialize</strong>(grammar) 
+    #<strong>initialize</strong>(grammar)  &#x21d2; <tt><span class='object_link'><a href="" title="RXSugar::RXSugar (class)">RXSugar</a></span></tt> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
-<p>A new instance of RXSugar</p>
+<p>Returns a new instance of RXSugar</p>
 
 
   </div>
@@ -275,34 +345,33 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/rxsugar.rb', line 34</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_grammar identifier id'>grammar</span><span class='rparen token'>)</span>
-  <span class='comment val'># Most of this is taken from XSugar source in</span>
-  <span class='comment val'># src/dk/brics/xsugar/Main.java</span>
-  <span class='comment val'># charset = java.nio.charset.Charset.defaultCharset.name</span>
-  <span class='rubyid_charset identifier id'>charset</span> <span class='assign token'>=</span> <span class='rubyid_java identifier id'>java</span><span class='dot token'>.</span><span class='rubyid_nio identifier id'>nio</span><span class='dot token'>.</span><span class='rubyid_charset identifier id'>charset</span><span class='dot token'>.</span><span class='rubyid_Charset constant id'>Charset</span><span class='dot token'>.</span><span class='rubyid_forName identifier id'>forName</span><span class='lparen token'>(</span><span class='string val'>&quot;UTF-8&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_name identifier id'>name</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_grammar'>grammar</span><span class='rparen'>)</span>
+  <span class='comment'># Most of this is taken from XSugar source in
+</span>  <span class='comment'># src/dk/brics/xsugar/Main.java
+</span>  <span class='comment'># charset = java.nio.charset.Charset.defaultCharset.name
+</span>  <span class='id identifier rubyid_charset'>charset</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_nio'>nio</span><span class='period'>.</span><span class='id identifier rubyid_charset'>charset</span><span class='period'>.</span><span class='const'>Charset</span><span class='period'>.</span><span class='id identifier rubyid_forName'>forName</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UTF-8</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
 
-  <span class='rubyid_@out ivar id'>@out</span> <span class='assign token'>=</span> <span class='rubyid_java identifier id'>java</span><span class='dot token'>.</span><span class='rubyid_io identifier id'>io</span><span class='dot token'>.</span><span class='rubyid_PrintWriter constant id'>PrintWriter</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_java identifier id'>java</span><span class='dot token'>.</span><span class='rubyid_lang identifier id'>lang</span><span class='dot token'>.</span><span class='rubyid_System constant id'>System</span><span class='dot token'>.</span><span class='rubyid_out identifier id'>out</span><span class='comma token'>,</span> <span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
-  <span class='rubyid_@verbose ivar id'>@verbose</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+  <span class='ivar'>@out</span> <span class='op'>=</span> <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_io'>io</span><span class='period'>.</span><span class='const'>PrintWriter</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_lang'>lang</span><span class='period'>.</span><span class='const'>System</span><span class='period'>.</span><span class='id identifier rubyid_out'>out</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='ivar'>@verbose</span> <span class='op'>=</span> <span class='kw'>false</span>
 
-  <span class='rubyid_parser identifier id'>parser</span> <span class='assign token'>=</span> <span class='rubyid_XSugar constant id'>XSugar</span><span class='colon2 op'>::</span><span class='rubyid_StylesheetParser constant id'>StylesheetParser</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
-  <span class='rubyid_@stylesheet ivar id'>@stylesheet</span> <span class='assign token'>=</span> <span class='rubyid_parser identifier id'>parser</span><span class='dot token'>.</span><span class='rubyid_parse identifier id'>parse</span><span class='lparen token'>(</span><span class='rubyid_grammar identifier id'>grammar</span><span class='comma token'>,</span> <span class='string val'>'dummy.xsg'</span><span class='comma token'>,</span> <span class='rubyid_charset identifier id'>charset</span><span class='rparen token'>)</span>
-  <span class='rubyid_XSugar constant id'>XSugar</span><span class='colon2 op'>::</span><span class='rubyid_StylesheetChecker constant id'>StylesheetChecker</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='dot token'>.</span><span class='rubyid_check identifier id'>check</span><span class='lparen token'>(</span><span class='rubyid_@stylesheet ivar id'>@stylesheet</span><span class='rparen token'>)</span>
+  <span class='id identifier rubyid_parser'>parser</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../XSugar.html" title="XSugar (module)">XSugar</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../XSugar.html#StylesheetParser-constant" title="XSugar::StylesheetParser (constant)">StylesheetParser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@stylesheet</span> <span class='op'>=</span> <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_grammar'>grammar</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dummy.xsg</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_charset'>charset</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../XSugar.html" title="XSugar (module)">XSugar</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../XSugar.html#StylesheetChecker-constant" title="XSugar::StylesheetChecker (constant)">StylesheetChecker</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_check'>check</span><span class='lparen'>(</span><span class='ivar'>@stylesheet</span><span class='rparen'>)</span>
 
-  <span class='rubyid_grammar_builder identifier id'>grammar_builder</span> <span class='assign token'>=</span> <span class='rubyid_XSugar constant id'>XSugar</span><span class='colon2 op'>::</span><span class='rubyid_GrammarBuilder constant id'>GrammarBuilder</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
-  <span class='rubyid_grammar_builder identifier id'>grammar_builder</span><span class='dot token'>.</span><span class='rubyid_convert identifier id'>convert</span><span class='lparen token'>(</span><span class='rubyid_@stylesheet ivar id'>@stylesheet</span><span class='rparen token'>)</span>
-  <span class='rubyid_@l_grammar ivar id'>@l_grammar</span> <span class='assign token'>=</span> <span class='rubyid_grammar_builder identifier id'>grammar_builder</span><span class='dot token'>.</span><span class='rubyid_getNonXMLGrammar identifier id'>getNonXMLGrammar</span>
-  <span class='rubyid_@x_grammar ivar id'>@x_grammar</span> <span class='assign token'>=</span> <span class='rubyid_grammar_builder identifier id'>grammar_builder</span><span class='dot token'>.</span><span class='rubyid_getXMLGrammar identifier id'>getXMLGrammar</span>
+  <span class='id identifier rubyid_grammar_builder'>grammar_builder</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../XSugar.html" title="XSugar (module)">XSugar</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../XSugar.html#GrammarBuilder-constant" title="XSugar::GrammarBuilder (constant)">GrammarBuilder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_grammar_builder'>grammar_builder</span><span class='period'>.</span><span class='id identifier rubyid_convert'>convert</span><span class='lparen'>(</span><span class='ivar'>@stylesheet</span><span class='rparen'>)</span>
+  <span class='ivar'>@l_grammar</span> <span class='op'>=</span> <span class='id identifier rubyid_grammar_builder'>grammar_builder</span><span class='period'>.</span><span class='id identifier rubyid_getNonXMLGrammar'>getNonXMLGrammar</span>
+  <span class='ivar'>@x_grammar</span> <span class='op'>=</span> <span class='id identifier rubyid_grammar_builder'>grammar_builder</span><span class='period'>.</span><span class='id identifier rubyid_getXMLGrammar'>getXMLGrammar</span>
 
-  <span class='rubyid_normalizing_grammar_builder identifier id'>normalizing_grammar_builder</span> <span class='assign token'>=</span> <span class='rubyid_XSugar constant id'>XSugar</span><span class='colon2 op'>::</span><span class='rubyid_GrammarBuilder constant id'>GrammarBuilder</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_true true kw'>true</span><span class='rparen token'>)</span>
-  <span class='rubyid_XSugarXML constant id'>XSugarXML</span><span class='colon2 op'>::</span><span class='rubyid_StylesheetNormalizer constant id'>StylesheetNormalizer</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='dot token'>.</span><span class='rubyid_normalize identifier id'>normalize</span><span class='lparen token'>(</span><span class='rubyid_@stylesheet ivar id'>@stylesheet</span><span class='rparen token'>)</span>
-  <span class='rubyid_normalizing_grammar_builder identifier id'>normalizing_grammar_builder</span><span class='dot token'>.</span><span class='rubyid_convert identifier id'>convert</span><span class='lparen token'>(</span><span class='rubyid_@stylesheet ivar id'>@stylesheet</span><span class='rparen token'>)</span>
-  <span class='rubyid_@normalized_l_grammar ivar id'>@normalized_l_grammar</span> <span class='assign token'>=</span> <span class='rubyid_normalizing_grammar_builder identifier id'>normalizing_grammar_builder</span><span class='dot token'>.</span><span class='rubyid_getNonXMLGrammar identifier id'>getNonXMLGrammar</span>
-  <span class='rubyid_@normalized_x_grammar ivar id'>@normalized_x_grammar</span> <span class='assign token'>=</span> <span class='rubyid_normalizing_grammar_builder identifier id'>normalizing_grammar_builder</span><span class='dot token'>.</span><span class='rubyid_getXMLGrammar identifier id'>getXMLGrammar</span>
+  <span class='id identifier rubyid_normalizing_grammar_builder'>normalizing_grammar_builder</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../XSugar.html" title="XSugar (module)">XSugar</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../XSugar.html#GrammarBuilder-constant" title="XSugar::GrammarBuilder (constant)">GrammarBuilder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="../XSugarXML.html" title="XSugarXML (module)">XSugarXML</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../XSugarXML.html#StylesheetNormalizer-constant" title="XSugarXML::StylesheetNormalizer (constant)">StylesheetNormalizer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='ivar'>@stylesheet</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_normalizing_grammar_builder'>normalizing_grammar_builder</span><span class='period'>.</span><span class='id identifier rubyid_convert'>convert</span><span class='lparen'>(</span><span class='ivar'>@stylesheet</span><span class='rparen'>)</span>
+  <span class='ivar'>@normalized_l_grammar</span> <span class='op'>=</span> <span class='id identifier rubyid_normalizing_grammar_builder'>normalizing_grammar_builder</span><span class='period'>.</span><span class='id identifier rubyid_getNonXMLGrammar'>getNonXMLGrammar</span>
+  <span class='ivar'>@normalized_x_grammar</span> <span class='op'>=</span> <span class='id identifier rubyid_normalizing_grammar_builder'>normalizing_grammar_builder</span><span class='period'>.</span><span class='id identifier rubyid_getXMLGrammar'>getXMLGrammar</span>
 
-  <span class='rubyid_@parser_l ivar id'>@parser_l</span> <span class='assign token'>=</span> <span class='rubyid_XSugarParser constant id'>XSugarParser</span><span class='colon2 op'>::</span><span class='rubyid_Parser constant id'>Parser</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_@l_grammar ivar id'>@l_grammar</span><span class='comma token'>,</span> <span class='rubyid_@out ivar id'>@out</span><span class='rparen token'>)</span>
-  <span class='rubyid_@parser_x ivar id'>@parser_x</span> <span class='assign token'>=</span> <span class='rubyid_XSugarParser constant id'>XSugarParser</span><span class='colon2 op'>::</span><span class='rubyid_Parser constant id'>Parser</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_@normalized_x_grammar ivar id'>@normalized_x_grammar</span><span class='comma token'>,</span> <span class='rubyid_@out ivar id'>@out</span><span class='rparen token'>)</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+  <span class='ivar'>@parser_l</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../XSugarParser.html" title="XSugarParser (module)">XSugarParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../XSugarParser.html#Parser-constant" title="XSugarParser::Parser (constant)">Parser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@l_grammar</span><span class='comma'>,</span> <span class='ivar'>@out</span><span class='rparen'>)</span>
+  <span class='ivar'>@parser_x</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../XSugarParser.html" title="XSugarParser (module)">XSugarParser</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../XSugarParser.html#Parser-constant" title="XSugarParser::Parser (constant)">Parser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@normalized_x_grammar</span><span class='comma'>,</span> <span class='ivar'>@out</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -311,18 +380,20 @@
 </div>
 
 
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-    
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
     
       <div class="method_details first">
-  <p class="signature first" id="non_xml_to_xml-instance_method">
+  <h3 class="signature first" id="nfc-class_method">
   
-    - (<tt>Object</tt>) <strong>non_xml_to_xml</strong>(text) 
+    .<strong>nfc</strong>(text)  &#x21d2; <tt>Object</tt> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -330,79 +401,147 @@
 
 62
 63
-64
-65
-66
-67
-68</pre>
+64</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/rxsugar.rb', line 62</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_non_xml_to_xml identifier id'>non_xml_to_xml</span><span class='lparen token'>(</span><span class='rubyid_text identifier id'>text</span><span class='rparen token'>)</span>
-    <span class='rubyid_ast identifier id'>ast</span> <span class='assign token'>=</span> <span class='rubyid_@parser_l ivar id'>@parser_l</span><span class='dot token'>.</span><span class='rubyid_parse identifier id'>parse</span><span class='lparen token'>(</span><span class='rubyid_text identifier id'>text</span><span class='comma token'>,</span> <span class='string val'>'dummy.txt'</span><span class='rparen token'>)</span>
-    <span class='rubyid_output identifier id'>output</span> <span class='assign token'>=</span> <span class='rubyid_XSugarOperations constant id'>XSugarOperations</span><span class='colon2 op'>::</span><span class='rubyid_Unparser constant id'>Unparser</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_@x_grammar ivar id'>@x_grammar</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_unparse identifier id'>unparse</span><span class='lparen token'>(</span><span class='rubyid_ast identifier id'>ast</span><span class='rparen token'>)</span>
-    <span class='rubyid_output identifier id'>output</span> <span class='assign token'>=</span> <span class='rubyid_XSugarXML constant id'>XSugarXML</span><span class='colon2 op'>::</span><span class='rubyid_EndTagNameAdder constant id'>EndTagNameAdder</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='dot token'>.</span><span class='rubyid_fix identifier id'>fix</span><span class='lparen token'>(</span><span class='rubyid_output identifier id'>output</span><span class='rparen token'>)</span>
-    <span class='rubyid_output identifier id'>output</span> <span class='assign token'>=</span> <span class='rubyid_XSugarXML constant id'>XSugarXML</span><span class='colon2 op'>::</span><span class='rubyid_NamespaceAdder constant id'>NamespaceAdder</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_@stylesheet ivar id'>@stylesheet</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_fix identifier id'>fix</span><span class='lparen token'>(</span><span class='rubyid_output identifier id'>output</span><span class='rparen token'>)</span>
-    <span class='rubyid_return return kw'>return</span> <span class='rubyid_output identifier id'>output</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_nfc'>nfc</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='const'>Normalizer</span><span class='period'>.</span><span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='comma'>,</span><span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='const'>Normalizer</span><span class='op'>::</span><span class='const'>Form</span><span class='op'>::</span><span class='const'>NFC</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="print_grammars-instance_method">
+  <h3 class="signature " id="nfd-class_method">
   
-    - (<tt>Object</tt>) <strong>print_grammars</strong> 
+    .<strong>nfd</strong>(text)  &#x21d2; <tt>Object</tt> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95</pre>
+66
+67
+68</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rxsugar.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'lib/rxsugar.rb', line 66</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_grammars identifier id'>print_grammars</span>
-  <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Left-hand-side grammar:&quot;</span>
-  <span class='rubyid_puts identifier id'>puts</span> <span class='rubyid_@l_grammar ivar id'>@l_grammar</span>
-  <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Right-hand-side grammar:&quot;</span>
-  <span class='rubyid_puts identifier id'>puts</span> <span class='rubyid_@x_grammar ivar id'>@x_grammar</span>
-  <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Normalized left-hand-side grammar:&quot;</span>
-  <span class='rubyid_puts identifier id'>puts</span> <span class='rubyid_@normalized_l_grammar ivar id'>@normalized_l_grammar</span>
-  <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Normalized right-hand-side grammar:&quot;</span>
-  <span class='rubyid_puts identifier id'>puts</span> <span class='rubyid_@normalized_x_grammar ivar id'>@normalized_x_grammar</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_nfd'>nfd</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='const'>Normalizer</span><span class='period'>.</span><span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='comma'>,</span><span class='id identifier rubyid_java'>java</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='const'>Normalizer</span><span class='op'>::</span><span class='const'>Form</span><span class='op'>::</span><span class='const'>NFD</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="non_xml_to_xml-instance_method">
+  
+    #<strong>non_xml_to_xml</strong>(text)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72
+73
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rxsugar.rb', line 70</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_non_xml_to_xml'>non_xml_to_xml</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_ast'>ast</span> <span class='op'>=</span> <span class='ivar'>@parser_l</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_nfd'>nfd</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dummy.txt</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../XSugarOperations.html" title="XSugarOperations (module)">XSugarOperations</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../XSugarOperations.html#Unparser-constant" title="XSugarOperations::Unparser (constant)">Unparser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@x_grammar</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_unparse'>unparse</span><span class='lparen'>(</span><span class='id identifier rubyid_ast'>ast</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../XSugarXML.html" title="XSugarXML (module)">XSugarXML</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../XSugarXML.html#EndTagNameAdder-constant" title="XSugarXML::EndTagNameAdder (constant)">EndTagNameAdder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_fix'>fix</span><span class='lparen'>(</span><span class='id identifier rubyid_output'>output</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../XSugarXML.html" title="XSugarXML (module)">XSugarXML</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../XSugarXML.html#NamespaceAdder-constant" title="XSugarXML::NamespaceAdder (constant)">NamespaceAdder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@stylesheet</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_fix'>fix</span><span class='lparen'>(</span><span class='id identifier rubyid_output'>output</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_nfc'>nfc</span><span class='lparen'>(</span><span class='id identifier rubyid_output'>output</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="reversible?-instance_method">
+  <h3 class="signature " id="print_grammars-instance_method">
   
-    - (<tt>Boolean</tt>) <strong>reversible?</strong> 
+    #<strong>print_grammars</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/rxsugar.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_print_grammars'>print_grammars</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Left-hand-side grammar:</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='ivar'>@l_grammar</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Right-hand-side grammar:</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='ivar'>@x_grammar</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Normalized left-hand-side grammar:</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='ivar'>@normalized_l_grammar</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Normalized right-hand-side grammar:</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='ivar'>@normalized_x_grammar</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reversible?-instance_method">
+  
+    #<strong>reversible?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 
@@ -410,7 +549,7 @@
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -430,62 +569,62 @@
       <pre class="lines">
 
 
-80
-81
-82
-83
-84</pre>
+88
+89
+90
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rxsugar.rb', line 80</span>
+      <pre class="code"><span class="info file"># File 'lib/rxsugar.rb', line 88</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_reversible? fid id'>reversible?</span>
-  <span class='rubyid_reversibility_checker identifier id'>reversibility_checker</span> <span class='assign token'>=</span> <span class='rubyid_XSugarReversibility constant id'>XSugarReversibility</span><span class='colon2 op'>::</span><span class='rubyid_ReversibilityChecker constant id'>ReversibilityChecker</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_@out ivar id'>@out</span><span class='comma token'>,</span> <span class='rubyid_@verbose ivar id'>@verbose</span><span class='rparen token'>)</span>
-  <span class='rubyid_reversibility_checker identifier id'>reversibility_checker</span><span class='dot token'>.</span><span class='rubyid_check identifier id'>check</span><span class='lparen token'>(</span><span class='rubyid_@normalized_l_grammar ivar id'>@normalized_l_grammar</span><span class='comma token'>,</span> <span class='rubyid_@normalized_x_grammar ivar id'>@normalized_x_grammar</span><span class='comma token'>,</span>
-    <span class='integer val'>0</span><span class='comma token'>,</span> <span class='string val'>''</span><span class='comma token'>,</span> <span class='string val'>''</span><span class='comma token'>,</span> <span class='rubyid_false false kw'>false</span><span class='rparen token'>)</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_reversible?'>reversible?</span>
+  <span class='id identifier rubyid_reversibility_checker'>reversibility_checker</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../XSugarReversibility.html" title="XSugarReversibility (module)">XSugarReversibility</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../XSugarReversibility.html#ReversibilityChecker-constant" title="XSugarReversibility::ReversibilityChecker (constant)">ReversibilityChecker</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@out</span><span class='comma'>,</span> <span class='ivar'>@verbose</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_reversibility_checker'>reversibility_checker</span><span class='period'>.</span><span class='id identifier rubyid_check'>check</span><span class='lparen'>(</span><span class='ivar'>@normalized_l_grammar</span><span class='comma'>,</span> <span class='ivar'>@normalized_x_grammar</span><span class='comma'>,</span>
+    <span class='int'>0</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="xml_to_non_xml-instance_method">
+  <h3 class="signature " id="xml_to_non_xml-instance_method">
   
-    - (<tt>Object</tt>) <strong>xml_to_non_xml</strong>(xml) 
+    #<strong>xml_to_non_xml</strong>(xml)  &#x21d2; <tt>Object</tt> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-70
-71
-72
-73
-74
-75
-76
-77
-78</pre>
+78
+79
+80
+81
+82
+83
+84
+85
+86</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/rxsugar.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'lib/rxsugar.rb', line 78</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_xml_to_non_xml identifier id'>xml_to_non_xml</span><span class='lparen token'>(</span><span class='rubyid_xml identifier id'>xml</span><span class='rparen token'>)</span>
-  <span class='rubyid_norm identifier id'>norm</span> <span class='assign token'>=</span> <span class='rubyid_XSugarXML constant id'>XSugarXML</span><span class='colon2 op'>::</span><span class='rubyid_InputNormalizer constant id'>InputNormalizer</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
-  <span class='rubyid_input identifier id'>input</span> <span class='assign token'>=</span> <span class='rubyid_norm identifier id'>norm</span><span class='dot token'>.</span><span class='rubyid_normalize identifier id'>normalize</span><span class='lparen token'>(</span><span class='rubyid_xml identifier id'>xml</span><span class='comma token'>,</span> <span class='string val'>'dummy.xml'</span><span class='rparen token'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_xml_to_non_xml'>xml_to_non_xml</span><span class='lparen'>(</span><span class='id identifier rubyid_xml'>xml</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_norm'>norm</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../XSugarXML.html" title="XSugarXML (module)">XSugarXML</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../XSugarXML.html#InputNormalizer-constant" title="XSugarXML::InputNormalizer (constant)">InputNormalizer</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_input'>input</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_nfc'>nfc</span><span class='lparen'>(</span><span class='id identifier rubyid_norm'>norm</span><span class='period'>.</span><span class='id identifier rubyid_normalize'>normalize</span><span class='lparen'>(</span><span class='id identifier rubyid_xml'>xml</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dummy.xml</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
 
-    <span class='rubyid_ast identifier id'>ast</span> <span class='assign token'>=</span> <span class='rubyid_@parser_x ivar id'>@parser_x</span><span class='dot token'>.</span><span class='rubyid_parse identifier id'>parse</span><span class='lparen token'>(</span><span class='rubyid_input identifier id'>input</span><span class='comma token'>,</span> <span class='string val'>'dummy.xml'</span><span class='rparen token'>)</span>
-    <span class='rubyid_XSugarXML constant id'>XSugarXML</span><span class='colon2 op'>::</span><span class='rubyid_ASTUnescaper constant id'>ASTUnescaper</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='dot token'>.</span><span class='rubyid_unescape identifier id'>unescape</span><span class='lparen token'>(</span><span class='rubyid_ast identifier id'>ast</span><span class='rparen token'>)</span>
-    <span class='rubyid_output identifier id'>output</span> <span class='assign token'>=</span> <span class='rubyid_XSugarOperations constant id'>XSugarOperations</span><span class='colon2 op'>::</span><span class='rubyid_Unparser constant id'>Unparser</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_@normalized_l_grammar ivar id'>@normalized_l_grammar</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_unparse identifier id'>unparse</span><span class='lparen token'>(</span><span class='rubyid_ast identifier id'>ast</span><span class='rparen token'>)</span>
-    <span class='rubyid_return return kw'>return</span> <span class='rubyid_output identifier id'>output</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+    <span class='id identifier rubyid_ast'>ast</span> <span class='op'>=</span> <span class='ivar'>@parser_x</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>dummy.xml</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='const'><span class='object_link'><a href="../XSugarXML.html" title="XSugarXML (module)">XSugarXML</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../XSugarXML.html#ASTUnescaper-constant" title="XSugarXML::ASTUnescaper (constant)">ASTUnescaper</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_unescape'>unescape</span><span class='lparen'>(</span><span class='id identifier rubyid_ast'>ast</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_output'>output</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../XSugarOperations.html" title="XSugarOperations (module)">XSugarOperations</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../XSugarOperations.html#Unparser-constant" title="XSugarOperations::Unparser (constant)">Unparser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@normalized_l_grammar</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_unparse'>unparse</span><span class='lparen'>(</span><span class='id identifier rubyid_ast'>ast</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_nfd'>nfd</span><span class='lparen'>(</span><span class='id identifier rubyid_output'>output</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>

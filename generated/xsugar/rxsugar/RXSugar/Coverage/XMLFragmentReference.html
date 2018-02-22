@@ -2,22 +2,24 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: RXSugar::Coverage::XMLFragmentReference
   
-    &mdash; Documentation by YARD 0.7.4
+    &mdash; Documentation by YARD 0.9.12
   
 </title>
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '../..';
-  if (relpath != '') relpath += '/';
+  pathId = "RXSugar::Coverage::XMLFragmentReference";
+  relpath = '../../';
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
 
@@ -33,22 +35,24 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (X)</a> &raquo; 
+    <a href="../../_index.html">Index (X)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../RXSugar.html" title="RXSugar (module)">RXSugar</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Coverage.html" title="RXSugar::Coverage (module)">Coverage</a></span></span>
      &raquo; 
     <span class="title">XMLFragmentReference</span>
   
-  
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
-  
-    <a id="method_list_link" href="#">Method List</a>
-  
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
   
 </div>
       <div class="clear"></div>
@@ -61,11 +65,11 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName">Object</span>
       
         <ul class="fullTree">
@@ -76,35 +80,42 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
   
-  
-    
-  
-    
+
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/coverage/coverage.rb</dd>
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/coverage/coverage.rb</dd>
+  </dl>
+  
+</div>
 
 
 
-  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
   <ul class="summary">
     
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#text-instance_method" title="#text (instance method)">- (Object) <strong>text</strong> </a>
+      <a href="#text-instance_method" title="#text (instance method)">#<strong>text</strong>  &#x21d2; Object </a>
     
 
     
   </span>
+  
   
   
     
@@ -126,14 +137,17 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#xml_content-instance_method" title="#xml_content (instance method)">- (Object) <strong>xml_content</strong> </a>
+      <a href="#xml_content-instance_method" title="#xml_content (instance method)">#<strong>xml_content</strong>  &#x21d2; Object </a>
     
 
     
   </span>
   
   
-    <span class="note title readonly">readonly</span>
+  
+    
+      <span class="note title readonly">readonly</span>
+    
     
   
   
@@ -152,14 +166,17 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#xml_file-instance_method" title="#xml_file (instance method)">- (Object) <strong>xml_file</strong> </a>
+      <a href="#xml_file-instance_method" title="#xml_file (instance method)">#<strong>xml_file</strong>  &#x21d2; Object </a>
     
 
     
   </span>
   
   
-    <span class="note title readonly">readonly</span>
+  
+    
+      <span class="note title readonly">readonly</span>
+    
     
   
   
@@ -183,7 +200,7 @@
   
     <h2>
       Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -191,11 +208,12 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (XMLFragmentReference) <strong>initialize</strong>(xml_file, xml_content) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(xml_file, xml_content)  &#x21d2; XMLFragmentReference </a>
     
 
     
   </span>
+  
   
     <span class="note title constructor">constructor</span>
   
@@ -220,16 +238,18 @@
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
+  <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="RXSugar::Coverage::XMLFragmentReference (class)">XMLFragmentReference</a></span></tt>) <strong>initialize</strong>(xml_file, xml_content) 
+    #<strong>initialize</strong>(xml_file, xml_content)  &#x21d2; <tt><span class='object_link'><a href="" title="RXSugar::Coverage::XMLFragmentReference (class)">XMLFragmentReference</a></span></tt> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
-<p>A new instance of XMLFragmentReference</p>
+<p>Returns a new instance of XMLFragmentReference</p>
 
 
   </div>
@@ -251,11 +271,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/coverage/coverage.rb', line 235</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_xml_file identifier id'>xml_file</span><span class='comma token'>,</span> <span class='rubyid_xml_content identifier id'>xml_content</span><span class='rparen token'>)</span>
-  <span class='rubyid_@xml_file ivar id'>@xml_file</span> <span class='assign token'>=</span> <span class='rubyid_xml_file identifier id'>xml_file</span>
-  <span class='rubyid_@xml_content ivar id'>@xml_content</span> <span class='assign token'>=</span> <span class='rubyid_xml_content identifier id'>xml_content</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_xml_file'>xml_file</span><span class='comma'>,</span> <span class='id identifier rubyid_xml_content'>xml_content</span><span class='rparen'>)</span>
+  <span class='ivar'>@xml_file</span> <span class='op'>=</span> <span class='id identifier rubyid_xml_file'>xml_file</span>
+  <span class='ivar'>@xml_content</span> <span class='op'>=</span> <span class='id identifier rubyid_xml_content'>xml_content</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -268,15 +287,16 @@
     
       
       <span id="text=-instance_method"></span>
-      <span id="text-instance_method"></span>
       <div class="method_details first">
-  <p class="signature first" id="text-instance_method">
+  <h3 class="signature first" id="text-instance_method">
   
-    - (<tt>Object</tt>) <strong>text</strong> 
+    #<strong>text</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>Returns the value of attribute text</p>
@@ -300,10 +320,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/coverage/coverage.rb', line 233</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_text identifier id'>text</span>
-  <span class='rubyid_@text ivar id'>@text</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_text'>text</span>
+  <span class='ivar'>@text</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -311,15 +330,16 @@
     
       
       <span id=""></span>
-      <span id="xml_content-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="xml_content-instance_method">
+  <h3 class="signature " id="xml_content-instance_method">
   
-    - (<tt>Object</tt>) <strong>xml_content</strong>  <span class="extras">(readonly)</span>
+    #<strong>xml_content</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>Returns the value of attribute xml_content</p>
@@ -343,10 +363,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/coverage/coverage.rb', line 232</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_xml_content identifier id'>xml_content</span>
-  <span class='rubyid_@xml_content ivar id'>@xml_content</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_xml_content'>xml_content</span>
+  <span class='ivar'>@xml_content</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -354,15 +373,16 @@
     
       
       <span id=""></span>
-      <span id="xml_file-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="xml_file-instance_method">
+  <h3 class="signature " id="xml_file-instance_method">
   
-    - (<tt>Object</tt>) <strong>xml_file</strong>  <span class="extras">(readonly)</span>
+    #<strong>xml_file</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>Returns the value of attribute xml_file</p>
@@ -386,10 +406,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/coverage/coverage.rb', line 232</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_xml_file identifier id'>xml_file</span>
-  <span class='rubyid_@xml_file ivar id'>@xml_file</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_xml_file'>xml_file</span>
+  <span class='ivar'>@xml_file</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>

@@ -2,22 +2,24 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
   Class: RXSugar::Coverage::ErrorFrequency
   
-    &mdash; Documentation by YARD 0.7.4
+    &mdash; Documentation by YARD 0.9.12
   
 </title>
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
-  relpath = '../..';
-  if (relpath != '') relpath += '/';
+  pathId = "RXSugar::Coverage::ErrorFrequency";
+  relpath = '../../';
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
 
@@ -33,22 +35,24 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../../_index.html">Index (E)</a> &raquo; 
+    <a href="../../_index.html">Index (E)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../RXSugar.html" title="RXSugar (module)">RXSugar</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Coverage.html" title="RXSugar::Coverage (module)">Coverage</a></span></span>
      &raquo; 
     <span class="title">ErrorFrequency</span>
   
-  
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
-  
-    <a id="method_list_link" href="#">Method List</a>
-  
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
   
 </div>
       <div class="clear"></div>
@@ -61,11 +65,11 @@
   
   
 </h1>
-
-<dl class="box">
+<div class="box_info">
   
-    <dt class="r1">Inherits:</dt>
-    <dd class="r1">
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
       <span class="inheritName">Object</span>
       
         <ul class="fullTree">
@@ -76,38 +80,47 @@
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
       
-      </dd>
-    
+    </dd>
+  </dl>
   
-  
-    
-  
-    
+
   
   
   
-    <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/coverage/coverage.rb</dd>
   
-</dl>
-<div class="clear"></div>
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/coverage/coverage.rb</dd>
+  </dl>
+  
+</div>
 
 
 
-  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
   <ul class="summary">
     
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#frequencies-instance_method" title="#frequencies (instance method)">- (Object) <strong>frequencies</strong> </a>
+      <a href="#frequencies-instance_method" title="#frequencies (instance method)">#<strong>frequencies</strong>  &#x21d2; Object </a>
     
 
     
   </span>
   
   
-    <span class="note title readonly">readonly</span>
+  
+    
+      <span class="note title readonly">readonly</span>
+    
     
   
   
@@ -131,7 +144,7 @@
   
     <h2>
       Instance Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+      <small><a href="#" class="summary_toggle">collapse</a></small>
     </h2>
 
     <ul class="summary">
@@ -139,11 +152,12 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_error-instance_method" title="#add_error (instance method)">- (Object) <strong>add_error</strong>(error_type, fragment_reference) </a>
+      <a href="#add_error-instance_method" title="#add_error (instance method)">#<strong>add_error</strong>(error_type, fragment_reference)  &#x21d2; Object </a>
     
 
     
   </span>
+  
   
   
   
@@ -160,11 +174,12 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#count_brackets-instance_method" title="#count_brackets (instance method)">- (Object) <strong>count_brackets</strong>(frag_array, error_type) </a>
+      <a href="#count_brackets-instance_method" title="#count_brackets (instance method)">#<strong>count_brackets</strong>(frag_array, error_type)  &#x21d2; Object </a>
     
 
     
   </span>
+  
   
   
   
@@ -181,11 +196,12 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#error_length-instance_method" title="#error_length (instance method)">- (Object) <strong>error_length</strong>(error_type, frequency_type = :element) </a>
+      <a href="#error_length-instance_method" title="#error_length (instance method)">#<strong>error_length</strong>(error_type, frequency_type = :element)  &#x21d2; Object </a>
     
 
     
   </span>
+  
   
   
   
@@ -202,11 +218,12 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#errors_by_frequency-instance_method" title="#errors_by_frequency (instance method)">- (Object) <strong>errors_by_frequency</strong>(error_type, frequency_type) </a>
+      <a href="#errors_by_frequency-instance_method" title="#errors_by_frequency (instance method)">#<strong>errors_by_frequency</strong>(error_type, frequency_type)  &#x21d2; Object </a>
     
 
     
   </span>
+  
   
   
   
@@ -223,11 +240,12 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (ErrorFrequency) <strong>initialize</strong> </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; ErrorFrequency </a>
     
 
     
   </span>
+  
   
     <span class="note title constructor">constructor</span>
   
@@ -248,11 +266,12 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#pretty_print-instance_method" title="#pretty_print (instance method)">- (Object) <strong>pretty_print</strong> </a>
+      <a href="#pretty_print-instance_method" title="#pretty_print (instance method)">#<strong>pretty_print</strong>  &#x21d2; Object </a>
     
 
     
   </span>
+  
   
   
   
@@ -269,11 +288,12 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#print_sample_fragments-instance_method" title="#print_sample_fragments (instance method)">- (Object) <strong>print_sample_fragments</strong>(frag_array) </a>
+      <a href="#print_sample_fragments-instance_method" title="#print_sample_fragments (instance method)">#<strong>print_sample_fragments</strong>(frag_array)  &#x21d2; Object </a>
     
 
     
   </span>
+  
   
   
   
@@ -290,11 +310,12 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_tree-instance_method" title="#to_tree (instance method)">- (Object) <strong>to_tree</strong> </a>
+      <a href="#to_tree-instance_method" title="#to_tree (instance method)">#<strong>to_tree</strong>  &#x21d2; Object </a>
     
 
     
   </span>
+  
   
   
   
@@ -315,16 +336,18 @@
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
+  <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="RXSugar::Coverage::ErrorFrequency (class)">ErrorFrequency</a></span></tt>) <strong>initialize</strong> 
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="RXSugar::Coverage::ErrorFrequency (class)">ErrorFrequency</a></span></tt> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
-<p>A new instance of ErrorFrequency</p>
+<p>Returns a new instance of ErrorFrequency</p>
 
 
   </div>
@@ -356,21 +379,20 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/coverage/coverage.rb', line 244</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
-  <span class='rubyid_@error_types ivar id'>@error_types</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='symbol val'>:parse</span><span class='comma token'>,</span> <span class='symbol val'>:reversibility</span><span class='comma token'>,</span> <span class='symbol val'>:pass</span><span class='rbrack token'>]</span>
-  <span class='rubyid_@frequency_types ivar id'>@frequency_types</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='symbol val'>:element</span><span class='comma token'>,</span> <span class='symbol val'>:element_attr</span><span class='comma token'>,</span> <span class='symbol val'>:element_attr_val</span><span class='rbrack token'>]</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='ivar'>@error_types</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:parse</span><span class='comma'>,</span> <span class='symbol'>:reversibility</span><span class='comma'>,</span> <span class='symbol'>:pass</span><span class='rbracket'>]</span>
+  <span class='ivar'>@frequency_types</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:element</span><span class='comma'>,</span> <span class='symbol'>:element_attr</span><span class='comma'>,</span> <span class='symbol'>:element_attr_val</span><span class='rbracket'>]</span>
     
-  <span class='rubyid_@frequencies ivar id'>@frequencies</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
-  <span class='rubyid_@error_types ivar id'>@error_types</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_error_type identifier id'>error_type</span><span class='bitor op'>|</span>
-    <span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='ivar'>@frequencies</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='ivar'>@error_types</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_error_type'>error_type</span><span class='op'>|</span>
+    <span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='rparen'>)</span>
 
-    <span class='rubyid_@frequency_types ivar id'>@frequency_types</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_frequency_type identifier id'>frequency_type</span><span class='bitor op'>|</span>
-      <span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_frequency_type identifier id'>frequency_type</span><span class='rbrack token'>]</span> <span class='assign token'>=</span>
-        <span class='rubyid_Hash constant id'>Hash</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_hash identifier id'>hash</span><span class='comma token'>,</span><span class='rubyid_key identifier id'>key</span><span class='bitor op'>|</span> <span class='rubyid_hash identifier id'>hash</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_Array constant id'>Array</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rparen token'>)</span><span class='rbrace token'>}</span>
-    <span class='rubyid_end end kw'>end</span>
-  <span class='rubyid_end end kw'>end</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+    <span class='ivar'>@frequency_types</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_frequency_type'>frequency_type</span><span class='op'>|</span>
+      <span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_frequency_type'>frequency_type</span><span class='rbracket'>]</span> <span class='op'>=</span>
+        <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_hash'>hash</span><span class='comma'>,</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span> <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='rparen'>)</span><span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -383,15 +405,16 @@
     
       
       <span id=""></span>
-      <span id="frequencies-instance_method"></span>
       <div class="method_details first">
-  <p class="signature first" id="frequencies-instance_method">
+  <h3 class="signature first" id="frequencies-instance_method">
   
-    - (<tt>Object</tt>) <strong>frequencies</strong>  <span class="extras">(readonly)</span>
+    #<strong>frequencies</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     
 <p>Returns the value of attribute frequencies</p>
@@ -415,10 +438,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/coverage/coverage.rb', line 242</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_frequencies identifier id'>frequencies</span>
-  <span class='rubyid_@frequencies ivar id'>@frequencies</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_frequencies'>frequencies</span>
+  <span class='ivar'>@frequencies</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -429,16 +451,18 @@
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="add_error-instance_method">
+  <h3 class="signature first" id="add_error-instance_method">
   
-    - (<tt>Object</tt>) <strong>add_error</strong>(error_type, fragment_reference) 
+    #<strong>add_error</strong>(error_type, fragment_reference)  &#x21d2; <tt>Object</tt> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -466,38 +490,39 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/coverage/coverage.rb', line 323</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_add_error identifier id'>add_error</span><span class='lparen token'>(</span><span class='rubyid_error_type identifier id'>error_type</span><span class='comma token'>,</span> <span class='rubyid_fragment_reference identifier id'>fragment_reference</span><span class='rparen token'>)</span>
-  <span class='rubyid_this_error identifier id'>this_error</span> <span class='assign token'>=</span> <span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span>
-  <span class='rubyid_frequency_type_keys identifier id'>frequency_type_keys</span> <span class='assign token'>=</span> 
-    <span class='rubyid_frequency_type_keys_from_xml identifier id'>frequency_type_keys_from_xml</span><span class='lparen token'>(</span><span class='rubyid_fragment_reference identifier id'>fragment_reference</span><span class='dot token'>.</span><span class='rubyid_xml_content identifier id'>xml_content</span><span class='rparen token'>)</span>
-  <span class='rubyid_frequency_type_keys identifier id'>frequency_type_keys</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_ftk identifier id'>ftk</span><span class='bitor op'>|</span>
-    <span class='comment val'># ftk.first = :element etc</span>
-    <span class='comment val'># ftk.last = num etc</span>
-    <span class='rubyid_if if kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_SAMPLE_FRAGMENTS constant id'>SAMPLE_FRAGMENTS</span> <span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='lparen token'>(</span><span class='rubyid_COUNT_BRACKETS constant id'>COUNT_BRACKETS</span> <span class='eq op'>==</span> <span class='integer val'>0</span><span class='rparen token'>)</span>
-      <span class='rubyid_if if kw'>if</span> <span class='rubyid_this_error identifier id'>this_error</span><span class='lbrack token'>[</span><span class='rubyid_ftk identifier id'>ftk</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_ftk identifier id'>ftk</span><span class='dot token'>.</span><span class='rubyid_last identifier id'>last</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='lt op'>&lt;</span> <span class='rubyid_SAMPLE_FRAGMENTS constant id'>SAMPLE_FRAGMENTS</span>
-        <span class='rubyid_this_error identifier id'>this_error</span><span class='lbrack token'>[</span><span class='rubyid_ftk identifier id'>ftk</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_ftk identifier id'>ftk</span><span class='dot token'>.</span><span class='rubyid_last identifier id'>last</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_fragment_reference identifier id'>fragment_reference</span>
-      <span class='rubyid_else else kw'>else</span>
-        <span class='rubyid_this_error identifier id'>this_error</span><span class='lbrack token'>[</span><span class='rubyid_ftk identifier id'>ftk</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_ftk identifier id'>ftk</span><span class='dot token'>.</span><span class='rubyid_last identifier id'>last</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_nil nil kw'>nil</span>
-      <span class='rubyid_end end kw'>end</span>
-    <span class='rubyid_else else kw'>else</span>
-      <span class='rubyid_this_error identifier id'>this_error</span><span class='lbrack token'>[</span><span class='rubyid_ftk identifier id'>ftk</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_ftk identifier id'>ftk</span><span class='dot token'>.</span><span class='rubyid_last identifier id'>last</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_fragment_reference identifier id'>fragment_reference</span>
-    <span class='rubyid_end end kw'>end</span>
-  <span class='rubyid_end end kw'>end</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='id identifier rubyid_error_type'>error_type</span><span class='comma'>,</span> <span class='id identifier rubyid_fragment_reference'>fragment_reference</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_this_error'>this_error</span> <span class='op'>=</span> <span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_frequency_type_keys'>frequency_type_keys</span> <span class='op'>=</span> 
+    <span class='id identifier rubyid_frequency_type_keys_from_xml'>frequency_type_keys_from_xml</span><span class='lparen'>(</span><span class='id identifier rubyid_fragment_reference'>fragment_reference</span><span class='period'>.</span><span class='id identifier rubyid_xml_content'>xml_content</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_frequency_type_keys'>frequency_type_keys</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ftk'>ftk</span><span class='op'>|</span>
+    <span class='comment'># ftk.first = :element etc
+</span>    <span class='comment'># ftk.last = num etc
+</span>    <span class='kw'>if</span> <span class='lparen'>(</span><span class='const'>SAMPLE_FRAGMENTS</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='const'>COUNT_BRACKETS</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_this_error'>this_error</span><span class='lbracket'>[</span><span class='id identifier rubyid_ftk'>ftk</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_ftk'>ftk</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;</span> <span class='const'>SAMPLE_FRAGMENTS</span>
+        <span class='id identifier rubyid_this_error'>this_error</span><span class='lbracket'>[</span><span class='id identifier rubyid_ftk'>ftk</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_ftk'>ftk</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_fragment_reference'>fragment_reference</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_this_error'>this_error</span><span class='lbracket'>[</span><span class='id identifier rubyid_ftk'>ftk</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_ftk'>ftk</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='kw'>nil</span>
+      <span class='kw'>end</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_this_error'>this_error</span><span class='lbracket'>[</span><span class='id identifier rubyid_ftk'>ftk</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_ftk'>ftk</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_fragment_reference'>fragment_reference</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="count_brackets-instance_method">
+  <h3 class="signature " id="count_brackets-instance_method">
   
-    - (<tt>Object</tt>) <strong>count_brackets</strong>(frag_array, error_type) 
+    #<strong>count_brackets</strong>(frag_array, error_type)  &#x21d2; <tt>Object</tt> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -520,33 +545,34 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/coverage/coverage.rb', line 259</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_count_brackets identifier id'>count_brackets</span><span class='lparen token'>(</span><span class='rubyid_frag_array identifier id'>frag_array</span><span class='comma token'>,</span> <span class='rubyid_error_type identifier id'>error_type</span><span class='rparen token'>)</span>
-  <span class='rubyid_bracket_count identifier id'>bracket_count</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
-  <span class='rubyid_if if kw'>if</span> <span class='rubyid_COUNT_BRACKETS constant id'>COUNT_BRACKETS</span> <span class='neq op'>!=</span> <span class='integer val'>0</span>
-    <span class='rubyid_if if kw'>if</span> <span class='rubyid_error_type identifier id'>error_type</span> <span class='eq op'>==</span> <span class='symbol val'>:parse</span>
-      <span class='rubyid_frag_array identifier id'>frag_array</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_frag identifier id'>frag</span><span class='bitor op'>|</span>
-        <span class='rubyid_if if kw'>if</span> <span class='rubyid_frag identifier id'>frag</span><span class='dot token'>.</span><span class='rubyid_xml_content identifier id'>xml_content</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_match identifier id'>match</span><span class='lparen token'>(</span><span class='regexp val'>/[\[\]]/</span><span class='rparen token'>)</span>
-          <span class='rubyid_bracket_count identifier id'>bracket_count</span> <span class='opasgn op'>+=</span> <span class='integer val'>1</span>
-        <span class='rubyid_end end kw'>end</span>
-      <span class='rubyid_end end kw'>end</span>
-    <span class='rubyid_end end kw'>end</span>
-  <span class='rubyid_end end kw'>end</span>
-  <span class='rubyid_return return kw'>return</span> <span class='rubyid_bracket_count identifier id'>bracket_count</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_count_brackets'>count_brackets</span><span class='lparen'>(</span><span class='id identifier rubyid_frag_array'>frag_array</span><span class='comma'>,</span> <span class='id identifier rubyid_error_type'>error_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_bracket_count'>bracket_count</span> <span class='op'>=</span> <span class='int'>0</span>
+  <span class='kw'>if</span> <span class='const'>COUNT_BRACKETS</span> <span class='op'>!=</span> <span class='int'>0</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_error_type'>error_type</span> <span class='op'>==</span> <span class='symbol'>:parse</span>
+      <span class='id identifier rubyid_frag_array'>frag_array</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_frag'>frag</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_frag'>frag</span><span class='period'>.</span><span class='id identifier rubyid_xml_content'>xml_content</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[\[\]]</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
+          <span class='id identifier rubyid_bracket_count'>bracket_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_bracket_count'>bracket_count</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="error_length-instance_method">
+  <h3 class="signature " id="error_length-instance_method">
   
-    - (<tt>Object</tt>) <strong>error_length</strong>(error_type, frequency_type = :element) 
+    #<strong>error_length</strong>(error_type, frequency_type = :element)  &#x21d2; <tt>Object</tt> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -566,30 +592,31 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/coverage/coverage.rb', line 342</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_error_length identifier id'>error_length</span><span class='lparen token'>(</span><span class='rubyid_error_type identifier id'>error_type</span><span class='comma token'>,</span> <span class='rubyid_frequency_type identifier id'>frequency_type</span> <span class='assign token'>=</span> <span class='symbol val'>:element</span><span class='rparen token'>)</span>
-  <span class='rubyid_this_error identifier id'>this_error</span> <span class='assign token'>=</span> <span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span>
-  <span class='rubyid_length identifier id'>length</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_error_length'>error_length</span><span class='lparen'>(</span><span class='id identifier rubyid_error_type'>error_type</span><span class='comma'>,</span> <span class='id identifier rubyid_frequency_type'>frequency_type</span> <span class='op'>=</span> <span class='symbol'>:element</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_this_error'>this_error</span> <span class='op'>=</span> <span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_length'>length</span> <span class='op'>=</span> <span class='int'>0</span>
     
-  <span class='rubyid_this_error identifier id'>this_error</span><span class='lbrack token'>[</span><span class='rubyid_frequency_type identifier id'>frequency_type</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_each_key identifier id'>each_key</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_key identifier id'>key</span><span class='bitor op'>|</span>
-    <span class='rubyid_length identifier id'>length</span> <span class='opasgn op'>+=</span> <span class='rubyid_this_error identifier id'>this_error</span><span class='lbrack token'>[</span><span class='rubyid_frequency_type identifier id'>frequency_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span>
-  <span class='rubyid_end end kw'>end</span>
+  <span class='id identifier rubyid_this_error'>this_error</span><span class='lbracket'>[</span><span class='id identifier rubyid_frequency_type'>frequency_type</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each_key'>each_key</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span>
+    <span class='id identifier rubyid_length'>length</span> <span class='op'>+=</span> <span class='id identifier rubyid_this_error'>this_error</span><span class='lbracket'>[</span><span class='id identifier rubyid_frequency_type'>frequency_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+  <span class='kw'>end</span>
     
-  <span class='rubyid_return return kw'>return</span> <span class='rubyid_length identifier id'>length</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+  <span class='kw'>return</span> <span class='id identifier rubyid_length'>length</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="errors_by_frequency-instance_method">
+  <h3 class="signature " id="errors_by_frequency-instance_method">
   
-    - (<tt>Object</tt>) <strong>errors_by_frequency</strong>(error_type, frequency_type) 
+    #<strong>errors_by_frequency</strong>(error_type, frequency_type)  &#x21d2; <tt>Object</tt> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -612,33 +639,34 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/coverage/coverage.rb', line 388</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_errors_by_frequency identifier id'>errors_by_frequency</span><span class='lparen token'>(</span><span class='rubyid_error_type identifier id'>error_type</span><span class='comma token'>,</span> <span class='rubyid_frequency_type identifier id'>frequency_type</span><span class='rparen token'>)</span>
-  <span class='rubyid_max_key_length identifier id'>max_key_length</span> <span class='assign token'>=</span>
-    <span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_frequency_type identifier id'>frequency_type</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_keys identifier id'>keys</span><span class='dot token'>.</span><span class='rubyid_max identifier id'>max</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_a identifier id'>a</span><span class='comma token'>,</span><span class='rubyid_b identifier id'>b</span><span class='bitor op'>|</span>
-      <span class='rubyid_a identifier id'>a</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='cmp op'>&lt;=&gt;</span> <span class='rubyid_b identifier id'>b</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span><span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span>
-  <span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_frequency_type identifier id'>frequency_type</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_sort identifier id'>sort</span><span class='lbrace token'>{</span>
-    <span class='bitor op'>|</span><span class='rubyid_a identifier id'>a</span><span class='comma token'>,</span><span class='rubyid_b identifier id'>b</span><span class='bitor op'>|</span> <span class='rubyid_b identifier id'>b</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span><span class='cmp op'>&lt;=&gt;</span><span class='rubyid_a identifier id'>a</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span><span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_elem identifier id'>elem</span><span class='bitor op'>|</span>
-      <span class='rubyid_puts identifier id'>puts</span> <span class='rubyid_elem identifier id'>elem</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_ljust identifier id'>ljust</span><span class='lparen token'>(</span><span class='rubyid_max_key_length identifier id'>max_key_length</span><span class='rparen token'>)</span> <span class='plus op'>+</span> <span class='string val'>&quot;: &quot;</span> <span class='plus op'>+</span>
-        <span class='rubyid_elem identifier id'>elem</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
-      <span class='rubyid_if if kw'>if</span> <span class='rubyid_SAMPLE_FRAGMENTS constant id'>SAMPLE_FRAGMENTS</span> <span class='gt op'>&gt;</span> <span class='integer val'>-1</span>
-        <span class='rubyid_print_sample_fragments identifier id'>print_sample_fragments</span><span class='lparen token'>(</span><span class='rubyid_elem identifier id'>elem</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
-      <span class='rubyid_end end kw'>end</span>
-    <span class='rubyid_end end kw'>end</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_errors_by_frequency'>errors_by_frequency</span><span class='lparen'>(</span><span class='id identifier rubyid_error_type'>error_type</span><span class='comma'>,</span> <span class='id identifier rubyid_frequency_type'>frequency_type</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_max_key_length'>max_key_length</span> <span class='op'>=</span>
+    <span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_frequency_type'>frequency_type</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span><span class='id identifier rubyid_b'>b</span><span class='op'>|</span>
+      <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_b'>b</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+  <span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_frequency_type'>frequency_type</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span><span class='lbrace'>{</span>
+    <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span><span class='id identifier rubyid_b'>b</span><span class='op'>|</span> <span class='id identifier rubyid_b'>b</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='op'>&lt;=&gt;</span><span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_elem'>elem</span><span class='op'>|</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_elem'>elem</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_ljust'>ljust</span><span class='lparen'>(</span><span class='id identifier rubyid_max_key_length'>max_key_length</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+        <span class='id identifier rubyid_elem'>elem</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+      <span class='kw'>if</span> <span class='const'>SAMPLE_FRAGMENTS</span> <span class='op'>&gt;</span> <span class='op'>-</span><span class='int'>1</span>
+        <span class='id identifier rubyid_print_sample_fragments'>print_sample_fragments</span><span class='lparen'>(</span><span class='id identifier rubyid_elem'>elem</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="pretty_print-instance_method">
+  <h3 class="signature " id="pretty_print-instance_method">
   
-    - (<tt>Object</tt>) <strong>pretty_print</strong> 
+    #<strong>pretty_print</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -669,41 +697,42 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/coverage/coverage.rb', line 353</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_pretty_print identifier id'>pretty_print</span>
-  <span class='rubyid_parse_errors identifier id'>parse_errors</span> <span class='assign token'>=</span> <span class='rubyid_error_length identifier id'>error_length</span><span class='lparen token'>(</span><span class='symbol val'>:parse</span><span class='rparen token'>)</span>
-  <span class='rubyid_reversibility_errors identifier id'>reversibility_errors</span> <span class='assign token'>=</span> <span class='rubyid_error_length identifier id'>error_length</span><span class='lparen token'>(</span><span class='symbol val'>:reversibility</span><span class='rparen token'>)</span>
-  <span class='rubyid_passing_length identifier id'>passing_length</span> <span class='assign token'>=</span> <span class='rubyid_error_length identifier id'>error_length</span><span class='lparen token'>(</span><span class='symbol val'>:pass</span><span class='rparen token'>)</span>
-  <span class='rubyid_total_elements identifier id'>total_elements</span> <span class='assign token'>=</span> <span class='rubyid_passing_length identifier id'>passing_length</span> <span class='plus op'>+</span> <span class='rubyid_parse_errors identifier id'>parse_errors</span> <span class='plus op'>+</span> <span class='rubyid_reversibility_errors identifier id'>reversibility_errors</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_pretty_print'>pretty_print</span>
+  <span class='id identifier rubyid_parse_errors'>parse_errors</span> <span class='op'>=</span> <span class='id identifier rubyid_error_length'>error_length</span><span class='lparen'>(</span><span class='symbol'>:parse</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_reversibility_errors'>reversibility_errors</span> <span class='op'>=</span> <span class='id identifier rubyid_error_length'>error_length</span><span class='lparen'>(</span><span class='symbol'>:reversibility</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_passing_length'>passing_length</span> <span class='op'>=</span> <span class='id identifier rubyid_error_length'>error_length</span><span class='lparen'>(</span><span class='symbol'>:pass</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_total_elements'>total_elements</span> <span class='op'>=</span> <span class='id identifier rubyid_passing_length'>passing_length</span> <span class='op'>+</span> <span class='id identifier rubyid_parse_errors'>parse_errors</span> <span class='op'>+</span> <span class='id identifier rubyid_reversibility_errors'>reversibility_errors</span>
     
-  <span class='rubyid_max_count_length identifier id'>max_count_length</span> <span class='assign token'>=</span> <span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='rubyid_passing_length identifier id'>passing_length</span><span class='comma token'>,</span> <span class='rubyid_parse_errors identifier id'>parse_errors</span><span class='comma token'>,</span> <span class='rubyid_reversibility_errors identifier id'>reversibility_errors</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_max identifier id'>max</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_a identifier id'>a</span><span class='comma token'>,</span><span class='rubyid_b identifier id'>b</span><span class='bitor op'>|</span> <span class='rubyid_a identifier id'>a</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='cmp op'>&lt;=&gt;</span> <span class='rubyid_b identifier id'>b</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span><span class='rbrace token'>}</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span>
+  <span class='id identifier rubyid_max_count_length'>max_count_length</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_passing_length'>passing_length</span><span class='comma'>,</span> <span class='id identifier rubyid_parse_errors'>parse_errors</span><span class='comma'>,</span> <span class='id identifier rubyid_reversibility_errors'>reversibility_errors</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span><span class='id identifier rubyid_b'>b</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_b'>b</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
 
-  <span class='rubyid_puts identifier id'>puts</span> <span class='rubyid_total_elements identifier id'>total_elements</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span> <span class='plus op'>+</span> <span class='string val'>&quot; element fragments checked&quot;</span>
-  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;Passing:              #{passing_length.to_s.rjust(max_count_length)} / #{total_elements}&quot;</span>
-  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;Parse Errors:         #{parse_errors.to_s.rjust(max_count_length)} / #{total_elements}&quot;</span>
-  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;Reversibility Errors: #{reversibility_errors.to_s.rjust(max_count_length)} / #{total_elements}&quot;</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_total_elements'>total_elements</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> element fragments checked</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Passing:              </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_passing_length'>passing_length</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_rjust'>rjust</span><span class='lparen'>(</span><span class='id identifier rubyid_max_count_length'>max_count_length</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> / </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total_elements'>total_elements</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Parse Errors:         </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_parse_errors'>parse_errors</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_rjust'>rjust</span><span class='lparen'>(</span><span class='id identifier rubyid_max_count_length'>max_count_length</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> / </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total_elements'>total_elements</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Reversibility Errors: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_reversibility_errors'>reversibility_errors</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_rjust'>rjust</span><span class='lparen'>(</span><span class='id identifier rubyid_max_count_length'>max_count_length</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> / </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_total_elements'>total_elements</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
     
-  <span class='rubyid_@error_types ivar id'>@error_types</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_error_type identifier id'>error_type</span><span class='bitor op'>|</span>
-    <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;\nError type: &quot;</span> <span class='plus op'>+</span> <span class='rubyid_error_type identifier id'>error_type</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
-    <span class='rubyid_@frequency_types ivar id'>@frequency_types</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_frequency_type identifier id'>frequency_type</span><span class='bitor op'>|</span>
-      <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;\nFrequency type: &quot;</span> <span class='plus op'>+</span> <span class='rubyid_frequency_type identifier id'>frequency_type</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
-      <span class='rubyid_errors_by_frequency identifier id'>errors_by_frequency</span><span class='lparen token'>(</span><span class='rubyid_error_type identifier id'>error_type</span><span class='comma token'>,</span> <span class='rubyid_frequency_type identifier id'>frequency_type</span><span class='rparen token'>)</span>
-    <span class='rubyid_end end kw'>end</span>
-  <span class='rubyid_end end kw'>end</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+  <span class='ivar'>@error_types</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_error_type'>error_type</span><span class='op'>|</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\nError type: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_error_type'>error_type</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='ivar'>@frequency_types</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_frequency_type'>frequency_type</span><span class='op'>|</span>
+      <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\nFrequency type: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_frequency_type'>frequency_type</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+      <span class='id identifier rubyid_errors_by_frequency'>errors_by_frequency</span><span class='lparen'>(</span><span class='id identifier rubyid_error_type'>error_type</span><span class='comma'>,</span> <span class='id identifier rubyid_frequency_type'>frequency_type</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="print_sample_fragments-instance_method">
+  <h3 class="signature " id="print_sample_fragments-instance_method">
   
-    - (<tt>Object</tt>) <strong>print_sample_fragments</strong>(frag_array) 
+    #<strong>print_sample_fragments</strong>(frag_array)  &#x21d2; <tt>Object</tt> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -725,32 +754,33 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/coverage/coverage.rb', line 375</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_sample_fragments identifier id'>print_sample_fragments</span><span class='lparen token'>(</span><span class='rubyid_frag_array identifier id'>frag_array</span><span class='rparen token'>)</span>
-  <span class='rubyid_sample_fragments identifier id'>sample_fragments</span> <span class='assign token'>=</span> <span class='string val'>''</span>
-  <span class='rubyid_frag_slice identifier id'>frag_slice</span> <span class='assign token'>=</span> <span class='rubyid_slice_fragments identifier id'>slice_fragments</span><span class='lparen token'>(</span><span class='rubyid_frag_array identifier id'>frag_array</span><span class='rparen token'>)</span>
-  <span class='rubyid_frag_slice identifier id'>frag_slice</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_frag_ref identifier id'>frag_ref</span><span class='bitor op'>|</span>
-    <span class='rubyid_sample_fragments identifier id'>sample_fragments</span> <span class='opasgn op'>+=</span> <span class='string val'>&quot;    &quot;</span> <span class='plus op'>+</span>
-      <span class='rubyid_frag_ref identifier id'>frag_ref</span><span class='dot token'>.</span><span class='rubyid_xml_file identifier id'>xml_file</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span> <span class='plus op'>+</span> <span class='string val'>&quot;: &quot;</span> <span class='plus op'>+</span>
-      <span class='rubyid_frag_ref identifier id'>frag_ref</span><span class='dot token'>.</span><span class='rubyid_xml_content identifier id'>xml_content</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
-    <span class='rubyid_sample_fragments identifier id'>sample_fragments</span> <span class='opasgn op'>+=</span> <span class='string val'>&quot;  &lt;=&gt;  &quot;</span> <span class='plus op'>+</span> <span class='rubyid_frag_ref identifier id'>frag_ref</span><span class='dot token'>.</span><span class='rubyid_text identifier id'>text</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_frag_ref identifier id'>frag_ref</span><span class='dot token'>.</span><span class='rubyid_text identifier id'>text</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
-    <span class='rubyid_sample_fragments identifier id'>sample_fragments</span> <span class='opasgn op'>+=</span> <span class='string val'>&quot;\n&quot;</span>
-  <span class='rubyid_end end kw'>end</span>
-  <span class='rubyid_puts identifier id'>puts</span> <span class='rubyid_sample_fragments identifier id'>sample_fragments</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_print_sample_fragments'>print_sample_fragments</span><span class='lparen'>(</span><span class='id identifier rubyid_frag_array'>frag_array</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_sample_fragments'>sample_fragments</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_frag_slice'>frag_slice</span> <span class='op'>=</span> <span class='id identifier rubyid_slice_fragments'>slice_fragments</span><span class='lparen'>(</span><span class='id identifier rubyid_frag_array'>frag_array</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_frag_slice'>frag_slice</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_frag_ref'>frag_ref</span><span class='op'>|</span>
+    <span class='id identifier rubyid_sample_fragments'>sample_fragments</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>    </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+      <span class='id identifier rubyid_frag_ref'>frag_ref</span><span class='period'>.</span><span class='id identifier rubyid_xml_file'>xml_file</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
+      <span class='id identifier rubyid_frag_ref'>frag_ref</span><span class='period'>.</span><span class='id identifier rubyid_xml_content'>xml_content</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='id identifier rubyid_sample_fragments'>sample_fragments</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  &lt;=&gt;  </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_frag_ref'>frag_ref</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='kw'>unless</span> <span class='id identifier rubyid_frag_ref'>frag_ref</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='id identifier rubyid_sample_fragments'>sample_fragments</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_sample_fragments'>sample_fragments</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="to_tree-instance_method">
+  <h3 class="signature " id="to_tree-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_tree</strong> 
+    #<strong>to_tree</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
-</p><table class="source_code">
+
+  
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -809,56 +839,55 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/coverage/coverage.rb', line 273</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_to_tree identifier id'>to_tree</span>
-  <span class='rubyid_root_elements identifier id'>root_elements</span> <span class='assign token'>=</span> <span class='rubyid_Array constant id'>Array</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_tree'>to_tree</span>
+  <span class='id identifier rubyid_root_elements'>root_elements</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
   
-  <span class='comment val'># This is a mess, could probably be done recursively.</span>
-  <span class='rubyid_@error_types ivar id'>@error_types</span><span class='dot token'>.</span><span class='rubyid_reverse identifier id'>reverse</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_error_type identifier id'>error_type</span><span class='bitor op'>|</span>
-    <span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_each_key identifier id'>each_key</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_key identifier id'>key</span><span class='bitor op'>|</span>
-      <span class='rubyid_this_element identifier id'>this_element</span> <span class='assign token'>=</span> <span class='rubyid_ElementNode constant id'>ElementNode</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
-      <span class='rubyid_this_element identifier id'>this_element</span><span class='dot token'>.</span><span class='rubyid_name identifier id'>name</span> <span class='assign token'>=</span> <span class='rubyid_key identifier id'>key</span>
-      <span class='rubyid_this_element identifier id'>this_element</span><span class='dot token'>.</span><span class='rubyid_error_class identifier id'>error_class</span> <span class='assign token'>=</span> <span class='rubyid_error_type identifier id'>error_type</span>
-      <span class='rubyid_this_element identifier id'>this_element</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='assign token'>=</span> <span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span>
-      <span class='rubyid_this_element identifier id'>this_element</span><span class='dot token'>.</span><span class='rubyid_bracket_count identifier id'>bracket_count</span> <span class='assign token'>=</span> <span class='rubyid_count_brackets identifier id'>count_brackets</span><span class='lparen token'>(</span><span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_error_type identifier id'>error_type</span><span class='rparen token'>)</span>
-      <span class='rubyid_this_element identifier id'>this_element</span><span class='dot token'>.</span><span class='rubyid_examples identifier id'>examples</span> <span class='assign token'>=</span> <span class='rubyid_slice_fragments identifier id'>slice_fragments</span><span class='lparen token'>(</span><span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
-      <span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element_attr</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_each_key identifier id'>each_key</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_attr_key identifier id'>attr_key</span><span class='bitor op'>|</span>
-        <span class='rubyid_frequency_type_keys identifier id'>frequency_type_keys</span> <span class='assign token'>=</span>  <span class='rubyid_frequency_type_keys_from_xml identifier id'>frequency_type_keys_from_xml</span><span class='lparen token'>(</span><span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element_attr</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_attr_key identifier id'>attr_key</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='dot token'>.</span><span class='rubyid_xml_content identifier id'>xml_content</span><span class='rparen token'>)</span>
-        <span class='rubyid_if if kw'>if</span> <span class='rubyid_frequency_type_keys identifier id'>frequency_type_keys</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='rubyid_key identifier id'>key</span>
-          <span class='rubyid_if if kw'>if</span> <span class='notop op'>!</span><span class='lparen token'>(</span><span class='lparen token'>(</span><span class='rubyid_attr_key identifier id'>attr_key</span> <span class='eq op'>==</span> <span class='rubyid_key identifier id'>key</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='lparen token'>(</span><span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element_attr</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_attr_key identifier id'>attr_key</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='eq op'>==</span> <span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_key identifier id'>key</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
-            <span class='comment val'># add this child</span>
-            <span class='rubyid_child_element identifier id'>child_element</span> <span class='assign token'>=</span> <span class='rubyid_ElementNode constant id'>ElementNode</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
-            <span class='rubyid_child_element identifier id'>child_element</span><span class='dot token'>.</span><span class='rubyid_name identifier id'>name</span> <span class='assign token'>=</span> <span class='rubyid_attr_key identifier id'>attr_key</span>
-            <span class='rubyid_child_element identifier id'>child_element</span><span class='dot token'>.</span><span class='rubyid_depth identifier id'>depth</span> <span class='assign token'>=</span> <span class='integer val'>1</span>
-            <span class='rubyid_child_element identifier id'>child_element</span><span class='dot token'>.</span><span class='rubyid_error_class identifier id'>error_class</span> <span class='assign token'>=</span> <span class='rubyid_error_type identifier id'>error_type</span>
-            <span class='rubyid_child_element identifier id'>child_element</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='assign token'>=</span> <span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element_attr</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_attr_key identifier id'>attr_key</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span>
-            <span class='rubyid_child_element identifier id'>child_element</span><span class='dot token'>.</span><span class='rubyid_bracket_count identifier id'>bracket_count</span> <span class='assign token'>=</span> <span class='rubyid_count_brackets identifier id'>count_brackets</span><span class='lparen token'>(</span><span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element_attr</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_attr_key identifier id'>attr_key</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_error_type identifier id'>error_type</span><span class='rparen token'>)</span>
-            <span class='rubyid_child_element identifier id'>child_element</span><span class='dot token'>.</span><span class='rubyid_examples identifier id'>examples</span> <span class='assign token'>=</span> <span class='rubyid_slice_fragments identifier id'>slice_fragments</span><span class='lparen token'>(</span><span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element_attr</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_attr_key identifier id'>attr_key</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
-            <span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element_attr_val</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_each_key identifier id'>each_key</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_attr_val_key identifier id'>attr_val_key</span><span class='bitor op'>|</span>
-              <span class='rubyid_child_frequency_type_keys identifier id'>child_frequency_type_keys</span> <span class='assign token'>=</span>  <span class='rubyid_frequency_type_keys_from_xml identifier id'>frequency_type_keys_from_xml</span><span class='lparen token'>(</span><span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element_attr_val</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_attr_val_key identifier id'>attr_val_key</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='dot token'>.</span><span class='rubyid_xml_content identifier id'>xml_content</span><span class='rparen token'>)</span>
-              <span class='rubyid_if if kw'>if</span> <span class='rubyid_child_frequency_type_keys identifier id'>child_frequency_type_keys</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span> <span class='eq op'>==</span> <span class='rubyid_attr_key identifier id'>attr_key</span>
-                <span class='rubyid_if if kw'>if</span> <span class='notop op'>!</span><span class='lparen token'>(</span><span class='lparen token'>(</span><span class='rubyid_attr_val_key identifier id'>attr_val_key</span> <span class='eq op'>==</span> <span class='rubyid_attr_key identifier id'>attr_key</span><span class='rparen token'>)</span> <span class='andop op'>&amp;&amp;</span> <span class='lparen token'>(</span><span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element_attr_val</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_attr_val_key identifier id'>attr_val_key</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='eq op'>==</span> <span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element_attr</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_attr_key identifier id'>attr_key</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
-                  <span class='rubyid_child_child_element identifier id'>child_child_element</span> <span class='assign token'>=</span> <span class='rubyid_ElementNode constant id'>ElementNode</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
-                  <span class='rubyid_child_child_element identifier id'>child_child_element</span><span class='dot token'>.</span><span class='rubyid_name identifier id'>name</span> <span class='assign token'>=</span> <span class='rubyid_attr_val_key identifier id'>attr_val_key</span>
-                  <span class='rubyid_child_child_element identifier id'>child_child_element</span><span class='dot token'>.</span><span class='rubyid_depth identifier id'>depth</span> <span class='assign token'>=</span> <span class='integer val'>2</span>
-                  <span class='rubyid_child_child_element identifier id'>child_child_element</span><span class='dot token'>.</span><span class='rubyid_error_class identifier id'>error_class</span> <span class='assign token'>=</span> <span class='rubyid_error_type identifier id'>error_type</span>
-                  <span class='rubyid_child_child_element identifier id'>child_child_element</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='assign token'>=</span> <span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element_attr_val</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_attr_val_key identifier id'>attr_val_key</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span>
-                  <span class='rubyid_child_child_element identifier id'>child_child_element</span><span class='dot token'>.</span><span class='rubyid_bracket_count identifier id'>bracket_count</span> <span class='assign token'>=</span> <span class='rubyid_count_brackets identifier id'>count_brackets</span><span class='lparen token'>(</span><span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element_attr_val</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_attr_val_key identifier id'>attr_val_key</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='rubyid_error_type identifier id'>error_type</span><span class='rparen token'>)</span>
-                  <span class='rubyid_child_child_element identifier id'>child_child_element</span><span class='dot token'>.</span><span class='rubyid_examples identifier id'>examples</span> <span class='assign token'>=</span> <span class='rubyid_slice_fragments identifier id'>slice_fragments</span><span class='lparen token'>(</span><span class='rubyid_@frequencies ivar id'>@frequencies</span><span class='lbrack token'>[</span><span class='rubyid_error_type identifier id'>error_type</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='symbol val'>:element_attr_val</span><span class='rbrack token'>]</span><span class='lbrack token'>[</span><span class='rubyid_attr_val_key identifier id'>attr_val_key</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
-                  <span class='rubyid_child_element identifier id'>child_element</span><span class='dot token'>.</span><span class='rubyid_children identifier id'>children</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_child_child_element identifier id'>child_child_element</span>
-                <span class='rubyid_end end kw'>end</span>
-              <span class='rubyid_end end kw'>end</span>
-            <span class='rubyid_end end kw'>end</span>
-            <span class='rubyid_this_element identifier id'>this_element</span><span class='dot token'>.</span><span class='rubyid_children identifier id'>children</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_child_element identifier id'>child_element</span>
-          <span class='rubyid_end end kw'>end</span>
-        <span class='rubyid_end end kw'>end</span>
-      <span class='rubyid_end end kw'>end</span>
-      <span class='rubyid_root_elements identifier id'>root_elements</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_this_element identifier id'>this_element</span>
-    <span class='rubyid_end end kw'>end</span>
-  <span class='rubyid_end end kw'>end</span>
+  <span class='comment'># This is a mess, could probably be done recursively.
+</span>  <span class='ivar'>@error_types</span><span class='period'>.</span><span class='id identifier rubyid_reverse'>reverse</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_error_type'>error_type</span><span class='op'>|</span>
+    <span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each_key'>each_key</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span>
+      <span class='id identifier rubyid_this_element'>this_element</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ElementNode.html" title="RXSugar::Coverage::ElementNode (class)">ElementNode</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ElementNode.html#initialize-instance_method" title="RXSugar::Coverage::ElementNode#initialize (method)">new</a></span></span>
+      <span class='id identifier rubyid_this_element'>this_element</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_key'>key</span>
+      <span class='id identifier rubyid_this_element'>this_element</span><span class='period'>.</span><span class='id identifier rubyid_error_class'>error_class</span> <span class='op'>=</span> <span class='id identifier rubyid_error_type'>error_type</span>
+      <span class='id identifier rubyid_this_element'>this_element</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>=</span> <span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+      <span class='id identifier rubyid_this_element'>this_element</span><span class='period'>.</span><span class='id identifier rubyid_bracket_count'>bracket_count</span> <span class='op'>=</span> <span class='id identifier rubyid_count_brackets'>count_brackets</span><span class='lparen'>(</span><span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_error_type'>error_type</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_this_element'>this_element</span><span class='period'>.</span><span class='id identifier rubyid_examples'>examples</span> <span class='op'>=</span> <span class='id identifier rubyid_slice_fragments'>slice_fragments</span><span class='lparen'>(</span><span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element_attr</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each_key'>each_key</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_attr_key'>attr_key</span><span class='op'>|</span>
+        <span class='id identifier rubyid_frequency_type_keys'>frequency_type_keys</span> <span class='op'>=</span>  <span class='id identifier rubyid_frequency_type_keys_from_xml'>frequency_type_keys_from_xml</span><span class='lparen'>(</span><span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element_attr</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_attr_key'>attr_key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='period'>.</span><span class='id identifier rubyid_xml_content'>xml_content</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_frequency_type_keys'>frequency_type_keys</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id identifier rubyid_key'>key</span>
+          <span class='kw'>if</span> <span class='op'>!</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_attr_key'>attr_key</span> <span class='op'>==</span> <span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element_attr</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_attr_key'>attr_key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span><span class='rparen'>)</span>
+            <span class='comment'># add this child
+</span>            <span class='id identifier rubyid_child_element'>child_element</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ElementNode.html" title="RXSugar::Coverage::ElementNode (class)">ElementNode</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ElementNode.html#initialize-instance_method" title="RXSugar::Coverage::ElementNode#initialize (method)">new</a></span></span>
+            <span class='id identifier rubyid_child_element'>child_element</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_attr_key'>attr_key</span>
+            <span class='id identifier rubyid_child_element'>child_element</span><span class='period'>.</span><span class='id identifier rubyid_depth'>depth</span> <span class='op'>=</span> <span class='int'>1</span>
+            <span class='id identifier rubyid_child_element'>child_element</span><span class='period'>.</span><span class='id identifier rubyid_error_class'>error_class</span> <span class='op'>=</span> <span class='id identifier rubyid_error_type'>error_type</span>
+            <span class='id identifier rubyid_child_element'>child_element</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>=</span> <span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element_attr</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_attr_key'>attr_key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+            <span class='id identifier rubyid_child_element'>child_element</span><span class='period'>.</span><span class='id identifier rubyid_bracket_count'>bracket_count</span> <span class='op'>=</span> <span class='id identifier rubyid_count_brackets'>count_brackets</span><span class='lparen'>(</span><span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element_attr</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_attr_key'>attr_key</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_error_type'>error_type</span><span class='rparen'>)</span>
+            <span class='id identifier rubyid_child_element'>child_element</span><span class='period'>.</span><span class='id identifier rubyid_examples'>examples</span> <span class='op'>=</span> <span class='id identifier rubyid_slice_fragments'>slice_fragments</span><span class='lparen'>(</span><span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element_attr</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_attr_key'>attr_key</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+            <span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element_attr_val</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each_key'>each_key</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_attr_val_key'>attr_val_key</span><span class='op'>|</span>
+              <span class='id identifier rubyid_child_frequency_type_keys'>child_frequency_type_keys</span> <span class='op'>=</span>  <span class='id identifier rubyid_frequency_type_keys_from_xml'>frequency_type_keys_from_xml</span><span class='lparen'>(</span><span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element_attr_val</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_attr_val_key'>attr_val_key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='period'>.</span><span class='id identifier rubyid_xml_content'>xml_content</span><span class='rparen'>)</span>
+              <span class='kw'>if</span> <span class='id identifier rubyid_child_frequency_type_keys'>child_frequency_type_keys</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id identifier rubyid_attr_key'>attr_key</span>
+                <span class='kw'>if</span> <span class='op'>!</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_attr_val_key'>attr_val_key</span> <span class='op'>==</span> <span class='id identifier rubyid_attr_key'>attr_key</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element_attr_val</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_attr_val_key'>attr_val_key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element_attr</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_attr_key'>attr_key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rparen'>)</span><span class='rparen'>)</span>
+                  <span class='id identifier rubyid_child_child_element'>child_child_element</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ElementNode.html" title="RXSugar::Coverage::ElementNode (class)">ElementNode</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ElementNode.html#initialize-instance_method" title="RXSugar::Coverage::ElementNode#initialize (method)">new</a></span></span>
+                  <span class='id identifier rubyid_child_child_element'>child_child_element</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_attr_val_key'>attr_val_key</span>
+                  <span class='id identifier rubyid_child_child_element'>child_child_element</span><span class='period'>.</span><span class='id identifier rubyid_depth'>depth</span> <span class='op'>=</span> <span class='int'>2</span>
+                  <span class='id identifier rubyid_child_child_element'>child_child_element</span><span class='period'>.</span><span class='id identifier rubyid_error_class'>error_class</span> <span class='op'>=</span> <span class='id identifier rubyid_error_type'>error_type</span>
+                  <span class='id identifier rubyid_child_child_element'>child_child_element</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>=</span> <span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element_attr_val</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_attr_val_key'>attr_val_key</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+                  <span class='id identifier rubyid_child_child_element'>child_child_element</span><span class='period'>.</span><span class='id identifier rubyid_bracket_count'>bracket_count</span> <span class='op'>=</span> <span class='id identifier rubyid_count_brackets'>count_brackets</span><span class='lparen'>(</span><span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element_attr_val</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_attr_val_key'>attr_val_key</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_error_type'>error_type</span><span class='rparen'>)</span>
+                  <span class='id identifier rubyid_child_child_element'>child_child_element</span><span class='period'>.</span><span class='id identifier rubyid_examples'>examples</span> <span class='op'>=</span> <span class='id identifier rubyid_slice_fragments'>slice_fragments</span><span class='lparen'>(</span><span class='ivar'>@frequencies</span><span class='lbracket'>[</span><span class='id identifier rubyid_error_type'>error_type</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:element_attr_val</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_attr_val_key'>attr_val_key</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+                  <span class='id identifier rubyid_child_element'>child_element</span><span class='period'>.</span><span class='id identifier rubyid_children'>children</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_child_child_element'>child_child_element</span>
+                <span class='kw'>end</span>
+              <span class='kw'>end</span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_this_element'>this_element</span><span class='period'>.</span><span class='id identifier rubyid_children'>children</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_child_element'>child_element</span>
+          <span class='kw'>end</span>
+        <span class='kw'>end</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_root_elements'>root_elements</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_this_element'>this_element</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
   
-  <span class='rubyid_return return kw'>return</span> <span class='rubyid_root_elements identifier id'>root_elements</span>
-<span class='rubyid_end end kw'>end</span>
-</pre>
+  <span class='kw'>return</span> <span class='id identifier rubyid_root_elements'>root_elements</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
